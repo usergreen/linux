@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>squeeze 2/3 - Linux on the Desktop</title>
+</head>
+<body>
+<div id="navigator">
+<div><a href="../../../../index.html" title="FrontPage (2d)">HOME</a> /
+<a href="../../index.html">Distributions</a> /
+<a href="../index.html">DebianLinux-FAQ</a>
+/ <a href="index.html">Squeeze</a> <br>
+<hr size="2" width="100%">
+<h2 id="content_1_0">Squeeze の新規インストールについて</h2>
+</div>
+<div class="contents">
+<ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">Squeeze の新規インストールについて</a>
+    <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">代表的なインストール用メディア（2012.1.28 現在)</a></li>
+      <li><a href="#content_1_2">CD からインストールするには、どの iso イメージが必要ですか？</a></li>
+    </ul>
+  </li>
+  <li><a href="#content_1_3">Debian 5.0 (lenny) からアップグレードするには？</a>
+    <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_4">詳細な公式マニュアル</a></li>
+      <li><a href="#content_1_5">apt-get パッケージ管理ツールによる自動アップデート</a></li>
+      <li><a href="#content_1_6">GRUB 0.97 から GRUB 2 へアップグレードするには？</a></li>
+      <li><a href="#content_1_7">アップグレード後、uim ツールバーが消えてしまいました。</a></li>
+      <li><a href="#content_1_8">Adobe Flash Player をアップデートするには？</a></li>
+      <li><a href="#content_1_9">引き続き Volatile リポジトリを利用したいのですが。</a></li>
+    </ul>
+  </li>
+  <li><a href="#content_1_10">文書作成スイート OpenOffice.org のインストール</a>
+    <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_11">フルパッケージのインストール</a></li>
+      <li><a href="#content_1_12">最小限のパッケージをインストール</a></li>
+    </ul>
+  </li>
+  <li><a href="#content_1_13">Squeeze の日本語環境について</a>
+    <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_14">標準の日本語入力は何ですか？</a></li>
+      <li><a href="#content_1_15">手書き入力パッドが見つかりません。</a></li>
+      <li><a href="#content_1_16">scim-Anthy を利用したい</a></li>
+    </ul>
+  </li>
+  <li><a href="#content_1_17">無線LANカードが使えなくなりました。</a></li>
+</ul>
+</div>
+<a href="#navigator">↑</a>
+<h4 id="content_1_1">代表的なインストール用メディア（2012.1.28 現在)</h4>
+<p>CD/DVD 用の各種 iso イメージが用意されています。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>CD からインストール
+    <pre> debian-6.0.4-i386-CD-1.iso 以下複数枚</pre>
+  </li>
+  <li>DVD からインストール
+    <pre> debian-6.0.4-i386-DVD-1.iso</pre>
+  </li>
+  <li>ネットワーク(インターネット）からインストール
+    <pre> debian-6.0.4-i386-netinst.iso</pre>
+ただし、このインストール用イメージには、プロプライエタリなファームウェアが含まれないので、インストール時に無線LANカー
+ドが利用できなくなる恐れがあります。再配布が可能であるプロプライエタリなファームウェアを含んだ非公式なインストール用イメージも以下のとおり配布さ
+れるようになりました。</li>
+</ul>
+<ul>
+  <li>非公式なネットワーク・インストール用イメージ</li>
+</ul>
+<pre>　　 firmware-6.0.4-i386-netinst.iso<br>　　入手先：http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/<br></pre>
+このページ以外にも <a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?DebianLinux-FAQ"
+ title="DebianLinux-FAQ (208d)">DebianLinux-FAQ</a>
+というページがあるので参照してください。
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_2">CD からインストールするには、どの iso イメージが必要ですか？</h4>
+<p>日本語環境を整えるには次の3枚の iso イメージが最低限必要です。</p>
+<pre> debian-6.0.4-i386-CD-1.iso<br> debian-6.0.4-i386-CD-2.iso<br> debian-6.0.4-i386-CD-3.iso</pre>
+<p>CD-1 はインストーラーを含む、インストール用の最も基本的な iso イメージです。CD-2 には、オフィススイート <a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice"
+ title="OpenOffice (610d)">OpenOffice</a>.org が含まれています。CD-3
+は、Anthy、uim-Anthy、IPAfont、VLgothic といった、日本語入力環境の構築に必要な一連のパッケージを提供します。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">Debian 5.0 (lenny) からアップグレードするには？</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_4">詳細な公式マニュアル</h4>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://www.debian.org/releases/squeeze/i386/release-notes/ch-upgrading.ja.html">http://www.debian.org/releases/squeeze/i386/release-notes/ch-upgrading.ja.html</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_5">apt-get パッケージ管理ツールによる自動アップデート</h4>
+<p>「apt-get パッケージ管理ツールを使用すると、前回のリリースである Debian GNU/Linux 5.0 (コードネーム
+"lenny") から Debian GNU/Linux 6.0 へのアップグレードを、ほとんどの設定まで含めて自動的に行えます。これは
+aptitude パッケージ管理ツールを用いてもある程度は可能です。いつも通り、 Debian GNU/Linux
+システムでは、ダウンタイムを強制されることなく、たやすく、的確にアップグレードすることができるでしょう。しかしながら、発生する可能性がある問題
+や、インストールとアップグレードについての詳しい説明について、 リリースノート および インストールガイド
+を参照することを強くお勧めします。リリースノートについては、リリースしてからの数週間でも改良が重ねられ、まだ翻訳されていない言語に翻訳される予定
+です。」</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://www.debian.org/News/2011/20110205a">http://www.debian.org/News/2011/20110205a</a></li>
+</ul>
+<p>具体的には、前回のリリース同様に以下の作業を行います。ただし、この手順はあらゆる状況で対応できるわけではないので、上述の通り公式マニュアル
+を事前に参照してください。</p>
+<p>/etc/sources.list にある "lenny" を　"squeeze"　に変更します。</p>
+<pre> deb http://ftp.jp.debian.org/debian/ squeeze main contrib non-free<br> deb-src http://ftp.jp.debian.org/debian/ squeeze main</pre>
+<p>その後、以下のコマンドを順次実行します。</p>
+<pre> # apt-get update<br> # apt-get upgrade<br> # apt-get install udev<br> # apt-get dist-upgrade</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://www.debian.org/releases/squeeze/i386/release-notes/ch-upgrading#upgradingpackages">http://www.debian.org/releases/squeeze/i386/release-notes/ch-upgrading#upgradingpackages</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_6">GRUB 0.97 から GRUB 2 へアップグレードするには？</h4>
+<p>Lenny からアップグレードした後の再起動時に GRUB 2 へアップグレードするかどうかを尋ねる次の画面が表示されます。</p>
+<pre> Chainload into GRUB 2<br> ---------------------------------------------------------<br> When you have verified Grub 2 works, you can use this command to complete<br> the upgrade: upgrade-from-grub-legacy<br> ---------------------------------------------------------<br> Debian GNU/linux, kernel 2.6.32-5-686<br> Debian GNU/linux, kernel 2.6.32-5-686 (single-user-mode)<br> Debian GNU/linux, kernel 2.6.26-2-686<br> Debian GNU/linux, kernel 2.6.26-2-686 (single-user-mode)</pre>
+<p>あなたのシステムが GRUB 2 で起動することを確認するには、矢印キーで画面先頭に表示される次のメニューを選択します。</p>
+<pre> Chainload into GRUB 2</pre>
+<p>その後、デスクトップが無事に立ち上がれば、GRUB 2 で起動することが確認できます。次のコマンドを実行して、GRUB 2
+へアップグレードします。</p>
+<pre> # upgrade-from-grub-legacy<br> 0<br> Installation finished. No error reported.<br> /usr/sbin/grub-setup: warn: Attempting to install GRUB to a partition instead of the MBR.<br> This is a BAD idea..<br> /usr/sbin/grub-setup: warn: Embedding is not possible.  GRUB can only be installed<br> in this setup by using blocklists.<br> However, blocklists are UNRELIABLE and their use is discouraged..<br> Installation finished. No error reported.<br> Generating grub.cfg ...<br> Found background image: /usr/share/images/desktop-base/desktop-grub.png<br> Found linux image: /boot/vmlinuz-2.6.32-5-686<br> Found initrd image: /boot/initrd.img-2.6.32-5-686<br> Found linux image: /boot/vmlinuz-2.6.26-2-686<br> Found initrd image: /boot/initrd.img-2.6.26-2-686<br> done<br> <br> GRUB Legacy has been removed, but its configuration files have been preserved,<br> since this script cannot determine if they contain valuable information.<br> If you would like to remove the configuration files as well, use the following command:<br> rm -f /boot/grub/menu.lst*</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_7">アップグレード後、uim ツールバーが消えてしまいました。</h4>
+<p>アップグレードの過程で、以前の設定が勝手に書き換えられたのが原因と考えられます。画面右下に言語入力のツールバーを復活させるには、次のコマン
+ドを実行するか、メニューよりシステム＞設定＞入力メソッド切換器を選択します。</p>
+<pre> $ im-switch</pre>
+<p>そして、次の項目を選び、OK ボタンを押します。</p>
+<pre> uim-toolbar</pre>
+<p>次回ログイン時以降、この設定が維持されるようになります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_8">Adobe Flash Player をアップデートするには？</h4>
+<p>何らかの原因で Flash Player のアップデートが完了していない場合には、次のコマンドを実行してください。</p>
+<pre> # update-flashplugin-nonfree --install</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://wiki.debian.org/FlashPlayer">http://wiki.debian.org/FlashPlayer</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_9">引き続き Volatile リポジトリを利用したいのですが。</h4>
+<p>まず、こちらを参照してください：<br>
+Debian volatile replaced by new updates suite (February 15th, 2011)</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://www.debian.org/News/2011/20110215">http://www.debian.org/News/2011/20110215</a></li>
+</ul>
+<p>実際には、/etc/apt/sources.list に次の記述を追加してください。</p>
+<pre> deb http://ftp.debian.org/debian squeeze-updates main</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_10">文書作成スイート <a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice"
+ title="OpenOffice (610d)">OpenOffice</a>.org のインストール</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_11">フルパッケージのインストール</h4>
+<pre> # apt-get install openoffice.org</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_12">最小限のパッケージをインストール</h4>
+<p>次のように明示的にコマンドを指定します。</p>
+<pre> # apt-get install openoffice.org-writer openoffice.org-calc openoffice.org-base openoffice.org-l10n-ja</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_13">Squeeze の日本語環境について</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_14">標準の日本語入力は何ですか？</h4>
+<p>標準的なデスクトップ環境を選択した場合、uim-Anthy がインストールされます。</p>
+<p>なお、/home/hoge/.xinput.d/ja_JP には、オプションの日本語設定が記述されます。ただし、Debian
+インストーラーによる標準的な作業を行った場合、この設定ファイルは作成されず空白のままとなりますが、uim-Anthy
+による日本語入力が可能となり、デスクトップ上端のパネルに uim システムトレイが表示されるようになります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_15">手書き入力パッドが見つかりません。</h4>
+<p>日本語入力時、uim
+ツールバーのメニューには、「手書き入力パッド」という項目が表示されますが、その機能は実際サポートされていません。従って、どうしても「手書き入力」
+機能を希望するのなら、本家のソースコードを直接利用してインストールする以外方法はありません。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_16">scim-Anthy を利用したい</h4>
+<p>次のコマンドを実行し関連パッケージをインストールします。次回ログイン時より利用可能となります。これは、Debian Lenny
+の場合と同じです。</p>
+<p># apt-get install scim scim-anthy<br>
+パッケージリストを読み込んでいます... 完了<br>
+依存関係ツリーを作成しています<br>
+状態情報を読み取っています... 完了<br>
+以下の特別パッケージがインストールされます:</p>
+<pre>  kasumi libscim8c2a scim-bridge-agent scim-bridge-client-gtk<br>  scim-gtk2-immodule scim-modules-socket</pre>
+<p>提案パッケージ:</p>
+<pre>  scim-uim scim-pinyin scim-hangul scim-chewing scim-m17n scim-prime scim-skk<br>  scim-canna scim-tables-additional scim-tables-ja scim-tables-ko<br>  scim-tables-zh scim-thai</pre>
+<p>以下のパッケージが新たにインストールされます:</p>
+<pre>  kasumi libscim8c2a scim scim-anthy scim-bridge-agent scim-bridge-client-gtk<br>  scim-gtk2-immodule scim-modules-socket</pre>
+<p>アップグレード: 0 個、新規インストール: 8 個、削除: 0 個、保留: 0 個。<br>
+1,931 kB のアーカイブを取得する必要があります。<br>
+この操作後に追加で 5,792 kB のディスク容量が消費されます。<br>
+続行しますか [Y/n]? y</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_17">無線LANカードが使えなくなりました。</h3>
+<p>Squeeze ではライセンス上、完全にフリーでは無く問題有るような firmware は、Linux
+カーネルには含まれないようになりました。そのため、無線LANカードによっては、次のパッケージを追加インストールする必要があります。</p>
+<pre> # apt-get install firmware-linux-nonfree</pre>
+<p>なお、完全にフリーな firmware についても、Linux カーネルには含まれず、firmware-linux-free
+パッケージとして別個に配付されることに変更されたので注意が要ります。</p>
+<hr size="2" width="100%"><a href="../../../../index.html">HOME</a>
+</div>
+</body>
+</html>

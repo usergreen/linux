@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Buster - Linux on the Desktop</title>
+  </head>
+  <body>
+    <div><a href="../../../../index.html" title="FrontPage (2d)">HOME</a>
+      / <a href="../index.html">Distributions</a> / <a href="../index.html">Debian</a> / Buster<br>
+    </div>
+    <hr size="2" width="100%">
+    <h2><a name="mozTocId517120" class="mozTocH2"></a>Debian GNU/Linux
+      10 (Buster)</h2>
+    Debian GNU/Linux Buster (旧安定版) に関する FAQ/Tips です。-- Last updated: 2021-08-16 14:28 JST<br>
+    <ol id="mozToc">
+      <!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
+      <li><a href="#mozTocId517120">Debian GNU/Linux 10 (Buster)</a>
+        <ol>
+          <li>
+            <ol>
+              <li><a href="#mozTocId444377"> Debian Buster リリース情報</a></li>
+              <li><a href="#mozTocId174444">インストールメディアの入手先</a></li>
+              <li><a href="#mozTocId457344"> Debian Buster をインストールするには?</a></li>
+              <li><a href="#mozTocId913746">Debian Buster のシステム要件は？ </a></li>
+              <li><a href="#mozTocId863058"> 以前の Debian
+                  リリースからアップグレードするには?</a></li>
+              <li><a href="#mozTocId90916">Debian 10 の特徴や新機能は何ですか？</a></li>
+              <li><a href="#mozTocId245671">Stretch からの変更点</a></li>
+              <li><a href="#mozTocId813080">更新通知（アップデート通知）はありま せんか？</a></li>
+              <li><a href="#mozTocId772731">パッケージを自動アップデートする他の 方法は？</a></li>
+              <li><a href="#mozTocId963541">タッチパッドを無効にするには？</a></li>
+              <li><a href="#mozTocId634019">プリンタでドライバレス印刷が可能で す。PDF
+                  へも直接変換できます。</a></li>
+              <li><a href="#mozTocId22762">起動画面でエラーメッセージが出ます - "missing
+                  firmware i915"</a></li>
+              <li><a href="#mozTocId486265">辞書ツールや手書き入力パッドは使えないのですか？</a></li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <br>
+    <h3><a name="mozTocId444377" class="mozTocH3"></a> Debian Buster
+      リリース情報</h3>
+    　Debian 10 (Buster) の初版 (バージョン 10.0) は 2019年 7月 6日 にリリースされました。<br>
+    　Debian buster に関するリリース情報 - <a href="https://www.debian.org/releases/buster/index.html">https://www.debian.org/releases/buster/index.html
+
+
+
+    </a>(＊英語ページです。10月7日現在、日本語ページ未掲載。)<br>
+    <br>
+    <h3><a name="mozTocId174444" class="mozTocH3"></a>インストールメディアの入手先</h3>
+    インストールのための CD/DVD イメージのダウンロードは <a href="https://www.debian.org/releases/buster/debian-installer/">https://www.debian.org/releases/buster/debian-installer/</a>
+    より可能となっています。<br>
+    <br>
+    <h3><a name="mozTocId457344" class="mozTocH3"></a> Debian Buster
+      をインストールするには?</h3>
+    　Debian Buster インストールガイドを見てください。<br>
+    　-<a href="https://www.debian.org/releases/buster/amd64/index.ja.html">https://www.debian.org/releases/buster/amd64/index.ja.html</a>
+    (64 ビット PC 用)<br>
+    　-<a href="https://www.debian.org/releases/buster/i386/index.ja.html">https://www.debian.org/releases/buster/i386/index.ja.html</a>
+    (32 ビット PC 用)<br>
+    その他のアーキテクチャー用のインストール・ガイドは <a href="https://www.debian.org/releases/buster/installmanual">https://www.debian.org/releases/buster/installmanual</a>
+    のページより検索できます。<br>
+    <br>
+    <h3 class="title"><a name="mozTocId913746" class="mozTocH3"></a>Debian
+
+
+
+      Buster のシステム要件は？<br>
+    </h3>
+    <div class="table">
+      <p class="title"><b><br>
+          最低限必要なシステム (推奨値)</b><br>
+      </p>
+      ＊デスクトップシステムには、最低 Pentium 4, 1GHz が推奨されています。<br>
+      <div class="table-contents">
+        <table summary="最低限必要なシステム (推奨値)" border="1">
+          <colgroup> <col> <col> <col> <col> </colgroup> <thead><tr>
+              <th>インストールタイプ</th>
+              <th>RAM (最小)</th>
+              <th>RAM (推奨)</th>
+              <th>ハードディスク</th>
+            </tr>
+          </thead> <tbody>
+            <tr>
+              <td>デスクトップなし</td>
+              <td>256 メガバイト</td>
+              <td>512 メガバイト</td>
+              <td>2 ギガバイト</td>
+            </tr>
+            <tr>
+              <td>デスクトップあり</td>
+              <td>512 メガバイト</td>
+              <td>2 ギガバイト</td>
+              <td>10 ギガバイト</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    出典：
+    https://www.debian.org/releases/stable/amd64/ch03s04.html.ja#idm599<br>
+    <br>
+    <h3><a name="mozTocId863058" class="mozTocH3"></a> 以前の Debian
+      リリースからアップグレードするには?</h3>
+    　まずは、Debian 10 (buster) リリースノートを見てください。 <a href="https://www.debian.org/releases/stretch/releasenotes.ja.html">https://www.debian.org/releases/buster/releasenotes.ja.html<br>
+    </a><br>
+    　そして、例えば、64 ビット PC を使っている場合には、次のマニュアルを見てください。<br>
+    　<a href="https://www.debian.org/releases/buster/amd64/release-notes/index.ja.html">https://www.debian.org/releases/buster/amd64/release-notes/index.ja.html</a><br>
+    　<br>
+    　なお、32 ビット PC を使っている場合には、次のマニュアルを見てください。<br>
+    　<a href="https://www.debian.org/releases/buster/i386/release-notes/index.ja.html">https://www.debian.org/releases/buster/i386/release-notes/index.ja.html</a>
+    (32 ビット PC 用)<br>
+    <br>
+    　１つ前のバージョンからアップグレードする場合は、通常以下の手順で行います（２つ以上前のバージョンから行う場合の手順はこれとは異なりま
+    す。詳しくは公式マニュアルに説明があります）。<br>
+    <br>
+    1. /etc/apt/sources.list にあるファイルを buster に置き換えます（書き換えます）。<br>
+    &nbsp; deb http://deb.debian.org/debian/ buster main contrib<br>
+    2. # apt update<br>
+    3. # apt upgrade<br>
+    4. # apt full-upgrade<br>
+    <br>
+    <h3><a name="mozTocId90916" class="mozTocH3"></a>Debian 10
+      の特徴や新機能は何ですか？</h3>
+    Debian 10 (Buster)
+    が提供する新しい機能についての詳細は、https://www.debian.org/releases/stable/amd64/release-
+    notes/ch-whats-new.ja.html のページにあります。旧バージョンの Debian 9
+    からアップグレードし、引き続きデスクトップで利用する場合には、ほとんどこうした一連の変更点を意識すること無く、快適に利用できます。<br>
+    以下、その一覧をリリースノートより、項目だけを掲載します。<br>
+    <br>
+    <dt><span class="section"><a href="https://www.debian.org/releases/stable/amd64/release-notes/ch-whats-new.ja.html#secure-boot">2.2.1.
+
+
+
+          UEFI セキュアブート</a></span></dt>
+    <dt><span class="section"><a href="https://www.debian.org/releases/stable/amd64/release-notes/ch-whats-new.ja.html#apparmor">2.2.2.
+
+
+
+          AppArmorの有効化</a></span></dt>
+    <dt><span class="section"><a href="https://www.debian.org/releases/stable/amd64/release-notes/ch-whats-new.ja.html#apt-sandboxing">2.2.3.
+
+
+
+          APTへのセキュリティ強化オプションの追加</a></span></dt>
+    <dt><span class="section"><a href="https://www.debian.org/releases/stable/amd64/release-notes/ch-whats-new.ja.html#unattended-upgrades">2.2.4.
+
+
+
+          stable ポイントリリースに対する Unattended-upgrades の挙動</a></span></dt>
+    <dt><span class="section"><a href="https://www.debian.org/releases/stable/amd64/release-notes/ch-whats-new.ja.html#de-manpages">2.2.5.
+
+
+
+          ドイツ語話者用 man ページの飛躍的な改善</a></span></dt>
+    <dt><span class="section"><a href="https://www.debian.org/releases/stable/amd64/release-notes/ch-whats-new.ja.html#nftables">2.2.6.
+
+
+
+          ネットワークフィルタリングの nftables への変更</a></span></dt>
+    <dt><span class="section"><a href="https://www.debian.org/releases/stable/amd64/release-notes/ch-whats-new.ja.html#cryptsetup-luks2">2.2.7.
+
+
+
+          Cryptsetup の on-disk LUKS2への変更</a></span></dt>
+    <dt><span class="section"><a href="https://www.debian.org/releases/stable/amd64/release-notes/ch-whats-new.ja.html#driverless-printing">2.2.8.
+
+
+
+          CUPS 2.2.10 でのドライバーレス印刷機能</a></span></dt>
+    <dt><span class="section"><a href="https://www.debian.org/releases/stable/amd64/release-notes/ch-whats-new.ja.html#allwinner-a64">2.2.9.
+
+
+
+          Allwinner A64 ベースのデバイスでの基本機能サポート</a></span></dt>
+    <dt><span class="section"><a href="https://www.debian.org/releases/stable/amd64/release-notes/ch-whats-new.ja.html#wayland-by-default-on-gnome">2.2.11.
+
+
+
+          GNOMEは標準で Wayland を利用します</a></span></dt>
+    <dt><span class="section"><a href="https://www.debian.org/releases/stable/amd64/release-notes/ch-whats-new.ja.html#merged-usr">2.2.12.
+
+
+
+          新規インストールでは merged /usr が標準になります。</a></span></dt>
+    <br>
+    <h3><a name="mozTocId245671" class="mozTocH3"></a>Stretch からの変更点</h3>
+    いくつか変更がありますが、suコマンドの仕様が変わっていることに注意してください。Buster の suコマンドは、
+    shadowソースパッケージからではなく、
+    util-linuxソースパッケージによって提供されるようになりました。この変更によって、suコマンドの振る舞いが Strech
+    の場合と異なります。詳しくは、<a href="https://wiki.debian.org/NewInBuster#Changes">https://wiki.debian.org/NewInBuster#Changes</a>
+    にその詳細が載せられています（該当ページは2020年1月17日現在、英文ですが、技術的な文書は <a href="https://translate.google.co.jp/">Google翻訳</a>でほぼ正確です）。対処法も載っ
+    ています。以下は原文より一部抜粋です。<br>
+    <br>
+    "The su command in buster is provided by the util-linux source
+    package, instead of the shadow source package, and no longer alters
+    the PATH variable by default. This means that after doing su, your
+    PATH may not contain directories like /sbin, and many system
+    administration commands will fail."<br>
+    <br>
+    <h3><a name="mozTocId813080" class="mozTocH3"></a>更新通知（アップデート通知）はありま
+      せんか？</h3>
+    セキュリティ更新などのアップデータがリリースされた時、アップデートが必要かどうかを知る最も容易で確実な方法は、Debian
+    Security Announce メーリングリストを購読することです (<a href="https://wiki.debian.org/DebianEdu/FAQ/Installation/Upgrade">https://wiki.debian.org/DebianEdu/FAQ/Installation/Upgrade</a>
+    参照)。この場合は、手動で定期的に確認作業が必要です。ユーザーのデスクトップに自動的に通知してくれるアプレットが利用可能かどうかは、ユー
+    ザーの使用環境によって異なります。<br>
+    <br>
+    GNOME デスクトップ環境で自動更新通知の機能を実装するには、gnome-packagekit
+    を利用します。gnome-packagekit は、次項で触れている unattended-upgrades
+    と連携して実際の内部処理を実行します。これは、従来の update-notifier を置き換えたもので、MATE
+    など他のデスクトップ環境でも利用可能です。その場合には、以下のように gnome-packagekit
+    を追加インストールします。デスクトップ上で対話的に更新が行えるようになります。「Debian 管理者ハンドブック」
+    https://debian-handbook.info/browse/ja-JP/stable/sect.regular-upgrades.html
+
+
+
+    に分かりやすい解説があります。<br>
+    <br>
+    &nbsp;# apt install gnome-packagekit<br>
+    パッケージリストを読み込んでいます... 完了<br>
+    依存関係ツリーを作成していま す&nbsp; <br>
+    状態情報を読み取っています... 完了<br>
+    以下の追加パッケージがインストールされます:<br>
+    &nbsp; gir1.2-packagekitglib-1.0 gnome-packagekit-data libappstream4<br>
+    &nbsp; libpackagekit-glib2-18 libstemmer0d packagekit
+    packagekit-tools<br>
+    &nbsp; python3-distro-info python3-software-properties
+    software-properties-common<br>
+    &nbsp; software-properties-gtk unattended-upgrades<br>
+    提案パッケージ:<br>
+    &nbsp; appstream gnome-software bsd-mailx default-mta |
+    mail-transport-agent<br>
+    &nbsp; needrestart<br>
+    以下のパッケージが新たにインストールされます:<br>
+    &nbsp; gir1.2-packagekitglib-1.0 gnome-packagekit
+    gnome-packagekit-data<br>
+    &nbsp; libappstream4 libpackagekit-glib2-18 libstemmer0d packagekit<br>
+    &nbsp; packagekit-tools python3-distro-info
+    python3-software-properties<br>
+    &nbsp; software-properties-common software-properties-gtk
+    unattended-upgrades<br>
+    アップグレード: 0 個、新規インストール: 13 個、削除: 0 個、保留: 0 個。<br>
+    2,304 kB のアーカイブを取得する必要があります。<br>
+    この操作後に追加で 13.0 MB のディスク容量が消費されます。<br>
+    続行しますか? [Y/n]<br>
+    <br>
+    <h3><a name="mozTocId772731" class="mozTocH3"></a>パッケージを自動アップデートする他の
+      方法は？</h3>
+    一定の間隔で cron
+    ジョブにより実行されるツールが利用できます。「デフォルトではパッケージリストを更新し、インストールせずに新パッケージをダウンロードするだけで
+    す。」このツールは、デフォルトで使用することが推奨されています。<br>
+    <br>
+    「本ツールはセキュリティホールとなる危険があることに注意し、必要以上のことを行なわないように設定してください。パッケージ・レポジトリを完
+    全に管理していないかぎり、全パッケージを自動的にアップグレードすることは推奨されません。」とされているので導入には注意が要ります。インス
+    トールを自動化した場合、勝手に設定ファイルが書き換えられる恐れがあります。<br>
+    <br>
+    cron-apt 以外の方法として、unattended upgrades
+    という方法も用意されています。これを利用するには、unattended-upgrades と apt-listchanges
+    のパッケージがインストールされていることが必要です。無ければ、以下の手順でインストールします。<img src="screenshot-unattended-upgrades.png" alt="screenshot-unattended-upgrades.png" vspace="20" width="450" hspace="20" height="321" align="right"><br>
+    <br>
+    &nbsp;# apt install unattended-upgrades apt-listchanges<br>
+    <br>
+    次に、自動アップデートを有効にするため下記コマンドを実行します。<br>
+    <br>
+    &nbsp;# dpkg-reconfigure -plow unattended-upgrades <br>
+    &nbsp;<br>
+    &nbsp;Creating config file /etc/apt/apt.conf.d/20auto-upgrades with
+    new version <br>
+    <br>
+    ＊unattended-upgrades の詳しい解説や設定方法は、<a href="https://wiki.debian.org/UnattendedUpgrades">https://wiki.debian.org/UnattendedUpgrades</a>
+    に掲載されています。<br>
+    <br>
+    ＊「カッコ部分」の出典： <a href="https://packages.debian.org/ja/buster/cron-apt">https://packages.debian.org/ja/buster/cron-apt</a><br>
+    <br>
+    <h3><a name="mozTocId963541" class="mozTocH3"></a>タッチパッドを無効にするには？</h3>
+    Debian 10 では GNOME
+    デスクトップ関連のソフトウェアがアップグレードされました。これにともなって、タッチパッドの有効・無効がコントロール・パネルで簡単に設定することが
+    可能 となりました。MATE デスクトップもこれに準じます。<br>
+    <br>
+    デスクトップ &gt;　システム &gt;　設定 &gt;　ハードウェア &gt;　マウス &gt;　タッチパッド
+    &gt;　有効化のチェックを外します。<br>
+    <br>
+    <h3><a name="mozTocId634019" class="mozTocH3"></a>プリンタでドライバレス印刷が可能で
+      す。PDF へも直接変換できます。</h3>
+    CUPS 関連のソフトウェアがアップグレードされ、プロプライエタリなドライバーをプリンターにインストールしなくても印刷可能となりました。<br>
+    <br>
+    さらには、印刷情報を PDF あるいは Postscript 形式などのファイルへ出力することが可能となりました。PDF や
+    Postscript
+    形式のファイルで保存すれば、別のネットワークに接続しているプリンタでも、好きなときに印刷を実行できます。紙に印字すること無くデータとして
+    USB メモリなどで自由に持ち運びが可能にもなります。PDF ファイルを活用すれば、Windows
+    システムでも容易に印刷環境が構築できるので、Linux システムと併用する場合には好都合です。<br>
+    <br>
+    <h3><a name="mozTocId22762" class="mozTocH3"></a>起動画面でエラーメッセージが出ます -
+      "missing firmware i915"</h3>
+    Dynabook PC/B65 を利用したとき、OS
+    起動時にエラーが発生したので報告しておきます(2019.10.10)。通常のインストールでは、最適なファームウェアが含まれないために起きるようで
+    す。ただし、これは深刻なエラーではなく、通常の使用では問題ないようです。具体的には、起動時のテキスト画面で error: missing
+    firmware i915/kbl... というメッセージが出るというものです。<br>
+    <br>
+    あえて対処しようとするのであれば、Intel i915
+    に対応するノンフリーなドライバーをインストールすることになります。firmware i915 というキーワードで debian
+    パッケージを検索すると、firmware-misc-nonfree が見つかります。そこで、これを次のコマンドでインストールします。<br>
+    &nbsp;# apt install firmware-misc-nonfree<br>
+    これで次回起動時以降、エラーメッセージは出なくなります。確認のため、次のコマンドで起動状況を表示すると、<br>
+    &nbsp;# dmesg<br>
+    firmware: direct-loading firmware i915/kbl_dmc_ver1_04.bin<br>
+    という文字列があって、問題は解消されています。<br>
+    <br>
+    参考までに、同様の報告が Debian 9 でもありました：<br>
+    <a href="https://unix.stackexchange.com/questions/483831/firmware-issues-at-startup-debian-9-firmware-i915-and-rtl8168g-2">https://unix.stackexchange.com/questions/483831/firmware-issues-at-startup-debian-9-firmware-i915-and-rtl8168g-2</a><br>
+    <br>
+    <h3><a name="mozTocId486265" class="mozTocH3"></a>辞書ツールや手書き入力パッドは使えな
+      いのですか？<br>
+    </h3>
+    これはbuster(安定版)用の mozc-utils-gui の不具合が原因です。Debian Backport
+    の修正版と入れ替えることで対処できます。<br>
+    <blockquote>$ /usr/lib/mozc/mozc_tool --mode=hand_writing<br>
+      [libprotobuf ERROR google/protobuf/descriptor_database.cc:58] File
+      already exists in database: ipc/ipc.proto<br>
+      [libprotobuf FATAL google/protobuf/descriptor.cc:1358] CHECK
+      failed: GeneratedDatabase()-&gt;Add(encoded_file_descriptor,
+      size): <br>
+      terminate called after throwing an instance of
+      'google::protobuf::FatalException'<br>
+      &nbsp; what():&nbsp; CHECK failed:
+      GeneratedDatabase()-&gt;Add(encoded_file_descriptor, size): <br>
+      中止<br>
+    </blockquote>
+    上記の通りエラーが発生します。backports にある 2.23.2815.102+dfsg-7 以降が必要です。入手先は以下です：<br>
+    &nbsp;https://packages.debian.org/buster-backports/mozc-utils-gui<br>
+    APT コマンドで直接インストールすることが可能です。<br>
+    # apt install
+    ./mozc-utils-gui_2.23.2815.102+dfsg-7~bpo10+1_amd64.deb<br>
+    <br>
+    [出典および設定に関する Tips]<br>
+    次のページに日本語入力の設定に関するヒントがあります：<br>
+    Google 日本語入力 のオープンソース版である Mozc に関する情報 &gt; Debian Wiki<br>
+    <a href="https://wiki.debian.org/JapaneseEnvironment/Mozc">https://wiki.debian.org/JapaneseEnvironment/Mozc</a><br>
+    <br>
+    uim 環境では、/usr/lib/mozc/mozc_tool 起動エラーの問題があります。mozc-utils-gui
+    の修正版をインストールしないと、Mozc 辞書ツールや手書き入力が行えません。<br>
+    <br>
+    <hr size="2" width="100%"><a href="../../../../index.html">HOME</a>
+  
+
+</body></html>

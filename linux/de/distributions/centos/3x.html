@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>3x</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../../index.html" title="FrontPage (3d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">CentOS-FAQ</a>
+/ <a href="3x.html">3.x</a></p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">バージョン 3.x に関すること</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">バージョン 3.x に関すること </a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">システムのアップデートを行う </a></li>
+      <li><a href="#content_1_2">国内高速ミラーサーバーを利用するには？ </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_3">Up2Date の場合 </a></li>
+          <li><a href="#content_1_4">YUM の場合 </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_5">YUMI(Cobind Software Manager)
+を使ってパッケージ管理を行うには? </a></li>
+      <li><a href="#content_1_6">APT や Synaptic を使ってパッケージ管理を行うには? </a></li>
+      <li><a href="#content_1_7">サードパーティ リポジトリーの利用 -その1
+(Dag.wieers) </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_8">APT を利用するとき </a></li>
+          <li><a href="#content_1_9">Up2date を利用するとき </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_10">サードパーティ リポジトリーの利用 -その2
+(Fedora.us) </a></li>
+      <li><a href="#content_1_11">CDライティング ツール K3b のインストール </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_12">[別手順-その1] </a></li>
+          <li><a href="#content_1_13">[別手順-その2] </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_14">Mozilla 1.7.7 / 1.7.8
+へアップデートしたらメニューが英語で表示されます。 </a></li>
+      <li><a href="#content_1_15">(CentOS 3.3) オフィススイート
+OpenOffice.org がありません。 </a></li>
+      <li><a href="#content_1_16">WBEL から CentOS 3.4 へ移行する手順は? </a></li>
+      <li><a href="#content_1_17">CentOS 3.4 から CentOS 3.5
+へアップグレードするには？ </a></li>
+      <li><a href="#content_1_18">CentOS 3.3 から CentOS 3.4
+へアップグレードするには？ </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_19">[To upgrade to CentOS-3.4] </a></li>
+          <li><a href="#content_1_20">[別手順] </a></li>
+          <li><a href="#content_1_21">[注意] </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_22">CentOS 3.1 から CentOS 3.3
+へアップグレードするには？ </a></li>
+      <li><a href="#content_1_23">CentOS 3.1
+のユーザーですが、このまま利用できますか？ </a></li>
+      <li><a href="#content_1_24">"Enterprise Kernel" は通常の kernel
+と何か違うのですか？ </a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">システムのアップデートを行う</h3>
+<p>YUM/Up2date
+を使って実行する前に、GPGキーをインポートすることを推奨します(GPGキーをインポートしなかった時は、アップデートの際、警告メッセージが表示さ
+れます)。</p>
+<pre> rpm --import http://mirror.centos.org/centos-3/3/os/i386/RPM-GPG-KEY-CentOS-3</pre>
+<p>(disc 1 に入っているので、それをコピーする方がさらに安全です。その場合には、次のようにします。)</p>
+<pre> rpm --import /mnt/cdrom/RPM-GPG-KEY-CentOS-3</pre>
+<blockquote>
+  <p class="quotation">(as root) will install ('import') the
+CentOS 3 package signing key for RPM to use to confirm a validly signed
+package.<br>
+  <br>
+Please note that it is safer to import the copy of the key from the
+install ISO media. It is in the root directory of each ISO, as
+RPM-GPG-KEY, and the same key is present on disc 1 as
+RPM-GPG-KEY-CentOS-3.<br>
+  <br>
+The reason this is safer is that a CD is of course an immutable media,
+and when one verifies ISO MD5SUMs, one is implicitly also verifying the
+key.</p>
+</blockquote>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">国内高速ミラーサーバーを利用するには？</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_3">Up2Date の場合</h4>
+<p>RIKEN=理化学研究所を設定したいときは、 /etc/sysconfig/rhn/sources より
+33-38行目をテキスト・エディタなどで書き変えてください。具体的には、以下の行をコメント(#)し、国内ミラー[下記は RIKEN
+の設定例]の記述を追加(挿入)します。</p>
+<pre> #yum centos-3-base http://mirror.centos.org/centos/3/os/i386/<br> #yum centos-3-addons http://mirror.centos.org/centos/3/addons/i386/<br> #yum centos-3-updates http://mirror.centos.org/centos/3/updates/i386/<br> #yum centos-3-extras http://mirror.centos.org/centos/3/extras/i386/<br> #yum centos-3-extras http://mirror.centos.org/centos/3/testing/i386/<br> #yum centos-3-centos+ http://mirror.centos.org/centos/3/centosplus/i386/<br> <br> yum centos-3-base http://ftp.riken.jp/Linux/centos/3/os/i386/<br> yum centos-3-addons http://ftp.riken.jp/Linux/centos/3/addons/i386/<br> yum centos-3-updates http://ftp.riken.jp/Linux/centos/3/updates/i386/<br> yum centos-3-extras http://ftp.riken.jp/Linux/centos/3/extras/i386/</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_4">YUM の場合</h4>
+<p>/etc/yum.conf を次のとおり書き換えると、日本国内のミラーサーバー(Riken)が利用できます。</p>
+<pre> [base]<br> name=CentOS-$releasever - Base<br> baseurl=http://ftp.riken.jp/Linux/centos/$releasever/os/$basearch/<br>         ftp://ftp.riken.jp/Linux/centos/$releasever/os/$basearch/<br> gpgcheck=1<br> <br> #released updates <br> [update]<br> name=CentOS-$releasever - Updates<br> baseurl=http://ftp.riken.jp/Linux/centos/$releasever/updates/$basearch/<br>         ftp://ftp.riken.jp/Linux/centos/$releasever/updates/$basearch/<br> gpgcheck=1<br> <br> #packages used/produced in the build but not released<br> [addons]<br> name=CentOS-$releasever - Addons<br> baseurl=http://ftp.riken.jp/Linux/centos/$releasever/addons/$basearch/<br>         ftp://ftp.riken.jp/Linux/centos/$releasever/addons/$basearch/<br> gpgcheck=1<br> <br> #additional packages that may be useful<br> [extras]<br> name=CentOS-$releasever - Extras<br> baseurl=http://ftp.riken.jp/Linux/centos/$releasever/extras/$basearch/<br>         ftp://ftp.riken.jp/Linux/centos/$releasever/extras/$basearch/<br> gpgcheck=1</pre>
+<p>設定を変更し上書き保存したら、コンソールから次のコマンドを実行します。</p>
+<pre> # yum list update (yum check-update コマンドでも同じ)</pre>
+<p>ヘッダ情報がダウンロードされるので、しばらく時間がかかります。そして、</p>
+<pre> # yum update</pre>
+<p>これで全てのパッケージが更新され、システムは最新の状態となります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_5">YUMI(Cobind Software Manager)
+を使ってパッケージ管理を行うには?</h3>
+<p>YUMI は、YUM のグラフィカルなパッケージ管理ツールです。<br>
+<a href="http://dag.wieers.com/packages/yumi/">http://dag.wieers.com/packages/yumi/</a>
+より yumi-2.0.7-2.1.el3.dag.noarch.rpm を入手し、</p>
+<pre> # rpm -ivh yumi-2.0.7-2.1.el3.dag.noarch.rpm<br> 警告: yumi-2.0.7-2.1.el3.dag.noarch.rpm: V3 DSA signature: NOKEY, key ID  6b8d79e6<br> Preparing...                ########################################### [100%]<br>    1:yumi                   ########################################### [100%]</pre>
+<p>以上でインストールは完了します。起動させるにはコマンドラインより、</p>
+<pre> yumi</pre>
+<p>と入力します。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_6">APT や Synaptic を使ってパッケージ管理を行うには?</h3>
+<p>コマンドラインからrootで up2date -i synaptic
+を実行するだけで、必要なパッケージが追加されます。アドオン
+パッケージの追加やインストール済みパッケージを削除するためのツールとして利用できます。</p>
+<p>ただし、アップデート(セキュリティ アップデート)の目的で使うことはできません。その理由は APT や Synaptic が
+YUMリポジトリーに対応しないからです。(最新リリースの CentOS 4 は APT に対応済みです。)</p>
+<pre> # up2date -i synaptic<br> <br> Fetching rpm headers...<br> ########################################<br> <br> Name                                    Version        Rel<br> ----------------------------------------------------------<br> synaptic                                0.47           0.fdr.3.rh90      i386<br>  <br> Testing package set / solving RPM inter-dependencies...<br> ########################################<br> synaptic-0.47-0.fdr.3.rh90. ########################## Done.<br> apt-0.5.5cnc6-0.fdr.8.rh90. ########################## Done.<br> Preparing              ########################################### [100%]<br> <br> Installing...<br>    1:apt                    ########################################### [100%]<br>    2:synaptic               ########################################### [100%]<br> The following packages were added to your selection to satisfy dependencies:<br>  <br> Name                                    Version        Release<br> --------------------------------------------------------------<br> apt                                     0.5.5cnc6      0.fdr.8.rh90</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_7">サードパーティ リポジトリーの利用 -その1 (Dag.wieers)</h3>
+<p><a href="http://dag.wieers.com/home-made/apt/">dag.wieers.com</a>
+より、RHEL 3 用のアドオン・パッケージが提供されています。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Main Mirror <a href="http://apt.sw.be/">http://apt.sw.be/</a></li>
+  <li>日本国内ミラー (Japanese Mirror)<br>
+    <br>
+    <a href="http://ftp.riken.jp/Linux/dag/">http://ftp.riken.jp/Linux/dag/</a><br>
+    <br>
+    <a href="ftp://ftp.riken.jp/Linux/dag/">ftp://ftp.riken.jp/Linux/dag/</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_8">APT を利用するとき</h4>
+<pre> # rpm -ivh apt-0.5.15cnc6-4.2.el3.rf.i386.rpm<br> # rpm --import http://dag.wieers.com/packages/RPM-GPG-KEY.dag.txt<br> # apt-get update</pre>
+<p>APT のグラフィカルなツール Synaptic を使いたいときは、追加インストールします。</p>
+<pre> # apt-get install synaptic</pre>
+<p>詳しくは <a href="http://dag.wieers.com/home-made/apt/FAQ.php#B">Installation
+and
+Configuration</a> を参照してください。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_9">Up2date を利用するとき</h4>
+<p>Up2date を利用するには /etc/sysconfig/rhn/sources にいずれかを追加します。<br>
+<br>
+[APT リポジトリーの追加]</p>
+<pre> ### Dag RPM Repository for Red Hat Enterprise Linux<br> apt DAG-RPM-Repository http://apt.sw.be redhat/el3/en/i386 dag</pre>
+<p>[YUM リポジトリーの追加]</p>
+<pre> ### Dag RPM Repository for Red Hat Enterprise Linux<br> yum DAG-RPM-Repository http://apt.sw.be/redhat/el3/en/$ARCH/dag</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_10">サードパーティ リポジトリーの利用 -その2 (Fedora.us)</h3>
+<p>アドオン・パッケージを提供する代表的なリポジトリーは、現在(2005.05) Dag RPM Repository や
+ATrpms です。これらのリポジトリーには、特に RHEL 3 / 4 向けのパッケージが用意されています。</p>
+<p>アドオン・パッケージの利用は、APT / Synaptic を使って管理する方が問題が発生しません。YUM /
+Up2date の
+conf ファイルに追加して運用した場合は、 update の際知らずに余計なパッケージを取り込んでしまう恐れが出てくるので、注意を要します。</p>
+<p>Fedora.us は Red Hat Linux 9
+用しか用意されておらず、今ではメンテナンスもされていないので、必要とするパッケージがここでしか見つからないといった特別な事情でもない限り、
+Fedora.us は アドオン用リポジトリーとして推奨できません。</p>
+<p>/etc/sysconfig/rhn/sources には fedora.us の
+YUMリポジトリーが予め用意されています。その31行目にある次の記述のコメント(#)を外して、上書き保存します。</p>
+<pre> yum fedora-9-i386-stable http://download.fedora.us/fedora/redhat/9/i386/yum/stable</pre>
+<p>GPG キーをインポートします。</p>
+<pre> # rpm --import http://www.fedora.us/FEDORA-GPG-KEY</pre>
+<p>fedora.us 以外のリポジトリーを利用したいときは、この例に習って記述を追加します。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_11">CDライティング ツール K3b のインストール</h3>
+<p>上記手順に従って Fedora.us を利用すると CDライティング ツール K3b
+が次のコマンドでインストール可能となります。</p>
+<pre> # up2date -i k3b<br> <br> Fetching Obsoletes list for channel: fedora-9-i386-stable...<br> Fetching Obsoletes list for channel: centos-3-base...<br> Fetching Obsoletes list for channel: centos-3-addons...<br> Fetching Obsoletes list for channel: centos-3-updates...<br> Fetching Obsoletes list for channel: centos-3-extras...<br> Fetching rpm headers...<br> ########################################<br> <br> Name                                    Version        Rel<br> ----------------------------------------------------------<br> k3b                                     0.11.14        0.fdr.2.rh90      i386<br>  <br> Testing package set / solving RPM inter-dependencies...<br> ########################################<br> k3b-0.11.14-0.fdr.2.rh90.i3 ########################## Done.<br> flac-1.1.0-0.fdr.16.rh90.i3 ########################## Done.<br> id3lib-3.8.3-0.fdr.9.rh90.i ########################## Done.<br> Preparing              ########################################### [100%]<br> <br> Installing...<br>    1:id3lib                 ########################################### [100%]<br>    2:flac                   ########################################### [100%]<br>    3:k3b                    ########################################### [100%]<br> The following packages were added to your selection to satisfy dependencies:<br> <br> Name                                    Version        Release<br> --------------------------------------------------------------<br> flac                                    1.1.0          0.fdr.16.rh90<br> id3lib                                  3.8.3          0.fdr.9.rh90</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_12">[別手順-その1]</h4>
+<p><a href="http://www.k3b.org/">http://www.k3b.org/</a>
+プロジェクトより、Red Hat Linux 9 用の APT ラインを追加できます。この設定を行うことで、最新の安定版が利用可能となります。</p>
+<p>apt - /etc/apt/sources.list.d ディレクトリーに追加しなくてはいけないときは、適当な名前
+(k3b.list など) の設定ファイルを新規作成し、次の内容を記述します。</p>
+<pre> # Name: k3b.org Repository<br> # URL: http://www.k3b.org/<br> <br> ### k3b.org Repository for Red Hat Linux 9<br> rpm http://rpms.xcyb.org/redhat/9 i686 stable bleeding<br> rpm-src http://rpms.xcyb.org/redhat/9 i686 stable bleeding</pre>
+<p>設定ファイルの作成作業が完了したら、次のコマンドを実行します。</p>
+<pre> # apt-get update<br> # apt-get install k3b k3b-i18n cdrdao</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_13">[別手順-その2]</h4>
+<p><a href="http://www.k3b.org/">http://www.k3b.org/</a>
+プロジェクトより、Red Hat Linux 9 用の YUM ラインを追加してインストールすることもできます。その場合、まず Dag
+より次の3つのパッケージを入手しインストールします。</p>
+<pre> # rpm -ivh id3lib_3.8.3-7.1.el3.dag_i386.rpm libmad_0.15.1b-3.1.el3.dag_i386.rpm lame_3.96.1-2.1.el3.rf_i386.rpm</pre>
+<p>そして、yum - /etc/yum.conf に YUM ラインを追加します。</p>
+<pre> [xcyb-stable]<br> name=Red Hat Linux 9 ( xcyborg / stable )<br> baseurl=http://rpms.xcyb.org/redhat/9/stable/<br> <br> [xcyb-bleeding]<br> name=Red Hat Linux 9 ( xcyborg / bleeding )<br> baseurl=http://rpms.xcyb.org/redhat/9/bleeding/</pre>
+<p>設定ファイルの作成作業が完了したら、次のコマンドを実行します。</p>
+<pre> # yum list update<br> # yum install k3b k3b-i18n cdrdao</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_14">Mozilla 1.7.7 / 1.7.8
+へアップデートしたらメニューが英語で表示されます。</h3>
+<p>これは、バージョン 1.7.7 (mozilla-1.7.7-1.1.3.4.centos3.i386.rpm)
+以降のパッケージのバグ(不具合)<a id="notetext_1" href="#notefoot_1" class="note_super">*1</a>で
+す。メニューが英語で表示されてしまうようになりますが、日本語のウェブサイトを表示させること
+は問題なく可能です。</p>
+<p>どうしても Mozilla のアプリケーションの表示(メニューなど)が日本語でなくては困る場合には、Up2date
+Network
+の更新対象パッケージから除外するよう(「無視したパッケージ」)に指定することで、一時的に回避できます。将来正常な更新版がリリースされた時には、直
+ちにアップデートを実行するようにしてください。</p>
+<p>別の対処法として、Mozilla の公式サイトより配布されいる Mozilla 1.7.7 用の Japanese
+Language Pack を利用することもできます。作業手順については、<span class="noexists">関連項目<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=Applications-FAQ%2FWebBrowsers%2FMozilla&amp;refer=CentOS-FAQ%2F3.x">?</a></span>
+を見てください。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Mozilla 1.7.8 用の Japanese Language Pack は 2005.05.30
+現在公開されていません。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_15">(CentOS 3.3) オフィススイート OpenOffice.org がありません。</h3>
+<p>標準インストールでは、OpenOffice.org がインストールされません。インストールCD
+#disc-3
+より追加インストールします。パッケージ管理の観点からいえば、このディストリビューションのために特に用意されたパッケージをインストールするべきで
+す。</p>
+<pre> $ cd /mnt/cdrom/RedHat/RPMS<br> <br> # rpm -ivh openoffice.org-1.1.0-16.13.EL.i386.rpm openoffice.org-i18n-1.1.0-16.13.EL.i386.rpm<br> openoffice.org-libs-1.1.0-16.13.EL.i386.rpm openoffice.org-style-gnome-1.1.0-16.9.EL.i386.rpm<br> Preparing...                ########################################### [100%]<br>    1:openoffice.org-libs    ########################################### [ 25%]<br>    2:openoffice.org-i18n    ########################################### [ 50%]<br>    3:openoffice.org-style-gn########################################### [ 75%]<br>    4:openoffice.org         ########################################### [100%]</pre>
+<p>すでに更新版がリリースされているので、インターネットに接続されている環境では、インストール後直ちにアップデートを行ってくださ
+い。</p>
+<p>実際には、インストールCD に含まれる OpenOffice.org のバージョンが 1.1.0 とやや古いため、OpenOffice.org
+公式サイトより最新バージョン 1.1.4
+日本語版を入手してインストールした方が実用的かもしれません。ただし、RPM/YUM でのパッケージ管理の対象からは外れることになります。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>[注意]<br>
+openoffice.org-1.1.0-16.13.EL.i386.rpm を組み込んだ場合、openoffice.org
+の起動に3分以上かかることがあり、何らかの問題が発生しているようです。バージョン 3.3 で openoffice.org
+がデフォルトでインストールされない理由に関係があると思われます。<br>
+なお、バージョン 3.4 では OpenOffice.org が標準でインストールされるようになりました。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_16">WBEL から CentOS 3.4 へ移行する手順は?</h3>
+<p><a href="http://www.centos.org/modules/smartfaq/faq.php?faqid=19">http://www.centos.org/modules/smartfaq/faq.php?faqid=19</a></p>
+<p>1) This command is optional, but recommended. Optionally
+Execute:</p>
+<pre> # yum clean</pre>
+<p>2) This step install the CentOS package signing key. Execute:</p>
+<pre> # rpm --import http://mirror.centos.org/centos-3/RPM-GPG-KEY-CentOS-3</pre>
+<p>3) This step installs the CentOS specific -release file; this
+obsoletes the package whitebox-release. (The whitebox-release package
+is automatically removed.). Execute:</p>
+<pre> # rpm -Uvh http://mirror.centos.org/centos/3.4/os/i386/RedHat/RPMS/centos-release-3-4.2.i386.rpm</pre>
+<p>4) This step installs the CentOS version of yum and a suitable
+yum.conf file. Execute:</p>
+<pre> # rpm -Uvh http://mirror.centos.org/centos/3.4/os/i386/RedHat/RPMS/yum-2.0.8-1.centos.7.noarch.rpm</pre>
+<p>5) Optionally Execute:</p>
+<pre> # yum list update</pre>
+<pre> # yum update</pre>
+<p>6) Using up2date after the migration</p>
+<p>Once the above mentioned Migration has run through you will
+need to replace the <a
+ href="http://linux2ch.bbzone.net/index.php?FAQ%2FDistribution%2FWhitebox">WhiteBox</a>
+up2date with the CentOS up2date systems (they both use different
+setups).</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>On a non-GUI machine the commands to achieve this
+replacement use these commands:
+    <pre> # rpm -e up2date firstboot<br> # yum install up2date</pre>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>On a GUI based machine:
+    <pre> # rpm -e up2date up2date-gnome rhn-applet firstboot<br> # yum install up2date up2date-gnome rhn-applet</pre>
+  </li>
+</ul>
+<p>(In most cases firstboot can be left out since its not going
+to be run anymore)</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_17">CentOS 3.4 から CentOS 3.5 へアップグレードするには？</h3>
+<p>まず次のパッケージを入手しインストールします。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://ftp.riken.go.jp/Linux/caos/centos/3.5/os/i386/RedHat/RPMS/">http://ftp.riken.go.jp/Linux/caos/centos/3.5/os/i386/RedHat/RPMS/</a></li>
+</ul>
+<pre> #rpm -Uvh centos-release-3-5.3.i386.rpm centos-yumconf-1-11.noarch.rpm</pre>
+<p>そして、次のコマンドを実行してください。</p>
+<pre> # yum upgrade</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>参照先 [CentOS] centos 3.5 ? <a
+ href="http://lists.centos.org/pipermail/centos/2005-May/005730.html">http://lists.centos.org/pipermail/centos/2005-May/005730.html</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_18">CentOS 3.3 から CentOS 3.4 へアップグレードするには？</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_19">[To upgrade to CentOS-3.4]</h4>
+<pre> # rpm -ivh http://mirror.centos.org/centos/3.4/os/i386/RedHat/RPMS/centos-yumcache-3.1-0.20050105.3.noarch.rpm</pre>
+<p>続けて次のコマンドを実行します。</p>
+<pre> # rpm -Fvh http://mirror.centos.org/centos/3.4/os/i386/RedHat/RPMS/centos-release-3-4.2.i386.rpm</pre>
+<p>そして次のコマンドでアップグレードが完了します。</p>
+<pre> # yum update</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_20">[別手順]</h4>
+<p>RPMコマンドを使用せず、次の方法でもアップグレードが可能です。</p>
+<pre> # yum install centos-yumcache<br> # yum update centos-release<br> # yum update</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_21">[注意]</h4>
+<p>アップグレードするとbindのサービスがoffになる。また、named.confが新しいものになる。
+named.conf.rpmsaveが古いnamed.conf</p>
+<p>アップグレードの詳細については、<a
+ href="http://www.centos.org/modules/news/article.php?storyid=34">CentOS
+Announcements
+:
+CentOS 3.4 - i386 release</a> の Upgrade Notes
+の箇所を参照してください。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_22">CentOS 3.1 から CentOS 3.3 へアップグレードするには？</h3>
+<p>/etc/yum.conf ファイルを次のとおり書き換えます。</p>
+<pre>    WRONG:	baseurl=http://mirror.caosity.org/centos-3/3.1/<br>    WRONG:	baseurl=http://mirror.caosity.org/centos-3/3.3/<br>    RIGHT:	baseurl=http://mirror.caosity.org/centos-3/$releasever/</pre>
+<p>そして、</p>
+<pre> # yum update</pre>
+<p>を実行します。</p>
+<blockquote>
+  <p class="quotation"><a
+ href="http://wwwold.caosity.org/index.php?option=news&amp;task=viewarticle&amp;sid=34">http://wwwold.caosity.org/index.php?option=news&amp;task=viewarticle&amp;sid=34</a></p>
+</blockquote>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_23">CentOS 3.1 のユーザーですが、このまま利用できますか？</h3>
+<p>今後も CentOS を継続して利用するには、CentOS 3.3 以上のバージョンにアップグレードトする必要があります。</p>
+<blockquote>
+  <p class="quotation">With the release of CentOS 3.4 the
+decision has been taken to remove CentOS 3.1 from the mirrors. This
+will save approximately 18 GB of space and make room for new
+architectures and CentOS 4.0 .</p>
+  <p class="quotation">Now 3.1 is a symlink to 3.3 so that even
+if they
+have hardcoded yum.conf (dont !!) they will now get the 3.3 tree, which
+will make little difference as the updates were all in the 3.1 tree
+anyway.</p>
+  <p class="quotation"><a
+ href="http://www.centos.org/modules/news/article.php?storyid=40">http://www.centos.org/modules/news/article.php?storyid=40</a></p>
+</blockquote>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_24">"Enterprise Kernel" は通常の kernel と何か違うのですか？</h3>
+<p>配布元のベンダーは、一般に配布されている Linux kernel 2.4 に手を加えて、独自の改良を行い、これを
+Enterprise Kernel として組み込んでいます。その主な特徴は、次のページで比較表を載せて紹介されています。</p>
+<blockquote>
+  <p class="quotation"><a
+ href="http://www.redhat.com/software/rhel/kernel26/">The Enterprise
+Kernel: A Linux 2.4 core with Linux 2.6 features</a></p>
+  <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+    <li><a
+ href="http://www.jp.redhat.com/software/rhel/3features/kernel/">Enterprise
+Linux
+v.3
+カーネル: Linux 2.4コアにLinux 2.6の機能を搭載</a> (日本語)</li>
+  </ul>
+</blockquote>
+<p>このページによれば、安定した運用を実現するために kernel 2.6 の特徴の多くが Enterprise Kernel
+2.4 にバックポート(移植)されているとの説明があります。<br>
+CentOS に組み込まれている kernel 2.4 は、そのクローンということになります。</p>
+</div>
+<div id="note">
+<hr class="note_hr"><a id="notefoot_1" href="#notetext_1"
+ class="note_super">*1</a>
+<span class="small">同時期にリリースされた Scientific / White Box Linux にも同じ問題が生じます<br>
+</span>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a><span
+ class="small"><br>
+</span></div>
+</body>
+</html>

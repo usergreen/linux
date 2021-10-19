@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Jessie - Linux on the Desktop</title>
+  </head>
+  <body>
+    <div><a href="../../../../index.html" title="FrontPage (2d)">HOME</a>
+      / <a href="../index.html">Distributions</a> / <a
+        href="../index.html">Debian</a> / Jessie<br>
+    </div>
+    <hr width="100%" size="2">
+    <h2 id="content_1_0"><a class="mozTocH2" name="mozTocId832241"></a>Debian GNU/Linux 8 (Jessie)</h2>
+    <p>Debian GNU/Linux Jessie (旧安定版) に関する FAQ/Tips です。<br>
+      <br>
+    </p>
+    <ul id="mozToc">
+      <!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
+    </ul>
+    <p><a>■Debian jessie リリース情報 -
+        https://www.debian.org/releases/jessie/index.ja.html<br>
+      </a><a>　Debian 8.0 初版は 2015 年 4 月 26 日 にリリースされました。</a><br>
+      　リリース・ノート情報 -<a href="https://www.debian.org/releases/jessie/index.ja.html">
+        https://www.debian.org/releases/jessie/index.ja.html</a> </p>
+    <h3>■Debian Jessie をインストールするには?</h3>
+    <p>　<a>Debian jessie インストールガイドを見てください。
+        https://www.debian.org/releases/jessie/installmanual.ja.html<br>
+      </a></p>
+    <h3>■古い Debian リリースからアップグレードするには?</h3>
+    　まずは、Debian 8 (jessie) リリースノート<a>を見てください。 </a>https://www.debian.org/releases/jessie/releasenotes.ja.html<br>
+    　例えば、32 ビット PC を使っている場合には、次のマニュアルを見てください。<br>
+    　https://www.debian.org/releases/jessie/i386/release-notes/index.ja.html (32 ビット PC 用)<br>
+    　具体的には、「第4章 Debian 7 (wheezy) からのアップグレード」に詳しく書かれてある手順に従うと良いでしょう。<br>
+    <br>
+    　リリースノートは、他にも、64 ビット PC (amd64) 用、EABI ARM (armel) 用、PowerPC 用、ard
+    Float ABI ARM (armhf) 用、IPS (リトルエンディアン) 用、MIPS (ビッグエンディアン) 用、IBM
+    System z 用、64 ビット PC (AArch64) 用、POWER プロセッサ用があります。<br>
+    <h3>■APT の機能追加について</h3>
+    APT(Advanced Package Tool) は、Debian 8 Jessie
+    のリリースと併せて、大きな変更が行なわれました。コマンドラインからの操作は以下のとおり、apt
+    コマンドを使って簡略化できるようになりました。なお、apt-get によるコマンドも引き続きサポートされます。<br>
+    <br>
+     apt-get update -&gt; apt update<br>
+     apt-get upgrade -&gt; apt upgrade<br>
+     apt-get dist-upgrade -&gt; apt full-upgrade<br>
+     apt-get install package -&gt; apt install package<br>
+     apt-get remove package -&gt; apt remove package<br>
+     apt-get autoremove -&gt; apt autoremove<br>
+     apt-cache search string -&gt; apt search string<br>
+     apt-cache policy package -&gt; apt list -a package<br>
+     apt-cache show package -&gt; apt show package<br>
+    <br>
+    Starting with Debian Jessie, some frequently used apt-get and
+    apt-cache commands have an equivalent via the new apt binary. This
+    means some popular commands like apt-get update, apt-get install,
+    apt-get remove, apt-cache search, or apt-cache show now can also be
+    called simply via apt, say apt update, apt install, apt remove, apt
+    search, or apt show.<br>
+    <br>
+    出典：
+https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html#s-apt-get<br>
+    参照：
+    https://debian-handbook.info/browse/ja-JP/stable/sect.apt-get.html<br>
+    <br>
+    <hr width="100%" size="2"><a href="../../../../index.html">HOME</a>
+  </body>
+</html>

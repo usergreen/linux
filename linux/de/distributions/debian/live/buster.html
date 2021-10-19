@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>Debian Live 10 (buster) - Linux on the Desktop</title>
+  </head>
+  <body>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td valign="top">&nbsp;<a href="../../../../index.html">HOME</a> / <a href="../../index.html">Distributions</a> / <a href="../index.html">Debian</a> / <a href="index.html">Live</a> / buster </td>
+          <td valign="middle" align="right">Last updated: 2020/12/27 19:51 JST</td>
+        </tr>
+      </tbody>
+</table>
+<hr width="100%">
+<b><font size="+2">Debian Live 10 (buster) に関するページ</font></b><br>
+<br>
+<b>目　次</b><br>
+<a href="#1">Debian Live 10 (buster) の概要</a><br><a href="#2">
+iso イメージのダウンロードについて</a><br>
+<a href="#3">Debian Live はどうやって作るのですか？</a><br>
+<a href="#4">どうすれば日本語入力ができるのですか？</a> <br>
+<a href="#4">Debian Live 10 のインストール手順について</a> <br>
+<br>
+<h3><a name="1"></a>Debian Live 10 (buster) の概要</h3>
+
+
+        <img src="buster_install/default_desktop.png" alt="Screenshot-debian-live-buster-amd64-cinnamon.png" width="640" hspace="30" height="360" align="right">Debian 10
+        の公式 Live CD には複数のデスクトップ環境が用意されています。Cinnamon や GNOME、KDE、LXDE、MATE、Xfce 
+の中からユーザーが気に入ったものを選んで使うことが出来るようになっています。右側に掲載した画像は起動直後の MATE デスクトップ
+        の初期画面です。<br>
+        <br>
+<h3><a name="2"></a>iso イメージのダウンロードについて</h3>
+ミラーサイトの /Linux/debian/debian-cd/10.7.0-live/amd64/iso-hybrid/ 以下に各種のiso イメージがあります。下記は 202012.26 現在で入手可能な iso イメージです。<br>
+<br>
+debian-live-10.7.0-amd64-cinnamon.iso&nbsp;&nbsp; 2020-12-05 21:05&nbsp; 2.4G&nbsp;&nbsp;&nbsp; <br>
+debian-live-10.7.0-amd64-gnome.iso&nbsp;&nbsp;&nbsp; 2020-12-05 21:04 &nbsp;&nbsp; 2.5G<br>
+debian-live-10.7.0-amd64-kde.iso&nbsp;&nbsp;&nbsp;&nbsp; 2020-12-05 21:06 &nbsp;&nbsp;&nbsp; 2.6G&nbsp;&nbsp;&nbsp; <br>
+debian-live-10.7.0-amd64-lxde.iso&nbsp;&nbsp;&nbsp; 2020-12-05 21:02 &nbsp;&nbsp;&nbsp; 2.3G<br>
+debian-live-10.7.0-amd64-lxqt.iso&nbsp;&nbsp;&nbsp; 2020-12-05 21:03 &nbsp;&nbsp;&nbsp; 2.4G&nbsp;&nbsp;&nbsp; <br>
+debian-live-10.7.0-amd64-mate.iso&nbsp;&nbsp;&nbsp; 2020-12-05 21:02 &nbsp;&nbsp;&nbsp; 2.4G<br>
+debian-live-10.7.0-amd64-xfce.iso&nbsp;&nbsp;&nbsp; 2020-12-05 21:00 &nbsp;&nbsp;&nbsp; 2.3G<br>
+debian-live-10.7.0-amd64-standard.iso&nbsp; 2020-12-05 20:38 &nbsp; 945M<br>
+<br>
+i386 アーキテクチャ用は /Linux/debian/debian-cd/10.7.0-live/i386/iso-hybrid/ にあります。<br>
+プロプライエタリなファームウェア(Non-free Firmware)を同梱する iso イメージも用意されています。<br>
+<br>
+<h3><a name="3"></a>Debian Live はどうやって作るのですか？</h3>
+DVD / USBメモリに書き込み、それで起動可能なメディアを作成することが出来るようになりました。ハイブリッドISO
+        の技術を利用して提供されています。Windows パソコンで作成する場合は、Rufus ( https://rufus.ie/ ) というオープンソースのソフトウェアを使うのが便利です。<br>
+<br>
+Linux 環境では、ハイブリッドISO
+        の仕様であるため、USBメモリに書き込む場合、単に CPコマンドを使うことができます。 <br>
+        <br>
+        公式サイトに注意書きがあります：「 &lt;デバイス&gt; は USB flash ドライブを示すデバイス。例えば /dev/sda, /dev/sdb。
+        デバイス名が確実に合っているかどうか注意してください。
+        間違えた場合、このコマンドは簡単にハードディスクを上書きしてしまうからです! 」<br>
+デバイス名を確認するには「システムモニター」というアプリが利用できます。dmesg コマンドでも確認が可能です。管理者権限で dmesg 
+コマンドを実行すると膨大なシステム情報が表示されますが、その最後の方の行に下記のように USB デバイスのマウント情報が出力されます。<br>
+<br>
+[ 5346.015133] sd 2:0:0:0: [sdb] Attached SCSI removable disk<br>
+この例では [sdb] の部分がデバイス名を表示しています。<br>
+<br>
+        CP コマンドを使う場合のひな型を示しておきます：<br>
+        &nbsp;<span class="escaped"><span class="escaped"># cp
+            &lt;ファイル&gt; &lt;デバイス&gt;<br>
+            <br>
+            実行例：<br>
+          </span></span>&nbsp;#
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <span class="escaped">cp
+          debian-live-10.3.0-amd64-cinnamon+nonfree.iso /dev/sdb</span><br>
+        <br>
+        &nbsp;<span class="escaped"><a href="https://www.debian.org/CD/faq/index.ja.html#write-usb" target="_blank">https://www.debian.org/CD/faq/index.ja.html#write-usb</a>
+          <br>
+          &nbsp;&gt;CD/DVD/BD イメージを USB flash ドライブに書き込む<br>
+          <br>
+          &nbsp;"</span><span class="escaped">The image must be written
+          to the whole-disk device and not a partition, <br>
+          &nbsp;e.g. /dev/sdb and not /dev/sdb1.<br>
+          &nbsp;Do not use tools like unetbootin which alter the image."<br>
+          &nbsp;<a href="https://www.debian.org/releases/jessie/i386/ch04s03.html.ja" target="_blank">https://www.debian.org/releases/jessie/i386/ch04s03.html.ja</a><br>
+        </span>
+        <ul>
+          <li><span class="escaped">起動時のオプションで、ロケールで日本語を選択すれば外観（インターフェー
+              ス）は完全に日本語化されます。</span></li>
+          <li><span class="escaped">日本語入力を開始するには、「入力メソッド」の設定を行う必要があります。メ
+              ニュー &gt; 設定 &gt;
+              入力メソッド（下側のアイコン）で行なうか、コマンドラインから次のコマンドを実行して設定します： $
+              im-config</span></li>
+          <li><span class="escaped"><span class="escaped">日本語入力方式は、ibus
+                fcitx uim xim のうちから選択可能ですが、uim が使いやすいと思います（Debian標準の</span></span><span class="escaped"><span class="escaped"><span class="escaped"><span class="escaped">日本語入力方式</span></span>）。
+                <br>
+              </span></span></li>
+        </ul><br>
+<h3><a name="4"></a>どうすれば日本語入力ができるのですか？</h3>
+Debian Live が起動した直後は、直接入力（英数入力）が有効になっています。その時点では未だ日本語の入力はできません。パネルの 
+[システム] &gt; [設定] &gt; [その他] &gt; [入力メソッド] を起動するか、あるいは次のコマンドを実行します。<br>
+$ im-config<br>
+日本語入力の設定画面が立ち上がるので、ここで uim を選択します。これで設定完了です。<br>
+<br>
+<h3><a name="5"></a>Debian Live 10 のインストール手順について</h3>
+
+Debian Live 10 のisoイメージを使えば、インターネット接続環境不要でそのままインストールが可能です。簡易な Debian 
+インストーラーとして利用可です。インストール手順についてスクリーンショットを載せたページを作成したのでご覧ください。以前の Live iso 
+と比較すると良く仕上がっています。<br>
+<br>
+<a href="buster_install/buster_install.html">Debian Live 10 インストールのページ</a>で作業の手順を紹介しています。スクリーンショットを追って作業を進めてください。グラフィカルでより対話的に行えるように改善されました。<br>
+<br>
+<br>
+<hr width="100%">
+<div style="text-align: left;">&nbsp;<a href="../../../../index.html">HOME</a> / <a href="../../index.html">Distributions</a> / <a href="../index.html">Debian</a> / <a href="index.html">Live</a> / buster <br>
+</div>
+
+
+</body></html>

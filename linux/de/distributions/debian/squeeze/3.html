@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>squeeze 3/3 - Linux on the Desktop</title>
+</head>
+<body>
+<div id="navigator">
+<div><a href="../../../../index.html" title="FrontPage (2d)">HOME</a> /
+<a href="../../index.html">Distributions</a> /
+<a href="../index.html">DebianLinux-FAQ</a>
+/ <a href="index.html">Squeeze</a> <br>
+<hr size="2" width="100%">
+<h2 id="content_1_0"><a class="mozTocH2" name="mozTocId716702"></a>Composer
+や Iceweasel に関すること<!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><br>
+</h2>
+</div>
+<ul>
+  <li><a href="#mozTocId913746">Composer をインストールできますか？</a></li>
+  <li><a href="#mozTocId3098">Composer のメニューを日本語化したい。</a></li>
+  <li><a href="#mozTocId810332">iceweasel
+巻き込んで落ちまくってまともに観られません。(2013.3.29)</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_1"><a class="mozTocH4" name="mozTocId913746"></a>Composer
+をインストールできますか？</h4>
+<p>Squeeze より、Composer の Debian パッケージ提供が再開されたので、apt-get
+コマンドを使ってのインストールが可能となりました。</p>
+<p># apt-get install iceape-browser<br>
+パッケージリストを読み込んでいます... 完了<br>
+依存関係ツリーを作成しています<br>
+状態情報を読み取っています... 完了<br>
+提案パッケージ:</p>
+<pre>  iceape-mailnews xul-ext-dom-inspector</pre>
+<p>以下のパッケージが新たにインストールされます:</p>
+<pre>  iceape-browser</pre>
+<p>アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 0 個。<br>
+10.8 MB のアーカイブを取得する必要があります。<br>
+この操作後に追加で 30.9 MB のディスク容量が消費されます。<br>
+取得:1 <a href="http://ftp.jp.debian.org/debian/">http://ftp.jp.debian.org/debian/</a>
+squeeze/main iceape-browser i386 2.0.11-3 [10.8 MB]<br>
+10.8 MB を 2分 1秒 で取得しました (88.9 kB/s)<br>
+未選択パッケージ iceape-browser を選択しています。<br>
+(データベースを読み込んでいます ... 現在 136953 個のファイルとディレクトリがインストールされています。)<br>
+(.../iceape-browser_2.0.11-3_i386.deb から) iceape-browser を展開しています...<br>
+man-db のトリガを処理しています ...<br>
+menu のトリガを処理しています ...<br>
+gnome-menus のトリガを処理しています ...<br>
+desktop-file-utils のトリガを処理しています ...<br>
+hicolor-icon-theme のトリガを処理しています ...<br>
+iceape-browser (2.0.11-3) を設定しています ...<br>
+update-alternatives: /usr/bin/mozilla (mozilla) を提供するために 自動モード で
+/usr/bin/iceape を使います。<br>
+menu のトリガを処理しています ...</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_2"><a class="mozTocH4" name="mozTocId3098"></a>Composer
+のメニューを日本語化したい。</h4>
+<p>上記項目の手順でインストールされる Composer
+は英語版ですから、メニューは日本語になりませんが、「日本語言語パック」を追加インストールすることで対処できます。日本語言語パックは、<span
+ class="noexists">SeaMonkey<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=SeaMonkey&amp;refer=DebianLinux-FAQ%2FSqueeze%2F3">?</a></span>
+本家プロジェクトより入手する必要があります。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>対応するバージョン：seamonkey-2.0.11.ja.langpack.xpi</li>
+  <li>入手先：<a
+ href="ftp://ftp.mozilla.org/pub/mozilla.org/seamonkey/releases/">ftp://ftp.mozilla.org/pub/mozilla.org/seamonkey/releases/</a></li>
+</ul>
+<p>なお、ダウンロードした言語パッケージは、Composer のメニューから Edit &gt; Preferences &gt;
+Advanced &gt; Software Installation &gt; Add-on Manager &gt; Install
+を選択してインストールします。<br>
+</p>
+<p><a href="#navigator">↑</a></p>
+<h4><a class="mozTocH4" name="mozTocId810332"></a>Iceweasel
+巻き込んで落ちまくってまともに観られません。(2013.3.29)<br>
+</h4>
+本家版である Firefox とは仕様が全く同じではありません。微妙な相違から特有の問題が発生していると考えられます。<br>
+flash-player に関わるこの不具合は、当方においても確認しています。<br>
+<br>
+Chromium ウェブブラウザを一時的に代用するのが良いでしょう。Chromium ウェブブラウザは、Debian の公式版が入手できます。<br>
+# apt-get install chromium-browser chromium-browser-l10n<br>
+<br>
+<hr size="2" width="100%"><a href="../../../../index.html">HOME</a>
+</div>
+</body>
+</html>

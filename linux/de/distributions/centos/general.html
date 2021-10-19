@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>CentOS FAQ general</title>
+  </head>
+  <body>
+    <div id="navigator">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tbody>
+        <tr>
+          <td valign="top"> <a href="../../../index.html"><big>HOME</big></a>　<a href="index.html">CentOS Top</a>　</td>
+          <td valign="middle" align="right">Last updated&nbsp;2020/12/22</td>
+        </tr>
+      </tbody>
+    </table>
+<hr width="100%">
+      <h2 id="content_1_0">CentOS 全般に関する FAQ</h2>
+      <div class="contents">
+        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_0">CentOS 全般に関するFAQ。 </a>
+            <ul class="list2" style="padding-left: 16px; margin-left:
+              16px;">
+              <li><a href="#content_1_1">CentOS とは何ですか? </a></li>
+              <li><a href="#content_1_2">プロジェクト公式ウェブサイト </a></li>
+              <li><a href="#content_1_3">インストールの手順を教えてください </a></li>
+              <li><a href="#content_1_4">ダウンロード/ミラーサイト
+                  (Downloading/Mirrors) </a></li>
+              <li><a href="#content_1_5">近くのミラーサイトを探すには?</a></li>
+              <li><a href="#content_1_6">CentOS
+                  リリースのインストールに必要なisoイメージについて </a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#version-8">CentOS 8.3 (バージョン 8.x)</a></li>
+<li><a href="#version-7">CentOS 7</a><a href="#version-7">.9 (バージョン 7.x)</a></li>
+                  <li><a href="#version-6">CentOS 6.10(バージョン 6.x)</a> - 2020.11.30 サポート終了<br>
+</li>
+                  <li><a href="#version-5">CentOS 5.7 (バージョン 5.7)</a> - 終了(Obsolete)<br>
+</li>
+                  <li><a href="#content_1_7">CentOS 4.2 (バージョン 4.2) </a><a>- </a><a>終了(Obsolete)</a></li>
+                  <li><a href="#content_1_8">CentOS 3.6 (バージョン 3.6) </a><a>- </a><a>終了(Obsolete)</a></li>
+                  <li><a href="#content_1_9">サーバー向け専用 ISO イメージ </a></li>
+                  <li><a href="#content_1_10">雑誌・書籍の付録から CD or DVD
+                      を入手する。 </a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_11">CentOS Live CD について</a></li>
+              <li><a href="#content_1_12">CentOS
+                  のバージョン管理・リリース方針はどのようになっていますか？ </a></li>
+              <li><a href="#content_1_13">CentOSのバージョンってどこで見ればよいですか？ </a></li>
+              <li><a href="#content_1_14">Beta / RC とは何のことですか? </a></li>
+              <li><a href="#content_1_15">バグレポートはどこにしたら良いのですか? </a></li>
+              <li><a href="#content_1_16">公式メーリングリスト </a></li>
+              <li><a href="#content_1_17">2ch Linux板 CentOS スレッド </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_1">CentOS とは何ですか?</h3>
+      <p>CentOS という呼び名は、Community ENTerprise Operating System
+        から来ています。コミュニティ
+        ベースで開発された、エンタープライズ・クラスのオペレーティングシステム(OS)というほどの意味です。</p>
+      <p>White Box Enterprise Linux, Scientific Linux 等同様、北アメリカの有名な
+        Enterprise Linuxベンダーより無償公開されたソースコードから再コンパイルされた、エンタープライズ・クラスの
+        Linux ディストリビューションです。CentOSは、同社の再配布条件に忠実に従って一般公開され、100%
+        バイナリー互換性を保つことを目指しています。</p>
+      <p>この Linux ディストリビューションは、広く無償配布されています。</p>
+      <p>[参考-英文の紹介 from <a href="http://www.centos.org/">http://www.centos.org/</a>
+        &gt; CentOS Overview]<br>
+        CentOS is an Enterprise-class Linux Distribution derived from
+        sources freely provided to the public by a prominent North
+        American Enterprise Linux vendor. CentOS conforms fully with the
+        upstream vendors redistribution policy and aims to be 100%
+        binary compatible.</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_2">プロジェクト公式ウェブサイト</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>CentOS ホームページ <a href="http://www.centos.org">http://www.centos.org</a>
+          (旧サイト <a href="http://wwwold.caosity.org/">http://wwwold.caosity.org/</a>
+          )</li>
+        <li>CentOS Wiki（ポータルサイト） <a href="https://wiki.centos.org/">https://wiki.centos.org/</a>&nbsp;</li>
+        <li><a href="https://wiki.caosity.org/tiki-index.php?page=CentOS+Linux&amp;bl">CentOS
+            Linux Wiki ページ</a> （旧サイト - リンク切れ）
+          <ul class="list2" style="padding-left: 16px; margin-left:
+            16px;">
+            <li><a href="http://www.caosity.org/">The cAos Foundation</a></li>
+            <li><a href="https://wiki.caosity.org/">cAos Community Wiki</a></li>
+            <li><a href="http://www.linuxtimes.net/modules.php?name=News&amp;file=article&amp;sid=406">Interview
+with the head of the Caos Foundation</a> (Linux Times, 2004.12.06)</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_3"><a name="インストールの手順を教えてください"></a>インストールの手順を教えて
+        ください</h3>
+      <p>CentOS
+        に関するドキュメンテーション（参考文献）があります。リリースノートやインストールガイド、テクニカルノートなどが利用できます。<br>
+        - CentOS Documentation: <a href="https://www.centos.org/docs/">https://www.centos.org/docs/</a></p>
+      <p>CentOS 8 は <a href="https://ribf.riken.jp/ribfcomp/Centos8-setup">CentOS 8
+          のインストールのヒント</a> (理化学研究所 仁科加速器研究センター) も参照してください。<br>
+CentOS 7 は RHEL 7 <a href="https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/installation_guide/chap-simple-install">クイックインストールガイド</a> や CentOS <a href="https://docs.centos.org/en-US/centos/install-guide/Simple_Installation/">Quick Installation Guide</a> (in English) が参考になります。 <br>
+CentOS 4 の標準的なグラフィカルなインストールは <a href="centos_screenshots.html" title="CentOS-FAQ/Screenshots (2080d)">CentOS のインストール手順</a>（日本
+        語）に従って行えます。<br>
+また、次の関連項目にも情報があります。</p>
+
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="../whitebox/general.html" title="WhiteBoxLinux-FAQ/General (2099d)">White Box Linux
+            のインストールの手順を教えてください</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_4">ダウンロード/ミラーサイト (Downloading/Mirrors)</h3>
+      <p>Download CentOS Linux ISO images - <a href="https://wiki.centos.org/Download">https://wiki.centos.org/Download<br>
+        </a><br>
+        海外ミラーサイト一覧 (All Sources)</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://www.centos.org/modules/tinycontent/index.php?id=13">http://www.centos.org/modules/tinycontent/index.php?id=13</a></li>
+      </ul>
+      <p>日本国内ミラー (Japanese Mirrors)</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://www.riken.jp/">RIKEN</a> (Saitama, Japan)<br>
+          HTTP: <a href="http://ftp.riken.jp/Linux/centos/">http://ftp.riken.jp/Linux/centos/</a><br>
+          FTP: <a href="ftp://ftp.riken.jp/Linux/centos/">ftp://ftp.riken.jp/Linux/centos/</a><br>
+          RSYNC: rsync://ftp.riken.jp/Linux/centos/</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://www.kddilabs.jp/main.html">KDDI R&amp;D Labs</a>
+          (Saitama, Japan)<br>
+          HTTP: <a href="http://ftp.ne.jp/Linux/distributions/CentOS/">http://ftp.ne.jp/Linux/distributions/CentOS/</a><br>
+          FTP: <a href="ftp://ftp.ne.jp/Linux/distributions/CentOS/">ftp://ftp.ne.jp/Linux/distributions/CentOS/</a><br>
+          RSYNC:
+rsync://ftp.ne.jp/Linux/distributions/ibiblio-distributions/caoslinux/centos</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://www.naist.jp/index.html">奈良先端科学技術大学院大学</a>
+          [NARA Inst of Science and Technology] (Nara, Japan)<br>
+          HTTP: <a href="http://ftp.nara.wide.ad.jp/pub/Linux/centos/">http://ftp.nara.wide.ad.jp/pub/Linux/centos/</a><br>
+          FTP: <a href="ftp://ftp.nara.wide.ad.jp/pub/Linux/centos/">ftp://ftp.nara.wide.ad.jp/pub/Linux/centos/</a><br>
+          RSYNC: rsync://ftp.nara.wide.ad.jp/centos</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://www.iij.ad.jp/">Internet Initiative Japan
+            Inc.</a><br>
+          HTTP: <a href="http://ftp.iij.ad.jp/pub/linux/centos/">http://ftp.iij.ad.jp/pub/linux/centos/</a><br>
+          FTP: <a href="ftp://ftp.iij.ad.jp/pub/linux/centos/">ftp://ftp.iij.ad.jp/pub/linux/centos/</a></li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://www.atworks.co.jp/">A.T. WORKS, Inc.</a><br>
+          HTTP: <a href="http://rsync.atworks.co.jp/centos/">http://rsync.atworks.co.jp/centos/</a></li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://www.st.ryukoku.ac.jp/">龍谷大学理工学部情報ネットワークシステム</a>
+          [RINS (Ryukoku univ. Information Network System)] (Shiga,
+          Japan)<br>
+          FTP: <a href="ftp://ftp.st.ryukoku.ac.jp/pub/Linux/centos/">ftp://ftp.st.ryukoku.ac.jp/pub/Linux/centos/</a></li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Yamagata University (Yamagata, Japan)<br>
+          FTP: <a href="ftp://ftp.yz.yamagata-u.ac.jp/pub/linux/scientific/">ftp://ftp.yz.yamagata-u.ac.jp/pub/linux/scientific/</a><br>
+          HTTP: <a href="http://ftp.yz.yamagata-u.ac.jp/pub/linux/scientific/">http://ftp.yz.yamagata-u.ac.jp/pub/linux/scientific/</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_5">近くのミラーサイトを探すには?</h3>
+      <p><a href="http://www.ime.st/www.centos.org/modules/tinycontent/index.php?id=13">yum-plugin-fastestmirror</a>が
+        利用できます。<br>
+        これは、Debian の<a href="http://www.debian.or.jp/Near-Mirror.html">netselect</a>の
+        ように機能する便利なプラグインです。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_6">CentOS リリースのインストールに必要なisoイメージについて</h3>
+<h4><a name="version-8"></a>CentOS 8</h4>
+2020.12.18 現在、以下のバージョン 8.3 が最新版です。<br>
+<br>
+CentOS-8.3.2011-x86_64-boot.iso<br>
+CentOS-8.3.2011-x86_64-dvd1.iso<br>
+- この iso イメージは各ミラーの /Linux/centos/8/isos/x86_64 以下にあります。<br>
+- CentOS-8 (2011) Release Notes -- <a href="https://wiki.centos.org/action/show/Manuals/ReleaseNotes/CentOS8.2011">https://wiki.centos.org/action/show/Manuals/ReleaseNotes/CentOS8.2011</a> <br>
+
+      <h4 id="content_1_7"><a name="version-7"></a>CentOS 7</h4>
+      CentOS-7-x86_64-DVD-2009.iso<br>
+CentOS-7-x86_64-NetInstall-2009.iso<br>
+CentOS-7-x86_64-Everything-2009.iso<br>
+CentOS-7-x86_64-LiveGNOME-2009.iso<br>
+CentOS-7-x86_64-LiveKDE-2009.iso<br>
+CentOS-7-x86_64-Minimal-2009.iso<br>
+- この iso イメージについての説明は各ミラーの /Linux/centos/7/isos/x86_64/0_README.txt にあります。<br>
+- CentOS-7 Release Notes -- <a href="https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7">https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7</a> <br>
+      <h4 id="content_1_7"><a name="version-6"></a>CentOS 6.10 (バージョン 6.10)</h4>
+      CentOS-6.10-x86_64-netinstall.iso<br>
+CentOS-6.10-x86_64-minimal.iso<br>
+CentOS-6.10-x86_64-bin-DVD1.iso<br>
+CentOS-6.10-x86_64-bin-DVD2.iso<br>
+CentOS-6.10-x86_64-LiveDVD.iso<br>
+- http://ftp.riken.jp/Linux/centos-vault/6.10/isos/x86_64/0_README.txt<br>
+- リリースノート ( <a href="http://wiki.centos.org/Manuals/ReleaseNotes/CentOS6.10">http://wiki.centos.org/Manuals/ReleaseNotes/CentOS6.10</a> )<br>
+<br>
+参考までに以前の CentOS 6.2 (バージョン 6.2) も載せておきます。<br>
+      CentOS-6.2-i386-bin-DVD1.iso<br>
+      CentOS-6.2-i386-bin-DVD2.iso<br>
+      CentOS-6.2-i386-LiveCD.iso<br>
+      CentOS-6.2-i386-LiveDVD.iso<br>
+      CentOS-6.2-i386-minimal.iso<br>
+      CentOS-6.2-i386-netinstall.iso<br>
+
+      - CentOS 6.2 リリースノート（英語）<a href="http://wiki.centos.org/Manuals/ReleaseNotes/CentOS6.2">http://wiki.centos.org/Manuals/ReleaseNotes/CentOS6.2</a> <br>
+<br>
+注意：最終のマイナーアップデートはバージョン 6.10 です。CentOS はリリースの最新バージョンだけをサポートします。<br>
+      <h4 id="content_1_7"><a name="version-5"></a>CentOS 5.7 (バージョン 5.7)</h4>
+      CentOS 5.7 リリースノート（日本語）<br>
+      -http://wiki.centos.org/Manuals/ReleaseNotes/CentOS5.7/Japanese<br>
+      CentOS-5.7-i386-bin-1of8.iso<br>
+      CentOS-5.7-i386-bin-2of8.iso<br>
+      CentOS-5.7-i386-bin-3of8.iso<br>
+      CentOS-5.7-i386-bin-4of8.iso<br>
+      CentOS-5.7-i386-bin-5of8.iso<br>
+      CentOS-5.7-i386-bin-6of8.iso<br>
+      CentOS-5.7-i386-bin-7of8.iso<br>
+      CentOS-5.7-i386-bin-8of8.iso<br>
+      CentOS-5.7-i386-bin-DVD-1of2.iso<br>
+      CentOS-5.7-i386-bin-DVD-2of2.iso<br>
+      CentOS-5.7-i386-netinstall.iso<br>
+      <br>
+      "CD #8 on i386 contains no rpms, and is not needed<br>
+      for any install type. DVD #2 on both i386 and x86_64 only contain<br>
+      Openoffice langpacks for languages others than english. Therefore
+      DVD#2<br>
+      is only needed when doing a desktop install, with the openoffice<br>
+      components selected with other than English language support."<br>
+-http://lists.centos.org/pipermail/centos-announce/2011-September/017727.html<br>
+      <h4 id="content_1_7">CentOS 4.2 (バージョン 4.2)</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>centos/4.2/isos/i386<br>
+          ●ISO
+          <pre> CentOS-4.2-i386-bin1of4.iso<br> CentOS-4.2-i386-bin2of4.iso<br> CentOS-4.2-i386-bin3of4.iso<br> CentOS-4.2-i386-bin4of4.iso</pre>
+※ 「ワークステーションタイプ」で標準インストールするときは、4枚目のディスクは不要です。
+    <pre> [DVD] <br> CentOS-4.2-i386-bin1.DVD.iso.torrent</pre>
+  </li>
+  <li>上記以外にも、 ia64 / ppc / s390 / s390x / Alpha それぞれのアーキテクチャーに対応した iso
+イメージがあります。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_8">CentOS 3.6 (バージョン 3.6)</h4>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>centos/3.6/isos/i386<br>
+●ISO
+    <pre> CentOS-3.6-i386-disc1.iso<br> CentOS-3.6-i386-disc2.iso<br> CentOS-3.6-i386-disc3.iso</pre>
+●ソース
+    <pre> CentOS-3.6-i386-src1.iso<br> CentOS-3.6-i386-src2.iso<br> CentOS-3.6-i386-src3.iso</pre>
+  </li>
+  <li>centos/3.6/isos/x86_64<br>
+●ISO
+    <pre> CentOS-3.6-x86_64-disc1.iso<br> CentOS-3.6-x86_64-disc2.iso<br> CentOS-3.6-x86_64-disc3.iso</pre>
+●ソース
+    <pre> CentOS-3.6-x86_64-src1.iso<br> CentOS-3.6-x86_64-src2.iso<br> CentOS-3.6-x86_64-src3.iso</pre>
+  </li>
+  <li>上記以外にも、 ia64 / ppc / s390 / s390x それぞれのアーキテクチャーに対応した iso
+イメージがあります。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_9">サーバー向け専用 ISO イメージ</h4>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>centos/4.2/isos/i386 (For Server)<br>
+●ISO
+    <pre> CentOS-4.2.ServerCD-i386.iso</pre>
+  </li>
+  <li>centos/3.4/isos/i386 (For Server)<br>
+●ISO
+    <pre> CentOS-3.4-i386-Server.iso</pre>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="http://lists.caosity.org/pipermail/centos/2005-January/001851.html">Single
+CD
+Server
+version
+リリースアナウンス</a> (2005.01.21)</li>
+    </ul>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_10">雑誌・書籍の付録から CD or DVD を入手する。</h4>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><strong>CentOS 4.2</strong>
+    <ul class="list3" style="padding-left: 32px; margin-left: 32px;">
+      <li><a href="http://direct.idg.co.jp/item_detail.command?item_cd=LW_200601&amp;category_cd=SHINKAN_MAGAZINE">月
+刊 LinuxWorld 2006年1月号</a></li>
+    </ul>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><strong>CentOS 4.1</strong>
+    <ul class="list3" style="padding-left: 32px; margin-left: 32px;">
+      <li><a href="http://bpstore.nikkeibp.co.jp/mokuji/lin073.html">月刊
+日経 Linux 2004年10月号</a></li>
+    </ul>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_11">CentOS Live CD について</h3>
+<p>HDD へのインストールが不要なライブCD が追加リリースされました。</p>
+<p>日本語環境で利用したい場合には、次のサードパーティのライブCD を利用すると良いでしょう。有名なライブCD KNOPPIX は K
+デスクトップが採用されていますが、こちらは GNOME デスクトップ採用です。<br>
+</p>
+<p>なお、2020年12月現在、CentOS 7 
+のバージョンについては公式サイトからも配布があるので、各ミラーサイトからダウンロード可能となっています。この CentOS 7 の Live 
+CD は USBメモリに直接書き込むことが可能なハイブリッド仕様です。ハードディスクへのインストーラーも追加されました。起動可能な USB 
+メモリを作成する場合、以下の例のようなコピーコマンドが利用できます。<a href="7x.html#3">CentOS 7 LiveCD についての記事</a>が当サイトにあるのでご覧ください。<br>
+</p>
+<p>&nbsp;# cp CentOS-7-x86_64-LiveGNOME-2003.iso /dev/sdb<br>
+</p>
+
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://simosnet.com/livecd/centos/">「ライブCDの部屋」</a><br>
+    <a href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice" title="OpenOffice (611d)">OpenOffice</a>
+が日本語化され、2chブラウザー「おちゅ〜しゃ」が追加されています。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_12">CentOS のバージョン管理・リリース方針はどのようになっていますか？</h3>
+<p>アップストリーム・ベンダーと同じ方針を採用します。つまり、それぞれのバージョン（現行は 3.x / 4.x
+）については、その最新版だけがメンテナンス（維持）されます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>FAQ: <a href="http://www.centos.org/modules/smartfaq/faq.php?faqid=34">What is
+the versioning/release scheme of CentOS and how does it compare to the
+upstream vendor?</a> 参照。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_13">CentOSのバージョンってどこで見ればよいですか？</h3>
+<p>/etc/redhat-release に書かれてあるので、テキストエディタで開いて確認してください。</p>
+<pre> CentOS 4.1 (Final)</pre>
+<p>というような記述があります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_14">Beta / RC とは何のことですか?</h3>
+<p>一般に「テスト版」と呼ばれるものです。<br>
+これらは現在開発中のバージョンであって、特にハードウェアやアプリケーションの動作確認等を行うためのものです。実際の運用を想定して公開されているも
+のではないので、注意してください。</p>
+<p>Beta / リリース候補(Release Candidate) ダウンロード<br>
+メインミラー</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://beta.centos.org/centos/">http://beta.centos.org/centos/</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_15">バグレポートはどこにしたら良いのですか?</h3>
+<p>バグレポートは次のページよりどうぞ。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>CentOS Bugzilla Home Page <a href="http://bugs.centos.org/">http://bugs.centos.org/</a></li>
+  <li>CentOS Bugzilla <a href="http://bugs.centos.org/view_all_bug_page.php">http://bugs.centos.org/view_all_bug_page.php</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_16">公式メーリングリスト</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://lists.centos.org/mailman/listinfo/centos-announce">CentOS-announce
+list</a></li>
+  <li><a href="http://lists.centos.org/mailman/listinfo/centos-devel">CentOS-devel
+list</a></li>
+  <li><a href="http://lists.centos.org/mailman/listinfo/centos">CentOS
+discussion and information list</a></li>
+  <li><a href="http://lists.centos.org/mailman/listinfo/centos-mirror">CentOS-mirror
+list</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_17">2ch Linux板 CentOS スレッド</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Part 2 <a href="http://pc8.2ch.net/test/read.cgi/linux/1115030013/">http://pc8.2ch.net/test/read.cgi/linux/1115030013/</a></li>
+  <li>Part 1 <a href="http://pc8.2ch.net/test/read.cgi/linux/1105606732/">http://pc8.2ch.net/test/read.cgi/linux/1105606732/</a></li>
+</ul>
+<hr width="100%" size="2"><a href="../../../index.html">HOME</a>
+</div>
+
+
+
+</body></html>
