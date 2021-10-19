@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>Wget/Recursion</title>
+</head>
+<body>
+<div id="body">
+<p><a href="http://f40.aaa.livedoor.jp/%7Egreen/?SoftWares%2FOthers"
+ title="SoftWares/Others (530d)">SoftWares/Others</a></p>
+<h2 id="content_1_0">Wget FAQ - Recursive Retrieval</h2>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=Wget%2FRecursion#navigator">↑</a></div>
+<h4 id="content_1_1">再帰的なダウンロード (recursive retrieval)とは？</h4>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://www.geocities.jp/fut_nis/html/wget-ja/Recursive-Download.html">http://www.geocities.jp/fut_nis/html/wget-ja/Recursive-Download.html</a></li>
+</ul>
+<p>GNU
+Wgetは，Web(または，単一のhttpやftpサーバ)の部分を，リンクとディレクトリ構造をたどりながら渡り歩くことができます．これは再帰的な
+回収(recursive retrieval)，または再帰(recursion)と呼ばれます．</p>
+<p>http
+urlを用いると，Wgetは与えられたurlすなわちドキュメントから得たhtmlを，hrefやsrcのようなマークアップを通じて，htmlドキュ
+メントが参照しているファイルを回収しながら，回収と解析を行ないます．新たにダウンロードされたファイルもtext/html
+形式やapplication/xhtml+xml形式の場合も，それは解析され更に続けます．</p>
+<p>httpの再帰的な回収とhtmlの内容はbreadth-firstです．これは，要求されたhtmlドキュメントをWgetが最初に，その後で
+ドキュメントがリンクしているドキュメントを，そして更にそれがリンクしているドキュメントというようにダウンロードすることを意味します．言い替える
+と，Wget
+は最初に深さ1のドキュメントをダウンロードし，それから深さ2のものというようにして最大深度で指定されたものまでダウンロードするということです．</p>
+<p>回収が下降する最大の深度(depth)は，`-l'オプションで指定されます．デフォルトの最大深度は5階層です．</p>
+<p>ftp
+urlを再帰的に回収するとき，Wgetはリモートサーバの与えられた(指定された深度以上のサブディレクトリを含め)ディレクトリツリーから，全ての
+データを回収し，ローカルにミラーイメージを作成します．ftpの回収もdepthパラメータで制限されます．httpの再帰と異なり，
+ftpの再帰は最初の深度で実行されます．</p>
+<p>デフォルトで，Wgetはローカルディレクトリツリーを作成し，それはリモートサーバで見つかったものに対応しています．</p>
+<p>再帰的回収は複数の応用が可能で，最も重要なものはミラーです．それは，
+wwwの公開と，その他の状況として，ネットワーク接続が遅いところでファイルをローカルに保存することでバイパスすることで役に立ちます．</p>
+<p>再帰呼び出しはネットワークを通じたデータの高速転送になるため，システムの過負荷を起こす可能性があることを警告します．このため，管理者の多く
+はそれに難色を示していて，大量の内容物を高速にダウンロードしているのを検出した場合，あなたのサイトからのアクセスを禁止するかもしれません．
+Internetサーバからダウンロードしている時，サーバへのアクセスの間の遅延を導入するため，`-w'オプションを使用することを考慮に入れてして
+ください．ダウンロードにはより長い時間がかかりますが，サーバ管理者はあなたの無礼には心配しなくなるでしょう．</p>
+<p>もちろん，再帰的なダウンロードは自分のマシンにも問題を発生するかもしれません．調査無しで実行したままにする場合，ディスクが簡単にいっぱいに
+なるはずです．ローカルのネットワークからのダウンロードの場合，メモリと CPUの消費と同様に，システムの帯域幅にも注意すべきです．</p>
+<p>ダウンロードを達成するような試みに適した基準を指定してみてください．1 ページのみダウンロードしたい場合，あらゆる再帰を追加すること無く
+`--page-requisites'を使用してください．一つのディレクトリ以下をダウンロードしたい場合，他のディレクトリからダウンロードするこ
+とを避けるため`-np'を使用してください．一つのディレクトリの全てのファイルをダウンロードしたい場合，再帰深度が超過しないことを確実にするため
+`-l 1'を使用してください．これについての詳細はSee Following Links.</p>
+<p>再帰的な回収は注意して使用すべきです．警告しなかったとは言わせません．</p>
+<hr class="full_hr">
+<p>This file documents the the GNU Wget utility for downloading network
+data.</p>
+<p>Copyright © 1996–2005 Free Software Foundation, Inc.</p>
+<p>Permission is granted to make and distribute verbatim copies of this
+manual provided the copyright notice and this permission notice are
+preserved on all copies.</p>
+<p>Permission is granted to copy, distribute and/or modify this
+document under the terms of the GNU Free Documentation License, Version
+1.2 or any later version published by the Free Software Foundation;
+with the Invariant Sections being “GNU General Public License” and “GNU
+Free Documentation License”, with no Front-Cover Texts, and with no
+Back-Cover Texts. A copy of the license is included in the section
+entitled “GNU Free Documentation License”.</p>
+</div>
+</body>
+</html>

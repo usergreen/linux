@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head>
+    
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>Google Chrome browser - Linux on the Desktop</title>
+</head>
+  <body>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td valign="top"><a href="../index.html">前のページ</a>　次のページ　目次　<a href="../../../index.html"><big>HOME</big></a></td>
+          <td valign="middle" align="right">Last updated&nbsp;2020/12/02</td>
+        </tr>
+      </tbody>
+</table>
+<hr width="100%">
+<h3> Google Chrome ブラウザに関する FAQ/Tips</h3>
+<br>
+<h4>コマンドラインからのインストール</h4>
+2020.12.01 現在、Linux 環境で Google Chrome 
+をインストールするには、google-chrome-stable_current_amd64.deb 
+を公式サイトからダウンロードする必要があります。このバイナリ・パッケージは無料で配布されています。amd64 は64ビットCPU用です。32ビット用もあります。RPM形式のバイナリ・パッケージも用意されています。<br>
+下記は　Debian 10 へのインストール実行例です。ユーザーのカレント・ディレクトリへダウンロードして APT コマンドでインストールできます。<br>
+<br>
+<blockquote>
+# apt install ./google-chrome-stable_current_amd64.deb<br>
+パッケージリストを読み込んでいます... 完了<br>
+依存関係ツリーを作成しています&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+状態情報を読み取っています... 完了<br>
+注意、'./google-chrome-stable_current_amd64.deb' の代わりに 'google-chrome-stable' を選択します<br>
+以下のパッケージが新たにインストールされます:<br>
+&nbsp; google-chrome-stable<br>
+アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 0 個。<br>
+72.7 MB 中 0 B のアーカイブを取得する必要があります。<br>
+この操作後に追加で 239 MB のディスク容量が消費されます。<br>
+取得:1 /home/user/デスクトップ/google-chrome-stable_current_amd64.deb google-chrome-stable amd64 87.0.4280.66-1 [72.7 MB]<br>
+以前に未選択のパッケージ google-chrome-stable を選択しています。<br>
+(データベースを読み込んでいます ... 現在 205737 個のファイルとディレクトリがインストールされています。)<br>
+.../google-chrome-stable_current_amd64.deb を展開する準備をしています ...<br>
+google-chrome-stable (87.0.4280.66-1) を展開しています...<br>
+google-chrome-stable (87.0.4280.66-1) を設定しています ...<br>
+update-alternatives: /usr/bin/x-www-browser (x-www-browser) を提供するために自動モードで /usr/bin/google-chrome-stable を使います<br>
+update-alternatives: /usr/bin/gnome-www-browser (gnome-www-browser) を提供するために自動モードで /usr/bin/google-chrome-stable を使います<br>
+update-alternatives: /usr/bin/google-chrome (google-chrome) を提供するために自動モードで /usr/bin/google-chrome-stable を使います<br>
+mime-support (3.62) のトリガを処理しています ...<br>
+man-db (2.8.5-2) のトリガを処理しています ...<br>
+menu (2.1.47+b1) のトリガを処理しています ...<br>
+desktop-file-utils (0.23-4) のトリガを処理しています ...<br>
+</blockquote>
+<br>
+<h4>
+インストール後の初期設定について</h4>
+正常にインストールされたら、デスクトップのメニューに Google Chrome 
+が自動的に登録されます。このメニューを選択して起動させます。初回起動時にはGoogle Chrome 
+の初期設定を対話的に行うことになります。以下の手順で設定を進めることになります。確認画面でOKを選択すれば標準の設定となります。<br>
+<br>
+ブラウザの設定は後でいくらでも自由に変更できるので、取りあえず試したい場合は全てのチェックを外し、標準のオプションをスキップしても支障ありませ
+ん。Chrome を「デフォルトとして設定」する必要もありません。既定の設定では様々な情報が自動送信されます。Google 
+アカウントの作成も必須ではありません。 <br>
+<br>
+<img src="chrome-first-start.png" alt="chrome-first-start.png" width="476" height="170"><br>
+上記は最初の起動時に現れるメッセージです。チェックを外すことが可能です。<br>
+<br>
+<img src="chrome-welcome.png" alt="chrome-welcome.png" width="600" height="398"><br>
+「開始する」を選択します。<br>
+<br>
+<img src="chrome-setup2.png" alt="chrome-setup2.png" width="600" height="398"><br>
+「スキップ」をクリックすればブックマークへは追加しません。<br>
+<br>
+<img src="chrome-setup3.png" alt="chrome-setup3.png" width="600" height="398"><br>変更ないときは「スキップ」を選びます。<br>
+<br>
+<img src="chrome-setup4.png" alt="chrome-setup4.png" width="600" height="398"><br>
+試用する場合は「スキップ」を選択します。<br>
+<br>
+<img src="chrome-setup5.png" alt="chrome-setup5.png" width="600" height="398"><br>
+ブラウザの同期を希望しないのなら「いいえ」を選びます。<br>
+<br>
+<img src="chrome-setup-done.png" alt="chrome-setup-done.png" width="600" height="399"><br>
+右上の☓印で画面を終了させます。<br>
+<br>
+以上で初期設定が完了します。これですぐ使える状態になりますが、設定の詳細項目で不要なサービスが稼働していないか見直すことをお推めします。
+Chrome をデフォルト（既定）のブラウザに設定する必要はありません。デフォルトでは大半のサービスが有効となっています。<br>
+<h4>Chromium ブラウザとは何が違うのですか？</h4>
+Chrome と大変似通ったブラウザに Chromium があります。これは Chrome 
+から複数の機能を機能を省き、ソースコードを公開したブラウザです。Chromium は Google Chrome 
+のテスト版のような扱いとされています。ネット上に解説記事は見つかりますが、実際にどんな機能が省略されているのかは一般には明確ではありません。<br>
+<br>
+Chromium の開発はオープンソース・プロジェクトという立場です。したがって、これは主要なディストリビューションより自由に再配布されているので簡単にインストール可能となっています。<br>
+<h4>外部リンク</h4>
+<h4>Google Chrome完全ガイド</h4>
+初めてのChrome：インストールと初期設定、基本的な使い方 -- <a href="https://www.atmarkit.co.jp/ait/articles/1711/20/news029.html">https://www.atmarkit.co.jp/ait/articles/1711/20/news029.html</a>　<br>
+<h4>マイクロソフトの新「Edge」、グーグル「Chrome」との重要な相違点は</h4>
+2020年1月15日、Microsoftは数十年使ってきたレンダリングエンジン「Trident」（とその後継エンジン、不運な
+「EdgeHTML」）をオープンソースプロジェクトの「Chromium」ベースのエンジンに正式に置き換えました。この記事では、「新しい 
+EdgeとGoogle Chromeとの最も重要な違いは、Googleのビジネスモデルの根幹にかかわるものだ。new 
+Edgeは初期設定でトラッキングが無効になっている。Chromeと違うもう1つの特徴は、new 
+Edgeで同期設定に使うのがMicrosoftアカウントである点だ。」と書かれています。-- <a href="https://japan.cnet.com/article/35148114/">https://japan.cnet.com/article/35148114/</a>　<br>
+<br>
+<hr width="100%">
+<div style="text-align: left;" align="left"><a href="../index.html">前のページ</a>　次のページ　目次　<big><a href="../../../index.html">HOME</a> <br>
+</big></div>
+
+</body></html>

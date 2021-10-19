@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Software/TextEditors - Linux on the Desktop</title>
+  </head>
+  <body>
+    <div id="body">
+      <div><a href="../../index.html" title="FrontPage (13d)">HOME</a> /
+        <a href="index.html">SoftWares</a> / TextEditors</div>
+      <br>
+      <h2><a name="mozTocId472905" class="mozTocH2"></a>テキストエディタ</h2>
+      &nbsp;Last updated: Nov.28, 2020<br>
+      <ul id="mozToc">
+        <!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
+        <li><a href="#mozTocId472905">テキストエディタ</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#mozTocId698915">代表的なテキストエディタ</a></li>
+                <li><a href="#mozTocId823855">Leafpad - とてもシンプルなテキストエディタ</a>
+                  <ul>
+                    <li><a href="#mozTocId813876">Leafpad のインストール</a></li>
+                    <li><a href="#mozTocId12850">Leafpad を ja_JP.UTF-8
+                        で使用するとき</a></li>
+                    <li><a href="#mozTocId13546">Leafpad は Debian 10
+                        で放棄されました</a></li>
+                  </ul>
+                </li>
+                <li><a href="#mozTocId696435">FeatherPad</a>
+                  <ul>
+                    <li><a href="#mozTocId22064">FeatherPad とは？</a></li>
+                    <li><a href="#mozTocId889637">インストール方法 (Debian 10)</a></li>
+                  </ul>
+                </li>
+                <li><a href="#mozTocId839247">Medit</a></li>
+                <li><a href="#mozTocId669344">Mousepad</a></li>
+                <li><a href="#mozTocId323667">テキスト/HTMLファイルの文字コードを変換する方法</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <br>
+      <h3><a name="mozTocId698915" class="mozTocH3"></a>代表的なテキストエディタ</h3>
+      多くのディストリビューションで広く採用されているエディターには、おもに以下のものがあります(これ以外にも多数あります)。<br>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>FeatherPad<br>
+        </li>
+        <li>gedit (GNOME 標準エディタ)</li>
+        <li>Leafpad (gtk ベースの軽量エディタ)</li>
+        <li>Kate (KDE用高機能エディタ)</li>
+        <li>KEdit</li>
+        <li>KWrite (KDE 標準エディタ)</li>
+        <li>Mousepad (Leafpad をもとに開発)</li>
+        <li>nano | Pico</li>
+        <li>Pluma (MATE へフォークした gedit クローン)</li>
+        <li>Vi</li>
+        <li>Emacs</li>
+      </ul>
+      <br>
+      テキスト・エディターとして利用されるものは数多くありますが、多くのディストリビューションで標準採用されているテキストエディターは、
+      gedit や KEdit、KWrite、Emacs、nano などです。<br>
+      <br>
+      2000年の初めのころは、文字コードで EUC-Jp が一般的に用いられてきました。以降、UTF-8
+      への移行が進展しました。このため複数の文字コードが混在することとなり、別のシステムで作成した文書が文字化けするという事態が起こります。とくに過去
+      に作成された文書を読もうとしたら、文字化けが発生するかも知れません。<br>
+      <br>
+      こうした「文字化け」をなくそうとしても、なかなか簡単には解決できません。こうした場合、テキストエディターをいくつか試してみるのも良い
+      方法です。それぞれのテキスト
+      エディターはデフォルトの挙動が異るので、エディターによってエンコードの仕方が異なります。そのため、例えば gedit
+      で文字化けしてお手上げというとき、Leafpad や Emacs を試してみたら、きちんと表示されるということがあります。<br>
+      <br>
+      なお、テキストモードで利用できるエディタのうち、nano は vi
+      などと違いモードの無いエディタですのですぐに文字の入力が可能です。Debian では標準でインストールされます。詳しくは、<a
+        href="http://www.gentoo.org/doc/ja/nano-basics-guide.xml">nanoの基
+        本ガイド</a> や <a href="http://pc-unix.goco.ne.jp/howto2.html">超簡素
+        UNIX入門講座</a> を見てください。<br>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=SoftWares%2FTextEditors#navigator">↑</a></div>
+      <br>
+      <h3><a name="mozTocId823855" class="mozTocH3"></a>Leafpad -
+        とてもシンプルなテキストエディタ</h3>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=SoftWares%2FTextEditors#navigator">↑</a></div>
+      <br>
+      Leafpad について<br>
+      <br>
+      "Leafpad is a simple GTK+ based text editor, the user interface is
+      similar to "Notepad". It aims to be lighter than GEdit &amp;
+      KWrite, and to be as useful as them."<br>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Homepage: <a href="http://tarot.freeshell.org/leafpad/">http://tarot.freeshell.org/leafpad/</a></li>
+      </ul>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=SoftWares%2FTextEditors#navigator">↑</a></div>
+      <br>
+      <h4><a name="mozTocId813876" class="mozTocH4"></a>Leafpad のインストール</h4>
+      <br>
+      多くのディストリビューションで専用のパッケージが用意されています。<br>
+      <br>
+      Debian Sarge へのインストール：<br>
+      <br>
+      # apt-get install leafpad<br>
+      パッケージリストを読みこんでいます... 完了<br>
+      依存関係ツリーを作成しています... 完了<br>
+      以下のパッケージが新たにインストールされます:<br>
+      leafpad<br>
+      アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 0 個。<br>
+      57.3kB のアーカイブを取得する必要があります。<br>
+      展開後に追加で 393kB のディスク容量が消費されます。<br>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=SoftWares%2FTextEditors#navigator">↑</a></div>
+      <h4><a name="mozTocId12850" class="mozTocH4"></a>Leafpad を
+        ja_JP.UTF-8 で使用するとき</h4>
+      ロケール ja_JP.euc-JP で作成された過去の文書は、UTF-8
+      環境では直接読み込めない場合があるようです。平文テキスト・ドキュメントとしてではなく、不明な種類のファイルとして認識されることがあります。<br>
+      その場合には、ファイル名を「hoge」から「hoge.txt」に変更するか、一度 Leafpad
+      を起動させそのメニューから開くと、表示ができるようになります。（Debian Etch の GNOMEセッションで確認 -
+      2007.02.11）<br>
+      <br>
+      <h4><a name="mozTocId13546" class="mozTocH4"></a>Leafpad は Debian
+        10 で放棄されました</h4>
+      Leadpad は、gtk
+      ベースで開発されたテキストエディタですが、アップストリーム（つまり本家の開発元において）長らくメンテナスが行われていないうえ、gtk+3
+      には対応されていません。そうした事情から、Leafpad をDebian
+      でも保守するのが困難であるとされて、配布が行われなくなりました（アップストリームで保守されないのであれば、Debian
+      で独自に保守しなくてはなりませんが、同等の機能を提供するテキストエディタが他にもあることから、Leafpad
+      をこれ以上保守するメリットがないと判断されました）。詳しい理由は、Debian Bug report <a
+        href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=913765">https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=913765</a>
+      を参照してください。<br>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <br>
+      <h3><a name="mozTocId696435" class="mozTocH3"></a>FeatherPad</h3>
+      <h4><a name="mozTocId22064" class="mozTocH4"></a>FeatherPad とは？</h4>
+      FeatherPad が初めてリリースされた2016年、このエディタは gtk
+      を用いて作成された軽量エディタとして登場しましたが、その後 C++ で開発されるようになり、さらに Qt
+      を用いて全面的に書き直されました。2019年にリリースされたバージョンでは、画面上の表示や付属するヘルプ（操作マニュアル）が全て日本語に対応して
+      います。<br>
+      <h4><a name="mozTocId889637" class="mozTocH4"></a>インストール方法 (Debian
+        10)</h4>
+      # apt install featherpad<br>
+      パッケージリストを読み込んでいます... 完了<br>
+      依存関係ツリーを作成していま
+      す&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <br>
+      状態情報を読み取っています... 完了<br>
+      以下の追加パッケージがインストールされます:<br>
+      &nbsp; libqt5printsupport5<br>
+      以下のパッケージが新たにインストールされます:<br>
+      &nbsp; featherpad libqt5printsupport5<br>
+      アップグレード: 0 個、新規インストール: 2 個、削除: 0 個、保留: 0 個。<br>
+      679 kB のアーカイブを取得する必要があります。<br>
+      この操作後に追加で 2,669 kB のディスク容量が消費されます。<br>
+      続行しますか? [Y/n]<br>
+      <br>
+      <h3><a name="mozTocId839247" class="mozTocH3"></a>Medit</h3>
+      これは本来、プログラム作成用に特化したエディタとして開発されましたが、色々な機能が追加されたので、一般的なテキストエディタとしても充
+      分利用できます。<br>
+      Debian 10 には、Synaptic
+      パッケージ・マネージャーやコマンドラインからインストール可能です。コマンドからは、下記のとおりです。 <br>
+      <br>
+      &nbsp;# apt install medit<br>
+      <br>
+      <h3><a name="mozTocId669344" class="mozTocH3"></a>Mousepad</h3>
+      Xfce デスクトップ環境で利用するデフォルトのテキストエディタとして開発されました。Leafpad
+      のソースコードを使って、印刷などの機能を付加した使い勝手の良いエディタとして開発が進展しました。Mousepad はもちろん、
+      Xfce 環境でしか使えないエディタではありません。GNOME や MATE
+      など他のグラフィカルなデスクトップへインストールして使うことも可能です。<br>
+      Debian 10 へインストールする場合、コマンドラインからは以下のとおり行います。<br>
+      <br>
+      &nbsp;# apt install mousepad<br>
+    </div>
+    <br>
+    <h3><a name="mozTocId323667" class="mozTocH3"></a>テキスト/ HTML
+      ファイルの文字コー ドを変換する方法</h3>
+    対応テキストエディタ<br>
+    Leafpad<br>
+    Pluma<br>
+    Atom - これも対応するそうですが検証していません。<br>
+    (Seamonkey Composer - これは HTML 用のエディタですが文字コードの変換が可能です。)<br>
+    <br>
+    対応しないもの（検証済み）<br>
+    FeatherPad は「エンコードして保存」というメニューが機能しません。<br>
+    Mousepad は読み込み可能ですが変換して保存する機能がありません。<br>
+    <br>
+    上記のテキストエディタは、元のファイルを任意の他の文字コードに変換することが可能です（文字コード変換機能が備わっています）。変換方法は、
+    いったんそのファイルを開き「別名で保存」を実行する際、「エンコーディング」の選択項目が表示されるので希望の文字コードを選んで保存します。
+    これで新しく保存したファイルは希望の文字コードに変換されています（ファイル名を変更せず上書き保存も可能です）。<br>
+    <br>
+    一般的には Shift_JIS から UTF-8、あるいは EUC-JP から UTF-8 へと変換する需要が多いことでしょう。<br>
+    <br>
+    なお、Leafpad の場合は「文字コード」という項目の中から選択して変換を行います。<br>
+    <br>
+    <hr width="100%" size="2"><a href="../../index.html">HOME</a> <br>
+  </body>
+</html>

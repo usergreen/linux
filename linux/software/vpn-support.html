@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>VPN Support - Linux on the Desktop</title>
+  </head>
+  <body>
+    <big><a href="../../index.html">HOME</a>　</big><br>
+    <hr style="width: 100%; height: 2px;">Last updated: 10/25/2020<br>
+    <font size="+2"><b> Linux の VAN サポート - How to install and set up VPN
+        Clients on Linux</b></font><br>
+    <br>
+    <ul>
+      <ul id="mozToc">
+        <!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
+        <li><a href="#mozTocId271741"> VPN とは何ですか？</a></li>
+        <li><a href="#mozTocId26265">ネットワークの基本について</a></li>
+        <li><a href="#mozTocId173778"> VPN の種類について</a></li>
+        <li><a href="#mozTocId104614"> Linux で VPN に接続するには？</a>
+          <ul>
+            <li><a href="#mozTocId285696">VPN クライアント for Debian</a></li>
+          </ul>
+        </li>
+        <li><a href="#mozTocId538676">VPN の設定方法や解説サイトは？</a></li>
+        <li><a href="#mozTocId783883">Debian に OpenVPN をインストールするには？</a></li>
+        <li><a href="#mozTocId172782">筑波大学の VPN Gate とは何ですか？</a></li>
+        <li><a href="#mozTocId478317">OpenVPN プロトコルを使って VPN Gate
+            へ接続するには？</a></li>
+        <li><a href="#mozTocId238662">Debian で AnyConnect に接続するには？</a></li>
+        <li><a href="#mozTocId473140">VPN の利用や設定に関する疑問や質問集</a></li>
+        <li><a href="#mozTocId100778">主な商用 VPN について（比較参考のために）</a></li>
+      </ul>
+    </ul>
+    <br>
+    <h3><a name="mozTocId271741" class="mozTocH3"></a> VPN とは何ですか？</h3>
+    簡単にいうと、安全ではないインターネット上に、専用の通信回線をソフトウェア的に作り出して安全に通信を行う仕組みです(*1)。<br>
+    <br>
+    VPN (Vertual Private Network)
+    とは、「仮想プライベート接続」「仮想専用線」という用語で翻訳されているネットワーク接続環境のことです。2020年度に入って大学や高校などの高等教
+    育に限らず義務
+    教育や社会人の在宅勤務で導入が急速進んでいます。遠隔地をインターネットで結ぶいわゆるオンライン接続の一形態ですが、インターネット上に敷設
+    された専用回線というべきものです。通信の暗号化と認証を取り入れ、一般のユーザがこの特別な回線に接続出来ない仕組みになっているため、部外者
+    に個人情報が漏れにくく安全性が高いのが特徴です。また、無線 LAN
+    を含むローカルのネットワークなども第三者はパケットの内容をのぞき見ることが出来ません。ただし既存のインターネット回線を流用するので、独立した専用
+    線で接続するほど安全性は確保されません。<br>
+    <br>
+    VPN
+    は、オンライン授業（遠隔授業）やテレワーク（リモート・ワーク）においてしばしば導入されます。リモート・ワークではセキュリティ上、部外者によるアク
+    セスを遮断で きるようにネットワークを構築する必要があります。VAN
+    はホーム・ユーザーにとってもメリットがあります。ホーム・ユーザーの活用例は
+    https://ja.softether.org/4-docs/2-howto/5.VPN_for_Home が参考になります。<br>
+    <br>
+    （参考サイト）<br>
+    &nbsp; 5分で絶対に分かるVPN (1/6) -- <a
+      href="https://www.atmarkit.co.jp/ait/articles/0204/27/news003.html">https://www.atmarkit.co.jp/ait/articles/0204/27/news003.html</a>　<br>
+    &nbsp; VPNとは？安全なテレワークに欠かせないセキュリティを理解しよう！ -- <a
+      href="https://ssl.sakura.ad.jp/column/vpn/">https://ssl.sakura.ad.jp/column/vpn/</a>
+    (*1)　<br>
+    &nbsp; NTTPC -- VPN接続とは？VPNの基本とメリット・デメリットを紹介 <a
+      href="https://www.nttpc.co.jp/column/network/whats_vpn.html">https://www.nttpc.co.jp/column/network/whats_vpn.html</a>　<br>
+    　VPNとは？その基本と無料Wi-Fiを安全に利用する方法 -- https://japan.norton.com/vpn-8553　<br>
+    　カオナビHRテクノロジー総研 -- リモートワーク、盛り上がっているように見えるけど？～リモートワーク実態調査レポート１～ <a
+      href="https://ri.kaonavi.jp/20200526/">https://ri.kaonavi.jp/20200526/</a>
+    <br>
+    <br>
+    <h3><a name="mozTocId26265" class="mozTocH3"></a>ネットワークの基本について</h3>
+    複数のPC館のあいだでネットワークを構築する場合、台数の多少があっても基本の手順は同じです。ルーターを用いる家庭内ネットワークはもはや当
+    たり前になりつつあります。下記ページにわかり易い解説を見つけたので参考になると思います。<br>
+    <br>
+    　参考: 【初心者向け】社内ネットワーク構築の手順と注意すべき5つのポイント -- <a
+      href="https://www.nttpc.co.jp/column/network/internal_network.html">https://www.nttpc.co.jp/column/network/internal_network.html</a>
+    <br>
+    <br>
+    <h3><a name="mozTocId173778" class="mozTocH3"></a> VPN の種類について</h3>
+    VPN には大きく分けて「インターネットVPN」と「IP-VPN」の2種類があります。インターネットVPN
+    は公衆用のインターネット回線を利用して VPN を構築します。通常、一般のユーザが VPN
+    の利用という場合はこちらを指します。もう一方の IP-VPN
+    はインターネット回線と共用しないで閉域網、つまり専用線を利用する形態です。VPN
+    の仕組みと動作原理についての詳細な解説は、SoftEther VPN プロジェクトの「1.1.2 VPN の仕組みと動作原理」<a
+      href="https://ja.softether.org/4-docs/1-manual/1/1.1">https://ja.softether.org/4-docs/1-manual/1/1.1</a>
+    という節にあります。<br>
+    <br>
+    　参考: VPN とは？その基本から安全なVPN接続を徹底解説 -- <a
+      href="https://cybersecurity-jp.com/security-measures/26436">https://cybersecurity-jp.com/security-measures/26436</a>
+    <br>
+    <br>
+    <h3><a name="mozTocId104614" class="mozTocH3"></a> Linux で VPN
+      に接続するには？</h3>
+    <h4><a name="mozTocId285696" class="mozTocH4"></a>VPN クライアント for
+      Debian</h4>
+    <blockquote>Package / Description<br>
+      <br>
+      kvpnc / VPN clients frontend for KDE4<br>
+      network-manager / Network management framework (daemon and
+      userspace tools)<br>
+      network-manager-gnome / Network management framework (GNOME
+      frontend)<br>
+      network-manager-iodine-gnome / Network management framework
+      (iodine plugin GNOME GUI)<br>
+      network-manager-l2tp-gnome / Network management framework (L2TP
+      plugin GNOME GUI)<br>
+      network-manager-openconnect-gnome / Network management framework
+      (OpenConnect plugin GNOME GUI) for Cisco AnyConnect and PaloAlto
+      GlobalProtect<br>
+      network-manager-openvpn-gnome / Network management framework
+      (OpenVPN plugin GNOME GUI)<br>
+      network-manager-pptp-gnome / Network management framework (PPTP
+      plugin GNOME GUI)<br>
+      network-manager-vpnc-gnome / This package provides the GNOME bits
+      of NetworkManager's VPNC plugin.<br>
+      pptp-linux / Client for the proprietary Microsoft Point-to-Point
+      Tunneling Protocol, PPTP <br>
+    </blockquote>
+    <br>
+    　上記の VPN クライアントについては右のリンクより入手してください：List of VPN clients -- <a
+      href="https://wiki.debian.org/VPN-client">https://wiki.debian.org/VPN-client</a>　<br>
+    <br>
+    <h3><a name="mozTocId538676" class="mozTocH3"></a>VPN の設定方法や解説サイトは？</h3>
+    <ul>
+      <li>OpenVPN - Debian Wiki -- <a
+          href="https://wiki.debian.org/OpenVPN">https://wiki.debian.org/OpenVPN</a>　</li>
+      <li>OpenVPN - ArchWiki -- <a
+          href="https://wiki.archlinux.jp/index.php/OpenVPN">https://wiki.archlinux.jp/index.php/OpenVPN</a>　</li>
+      <li>OpenConnect - ArchWiki -- <a
+          href="https://wiki.archlinux.jp/index.php/OpenConnect">https://wiki.archlinux.jp/index.php/OpenConnect</a>　<br>
+      </li>
+      <li>NetworkManager - ArchWiki -- <a
+          href="https://wiki.archlinux.jp/index.php/NetworkManager">https://wiki.archlinux.jp/index.php/NetworkManager</a>　<br>
+      </li>
+      <li>SoftEther VPN プロジェクト -- <a href="https://ja.softether.org/">https://ja.softether.org/</a>　</li>
+      <li>SoftEtherでVPN環境を作ろう -- <a
+          href="https://www.linuxmania.jp/softether-vpn.html">https://www.linuxmania.jp/softether-vpn.html</a>　</li>
+      <li>VPN Gate 筑波大学による公開 VPN 中継サーバープロジェクト -- <a
+          href="https://www.vpngate.net/ja/">https://www.vpngate.net/ja/</a>　</li>
+    </ul>
+    <br>
+    <h3><a name="mozTocId783883" class="mozTocH3"></a>Debian に OpenVPN
+      をインストールするには？</h3>
+    以下 Debian 10 へインストールして使えるようにするまでの手順の一例を紹介します。まず OpenVPN をインストールします。<br>
+    APT コマンドで Debian Project から配布されている Deb パッケージをインストールします。GNOME や
+    MATE、Cinnnamon
+    などのデスクトップ環境が標準でインストールされていることが前提要件です。次のコマンドを実行するか、Synaptic で
+    network-manager-openvpn-gnome をインストールします。<br>
+    <blockquote>root@debian:/home/hoge# apt install
+      network-manager-openvpn-gnome<br>
+      パッケージリストを読み込んでいます... 完了<br>
+      依存関係ツリーを作成していま
+      す&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+      <br>
+      状態情報を読み取っています... 完了<br>
+      以下の追加パッケージがインストールされます:<br>
+      &nbsp; easy-rsa libccid liblzo2-2 libpkcs11-helper1
+      network-manager-openvpn opensc<br>
+      &nbsp; opensc-pkcs11 openvpn pcscd<br>
+      提案パッケージ:<br>
+      &nbsp; pcmciautils resolvconf openvpn-systemd-resolved<br>
+      以下のパッケージが新たにインストールされます:<br>
+      &nbsp; easy-rsa libccid liblzo2-2 libpkcs11-helper1
+      network-manager-openvpn<br>
+      &nbsp; network-manager-openvpn-gnome opensc opensc-pkcs11 openvpn
+      pcscd<br>
+      アップグレード: 0 個、新規インストール: 10 個、削除: 0 個、保留: 0 個。<br>
+      2,455 kB のアーカイブを取得する必要があります。<br>
+      この操作後に追加で 7,724 kB のディスク容量が消費されます。<br>
+      続行しますか? [Y/n]<br>
+    </blockquote>
+    <br>
+    <h3><a name="mozTocId172782" class="mozTocH3"></a>筑波大学の VPN Gate
+      とは何ですか？</h3>
+    筑波大学では学術実験プロジェクトの一環として SoftEther VPN
+    を運用しています。この実証実験には一般のユーザーが参加して無料のVPN
+    の中継サービスを受けることが可能です。ただし、「ボランティアとして参加している各公開 VPN
+    中継サーバーコンピュータは、筑波大学でホストされている訳ではありません。(*)」と明記されているので注意して利用してください。無料で利用できます
+    が、商用 VPN プロバイダのように品質は保証していません。下記のサイトは、VPN
+    の仕組みや設定方法、使い方を詳しく習得したい方にとっては、役立つ情報が満載されていると思います。<br>
+    <br>
+    VPN Gate のレビュー記事が VPNveteran.com というサイトにあります。また SoftEther VAN Forum
+    <a href="https://www.softether.org/7-forum">https://www.softether.org/7-forum</a>
+    という公開フォーラムもあってその投稿も見る限り、特に高い評価を受けているわけではないと思います。それなりの品質で利用したい場合は有償の
+    SoftEther へ乗り換える必要があります。<br>
+    <br>
+    &nbsp;"VPN Gate is a free and voluntary based VPN which is working
+    as an anti-censorship tool for many. We need to respect the
+    developers at the University of Tsukuba who have developed this free
+    tool. Unfortunately, we cannot recommend you to use it since it is
+    free and retains too much information, plus it is so slow to be
+    recommended to all our readers." from VPNGate Review at
+    VPNveteran.com - <a href="https://vpnveteran.com/vpngate-review/">https://vpnveteran.com/vpngate-review/</a>　<br>
+    <br>
+    <div align="right"> 　(*) VPN Gate 学術実験について - VPN Gate の公開 VPN
+      中継サーバーについて -- <a href="https://www.vpngate.net/ja/about_us.aspx">https://www.vpngate.net/ja/about_us.aspx</a>　<br>
+    </div>
+    <br>
+    <h3><a name="mozTocId478317" class="mozTocH3"></a>OpenVPN プロトコルを使って
+      VPN Gate へ接続するには？</h3>
+    　右記は Linux 用ではありませんが参考までに貼っておきます。-- <a
+      href="https://www.vpngate.net/ja/howto_openvpn.aspx">https://www.vpngate.net/ja/howto_openvpn.aspx</a>　<br>
+    <br>
+    1. OpenVPN 設定ファイル (.ovpn ファイル) のダウンロード<br>
+    <a href="https://www.vpngate.net/ja/#LIST">https://www.vpngate.net/ja/#LIST</a>
+    より任意の設定ファイルをダウンロードします。<br>
+    <br>
+    2. クライアントの設定ファイルのインストール<br>
+    <a
+href="https://wiki.archlinux.jp/index.php/OpenVPN#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">https://wiki.archlinux.jp
+
+
+
+      /index.php/OpenVPN#クライアントの設定ファイル</a> に詳しい解説があります。<br>
+    <br>
+    クライアント設定ファイルのサンプルを /etc/openvpn/client/client.conf にコピーします。このファイルは
+    .ovpn という拡張子が付いています。<br>
+    なお、設定ファイルは後の手順にあるとおりインポート機能で直接取り込むことも可能なので、この作業は省略して構いません。<br>
+    <br>
+    　（以下は設定ファイルのサンプルです）<br>
+    <blockquote>dev tun<br>
+      proto udp<br>
+      remote public-vpn-123.opengw.net 1234<br>
+      ;http-proxy-retry<br>
+      ;http-proxy [proxy server] [proxy port]<br>
+      cipher AES-128-CBC<br>
+      auth SHA1<br>
+      resolv-retry infinite<br>
+      nobind<br>
+      persist-key<br>
+      persist-tun<br>
+      client<br>
+      verb 3<br>
+      #auth-user-pass<br>
+    </blockquote>
+    3. OpenVAN Gnome の設定について<br>
+    詳しくは <a
+href="https://wiki.archlinux.jp/index.php/OpenVPN#Gnome_%E3%81%AE%E8%A8%AD%E5%AE%9A">https://wiki.archlinux.jp
+
+
+
+      /index.php/OpenVPN#Gnome_の設定</a> を参考にしてください。<br>
+    このページの手順を参考にデスクトップのネットワーク設定アプリ (NetworkManager) を使って設定を行います。<br>
+    ネットワーク設定アプリは標準でデスクトップの右上にあります。<br>
+    VAN の設定を行なうにはアイコンをクリックして、メニューから [VAN接続] &gt; [VAN接続の追加] を選択します。<br>
+    <br>
+    <img src="screenshots-vpn/vpn-selection-menu.png"
+      alt="screenshots-vpn/vpn-selection-menu.png" width="627"
+      height="273"><br>
+    <br>
+    次の手順で▼を選ぶと「保存したVAN設定をインポートする…」という項目を選択して作成を実行できます。<br>
+    <br>
+    <img src="screenshots-vpn/vpn-config-import.png"
+      alt="screenshots-vpn/vpn-config-import.png" width="627"
+      height="273"><br>
+    <br>
+    次に設定画面が表示されるので通常は標準の設定のままにして、パスワードを入力し「保存」を選びます。VPN Gate のパスワードは vpn
+    に決められています。<br>
+    <br>
+    <img src="screenshots-vpn/vpn-connection-edit.png"
+      alt="screenshots-vpn/vpn-connection-edit.png" width="464"
+      height="614"><br>
+    <br>
+    これで基本の設定が完了です。<br>
+    次に通常の無線ネットワークからVPNへと切り替えます。切り替えは先の無線アイコンをクリックして、VPN
+    接続の欄にチェックします。これで数秒後に自動的に接続します。VPN 接続に成功すると「VPN
+    の接続に成功しました」というメッセージが現れ、アイコンに鍵マークが表示されます。<br>
+    <br>
+    <img src="screenshots-vpn/vpn-login-message.png"
+      alt="screenshots-vpn/vpn-login-message.png" width="396"
+      height="142"><br>
+    <br>
+    VPN接続を終了するときは 「VPN 接続」の項目のチェックを外します。ワイヤレス接続そのものを切るには、アイコンをより「Wi-Fi
+    ネットワーク」の「切断する」をクリックします。<br>
+    <br>
+    <h3><a name="mozTocId238662" class="mozTocH3"></a>Debian で
+      AnyConnect に接続するには？</h3>
+    network-manager-openconnect-gnome というパッケージをインストールする必要があります。このパッケージは
+    Cisco AnyConnect に対応する Linux クライアント マネージャとして機能します。<br>
+    <blockquote> root@debian:/home/hoge# apt install
+      network-manager-openconnect-gnome<br>
+      パッケージリストを読み込んでいます... 完了<br>
+      依存関係ツリーを作成していま
+      す&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+      <br>
+      状態情報を読み取っています... 完了<br>
+      以下の追加パッケージがインストールされます:<br>
+      &nbsp; libopenconnect5 libstoken1 libtomcrypt1 libtss2-esys0
+      libtss2-udev<br>
+      &nbsp; network-manager-openconnect openconnect vpnc-scripts<br>
+      提案パッケージ:<br>
+      &nbsp; dnsmasq openssh-server resolvconf<br>
+      以下のパッケージが新たにインストールされます:<br>
+      &nbsp; libopenconnect5 libstoken1 libtomcrypt1 libtss2-esys0
+      libtss2-udev<br>
+      &nbsp; network-manager-openconnect
+      network-manager-openconnect-gnome openconnect<br>
+      &nbsp; vpnc-scripts<br>
+      アップグレード: 0 個、新規インストール: 9 個、削除: 0 個、保留: 0 個。<br>
+      1,662 kB のアーカイブを取得する必要があります。<br>
+      この操作後に追加で 7,544 kB のディスク容量が消費されます。<br>
+      続行しますか? [Y/n] <br>
+    </blockquote>
+    <br>
+    インストール後、前述と同じようにネットワーク・アイコンから設定作業を行います。次の画面で左下の + アイコンでネットワークを追加します。<br>
+    <br>
+    <img src="screenshots-vpn/add-new-network.png"
+      alt="add-new-network.png" width="608" height="430"><br>
+    <br>
+    次に ▼ をクリックすると詳しい一覧が表示されるので、その中から接続の種類を選択します。<br>
+    <br>
+    <img src="screenshots-vpn/select-connection-type.png"
+      alt="select-connection-type.png" width="629" height="296"><br>
+    <br>
+    <img src="screenshots-vpn/select-connection-type2.png"
+      alt="select-connection-type2.png" width="629" height="296"><br>
+    <br>
+    この手順では VPN の中の Cisco AnyConnect を選択します。「作成」ボタンを押して次の画面へ進みます。<br>
+    <br>
+    <img src="screenshots-vpn/select-connection-type3.png"
+      alt="select-connection-type3.png" width="629" height="296"><br>
+    <br>
+    下記の接続設定の編集画面で、Gateway:
+    の項目に指定されたホスト名（サーバの名前）を入力します。入力が済んだら「保存」をクリックして画面を閉じます。<br>
+    <br>
+    <img src="screenshots-vpn/anyconnect-edit.png"
+      alt="anyconnect-edit.png" width="464" height="732"><br>
+    <br>
+    デスクトップのネットワーク・アイコンよりログインします。Usename: にユーザ名、Password:
+    にパスワードを入力し「Connect」ボタンで接続を開始します。利用終了時にはアイコンより VPN 接続を必ず終了させてください。<br>
+    <br>
+    <img src="screenshots-vpn/anyconnect-login-menu.png"
+      alt="anyconnect-login-menu.png" width="402" height="340"><br>
+    <br>
+    <ul>
+    </ul>
+    <h3><a name="mozTocId473140" class="mozTocH3"></a>VPN
+      の利用や設定に関する疑問や質問集</h3>
+    MX Linux フォーラムでよく話題になっているので、掲載ページへのリンクを掲載しました。<br>
+    <ul>
+      <li>VPNs and MX - MX Linux Forum -- <a
+          href="https://forum.mxlinux.org/viewtopic.php?t=49754">https://forum.mxlinux.org/viewtopic.php?t=49754</a>　</li>
+      <li>vpn compatibility -- <a
+          href="https://forum.mxlinux.org/viewtopic.php?t=47428">https://forum.mxlinux.org/viewtopic.php?t=47428</a>　</li>
+      <li>native nordvpn app on MX linux -- <a
+          href="https://forum.mxlinux.org/viewtopic.php?t=49491">https://forum.mxlinux.org/viewtopic.php?t=49491</a>　</li>
+      <li>mx17 vpn configuration problem -- <a
+          href="https://forum.mxlinux.org/viewtopic.php?t=45236">https://forum.mxlinux.org/viewtopic.php?t=45236</a>　</li>
+      <li>Cisco Anyconnect VPN -- <a
+          href="https://forum.mxlinux.org/viewtopic.php?t=48259">https://forum.mxlinux.org/viewtopic.php?t=48259</a>　</li>
+      <li>What are your VPN Recommendations? -- <a
+          href="https://forum.mxlinux.org/viewtopic.php?t=53213">https://forum.mxlinux.org/viewtopic.php?t=53213</a>　<br>
+      </li>
+      <li>VPN - MX Linux -- <a
+          href="https://mxlinux.org/wiki/networking/vpn/">https://mxlinux.org/wiki/networking/vpn/</a>　</li>
+    </ul>
+    <br>
+    <ul>
+    </ul>
+    <h3><a name="mozTocId100778" class="mozTocH3"></a>主な商用 VPN
+      について（比較参考のために）</h3>
+    <ul>
+      <li>Cisco AnyConnect<br>
+        <a
+href="https://www.cisco.com/c/m/ja_jp/products/security/anyconnect/remote-access-vpn.html">https://www.cisco.com/c/m/ja_jp/products/security/anyconnect/remote-access-vpn.html</a>　<br>
+        <a
+href="https://www.cisco.com/c/en/us/products/security/anyconnect-secure-mobility-client/index.html">https://www.cisco.com/c/en/us/products/security/anyconnect-secure-mobility-client/index.html</a>　</li>
+      <li>paloalto GlobalProtect<br>
+        <a
+href="https://www.paloaltonetworks.jp/products/secure-the-network/subscriptions/globalprotect">https://www.paloaltonetworks.jp/products/secure-the-network/subscriptions/globalprotect</a>　<br>
+        <a
+          href="https://www.paloaltonetworks.com/products/globalprotect">https://www.paloaltonetworks.com/products/globalprotect</a>　</li>
+      <li>SoftEther VAN<br>
+        「Cisco や他社のハードウェアベースの VPN 製品の置換について」<br>
+        <a
+href="https://ja.softether.org/4-docs/2-howto/7.Replacements_of_Legacy_VPNs/3.Replacements_of_Cisco_or_other_hardware-based_VPNs">https://ja.softether.org/4-docs/2-howto/7.Replacements_of_Legacy_VPNs/3.Replacements_of_Cisco_or_other_hardware-based_VPNs</a>　</li>
+      <li>"Public VPN" - CNET Download<br>
+        <a href="https://download.cnet.com/s/public-vpn/">https://download.cnet.com/s/public-vpn/</a>　<br>
+      </li>
+    </ul>
+    <br>
+    <hr style="width: 100%; height: 2px;">
+    <div style="text-align: right;" align="left">
+      <div align="left"><a href="../../index.html">HOME</a>　<br>
+      </div>
+    </div>
+  </body>
+</html>

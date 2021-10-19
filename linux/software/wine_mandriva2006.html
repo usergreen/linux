@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>Wine/Mandriva2006</title>
+</head>
+<body>
+<div id="body">
+<p><a href="http://f40.aaa.livedoor.jp/%7Egreen/?Wine"
+ title="Wine (1921d)">Wine</a></p>
+<p>$ urpmq -i wine<br>
+Name : wine<br>
+Version : 20050725<br>
+Release : 6mdk<br>
+Group : Emulators<br>
+Size : 602155 Architecture: i586<br>
+Source RPM : wine-20050725-6mdk.src.rpm Build Host: n3.mandriva.com<br>
+Packager : Buchan Milne &lt;<a href="mailto:bgmilne@linux-mandrake.com">bgmilne@linux-mandrake.com</a>&gt;<br>
+URL : <a href="http://www.winehq.com/">http://www.winehq.com/</a><br>
+Summary : WINE Is Not An Emulator - runs MS Windows programs<br>
+Description :<br>
+Wine is a program which allows running Microsoft Windows programs<br>
+(including DOS, Windows 3.x and Win32 executables) on Unix. It<br>
+consists of a program loader which loads and executes a Microsoft<br>
+Windows binary, and a library (called Winelib) that implements Windows<br>
+API calls using their Unix or X11 equivalents. The library may also<br>
+be used for porting Win32 code into native Unix executables.</p>
+<hr class="full_hr">
+<p># urpmi --test wine<br>
+依存を満たすために以下の 6 個のパッケージをインストールします(48 MB):<br>
+X11R6-contrib-6.9-1.cvs20050915.2mdk.i586<br>
+jackit-0.100.1-0.20050702.1mdk.i586<br>
+libarts1-1.4.2-2mdk.i586<br>
+libjack0-0.100.1-0.20050702.1mdk.i586<br>
+libwine1-20050725-6mdk.i586<br>
+wine-20050725-6mdk.i586<br>
+よろしいですか？ (Y/n)[デフォルトはY] n</p>
+<hr class="full_hr">
+<p># urpmi wine<br>
+依存を満たすために以下の 6 個のパッケージをインストールします(48 MB):<br>
+X11R6-contrib-6.9-1.cvs20050915.2mdk.i586<br>
+jackit-0.100.1-0.20050702.1mdk.i586<br>
+libarts1-1.4.2-2mdk.i586<br>
+libjack0-0.100.1-0.20050702.1mdk.i586<br>
+libwine1-20050725-6mdk.i586<br>
+wine-20050725-6mdk.i586<br>
+よろしいですか？ (Y/n)[デフォルトはY] y</p>
+<pre>    ftp://ftp.nara.wide.ad.jp/pub/Linux/Mandrakelinux/official/current/i586//media/main/jackit-0.100.1-0.20050702.1mdk.i586.rpm<br>    ftp://ftp.nara.wide.ad.jp/pub/Linux/Mandrakelinux/official/current/i586//media/main/libarts1-1.4.2-2mdk.i586.rpm<br>    ftp://ftp.nara.wide.ad.jp/pub/Linux/Mandrakelinux/official/current/i586//media/main/libjack0-0.100.1-0.20050702.1mdk.i586.rpm<br>    ftp://ftp.nara.wide.ad.jp/pub/Linux/Mandrakelinux/official/current/i586//media/main/wine-20050725-6mdk.i586.rpm<br>    ftp://ftp.nara.wide.ad.jp/pub/Linux/Mandrakelinux/official/current/i586//media/main/libwine1-20050725-6mdk.i586.rpm<br>    ftp://ftp.nara.wide.ad.jp/pub/Linux/Mandrakelinux/official/current/i586//media/main/X11R6-contrib-6.9-1.cvs20050915.2mdk.i586.rpm</pre>
+<p>libarts1-1.4.2-2mdk.i586.rpm jackit-0.100.1-0.20050702.1mdk.i586.rpm
+libjack0-0.100.1-0.20050702.1mdk.i586.rpm wine-20050725-6mdk.i586.rpm
+libwine1-20050725-6mdk.i586.rpm
+X11R6-contrib-6.9-1.cvs20050915.2mdk.i586.rpm を /var/cache/urpmi/rpms
+からインストール<br>
+準備中.. #############################################</p>
+<pre>      1/6: X11R6-contrib         #############################################<br>      2/6: libjack0              #############################################<br>      3/6: libarts1              #############################################<br>      4/6: libwine1              #############################################<br>      5/6: jackit                #############################################<br>      6/6: wine                  #############################################</pre>
+<p># exit</p>
+</div>
+</body>
+</html>

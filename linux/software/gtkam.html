@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>gtkam</title>
+  </head>
+  <body>
+    <div id="navigator"> <a href="../../index.html">HOME</a> / <a
+        href="index2.html">Software</a> <br>
+      <hr size="2" width="100%">
+      <h2 id="content_1_0"><a name="mozTocId855287" class="mozTocH2"></a>gtkam
+
+        - GNUデジタルカメラソフト</h2>
+      <p>これは、GNOMEデスクトップ用のフリーな「画像転送ツール」です。PTP (Picture Transfer
+        Protocol) というプロトコルを利用してデジタルカメラの画像をパソコンに取り込みます。<br>
+      </p>
+      <p><br>
+      </p>
+      <ol id="mozToc">
+        <!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
+        <li><a href="#mozTocId855287">gtkam - GNUデジタルカメラソフト</a>
+          <ol>
+            <li>
+              <ol>
+                <li><a href="#mozTocId534889">マニュアル</a></li>
+                <li><a href="#mozTocId346953">実際の使い方（その手順とスクリーンショット）</a></li>
+                <li><a href="#mozTocId590634">インストール方法</a></li>
+                <li><a href="#mozTocId975484">対応する市販デジタルカメラ</a></li>
+                <li><a href="#mozTocId487529">コマンドラインから起動するには？</a></li>
+                <li><a href="#mozTocId747847">CUI で画像の取り込みを行ないたいときは？</a></li>
+                <li><a href="#mozTocId178120">補足情報</a>
+                  <ol>
+                    <li><a href="#mozTocId680333">動作確認環境</a></li>
+                    <li><a href="#mozTocId547856">動作しなかった環境</a></li>
+                  </ol>
+                </li>
+                <li><a href="#mozTocId631752">USB Mass Storage の利用について</a></li>
+                <li><a href="#mozTocId40039">外部リンク (デジタルカメラの
+                    Linux対応状況詳細)</a></li>
+                <li><a href="#mozTocId280187">画像編集を行いたいときは？</a></li>
+                <li><a href="#mozTocId519793">デジタルカメラソフト関連</a>
+                  <ol>
+                    <li><a href="#mozTocId826836">gThumb</a></li>
+                    <li><a href="#mozTocId890567">digiKam</a></li>
+                    <li><a href="#mozTocId531311">FLPhoto</a></li>
+                    <li><a href="#mozTocId221998">F-Spot Photo Manager</a></li>
+                    <li><a href="#mozTocId649188">Picasa for Linux</a></li>
+                    <li><a href="#mozTocId883739">LightZone?</a></li>
+                    <li><a href="#mozTocId833761">レビュー記事</a></li>
+                  </ol>
+                </li>
+                <li><a href="#mozTocId674344">デジタルカメラの Linux
+                    対応状況（2020年現在）</a></li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ol>
+      <p><br>
+      </p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_1"><a name="mozTocId534889" class="mozTocH3"></a>マ
+        ニュアル</h3>
+      <p>クイックスタートガイド（Quick start guide）（英文）<br>
+        <a
+          href="http://www.gphoto.org/doc/manual/quickstart.html#using-gtkam">http://www.gphoto.org/doc/manual/quickstart.html#using-gtkam</a></p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_2"><a name="mozTocId346953" class="mozTocH3"></a>実
+        際の使い方（その手順とスクリーンショット）</h3>
+      <p>1. まず、カメラとパソコンを付属USBケーブルで接続し、カメラの電源を入れます。<br>
+        <img src="../../gtkam/Screenshot-gtkam0.png"
+          alt="Screenshot-gtkam0.png" title="Screenshot-gtkam0.png"
+          height="185" width="374" border="0"></p>
+      <p>2. gtkam を起動します。<br>
+        <img src="../../gtkam/Screenshot-gtkam.png"
+          alt="Screenshot-gtkam.png" title="Screenshot-gtkam.png"
+          height="354" width="489" border="0"></p>
+      <p>3. 「検出」ボタンを押します。<br>
+        <img src="../../gtkam/Screenshot-AddCamera1.png"
+          alt="Screenshot-AddCamera.png"
+          title="Screenshot-AddCamera.png" height="176" width="556"
+          border="0"></p>
+      <p>4. カメラの自動認識が成功すると、そのカメラ名が表示されます。<br>
+        <img src="../../gtkam/Screenshot-AddCamera1.png"
+          alt="Screenshot-AddCamera1.png"
+          title="Screenshot-AddCamera1.png" height="176" width="556"
+          border="0"></p>
+      <p>5. ▽ボタンを選択してフォルダを展開します。<br>
+        <img src="../../gtkam/Screenshot-gtkam1.png"
+          alt="Screenshot-gtkam1.png" title="Screenshot-gtkam1.png"
+          height="354" width="489" border="0"></p>
+      <p>6. 目的のファイルを表示させて、画像の取り込みをします。<br>
+        <img src="../../gtkam/Screenshot-gtkam3.png"
+          alt="Screenshot-gtkam3.png" title="Screenshot-gtkam3.png"
+          height="303" width="489" border="0"></p>
+      <p>7. 取り込む画像のファイル名と開始番号が指定できます。<br>
+        <img src="../../gtkam/Screenshot-SavingPictures.png"
+          alt="Screenshot-SavingPictures.png"
+          title="Screenshot-SavingPictures.png" height="518" width="838"
+          border="0"></p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_3"><a name="mozTocId590634" class="mozTocH3"></a>イ
+        ンストール方法</h3>
+      <p>代表的な Linux
+        ディストリビューションでは標準でインストールされるか、あるいは専用パッケージが用意されているので追加するだけです。例えば、</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Debian の場合は次のコマンドで追加インストールを行います。
+          <pre> # apt-get install gtkam<br> パッケージリストを読みこんでいます... 完了<br> 依存関係ツリーを作成しています... 完了<br> 以下の特別パッケージがインストールされます:<br>   libexif-gtk4 libgphoto2-2 libgphoto2-port0<br> 提案パッケージ:<br>   gphoto2<br> 以下のパッケージが新たにインストールされます:<br>   gtkam libexif-gtk4 libgphoto2-2 libgphoto2-port0<br> アップグレード: 0 個、新規インストール: 4 個、削除: 0 個、保留: 0 個。<br> 1269kB のアーカイブを取得する必要があります。<br> 展開後に追加で 4526kB のディスク容量が消費されます。<br> 続行しますか? [Y/n]</pre>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Mandriva Linux では、GNOMEデスクトップに標準で含まれます。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_4"><a name="mozTocId975484" class="mozTocH3"></a>対
+        応する市販デジタルカメラ</h3>
+      <p>次のウェブページで確認可能です。</p>
+      <p><a href="http://www.gphoto.org/proj/libgphoto2/support.php">http://www.gphoto.org/proj/libgphoto2/support.php</a></p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_5"><a name="mozTocId487529" class="mozTocH3"></a>コ
+        マンドラインから起動するには？</h3>
+      <p>次のコマンドを実行します。</p>
+      <pre> $ gtkam</pre>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_6"><a name="mozTocId747847" class="mozTocH3"></a>CUI
+
+        で画像の取り込みを行ないたいときは？</h3>
+      <p>gtkam はグラフィカルなツールです。一方、CUI ベースで操作できる gPhoto2
+        というパッケージが配布されているので、こちらを利用します。gPhoto2 は次のようにしてインストールします。</p>
+      <pre> # apt-get install gphoto2<br> （これは Debian の場合です。）</pre>
+      <p><a href="http://www.gphoto.org/doc/manual/using-gphoto2.html">Using
+the
+
+          gphoto2 command line interface</a>にしたがって操作します。</p>
+      <pre> $ gphoto2 --list-ports<br> $ gphoto2 --auto-detect<br> $ gphoto2 --summary<br> $ gphoto2 --list-files<br> $ gphoto2 --get-all-files</pre>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_7"><a name="mozTocId178120" class="mozTocH3"></a>補
+        足情報</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_8"><a name="mozTocId680333" class="mozTocH4"></a>動
+        作確認環境</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>上記解説とスクリーンショットは、gtkam バージョン 1.12 をもとに作成しました。(Debian testing
+          Etch、2006.12.25 現在)</li>
+        <li>動作確認に使用したカメラ： CANON <span class="noexists">PowerShot<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=PowerShot&amp;refer=SoftWares%2Fgtkam">?</a></span>
+          A100</li>
+      </ul>
+      <p><img src="../../gtkam/Screenshot-gtkam-info.png"
+          alt="Screenshot-gtkam-info.png"
+          title="Screenshot-gtkam-info.png" height="396" width="464"
+          border="0"></p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>他に動作確認できたディストリビューション<br>
+          Mandriva Linux 2007 + gtkam 1.13</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_9"><a name="mozTocId547856" class="mozTocH4"></a>動
+        作しなかった環境</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>自動認識に失敗し、利用不能であったディストリビューション：<br>
+          Debian 3.1 (Sarge) + gtkam 1.12 （※ gtkam 1.12 は
+          Debian独自配布のパッケージ）</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_10"><a name="mozTocId631752" class="mozTocH3"></a>USB
+
+        Mass Storage の利用について</h3>
+      <p>デジタルカメラの中には、USB Mass
+        Storage（大容量USBストレージ）というプロトコルに対応している製品が存在します。大容量USBストレージの対応一覧は、下記
+        外部リンク先に掲 載されています。</p>
+      <p>PTP (Picture Transfer Protocol)
+        に対応しないデジタルカメラの場合、この「大容量USBストレージクラス」と呼ばれる規格で利用できるか否か確認されることをお勧めしま
+        す。</p>
+      <p>なお、大容量USBストレージにも対応しないデジタルカメラは、対応済みメモリーカードリーダーを利用しリムーバブルディスクとして扱
+        うことで、こ の問題を回避できます。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_11"><a name="mozTocId40039" class="mozTocH3"></a>外
+        部リンク (デジタルカメラの Linux対応状況詳細)</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a
+            href="http://www.teaser.fr/%7Ehfiguiere/linux/digicam.html">Digital
+Camera
+Support
+for
+UNIX,
+
+            Linux and BSD</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_12"><a name="mozTocId280187" class="mozTocH3"></a>画
+        像編集を行いたいときは？</h3>
+      <p>gtkam は画像転送のためのシンプルなソフトウェアです。したがって、画像を編集する機能を備えていません。GIMP (GNU
+        Image Manipulation Program)
+        という有名でフリーなソフトと組み合わせて活用すると、作業が効率的に行えます。</p>
+      <p>GIMP は非常に高機能な画像処理ツールです。<a
+          href="http://www.tohoho-web.com/wwwgimp.htm">とほほのGimp入門</a>(超簡
+        単な使い方）を参考 にすれば、初めての方でも使い始めることができると思います。</p>
+      <p>なお、gtkam には GIMPプラグインが用意されており、代表的なLinuxディストリビューションで gtkam-gimp
+        という名称の追加パッケージが利用可能となっています。gtkam-gimp をインストールすれば、GIMP
+        の画面上で直接取り込みが行えるようです。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_13"><a name="mozTocId519793" class="mozTocH3"></a>デ
+        ジタルカメラソフト関連</h3>
+      <p>デジタルカメラから画像転送するだけでなく、その編集も可能で、同等以上の機能を提供するフリーなソフトウェアとしては、他にも次のも
+        のが存在しま す。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_14"><a name="mozTocId826836" class="mozTocH4"></a>gThumb</h4>
+      <p>これは、GNOMEデスクトップ環境向けの標準的な画像ビューアー/ブラウザーです。画像の編集や取り込みの機能もあります。<br>
+        <a href="http://gthumb.sourceforge.net/">http://gthumb.sourceforge.net/</a></p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_15"><a name="mozTocId890567" class="mozTocH4"></a>digiKam</h4>
+      <p>これは、KDEデスクトップ環境向けのデジタルカメラソフトです。<br>
+        <a href="http://www.digikam.org/">http://www.digikam.org/</a></p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_16"><a name="mozTocId531311" class="mozTocH4"></a>FLPhoto</h4>
+      <p><a href="http://www.easysw.com/%7Emike/flphoto/">http://www.easysw.com/~mike/flphoto/</a><br>
+        このソフトは、Mandriva Linux 2007 に標準で付属しています。<br>
+        （CANON <span class="noexists">PowerShot<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=PowerShot&amp;refer=SoftWares%2Fgtkam">?</a></span>
+        A100 で動作確認済み）</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_17"><a name="mozTocId221998" class="mozTocH4"></a>F-Spot
+
+        Photo Manager</h4>
+      <p><a href="http://f-spot.org/Main_Page">http://f-spot.org/Main_Page</a><br>
+        このソフトは、Mandriva Linux 2007 に標準で付属しています。<br>
+        （CANON <span class="noexists">PowerShot<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=PowerShot&amp;refer=SoftWares%2Fgtkam">?</a></span>
+        A100 で動作確認済み）</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_18"><a name="mozTocId649188" class="mozTocH4"></a>Picasa
+
+        for Linux</h4>
+      <p>Picasa は、個人の非商用目的でのみ、無料で使用することができます。<br>
+        英語版の一般公開（アメリカ国外）が開始されました。Windows版が既に存在します。<br>
+        入手先：<a href="http://picasa.google.com/linux/index.html">http://picasa.google.com/linux/index.html</a></p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Picasa for Linux FAQs <a
+            href="http://picasa.google.com/linux/faq.html">http://picasa.google.com/linux/faq.html</a></li>
+      </ul>
+      <p>配布元（Google）が公式に動作検証した Linuxディストリビューション：</p>
+      <pre> * Debian Sarge<br> * Debian Etch<br> * Fedora Core 4<br> * Fedora Core 5<br> * Linspire 5<br> * Mandriva 2006<br> * Mandriva 2005<br> * Red Hat Workstation 3<br> * Red Hat Workstation<br> * Ubuntu 5.10 (Breezy Badger)<br> * SuSE 9.3<br> * SuSE 10.0</pre>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>インストール方法<br>
+          ダウンロードしたパッケージをマウスでダブルクリックすれば、自動的にインストールが開始されます。自動的にインストールが開始でき
+          ない時は、次のように して手動でインストールを実行します。
+          <pre> $ su<br> # dpkg -i picasa_2.2.2820-5_i386.deb<br> # exit</pre>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Debian 3.1(Sarge) + CANON <span class="noexists">PowerShot<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=PowerShot&amp;refer=SoftWares%2Fgtkam">?</a></span>
+          A100 の組み合わせでは、自動認識が機能しません（当方環境で確認）。</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a
+            href="http://www.itmedia.co.jp/news/articles/0605/27/news007.html">Google、
+            PicasaのLinux版リリース（速報）</a></li>
+        <li><a
+            href="http://opentechpress.jp/developer/article.pl?sid=06/05/30/1435223">Google
+
+            がLinux用Picasaを100以上のWineパッチと共にリリース</a></li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>もと、米国のPicasa社が無償配布していた、デジカメなどで撮影した画像の管理ソフトの名称。Google社は2004年7
+          月13日に Picasa社を買収すると発表しました。（<a
+            href="http://www.jiten.com/dicmi/docs/p/24518s.htm">マルチメディア・
+            インターネット事典</a>よ り）</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_19"><a name="mozTocId883739" class="mozTocH4"></a><span
+          class="noexists">LightZone<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=LightZone&amp;refer=SoftWares%2Fgtkam">?</a></span></h4>
+      <p><a href="http://www.lightcrafts.com/products/lightzone/">LightZone</a>は、
+        プロフェッショナル向けの高度な画像ビューア &amp;
+        編集ソフトです。一般ユーザーが画像を管理する用途にも向いています。Linux版は無料で入手できます。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><span class="noexists">LightZone<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=LightZone&amp;refer=SoftWares%2Fgtkam">?</a></span>
+          for Linux の配布先<br>
+          <a href="http://sonic.net/%7Erat/lightcrafts/">http://sonic.net/~rat/lightcrafts/</a></li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>必要環境<br>
+          CPU - 2GHz 以上かつ、SSE をサポートするもの<br>
+          RAM - 1GHz 以上</li>
+      </ul>
+      <p>SSE をサポートするかどうかは、/proc/cpuinfo の記述より確認できます。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>解説記事<br>
+          <a
+href="http://opentechpress.jp/developer/article.pl?sid=07/02/16/0117210&amp;from=rss">写
+            真補正ソフトLightZone——Linux版については無料で利用可能</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_20"><a name="mozTocId833761" class="mozTocH4"></a>レ
+        ビュー記事</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a
+href="http://opentechpress.jp/developer/article.pl?sid=06/12/27/0135224&amp;pagenum=2">Linux
+
+            用各種フォト管理アプリケーションの比較</a> (Open Tech Press)</li>
+      </ul>
+      <br>
+      <h3><a name="mozTocId674344" class="mozTocH3"></a>デジタルカメラの Linux
+        対応状況（2020年現在）</h3>
+      上記の項目ではデスクトップ用の各種「画像転送ツール」を紹介しましたが、2020年現在、ディストリビューションによっては画像転送ツール
+      が標準で実装されるようになりました。そのため、デジタルカメラ用のソフトウェアのインストール作業は不要かもしれません。<br>
+      <br>
+      gphoto2 ライブラリは、USB Mass Storage や PTP
+      といった標準のプロトコルやベンダー依存のプロトコルを介して、さまざまなデジタルカメラモデルへアクセスするアプリケーションによって利用されます。<br>
+      <br>
+      注記 - Debian 10 では、gphoto2 ライブラリ (libgphoto2)
+      が標準でインストールされるようになりました。当方で確認したところ、Canon Digital Camera
+      はUSBを介して問題なく自動的に画像の取り込みが行なえます。<br>
+      <br>
+      ファイルシステムの種類: gphoto2<br>
+      <br>
+      として正しく認識されて画像の取り込みが行なえます。<br>
+      <br>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      </ul>
+      <hr size="2" width="100%"><a href="../../index.html">HOME</a> </div>
+  </body>
+</html>

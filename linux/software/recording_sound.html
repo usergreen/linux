@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>RecordingSound</title>
+  </head>
+  <body>
+    <a href="../../index.html" title="FrontPage (1d)">HOME</a> / <a
+      href="multimedia.html">Multimedia</a><a href="index.html"></a>
+    <hr size="2" width="100%">
+    <h2>インターネットでサウンドを録音する （PulseAudio を使って）</h2>
+    <br>
+    インターネットを利用していると、その中にはネットラジオがあったり、動画や音声が流れていたりします。しかし、その際流れてくるサウンドは大抵
+    の場合、その場限りで消え去ってしまいます。例えば、ネットラジオを録音して残しておいて、後で繰り返し楽しみたいというような私的な要望は結構
+    あるように思います。<br>
+    <br>
+    ここでは、サウンドサーバーである PulseAudio というソフトウェアを利用して Linux
+    上で簡単に録音する手順を紹介します。以下は、GNOME デスクトップ環境の場合です（Debian Wheezy 環境で確認済み）。<br>
+    <br>
+    <h3> １. PulseAudio Volume Control のインストール</h3>
+    デフォルトの環境ではすでに PulseAudio とGNOME
+    サウンドレコーダーがインストール済みです。しかしながら、これだけの状況のもとでは、ネット上で流れている音声を直接録音することが出来ません。
+    PulseAudio の入出力を制御するためのアプリケーションが必要となります。そこで、グラフィカルなアプリケーションである
+    PulseAudio Volume
+    Control（pavucontrol）をインストールします。インストールは、次のコマンドで行えます。あるいは、Synaptic
+    などのシステム管理ツールでインストー ルします。<br>
+    <br>
+    &nbsp;# apt-get install pavucontrol<br>
+    <br>
+    <h3> 2. インストール後の設定</h3>
+    PulseAudio Volume Control (pavucontrol) を起動させます。デスクトップメニューの
+    [アプリケーション] より、[サウンドとビデオ] &gt;&nbsp; [PulseAudio 音量調節]
+    を選択すると、音量調節を行う画面が起動します。この pavucontrol
+    は、PulseAudioに流れている音声ストリームをコントロールするためのソフトウェアです。<br>
+    <br>
+    起動後、「録音」タブより、「見る」という項目から「Applications」を選択します。さらに、録音タブより、[Record
+    Stream from] の項目で [Monitor of 内部オーディオ アナログスレテオ] に変更します。<br>
+    <br>
+    <h3> 3. サウンドレコーダーで録音</h3>
+    サウンドレコーダーを起動させます。<br>
+    サウンドレコーダー (gnome-sound-recorder) は、メニューより、[アプリケーション] &gt; [サウンドとビデオ]
+    &gt; [サウンド・レコーダー] を選択すると立ち上がります。<br>
+    <br>
+    録音を開始するには、赤丸の「録音」ボタンを押します。画面の下で [レベル]
+    が上下するのが見えれば、録音が行われていることが分かります。四角いボタンで録音を終了します。今記録された音声をファイルとして保存するには、再び
+    「録音」ボタンを押し、名前を付けて保存を行います。ファイル形式は、.ogg 以外に .wav も選択可能です。<br>
+    <br>
+    なお、こうして保存された音声ファイルは、あとで Audacity
+    などのソフトウェアを使えば自由に編集することが出来ます。たとえば、ファイルを分割したり、不要な箇所をカットしたりすることが可能となります。<br>
+    <br>
+---------------------------------------------------------------------------------------------------<br>
+    <br>
+    ※参照サイト：<br>
+    -技術評論社 &gt; Ubuntu Weekly Recipe　第137回　PulseAudioを活用する <a
+      href="http://gihyo.jp/admin/serial/01/ubuntu-recipe/0137">http://gihyo.jp/admin/serial/01/ubuntu-recipe/0137</a><br>
+    -Ubuntu日本語フォーラム &gt;「ubuntuでPC内の録音について」 <a
+      href="https://forums.ubuntulinux.jp/viewtopic.php?id=15987">
+      https://forums.ubuntulinux.jp/viewtopic.php?id=15987</a><br>
+    <hr size="2" width="100%"><a href="../../index.html"
+      title="FrontPage (1d)">HOME</a> / <a href="multimedia.html">Multimedia</a><a
+      href="index.html"></a>
+  </body>
+</html>
