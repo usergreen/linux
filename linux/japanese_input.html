@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>JapaneseInput - Linux on the Desktop</title>
+  </head>
+  <body>
+    <div id="navigator">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td valign="top">　<a href="../index.html"><big>HOME</big></a></td>
+          <td valign="middle" align="right">Last updated&nbsp;2021/04/16&nbsp;<br>
+</td>
+        </tr>
+      </tbody>
+</table>
+      <hr width="100%" size="2">
+      <h2 id="content_1_0"><a class="mozTocH2" name="mozTocId472068"></a>日
+        本語入力
+        環境</h2>
+      <ul id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><li><a href="#mozTocId472068">日
+        本語入力
+        環境</a><ul><li><ul><li><a href="#mozTocId552181">Linux
+          における日本語入力の仕組み（流れ）が分かりません。</a></li><li><a href="#mozTocId502838">主なかな入力の方式は何で
+            すか？</a></li><li><a href="#mozTocId831082">主なかな漢字変換の方
+              式については？</a></li><li><a href="#mozTocId591692">自動設定ツール im-config/im-chooser について</a></li><li><a href="#mozTocId846804">fcitx による日本語入力</a></li><li><a href="#mozTocId649056">uim-Mozc による日本語入
+                力</a></li><li><a href="#mozTocId379660">uim-Anthy による日本語入
+                力</a><ul><li><a href="#mozTocId552066">かな入力を利用す
+                るには？</a></li><li><a href="#mozTocId620619">日本語入力と英数
+                字入力の切り替えキーを自由に
+                変えたい。</a></li><li><a href="#mozTocId550375">ツールバーを表示しない方法は？</a></li></ul></li><li><a href="#mozTocId964138">SCIM-Anthy による日
+              本語入力</a><ul><li><a href="#mozTocId564225">scim-anthy
+              とは何ですか？</a></li><li><a href="#mozTocId859754">主な機能に
+              どのようなものがありますか？</a></li><li><a href="#mozTocId585868">「上書き」
+              と「挿入」モードは機能しますか？</a></li><li><a href="#mozTocId756311">辞書管理
+              ツール</a></li><li><a href="#mozTocId148455">常に数字を
+              半角で入力したいとき</a></li><li><a href="#mozTocId714920">ユーザーマ
+              ニュアル（英語版）</a></li><li><a href="#mozTocId677659">SCIM-
+              Anthy
+              公式サイト</a></li><li><a href="#mozTocId82196">SCIM-
+              Anthy
+              の便利な使いかた (TIPS)</a></li></ul></li><li><a href="#mozTocId964550">kinput2-canna による日本語入力</a><ul><li><a href="#mozTocId178088">kinput2-
+              canna
+              の簡単な紹介</a></li><li><a href="#mozTocId104422">(Canna)
+              半角全角キーで 英語 → 日本語入力切替できるように変更する</a></li><li><a href="#mozTocId286937">(Canna)
+              キーボードの操作を ATOK 風や Windows IME 風に変更する</a></li></ul></li><li><a href="#mozTocId733088">外部リン
+              ク集 - 解説ページ、開発プロジェクトへのリンクなど
+            </a><ul><li><a href="#mozTocId60128">「最適な日
+                本語入力環境を発掘せよ」
+              </a></li><li><a href="#mozTocId676076">iBus
+                プロジェクト</a></li></ul></li></ul></li></ul></li></ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a><br>
+        <br>
+        <h3><a class="mozTocH3" name="mozTocId552181"></a>Linux
+          における日本語入力の仕組み（流れ）が分かりません。</h3>
+        <br>
+        現在のところ、日本語を入力する主な方法は、日本語の読みとして「かな」を何らかの形で入力しておいて、その後に漢字・かな・英字など複
+        数の変換候補の
+        中から選択して入力する「かな漢字変換」です。大ざっぱにいえば、キーボードから読みを直接入力した後、辞書に登録された複数の変換候補
+        から選択します。<br>
+        <br>
+        したがって、文字入力のためのソフトウェア、かな漢字変換のためのソフトウェアがそれぞれ開発され、文字入力ソフトウェアと文字変換ソフ
+        トウェアを組み合
+        わせて利用することで、日本語入力が実現されています（ただし、中には入力と変換を一括して可能なソフトウェアも開発中です）。両者を組
+        み合わせて運用す
+        るわけですら、数多くの選択肢が存在します。<br>
+        <br>
+        しかしながら、こうした一連の仕組みは複雑であるので、理解するのは容易ではありません。Anthy 開発者の田畑氏が昔
+        [Anthy-dev
+        999] 入力システムの概要 ( <a href="http://sourceforge.jp/projects/anthy/lists/archive/dev/2004-August/000998.html">http://sourceforge.jp/projects/anthy/lists/archive/dev/2004-August/000998.html</a>
+        ) で投稿されたので、参考にされることをお推めします。<br>
+        <div class="jumpmenu"><a href="#navigator">↑</a><br>
+          <h3><a class="mozTocH3" name="mozTocId502838"></a>主なかな入力の方式は何で
+            すか？</h3>
+          
+デスクトップで日本語を入力するために開発されたフリーな方式（ソフトウェア）を以下例示します。これはインプット・メソッドとも呼ばれます。以下の中で
+は、fcitx が最も後発の入力方式ですが、現時点で開発が継続されていて比較的人気があります。<br>
+          <br>
+          fcitx<br>
+iBus<br>
+          IIIMF<br>
+          SCIM<br>
+          uim<br>
+          <div class="jumpmenu"><a href="#navigator">↑</a><br>
+            <h3><a class="mozTocH3" name="mozTocId831082"></a>主なかな漢字変換の方
+              式については？</h3>
+            フリーで利用可能なものとして、以下例示します。<br>
+            <br>
+            Anthy<br>
+            Canna<br>
+            Mozc<br>
+            PRIME<br>
+            <div class="jumpmenu"><a href="#navigator">↑</a><br>
+<h3><a name="mozTocId591692" class="mozTocH3"></a>自動設定ツール im-config/im-chooser について</h3>
+im-config は、インプットメソッドのグラフィカルな自動設定ツールです。Debian や Linux Mint、MX Linux 
+などのディストリビューションでは標準でインストールされます。このツールを利用すれば、直接設定ファイルへ書き込んで管理する必要がありません。
+CentOS や Scientific Linux などの Red Hat系ディストリビューションでは、同等の機能を持つ 
+im-chooser が採用されています。im-chooser については、配布されているバイナリ・パッケージの doc フォルダに添付された README 
+ファイルに説明があります。<br>
+<br>
+im-config を使うには、メニュー &gt; システム &gt; 設定 &gt; 入力メソッド の項目より起動させます。コマンドラインからでも　im-config コマンドでツールが起動します。<br>
+<br>
+「本パッケージをインストールすることで、最も望ましい入力メソッドとそのバック エンドの変換エンジンが、X Window System Input
+ Method (XIM)、GTK+ 入力メソッ ドモジュール、Qt 入力メソッドモジュール、および clutrer 入力メソッドモ 
+ジュールにおいて自動的に設定されます。」 「'im-config' コマンドにより、入力メソッドをさらにカスタマイズすることができます。」 
+引用元サイト <a href="https://packages.debian.org/ja/stretch/im-config">https://packages.debian.org/ja/stretch/im-config</a>　<br>
+<br>
+なお、im-config は、以前あった im-switch を書き直して改良されたものです。詳しくは下記サイトを参照してください。<br>
+<a href="https://metadata.ftp-master.debian.org/changelogs//main/i/im-config/im-config_0.30-1_copyright">https://metadata.ftp-master.debian.org/changelogs//main/i/im-config/im-config_0.30-1_copyright</a>　<br>
+<h3><a name="mozTocId846804" class="mozTocH3"></a>fcitx による日本語入力</h3>
+fcitx は Anthy や Mozc などと組み合わせて日本語でかな漢字変換を行うことが可能です。Anthy には fcitx-anthy、Mozc には fcit-mozc とを組み合わせて利用します。詳しくは <a href="https://wiki.archlinux.jp/index.php/Fcitx">https://wiki.archlinux.jp/index.php/Fcitx</a> の解説記事を参照することをお推めします。<br>
+              <h3><a class="mozTocH3" name="mozTocId649056"></a>uim-Mozc による日本語入
+                力</h3>
+              もともと、Google が開発しオープンソースのプロジェクトとして公開された Mozc
+              を採用した新しい方式です。かな漢字変換の効率が、uim-Anthy
+              よりも効率が良いとされています。「Google日本語入力」と Mozc との違いについては、<a href="http://code.google.com/p/mozc/wiki/AboutMozc">http://code.google.com/p/mozc/wiki/AboutMozc</a>
+              を見てください。<br>
+              <br>
+              Debian GNU/Linux では Debian 7 (Wheezy) 以降この方式が標準として採用されています。<br>
+              <h3><a class="mozTocH3" name="mozTocId379660"></a>uim-Anthy による日本語入
+                力</h3>
+              Debian Squeeze においては、標準的なデスクトップ環境の日本語入力として採用されていました。<br>
+              デスクトップ環境では、言語環境の細かな設定も全て uimアプレットによってグラフィカルに行うことが可能です。<br>
+              <br>
+              Anthyの状態を表示するには (@IT) の記事を参照してください：<br>
+              <a href="http://www.atmarkit.co.jp/flinux/rensai/linuxtips/771anthystats.html">http://www.atmarkit.co.jp/flinux/rensai/linuxtips/771anthystats.html</a><br>
+              <br>
+              <h4><a class="mozTocH4" name="mozTocId552066"></a>かな入力を利用す
+                るには？</h4>
+              パネル上にある uimアプレットで切り替えることで、ローマ字入力からかな入力へ変更可能です。<br>
+              <h4><a class="mozTocH4" name="mozTocId620619"></a>日本語入力と英数
+                字入力の切り替えキーを自由に
+                変えたい。</h4>
+              uim アプレットより「全体」の項目のところで設定を変更すれば、開始キーが追加・変更可能となります。<br>
+<h4><a name="mozTocId550375" class="mozTocH4"></a>ツールバーを表示しない方法は？</h4>
+デスクトップには「ツールバー」という言語バーを画面の右下あるいは右上へ表示します。このツールバーは、非表示にしたり日本語入力時だけ表示したりする
+ことも可能です。動画やサイト閲覧でツールバーが邪魔になる場合は、この設定を変更すると便利です。変更は、メニュー &gt; システム &gt; 
+設定 &gt; ユーザ向け &gt; 入力メソッド より行なえます（Debian 10 の MATE 
+デスクトップの場合ですが他の場合もこれに準じます）。あるいは直接 uim-pref-gtk 
+コマンドで設定画面を起動させることも可能です。uim-pref-gtk 
+という設定画面が表示されたら、この中のツールバーの項目で「表示の挙動」変更します。以下の3つから選択可能です。<br>
+<br>
+　常時<br>
+　モード依存<br>
+　なし<br>
+            </div>
+            <h3 id="content_1_1"><a class="mozTocH3" name="mozTocId964138"></a>SCIM-Anthy による日
+              本語入力</h3>
+            <p>かつて、代表的なディストリビューションで標準的に採用されていた日本語入力方式です。Mozc が普及するまでよく利用された入力方式です。グラフィカルなツールで日本
+              語入力設定が行えます。</p>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h4 id="content_1_2"><a class="mozTocH4" name="mozTocId564225"></a>scim-anthy
+              とは何ですか？</h4>
+            <p>「主に UNIX ライクな OS 上で動作する多言語入力プラットフォーム <a href="http://www.scim-im.org/">SCIM</a>
+              で 日本語かな漢字変換エンジン Anthy を使うためのモジュール」であるとされています。</p>
+            <ul class="list1" style="padding-left: 16px; margin-left:
+              16px;">
+              <li>プロジェクト・ウェブサイト　<a href="http://scim-imengine.sourceforge.jp/hiki.cgi?SCIMAnthy">SCIM
+IMEngine
+                  - SCIMAnthy</a></li>
+            </ul>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h4 id="content_1_3"><a class="mozTocH4" name="mozTocId859754"></a>主な機能に
+              どのようなものがありますか？</h4>
+            <p>次のような機能が用意されています。</p>
+            <ul class="list1" style="padding-left: 16px; margin-left:
+              16px;">
+              <li>Anthy による高い日本語変換効率</li>
+              <li>GUI ツールバーでの各種モード切替え</li>
+              <li>GUI でのキーバインド設定</li>
+              <li>各種日本語入力システムライクなキーバインド設定</li>
+              <li>GUI でのローマ字テーブルカスタマイズ機能</li>
+              <li>その他、GUI での各種設定</li>
+              <li>ローマ字入力、かな入力、親指シフト入力に対応</li>
+              <li>Microsoft IME や ATOK ライクな、かな-&gt;カタカナ/アルファベット変換機能 (F6 〜
+                F10キー)</li>
+              <li>逐次変換機能 - キー入力時に直接漢字へ変換</li>
+              <li>予測機能</li>
+              <li>再変換機能
+                <blockquote>
+                  <p class="quotation">引用先：<a href="http://scim-imengine.sourceforge.jp/index.cgi?cmd=view;name=SCIMAnthy">http://scim-imengine.sourceforge.jp/index.cgi?cmd=view;name=SCIMAnthy</a></p>
+                </blockquote>
+              </li>
+            </ul>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h4 id="content_1_4"><a class="mozTocH4" name="mozTocId585868"></a>「上書き」
+              と「挿入」モードは機能しますか？</h4>
+            <p>上書き ←→ 挿入 の交互切替えが Insertキーで可能なようです。（Debian Etch で動作確認
+              -2007.01.27）</p>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h4 id="content_1_5"><a class="mozTocH4" name="mozTocId756311"></a>辞書管理
+              ツール</h4>
+            <p>辞書管理ツール「霞」(<a href="http://kasumi.sourceforge.jp/">Kasumi</a>)
+              が利用できま
+              す。これは、Anthy個人辞書管理ツールとして、現在一般に推奨されているものです。詳しくは、<a href="http://kasumi.sourceforge.jp/index.php?%BB%C8%A4%A4%CA%FD%28%A5%D0%A1%BC%A5%B8%A5%E7%A5%F32.x%29">Kasumi
+                の使い方(バージョン2.x)</a>を見てください。</p>
+            <p>なお従来より、<a href="http://sumika.sourceforge.jp/cgi-bin/hiki/hiki.cgi">Sumika(栖)</a>と
+              いう辞書管理ツールもありますが、いまでは Kasumi へ置き換わっているようです。たとえば、Debian では、
+              uim + Anthy や
+              SCIM + uim + Anthy の場合 Sumika と組み合わせることが可能ですが、SCIM + Anthy
+              の場合には通常
+              Kasumi と組み合わせて利用することになります。</p>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h4 id="content_1_6"><a class="mozTocH4" name="mozTocId148455"></a>常に数字を
+              半角で入力したいとき</h4>
+            <p>「数字は半角で入力する」という項目にチェックをいれます。</p>
+            <p><img src="../Screenshot-SCIMinputmethod_preferences.png" alt="Screenshot-SCIMinputmethod_preferences.png" title="Screenshot-SCIMinputmethod_preferences.png" width="686" border="0" height="380"></p>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h4 id="content_1_7"><a class="mozTocH4" name="mozTocId714920"></a>ユーザーマ
+              ニュアル（英語版）</h4>
+            <p><a href="http://www.h4.dion.ne.jp/%7Eapricots/scim-anthy/howto.html">Let's
+                type
+                Japanese
+                SCIM-anthy:
+                getting
+                started</a></p>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h4 id="content_1_8"><a class="mozTocH4" name="mozTocId677659"></a>SCIM-
+              Anthy
+              公式サイト</h4>
+            <ul class="list1" style="padding-left: 16px; margin-left:
+              16px;">
+              <li><a href="http://scim-imengine.sourceforge.jp/index.cgi?cmd=view;name=SCIMAnthy">SCIMAnthy
+                  ウェブサイト</a></li>
+              <li><a href="http://scim-imengine.sourceforge.jp/index.cgi?cmd=view;name=SCIMAnthyDevelop">SCIMAnthyDevelop
+                  (開発ウェブサイト)</a></li>
+            </ul>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h4 id="content_1_9"><a class="mozTocH4" name="mozTocId82196"></a>SCIM-
+              Anthy
+              の便利な使いかた (TIPS)</h4>
+            <ul class="list1" style="padding-left: 16px; margin-left:
+              16px;">
+              <li>漢字変換候補を縦列表示させる<br>
+                SCIM ツールバーの設定画面を開きます。<br>
+                [SCIM 入力メソッド設定] &gt; [パネル] &gt; [GTK] より
+                「候補ウインドウを縦に表示」をチェックします。</li>
+            </ul>
+            <ul class="list1" style="padding-left: 16px; margin-left:
+              16px;">
+              <li>日本語入力モードで、半角スペースを入れたい<br>
+                Shift + Space キーによって、入力モードを切替せずに直接入力できます。<br>
+                英文が混在する文書を作成する際、便利な操作方法です。</li>
+            </ul>
+            <p>なお、各ディストリビューションの FAQ ページにも関連情報があります。</p>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h3 id="content_1_10"><a class="mozTocH3" name="mozTocId964550"></a>kinput2-canna による日本語入力</h3>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h4 id="content_1_11"><a class="mozTocH4" name="mozTocId178088"></a>kinput2-
+              canna
+              の簡単な紹介</h4>
+            <p>SCIM-Anthy が標準となる以前は、こちらが一般的な日本語入力方式でした。<br>
+              SCIM-Anthy　と比較すると、漢字変換の効率はやや劣ります。</p>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h4 id="content_1_12"><a class="mozTocH4" name="mozTocId104422"></a>(Canna)
+              半角全角キーで 英語 → 日本語入力切替できるように変更する</h4>
+            <p>cannaを使うときは、ユーザーのホーム・ディレクトリーに次の記述をします。</p>
+            <pre> ~/.Xresources<br> Kinput2*ConversionStartKeys: &lt;Key&gt;Kanji</pre>
+            <pre> ~/.Xmodmap<br> keysym Zenkaku_Hankaku = Kanji</pre>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h4 id="content_1_13"><a class="mozTocH4" name="mozTocId286937"></a>(Canna)
+              キーボードの操作を ATOK 風や Windows IME 風に変更する</h4>
+            <p>キーボードの操作を ATOK 風や Windows IME 風にカスタマイズできます。<br>
+              wx2+.canna　just.canna　ファイルをユーザーのホームディレクトリにコピーします。ディストリビュー
+              ションによって、これらのファイ
+              ルが含まれているディレクトリは異なっているので、注意します。</p>
+            <ul class="list1" style="padding-left: 16px; margin-left:
+              16px;">
+              <li>Fedora Core 1
+                では、それぞれ次の作業をするだけです。作業後ログオフし、再度ログインし直すと有効となります。</li>
+            </ul>
+            <pre> Windows IME 風：$ cp /usr/share/canna/wx2+.canna .canna<br> <br> ATOK 風：　　$ cp /usr/share/canna/just.canna .canna</pre>
+            <ul class="list1" style="padding-left: 16px; margin-left:
+              16px;">
+              <li>設定前の状態に戻すには、.canna を削除した後で、元のデータがバックアップされている .canna~
+                のファイル名を
+                .canna に戻すという方法があります。</li>
+            </ul>
+            <div class="jumpmenu"><a href="#navigator">↑</a></div>
+            <h3 id="content_1_14"><a class="mozTocH3" name="mozTocId733088"></a>外部リン
+              ク集 - 解説ページ、開発プロジェクトへのリンクなど<br>
+            </h3>
+            <div class="jumpmenu">
+              <h4 id="content_1_15"><a class="mozTocH4" name="mozTocId60128"></a>「最適な日
+                本語入力環境を発掘せよ」<br>
+              </h4>
+              ・変換エンジンの紹介 <a href="http://tkng.org/unixuser/200405/part2.html">http://tkng.org/unixuser/200405/part2.html</a><br>
+              ・X Window System で使用するインプットメソッド <a href="http://tkng.org/unixuser/200405/part4.html">http://tkng.org/unixuser/200405/part4.html</a><br>
+              <h4 id="content_1_15"><a class="mozTocH4" name="mozTocId676076"></a>iBus
+                プロジェクト</h4>
+              <ul class="list1" style="padding-left: 16px; margin-left:
+                16px;">
+                <li>iBus - Intelligent Input Bus for Linux / Unix OS<br>
+                  <a href="http://code.google.com/p/ibus/">http://code.google.com/p/ibus/</a></li>
+              </ul>
+              ・2ch Linx板 日本語入力総合スレッド -- <a href="https://mao.5ch.net/test/read.cgi/linux/1472658083/">https://mao.5ch.net/test/read.cgi/linux/1472658083/</a> <br>
+・2ch Linx板 uim スレッド ------------ <a href="https://mao.5ch.net/test/read.cgi/linux/1200850880/">https://mao.5ch.net/test/read.cgi/linux/1200850880/</a> <br>
+・2ch Linx板 mozc / Google 日本語入力&nbsp; <a href="https://mao.5ch.net/test/read.cgi/linux/1392878167/">https://mao.5ch.net/test/read.cgi/linux/1392878167/</a> <br>
+<br>
+              <a href="#navigator">↑</a></div>
+            <hr width="100%" size="2"><a href="../index.html">HOME</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+</body></html>
