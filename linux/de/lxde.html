@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>Lxde - Linux on the Desktop</title>
+</head>
+<body>
+<div id="navigator">
+<div><a href="../../index.html" title="FrontPage (3d)">HOME</a> / <a
+ href="index.html">DesktopEnvironment</a> <br>
+</div>
+<hr size="2" width="100%">
+<h2 id="content_1_0">LXDE</h2>
+<div class="contents">
+<ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">LXDE</a>
+    <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">公式サイトと特徴</a></li>
+      <li><a href="#content_1_2">インストールと設定方法</a></li>
+      <li><a href="#content_1_3">LXDE 採用のディストリビューション</a></li>
+      <li><a href="#content_1_4">About LXSession -LXSession at GnomeFiles-</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_1">公式サイトと特徴</h4>
+<p>LXDE - Lightweight X11 Desktop Environment<br>
+公式ウェブサイト：<a href="http://lxde.sourceforge.net/">http://lxde.sourceforge.net/</a></p>
+<p>PCMan File Manager<br>
+<a href="http://sourceforge.net/projects/pcmanfm/">http://sourceforge.net/projects/pcmanfm/</a></p>
+<p>Lightweight X11 Desktop Environment<br>
+<a href="http://lists.debian.org/debian-user/2006/11/msg02167.html">http://lists.debian.org/debian-user/2006/11/msg02167.html</a></p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_2">インストールと設定方法</h4>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Install and Setup LXDE<br>
+    <a href="http://lxde.sourceforge.net/install.html">A complete
+step-by-step guide teaching you how to set up LXDE</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_3">LXDE 採用のディストリビューション</h4>
+<p>標準採用のディストリビューション</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Distribution Release: PUD GNU/Linux 20061208<br>
+    <a href="http://distrowatch.com/?newsid=03899#0">http://distrowatch.com/?newsid=03899#0</a><br>
+    <a href="http://pud-linux.sourceforge.net/index.en.html">http://pud-linux.sourceforge.net/index.en.html</a><br>
+    <a href="http://pud-linux.sourceforge.net/">http://pud-linux.sourceforge.net/</a>
+(in Chinese)</li>
+  <li>TinyME (version 2008.0/2008.1)<br>
+    <a href="http://tinyme.mypclinuxos.com/">http://tinyme.mypclinuxos.com/</a></li>
+</ul>
+<p>オプションで提供されるディストリビューション</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Debian GNU/Linux 5.0<br>
+debian-500-i386-xfce+lxde-CD-1.iso</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_4">About LXSession -LXSession at <span
+ class="noexists">GnomeFiles<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=GnomeFiles&amp;refer=DesktopEnvironment%2FLxde">?</a></span>-</h4>
+<p>Lightweight X11 session manager derived from XSM.</p>
+<p>LXSession is the default X11 session manager of LXDE.<br>
+(LXDE: Lightweight X11 Desktop Environment)<br>
+<a href="http://lxde.sourceforge.net/">http://lxde.sourceforge.net/</a></p>
+<p>Though being part of LXDE, it's totally desktop-independent.<br>
+It doesn't depend on any desktop environment, and has few dependencies.<br>
+The goal of this project is to make a simple and clean a X11 session<br>
+manager which isn't tight to any desktop environment.</p>
+<p>We know that GNOME session by default loads GNOME, XFCE4 session by<br>
+default loads XFCE, and what will LXSession load then?<br>
+"It's all up to you." You can give it a list of applications you want to<br>
+launch, including window manager and other components of a regular<br>
+desktop environment should have. Then, give this combination a new name,<br>
+and you can have "your own custom desktop environment" now.<br>
+At the end of this README file, there will be a tutorial telling you how<br>
+to create your own new desktop environment. So, be patient. :-)</p>
+<p>By default LXSession ships with a set of config files giving you a<br>
+new desktop environment called LXDE. When you choose LXDE in GDM, KDM,<br>
+or simply execute startlxde in xinitrc, When launching, LXDE will load<br>
+icewm (window manager), pcmanfm (file manager), and lxpanel (desktop
+panel).<br>
+This, of course, can be changed, but I guess users will be intrested in<br>
+creating their own new customized DE.</p>
+<p>Check these files with text editors to see how LXSession works.<br>
+These files define a default session named LXDE:<br>
+/usr/share/xsessions/LXDE.desktop: Add an entry in GDM &amp; KDM<br>
+/usr/bin/startlxde: Convinient script launching LXDE<br>
+/etc/LXSM-LXDE-Default: Default programs loaded when LXDE is started,<br>
+containing window manager, desktop panel...etc.</p>
+<p>You can create your own desktop session and give it a new name.<br>
+For example, let's create a new desktop environment called MyDE.<br>
+1. Copy /usr/share/xsessions/LXDE.desktop to<br>
+/usr/share/xsessions/MyDE.desktop<br>
+2. Edit MyDE.desktop with the text editor you like. Replace all LXDE<br>
+with MyDE, and replace startlxde with startmyde.<br>
+3. Copy /usr/bin/startlxde to /usr/bin/startmyde.<br>
+4. Edit startmyde with text editor, and again, replace LXDE with MyDE.<br>
+5. Copy /etc/LXSM-LXDE-Default to /etc/LXSM-MyDE-Default<br>
+6. Edit LXSM-MyDE-Default, and list the programs you want to launch when<br>
+MyDE gets started in the file. Note that you had better not remove<br>
+"smproxy" since this can make programs without session management<br>
+support supported by session manager.<br>
+7. Done. Logout to check if your DE appears in the menu of GDM or KDM.<br>
+If not, restart them. If you don't use display manager, you can add<br>
+startmyde to your xinitrc to see if it works.<br>
+Cheers! :-)</p>
+<p>Requirements<br>
+This application requires GTK+ version 2.6.x. Other dependencies
+include:<br>
+libsm (X session management), libice (Inter-client exchange)</p>
+<hr class="full_hr">
+<p>from LXSession at <span class="noexists">GnomeFiles<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=GnomeFiles&amp;refer=DesktopEnvironment%2FLxde">?</a></span>
+at<br>
+<a href="http://www.gnomefiles.org/app.php/LXSession">http://www.gnomefiles.org/app.php/LXSession</a></p>
+<hr size="2" width="100%"><a href="../../index.html">HOME</a>
+</div>
+</body>
+</html>
