@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>OpenOffice.org/2.0Beta/Red Hat Linux 9</title>
+</head>
+<body>
+<div id="body">
+<h4 id="content_1_0">Red Hat Linux 9 へのインストール</h4>
+<p>まず、デフォルトでインストールされた <a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice"
+ title="OpenOffice (622d)">OpenOffice</a>.org 1.0.2
+が含まれていれば、次のようにして削除しておきます。</p>
+<pre> # rpm -e openoffice-i18n- openoffice openoffice-libs</pre>
+<p>OOo_2.0beta_LinuxIntel_install_ja.tar.gz をダウンロードし、解凍します。<br>
+その後は、以下の手順に従います。</p>
+<pre> [user@localhost hoge]$ cd RPMS<br> [user@localhost RPMS]$ su<br> Password: ********<br> <br> [root@localhost RPMS]# rm openofficeorg-suse-menus-1.9.79-1.noarch.rpm<br> rm: remove 通常ファイル `openofficeorg-suse-menus-1.9.79-1.noarch.rpm'? y<br> <br> [root@localhost RPMS]# rpm -Uvh *.rpm<br> Preparing...                ########################################### [100%]<br>    1:openofficeorg-core01   ########################################### [  5%]<br>    2:openofficeorg-calc     ########################################### [ 10%]<br>    3:openofficeorg-core02   ########################################### [ 14%]<br>    4:openofficeorg-core03   ########################################### [ 19%]<br>    5:openofficeorg-core04   ########################################### [ 24%]<br>    6:openofficeorg-core05   ########################################### [ 29%]<br>    7:openofficeorg-core06   ########################################### [ 33%]<br>    8:openofficeorg-core07   ########################################### [ 38%]<br>    9:openofficeorg-core08   ########################################### [ 43%]<br>   10:openofficeorg-draw     ########################################### [ 48%]<br>   11:openofficeorg-gnome-int########################################### [ 52%]<br>   12:openofficeorg-graphicfi########################################### [ 57%]<br>   13:openofficeorg-impress  ########################################### [ 62%]<br>   14:openofficeorg-javafilte########################################### [ 67%]<br>   15:openofficeorg-math     ########################################### [ 71%]<br>   16:openofficeorg-pyuno    ########################################### [ 76%]<br>   17:openofficeorg-redhat-me########################################### [ 81%]<br>   18:openofficeorg-spellchec########################################### [ 86%]<br>   19:openofficeorg-testtool ########################################### [ 90%]<br>   20:openofficeorg-writer   ########################################### [ 95%]<br>   21:openofficeorg-xsltfilte########################################### [100%]</pre>
+<p>インストール後、一度ログしてから再度ログインすれば、スタートメニューに <a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice"
+ title="OpenOffice (622d)">OpenOffice</a>.org が自動的に追加されます。</p>
+</div>
+</body>
+</html>

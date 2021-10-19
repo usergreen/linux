@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>OpenOffice.org 1 / greeting_card.html</title>
+  </head>
+  <body>
+    <table style="width: 100%;" border="0">
+      <tbody>
+        <tr>
+          <td valign="top">
+            <div id="body">
+              <p>&nbsp;<a href="../../index.html" title="FrontPage
+                  (13d)">HOME</a>
+                / <a href="index.html">OpenOffice</a> <br>
+              </p>
+              <h2 id="content_1_0">OpenOffice.org 1.x で簡単はがき宛名印刷</h2>
+              <div class="contents">
+                <ul class="list1" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a
+href="#content_1_0">OpenOffice.org 1.x
+                      で簡単はがき宛名印刷</a>
+                    <ul class="list2" style="padding-left: 16px;
+                      margin-left: 16px;">
+                      <li><a
+href="#content_1_1">はじめに</a></li>
+                      <li><a
+href="#content_1_2">1.事前準備/テンプレ−トの入手</a>
+                        <ul class="list3" style="padding-left: 16px;
+                          margin-left: 16px;">
+                          <li><a
+href="#content_1_3">標準テンプレ−ト</a></li>
+                          <li><a
+href="#content_1_4">Linux 用テンプレ−ト(カスタマイズ版)</a></li>
+                          <li><a
+href="#content_1_5">レイアウトの確認をする</a></li>
+                        </ul>
+                      </li>
+                      <li><a
+href="#content_1_6">2.住所録を作成する</a></li>
+                      <li><a
+href="#content_1_7">3.
+                          差出人の住所氏名を入力する</a></li>
+                      <li><a
+href="#content_1_8">4.OpenOffice.org
+                          のデ−タソ−スに登録する</a></li>
+                      <li><a
+href="#content_1_9">5.差し込み印刷を行う</a></li>
+                      <li><a
+href="#content_1_10">補足事項</a>
+                        <ul class="list3" style="padding-left: 16px;
+                          margin-left: 16px;">
+                          <li><a
+href="#content_1_11">検証を行ったシステム構成</a></li>
+                          <li><a
+href="#content_1_12">その他</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="jumpmenu"><a
+href="#navigator">↑</a></div>
+              <h3 id="content_1_1">はじめに</h3>
+              <p>このペ−ジでは、無料で配布されている OpenOffice.org <a id="notetext_1"
+href="#notefoot_1"
+                  class="note_super">*1</a>
+                を利用して、年賀葉書などの挨拶状の宛名印刷(表書き)を行う簡単な方法を説明します。出来るだけ簡単な手順で作成でき
+                るように、テンプレ−トを利用して
+                順番に進めていきます。</p>
+              <p>なお、OpenOffice.org バージョン 2 の場合は<a
+                  href="greeting_card2.html"
+                  title="OpenOffice/greeting_card.html 2 (622d)">こちらのページ</a>で解
+                説しています。</p>
+              <div class="jumpmenu"><a
+href="#navigator">↑</a></div>
+              <h3 id="content_1_2">1.事前準備/テンプレ−トの入手</h3>
+              <p><a
+                  href="http://ja.openoffice.org/documents/tips/sasikomi.html">差
+                  込機能を使った宛名印刷</a> という解説ペ−ジが OpenOffice.org
+                日本語サイトにあります。ここから必要なテンプレ−ト一式をダウンロ−ドして、入手することにします。テンプレ−トを使
+                うことで、作成手順を一気に簡略化
+                できます。</p>
+              <p>なお、<a
+                  href="http://ja.openoffice.org/documents/tips/sasikomi.html">差
+                  込機能を使った宛名
+                  印刷</a>
+                をご覧になってすぐ理解できる方はこのペ−ジの以下の解説は蛇足で必要の無いものと思いますので、どうぞ読み飛ばしてください。</p>
+              <div class="jumpmenu"><a
+href="#navigator">↑</a></div>
+              <h4 id="content_1_3">標準テンプレ−ト</h4>
+              <p><a
+                  href="http://ja.openoffice.org/documents/tips/archives/tategaki.lzh">http://ja.openoffice.org/documents/tips/archives/tategaki.lzh</a>
+                からダウンロ−ドし解凍(展開)します。解凍後、次の3つのファイルが表示されます。</p>
+              <pre> ・Calcの住所録(縦書き、郵便番号処理ずみ)<br> ・Writerの差込印刷ファイル(縦書き、郵便番号処理ずみ)<br> ・背景の年賀状イメージ(初級編と同じものです)</pre>
+              <blockquote>
+                <p class="quotation">背景の年賀状イメージ(オリジナルと同じもの)は、<a
+                    href="../../nenga/sasikomi/postcard.jpg">こ
+                    ちら</a> にも用意しました。</p>
+              </blockquote>
+              <ul class="list1" style="padding-left: 16px; margin-left:
+                16px;">
+                <li>[注
+                  意] Linux がインストールされているシステムでは、次項の「Linux
+                  用テンプレ−ト」の利用をおすすめします。上記のテンプレートは
+                  Windows 用に最適化されたものなので、Linux
+                  のシステムではおそらくレイアウトの崩れ等不具合が発生します。</li>
+              </ul>
+              <div class="jumpmenu"><a
+href="#navigator">↑</a></div>
+              <h4 id="content_1_4">Linux 用テンプレ−ト(カスタマイズ版)</h4>
+              <p>上記公式サイトからダウンロ−ドしたテンプレ−トは、今回検証したシステムではそのままで利用不可能であったため、若
+                干修正を行いまし
+                た。次のリンク先からダウンロ−ドできます。名前をつけて保存した後で、改めて OpenOffice.org
+                で開けば正常に表示されます。(デフォルトのフォントは(代替)東風明朝に変更してあります。)</p>
+              <ul class="list1" style="padding-left: 16px; margin-left:
+                16px;">
+                <li><a
+                    href="../../nenga/tategaki/calc_adress_tate-custom.sxc">Calc
+                    の住所録(修正版)</a></li>
+                <li>Writerの差込印刷ファイル(修正版)
+                  <ul class="list2" style="padding-left: 16px;
+                    margin-left: 16px;">
+                    <li><a
+                        href="../../nenga/tategaki/writer_sasikomi_tate-custom.sxw">ビ
+                        ジネス用差込印刷ファイル</a></li>
+                    <li><a
+                        href="../../nenga/tategaki/writer_sasikomi_tate-custom2.sxw">一
+                        般用差込印刷ファイル</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <p><img src="../../nenga/Screenshot-sasikomi1.jpg"
+                  alt="Screenshot-sasikomi1.jpg"
+                  title="Screenshot-sasikomi1.jpg" height="450"
+                  width="640" border="0"></p>
+              <p><img src="../../nenga/Screenshot-sasikomi2.jpg"
+                  alt="Screenshot-sasikomi2.jpg"
+                  title="Screenshot-sasikomi2.jpg" height="450"
+                  width="640" border="0"></p>
+              <div class="jumpmenu"><a
+href="#navigator">↑</a></div>
+              <h4 id="content_1_5">レイアウトの確認をする</h4>
+              <p>「背景の年賀状イメージ」を画面の背景に取り込むと、実際に近いレイアウトが確認できます。<br>
+                <br>
+                メニューから [書式] ＞ [ページ] ＞ [背景]タブ を開き、様式：図
+                に指定するファイルは、ダウンロードした postcard.jpg
+                を選択します。<br>
+                <br>
+                <img src="../../nenga/Screenshot-sasikomi3.jpg"
+                  alt="Screenshot-sasikomi3.jpg"
+                  title="Screenshot-sasikomi3.jpg" height="364"
+                  width="494" border="0"></p>
+              <p>年賀状イメージが取り込まれ、下図のように表示されます。レイアウトは画面上で直接修正できます。会社名や部署名、役
+                職らんなど不要な
+                項目（フィー
+                ルド）があれば削除しておく方が良いでしょう。たとえ空欄であってもレイアウトどおりに項目らんまで印刷されてしまうこ
+                とがあります（プログラム上のバグ
+                ではないかと思われます）。<br>
+                <img src="../../nenga/Screenshot-sasikomi4.jpg"
+                  alt="Screenshot-sasikomi4.jpg"
+                  title="Screenshot-sasikomi4.jpg" height="450"
+                  width="640" border="0"></p>
+              <div class="jumpmenu"><a
+href="#navigator">↑</a></div>
+              <h3 id="content_1_6">2.住所録を作成する</h3>
+              <p>テンプレ−ト/Calcの住所録
+                を元にして、住所録を作成します。このテンプレ−トにはあらかじめ100件分の計算式を含めていますので、100件まで
+                はそのままで活用できます。100
+                件を超えて追加する際には計算式を追加コピ−してください。(計算式のコピーは、マウスでドラッグするだけで行えま
+                す。)</p>
+              <p><img src="../../nenga/Screenshot-address.jpg"
+                  alt="Screenshot-address.jpg"
+                  title="Screenshot-address.jpg" height="450"
+                  width="640" border="0"></p>
+              <p>既存の住所録があれば、必要な箇所だけをコピ−し貼り付けると効率的に作業できます。</p>
+              <p>住所録を追加した場合は、[メニュー] &gt; [データ] &gt; [範囲の指定]
+                よりデータベースの範囲を追加・修正します。一覧に表示された「address」を選択し、[OK]ボタンを押します。
+                ここで修正した結果は、差し込み印
+                刷時の範囲指定に反映されます。(初期設定では9件までしか指定されていません。)</p>
+              <p><img src="../../nenga/Screenshot-database-range.jpg"
+                  alt="Screenshot-database-range.jpg"
+                  title="Screenshot-database-range.jpg" height="237"
+                  width="410" border="0"></p>
+              <p>例えば、範囲らん($Table1.$A$1:$P$10)
+                の最後の数字10を20に変更すれば、住所録の20行目まで範囲が追加されます。</p>
+              <div class="jumpmenu"><a
+href="#navigator">↑</a></div>
+              <h3 id="content_1_7">3.差出人の住所氏名を入力する</h3>
+              <p>Writerの差込印刷ファイル
+                を開いて、差出人の住所を入力します。(この場合、上書きしてひな型のデ−タと置き換えることになります。)縦書印刷時
+                に漢数字に置き換えたい場合、「住
+                所2」に数字を全て半角数字で入力しなくてはいけないので注意してください。全角数字は漢数字に変換されません。</p>
+              <p>なお、はがきの宛名面(表)に差出人の住所を印刷しないときは、該当部分の住所氏名を削除し空白にしておきます。</p>
+              <div class="jumpmenu"><a
+href="#navigator">↑</a></div>
+              <h3 id="content_1_8">4.OpenOffice.org のデ−タソ−スに登録する</h3>
+              <p>Writer を開いて [メニュ−] &gt; [ツ−ル] &gt; [デ−タソ−ス] &gt;
+                [新しいデ−タソ−ス]
+                で次のとおりファイルの登録をします。</p>
+              <pre> デ−タソ−スの名前： デ−タソ−ス 2<br> デ−タベ−スの種類： 表計算ドキュメント<br> デ−タソ−ス URL：   住所録(実際のファイル)があるディレクトリー</pre>
+              <p><img src="../../nenga/Screenshot-source-set.jpg"
+                  alt="Screenshot-source-set.jpg"
+                  title="Screenshot-source-set.jpg" height="364"
+                  width="643" border="0"></p>
+              <p>設定後、「OK」ボタンを選択すれば登録が完了します。</p>
+              <ul class="list1" style="padding-left: 16px; margin-left:
+                16px;">
+                <li>テンプレートの初期設定では、新しいデ−タソ−ス の名前は「デ−タソ−ス 2」に指定されています<a
+                    id="notetext_2"
+href="#notefoot_2"
+                    class="note_super">*2</a>ので、この名前で指定する必要があります。(標準テンプ
+                  レートおよび修正版とも同じです。)</li>
+                <li>デ−タソ−スを削除したいときは、削除したいデ−タソ−ス名の上でマウスを右クリックし「削除」を選択します。</li>
+                <li>デ−タソ−スの指定を間違ったときや、複数あるデ−タソ−スの中から変更するときは、[メニュー] &gt;
+                  [編集]
+                  &gt; [データベースの交換] よりデ−タソ−スを指定し直します。</li>
+              </ul>
+              <div class="jumpmenu"><a
+href="#navigator">↑</a></div>
+              <h3 id="content_1_9">5.差し込み印刷を行う</h3>
+              <p>作成した差込印刷ファイルを Writer で開きます。メニュ−から [ツ−ル] ＞ [差し込み印刷] ＞
+                [このドキュメントから]
+                を選択し、差し込み印刷の詳細設定をします。複数の日本語フォントがパソコンにインストールされていて、書体の変更をし
+                たいときは、[メニュー]
+                &gt; [編集] &gt; [すべてを選択] &gt; [フォント一覧] より希望のフォントを選択します。</p>
+              <p>[OK] ボタンで印刷を開始します。</p>
+              <p><img src="../../nenga/Screenshot-sasikomi-print.jpg"
+                  alt="Screenshot-sasikomi-print.jpg"
+                  title="Screenshot-sasikomi-print.jpg" height="283"
+                  width="640" border="0"></p>
+              <p><img src="../../nenga/Screenshot-print-preview.jpg"
+                  alt="Screenshot-print-preview.jpg"
+                  title="Screenshot-print-preview.jpg" height="480"
+                  width="342" border="0"></p>
+              <p>出力先をファイルにすれば、印刷イメージを画面に表示することもできます。事前にテスト印刷を行い、レイアウトが正し
+                いかどうかの確認
+                をしてから、本印刷を実行してください。</p>
+              <div class="jumpmenu"><a
+href="#navigator">↑</a></div>
+              <h3 id="content_1_10">補足事項</h3>
+              <div class="jumpmenu"><a
+href="#navigator">↑</a></div>
+              <h4 id="content_1_11">検証を行ったシステム構成</h4>
+              <p>以下のシステムの下で確認を行いました。同様のシステム構成では問題なく利用できると考えられますが、必ず正常に宛名
+                印刷ができるとは
+                限りません。</p>
+              <p>OS・・・・・・・Debian/GNU Linux 3.1 (Sarge)、Red Hat Linux
+                9、Fedora
+                Core 1、WBEL3.0 Respin 1)<br>
+                文書作成・・・・OpenOffice.org 1.1.0/ 1.1.3<br>
+                印刷システム・・CUPS<br>
+                プリンター・・・CANON バブルジェットプリンター BJ S-300、PIXUS 560i</p>
+              <div class="jumpmenu"><a
+href="#navigator">↑</a></div>
+              <h4 id="content_1_12">その他</h4>
+              <ul class="list1" style="padding-left: 16px; margin-left:
+                16px;">
+                <li>Canon BJ S-300
+                  では、プリンタドライバの設定変更が必要です。プリンタのプロパティから、色の濃さ(Density)を 1.0
+                  → 2.0
+                  へ変更してインクの濃度を上げると印刷結果が良いようです。</li>
+                <li><a
+href="http://www.h7.dion.ne.jp/%7Egreens/nenga/greeting_cards-HowTo.html">OpenOffice
+                    で年賀はがきを作成しましょう</a> という関連ページを以前作成しています。今回は、特に Linux
+                  向けに再構成したものです。</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="note">
+      <hr class="note_hr"><a id="notefoot_1"
+href="#notetext_1"
+        class="note_super">*1</a>
+      <span class="small"><a href="http://oooug.jp/mirror/license.html">http://oooug.jp/mirror/license.html</a>
+        の配布条件に従うものとします。</span>
+      <br>
+      <a id="notefoot_2"
+href="#notetext_2"
+        class="note_super">*2</a>
+      <span class="small">「データソース」は全角文字、その後の空白は半角スペース、「2」は半角数字です。</span>
+    </div>
+  </body>
+</html>

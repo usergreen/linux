@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>OpenOffice.org / AddressBook</title>
+  </head>
+  <body>
+    <div id="navigator">
+      <p><a href="../../index.html" title="FrontPage (13d)">HOME</a> / <a
+          href="index.html">OpenOffice</a>
+        / <a
+          href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice%2FAddressBook">AddressBook</a></p>
+      <h1 id="content_1_0">OpenOffice.org 2.0 で住所録作成とその活用</h1>
+      <p>はがきの宛名印刷に対応できる、汎用的な住所録の作成方法を紹介します。</p>
+      <div class="contents">
+        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_0">OpenOffice.org
+              2.0
+              で住所録作成とその活用</a>
+            <ul class="list2" style="padding-left: 16px; margin-left:
+              16px;">
+              <li><a href="#content_1_1">住
+                  所録テンプレート（ひな型）ダウンロード</a></li>
+              <li><a href="#content_1_2">オー
+                  プンドキュメント形式へ変換</a></li>
+              <li><a href="#content_1_3">項
+                  目名の追加・変更</a></li>
+              <li><a href="#content_1_4">項
+                  目の移動</a></li>
+              <li><a href="#content_1_5">テー
+                  ブル（Table）の追加</a></li>
+              <li><a href="#content_1_6">住
+                  所録テンプレート（カスタマイズ版）ダウンロード</a></li>
+              <li><a href="#content_1_7">入
+                  力データの並び替え</a></li>
+              <li><a href="#content_1_8">は
+                  がきの宛名印刷に利用する</a></li>
+              <li><a href="#content_1_9">Calc
+                  で作った住所録をCSV形式に変換する</a></li>
+              <li><a href="#content_1_10">HSQLDB
+                  を使った住所録作成（外部リンク）</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_1">住所録テンプレート（ひな型）ダウンロード</h3>
+      <p><a href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice"
+          title="OpenOffice (622d)">OpenOffice</a>.org
+        公式サイトで配布中の住所録テンプレートを入手します。<br>
+        入手先：<a
+          href="http://ja.openoffice.org/documents/tips/archives/tategaki.lzh">http://ja.openoffice.org/documents/tips/archives/tategaki.lzh</a><br>
+        ダウンロードしたファイル tategaki.lzh
+        を解凍ツールで展開します。最近のたいていのディストリビューションでは、マウスでダブルクリックすれば書庫マネージャが自動解凍しま
+        す。</p>
+      <p>そのうちの calc_adress_tate.sxc が住所録テンプレートです。</p>
+      <p><img src="../../nenga/Screenshot-calc_address.sxc.jpg"
+          alt="Screenshot-calc_address.sxc.jpg"
+          title="Screenshot-calc_address.sxc.jpg" height="452"
+          width="640" border="0"></p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_2">オープンドキュメント形式へ変換</h3>
+      <p>上記サイトでダウンロードしたテンプレートは
+        .sxc形式なので、オープンドキュメント形式へ変換します。オープンドキュメント形式へ変換することで、OpenOffice.org
+        2.0 の全ての機能が利用可能になります。<br>
+        メニューより [ファイル]＞[名前を付けて保存]＞[<span class="noexists">OpenDocument<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=OpenDocument&amp;refer=OpenOffice%2FAddressBook">?</a></span>
+        の表計算ドキュメント(.ods)]＞[保存]</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_3">項目名の追加・変更</h3>
+      <p>追加すると便利な項目には、次のようなものが挙げられるでしょう。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>ふりがな（氏名読み）</li>
+        <li>電話番号</li>
+        <li>勤務先電話番号</li>
+        <li>FAX番号</li>
+        <li>メールアドレス</li>
+        <li>備考<br>
+          など。</li>
+      </ul>
+      <p>郵便番号（〒）と住所2
+        の項目は、このテンプレートに含まれている計算式により、はがきの宛名印刷で利用するためのものなので、変更しないでおきます。<br>
+        その他の既存の項目は任意に変更することができます。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_4">項目の移動</h3>
+      <p>Calc
+        の編集機能を使って、項目（列）の移動が自由にできます。列の切り取り・貼り付けが使えます。計算式は自動修正されるので、項目を移動し
+        ても影響しませ
+        ん。</p>
+      <p>氏名の項目を左端へ移動すると見易くなります。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_5">テーブル（Table）の追加</h3>
+      <p>Calc では３つのテーブル（table）が標準で含まれています。これは、Exel
+        でいうシート(sheet)に対応しています。したがって、テーブルの追加も容易に行なえます。</p>
+      <p>上記までの項目で自分用の住所録の体裁が完成したら、テーブルを追加することでそれを活用します。下記は完成した住所録（その一例）で
+        す。</p>
+      <p><img src="../../nenga/Screenshot-calc_address.ods.jpg"
+          alt="Screenshot-calc_address.ods.jpg"
+          title="Screenshot-calc_address.ods.jpg" height="452"
+          width="640" border="0"></p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_6">住所録テンプレート（カスタマイズ版）ダウンロード</h3>
+      <p>上記作業手順が一切不要となるよう、テンプレート（ファイル名：addressbook_template.ods）を用意しました。</p>
+      <p>この住所録テンプレート（カスタマイズ版）が<a
+          href="../../nenga/addressbook_template.ods">ダ
+          ウンロード</a>できます。ダウンロードした後、OpenOffice.org
+        で開けば直ぐ使い始めることが可能です。このテンプレートには計算式を500行目まで含めてあります。したがって、項目のある第一行目を
+        除き、499件の
+        データ登録が無修正のままで行なえます。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_7">入力データの並び替え</h3>
+      <p>逐一追加した住所録データは、後でそれぞれの項目にしたがって自由に並び変えが出来ます。たとえば、</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>氏名の「あいうえお」順</li>
+        <li>郵便番号順</li>
+      </ul>
+      <p>データの並び替えの操作は、メニューの　[データ]＞[並び替え]　より操作します。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_8">はがきの宛名印刷に利用する</h3>
+      <p>関連項目 <a href="greeting_card2.html"
+          title="OpenOffice/GreetingCard 2 (622d)">OpenOffice/GreetingCard
+          2</a>を
+        見てください。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_9">Calcで作った住所録をCSV形式に変換する</h3>
+      <p>OpenOffice.Calc で作成した住所録は、標準では .ods または
+        .sxc形式で保存されます。他の宛名作成や年賀状作成ソフトで直接取り込めるように、汎用的なCSV形式に変換します。変換は次の手順
+        で行なえます。</p>
+      <ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Calc で作成した住所録を開きます。</li>
+        <li>[ファイル]メニューより、[名前を付けて保存]を選択します。</li>
+        <li>ファイルの種類を「テキスト CSV (.csv)」に変更します。</li>
+        <li>[はい]を選択し[OK]で保存が完了します。</li>
+      </ol>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_10">HSQLDBを使った住所録作成（外部リンク）</h3>
+      <p>データベース機能を存分に活用するには、OpenOffice.org Base
+        を使います。大量のデータを登録し、データの任意抽出・検索機能を活用したいという向きでは、データベースを利用する方がより適していま
+        す。次のリンクを
+        参照してください。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a
+href="http://openoffice-docj.sourceforge.jp/cgi-bin/wiki/wiki.cgi?page=Base%A4%CE%CD%F8%CD%D1%CA%FD%CB%A1">HSQLDB
+            を使った住所録を作成</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>OpenOffice.org 3 - Linux on the Desktop</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../index.html" title="FrontPage (9d)">HOME</a> / <a
+ href="index.html">OpenOffice.org</a><br>
+</p>
+<hr size="2" width="100%">
+<h1 id="content_1_0">OpenOffice.org 3</h1>
+<p>OpenOffice.org バージョン 3.x に関するページです。</p>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">OpenOffice.org
+3</a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">オー
+プンオフィス 3 始める人のページ</a></li>
+      <li><a href="#content_1_2">オー
+プンオフィスを入手するには</a></li>
+      <li><a href="#content_1_3">イ
+ンストール方法（コマンドは一例）</a></li>
+      <li><a href="#content_1_4">古
+いバージョンを削除するには？</a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_5">（参
+考）Debian 5.0 の場合</a></li>
+          <li><a href="#content_1_6">（参
+考）Debian 4.0 の場合</a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_7">本
+家版を利用する時の注意点</a></li>
+      <li><a href="#content_1_8">「更
+新のチェック」とは何ですか。</a></li>
+      <li><a href="#content_1_9">日
+本語入力開始時にフリーズしてしまう (Debian Etch)</a></li>
+      <li><a href="#content_1_10">ア
+ンインストールするには？</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">オープンオフィス 3 始める人のページ</h3>
+<p><a
+ href="http://openoffice-docj.sourceforge.jp/wiki/Documentation/start3">http://openoffice-docj.sourceforge.jp/wiki/Documentation/start3</a><br>
+（<a href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice"
+ title="OpenOffice (617d)">OpenOffice</a>.org 3.0 向け）</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>オープンソース統合オフィススイート「<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice"
+ title="OpenOffice (617d)">OpenOffice</a>.org 3.0」到来!!<br>
+    <a href="http://journal.mycom.co.jp/special/2008/ooo3/index.html">http://journal.mycom.co.jp/special/2008/ooo3/index.html</a><br>
+（マイコミジャーナル）</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">オープンオフィスを入手するには</h3>
+<p><a
+ href="http://openoffice-docj.sourceforge.jp/wiki/Documentation/start3#.E3.82.AA.E3.83.BC.E3.83.97.E3.83.B3.E3.82.AA.E3.83.95.E3.82.A3.E3.82.B9.E3.82.92.E5.85.A5.E6.89.8B.E3.81.99.E3.82.8B.E3.81.AB.E3.81.AF">オー
+プンオフィス3始める人のページにあるリンク</a>を利用してください。複数のサイトよりダウンロード可能です。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Linux (145MB) DEB, JREなし</li>
+  <li>Linux (147MB) RPM, JREなし</li>
+  <li>Linux (166MB) RPM, JRE付き</li>
+</ul>
+<p>Fedora、Mandriva Linux、openSUSE などの公式リリース版では、各ディストリビューション専用の
+OpenOffice.org 3.0 が配布されています（2008.12.30
+現在）。各ディストリビューションで独自に用意されていない場合は、OpenOffice.org の本家版を利用することになります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">インストール方法（コマンドは一例）</h3>
+<p>以下の手順は、本家版をインストールする場合です。お使いのディストリビューションより配布があれば、本家版をインストール必要はありません。</p>
+<ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>まず、古いバージョンの OpenOffice.org
+を完全に削除します（次項を参照してください）。これは最新版との競合で不具合が発生するのを避けるためです。</li>
+  <li>ダウンロードしたファイルを展開します。
+    <pre> $ tar zxvf OOo_3.0.0_LinuxIntel_install_ja_.tar.gz</pre>
+  </li>
+  <li>展開した各パッケージをインストールします。Debian系とRPM系とではコマンドが異なります。<br>
+Debian系
+    <pre> $ cd OOO300_m9_native_packed-1_ja.9358<br> # dpkg -i ./DEBS/*.deb<br> # dpkg -i ./DEBS/desktop-integration/openoffice.org3.0-debian-menus*</pre>
+RPM系
+    <pre> $ cd OOO300_m9_native_packed-1_ja.9358<br> # rpm -ivh ./RPMS/*.rpm<br> # rpm -ivh ./RPMS/desktop-integration/openoffice.org3.0-freedesktop-menus*</pre>
+  </li>
+</ol>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>参考：「OS別最新OOo導入/設定ガイド」<br>
+    <a
+ href="http://openoffice-docj.sourceforge.jp/wiki/images/OOo_SD_genko_part2_200.pdf">http://openoffice-docj.sourceforge.jp/wiki/images/OOo_SD_genko_part2_200.pdf</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_4">古いバージョンを削除するには？</h3>
+<p>OpenOffice.org
+をキーワードにして検索し、関連のパッケージを削除します。ディストリビューションが採用している、APT や Synaptic、Yum
+といった管理ツールを利用します。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_5">（参考）Debian 5.0 の場合</h4>
+<p><a href="%2FLennyStableRemoval"
+ title="OpenOffice/3.0/LennyStableRemoval (618d)">OpenOffice/3.0/LennyStableRemoval</a>
+のページを参照し、本家版の最新バージョンをインストールしてください。Debian 5.0 では <span class="noexists">Backports.org<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=www.backports.org&amp;refer=OpenOffice%2F3.0">?</a></span>
+より独自のバージョンも配布されていますので、<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?%5B%5Bhttp%3A%2F%2Fwww.backports.org%2Fdokuwiki%2Fdoku.php%3Fid%3Dinstructions%5D%5D"
+ title="http://www.backports.org/dokuwiki/doku.php?id=instructions">http://www.backports.org/dokuwiki/doku.php?id=instructions</a>を
+見てください。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_6">（参考）Debian 4.0 の場合</h4>
+<p>Debian 4.0 (Etch) の場合、以下のパッケージ全てを削除する必要があります。</p>
+<pre> openoffice.org<br> openoffice.org-base<br> openoffice.org-calc<br> openoffice.org-common<br> openoffice.org-core<br> openoffice.org-draw<br> openoffice.org-evolution<br> openoffice.org-gcj<br> openoffice.org-gnome<br> (or openoffice.org-kde)<br> openoffice.org-gtk<br> openoffice.org-help-en-us<br> openoffice.org-help-ja<br> openoffice.org-impress<br> openoffice.org-java-common<br> openoffice.org-l10n-ja<br> openoffice.org-math<br> openoffice.org-thesaurus-en-us<br> openoffice.org-writer<br> ttf-opensymbol<br> python-uno</pre>
+<p>パッケージ削除で apt-get remove コマンドを使う場合、次のように行います。</p>
+<p># apt-get remove openoffice.org openoffice.org-base
+openoffice.org-calc openoffice.org-common openoffice.org-core
+openoffice.org-draw openoffice.org-evolution openoffice.org-gcj
+openoffice.org-gnome openoffice.org-gtk openoffice.org-help-en-us
+openoffice.org-help-ja openoffice.org-impress
+openoffice.org-java-common openoffice.org-l10n-ja openoffice.org-math
+openoffice.org-thesaurus-en-us openoffice.org-writer ttf-opensymbol
+python-uno<br>
+パッケージリストを読み込んでいます... 完了<br>
+依存関係ツリーを作成しています... 完了<br>
+以下のパッケージは「削除」されます:</p>
+<pre>  openoffice.org openoffice.org-base openoffice.org-calc openoffice.org-common<br>  openoffice.org-core openoffice.org-draw openoffice.org-evolution<br>  openoffice.org-gcj openoffice.org-gnome openoffice.org-gtk<br>  openoffice.org-help-en-us openoffice.org-help-ja openoffice.org-impress<br>  openoffice.org-java-common openoffice.org-l10n-ja openoffice.org-math<br>  openoffice.org-thesaurus-en-us openoffice.org-writer python-uno<br>  ttf-opensymbol</pre>
+<p>アップグレード: 0 個、新規インストール: 0 個、削除: 20 個、保留: 0 個。<br>
+0B のアーカイブを取得する必要があります。<br>
+展開後に 310MB のディスク容量が解放されます。<br>
+続行しますか [Y/n]? y</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_7">本家版を利用する時の注意点</h3>
+<p>OpenOffice.org
+に関わるアップデートは、今後ディストリビューションの配布元から一切ありません。OpenOffice.org
+開発元から提供されるサポートを必ず適用してください。</p>
+<p>しかし、本家版には自動更新（オンライン更新）機能が備わっているので OpenOffice.org
+のアップデートは比較的容易に行えます。更新版が入手可能となった時点で、画面上に更新通知が表示される仕組みです。[メニュー] &gt;
+[ヘルプ] &gt; [更新のチェック]　からも随時更新の確認ができます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_8">「更新のチェック」とは何ですか。</h3>
+<p>使用しているバージョンの OpenOffice.org
+に適用できる更新をチェックします。 より新しいバージョンが提供されている場合、更新のダウンロードを選択できます。
+ダウンロードした後、インストールディレクトリに書き込み権がある場合は、更新をインストールできます。ダウンロードが完了したら、「インストール」をク
+リックして、更新のインストールを開始できます。ただし、オペレーティングシステムによっては、手動でダウンロードフォルダに進み、ダウンロードファイル
+を解凍して、セットアップスクリプトを開始する必要がある場合があります。（OpenOffice.org 3
+オンラインヘルプより引用。）例えば、Debian の場合も、ダウンロード後に手動でセットアップ（アップグレード）する必要があります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_9">日本語入力開始時にフリーズしてしまう (Debian Etch)</h3>
+<p>Debian 4.0 (Etch) にて SCIM + Anthy で日本語入力不能となるようです（2008.12.30
+確認）。/opt/openoffice.org3/program/soffice のスクリプトを適当なテキスト・エディタで root
+になって開き、記述を書き換えると不具合が解消されます。</p>
+<p>91、92行目に以下の記述があるので、92行目のみコメント(#)を削除します。</p>
+<pre> # uncomment line below if you encounter problems starting soffice on your system<br> # SAL_NO_XINITTHREADS=true; export SAL_NO_XINITTHREADS</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://blog.goo.ne.jp/j_adversaria/e/109c7eb9a7ed34dccb502f6fb26005ab">OpenOffice.org3.0.0
+のフリーズを回避</a></li>
+  <li><a href="http://oooug.jp/faq/index.php?faq/4/982#content_1_54">#
+Re: kinput2でOOo3が凍る &amp; Re: kinput2だけでなくSCIMでも</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_10">アンインストールするには？</h3>
+<p>一度インストールされた本家版の OpenOffice.org 3.0
+をアンインストール（削除）するには、インストールとは逆の手順で作業を進めます。</p>
+<p>以下は、Debian でパッケージ管理ツール APT を利用する場合の一例です。<br>
+まず、削除前にどのパッケージが削除されるかを次のコマンドで事前に確認しておく方が安全です。</p>
+<pre> # apt-get remove -s ooobasis*</pre>
+<p>そして、実際に一連のパッケージを削除します。</p>
+<pre> # apt-get remove ooobasis*</pre>
+<p>ただし、/opt/openoffice.org3 ディレクトリ以下は自動的に削除されません。必要なら、手動で削除してください。</p>
+<pre> # rm -r /opt/openoffice.org3</pre>
+<p>なお、以下のパッケージは依存関係により一括削除されるので、必要であれば後で追加インストールします。</p>
+<pre> wamerican<br> myspell-en-us<br> ibritish<br> ispell<br> iamerican<br> dictionaries-common</pre>
+</div>
+</body>
+</html>
