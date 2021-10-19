@@ -1,0 +1,469 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang"en-US">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>DebianLinux / NewInstaller</title>
+</head>
+<body>
+<div id="body">
+<h2 id="content_1_0">How to install sarge with the new debian-installer</h2>
+<hr class="full_hr">
+<p>This document describes how to perform an installation with the new<br>
+debian-installer, which will be released together with the upcoming<br>
+Debian release, codename: sarge.</p>
+<p>For the most current version of this document or more information on<br>
+the debian-installer project: <a
+ href="http://www.debian.org/devel/debian-installer">http://www.debian.org/devel/debian-installer</a></p>
+<p>Last update: $Date: 2004-07-28 21:40:07 +0000 (Wed, 28 Jul 2004) $</p>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_0">
+How to install sarge with the new debian-installer</a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_1">
+1. Preliminaries</a></li>
+      <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_2">
+2. Getting images</a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_3">
+2.1 CDROM</a></li>
+          <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_4">
+2.1.1 SCSI CD drives</a></li>
+          <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_5">
+2.2 The dreaded floppies</a></li>
+          <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_6">
+2.3 USB memory stick</a></li>
+          <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_7">
+2.3.1 Booting directly from USB storage</a></li>
+          <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_8">
+2.3.2 Using USB storage and a boot floppy</a></li>
+          <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_9">
+2.4 Booting from network</a></li>
+          <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_10">
+2.5 Booting from hard disk</a></li>
+          <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_11">
+2.6 Booting from CDROM</a></li>
+        </ul>
+      </li>
+      <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_12">
+3. Installation</a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_13">
+3.1. Expert mode installation</a></li>
+        </ul>
+      </li>
+      <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_14">
+4. Installation Report</a></li>
+      <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_15">
+5. Reporting bugs</a></li>
+      <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#content_1_16">
+6. Get involved</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h3 id="content_1_1">1. Preliminaries</h3>
+<p>The debian-installer is still in a beta state. If you encounter<br>
+bugs during your install, please refer to section 5 on how to report<br>
+them. If you have questions which cannot be answered by this document,<br>
+please direct them to the debian-boot mailing list<br>
+(<a href="mailto:debian-boot@lists.debian.org">debian-boot@lists.debian.org</a>)
+or ask on irc (#debian-boot on the<br>
+freenode network).</p>
+<p>Recently the debian-installer has switched to ask only the important<br>
+questions and configure the rest automatically. This also means that you<br>
+won't get to see the main menu anymore, except when something goes
+wrong.<br>
+If you want to restore the old configuration with more questions asked,<br>
+type "expert" at the boot prompt. If you do so, refer to section<br>
+3.1. for installing rather than section 3.</p>
+<p>This HOWTO is mainly targeted at users of the i386 architecture,
+although<br>
+the instructions are similar for all architectures. For more detailed<br>
+information, see the Debian Sarge Installation Manual:<br>
+<a href="http://d-i.alioth.debian.org/manual/">http://d-i.alioth.debian.org/manual/</a></p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h3 id="content_1_2">2. Getting images</h3>
+<p>The debian-cd team provides builds of CD images for debian-installer
+here:<br>
+<a href="http://cdimage.debian.org/pub/cdimage-testing/daily/">http://cdimage.debian.org/pub/cdimage-testing/daily/</a></p>
+<p>The other kinds of images, including floppy images are in the Debian<br>
+archive, in the main/installer-&lt;arch&gt; directories. For example:<br>
+<a
+ href="ftp://ftp.debian.org/debian/dists/unstable/main/installer-i386/current/images/">ftp://ftp.debian.org/debian/dists/unstable/main/installer-i386/current/images/</a></p>
+<p>Daily builds of all non-ISO debian-installer images, including
+floppy images<br>
+and initrd's are available, for a complete list with links, see<br>
+<a href="http://www.debian.org/devel/debian-installer/ports-status">http://www.debian.org/devel/debian-installer/ports-status</a></p>
+<p>The subsections below will give the details about which images you
+should<br>
+get for each possible means of installation.</p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h4 id="content_1_3">2.1 CDROM</h4>
+<p>There are two different netinst images at the location above which
+can be<br>
+used to install sarge with the debian-installer. These images are
+intended<br>
+to boot from CD and install additional packages over a network, hence
+the<br>
+name 'netinst'. The difference between the two images is, that on the
+full<br>
+netinst image the base packages are included, whereas you have to
+download<br>
+these from the web if you are using the business card image.</p>
+<p>Download whichever type you prefer and burn it to a CD.</p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h4 id="content_1_4">2.1.1 SCSI CD drives</h4>
+<p>If you have a SCSI CD drive and a relatively uncommon SCSI
+controller, then<br>
+you may also need one driver floppy to let the installer see your CD
+drive.<br>
+However, this is only the case with CD images that use syslinux as their<br>
+bootloader, rather than the normal ones, which use isolinux.</p>
+<p>See section 2.2 for information about floppys, and download the
+cd-drivers<br>
+floppy image and write it to disk. You will be given an opportunity to
+load<br>
+drivers from the floppy if the installer fails to see your SCSI CD
+drive,<br>
+and after loading the floppy, the installer will see your CD ROM.</p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h4 id="content_1_5">2.2 The dreaded floppies</h4>
+<p>If you can't boot from CD, you can download floppy images to install<br>
+Debian. You need the floppy/boot.img, the floppy/root.img and possibly<br>
+one of the driver disks.</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>floppy/net-drivers.img
+    <pre>  To do an install over the network with a few common ethernet cards,<br>  you do not need this driver floppy. If you have a less common ethernet<br>  card, or pcmcia, you will need it.</pre>
+  </li>
+  <li>floppy/cd-drivers.img
+    <pre>  If you have a cdrom, but cannot boot from it, you can boot from floppies,<br>  and use this driver disk to complete the install using the cdrom.</pre>
+  </li>
+</ul>
+<p>Floppy disks are one of the least reliable media around, so be
+prepared for<br>
+lots of bad disks. Each .img file you downloaded goes on a single
+floppy;<br>
+you can use the dd command to write it to /dev/fd0 or some other means.<br>
+It's a good idea to them use cmp to compare what ended up on the
+unreliable<br>
+floppy disk with the image. If it fails throw that floppy away and try<br>
+again. Since you'll have more than one floppy, it's a good idea to label<br>
+them.</p>
+<p>The boot floppy is the one with boot.img on it. This floppy, when<br>
+booted, will prompt you to insert a second floppy -- use the one with<br>
+root.img on it.</p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h4 id="content_1_6">2.3 USB memory stick</h4>
+<p>It's also possible to install from removable USB storage devices. For<br>
+example a USB keychain can make a handy Debian install media that you<br>
+can take with you anywhere.</p>
+<p>The easiest way to prepare your USB memory stick is to download<br>
+hd-media/boot.img.gz, and use gunzip to extract the 128 MB image from
+that<br>
+file. Write this image directly to your memory stick, which must be at<br>
+least 128 mb in size. Of course this will destroy anything already on
+the<br>
+memory stick. Then mount the memory stick, which will now have a FAT<br>
+filesystem on it. Next, download a Debian netinst CD image, and copy
+that<br>
+file to the memory stick; any filename is ok as long as it ends in
+".iso".</p>
+<p>Alternatively, if you're using linux and familiar with loopback
+mounting,<br>
+it can be quicker to loop mount the disk image, copy the iso into it,
+and<br>
+only then write the complete image to the memory stick.</p>
+<p>There are other, more flexible ways to set up a memory stick to use
+the<br>
+debian-installer, and it's possible to get it to work with smaller
+memory<br>
+sticks. This web page has more complete directions for using<br>
+debian-installer and a bootable USB stick: <a
+ href="http://d-i.pascal.at/">http://d-i.pascal.at/</a></p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h4 id="content_1_7">2.3.1 Booting directly from USB storage</h4>
+<p>Some BIOSes can boot USB storage directly, and some cannot. You may
+need to<br>
+configure your BIOS to boot from a "removable drive" or even a
+"USB-ZIP" to<br>
+get it to boot from the USB device. The web site above has more
+information<br>
+and some helpful hints about booting.</p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h4 id="content_1_8">2.3.2 Using USB storage and a boot floppy</h4>
+<p>The debian-installer can be booted off a single floppy, which will
+be able<br>
+to access your USB memory stick. To boot the installer this way, you
+will<br>
+need to put the floppy/boot.img on a floppy (see section 2.2).</p>
+<p>Now boot from the floppy. It should detect your USB device and
+proceed<br>
+with booting from it.</p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h4 id="content_1_9">2.4 Booting from network</h4>
+<p>It's also possible to boot debian-installer completely from the net.
+The<br>
+various methods to netboot depend on your architecture and netboot
+setup.<br>
+The files in netboot/ can be used to netboot debian-installer.</p>
+<p>On i386, the easiest thing to set up is probably PXE netbooting.
+Untar the<br>
+file netboot/pxeboot.tar.gz into /var/lib/tftpboot or wherever is<br>
+appropriate for your tftp server. Set up your DHCP server to pass
+filename<br>
+"/pxelinux.0" to clients, and it with luck everything will just work.
+For<br>
+more details, see this web page:<br>
+<a href="http://wiki.debian.net/index.cgi?DebianInstallerNetbootPXE">http://wiki.debian.net/index.cgi?DebianInstallerNetbootPXE</a></p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h4 id="content_1_10">2.5 Booting from hard disk</h4>
+<p>It's possible to boot the installer using no removable media, but
+just an<br>
+existing hard disk, which can have a different OS on it. These
+instructions<br>
+are for i386 systems, such as those running windows. Download<br>
+hd-media/initrd.gz, hd-media/vmlinuz, and a Debian CD image to the
+top-level<br>
+directory of the hard disk. Make sure that the CD image has a filename<br>
+ending in ".iso". Now it's just a matter of booting linux with the
+initrd.</p>
+<p>If you have grub installed, boot grub, and do the following:</p>
+<p>grub&gt;kernel (hd0,0)/vmlinuz root=/dev/ram ramdisk_size=10000
+devfs=mount,dall<br>
+grub&gt;initrd (hd0,0)/initrd.gz<br>
+grub&gt;boot</p>
+<p>Note that the ramdisk_size parameter may need to be increased,
+depending on<br>
+the image you are booting.</p>
+<p>After the installer boots, it should find the ISO you placed on the
+hard<br>
+disk, and continue with the install. You will not be able to reformat
+the<br>
+partition the installer was booted from if you use this technique.</p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h4 id="content_1_11">2.6 Booting from CDROM</h4>
+<p>The most common choice, is booting directly from a CD drive.</p>
+<p>For i386 systems, you should set this up in your BIOS directly<br>
+in the boot sequence.</p>
+<p>For powerpc systems, you must press the "c" key while booting. The
+"c"<br>
+key, which represents "cdrom", will tell your machine to use that medium<br>
+as the boot method.</p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h3 id="content_1_12">3. Installation</h3>
+<p>From here on, I assume you have downloaded and burnt the 'netinst'<br>
+CD. Put it into your CD-drive and make your system boot from CD.</p>
+<p>You will be greeted by a welcome screen. Hit ENTER to boot. (If you
+want a<br>
+2.6 kernel, type "linux26" instead.)</p>
+<p>After a while you will be asked to select your language. This will
+affect<br>
+translation of debian-installer (if already available for your
+language) as<br>
+well as the choice of country and keyboard layout. Select your language
+and<br>
+press ENTER to continue.</p>
+<p>Sit back while debian-installer detects some of your hardware, and<br>
+loads additional installer modules from the cd.</p>
+<p>Next the installer will try to detect your network hardware and set
+up<br>
+networking by DHCP. If you are not on a network or do not have DHCP, you<br>
+will see an error message. You do not need a network to continue the<br>
+install, so this can be easily worked around. Select continue and watch
+the<br>
+main menu which will appear everytime if something went wrong, so you
+have<br>
+more control over the situation. Proceed to "Partition disks".</p>
+<p>Now it is time to partition your disks. First you will be given the<br>
+opportunity to automatically partition either an entire drive, or free<br>
+space on a drive. If you do not want to autopartition, choose manual
+from<br>
+the menu.</p>
+<p>On the next screen you will see your partition table, how the
+partitions<br>
+will be formatted, and where they will be mounted. Select a partition to<br>
+modify or delete it. If you did automatic partitioning, you should just
+be<br>
+able to choose "Finished partitioning" from the menu to use what it set
+up.<br>
+Remember to assign at least one partition for swap space and to mount a<br>
+partition on "/".</p>
+<p>Now debian-installer starts to install the base system which can
+take a<br>
+while. That is followed by installing a kernel.</p>
+<p>The last step is to install a boot loader. If the installer detects<br>
+other operating systems on your computer, it will add them to the boot
+menu<br>
+and let you know. By default GRUB will be installed to the boot<br>
+record of the first harddrive, which is generally a good choice. You'll
+be<br>
+given the opportiunity to override that choice and install it elsewhere.</p>
+<p>Debian-installer will now tell you that the installation has<br>
+finished. Remove the cdrom from your drive and hit ENTER to reboot<br>
+your machine. Make sure it boots from harddisk, cross your fingers and<br>
+wait until base-config is started.</p>
+<p>Stepping through base-config is not within the scope of this document<br>
+as it is not part of debian-installer.</p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h4 id="content_1_13">3.1. Expert mode installation</h4>
+<p>From here on, I assume you have downloaded and burnt the 'netinst'<br>
+CD. Put it into your CD-drive and make your system boot from CD.</p>
+<p>You will be greeted by a welcome screen. Type "expert" and hit ENTER
+to<br>
+boot. If you want to install with the 2.6 linux kernel, type "expert26"<br>
+instead. After a while you will be presented with the main-menu of the<br>
+debian-installer. Some general remarks:</p>
+<p>The main-menu is not static. New entries are added when new installer<br>
+modules are loaded. However main-menu tries to resolve the next best<br>
+choice and presents that as default selection. If that selection does<br>
+not suit your needs just select another entry. If you select an entry<br>
+that requires the configuration of an entry you did not yet choose,<br>
+the main-menu will try to resolve these dependencies automatically.<br>
+This can be used to automate the install process, by selecting always<br>
+the last visible step.</p>
+<p>When main-menu first is shown, the default will be "Choose
+language". Hit<br>
+return and choose your language from the list that now is presented. You<br>
+will be taken back to main-menu and the next item will be the default,<br>
+which is "Choose country". Select that entry and observe that the
+installer<br>
+tries to set a reasonable default based upon your language selection.<br>
+Select your country and continue.</p>
+<p>The next step is "Detect a keyboard and select layout". Again the
+installer<br>
+will attempt to pick a reasonable default. Select your preferred keymap
+and<br>
+continue.</p>
+<p>The next step is "Detect CDROM devices and mount the CD". As part of
+this<br>
+step, the installer will probe the system for hardware, and load kernel<br>
+modules for detect hardware. You will be given a chance to veto the
+loading<br>
+of kernel modules (in case they cause problems), and to specify
+parameters<br>
+to pass to the kernel when the modules are loaded. After the hardware is<br>
+detected, the CD should be found automatically in most cases.</p>
+<p>Now we are able to load the rest of the installer. Select the
+corresponding<br>
+entry "Load installer components". Since the modules we want to access
+are<br>
+on the CD, select "cdrom-retriever". The floppy-retriever can be used to<br>
+load additional modules from a floppy, e.g. if you have exotic hardware.<br>
+See section 2.1.1 if you have a SCSI CDROM.</p>
+<p>You are presented a long list with optional components to install. We<br>
+only want to install the standard components, which are selected<br>
+automatically, so just hit "Continue". Wait and watch until all<br>
+components have been loaded.</p>
+<p>Main-menu appears again, but with the additional modules there are
+new<br>
+entries. The next default step would be to configure a network. We are<br>
+breaking out of the default route, because we do not need networking<br>
+since the base debs are on the CD.</p>
+<p>Select "Detect hardware". This will repeat the hardware detection
+process,<br>
+but now the installer has more kernel modules available to it.</p>
+<p>Now it is time to partition your disk, so choose "Partition disks"
+from the<br>
+menu. You will be presented with a display showing the partitions on
+your<br>
+system. Select partitons from the list to modify or delete them. If you<br>
+have free space it will also show up under a drive, and you can select
+it<br>
+to create new partitions. When modifying a partition you will have the<br>
+opportunity to choose the file system to use, and where to mount it. The<br>
+partitioning menu also has a choice at the bottom that can be used to<br>
+automatically partition a drive or existing free space on a drive, if
+you'd<br>
+rather go that route. Be sure to create at least two partitions, one for<br>
+swap and one for the root filesystem.</p>
+<p>After finishing partitioning, select "Finished partitioning" from
+the menu,<br>
+and confirm that the filesystems should be created as requested.</p>
+<p>Now we are ready to install the base system. Select the
+corresponding entry<br>
+("Install the base system") and lean back. The packages are retrieved
+from<br>
+the CD and installed in the /target area. During this step, you will be<br>
+presented with a list of all available kernel images on the CD. Select
+the<br>
+most suitable for your system and wait until the installation has
+finished.</p>
+<p>Now we are almost done. Select "Install GRUB on a hard disk" or<br>
+"Install LILO on a hard disk" to make your harddisk bootable. You will<br>
+be asked where GRUB/LILO shall install the bootblock. A good idea is<br>
+the first hard drive in your system which should be in fact the<br>
+default selection.</p>
+<p>If that last step has completed successfully select "Finish the<br>
+installation and reboot", eject your CD and wait until your computer<br>
+restarts. Make sure it boots from harddisk, cross your fingers and<br>
+wait until base-config is started.</p>
+<p>Stepping through base-config is not within the scope of this document<br>
+as it is not part of debian-installer.</p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h3 id="content_1_14">4. Installation Report</h3>
+<p>If you successfully managed an installation with debian-installer,<br>
+please take time to provide us with a report. There is a template<br>
+named "install-report.template" in the /root directory of a freshly<br>
+installed system. Please fill it out and file it as a bug against the<br>
+package "installation-reports". See section 5 on how to file bugs.</p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h3 id="content_1_15">5. Reporting bugs</h3>
+<p>If you did not reach base-config or ran into other trouble, you<br>
+probably found a bug in debian-installer. To improve the installer it<br>
+is necessary that we know about them, so please take your time and<br>
+report them.</p>
+<p>First, look here to see if your bug has already been reported:<br>
+<a
+ href="http://bugs.qa.debian.org/cgi-bin/debian-installer.cgi?full=yes">http://bugs.qa.debian.org/cgi-bin/debian-installer.cgi?full=yes</a></p>
+<p>The page is sorted by packages which represent the individual<br>
+subsystems of debian-installer. File your bug against the respective<br>
+subsystem or, if you do not know which it is, against the package<br>
+"install". Look here for an explanation of how to file bugs:<br>
+<a href="http://www.debian.org/Bugs/Reporting">http://www.debian.org/Bugs/Reporting</a></p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=DebianLinux%2FNewInstaller#navigator">↑</a></div>
+<h3 id="content_1_16">6. Get involved</h3>
+<p>The Debian-Installer Team always welcomes people who would like to<br>
+work on the installer. We have plenty of work to do: fixing bugs,<br>
+improve usability, create new modules and of course extensive<br>
+testing. If you are interested to help, check out this page:<br>
+<a href="http://www.debian.org/devel/debian-installer/">http://www.debian.org/devel/debian-installer/</a></p>
+<p>NOTE: Redistribution and/or modification under the terms of the GNU
+General Public License.</p>
+</div>
+</body>
+</html>

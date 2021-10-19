@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>CentOS 7 FAQ - Linux on the Desktop</title>
+  </head>
+  <body>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td valign="top">前のページ　次のページ　<a href="index.html">CentOS Top</a>　<a href="../../../index.html"><big>HOME</big></a></td>
+          <td valign="middle" align="right">Last updated&nbsp;2020/12/27&nbsp; 23:50 JST<br>
+</td>
+        </tr>
+      </tbody>
+    </table>
+<hr width="100%"> <br>
+<b><font size="+2">CentOS 7 に関するページ</font></b><br>
+<br>
+<br>
+<b>[ 目 次 ]</b><br>
+<a href="#1">リリース情報について</a><br>
+<a href="#2">CentOS の開発方針変更について</a><br>
+<a href="#3">CentOS 7 LiveCD について</a><br><a href="#4">
+デフォルトのデスクトップ環境は？</a><br><a href="#5">
+デスクトップのスクリーンショット</a><br><a href="#6">
+日本語入力の設定方法は？</a><br>
+<a href="#7">古いバージョンを入手するには？</a> <br>
+<a href="#8">CentOS はサポートが終わったら使えなくなりますか？</a><br>
+<br>
+<h3><a name="1"></a>リリース情報について</h3>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+CentOS 7 
+は、アップストリームのメンテナンス期間と同じく、2024年までアップデータの提供が行われる予定です。このバージョンでは以下のインストール・イメー
+ジをダウンロードすることが可能です。各ミラーサイトの /Linux/centos/7/isos/x86_64/0_README.txt 
+に書かれてある通り、以下の各種イメージが用意されています。<br>
+<br>
+List of images in this directory<br>
+================================<br>
+<br>
+CentOS-7-x86_64-DVD-2009.iso<br>
+&nbsp; This DVD image contains all the packages that can be installed using the<br>
+&nbsp; installer. This is the recommended image for most users.<br>
+<br>
+CentOS-7-x86_64-NetInstall-2009.iso<br>
+&nbsp; This is the network install and rescue image. The installer will ask from <br>
+&nbsp; where it should fetch the packages to be installed. This image is most <br>
+&nbsp; useful if you have a local mirror of CentOS packages.<br>
+<br>
+CentOS-7-x86_64-Everything-2009.iso<br>
+&nbsp; This image contains the complete set of packages for&nbsp; CentOS Linux 7. It can be <br>
+&nbsp; used for installing or populating a local mirror. This image needs a 16GB USB <br>
+&nbsp; flash drive as it is too large for DVD isos.<br>
+<br>
+CentOS-7-x86_64-LiveGNOME-2009.iso<br>
+CentOS-7-x86_64-LiveKDE-2009.iso<br>
+&nbsp; These images are Live images of&nbsp; CentOS Linux 7. Depending on the name they use the<br>
+&nbsp; respective display manager. They are designed for testing purposes and<br>
+&nbsp; exploring the&nbsp; CentOS Linux 7 environment. They will not modify the content of your <br>
+&nbsp; hard disk, unless you choose to install&nbsp; CentOS Linux 7 from within the Live<br>
+&nbsp; environment. Please be advised that you can not change the set of installed<br>
+&nbsp; packages in this case. This needs to be done within the installed system<br>
+&nbsp; using 'yum'.<br>
+<br>
+CentOS-7-x86_64-Minimal-2009.iso<br>
+&nbsp; The aim of this image is to install a very basic&nbsp; CentOS Linux 7 system, with the <br>
+&nbsp; minimum of packages needed to have a functional system. Please burn this image<br>
+&nbsp; onto a CD and boot your computer off it. A preselected set of packages will be<br>
+&nbsp; installed on your system. Everything else needs to be installed using yum. The set<br>
+&nbsp; of packages installed by this image is identical to the one installed when choosing<br>
+&nbsp; the group named "Minimal" from the full DVD image.<br>
+<br>
+Using the installation images<br>
+=============================<br>
+<br>
+You can burn these images to a DVD or 'dd' them to a USB flash drive. <br>
+After the boot media has been prepared, boot the computer off the boot media. <br>
+If you do an install to your hard disk using these installation images, please <br>
+remember to run "yum update" after the installation to update your system to the <br>
+latest packages.<br>
+<br>
+Remember that in order to be able to partition your disk you will need to run<br>
+the GUI installer which in turns needs enough RAM. The same is true for the <br>
+network setup step. Please refer to the release notes available at <br>
+<a href="http://wiki.centos.org/Manuals/ReleaseNotes/CentOS7">http://wiki.centos.org/Manuals/ReleaseNotes/CentOS7</a> for more details about<br>
+these aspects.<br>
+<br>
+<h3><a name="2"></a>CentOS 開発方針の変更について</h3>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+「CentOS 8」は2021年終了、今後は「CentOS Stream」に注力 というニュースが報道されました。<br>
+2020年12月9日09:15<br>
+<a href="https://mag.osdn.jp/20/12/10/091500">https://mag.osdn.jp/20/12/10/091500</a>　<br>
+<br>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+CentOS Project shifts focus to CentOS Stream<br>
+Tuesday , 8, December 2020<br>
+<a href="https://blog.centos.org/2020/12/future-is-centos-stream/">https://blog.centos.org/2020/12/future-is-centos-stream/</a>　<br>
+The future of the CentOS Project is CentOS Stream, and over the next 
+year we’ll be shifting focus from CentOS Linux, the rebuild of Red Hat 
+Enterprise Linux (RHEL), to CentOS Stream, which tracks just ahead of a 
+current RHEL release. CentOS Linux 8, as a rebuild of RHEL 8, will end 
+at the end of 2021. CentOS Stream continues after that date, serving as 
+the upstream (development) branch of Red Hat Enterprise Linux.<br>
+<br>
+<a href="../../foss_news.html#1">FOSS ニュースのページ</a>にも関連記事を複数拾って掲載しました。報道によれ
+ば、CentOS 8 
+は2021年12月31日をもってアップデータの提供が終了しますが、CentOS 7 
+については2024年6月30日までのあいだアップデータの提供が継続される予定です。これは報道時の告知に過ぎません。実際にいつまでアップデータが提供されるか
+は保証されないので、期間が前後する可能性があります。CentOS 
+プロジェクトが永続的だと周知されていたように思われていましたが、これについても同じことだと言えます。<br>
+<br>
+<h3><a name="3"></a>CentOS 7 LiveCD について</h3>
+これは CentOS 7 
+を実際にインストールせずに、おもに事前評価する目的で利用できます。LiveCD 
+といってもネットワークに接続が可能であり、各種アプリも使用可能なので、メインの OS 
+に準じた運用ができます。インストーラーが付属しているのでそのままインストールすることも可能な便利なイメージ
+（媒体）です。「Live System 
+User」として利用します。自動的にログインするように設定されているので、ユーザ名とパスワードの入力は不要です。<br>
+<br>
+起動直後に「Welcome」画面が表示されます。日本語入力を有効にするには、ここで「日本語」を選択し、さらに次に表示される画面で「日本語（かな漢
+字）」を選択します。続いて Wi-Fi 設定やプライバシー、オンラインアカウントの設定が求められますが、不要なサービスはスキップ可能です。<br>
+<br>
+日本語入力を開始するには、一連の初期設定が完了した後、一度ログアウトし再度ログインする必要があります。<br>
+<br>
+<h3><a name="4"></a>デフォルトのデスクトップ環境は？</h3>
+デフォルト（標準）では GNOME  Classic が採用されています（次項参照）。これは RedHat Enterprise Linux を元に作られた多くのクローンでは標準の仕様です。オプションとして KDE の配布があります。<br>
+<br>
+<h3><a name="5"></a>デスクトップのスクリーンショット</h3>
+デフォルト（標準）のテーマです。GNOME 
+のクラシックスタイルが採用されているので、デスクトップにはアイコンが表示されます。掲載した画像は、バージョン 7.8 LiveCD 
+のデフォルトのテーマ（壁紙）です。背景画像が CentOS 独自のものに差し替えられているのが分かると思います。<br>
+<br>
+<img src="Screenshot-centos7-ja.png" alt="Screenshot-centos7-ja.png" width="800" height="450"><br>
+<br>
+<h3>
+  <a name="6"></a>日本語入力の設定方法は？</h3>
+日本語入力を有効にするには、先の項目「CentOS 7 LiveCD について」の説明に従ってください。Ibus の設定画面より、下図のとおりさらに詳細な設定が行なえます。<br>
+<br>
+<img src="Screenshot-ibus-setting.png" alt="Screenshot-ibus-setting.png" width="457" height="474"><br>
+<br>
+<img src="Screenshot-ibus-setting2.png" alt="Screenshot-ibus-setting2.png" width="457" height="474"><br>
+<br>
+<img src="Screenshot-ibus-setting3.png" alt="Screenshot-ibus-setting3.png" width="457" height="474"><br>
+<br>
+<h3><a name="7"></a>古いバージョンを入手するには？</h3>
+CentOS 
+の公式サイトでは最新バージョンのみを保守しています。多くのミラーサイトは定期的に同期しているので、以前の古いバージョン（マイナーバージョンを含
+む）は通常存在しません。ただし同期の仕方によっては、同期先に古いファイルが残っていてかつ、同期元に同名のファイルが存在しなくなった時、そのままの
+状態で放置されることがあり得ます（rsync --delete オプションを設定しない場合）。<br>
+<br>
+vault.centos.org ( <a href="https://vault.centos.org/">https://vault.centos.org/</a> ) という非公式サイトでアーカイブされています。Vault mirror は複数存在するのでそこからダウンロードが可能です。日本国内にも以下のとおり /centos-vault ツリーに複数のミラーが存在します（2020.12.19 現在の確認分）。<br>
+<br>
+<ul>
+  <li><a href="http://ftp.iij.ad.jp/pub/linux/">http://ftp.iij.ad.jp/pub/linux/</a> <br>
+  </li>
+  <li><a href="http://ftp.jaist.ac.jp/pub/Linux/">http://ftp.jaist.ac.jp/pub/Linux/</a> <br>
+  </li>
+  <li><a href="http://ftp.riken.jp/Linux/">http://ftp.riken.jp/Linux/</a> <br>
+  </li>
+</ul>
+&nbsp;<br>
+
+<h3><a name="8"></a>CentOS はサポートが終わったら使えなくなりますか？</h3>
+上記の項目で紹介したように、予定では 2024年6月の CentOS 7 
+のサポート終了をもって、従来のプロジェクトがすべて終了します。ただ、CentOS Stream 
+という別の関連プロジェクトでは、引き続きディストリビューションの開発が行われる予定です。CentOS Stream は 最近の Fedora 
+プロジェクトのような位置付けとされる予定です。つまり、製品版として市場に公開される Red Hat Enterprise Linux 
+(RHEL) を完成させるためのテスト版として CentOS Stream が開発されていくことが公表されました。<br>
+<br>
+ CentOS Stream が開発用のテスト版ということを理解した上で、これに乗り換えることが可能です。当然のことですが、これは CentOS
+ 
+のサポートが終了したら更新パッケージが一切リリースされないという意味合いです。すでにインストールされたマシンをスタンドアロンで継続的に運用するこ
+とは可能です。<br>
+<br>
+なお、RHEL 
+のクローンであることを今後も希望する場合には、サードパーティの類似プロジェクトを利用することが実際可能です。Springdale 
+Liunx はその中の1つとして選択しても良いでしょう。<a href="../springdale/index.html">Springdale Linux に関するページ</a>を作成しました。
+<ul>
+  <li>Springdale Linux (SDL) 公式サイト -- <a href="http://springdale.math.ias.edu/">http://springdale.math.ias.edu/</a> <br>
+&nbsp;SDL の日本国内ミラー -- <a href="http://ftp.riken.jp/Linux/springdale/">http://ftp.riken.jp/Linux/springdale/</a> <br>
+  </li>
+</ul><br>
+<hr width="100%">
+<div style="text-align: left;">前のページ　次のページ　<a href="index.html">CentOS Top</a>　<a href="../../../index.html"><big>HOME</big></a></div>
+
+
+
+</body></html>

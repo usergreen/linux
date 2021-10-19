@@ -1,0 +1,1333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Sarge</title>
+  </head>
+  <body>
+    <div id="navigator">
+      <div><a href="../../../../index.html" title="FrontPage (2d)">HOME</a>
+        / <a href="../../index.html">Distributions</a> / <a
+          href="../index.html">Debian</a> / 3.1-Sarge</div>
+      <hr size="2" width="100%">
+      <h2 id="content_1_0">Debian GNU/Linux 3.1 (Sarge)</h2>
+      <p>Debian GNU/Linux 3.1 (alias: Sarge) に関する FAQ です。<br>
+        Debian 4.0 (Etch) (安定版)に関することは、<a
+          href="http://f40.aaa.livedoor.jp/%7Egreen/?DebianLinux-FAQ%2FEtch"
+          title="DebianLinux-FAQ/Etch (1610d)">DebianLinux-FAQ/Etch</a>へ。</p>
+      <div class="contents">
+        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_0">Debian GNU/Linux 3.1 (Sarge)</a>
+            <ul class="list2" style="padding-left: 16px; margin-left:
+              16px;">
+              <li><a href="#content_1_1">公式ミラー/ダウンロードサイト
+                  (Downloading/Mirrors)</a></li>
+              <li><a href="#content_1_2">インストール用 DVD は入手可能ですか？</a></li>
+              <li><a href="#content_1_3">Debian 3.1 (Sarge)
+                  はいつまで公式サポートされますか？</a></li>
+              <li><a href="#content_1_4">Debian 3.1 (Sarge) [旧安定版]
+                  をインストールする</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_5">ニュース</a></li>
+                  <li><a href="#content_1_6">セキュリティ・アナウンス (2007.06.14)</a></li>
+                  <li><a href="#content_1_7">Sarge ネットワークインストール用CDについて
+                      (About Debian's Sarge Netinstallation CD)</a></li>
+                  <li><a href="#content_1_8">新しい d-i でインストールする (How to
+                      install Debian 3.1 (Sarge) with the new
+                      debian-installer)</a></li>
+                  <li><a href="#content_1_9">Sarge ネットワーク・インストール
+                      ('netinst') の手順について</a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_10">アップデート関係</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_11">システムやパッケージの更新(アップデート)を行う（コ
+                      マンドラインで操 作）</a></li>
+                  <li><a href="#content_1_12">グラフィカルな自動アップデート（APT Update
+                      Watcher）</a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_13">APT の sources.list 設定について</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_14">3.1 Sarge のデフォルトの
+                      sources.list</a></li>
+                  <li><a href="#content_1_15">sources.list を修正して Sarge
+                      専用で利用する（必須事項）</a></li>
+                  <li><a href="#content_1_16">ツールを使ってミラーサイトを変更する
+                      (apt-setup)</a></li>
+                  <li><a href="#content_1_17">ローカルに保存したファイルを APT-line
+                      に追加するには？</a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_18">デスクトップ環境をインストールする一般的な方法</a></li>
+              <li><a href="#content_1_19">tasksel
+                  を使わない場合のデスクトップ環境を導入する手順</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_20">tasksel を使わないで GNOME
+                      2.6(2.8) を単独でインストールする</a></li>
+                  <li><a href="#content_1_21">KDE を APT で単独インストールする</a></li>
+                  <li><a href="#content_1_22">日本語表示ができるようにする手順</a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_23">日本語入力環境の設定方法について</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_24">その1 - SCIM-uim-Anthy
+                      （安定版を利用）</a></li>
+                  <li><a href="#content_1_25">その2 -
+                      SCIM-Anthy（サードパーティを利用）</a></li>
+                  <li><a href="#content_1_26">その3 - SCIM-Anthy（安定版利用）</a></li>
+                  <li><a href="#content_1_27">その4 - kinput2-Canna
+                      （従来の入力方式）</a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_28">日本語入力システムを他へ変更したいとき
+                  (kinput2-Canna → SCIM-Anthy / SCIM-uim-Anthy)</a></li>
+              <li><a href="#content_1_29">言語コード(ロケール)の設定と変更</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_30">デフォルトの言語コード(ロケール)切替えとその確認方
+                      法</a></li>
+                  <li><a href="#content_1_31">GNOMEデスクトップのロケールを一時的に切替えるに
+                      は？</a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_32">グラフィカル・ログイン時に kterm
+                  が自動起動しないようにする</a></li>
+              <li><a href="#content_1_33">2.4系カーネルをインストールした Sarge
+                  に2.6系カーネルを追加する</a></li>
+              <li><a href="#content_1_34">一時的にテキストモード (CUI) でログインする</a></li>
+              <li><a href="#content_1_35">システムをシャットダウン(終了)させるには？</a></li>
+              <li><a href="#content_1_36">ディスプレイ・マネージャーを GDM へ変更する（GDM
+                  の追加）</a></li>
+              <li><a href="#content_1_37">ディスプレイ・マネージャーで KDM を使う</a></li>
+              <li><a href="#content_1_38">ディスプレイマネージャー (gdm, xdm)
+                  を交互に変更する</a></li>
+              <li><a href="#content_1_39">GNOME の日本語ユーザーガイドはありませんか?</a></li>
+              <li><a href="#content_1_40">GNOME 2.8(2.6) TIPs &amp; FAQs</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_41">GNOME とは何ですか？</a></li>
+                  <li><a href="#content_1_42">GNOME 2.8 スクリーンショット</a></li>
+                  <li><a href="#content_1_43">GNOME 2.6 スクリーンショット</a></li>
+                  <li><a href="#content_1_44">フロッピーや USB
+                      メモリ、CDのデータを読み込む方法は？</a></li>
+                  <li><a href="#content_1_45">ファイルの操作を「シングルクリック」で済ませたい</a></li>
+                  <li><a href="#content_1_46">クイック起動アイコンをタスクバー (Panel)
+                      に追加する</a></li>
+                  <li><a href="#content_1_47">クイック起動アイコンの大きさを変更する</a></li>
+                  <li><a href="#content_1_48">画面最上部のタスクバー (Top Panel)
+                      を消して画面を広く使う</a></li>
+                  <li><a href="#content_1_49">FTP クライアントをインストールする</a></li>
+                  <li><a href="#content_1_50">壁紙 (Wallpapers) を追加する</a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_51">K Desktop Environment (KDE)
+                  について</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_52">KDE スクリーンショット (リリース版)</a></li>
+                  <li><a href="#content_1_53">KDE 3.2 スクリーンショット (RC版)</a></li>
+                  <li><a href="#content_1_54">KDE のユーザーガイドは?</a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_55">日本語メーラー Sylpheed をインストールする</a></li>
+              <li><a href="#content_1_56">文書作成スイート OpenOffice.org
+                  1.1.2.x を追加インストールする</a></li>
+              <li><a href="#content_1_57">acroread-jpn_7 のインストール</a></li>
+              <li><a href="#content_1_58">Firefox ブラウザは 安定版 (Sarge)
+                  で使えますか？</a></li>
+              <li><a href="#content_1_59">Firefox 1.5.x
+                  バージョンを安定版（Sarge）で使うには？</a></li>
+              <li><a href="#content_1_60">Mozilla
+                  ブラウザーのメニューが日本語化されていないときは？</a></li>
+              <li><a href="#content_1_61">利用できる無線LANカードについて</a></li>
+              <li><a href="#content_1_62">コンピュータの時計を正確に合わせる(同期させる)</a></li>
+              <li><a href="#content_1_63">インクジェット・プリンター等を使って印刷する</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_64">『Debian GNU/Linux 徹底入門 第3版
+                      〜Sarge対応』情報ページ</a></li>
+                  <li><a href="#content_1_65">Sarge 最新情報 公式ページ</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_1">公式ミラー/ダウンロードサイト (Downloading/Mirrors)</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>旧安定版 (old stable) の公式 CD イメージ配布先<br>
+          <a href="http://cdimage.debian.org/cdimage/archive/">http://cdimage.debian.org/cdimage/archive/</a><br>
+          代表的なインストール用ISOイメージ（ネットワークインストール向け）
+          <pre> debian-31r7-i386-netinst.iso</pre>
+        </li>
+        <li>注意　古い CD/DVD イメージは cdimage.debian.org
+          のアーカイブセクションで得られます。ダウンロードする際は、最新の修正版を入手します。<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?DebianLinux-FAQ%2FCdimageProblem"
+            title="DebianLinux-FAQ/CdimageProblem (2079d)">DebianLinux-FAQ/CdimageProblem</a>
+          参照。</li>
+        <li><a href="http://distrowatch.com/?newsid=04678">Distribution
+            Release: Debian GNU/Linux 3.1r7</a></li>
+        <li><a href="http://www.jp.debian.org/News/2007/20071228">Debian
+            GNU/Linux 3.1 updated</a> (2007-12-28)</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_2">インストール用 DVD は入手可能ですか？</h3>
+      <p>インターネットに接続し、デビアン・インストーラー (DI)
+        で作業を行うことが一般的ですが、この環境を用意するのが難しい場合には、インストール用 DVD が入手可能です。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://book.mycom.co.jp/linuxfan/68397-06-06.shtml">Linux
+
+            Fan 「Debian インストールと完全設定ガイド」</a> (2006年02月24日発行)<br>
+          最新アップデート版 3.1r1（Sarge）DVD-ROM を収録し、詳細な解説記事もあります。</li>
+        <li><a
+href="http://direct.idg.co.jp/item_detail.command?item_cd=LW_200509&amp;category_cd=SHINKAN_MAGAZINE">Linux
+
+            World 2005年9月号「Debian特集号」</a><br>
+          約50ページに及ぶ解説記事と共に、インストール用 DVD-ROM が添付されています。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_3">Debian 3.1 (Sarge) はいつまで公式サポートされますか？</h3>
+      <p>4.0 (Etch) の公式リリース以後も、相当の期間セキュリティ・サポートが提供される予定です。（過去の例では、3.0
+        -Woody が1年余りにわたってサポートされました。）</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_4">Debian 3.1 (Sarge) [旧安定版] をインストールする</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_5">ニュース</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://www.jp.debian.org/News/2005/20051220">3.1
+            updated (r1) - December 20th, 2005</a><br>
+          "This is the first update of Debian GNU/Linux 3.1 (codename
+          ‘sarge’) which mainly adds security updates to the stable
+          release, along with some corrections to serious problems."</li>
+        <li><a href="http://pcweb.mycom.co.jp/news/2005/06/07/028.html">Debian
+
+            GNU/Linux 3.1 "sarge"がリリース - woodyから約3年ぶり</a> (MY COMWEB,
+          2005-06-07)</li>
+        <li><a
+            href="http://www.itmedia.co.jp/enterprise/articles/0506/07/news016.html">Debian
+
+            Project、ついにsargeを公式リリース</a> (ITmedia エンタープライズ, 2005-06-07)
+          <ul class="list2" style="padding-left: 16px; margin-left:
+            16px;">
+            <li><a
+                href="http://www.itmedia.co.jp/enterprise/0404/15/epn01.html">開
+                発者団体を貫く Debian JP Project、武藤健志氏コラム</a> (ITmedia
+              エンタープライズ, 2004-04-15)</li>
+          </ul>
+        </li>
+        <li>インタビュー：Martin Michlmayr（Debianプロジェクト・リーダー）<br>
+          <a
+            href="http://japan.linux.com/desktop/05/01/11/138258.shtml?topic=1">Debian
+
+            GNU/Linuxの次期リリースであるSargeについて</a> (japan.linux.com,
+          2005.01.11)</li>
+        <li>Debian-Installer release candidate 3 March 23rd, 2004<br>
+          The Debian Installer team is proud to announce the third
+          release candidate of the Debian Installer for Debian GNU/Linux
+          Sarge. We love doing this so much that we couldn't resist
+          updating the installer one more time before the official
+          release of Debian 3.1.
+          <blockquote>
+            <p class="quotation"><a
+href="http://www.nl.debian.org/devel/debian-installer/News/2005/20050323">http://www.nl.debian.org/devel/debian-installer/News/2005/20050323</a></p>
+          </blockquote>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Debian-Installer release candidate 2 November 22nd, 2004<br>
+          <a
+href="http://www.jp.debian.org/devel/debian-installer/News/2004/20041122">http://www.jp.debian.org/devel/debian-installer/News/2004/20041122</a></li>
+        <li>Debian-Installer プレ RC2 テクノロジープレビューリリース (2004.09.30)<br>
+          <a
+            href="http://www.debian.org/devel/debian-installer/News/2004/20040930">http://www.debian.org/devel/debian-installer/News/2004/20040930</a></li>
+        <li>ニュース：「Debian-Installer リリース候補 1 をついに発表」(2004-08-07)<br>
+          <a
+href="http://www.nl.debian.org/devel/debian-installer/News/2004/20040807">http://www.nl.debian.org/devel/debian-installer/News/2004/20040807</a></li>
+        <li>Debian-Installer: Ports Status Page<br>
+          <a
+            href="http://www.debian.org/devel/debian-installer/ports-status">http://www.debian.org/devel/debian-installer/ports-status</a></li>
+        <li>レビュー：<a
+            href="http://japan.linux.com/desktop/04/08/11/0136232.shtml?topic=1">Debian-Installer
+
+            RC1</a> by Mr.Bruce-Byfield from <span class="noexists">NewsForge<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=NewsForge&amp;refer=DebianLinux-FAQ%2F3.1-Sarge">?</a></span>.com
+
+          (<span class="noexists">NewsForge<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=NewsForge&amp;refer=DebianLinux-FAQ%2F3.1-Sarge">?</a></span>)
+          (2004.08.11)
+          <blockquote>
+            <p class="quotation">「4年間の開発期間を経て、新しいDebianインストーラの初のリリース候補がつ
+              いに登場した。ほかのインストールプログラムを使い慣れている人なら、ちょっと驚くようなものになっている。Debianの
+              長所を最初から発揮し、 Debianはインストールが難しいという認識を覆すのだ。」(一部引用)</p>
+          </blockquote>
+        </li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_6">セキュリティ・アナウンス (2007.06.14)</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://www.jp.debian.org/security/2007/dsa-1308">Debian
+Security
+
+            Advisory DSA-1308-1 iceweasel -- several vulnerabilities</a><br>
+          「旧安定版 (Sarge) 向けの更新は提供されません。Mozilla 製品に関する一連のセキ<br>
+          ュリティ更新は今後も予想されますが、Debian には古い Mozilla 製品に関するセ<br>
+          キュリティ修正のバックポートを行うのに必要なリソースがありません。」
+          <blockquote>
+            <p class="quotation">Fixes for the oldstable distribution
+              (sarge) are not available. While there will be another
+              round of security updates for Mozilla products, Debian
+              doesn't have the resources to backport further security
+              fixes to the old Mozilla products. You're strongly
+              encouraged to upgrade to stable as soon as possible.</p>
+          </blockquote>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>5.11 Mozilla 製品のセキュリティの状&gt;<a
+href="http://www.jp.debian.org/releases/stable/i386/release-notes/ch-information.ja.html#s-mozilla-security">http://www.jp.debian.org/releases/stable/i386/release-notes/ch-information.ja.html#s-mozilla-security</a>]]</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_7">Sarge ネットワークインストール用CDについて (About Debian's
+        Sarge Netinstallation CD)</h4>
+      <p>次の URL または上記の複数のミラーサイトよりダウンロードが可能です：</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Debian GNU/Linux の CD<br>
+          <a href="http://www.debian.org/CD/">http://www.debian.org/CD/</a></li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>最小の CD を使って、ネットワークインストールする<br>
+          <a href="http://www.debian.org/CD/netinst/">http://www.debian.org/CD/netinst/</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_8">新しい d-i でインストールする (How to install Debian 3.1
+        (Sarge) with the new debian-installer)</h4>
+      <p>[for Intel x86]</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Debian GNU/Linux インストールガイド (HTML)<br>
+          <a
+            href="http://www.jp.debian.org/releases/stable/i386/index.html.ja">http://www.jp.debian.org/releases/stable/i386/index.html.ja</a></li>
+        <li>Debian GNU/Linux インストールガイド (plain text)<br>
+          <a
+            href="http://www.jp.debian.org/releases/stable/i386/install.txt.ja">http://www.jp.debian.org/releases/stable/i386/install.txt.ja</a></li>
+        <li>Debian GNU/Linux 3.1 -- リリースノート<br>
+          <a
+            href="http://www.jp.debian.org/releases/stable/i386/release-notes/">http://www.jp.debian.org/releases/stable/i386/release-notes/</a></li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Please see <span class="noexists">INSTALLATION-HOWTO<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=SargeInstallationHOWTO&amp;refer=DebianLinux-FAQ%2F3.1-Sarge">?</a></span>
+          under mnt/cdrom/doc/install/ (英文)</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_9">Sarge ネットワーク・インストール ('netinst') の手順について</h4>
+      <p>以下の手順は、Sarge Netinst CD を使ってインストールする場合の概要(流れ)を説明したものです。</p>
+      <ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>sarge-i386-netinst.iso を入手します。最新版 (2006-02-04現在) は
+          debian-31r1a-i386-netinst.iso です。iso イメージからCD-R ライティングソフトを使って
+          CD-R を作成する方法についてはここでは省略しますので、当サイト内の関連ページをご覧ください。</li>
+        <li>CD-ROM ドライブに sarge-i386-netinst CD を挿入した後、システムを再起動させます。</li>
+        <li>「Debian」というロゴとともに起動画面が表示されます。リターンキーを押してインストール作業を開始します。<br>
+          Linux kernel 2.6.8 のインストールはオプションなので、キーボードより linux26
+          と入力した後リターンキーを押す必要があります。</li>
+        <li>「Choose Language」の画面に切り替わったら、Japaneseｰ 日本語 を選びます。</li>
+        <li>「キーボード配置の選択」では、日本(106 キー)
+          を選びます。そうすると、すぐにハードウェアの自動検出が開始され、インストール用コンポーネントが自動的にインストールされます。</li>
+        <li>ネットワークの設定。無線LAN の場合、eth0 の無線 ESS ID および WEP
+          キーの入力を求められます。システムがルーターと接続されているのであれば、DHCP
+          による自動設定が実行されます。ただし、自動設定が完了できないときは、たいてい手動による再設定を実行すれば解決できます。</li>
+        <li>ディスクのパーティショニングを行います。この項目では、Fedora や KNOPPIX
+          のハードディスク・インストール時と同様、パーティションの設定を対話式に行うことになります。必要に応じて、スワップ領域とシステ
+          ム領域を設定します。</li>
+        <li>Debian ベースシステムのインストールが自動的に開始され、完了すれば次の項目へと進みます。</li>
+        <li>ブートローダー GRUB をインストールするか否かを選択します。これはオプションですが、Linux
+          を単独でインストールする場合や、Windows OS インストール済みのシステムの空き領域に Linux
+          を追加インストールする場合は、GRUB を MBR へインストールするのがふつうです。</li>
+        <li>以上インストールが完了すれば CD-ROM はドライブから自動排出されるので、その
+          CDメディアを取り出してからリターンキーを押して作業を続行(ここではシステムを再起動)します。</li>
+        <li>Debian ベースシステムの設定を行います。
+          <ol class="list2" style="padding-left: 16px; margin-left:
+            16px;">
+            <li>時間帯の設定 ハードウェアの時計は GMT に合わせていますか? ＜いいえ＞</li>
+            <li>Asia/Tokyo の時間帯でよろしいですか? ＜はい＞</li>
+            <li>アカウントのパスワード設定</li>
+            <li>PPP 接続の設定 (オプション)</li>
+            <li>APT の設定・ミラーサーバーの選択</li>
+            <li>パッケージの選択 (tasksel による設定) GNOME/KDE
+              によるグラフィカルなデスクトップ操作が行えるようにするには、ふつう「デスクトップ環境」を選択します。なお、始めから日
+              本語によるインストールを選択 している場合には、canna canna-utils language-env
+              といった日本語入力環境に必要な最低限のパッケージも自動的にインストールされます。印刷サーバも選択しておくと良いでしょ
+              う。</li>
+          </ol>
+        </li>
+        <li>インターネットに自動接続し、ミラーサイトよりパッケージのダウンロードが開始されます。デスクトップ環境が選択されている場合
+          には、ダウン ロードは 600MB 前後のサイズとなります。ただし、展開後には 1.7GB のディスク容量が必要となります。</li>
+        <li>ダウンロードが完了したら、xserver-xfree86 の設定画面になります。この項目では、以下の設定を行います。
+          <ol class="list2" style="padding-left: 16px; margin-left:
+            16px;">
+            <li>ビデオチップの選択</li>
+            <li>カーネルフレーム・バッファデバイスを使いますか？ ＜はい＞</li>
+            <li>マウスの自動認識を試みますか? ＜はい＞</li>
+            <li>モニタの自動認識を試みますか? ＜いいえ＞<br>
+              ※液晶ディスプレイは自動認識されにくいので、＜いいえ＞を選択しマニュアル設定することを推めます。</li>
+            <li>あなたのモニタはLCDデバイスですか? LCDなら＜はい＞、CRTなら＜いいえ＞</li>
+            <li>モニタの特性を選択 (Medium または Advanced)</li>
+          </ol>
+        </li>
+        <li>ダウンロードしたパッケージが展開され、インストールが自動的に開始されます。インストールが完了したら、次の項目が表示されま
+          す。</li>
+        <li>Exim v4 の設定 (exim4-config)<br>
+          「ローカル配信のみ； ネットワークなし」を選択します。ISP等のメールの受信、送信には通常 exim
+          を利用しないので、この設定で問題ありません。なお、必要なければこの項目は設定しないよう選択することも可能です。</li>
+        <li>以上で Debian ベースシステムの設定は完了です。(この設定をやり直すには、 base-config
+          を再実行します。)</li>
+        <li>GNOME
+          デスクトップマネージャが日本語で立ち上がり、ログイン画面が表示されます。先に登録した一般ユーザーでログインしてください。</li>
+        <li>GNOMEデスクトップが標準で立ち上がります。この時点で、表示は全て日本語になっています。 <br
+            class="spacer">
+          デスクトップの解像度が適当でない場合には、 # base-config でなくて # dpkg-reconfigure
+          xserver-xfree86
+          を実行します。この設定変更を反映させる(有効とする)には、システムを再起動させる必要があります。</li>
+        <li>日本語入力に Kinput2-Canna を利用したいときは、<a
+            href="http://f40.aaa.livedoor.jp/%7Egreen/?DebianLinux%2FLanguageEnv"
+            title="DebianLinux/LanguageEnv (2359d)">$set-language-env</a>
+          を実行します。8:ja (Nihongo Japanese)
+          を選択し、その他の質問にはリターンキーを押していけば問題なく設定が済みます。 <br class="spacer">
+          SCIM-UIM-Anty を利用するときは、$set-language-env を実行せず、<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?DebianLinux-FAQ%2FScim-uim-anthy"
+            title="DebianLinux-FAQ/Scim-uim-anthy (2038d)">こちらを参照のこと</a>。</li>
+        <li>一度ログアウトし、再び同じユーザーでログインします。</li>
+        <li>Shift + Space キーで日本語入力が開始できます。<br>
+          <br>
+          以上で Debian 3.1 (Sarge) のインストールと日本語環境の構築は完了です。</li>
+      </ol>
+      <p>[補足情報]<br>
+      </p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>KDE デスクトップを利用したいときは、ログイン画面で メニュー &gt; セッション &gt; KDE
+          を選択します。KPersonalizer
+          が自動的に表示されるので、言語に日本語を設定します。KDEデスクトップが立ち上がれば、表示は全て日本語となります。</li>
+        <li>この新しいデビアン・インストーラー (d-i) を使ってネットワーク・インストールする際、Debian
+          公式サイトのうち直接関連するのは、次の箇所です。併せて参照してください。</li>
+        <li><a
+            href="http://d-i.alioth.debian.org/manual/ja.i386/pr01.html">i386
+
+            用 Debian GNU/Linux 3.1 のインストール</a></li>
+        <li><a
+            href="http://d-i.alioth.debian.org/manual/ja.i386/ch07.html">第
+            7 章 新しい Debian システムを起動させる</a>
+          <blockquote>
+            <p class="quotation">7.1. 決着のとき<br>
+              7.2. Debian 起動後の (基本) 設定<br>
+              7.2.1. タイムゾーンの設定<br>
+              7.2.2. ユーザとパスワードの設定<br>
+              7.2.3. PPP の設定<br>
+              7.2.4. APT の設定<br>
+              7.2.5. パッケージのインストール<br>
+              7.2.6. ソフトウェアインストール中の質問<br>
+              7.2.7. メール配送エージェントの設定<br>
+              7.3. ログイン</p>
+          </blockquote>
+        </li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_10">アップデート関係</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_11">システムやパッケージの更新(アップデート)を行う（コマンドラインで操作）</h4>
+      <p>デスクトップ・メニューにある「ターミナル コンソール」より、次のコマンドを使ってアップデートが行えます。</p>
+      <blockquote>
+        <p class="quotation"><br>
+          # apt-get update …システムのデータベースを最新のものに更新します<br>
+          # apt-get upgrade …実際にアップデートを実行します<br>
+          # apt-get dist-upgrade …全てのパッケージがアップデートの対象となります</p>
+      </blockquote>
+      <p>インストール作業が完了したら、できるだけ早い機会にアップデートすることが大切です。アップデートの作業を随時行うことで、システム
+        を最新の状態 に管理できます。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>インタラクティブなテキストベース・ツール Aptitude も利用できます。<br>
+          Aptitude コマンドの詳細については、<a
+            href="http://f40.aaa.livedoor.jp/%7Egreen/?DebianLinux-FAQ%2FAptitude"
+            title="DebianLinux-FAQ/Aptitude (2048d)">DebianLinux-FAQ/Aptitude</a>
+          参照。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_12">グラフィカルな自動アップデート（APT Update Watcher）</h4>
+      <p>GNOME 環境では、大変便利なアップデートツールが用意されています。</p>
+      <pre> # apt-get install apt-watch</pre>
+      <blockquote>
+        <p class="quotation">パッケージリストを読みこんでいます... 完了<br>
+          依存関係ツリーを作成しています... 完了<br>
+          以下のパッケージが新たにインストールされます:<br>
+          apt-watch<br>
+          アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 0 個。<br>
+          69.5kB のアーカイブを取得する必要があります。<br>
+          展開後に追加で 315kB のディスク容量が消費されます。</p>
+      </blockquote>
+      <p>インストール後、このアプレットをパネルに追加してください。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_13">APT の sources.list 設定について</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_14">3.1 Sarge のデフォルトの sources.list</h4>
+      <p>ネットワークインストール直後の etc/apt/sources.list の初期設定は、次のとおりです。</p>
+      <blockquote>
+        <p class="quotation">#deb file:///cdrom/ sarge main<br>
+          <br>
+          deb <a href="http://ftp.jp.debian.org/debian/">http://ftp.jp.debian.org/debian/</a>
+          stable main<br>
+          deb-src <a href="http://ftp.jp.debian.org/debian/">http://ftp.jp.debian.org/debian/</a>
+          stable main<br>
+          <br>
+          deb <a href="http://security.debian.org/">http://security.debian.org/</a>
+          stable/updates main</p>
+      </blockquote>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_15">sources.list を修正して Sarge 専用で利用する（必須事項）</h4>
+      <p>次のように /etc/apt/sources.list を書き換えれば、 Sarge
+        向けに用意されたパッケージのみがアップデートの対象となります。下記の例では、Security
+        アップデートも対象に含まれています。いずれの場合も、stable を sarge
+        に置き換えただけですが、この設定はユーザーが必ず行わなくてはいけません。</p>
+      <blockquote>
+        <p class="quotation">#deb file:///cdrom/ sarge main<br>
+          <br>
+          deb <a href="http://ftp.jp.debian.org/debian/">http://ftp.jp.debian.org/debian/</a>
+          sarge main contrib non-free<br>
+          deb-src <a href="http://ftp.jp.debian.org/debian/">http://ftp.jp.debian.org/debian/</a>
+          sarge main contrib non-free<br>
+          <br>
+          deb <a href="http://security.debian.org/">http://security.debian.org/</a>
+          sarge/updates main contrib non-free</p>
+      </blockquote>
+      <p>追加したら、apt-get update と apt-get upgrade を順に実行してください。<br>
+        上の例のように contrib および non-free に含まれるパッケージも扱える対象とすることが可能です。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_16">ツールを使ってミラーサイトを変更する (apt-setup)</h4>
+      <p>他のミラーサイトへと変更するには、次のコマンドを使用します。</p>
+      <pre> # apt-setup</pre>
+      <p>表示されるメッセージに従って対話式に設定を行うので、/etc/apt/sources.list
+        を直接書き換える必要が無くて便利です。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_17">ローカルに保存したファイルを APT-line に追加するには？</h4>
+      <ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Debian パッケージ用の書庫（フォルダ）を任意の場所に任意の名前で作成<br>
+          例： /tem/deb あるいは /home/hoge/deb など。</li>
+        <li>Debian パッケージをそのフォルダにコピーまたは移動。</li>
+        <li>/etc/apt/sources.list に次の一行を追加。<br>
+          deb file:/home/hoge/deb ./</li>
+        <li>コマンドラインで、そのフォルダへ移動し dpkg-scanpackages を実行。<br>
+          $ cd deb （または $ cd /tem/deb/ などとして移動。）<br>
+          $ dpkg-scanpackages . /dev/null| gzip -9 &gt; Packages.gz</li>
+        <li>アップデートの実行。<br>
+          # apt-get update<br>
+          以上で、作成した書庫が APT-line に追加されます。</li>
+      </ol>
+      <p>これで、今後このフォルダにあるパッケージをインストールする場合、たとえ依存関係で不足するパッケージがあっても他のリポジトリを参
+        照し自動的に インストールしてくれるようになります。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>参照サイト：<br>
+          <a
+href="http://lagendra.s.kanazawa-u.ac.jp/ogurisu/manuals/linux/debian-tips.html#mypackage">自
+            前のpackageをaptでinstall</a><br>
+          <a href="http://debian.fam.cx/index.php?AptGet#content_1_22">ロー
+            カルにある パッケージを apt-get でインストールしたい</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_18">デスクトップ環境をインストールする一般的な方法</h3>
+      <p>最も一般的な方法は、インストール時に自動的に表示される tasksel
+        という項目の中で「デスクトップ環境」を選択することです。GNOME KDE
+        それぞれに必要なパッケージ一式をまとめてインストールしてくれます。</p>
+      <p>インストール時に「デスクトップ環境」を選択しなかった場合でも、インストール後、次のコマンドでインストールを実行できます。</p>
+      <pre> # tasksel</pre>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_19">tasksel を使わない場合のデスクトップ環境を導入する手順</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_20">tasksel を使わないで GNOME 2.6(2.8) を単独でインストールする</h4>
+      <p>(2005.01.14 現在、Testing には GNOME 2.8 が含まれるようになったので、適宜読み替えてください。)</p>
+      <br class="spacer">
+      <p>「デスクトップ環境」をインストールする最も一般的な方法は tasksel を使うことです(2004.09.11
+        現在利用可能を確認) が、この項目では別のやり方を紹介します。</p>
+      <br class="spacer">
+      <p>tasksel が機能しなければデスクトップ環境がインストール不可能というわけではありません。替わりに、パッケージ管理ツール
+        APT を使って簡単にインストールができます。次のとおりコマンドを入力して作業を進めてください。</p>
+      <blockquote>
+        <p class="quotation"># LANG=C apt-get install gnome
+          xserver-xfree86 x-window-system</p>
+      </blockquote>
+      <p>インストールが完了したら、XWindow の確認を行うために次のコマンドを使います。</p>
+      <blockquote>
+        <p class="quotation"># startx<br>
+          として、グラフィカルな画面が正常に表示できることを確認します。必要な場合は、<br>
+          # dpkg-reconfigure xserver-xfree86<br>
+          として、ビデオカード(チップ)やディスプレイ、マウスなどの設定変更を行います。</p>
+      </blockquote>
+      <hr class="full_hr">
+      <p>GNOME デスクトップ環境のオプション・インストールには、次のコマンドがあります。</p>
+      <blockquote>
+        <p class="quotation"># apt-get install gnome-core (最小限の環境)</p>
+        <br class="spacer">
+        <p class="quotation"># apt-get install gnome-desktop-environment
+          (関連パッケージを追加インストール)</p>
+      </blockquote>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_21">KDE を APT で単独インストールする</h4>
+      <p>この場合は、次のコマンドでデスクトップ環境導入に必要な多数のパッケージが芋づる式にインストールされます。</p>
+      <pre> # apt-get update<br> # apt-get install kdebase kde-i18n-ja</pre>
+      <blockquote>
+        <p class="quotation">以下の特別パッケージがインストールされます:<br>
+          bc enscript gv kappfinder kate kcontrol kdebase-bin
+          kdebase-data kdebase-kio-plugins kdelibs-bin kdelibs-data
+          kdelibs4 kdeprint kdesktop kfind khelpcenter kicker klipper
+          kmenuedit konqueror konqueror-nsplugins konsole kpager
+          kpersonalizer ksmserver ksplash ksysguard ksysguardd ktip<br>
+          kwin lesstif1 libarts1 libartsc0 libkonq4 libnetpbm10
+          libqt3c102-mt libraw1394-5 libsensors3 libtiff3g menu-xdg
+          netpbm poster psutils xaw3dg<br>
+          <br>
+          提案パッケージ:<br>
+          aspell ispell kate-plugins konq-speaker kde libpam-cracklib
+          xscreensaver-gl xearth xplanet mtools efax hylafax-client
+          mgetty-fax kicker-applets konq-plugins java-virtual-machine
+          smbclient klisa libqt3c102-mt-psql libqt3c102-mt-mysql
+          libqt3c102-mt-odbc lm-sensors lm-sensors-mod-2.7
+          kernel-image-2.6<br>
+          <br>
+          推奨パッケージ:<br>
+          kregexpeditor kdm xfonts-konsole kdebase-doc libarts
+          libarts-alsa kdebase-audiolibs kdebase3-audiolibs kscreensaver
+          kdebase-libs kview<br>
+          <br>
+          以下のパッケージが新たにインストールされます:<br>
+          bc enscript gv kappfinder kate kcontrol kde-i18n-ja kdebase
+          kdebase-bin kdebase-data kdebase-kio-plugins kdelibs-bin
+          kdelibs-data kdelibs4 kdeprint kdesktop kfind khelpcenter
+          kicker klipper kmenuedit konqueror konqueror-nsplugins konsole
+          kpager kpersonalizer ksmserver ksplash ksysguard<br>
+          ksysguardd ktip kwin lesstif1 libarts1 libartsc0 libkonq4
+          libnetpbm10 libqt3c102-mt libraw1394-5 libsensors3 libtiff3g
+          menu-xdg netpbm poster psutils xaw3dg</p>
+      </blockquote>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>apt-get install kdebase に替えて apt-get install kde
+          としても導入が可能となりました。(2004.09.11 現在で確認した限り)</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_22">日本語表示ができるようにする手順</h4>
+      <p>以下のとおり、日本語用のフォント・パッケージを追加インストールします。</p>
+      <pre> # apt-get install ttf-kochi-gothic ttf-kochi-mincho</pre>
+      <p>一度ログオフし、再度そのユーザーでログオンしたら、画面は日本語で表示されるようになります。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_23">日本語入力環境の設定方法について</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_24">その1 - SCIM-uim-Anthy （安定版を利用）</h4>
+      <p>以下の手順では、$ set-language-env コマンドを一切使用しないことに注意してください。</p>
+      <ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>パッケージのダウンロードとインストール
+          <pre> # apt-get install scim-uim scim-gtk2-immodule uim-anthy</pre>
+          <blockquote>
+            <p class="quotation">パッケージリストを読みこんでいます... 完了<br>
+              依存関係ツリーを作成しています... 完了<br>
+              以下の特別パッケージがインストールされます:<br>
+              anthy libanthy0 libm17n-0 libotf0 libuim0 m17n-db scim
+              scim-config-socket scim-frontend-socket scim-server-socket
+              uim-common uim-utils<br>
+              <br>
+              提案パッケージ:<br>
+              m17n-docs scim-chinese scim-hangul scim-chewing scim-m17n
+              scim-tables-additional scim-tables-ja scim-tables-ko
+              scim-tables-zh uim-gtk2.0 uim-xim<br>
+              <br>
+              推奨パッケージ:<br>
+              m17n-env<br>
+              <br>
+              以下のパッケージが新たにインストールされます:<br>
+              anthy libanthy0 libm17n-0 libotf0 libuim0 m17n-db scim
+              scim-config-socket scim-frontend-socket scim-gtk2-immodule
+              scim-server-socket scim-uim uim-anthy uim-common uim-utils<br>
+              <br>
+              アップグレード: 0 個、新規インストール: 15 個、削除: 0 個、保留: 0 個。<br>
+              4865kB のアーカイブを取得する必要があります。<br>
+              展開後に追加で 15.2MB のディスク容量が消費されます。<br>
+              続行しますか? [Y/n] y</p>
+            <ol class="list1" style="padding-left: 16px; margin-left:
+              16px;">
+              <li>.xsession を新規作成。（以下はその作成例）
+                <pre> LANG=ja_JP.eucJP<br> export LANG<br> PATH=$HOME/bin:$PATH<br> if type scim &amp;&gt; /dev/null ; then<br>   scim -d &amp;<br> fi<br> XMODIFIERS=@im=SCIM ; export XMODIFIERS<br> GTK_IM_MODULE=scim ; export GTK_IM_MODULE<br> if [ -x "$WINDOW_MANAGER" ]; then<br>   realstartup=$WINDOW_MANAGER<br> elif [ -x /usr/bin/x-session-manager ]; then<br>   realstartup=x-session-manager<br> elif [ -x /usr/bin/x-window-manager ]; then<br>   realstartup=x-window-manager<br> elif [ -x /usr/bin/x-terminal-emulator ]; then<br>  realstartup=x-terminal-emulator<br> fi<br> exec $realstartup</pre>
+              </li>
+              <li>再ログインして、日本語入力を有効にします。Ctrl + スペース キーで入力開始できます。</li>
+            </ol>
+          </blockquote>
+        </li>
+      </ol>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_25">その2 - SCIM-Anthy（サードパーティを利用）</h4>
+      <p>SCIM-Anthy パッケージは安定版向けのリポジトリに存在しないため、非公式パッケージを利用し設定を行う方法を説明します。<br>
+        /etc/apt/sources.list に次のリポジトリを追加したら、</p>
+      <blockquote>
+        <p class="quotation">deb <a
+            href="http://everybody.good-day.net/%7Eikuya/debian/sarge/scim-misc/">http://everybody.good-day.net/~ikuya/debian/sarge/scim-misc/</a>
+          ./</p>
+      </blockquote>
+      <p>次のコマンドを順次実行します。</p>
+      <pre> # apt-get update<br> # apt-get install scim scim-anthy anthy</pre>
+      <blockquote>
+        <p class="quotation">パッケージリストを読みこんでいます... 完了<br>
+          依存関係ツリーを作成しています... 完了<br>
+          提案パッケージ:<br>
+          kasumi<br>
+          ー　（中略）　ー<br>
+          取得:1 <a href="http://everybody.good-day.net">http://everybody.good-day.net</a>
+          ./ scim-anthy 0.4.2-1 [1344kB]<br>
+          1344kB を 5s で取得しました (264kB/s)<br>
+          未選択パッケージ scim-anthy を選択しています。<br>
+          (データベースを読み込んでいます... 現在 74963 個のファイルとディレクトリがインストールされています。)<br>
+          (.../scim-anthy_0.4.2-1_i386.deb から) scim-anthy を展開しています...<br>
+          scim-anthy (0.4.2-1) を設定しています ...</p>
+        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+          <li>[補足] scim-gtk2-immodule を併せてインストールすることを推奨します。<br>
+            このパッケージには日本語変換候補の表示位置を最適化するためのモジュール等が含まれているので、より快適な入力環境を実現でき
+            ます。
+            <pre> # apt-get install scim-gtk2-immodule</pre>
+          </li>
+        </ul>
+      </blockquote>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_26">その3 - SCIM-Anthy（安定版利用）</h4>
+      <p>SCIM-Anthy
+        の設定は安定版用のパッケージを利用しますが、パッケージ同士の依存関係上、システム構成に大きな変更が生じることを十分覚悟したうえで
+        作業を開始してく ださい。</p>
+      <p>SCIM-Anthy 関係のパッケージ一式が
+        Stableセクション（安定版）にあるので、これを一時的に利用します。/etc/apt/sources.list に
+        Stable を追加し、次のコマンドでインストールを実行します。</p>
+      <pre> # apt-get update<br> # apt-get install scim scim-anthy anthy</pre>
+      <p>インストールが完了したら、~/.xsession をテキストエディタで開き、以下の記述をしておきます。</p>
+      <pre> if type scim &amp;&gt; /dev/null ; then<br>   scim -d &amp;<br> fi<br> XMODIFIERS=@im=SCIM ; export XMODIFIERS<br> GTK_IM_MODULE=scim ; export GTK_IM_MODULE</pre>
+      <p>再ログイン後、新しい日本語入力システムが有効になります。<br>
+        このあと、忘れずに sources.list より Testing は必ず削除するか無効（コメント）にしておきます。</p>
+      <p>なお、この場合、SCIM-Anthy 関係のアップグレードを実行したいときは、再び Stableセクションを
+        sources.list
+        に追加し、通常のアップデート／インストール時と同じコマンドを再度実行すれば良いだけです（最新版に上書きされます）。</p>
+      <pre> # apt-get update<br> # apt-get install scim scim-anthy anthy</pre>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>SCIM-Anthy インストール時の<span class="noexists">詳細ログ（2006-01-08
+            現在）<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=DebianLinux-FAQ%2F3.1-Sarge%2FScim-anthy&amp;refer=DebianLinux-FAQ%2F3.1-Sarge">?</a></span>参
+          照。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_27">その4 - kinput2-Canna （従来の入力方式）</h4>
+      <p>以下のとおり、次の日本語入力変換関連のパッケージをインストールします。<br>
+        canna kinput2-canna language-env
+        を明示的に指定することが最低限必要です。(日本語表示には、ttf-kochi-gothic ttf-kochi-mincho
+        のインストールも必要です。)</p>
+      <pre> # apt-get update</pre>
+      <pre> # apt-get install canna kinput2-canna language-env</pre>
+      <blockquote>
+        <p class="quotation">Reading Package Lists... Done<br>
+          Building Dependency Tree... Done<br>
+          language-env is already the newest version.<br>
+          The following extra packages will be installed:<br>
+          kinput2-common libcanna1g<br>
+          Suggested packages:<br>
+          canna-shion x-ttcidfont-conf<br>
+          The following NEW packages will be installed:<br>
+          canna kinput2-canna kinput2-common libcanna1g<br>
+          0 upgraded, 4 newly installed, 0 to remove and 9 not upgraded.<br>
+          Need to get 11.6MB of archives.<br>
+          After unpacking 10.8MB of additional disk space will be used.<br>
+          Do you want to continue? [Y/n] y<br>
+          ...<br>
+          Setting up libcanna1g (3.7p3-1) ...<br>
+          <br>
+          Setting up canna (3.7p3-1) ...<br>
+          Installed new iroha dic<br>
+          Installed new fuzokugo dics<br>
+          Starting cannaserver...<br>
+          <br>
+          Setting up kinput2-common (3.1-4) ...<br>
+          Setting up kinput2-canna (3.1-4) ...</p>
+        <pre> </pre>
+        <p class="quotation">次に、コンソールから以下のコマンドを実行し日本語入力の設定を行います。</p>
+        <pre> $ su<br> password ******<br> # dpkg-reconfigure locales</pre>
+        <p class="quotation">ここでは、標準の言語コード(locale)に ja_JP.EUC-JP を選択します。</p>
+      </blockquote>
+      <pre> # exit (今度はユーザーログインしてください。)<br> $ set-language-env</pre>
+      <blockquote>
+        <p class="quotation">8 : Nihongo(Japanese)
+          を選択し、その後の質問には全てリターンキーで切り抜けます。ログオフし、再度ログインすれば日本語入力は可能になっているはずで
+          す。(表示が文字化けす
+          るという点と、かなりの確率で日本語入力の設定に失敗するという点で不具合を確認しています-2004.08.19 現在)</p>
+      </blockquote>
+      <pre> Shift + Space キーで日本語入力が「ON」</pre>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>(注 意) jvim-canna, nvi-m17n-canna, xemacs21-mule-canna-wnn
+          を追加インストールするようメッセージが出ますが、これは無視してください。実際に # apt-get install
+          を実行する必要はありません。</li>
+        <li>(注意) GNOME Desktop Manager (gdm) が日本語化されず、英語表示のままとなる場合があります。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_28">日本語入力システムを他へ変更したいとき (kinput2-Canna →
+        SCIM-Anthy / SCIM-uim-Anthy)</h3>
+      <p>上述した「その2 - SCIM-Anthy（サードパーティを利用）」に従ってインストールできます。</p>
+      <p>あるいは、SCIM-Anthy
+        の設定にテスト版用のパッケージを利用することも可能です。ただし、パッケージ同士の依存関係上、システム構成に大きな変更が生じること
+        を十分覚悟したう えで作業を開始してください。したがって、安定版パッケージより SCIM
+        を利用したい場合、上述した「SCIM-uim-Anthy の新規インストール」の設定方法に従う方が無難です。</p>
+      <p>インストールが完了したら、~/.xsession をテキストエディタで開き、以下の記述をしておきます。</p>
+      <pre> if type scim &amp;&gt; /dev/null ; then<br>   scim -d &amp;<br> fi<br> XMODIFIERS=@im=SCIM ; export XMODIFIERS<br> GTK_IM_MODULE=scim ; export GTK_IM_MODULE</pre>
+      <p>再ログイン後、新しい日本語入力システムが有効になります。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_29">言語コード(ロケール)の設定と変更</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_30">デフォルトの言語コード(ロケール)切替えとその確認方法</h4>
+      <p>インストール後でも、システムの言語コードは任意に変更できます。日本語→ 英語、英語→ 日本語
+        あるいはその他の国語へと切替えられます。コンソールから、次のコマンドを実行します（実行例）。</p>
+      <pre> # dpkg-reconfigure locales</pre>
+      <p>Generating locales (this might take a while)...<br>
+        　ja_JP.EUC-JP... done<br>
+        　en_US.ISO-8859-1... done<br>
+        　en_US.UTF-8... done<br>
+        　ja_JP.UTF-8... done<br>
+        Generation complete.</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>複数のユーザーが複数の言語環境を切替えて運用するシステムでは、デフォルトのロケールを設定しないという方法も選択可能です
+          （むしろ非設定 としておくことを推奨します）。状況に応じて、ロケールを設定してください。<br>
+          一般的には、ロケールは次の組合せを選んでおくのが良いでしょう。
+          <pre> ja_JP.eucJP<br> ja_JP.UTF-8<br> en_US ISO-8859-1<br> en_US.UTF-8</pre>
+          システムに設定済みのロケールを確認するには、次のコマンドを使います。
+          <pre> $ cat /etc/locale.gen<br> ja_JP.EUC-JP EUC-JP<br> <br> en_US ISO-8859-1<br> en_US.UTF-8 UTF-8<br> ja_JP.UTF-8 UTF-8</pre>
+          この例では、ja_JP.EUC-JP を始めとして 4つのロケールが設定されていることを示しています。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_31">GNOMEデスクトップのロケールを一時的に切替えるには？</h4>
+      <p>gdm でログインするよう設定している場合には、ユーザーログイン時の「セッションメニュー」から、希望するロケールを選択します。<br>
+        たとえば、ja_JP.EUC-JP と ja_JP.UTF-8 を交互に切替わります。</p>
+      <p>ただし、この時選択できるロケールは、インストールの際追加したものに限ります。希望するロケールが一覧に見付からないのなら、#
+        dpkg-reconfigure locales を実行し再設定する必要があります。</p>
+      <p>GNOMEデスクトップで現在使用中のロケールを確認するには、次のコマンドを用いることができます。</p>
+      <pre> $ echo $LANG<br> ja_JP.EUC-JP</pre>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_32">グラフィカル・ログイン時に kterm が自動起動しないようにする</h3>
+      <p>ユーザーディレクトリーに存在する .xsession
+        ファイルの次の部分を全てコメントし、上書き保存してください。具体的には、ファイルの27 - 43
+        行目の記述をコメント(#)して無効にします。</p>
+      <pre> #if [ -z "$TERMINAL_EMULATOR" ] ; then<br> #  if type krxvt &amp;&gt; /dev/null ; then<br> #    XMODIFIERS=@im=$XIM krxvt -ls &amp;<br> #  elif type kterm &amp;&gt; /dev/null ; then<br> #    kterm -ls &amp;<br> #  elif type rxvt &amp;&gt; /dev/null ; then<br> #    XMODIFIERS=@im=$XIM rxvt -ls &amp;<br> #  elif type Eterm &amp;&gt; /dev/null ; then<br> #    Eterm -l &amp;<br> #  elif type gnome-terminal &amp;&gt; /dev/null ; then<br> #    gnome-terminal --login &amp;<br> #  elif type xterm &amp;&gt; /dev/null ; then<br> #    xterm -ls &amp;<br> #  fi<br> #elif [ "$TERMINAL_EMULATOR" != "NONE" ] ; then<br> #  $TERMINAL_EMULATOR &amp;<br> #fi</pre>
+      <blockquote>
+        <p class="quotation"><a
+            href="http://www.i.his.fukui-u.ac.jp/%7Efujii/debian/install2.html">イ
+            ンス トール後最初にやるべきこと＞gdm の設定</a> というサイトを参照させていただきました。</p>
+      </blockquote>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>別の方法としては、上記の定義行(26行)より上に
+          <pre> TERMINAL_EMULATOR=NONE</pre>
+          という1行だけの記述を追加します。このやり方でも同じ結果になります。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_33">2.4系カーネルをインストールした Sarge に2.6系カーネルを追加する</h3>
+      <p>3.1 (Sarge) は、2.4系カーネルが標準でインストールされます。<br>
+        インストール後 2.6系カーネルを試してみたい場合は、次の手順でカーネルの追加インストールができます。</p>
+      <p>まず、利用可能なカーネルを確認するために、次のコマンドをします。</p>
+      <pre> # apt-get -s install kernel-image</pre>
+      <p>カーネルの一覧がターミナル上に表示されるので、その中から適切なバージョンを選択してインストールを実行します。</p>
+      <pre> # apt-get install kernel-image-2.6.8-2-686 (これは一例)</pre>
+      <p>新規インストールしたカーネルは、システムの再起動後より有効となります。起動時の最初に表示されるブートローダーのメニュー画面より
+        カーネルが選 択できるようになります。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_34">一時的にテキストモード (CUI) でログインする</h3>
+      <p>普段グラフィカルログインで利用していて、一時的にテキストモードに切替えたいという場合は結構あり得ます。runlevel
+        を恒久的に変更するには起動時の設定ファイルを書き換える必要があります。一時的にテキストモードを使用する際には、次の TIPS
+        のとおり操作してください。</p>
+      <blockquote>
+        <p class="quotation"><a
+            href="http://www.topstudio.co.jp/%7Ekmuto/debian/qa/qabody.php?103">『ディ
+            スプレイマネージャからコンソールに一時的に戻すことはできますか』</a><br>
+          <br>
+          「xdm の場合には、Ctrl+r を押すとコンソールになります。また、xdm
+          を含めてその他のディスプレイマネージャでは、Ctrl+Alt+F1〜F6
+          を押すと、それぞれの仮想コンソールを開きます。元に戻すには Ctrl+Alt+F7 を押します。」</p>
+      </blockquote>
+      <p>こちらで確認したところ、Debian 3.1 (sarge) では gdm (GNOME Display Manager)
+        の場合も、Ctrl + Alt + F1〜F6
+        キーでテキストモードに切り替わります。ただし、バックグランドでは既にディスプレイマネージャが起動しているようなので、startx
+        コマンドは使えません。グラフィカルログインに切替える場合は、必ず Ctrl + Alt + F7 キーで元に戻る必要があります。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_35">システムをシャットダウン(終了)させるには？</h3>
+      <p>ユーザーはグラフィカルログイン時、直接シャットダウンさせることはできません。<br>
+        <br>
+        Debian では Fedora や Red Hat Linux の場合と勝手が違って、グラフィカルログイン時(例えば
+        GNOME
+        環境での運用時)には、ユーザーが直接シャットダウンできない仕組みを採用しています。これはセキュリティ確保のためと考えられます。</p>
+      <p>具体的には、一度ログオフし、ディスプレイマネージャー (xdm: X Display Manager) から今度は root
+        ログインした後で「シャットダウン」の項目が選択できるようになります。<br>
+        ただし、ディスプレイマネージャーに gdm (GNOME Display Mamnager) を使用した場合には、ログイン画面で
+        root 権限のシャットダウンが可能となるので、この方が実際便利でしょう。「GNOME デスクトップマネージャ」のメニューから
+        アクション ＞ 停止 の項目を選択してシャットダウンさせます。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_36">ディスプレイ・マネージャーを GDM へ変更する（GDM の追加）</h3>
+      <p>OS起動時の一覧に、XWindow
+        で使用されるディスプレイ・マネージャーも表示されます。複数のディスプレイ・マネージャーがインストールできますが、ログイン時に利用
+        できるのは、その うちの１つのみです。 gdm が未インストールで、これを xdm から gdm
+        へと変更するには、次の作業をすれば以前の設定を上書きできます。</p>
+      <pre> # apt-get install gdm</pre>
+      <blockquote>
+        <p class="quotation">以下の特別パッケージがインストールされます:<br>
+          libselinux1<br>
+          提案パッケージ:<br>
+          apmd msttcorefonts<br>
+          以下のパッケージが新たにインストールされます:<br>
+          gdm libselinux1<br>
+          アップグレード: 0 個、新規インストール: 2 個、削除: 0 個、保留: 12 個<br>
+          Inst libselinux1 (1.14-2 Debian:testing)<br>
+          Inst gdm (2.4.4.7-3 Debian:testing)<br>
+          Conf libselinux1 (1.14-2 Debian:testing)<br>
+          Conf gdm (2.4.4.7-3 Debian:testing)</p>
+        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+          <li>作業の途中で xdm か gdm のどちらをデフォルトにするか尋ねて来ます。</li>
+          <li>すでに日本語環境が構築されていれば、再起動後 gdm のメニューは自動的に日本語表示されます。</li>
+          <li>複数の背景（イメージ）をインストールするには、gdm-themes もインストールします。</li>
+        </ul>
+      </blockquote>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_37">ディスプレイ・マネージャーで KDM を使う</h3>
+      <p>K デスクトップ環境では、 KDM を使うことを推奨します。</p>
+      <pre> # apt-get install kdm</pre>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_38">ディスプレイマネージャー (gdm, xdm) を交互に変更する</h3>
+      <p>次のいづれかのコマンドを実行すれば、デフォルトのディスプレイマネージャーを交互に変更可能です。</p>
+      <pre> # dpkg-reconfigure gdm</pre>
+      <pre> # dpkg-reconfigure xdm</pre>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_39">GNOME の日本語ユーザーガイドはありませんか?</h3>
+      <p><a
+          href="http://www.gnome.gr.jp/docs/gnome-users-guide/index.html">GNOME
+
+          1.4 ユーザガイド(日本語訳)</a> が日本 GNOME
+        ユーザー会のサイトにあります。解説の対象となっているバージョンが古いですが、基本的な操作を理解するには十分参考になります。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_40">GNOME 2.8(2.6) TIPs &amp; FAQs</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_41">GNOME とは何ですか？</h4>
+      <p>GNOME とは正式には GNU Network Object Model Environment と呼ばれ、X Window
+        System
+        においてウインドゥマネージャーと共に利用され、ユーザーの使い勝手を向上させてくれる一連のアプリケーションやデスクトップ・ツールの
+        ことを指していま す。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_42">GNOME 2.8 スクリーンショット</h4>
+      <p>GNOME 2.8 のデフォルト、渦巻き(swirl)ロゴが表示されるデスクトップ画面です。<br>
+        <img src="../../../../Screenshot-gnome28_sarge.jpg"
+          alt="Screenshot-gnome28_sarge.jpg"
+          title="Screenshot-gnome28_sarge.jpg" height="480" width="640"
+          border="0"></p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_43">GNOME 2.6 スクリーンショット</h4>
+      <p>GNOME 2.6 のデスクトップ画面です。これは、扱いやすいようにパネルを下部に移動しカスタマイズしたものです。<br>
+        <img src="../../../../Screenshot-GNOME26_Sarge.jpg"
+          alt="Screenshot-gnome26_Sarge.jpg"
+          title="Screenshot-gnome26_Sarge.jpg" height="480" width="640"
+          border="0"></p>
+      <p>(2005.06.06 現在、Sarge は GNOME 2.8
+        に置き換えられていますが、デフォルト画面の基本的な配置は変わりません。)</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_44">フロッピーや USB メモリ、CDのデータを読み込む方法は？</h4>
+      <p>GNOME 2.8 の採用によって、従来の多くの Linux
+        ディストリビューションで一般的であった「ドライブのマウント」という作業を特に意識する必要はありません。デスクトップに用意されてい
+        る「コンピュー タ」アイコンをマウスでダブルクリックして開くことができます。</p>
+      <p>特に、USB メモリと CD-ROM の場合、デフォルトは自動的にファイルを開きます。<br>
+        外部メディアを取り出すときは、Windows
+        の場合と同様に「メディアの停止」、つまりアンマウントいう作業が必要です。Device is Busy
+        と表示されアンマウント不能な時は、lazy オプション（-l）で対処可能です。</p>
+      <pre> # umount /media/usbdisk -l</pre>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>[注意] ただし Linux kernel 2.4
+          をインストールした時には「ボリューム・マネージメントツール」(自動マウント機能) が使えません。Linux kernel
+          2.6 をインストールした時のみ有効です。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_45">ファイルの操作を「シングルクリック」で済ませたい</h4>
+      <p>Windows 標準では、アイコンの「ダブルクリック」でファイルが開きます。一方、Linux の場合、GNOME
+        環境ではダブルクリック、KDE 環境ではシングルクリックが一般的な初期設定のようです。</p>
+      <p>GNOME 環境でシングルクリックへと設定変更するには、デスクトップの「ここからスタート」または「ホームのアイコン」 ＞
+        デスクトップの設定 ＞ ファイル管理 ＞ 「動作」タブ ＞ 「シングル・クリックでアイテムを起動する」
+        にチェックを入れてください。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_46">クイック起動アイコンをタスクバー (Panel) に追加する</h4>
+      <p>タスクバー上でマウスの右ボタンをクリックします。追加できるメニューが表示されるので、任意のアプリケーションを選択します。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_47">クイック起動アイコンの大きさを変更する</h4>
+      <p>タスクバー上でマウスの右ボタンをクリックし、プロパティから
+        サイズの項目で設定を変更します。初期設定では、サイズが24ピクセルになっています。この数字を36くらいにすると Red Hat
+        9、Fedora Core Linux で採用されている GNOME とほぼ同じ見栄えになるでしょう。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_48">画面最上部のタスクバー (Top Panel) を消して画面を広く使う</h4>
+      <p>まず、画面最下部にあるパネル (Bottom Pnel)
+        の上でマウスを右クリックして、「このパネルを削除」を選択／実行します。次に、画面最上部にあるパネル (Top Panel)
+        上でマウスの右ボタンをクリックし、向きを「上」→「下」へ変更します。</p>
+      <p>これでクイック起動一覧が画面最下部にすっきりと並びますが、このままではデフォルトにあった2つのボタンが消えてしまうので、以下の
+        手順で元通り 復元します。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>[ウインドウの一覧] <br>
+          <br>
+          パネル(タスクバー) を右クリック ＞ パネルへ追加 ＞ ユーティリティ ＞ ウインドウの一覧
+          をクリックすれば、追加できます。</li>
+        <li>[ワークスペース切り替え器]<br>
+          <br>
+          パネル(タスクバー) を右クリック ＞ パネルへ追加 ＞ ユーティリティ ＞ ワークスペース切り替え器
+          をクリックすれば、追加できます。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_49">FTP クライアントをインストールする</h4>
+      <p>GNOME 2,6/2.8 の初期設定では、gFTP が含まれないようになったので、APT で追加インストールします。</p>
+      <pre> # apt-get install gftp</pre>
+      <blockquote>
+        <p class="quotation">パッケージリストを読みこんでいます... 完了<br>
+          依存関係ツリーを作成しています... 完了<br>
+          以下の特別パッケージがインストールされます:<br>
+          gftp-common gftp-gtk gftp-text<br>
+          以下のパッケージが新たにインストールされます:<br>
+          gftp gftp-common gftp-gtk gftp-text<br>
+          アップグレード: 0 個、新規インストール: 4 個、削除: 0 個、保留: 41 個<br>
+          1089kB のアーカイブを取得する必要があります。<br>
+          展開後に追加で 2974kB のディスク容量が消費されます。<br>
+          続行しますか? [Y/n] y<br>
+          ...</p>
+      </blockquote>
+      <pre> # exit</pre>
+      <p>インストール後起動するには、メインメニュー ＞ アプリケーション ＞ インターネット ＞ gFTP
+        に自動登録されたアイコンをマウスで選択します。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_50">壁紙 (Wallpapers) を追加する</h4>
+      <p>次のパッケージ名で、オプションの壁紙（背景）が用意されています。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>gnome-themes</li>
+        <li>gnome-themes-extras</li>
+      </ul>
+      <p>これらのパッケージは、APT-GET コマンドで /user/share/wallpapers
+        以下のディレクトリにインストールされます。（ただし、当方ではデスクトップのプロパティ一覧に自動的に登録されないという不具合が最近
+        発生しました。 -2007.02.17）</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_51">K Desktop Environment (KDE) について</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_52">KDE スクリーンショット (リリース版)</h4>
+      <p>Sarge における KDE のデスクトップ画面です（アイコンは選択した言語に応じて表示されます）。<br>
+        <img src="../../../../Snapshot-kde_sarge.jpg"
+          alt="Snapshot-kde_sarge.jpg" title="Snapshot-kde_sarge.jpg"
+          height="480" width="640" border="0"></p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_53">KDE 3.2 スクリーンショット (RC版)</h4>
+      <p>Sarge における KDE 3.2 のデスクトップ画面です。(※公式版は KDE 3.3 に変更されました。)<br>
+        <img src="../../../../Snapshot-kde32_sarge.jpg"
+          alt="Snapshot-kde32_sarge.jpg"
+          title="Snapshot-kde32_sarge.jpg" height="480" width="640"
+          border="0"></p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_54">KDE のユーザーガイドは?</h4>
+      <p>公式な日本語版が見当たらないようなので、どうしてもという方は英語版の <a
+          href="http://www.kde.org/documentation/userguide/index.html">Users'
+
+          Guide</a> を読んでください。もっとも、KDE の日本語ヘルプには操作方法があります。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_55">日本語メーラー Sylpheed をインストールする</h3>
+      <p>Sylpheed バージョン 1.0 のインストールは、次のコマンドを実行します。(Sylpheed 2.0 は<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?DebianLinux-FAQ%2FSylpheed2.0"
+          title="DebianLinux-FAQ/Sylpheed2.0 (1930d)">こちら参照</a>)</p>
+      <pre> # apt-get install sylpheed</pre>
+      <p>一度ログオフし再度ログインすれば、デスクトップ・メニューのインターネット・カテゴリーに Sylpheed
+        のスタートアイコンが表示されます。</p>
+      <p>なお、以下は参考としてください。</p>
+      <pre> # apt-get -s install sylpheed</pre>
+      <blockquote>
+        <p class="quotation">パッケージリストを読みこんでいます... 完了<br>
+          依存関係ツリーを作成しています... 完了<br>
+          以下の特別パッケージがインストールされます:<br>
+          libgdk-pixbuf2 libpng10-0 sylpheed-i18n<br>
+          提案パッケージ:<br>
+          jpilot sylpheed-doc<br>
+          推奨パッケージ:<br>
+          metamail aspell-en sylpheed-claws-scripts<br>
+          以下のパッケージが新たにインストールされます:<br>
+          libgdk-pixbuf2 libpng10-0 sylpheed sylpheed-i18n<br>
+          アップグレード: 0 個、新規インストール: 4 個、削除: 0 個、保留: 0 個。</p>
+      </blockquote>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_56">文書作成スイート <a
+          href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice"
+          title="OpenOffice (610d)">OpenOffice</a>.org 1.1.2.x
+        を追加インストールする</h3>
+      <p># apt-get install openoffice.org openoffice.org-l10n-ja
+        openoffice.org-help-ja</p>
+      <blockquote>
+        <p class="quotation">パッケージリストを読みこんでいます... 完了<br>
+          依存関係ツリーを作成しています... 完了<br>
+          以下の特別パッケージがインストールされます:<br>
+          libdb4.2++ libneon23 libstlport4.6 openoffice.org-bin<br>
+          openoffice.org-debian-files openoffice.org-l10n-en
+          ttf-opensymbol<br>
+          <br>
+          提案パッケージ:<br>
+          myspell-dictionary ooqstart-gnome oooqs-kde unixodbc libsane
+          prelink openoffice.org-hyphenation openoffice.org-thesaurus
+          msttcorefonts openoffice.org-mimelnk openoffice.org-gtk-gnome
+          openoffice.org-kde openclipart myspell-dictionary-en
+          openoffice.org-hyphenation-en<br>
+          openoffice.org-thesaurus-en openoffice.org-help-en
+          myspell-dictionary-ja openoffice.org-hyphenation-ja
+          openoffice.org-thesaurus-ja<br>
+          <br>
+          以下のパッケージが新たにインストールされます:<br>
+          libdb4.2++ libneon23 libstlport4.6 openoffice.org
+          openoffice.org-bin openoffice.org-debian-files
+          openoffice.org-help-ja openoffice.org-l10n-en
+          openoffice.org-l10n-ja ttf-opensymbol<br>
+          <br>
+          アップグレード: 0 個、新規インストール: 10 個、削除: 0 個、保留: 0 個。<br>
+          71.6MB のアーカイブを取得する必要があります。<br>
+          展開後に追加で 225MB のディスク容量が消費されます。<br>
+          続行しますか? [Y/n] y</p>
+      </blockquote>
+      <p>これで使えるようになりますが、分からないことがあれば <a
+          href="http://ja.openoffice.org/documents/install/debian.html">Debian
+
+          GNU/Linuxにインストールする</a> というサイトを参照してください。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_57">acroread-jpn_7 のインストール</h3>
+      <pre> # dpkg -i acroread-jpn_7.0.0-0_i386.deb</pre>
+      <blockquote>
+        <p class="quotation">未選択パッケージ acroread-jpn を選択しています。<br>
+          (データベースを読み込んでいます... 現在 108033 個のファイルとディレクトリがイン ストールされています。)<br>
+          (acroread-jpn_7.0.0-0_i386.deb から) acroread-jpn を展開しています...<br>
+          acroread-jpn (7.0.0-0) を設定しています ...</p>
+        <p>--21:59:46-- <a
+            href="http://ardownload.adobe.com/.../AdbeRdr70_linux_jpn.tar.gz">http://ardownload.adobe.com/.../AdbeRdr70_linux_jpn.tar.gz</a></p>
+        <p>=&gt; `/tmp/acroinst/AdbeRdr70_linux_jpn.tar.gz'
+          ardownload.adobe.com をDNSに問いあわせています... 68.142.79.94,
+          68.142.79.95, 68.142.79.96, ...<br>
+          ardownload.adobe.com[68.142.79.94]:80 に接続しています... 接続しました。<br>
+          HTTP による接続要求を送信しました、応答を待っています... 200 OK<br>
+          長さ: 52,467,826 [application/x-gzip]<br>
+          <br>
+          100%[====================================&gt;] 52,467,826
+          108.67K/s ETA 00:00<br>
+          <br>
+          22:11:50 (70.79 KB/s) -
+          `/tmp/acroinst/AdbeRdr70_linux_jpn.tar.gz' を保存しまし た<br>
+          (-- 以下省略 --)</p>
+      </blockquote>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_58">Firefox ブラウザは 安定版 (Sarge) で使えますか？</h3>
+      <p>はい。ただし、Debian 公式リリースの Mozilla-firefox 1.0.4 は「オプション」です。<br>
+        tasksel でデスクトップ環境をインストールしたとき、標準のウェブブラウザは Mozilla に設定されるので注意します。<br>
+        まず、Firefox を新規インストールします。</p>
+      <pre> # apt-get install mozilla-firefox</pre>
+      <blockquote>
+        <p class="quotation">パッケージリストを読みこんでいます... 完了<br>
+          依存関係ツリーを作成しています... 完了<br>
+          提案パッケージ:<br>
+          mozilla-firefox-gnome-support latex-xft-fonts xprint<br>
+          以下のパッケージが新たにインストールされます:<br>
+          mozilla-firefox<br>
+          アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 0 個。<br>
+          8892kB のアーカイブを取得する必要があります。<br>
+          展開後に追加で 25.0MB のディスク容量が消費されます。<br>
+          取得:1 <a href="http://security.debian.org">http://security.debian.org</a>
+          stable/updates/main mozilla-firefox 1.0.4-2sarge5 [8892kB]<br>
+          8892kB を 3m44s で取得しました (39.5kB/s)<br>
+          未選択パッケージ mozilla-firefox を選択しています。<br>
+          (データベースを読み込んでいます... 現在 103764 個のファイルとディレクトリがイン ストールされています。)<br>
+          (.../mozilla-firefox_1.0.4-2sarge5_i386.deb から)
+          mozilla-firefox を展開しています...<br>
+          mozilla-firefox (1.0.4-2sarge5) を設定しています ...<br>
+          Updating mozilla-firefox chrome registry...done.<br>
+          Please restart any running Firefoxes, or you will experience
+          problems.</p>
+      </blockquote>
+      <p>そして次のコマンドで起動するか、またはアプリケーションのメニューより選択し起動します。</p>
+      <pre> $ firefox</pre>
+      <p>あるいは、</p>
+      <pre> $ mozilla-firefox</pre>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>メニューを日本語化するには、以下のインストールをします。
+          <pre> # apt-get install mozilla-firefox-locale-ja</pre>
+        </li>
+        <li>このパッケージでは、選択したメニューが真っ白に表示され文字が読めなくなるというバグ(不具合)が発生します。ただし、このバ
+          グは Sarge でのみ見られる現象です(Etch では発生しないようです)。</li>
+        <li><a
+            href="http://packages.qa.debian.org/m/mozilla-firefox.html">Overview
+
+            of mozilla-firefox source package</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_59">Firefox 1.5.x バージョンを安定版（Sarge）で使うには？</h3>
+      <p>Debian 公式の安定版向けパッケージには、Firefox 1.5 は含まれていません（2006.04.05
+        現在）。不安定版や実験版から借用するのは、関連パッケージの変更を伴う心配から推奨できません。<br>
+        そこで、Firefox 開発元の公式サイトより Linux用パッケージを入手し次の手順で起動させます。</p>
+      <pre> $ tar -xzvf firefox-1.5.0.1.tar.gz<br> $ ./firefox/firefox</pre>
+      <p>なお、Mozilla-firefox 1.0.4 が既にインストールされている環境では、これを削除してから Firefox
+        1.5 のインストールを開始してください（mozilla-firefox-locale-ja
+        がインストール済みなら、これも自動的に削除されます）。</p>
+      <pre> # apt-get remove mozilla-firefox</pre>
+      <p>firefox-1.5.0.1.tar.gz を firefox
+        以下のディレクトリ展開するだけの作業なので、firefox-1.5.0.1
+        を削除したいときはこのディレクトリごと「ごみ箱」へ移動させます。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>展開先がユーザーディレクトリ直下の場合、起動コマンドは ./firefox/firefox となります。firefox
+          で起動させるにはシンボリック・リンクを張る必要があります。</li>
+        <li>デスクトップのランチャーに登録すれば、素早く起動できます。アイコンは、展開先ディレクトリに用意されています。</li>
+        <li>firefox-1.5.0.1.tar.gz を # alien firefox-1.5.0.1.tar.gz で
+          Deb 形式に変換しても、通常の Dpkg -i hoge コマンドでインストールすることは無理です。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_60">Mozilla ブラウザーのメニューが日本語化されていないときは？</h3>
+      <p>コマンドライン端末から、mozilla-locale-ja を追加インストールします。</p>
+      <pre> # apt-get install mozilla-locale-ja</pre>
+      <blockquote>
+        <p class="quotation">以下のパッケージが新たにインストールされます:<br>
+          mozilla-locale-ja<br>
+          アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 12 個<br>
+          Inst mozilla-locale-ja (1.6+tm0.2-1 Debian:testing)<br>
+          Conf mozilla-locale-ja (1.6+tm0.2-1 Debian:testing)</p>
+        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+          <li>上の作 業だけでは日本語化作業が終っていません。インストール後 Mozilla を起動させて、Menu &gt;
+            Edit &gt; Preferences &gt; Appearance &gt; Languages/Content
+            から Japanese(Japan) を選択します。ブラウザーを再起動させれば、日本語表示に切り替わります。</li>
+        </ul>
+      </blockquote>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_61">利用できる無線LANカードについて</h3>
+      <p><a
+href="http://kmuto.jp/open.cgi?%cc%b5%c0%feLAN%c6%b0%ba%ee%be%f5%b6%b7&amp;l=jp">無
+          線LAN動作状況</a> というページ(外部リンク)があります。</p>
+      <p>BUFFALO (メルコ) WLI-PCM-L11GP
+        については、当方でも自動認識され問題なく利用できることを確認しています。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_62">コンピュータの時計を正確に合わせる(同期させる)</h3>
+      <p>コンピュータ内蔵の時計はかなり不正確ですが、インターネット上のタイムサーバーと同期させると非常に正確になります。ntp-
+        simple をインストールしておきます。</p>
+      <pre> # apt-get install ntp-simple</pre>
+      <blockquote>
+        <p class="quotation">以下の特別パッケージがインストールされます:<br>
+          ntp-server<br>
+          提案パッケージ:<br>
+          ntpdate ntp-doc<br>
+          以下のパッケージが新たにインストールされます:<br>
+          ntp-server ntp-simple<br>
+          アップグレード: 0 個、新規インストール: 2 個、削除: 0 個、保留: 0 個<br>
+          151kB 中 0B のアーカイブを取得する必要があります。<br>
+          展開後に追加で 455kB のディスク容量が消費されます。<br>
+          続行しますか? [Y/n]y<br>
+          未選択パッケージ ntp-simple を選択しています。<br>
+          (データベースを読み込んでいます... 現在 51198 個のファイルとディレクトリが<br>
+          インストールされています。)<br>
+          (.../ntp-simple_1%3a4.2.0a-11_i386.deb から) ntp-simple
+          を展開しています...<br>
+          未選択パッケージ ntp-server を選択しています。<br>
+          (.../ntp-server_1%3a4.2.0a-11_i386.deb から) ntp-server
+          を展開しています...<br>
+          Removing any system startup links for /etc/init.d/ntp-simple
+          ...<br>
+          Removing any system startup links for /etc/init.d/ntp-refclock
+          ...<br>
+          Removing any system startup links for /etc/init.d/ntp ...<br>
+          ntpd: no process killed<br>
+          ntp-simple (4.2.0a-11) を設定しています ...<br>
+          <br>
+          ntp-server (4.2.0a-11) を設定しています ...<br>
+          Starting NTP server: ntpd.</p>
+      </blockquote>
+      <p>NTP server
+        が起動すれば、デスクトップのパネルにある時計アイコンをマウスで右クリックし、「日付と時刻の調整」から時刻をネットワークサーバーと
+        同期できます。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_63">インクジェット・プリンター等を使って印刷する</h3>
+      <p>必要な印刷関連のパッケージをインストールします。インストールの方法は複数あります。</p>
+      <p>[APT を使ってインストールする方法]<br>
+        この方法で行うと、必要なパッケージを個別に取捨選択してインストールすることが可能です。</p>
+      <blockquote>
+        <p class="quotation"># apt-get install a2ps a2ps-perl-ja cupsys
+          cupsys-driver-gimpprint cupsys-bsd foomatic-bin
+          foomatic-db-gimp-print foomatic-filters-ppds gimpprint-locales
+          gnome-cups-manager</p>
+        <blockquote>
+          <p class="quotation">以下の特別パッケージがインストールされます:<br>
+            cupsys-client cupsys-driver-gimpprint-data emacsen-common
+            foomatic-db foomatic-db-engine foomatic-db-hpijs
+            foomatic-filters gs-esp hpijs ijsgimpprint libcupsimage2
+            libgnomecups1.0-1 libgnomecupsui1.0-1 libijs-0.35 libslp1
+            patch<br>
+            <br>
+            提案パッケージ:<br>
+            emacs21-nox emacsen groff gv html2ps imagemagick tetex-bin
+            t1-cyrillic xpdf-korean xpdf-japanese
+            xpdf-chinese-traditional xpdf-chinese-simplified kdeprint
+            gtklp cupsys-pt xpp gimpprint-doc foo2zjs foomatic-gui hpoj
+            slpd openslp-doc<br>
+            <br>
+            推奨パッケージ:<br>
+            psutils wdiff smbclient xpdf-common netcat psfontmgr<br>
+            <br>
+            以下のパッケージが新たにインストールされます:<br>
+            a2ps a2ps-perl-ja cupsys cupsys-bsd cupsys-client
+            cupsys-driver-gimpprint cupsys-driver-gimpprint-data
+            emacsen-common foomatic-bin foomatic-db foomatic-db-engine
+            foomatic-db-gimp-print foomatic-db-hpijs foomatic-filters
+            foomatic-filters-ppds gimpprint-locales gnome-cups-manager
+            gs-esp hpijs ijsgimpprint libcupsimage2 libgnomecups1.0-1
+            libgnomecupsui1.0-1 libijs-0.35 libslp1 patch</p>
+        </blockquote>
+      </blockquote>
+      <br class="spacer">
+      <p>[Tasksel を使ってインストールする方法]<br>
+        印刷サーバ関連パッケージを一括して追加インストールできるため、どのようなパッケージを選択すべきか良く分からない時には簡易で便利な
+        方法です。<br>
+        次のコマンドを実行し、印刷サーバを選択します。</p>
+      <pre> # tasksel</pre>
+      <p>ただし、使っているシステムに必要な印刷関連パッケージがこの中に含まれていない場合には、APT で追加してください。</p>
+      <br class="spacer">
+      <p>[Aptitude を使ってインストールする方法]<br>
+        Tasksel を使ってインストール場合と似ていますが、画面上の操作手順が異なります。</p>
+      <pre> # aptitude</pre>
+      <p>矢印キーと Enter キーを使って [タスク] &gt; [Servers] &gt; [印刷サーバー]
+        の順に選択実行します。</p>
+      <p>Tasksel / Aptitude では、次の印刷関連パッケージがセットになっています。</p>
+      <blockquote>
+        <p class="quotation">cupsys<br>
+          cupsys-bsd<br>
+          cupsys-client<br>
+          cupsys-driver-gimpprint<br>
+          foomatic-db-engine<br>
+          foomatic-db-hpijs<br>
+          foomatic-filters-ppds</p>
+      </blockquote>
+      <p>インストールが完了したら、プリンターの初期設定を行います。印刷の設定は、WEB ブラウザーから アドレス <a
+          href="http://localhost:631/">http://localhost:631/</a>
+        を開いて行えます(推奨の設定方法)。他に、デスクトップから gnome-cups-manager や Foomatic-GUI
+        を起動させて設定する方法などもあります。</p>
+      <p>Mozilla ブラウザーで印刷した時の日本語の文字化け□□□を防ぐためには、さらに次のパッケージを追加します。</p>
+      <blockquote>
+        <p class="quotation">cmap-adobe-japan1 gs-cjk-resource psfontmgr<br>
+          (※cmap-adobe-japan1 gs-cjk-resource は non-free にあります。)</p>
+      </blockquote>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_64">『Debian GNU/Linux 徹底入門 第3版 〜Sarge対応』情報ページ</h4>
+      <p><a href="http://kmuto.jp/debian/debian_sarge/">http://kmuto.jp/debian/debian_sarge/</a>
+        参照。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_65">Sarge 最新情報 公式ページ</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a
+href="http://www.jp.debian.org/releases/sarge/i386/release-notes/ch-whats-new.ja.html">Debian
+
+            GNU/Linux 3.1 の最新情報</a></li>
+        <li><a href="http://www.jp.debian.org/releases/sarge/">Debian
+            「sarge」リリース情報</a></li>
+        <li><a
+            href="http://www.debian.org/releases/sarge/errata.ja.html">Debian
+
+            GNU/Linux 3.1 -- 誤りとその修正</a> </li>
+      </ul>
+      <hr size="2" width="100%"><a href="../../../../index.html">HOME </a></div>
+  </body>
+</html>

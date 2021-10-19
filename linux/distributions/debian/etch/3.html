@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=Shift_JIS"
+      http-equiv="Content-Type">
+    <title>3</title>
+  </head>
+  <body>
+    <div id="body">
+      <div><a href="../../../../index.html" title="FrontPage (2d)">HOME</a>
+        /
+        <a href="../index.html">Debian</a>
+        / <a href="index.html">Etch</a>
+        / 3 <br>
+        <hr size="2" width="100%"></div>
+      <div class="contents">
+        <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_0">日本語入力環境の設定 (uim-Anthy) -2008.01.02
+              更新</a></li>
+          <li><a href="#content_1_1">日本語入力環境の設定 (SCIM-Anthy) -2008.01.02
+              更新</a></li>
+          <li><a href="#content_1_2">日本語入力環境の設定 (SCIM-uim-Anthy)
+              -2007.04.15 更新</a></li>
+          <li><a href="#content_1_3">日本語入力環境設定の関連情報 (IM-Switch) </a>
+            <ul class="list3" style="padding-left: 16px; margin-left:
+              16px;">
+              <li><a href="#content_1_4">im-switch の紹介と概要</a></li>
+              <li><a href="#content_1_5">im-switch コマンド</a></li>
+            </ul>
+          </li>
+          <li><a href="#content_1_6">日本語入力環境設定の関連情報 (language-env)</a>
+            <ul class="list3" style="padding-left: 16px; margin-left:
+              16px;">
+              <li><a href="#content_1_7">language-env による設定</a></li>
+              <li><a href="#content_1_8">set-language-env コマンド （補足情報）</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <h3 id="content_1_0">日本語入力環境の設定 (uim-Anthy) -2008.01.02 更新</h3>
+      <p>uim-Anthy
+        は標準でインストールされます。したがって、何も追加設定を行う必要はありません。ただし、最小構成でインストールした場合は、
+        uimu、uim-
+        anthy などを任意に追加インストールします。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>初期設定では [全角/半角] キーで日本語入力に切替えます。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_1">日本語入力環境の設定 (SCIM-Anthy) -2008.01.02 更新</h3>
+      <p>Etch では、日本語入力環境の設定が Sarge の場合より簡単になっています。<br>
+        $ set-language-env
+        コマンドを使用したり、~/.xsessionの設定ファイルを作成したりする作業が不要となりました。これは、im-switch
+        が新規導入されたためです。</p>
+      <p>次のコマンドを実行してください（パッケージの依存関係変更により、実行コマンドが簡略化されました）。</p>
+      <pre> # apt-get install scim-anthy kasumi</pre>
+      <blockquote>
+        <p class="quotation">パッケージリストを読み込んでいます... 完了<br>
+          依存関係ツリーを作成しています... 完了<br>
+          以下の特別パッケージがインストールされます:<br>
+          　libscim8c2a scim<br>
+          提案パッケージ:<br>
+          　scim-uim scim-pinyin scim-hangul scim-chewing scim-m17n
+          scim-prime
+          scim-skk<br>
+          　scim-canna scim-tables-additional scim-tables-ja
+          scim-tables-ko<br>
+          　scim-tables-zh<br>
+          推奨パッケージ:<br>
+          　scim-gtk2-immodule<br>
+          以下のパッケージが新たにインストールされます:<br>
+          　kasumi libscim8c2a scim scim-anthy<br>
+          アップグレード: 0 個、新規インストール: 4 個、削除: 0 個、保留: 0 個。<br>
+          2162kB のアーカイブを取得する必要があります。<br>
+          展開後に追加で 5980kB のディスク容量が消費されます。<br>
+          続行しますか [Y/n]? y</p>
+      </blockquote>
+      <p>インストール後再ログインするだけで、環境設定は完了します。<br>
+        日本語入力開始は、Ctrl + スペースキーです。半角／全角キーに変更することも容易に行えます。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>参考リンク：<a href="http://kmuto.jp/open.cgi?etch&amp;l=en">Etchに
+            向けての日本語周りの
+            改善案</a></li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>ユーザーが現在利用できる日本語のロケールの確認方法
+          <pre> $ cat /etc/locale.gen | grep ^ja_JP<br> ja_JP.EUC-JP EUC-JP<br> ja_JP.UTF-8 UTF-8</pre>
+          日本語のロケールはユーザーが任意に設定できますが、新しい d-i でインストールした場合、ja_JP.UTF-8
+          が標準のロケールとして設定されます。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_2">日本語入力環境の設定 (SCIM-uim-Anthy) -2007.04.15 更新</h3>
+      <p>日本語入力環境には、SCIM-uim-Anthy を選択選択することもできます。</p>
+      <pre> # apt-get install scim-uim</pre>
+      <blockquote>
+        <p class="quotation">パッケージリストを読み込んでいます... 完了<br>
+          依存関係ツリーを作成しています... 完了<br>
+          以下の特別パッケージがインストールされます:<br>
+          　scim<br>
+          提案パッケージ:<br>
+          　scim-pinyin scim-hangul scim-chewing scim-m17n scim-prime
+          scim-anthy<br>
+          　scim-skk scim-canna scim-tables-additional scim-tables-ja
+          scim-tables-ko<br>
+          　scim-tables-zh<br>
+          推奨パッケージ:<br>
+          　scim-gtk2-immodule<br>
+          以下のパッケージが新たにインストールされます:<br>
+          　scim scim-uim<br>
+          アップグレード: 0 個、新規インストール: 2 個、削除: 0 個、保留: 0 個。<br>
+          883kB 中 33.8kB のアーカイブを取得する必要があります。<br>
+          展開後に追加で 2114kB のディスク容量が消費されます。<br>
+          続行しますか [Y/n]? y</p>
+      </blockquote>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>uim-anthy は debian-installer を使った場合、すでに標準でインストールされています。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_3">日本語入力環境設定の関連情報 (IM-Switch)<br>
+      </h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_4">im-switch の紹介と概要</h4>
+      <p>「im-switchは、<span class="noexists">FedoraCore<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=FedoraCore&amp;refer=DebianLinux-FAQ%2FEtch%2F3">?</a></span>で
+        使われている入力メソッドフレームワークを部分的にDebianに移植したものです。</p>
+      <p>Debianでは多様なバックエンド、入力メソッド(XIMやIMmoduleなど)がありますが、その代償として「デフォルト」がな
+        く、各ユー
+        ザーが手動で環境変数や~/.xsessionを編集しなければなりませんでした。</p>
+      <p>im-switchのフレームワークに則った入力メソッドパッケージはim-switch管理下のalternativeの1つとな
+        り、これによっ
+        て優先度の高い入力メソッドパッケージが自動的に「デフォルト」の入力メソッドになります(im-switchで変更可能)。また、デ
+        フォルトとは別の入
+        力メソッドとは違うものを使いたいユーザーも、im-switchコマンドを使って変更できます。」</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a
+            href="https://members.fsij.org/trac/codefest2005/wiki/kmuto:im-switch">https://members.fsij.org/trac/codefest2005/wiki/kmuto:im-switch</a></li>
+        <li><a
+            href="http://lists.debian.or.jp/debian-devel/200502/msg00011.html">[debian-devel:16196]
+proposal:
+im-switch
+            framework</a></li>
+        <li><a href="http://packages.debian.org/unstable/x11/im-switch">http://packages.debian.org/unstable/x11/im-switch</a><br>
+          im-switch provides the framework to switch default of input
+          method on X
+          Window System. Input method is usually needed by Japanese,
+          Chinese and
+          Korean to input their native language characters.<br>
+          By installing this package, input method, and conversion
+          engine, you
+          can use input method (XIM and IMmodule) soon without any more
+          configuration. You can also choose your favorite input method
+          by
+          'im-switch' command.</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_5">im-switch コマンド</h4>
+      <pre> $ im-switch -h</pre>
+      <p>Input Method Switcher 0.3+debian1<br>
+        Usage:</p>
+      <blockquote>
+        <p class="quotation">/usr/bin/im-switch [-z lang] -s
+          inputmethodname<br>
+          to set a specific input method for the language<br>
+          /usr/bin/im-switch [-z lang] -a<br>
+          to revert to the default input method for the language<br>
+          /usr/bin/im-switch [-z lang] -l<br>
+          to list current settings and available input methods for<br>
+          the language, and also all the available languages<br>
+          /usr/bin/im-switch -h<br>
+          to show this help<br>
+          <br>
+          The "LANG" argument of -z takes the form "ll_CC" and is used
+          to override<br>
+          the current language with ll_CC instead: eg "-z ja_JP"</p>
+      </blockquote>
+      <pre> $ /usr/bin/im-switch -l</pre>
+      <blockquote>
+        <p class="quotation">xinput-ja_JP - status is auto.<br>
+          link currently points to scim-anthy<br>
+          none - priority 10<br>
+          scim-anthy - priority 50<br>
+          Current `best' version is scim-anthy.<br>
+          =======================================================<br>
+          The following languages have been configured to use input
+          methods:<br>
+          ja_JP</p>
+      </blockquote>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_6">日本語入力環境設定の関連情報 (language-env)</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_7">language-env による設定</h4>
+      <p>Debian Etch でも、Debian Sarge 以前の場合同様、 set-language-env
+        コマンドを使った日本語設定が可能です。kinput2-canna で日本語入力設定したいとき利用できます。</p>
+      <pre> $ set-language-env</pre>
+      <p>ただし一般的には、im-switch が非常に上手く出来ているので、im-switch で設定することを推奨します。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_8">set-language-env コマンド （補足情報）</h4>
+      <pre> $ set-language-env -h</pre>
+      <blockquote>
+        <p class="quotation">Print help message in your language...<br>
+          1 : be (Bielaruskaja,Belarusian)<br>
+          2 : bg (Bulgarian)<br>
+          3 : ca (Catala,Catalan)<br>
+          4 : da (Dansk,Danish)<br>
+          5 : de (Deutsch,German)<br>
+          6 : es (Espanol,Spanish)<br>
+          7 : fr (Francais,French)<br>
+          8 : ja (Nihongo,Japanese)<br>
+          9 : ko (Hangul,Korean)<br>
+          10 : lt (Lietuviu,Lithuanian)<br>
+          11 : mk (Makedonski,Macedonian)<br>
+          12 : pl (Polski,Polish)<br>
+          13 : ru (Russkii,Russian)<br>
+          14 : sr (Srpski,Serbian)<br>
+          15 : th (Thai)<br>
+          16 : tr (Turkce,Turkish)<br>
+          17 : uk (Ukrajins'ka,Ukrainian)<br>
+          Input number &gt; 8<br>
+          <br>
+          使い方: set-language-env [オプション]<br>
+        </p>
+        <p>-l 言語 : 言語を指定する (なければメニューから選ぶ)</p>
+        <p>-h : このヘルプメッセージ</p>
+        <p>-v : 実行時の詳しい情報を表示</p>
+        <p>-s : サポートされている言語の一覧を表示して終了する</p>
+        <p>-r : 全ての設定を消去する</p>
+        <p>-N : 別の set-language-env を fork しない (内部で使用する)</p>
+        <p>-c : 言語ごとの文字 (漢字など) を使わない (内部で使用する)</p>
+        <p>-C : 言語ごとの文字 (漢字など) を使う (内部で使用する)</p>
+        <p>-E : /etc/skel ディレクトリを設定する (ルートユーザーのみ)</p>
+      </blockquote>
+      <p>[Enter] キーを押してください。終了します。</p>
+      <hr size="2" width="100%"><a href="../../../../index.html">HOME</a>
+    </div>
+  </body>
+</html>

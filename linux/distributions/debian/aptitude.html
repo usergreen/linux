@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>DebianLinux-FAQ / Aptitude</title>
+</head>
+<body>
+<div id="body">
+<p><a href="http://f40.aaa.livedoor.jp/%7Egreen/?DebianLinux-FAQ"
+ title="DebianLinux-FAQ (218d)">DebianLinux-FAQ</a></p>
+<p>$ aptitude -h<br>
+aptitude 0.2.15.9<br>
+使用方法: aptitude [-S ファイル名] [-u|-i]</p>
+<pre>      aptitude [オプション]&lt;アクション&gt; ...<br>  アクション (指定がない場合、aptitudeはインタラクティブモードで起動します):</pre>
+<pre> install      - パッケージのインストール/更新<br> remove       - パッケージの削除<br> purge        - パッケージと設定ファイルを削除する<br> hold         - パッケージのバージョンを保持する<br> unhold       - パッケージの保持を解除する<br> markauto     - パッケージに自動でインストールの印を付ける<br> unmarkauto   - パッケージに手動でインストールの印を付ける<br> forbid-version - 特定バージョンのパッケージを更新禁止にする。<br> update       - 新規および更新可能なパッケージの一覧をダウンロードする<br> upgrade      - 安全な更新を行なう<br> dist-upgrade - パッケージのインストールや削除を伴う更新を行なう<br> forget-new   - "新規"に分類されているパッケージ一覧情報を消去<br> search       - パッケージを名前や正規表現で検索する<br> show         - 詳細なパッケージ情報を表示する<br> clean        - ダウンロードしたパッケージファイルを削除する<br> autoclean    - 古いダウンロードしたパッケージファイルを削除する</pre>
+<p>changelog - パッケージの changelog を表示する</p>
+<pre> download     - パッケージの.debファイルをダウンロードする</pre>
+<pre>  オプション:<br> -h              この手引きを表示する<br> -s              実際には何もせず、シミュレートのみ行なう<br> -d              パッケージのダウンロードのみ行ない、インストールや削除などは行 なわない<br> -P              常にプロンプトで確認または実行する<br> -y              すべてのyes/noの質問に対して 'yes' と答えたとみなす<br> -F 形式        検索結果の表示フォーマットを指定； マニュアルを参照<br> -O 順序        検索結果の並びを指定； マニュアルを参照<br> -w 幅          検索結果の表示の幅を指定する<br> -f             積極的に壊れているパッケージを修復しようとする<br> -V             インストールされているバージョンを表示する<br> -D              自動的に変更したパッケージの依存関係を表示する<br> -Z                 インストールされているパッケージのサイズを表示する<br> -v             詳細な情報を表示する<br> -t [リリース]  インストールされているパッケージからリリースをセットする<br> -o key=val     ディレクトリに設定可能オプション 'key' を設定する<br> --with(out)-recommends Specify<br>                recommendパッケージを強い依存関係みなすか設定する<br> -S ファイル名: ファイル名からaptitudeの詳細ステータス読む<br> -u           : 起動時に新規のパッケージ一覧をダウンロードする<br> -i           : 起動時にインストールを行なう</pre>
+<pre>                  aptitudeはスーパー牛さんパワーなど持っていません</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>詳細に関しては、$ man aptitude も参照のこと。</li>
+</ul>
+</div>
+</body>
+</html>
