@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=Shift_JIS" http-equiv="Content-Type">
+  <title>Scanner</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../index.html" title="FrontPage (2d)">HOME</a> / <a
+ href="index.html">Hardware</a> <br>
+</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">ハードウェア関連/ スキャナー</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">ハードウェア関連/ スキャナー</a></li>
+  <li><a href="#content_1_1">Linux でスキャナーを使うには？</a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_2">SANEの国内メーカー別対応一覧(抜粋)</a></li>
+      <li><a href="#content_1_3">XSane について</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h2 id="content_1_1">Linux でスキャナーを使うには？</h2>
+<p>まず、<a href="http://www.sane-project.org/">http://www.sane-project.org/</a>
+SANE プロジェクトのホームページにアクセスし、<br>
+［Supported devices］＞「Current Stable SANE Version」＞［Ordered by
+Manufacturer］を選択して、対応しているかどうかを確認します。</p>
+<p>例えば、Canon 製のスキャナーを利用するのであれば、メーカー一覧の中から Canon
+を選択して、メーカー毎の一覧表に製品名の記載があるか確認してください。</p>
+<p>root ユーザーだけでなく。一般ユーザーでもアクセスできるようにするためには、次のようにパーミッションを変更します。</p>
+<pre> # chmod 666 /dev/usb/scanner0</pre>
+<p>なお、SANE とは、 "Scanner Access Now Easy"
+の頭文字を組合せて名付けられたものです。このプロジェクトからは、Linux 向けの application programming
+interface (API) が提供されています。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">SANE の国内メーカー別対応一覧(抜粋)</h3>
+<p>SANE プロジェクトのメーカー別の対応ページにリンクしています。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://www.sane-project.org/sane-mfgs.html#Z-CANON">Canon</a></li>
+  <li><a href="http://www.sane-project.org/sane-mfgs.html#Z-EPSON">Epson</a></li>
+  <li><a href="http://www.sane-project.org/sane-mfgs.html#Z-FUJITSU">Fujitsu</a></li>
+  <li><a href="http://www.sane-project.org/sane-mfgs.html#Z-NIKON">Nikon</a></li>
+  <li><a href="http://www.sane-project.org/sane-mfgs.html#Z-PANASONIC">Panasonic</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">XSane について</h3>
+<p>SANE 向けに用意された、グラフィカルなフロントエンドが利用できます。<br>
+<br>
+具体的なマニュアルは、次のアドレスから入手できます。<br>
+<a href="http://www.xsane.org/doc/sane-xsane-doc.html">http://www.xsane.org/doc/sane-xsane-doc.html</a></p>
+<blockquote>
+  <p class="quotation">XSane のホームページは、 <a href="http://www.xsane.org/">http://www.xsane.org/</a>
+です。</p>
+</blockquote>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Fedora Core Release 1 には、XSane バージョン 0.91 が付属しています。<br>
+    <br>
+実際にスキャンを開始するには、<br>
+    <br>
+メイン・メニュー ＞ グラフィックス ＞ Scanning から起動します。 <br class="spacer">
+あるいは、ターミナル(端末)で次のコマンドを実行します。
+    <pre> $ xsane</pre>
+  </li>
+</ul>
+<hr size="2" width="100%"><a href="../../index.html">HOME</a>
+</div>
+</body>
+</html>

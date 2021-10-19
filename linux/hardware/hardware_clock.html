@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=Shift_JIS" http-equiv="Content-Type">
+  <title>HardwareClock - Linux on the Desktop</title>
+</head>
+<body>
+<div id="navigator">
+<a href="../../index.html">HOME</a> / <a href="index.html">Hardware</a>
+<br>
+<hr size="2" width="100%">
+<h2 id="content_1_0">Hardware Clock と時間設定に関する FAQ / Tips</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">Hardware Clock と時間設定に関する FAQ / Tips</a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">時間設定に関する参照リンク</a></li>
+      <li><a href="#content_1_2">ハードウェアクロックとは何ですか？</a></li>
+      <li><a href="#content_1_3">ハードウェア・クロックを変更するには？</a></li>
+      <li><a href="#content_1_4">コマンドラインからの設定・操作</a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_5">hwclock コマンドの概要(-help)</a></li>
+          <li><a href="#content_1_6">hwclock コマンド　実行例</a></li>
+          <li><a href="#content_1_7">directisa オプションについて</a></li>
+          <li><a href="#content_1_8">システムの現在時刻を知るには？</a></li>
+          <li><a href="#content_1_9">タイムゾーンを設定・変更するには？</a></li>
+          <li><a href="#content_1_10">設定済みのタイムゾーンを確認するには？</a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_11">GNOME 環境での時間合わせ</a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_12">時計アプレット(Clock)</a></li>
+          <li><a href="#content_1_13">時計の種類</a></li>
+          <li><a href="#content_1_14">インターネットで時計合わせ</a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_15">OS のデュアルブートで往復すると時計が狂います。</a></li>
+      <li><a href="#content_1_16">Windows とのデュアルブートで時計が狂わないするには？</a></li>
+      <li><a href="#content_1_17">システムクロックが 9H 進んでしまいます。(Debian Linux)</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">時間設定に関する参照リンク</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>時間を正確に合わせるには<br>
+    <a
+ href="http://www.atmarkit.co.jp/flinux/rensai/linuxtips/030timeset.html">http://www.atmarkit.co.jp/flinux/rensai/linuxtips/030timeset.html</a></li>
+  <li>プログラマ 福重 伸太朗 ～基本へ帰ろう～ Linuxの時間を合わせよう！<br>
+    <a href="http://d.hatena.ne.jp/japanrock_pg/20070530">http://d.hatena.ne.jp/japanrock_pg/20070530</a></li>
+  <li>JST Clock<br>
+    <a href="http://www3.nict.go.jp/cgi-bin/JST.pl">http://www3.nict.go.jp/cgi-bin/JST.pl</a></li>
+  <li>Network Time Protocol - フリー百科事典『ウィキペディア（Wikipedia）』<br>
+    <a href="http://ja.wikipedia.org/wiki/Network_Time_Protocol">http://ja.wikipedia.org/wiki/Network_Time_Protocol</a></li>
+  <li><a
+ href="http://ja.wikipedia.org/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF">リ
+アルタイムクロック</a> - フリー百科事典『ウィキペディア（Wikipedia）』</li>
+  <li>2ch Linux板: 時刻合わせ総合スレッド<br>
+    <a href="http://pc11.2ch.net/test/read.cgi/linux/1106461500/">http://pc11.2ch.net/test/read.cgi/linux/1106461500/</a></li>
+  <li>NTP - wiki@nothing<br>
+    <a href="http://wiki.nothing.sh/page/NTP">http://wiki.nothing.sh/page/NTP</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">ハードウェアクロックとは何ですか？</h3>
+<p>「Linuxには、「ハードウェアクロック」と「システムクロック」という2つの時計がある。<br>
+　ハードウェアクロックとは、PC上のLSIに搭載された時計で、PCの電源を切った状態でも時刻を刻み続ける。時刻をCMOSに保存するので、
+「CMOS時計」と呼ばれたり、「リアルタイムクロック（RTC）」などと呼ばれることもある。」- <a
+ href="http://www.atmarkit.co.jp/flinux/rensai/linuxtips/030timeset.html">http://www.atmarkit.co.jp/flinux/rensai/linuxtips/030timeset.html</a></p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>システムクロックとハードウェアクロックの相関性<br>
+Linux システムが起動する際には、ハードウェア・クロックに記録されている時間を自動的に読み込むます。起動後、ネットワーク上の NTP
+サーバと同期が取られた場合には、時間のずれが修正されます。さらに、システムがシャットダウンされる際には、現在記録されているシステム・クロックが、
+ハードウェア・クロックに保存されることになります。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">ハードウェア・クロックを変更するには？</h3>
+<p>次の2つの方法があります。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>BIOS セットアップ・ユーティリティより直接行う方法。BIOS
+の設定はコンピュータによってそれぞれ異なるので、お使いのマニュアルを参照して行ってください。</li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>hwclock コマンドにより行う方法。<br>
+hwclock のマニュアル・ページでは「hwclock
+はハードウェア・クロックにアクセスするためのツールです。現在の時刻の表示、指定した時刻へのハードウェア・クロックの設定、ハードウェア・クロックを
+システム時刻に合わせる (およびその逆)、といった機能を持ちます。」という説明があります。</li>
+</ul>
+<p>hwclock コマンドにより設定する場合は、以下の項目を参照してください。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_4">コマンドラインからの設定・操作</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_5">hwclock コマンドの概要(-help)</h4>
+<p># hwclock -h<br>
+hwclock - query and set the hardware clock (RTC)</p>
+<p>Usage: hwclock [function] [options...]</p>
+<p>Functions:<br>
+　--help show this help<br>
+　--show read hardware clock and print result<br>
+　--set set the rtc to the time given with --date<br>
+　--hctosys set the system time from the hardware clock<br>
+　--systohc set the hardware clock to the current system time<br>
+　--adjust adjust the rtc to account for systematic drift since<br>
+　 the clock was last set or adjusted<br>
+　--getepoch print out the kernel's hardware clock epoch value<br>
+　--setepoch set the kernel's hardware clock epoch value to the<br>
+　 value given with --epoch<br>
+　--version print out the version of hwclock to stdout</p>
+<p>Options:<br>
+　--utc the hardware clock is kept in coordinated universal time<br>
+　--localtime the hardware clock is kept in local time<br>
+　--directisa access the ISA bus directly instead of /dev/rtc<br>
+　--badyear ignore rtc's year because the bios is broken<br>
+　--date specifies the time to which to set the hardware clock<br>
+　--epoch=year specifies the year which is the beginning of the<br>
+　 hardware clock's epoch value<br>
+　--noadjfile do not access /etc/adjtime. Requires the use of<br>
+　 either --utc or --localtime</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_6">hwclock コマンド　実行例</h4>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li># hwclock<br>
+2008年03月09日 07時29分07秒 -0.361624 seconds</li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li># hwclock<br>
+select() to /dev/rtc to wait for clock tick timed out<br>
+このように表示される場合は、--directisa オプション（引数）を追加。</li>
+  <li># hwclock --directisa<br>
+2008年03月09日 07時29分07秒 -0.361624 seconds</li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li># hwclock --directisa --show<br>
+2008年03月09日 07時30分49秒 -0.616029 seconds</li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li># hwclock --systohc<br>
+ハードウェアクロックをシステムクロックに同期させるコマンド。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_7">directisa オプションについて</h4>
+<p>RTC(Real Time Clock)が正しく動かないとき、--directisaを付けると /dev/rtc
+を使わないようにできます。ただし、このオプションは、ISA マシンまたは (hwclock から充分 ISA マシンに見える程度 ISA
+の仕様を実装した) Alpha マシンでのみ有効です。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://www.linux.or.jp/JM/html/util-linux/man8/hwclock.8.html">http://www.linux.or.jp/JM/html/util-linux/man8/hwclock.8.html</a></li>
+</ul>
+<p>RTC が正しく動かないときは、このようなメッセージが表示されます。<br>
+# hwclock --show<br>
+select() to /dev/rtc to wait for clock tick timed out</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_8">システムの現在時刻を知るには？</h4>
+<p>コンピュータ（システム）に設定されている現在時刻は、次のコマンドで知ることができます。--utc
+オプションを使うと、世界標準時に換算して表示してくれます。</p>
+<pre> $ date<br> 2008年  3月 12日 水曜日 10:11:15 JST</pre>
+<pre> $ date --utc<br> 2008年  3月 12日 水曜日 01:11:15 UTC</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_9">タイムゾーンを設定・変更するには？</h4>
+<p>システム（OS）のタイムゾーン（標準時刻）を設定したり変更するには、tzconfig コマンドを用います。地域と都市名から指定します。</p>
+<p># tzconfig<br>
+Your current time zone is set to Europe/London<br>
+Do you want to change that? [n]: y<br>
+（--- 中略 ---）<br>
+Your default time zone is set to 'Asia/Tokyo'.<br>
+Local time is now: 2008年 3月 9日 日曜日 07:17:21 JST.<br>
+Universal Time is now: 2008年 3月 8日 土曜日 22:17:21 UTC.</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_10">設定済みのタイムゾーンを確認するには？</h4>
+<p>現在のタイムゾーンを確認するには、次のコマンドを実行します。</p>
+<pre> $ TZ= date</pre>
+<p>他の地域のタイムゾーンを知るには、都市名またはコードで指定します。</p>
+<pre> $ TZ="utc"  date<br> 2008年  3月 13日 木曜日 20:26:19 utc<br> <br> $ TZ="London"  date<br> 2008年  3月 13日 木曜日 20:26:19 London</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_11">GNOME 環境での時間合わせ</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_12">時計アプレット(Clock)</h4>
+<p>デスクトップ右上のパネルに標準で表示される「時計アプレット(Clock)」 を用いれば、グラフィカルな画面上で時間の設定が容易に行えます。</p>
+<p>この時計アプレットは、システムクロック から時刻を取得します。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_13">時計の種類</h4>
+<p>以下のいずれかを選択します。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>12時間制</li>
+  <li>24時間制</li>
+  <li>UNIX時間…1970年1月1日からの秒数を表示します。</li>
+  <li>インターネット時間</li>
+</ul>
+<p>なお、ローカル時間に替えて、UTCを使用することもできます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_14">インターネットで時計合わせ</h4>
+<p>NTP サービスは前もってインストールしておきます<a id="notetext_1" href="#notefoot_1"
+ class="note_super">*1</a>。</p>
+<p>以下、GNOME 環境での合わせ方です。</p>
+<ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>[時計アプレット]を右クリックして、プロパティを開きます。</li>
+  <li>[日付と時刻の調整]項目を選択します。</li>
+  <li>[時刻とサーバの選択]項目で、[サーバー]に ntp.nict.jpと入力します。</li>
+  <li>[OK]ボタンをクリックして、設定終了です。</li>
+</ol>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_15">OS のデュアルブートで往復すると時計が狂います。</h3>
+<p><a
+ href="http://ja.wikipedia.org/wiki/%E3%83%AA%E3%82%A2%E3%83%AB%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF#.E3.82.B3.E3.83.B3.E3.83.94.E3.83.A5.E3.83.BC.E3.82.BF.E3.81.A7.E3.81.AE.E5.AE.9F.E9.9A.9B.E3.81.AE.E5.88.A9.E7.94.A8">フ
+リー百科事典『ウィキペディア（Wikipedia）</a>は、この問題に触れています。</p>
+<p>「Windows
+NT系のOSではリアルタイムクロックにローカルタイムを書き込む。それに対して、UNIX系OSでは一般的にUTCで書き込む。その為、両者の間をデュ
+アルブートで往復すると時計がタイムゾーンに応じて狂ってしまう。この問題に対して、Windows
+NT系ではUTCを使うという対策がある。しかし、時刻が直感的に判り難く、またローカルタイムの概念を持たないアプリケーションではタイムスタンプが
+UTCをローカルタイムとみなして保存するので都合が悪くなる。UNIX系OSの一部では、RCのシャットダウンシーケンスの一部でUTCをローカルタイ
+ムに直してリアルタイムクロックに書き込み、Windowsを起動しても時計が狂わない様にした物もある。」</p>
+<p>上記のとおり、OS のデュアルブート環境ではリアルタイムクロックとシステムクロックとの整合性に問題を抱えているようです。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_16">Windows とのデュアルブートで時計が狂わないするには？</h3>
+<p>Windows
+NT系のOSでは、リアルタイムクロックにローカルタイムを書き込む仕様となっているようです。これに対して、UNIX系OSでは一般的にUTCが用いら
+れます。その結果、9H の時間のずれが生じる可能性があります。</p>
+<p>時間のずれが生じている場合には、以下の設定を行うと良いでしょう。</p>
+<ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Debian
+では、/etc/deafault/rcS ファイルを開き、UTC=yes を UTC=no に書き換えます。Red Hat Linux 系では
+/etc/sysconfig/clock に同様な設定ファイルが存在し、ここで UTC=true を UTC=false にします。</li>
+  <li>リアルタイムクロックにローカルタイム(JST)を設定します。Linux 側から変更するには、次のコマンドが利用できます。
+    <pre> # hwclock --systohc</pre>
+  </li>
+  <li>それぞれのシステムを再起動して確認します。再起動後も時間のずれが生じなければ、設定完了です。</li>
+</ol>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_17">システムクロックが 9H 進んでしまいます。(Debian Linux)</h3>
+<p>RTC(Real Time Clock)が正しく動かない ISA の仕様を実装したマシンでは、次のファイルに
+HWCLOCKPARS=--directisa という設定を行う必要があるようです。</p>
+<pre> /etc/init.d/hwclock.sh<br> HWCLOCKPARS=--directisa</pre>
+<p>この設定は再起動後に有効となり、毎回の起動時にこの設定が反映されます。</p>
+<p>なお、この設定変更をした後は、忘れずにハードウェア・クロックの修正（-9H）も合わせて行ってください。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=397096">Debian
+Bug
+report logs - #397096</a></li>
+</ul>
+<hr size="2" width="100%"><a href="../../index.html">HOME</a>
+</div>
+</body>
+</html>

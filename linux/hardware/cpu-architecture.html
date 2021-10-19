@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=Shift_JIS" http-equiv="Content-Type">
+  <title>CPU Architecture - Linux on the Desktop</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../index.html" title="FrontPage (2d)">HOME</a> / <a
+ href="index.html">Hardware</a> / <a href="index.html">CPU
+architecture</a> <br>
+</p>
+<hr size="2" width="100%">
+<h2><a class="mozTocH3" name="mozTocId366651"></a>プロセッサ(CPU)のアーキテクチャに関する
+FAQ/Tips</h2>
+<ul id="mozToc">
+<!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
+  <li><a href="#mozTocId366651">プロセッサ(CPU)のアーキテクチャに関する
+FAQ/Tips</a>
+    <ul>
+      <li>
+        <ul>
+          <li><a href="#mozTocId664380">私の Linux マシンは 32ビット版か
+64ビット版のどちらで稼働しているのですか？</a></li>
+          <li><a href="#mozTocId722509">私のマシンは
+64ビット版に対応していますか？</a></li>
+          <li><a href="#mozTocId265108">PAE とは何のことですか？</a></li>
+          <li><a href="#mozTocId575">64ビット版へ乗り換えた方が良いのでしょうか？</a></li>
+          <li><a href="#mozTocId231774">[Debian
+の移植版に関する情報]（Debian の場合を例示します）</a>
+            <ul>
+              <li><a href="#mozTocId191918">Debian のすべての移植版について</a></li>
+              <li><a href="#mozTocId911093">Debian - AMD64
+移植版について</a></li>
+              <li><a href="#mozTocId976254">Debian
+AMD64(x86_64)情報（武藤氏のページ）</a></li>
+              <li><a href="#mozTocId99081">CPU
+に最適化されたカーネルをインストールするには？</a></li>
+            </ul>
+          </li>
+          <li><a href="#mozTocId372115">マイクロプロセッサに関する技術的解説について</a></li>
+          <li><a href="#mozTocId866607">Windows
+関連の参考リンク（Windows を併用されている方向け）</a>
+            <ul>
+              <li><a href="#mozTocId189113">自分のパソコンが 32 ビット版か 64
+ビット版かを確認したい</a></li>
+              <li><a href="#mozTocId38361">PC で Windows の 32
+ビット版または 64 ビット版のいずれを実行しているのかを調べる</a></li>
+              <li><a href="#mozTocId545368">コンピューターで実行されている
+Windows オペレーティング システムが 32 ビット版か 64 ビット版かを確認する方法</a></li>
+              <li><a href="#mozTocId145859">32 ビットおよび 64 ビットの
+Windows: よく寄せられる質問</a></li>
+              <li><a
+ href="#%95%A8%97%9D%83A%83h%83%8C%83X%8Ag%92%A3PAE%82%F0%8B%AD%90%A7%93I%82%C9%97L%8C%F8%82%C9%82%B7%82%E9">物
+理アドレス拡張PAEを強制的に有効にする</a><br>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<h3><a class="mozTocH4" name="mozTocId664380"></a>私の Linux マシンは 32ビット版か
+64ビット版のどちらで稼働しているのですか？</h3>
+グラフィカルなシステムモニター（あるいはビューア）を使用すれば、「width: 32 bits」などと表示されます。<br>
+あるいは、端末より次のコマンドを実行して、<br>
+$ uname -m<br>
+例えば「i686」と表示されたのなら、32ビットで稼働していることが確認できます。「X86_64」と表示されれば 64ビット版です。<br>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<br>
+<h3><a class="mozTocH4" name="mozTocId722509"></a>私のマシンは
+64ビット版に対応していますか？</h3>
+上記の項目と一見紛らわしいですが、これは使用中のパソコンの CPU 自体が 64ビットに対応しているのかという問題なので、全く別のはなしです。<br>
+<br>
+現在（2013年2月時点で）発売されている最新のパソコンに搭載されている CPU は、ほぼ
+64ビットに対応済みです。数年以上前の古いマシンでは、対応しているかどうかが問題になります。ふつう、メーカーのカタログや手元の取扱説明書の仕様表
+を見れば、確認することができます。ウェブサイト上にも、対応一覧表があるので参考にしてください。<br>
+・PC Watch編集部 &gt; Intelプロセッサー・ナンバー一覧表（<a
+ href="http://pc.watch.impress.co.jp/docs/article/modelno/intelold.htm">http://pc.watch.impress.co.jp/docs/article/modelno/intelold.htm</a>）<br>
+<br>
+なお、64ビット対応であれば基本的に 32ビット用の OS も稼働させることができますが、その逆に 32ビットにしか対応していない CPU
+では 64ビット用の OSを稼働させることは不可能です（つまり逆の場合には互換性が有りません）。<br>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<br>
+<h3><a class="mozTocH4" name="mozTocId265108"></a>PAE とは何のことですか？</h3>
+物理アドレス拡張（Physical Address Extension）を指し、これは32ビットCPUで 4GB以上のメモリを扱う技術です。<br>
+従来、32ビット・マシンでは 4GB以上の大容量メモリを搭載することが事実上不可能でしたが、PAE を利用することで
+64ビットマシン並に運用することができるようになりました。Linux の場合にも、Debian や RedHat をはじめとして、PAE
+をサポートしています。<br>
+<br>
+詳しくは次の外部リンクを参照：<br>
+<a
+ href="http://ja.wikipedia.org/wiki/%E7%89%A9%E7%90%86%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E6%8B%A1%E5%BC%B5">http://ja.wikipedia.org/wiki/%E7%89%A9%E7%90%86%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9%E6%8B%A1%E5%BC%B5</a>
+<br>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<br>
+<h3><a class="mozTocH4" name="mozTocId575"></a>64ビット版へ乗り換えた方が良いのでしょうか？</h3>
+それはお使いの環境に左右されます。後述の「武藤氏のページ」で書かれているように、一般的なユーザーであれば、現状で不便を感じていなければわざわざ乗
+り換える
+必要がないかも知れません。乗り換えた場合、特定のアプリケーションやデバイス・ドライバが機能しなくなり、システム自体が運用出来なくなるという可能性
+を心配する必要があります。<br>
+<br>
+したがって、いきなり重要なシステムへ導入を実施するのではなく、直ぐ元に戻しても支障がないようなマシンで前もってテストしておくことが大切です。<br>
+<br>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3><a class="mozTocH4" name="mozTocId231774"></a>[Debian
+の移植版に関する情報]（Debian の場合を例示します）</h3>
+<h4><a class="mozTocH4" name="mozTocId191918"></a>Debian のすべての移植版について</h4>
+<a href="http://www.debian.org/ports/#portlist-released">http://www.debian.org/ports/#portlist-released</a>
+<br>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4><a class="mozTocH4" name="mozTocId911093"></a>Debian - AMD64
+移植版について</h4>
+<a href="http://www.debian.org/ports/amd64/index.ja.html">http://www.debian.org/ports/amd64/index.ja.html</a>
+<br>
+<br>
+<h4><a class="mozTocH4" name="mozTocId976254"></a>Debian
+AMD64(x86_64)情報（武藤氏のページ）</h4>
+<a href="http://kmuto.jp/open.cgi?debian-amd64">http://kmuto.jp/open.cgi?debian-amd64
+<span class="noexists"></span></a><br>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4><a class="mozTocH4" name="mozTocId99081"></a>CPU
+に最適化されたカーネルをインストールするには？</h4>
+Debian GNU/Linux スレッドテンプレのページを参照。<br>
+<a
+ href="http://debian.fam.cx/index.php?cmd=read&amp;page=Software%2FLinuxKernel#s09d1ff9">http://debian.fam.cx/index.php?cmd=read&amp;page=Software%2FLinuxKernel#s09d1ff9</a><br>
+<br>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3><a class="mozTocH4" name="mozTocId372115"></a>マイクロプロセッサに関する技術的解説について</h3>
+「マイクロプロセッサ」 - Wikipedia の項目に分かり易い説明があります。<br>
+<a
+ href="http://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5">http://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5</a><br>
+<br>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3><a class="mozTocH4" name="mozTocId866607"></a>Windows
+関連の参考リンク（Windows を併用されている方向け）</h3>
+以下、「Micrsoft サポート技術情報」から有用なものを拾ってみました。<br>
+<br>
+<h4><a class="mozTocH4" name="mozTocId189113"></a>自分のパソコンが 32 ビット版か 64
+ビット版かを確認したい</h4>
+Windows 7 の場合の確認作業の流れ<br>
+[スタート] ボタン ＞ [コントロール パネル] ＞ [システムとセキュリティ] ＞ [システム]
+の順にクリックして選択すると、[システムの種類] という項目に表示されます。<br>
+<br>
+<a href="http://support.microsoft.com/kb/958406/ja">http://support.microsoft.com/kb/958406/ja</a>
+には、その手順が図解付きでとても分かり易く紹介されています。<br>
+<br>
+<h4><a class="mozTocH4" name="mozTocId38361"></a>PC で Windows の 32
+ビット版または 64 ビット版のいずれを実行しているのかを調べる</h4>
+<a
+ href="http://windows.microsoft.com/ja-JP/windows7/find-out-32-or-64-bit">http://windows.microsoft.com/ja-JP/windows7/find-out-32-or-64-bit</a><br>
+<br>
+<h4><a class="mozTocH4" name="mozTocId545368"></a>コンピューターで実行されている
+Windows オペレーティング システムが 32 ビット版か 64 ビット版かを確認する方法</h4>
+<a href="http://support.microsoft.com/kb/827218/ja">http://support.microsoft.com/kb/827218/ja</a><br>
+<br>
+<h4><a class="mozTocH4" name="mozTocId145859"></a>32 ビットおよび 64 ビットの
+Windows: よく寄せられる質問</h4>
+<a
+ href="http://windows.microsoft.com/ja-JP/windows7/32-bit-and-64-bit-Windows-frequently-asked-questions">http://windows.microsoft.com/ja-JP/windows7/32-bit-and-64-bit-Windows-frequently-asked-questions</a><br>
+<br>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4><a name="物理アドレス拡張PAEを強制的に有効にする"></a>物理アドレス拡張PAEを強制的に有効にする</h4>
+「物理アドレス拡張PAEを強制的に有効にする - @IT」という記事参照。<br>
+<a
+ href="http://www.atmarkit.co.jp/fwin2k/win2ktips/1125paeon/paeon.html">http://www.atmarkit.co.jp/fwin2k/win2ktips/1125paeon/paeon.html</a>
+<br>
+<br>
+<hr size="2" width="100%"><a href="../../index.html">HOME</a>
+</div>
+</body>
+</html>

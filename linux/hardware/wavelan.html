@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=Shift_JIS"
+      http-equiv="Content-Type">
+    <title>Wavelan - Linux on the Desktop</title>
+  </head>
+  <body>
+    <div id="navigator">
+      <p><a href="../../index.html" title="FrontPage (2d)">HOME</a> / <a
+          href="index.html">Hardware</a> <br>
+      </p>
+      <hr size="2" width="100%">
+      <h2 id="content_1_0">無線LAN (Wireless LAN, WaveLAN) の設定と動作情報</h2>
+      <div class="contents">
+        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="wavelan2.html">無線LAN（ワイヤレスLAN）に関する一般的な Tips（別ページ）</a><br>
+          </li>
+          <li><a href="#content_1_0">無線LAN (Wireless LAN, WaveLAN) 動作情報</a>
+            <ul class="list2" style="padding-left: 16px; margin-left:
+              16px;">
+              <li><a href="#content_1_1">無線LAN 全般について</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_2">Linux
+                      対応情報はまずどこで調べたら良いでしょうか。</a></li>
+                  <li><a href="#content_1_3">日本語 FAQ集はありますか。</a></li>
+                  <li>使っている無線LANカードの情報を調べるには？</li>
+                  <li><a href="#content_1_4">NetworkManager（ネットワーク監視モニ
+                      ター）</a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_5">無線LANデバイス情報 - Buffalo(Melco)編</a></li>
+              <li><a href="#content_1_6">Intel Wireless WiFi Link</a></li>
+              <li><a href="#content_1_7">現行製品の動作報告 (2009.03.08 更新)</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_8">WLI-CB-G54S(11Mbps)　導入方法その1
+                      (Debian Lenny の場合)</a></li>
+                  <li><a href="#content_1_9">WLI-CB-G54S(11Mbps)　導入方法その2
+                      (Debian Etch の場合)</a></li>
+                  <li><a href="#content_1_10">WLI-CB-G54S(11Mbps)　導入方法その
+                      3（汎用的な方
+                      法）</a></li>
+                  <li><a href="#content_1_11">Broadcom b43xx ドライバ利用時の注意点</a></li>
+                  <li><a href="#content_1_12">bcm43xx-fwcutter
+                      の使用方法（コマンド）</a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_13">旧製品の動作報告 (2008.01.06 追加)</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_14">WLI-U2-
+                      KG54L(11Mbps/54Mbps）</a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_15">旧製品（非現行製品）で動作確認できたもの</a></li>
+              <li><a href="#content_1_16">古い情報（参考情報）</a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_17">Fedora Core 1 の場合</a></li>
+                  <li><a href="#content_1_18">Vine Linux の場合</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_1">無線LAN 全般について</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_2">Linux 対応情報はまずどこで調べたら良いでしょうか。</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>様々な最新情報は、次のサイト（英語サイト）に集約されおり、情報量が豊富です。<br>
+          the official Linux Wireless wiki<br>
+          <a href="http://linuxwireless.org/">http://linuxwireless.org/</a></li>
+        <li>日本語情報については武藤氏のページが役立ちます。<br>
+          <a
+href="http://kmuto.jp/open.cgi?%E7%84%A1%E7%B7%9ALAN%E5%8B%95%E4%BD%9C%E7%8A%B6%E6%B3%81&amp;l=jp">[無
+            線LAN動作状況]-&gt;-[無線LANアダプタ対応状況]</a></li>
+        <li>国内主要メーカDraft11n無線LAN調査 (2009.07.24)<br>
+          <a
+href="http://linux.getinfomation.com/download/files/090724Wireless_LAN.pdf">http://linux.getinfomation.com/download/files/090724Wireless_LAN.pdf</a>
+          (PDF形式)（リンク切れ）<br>
+          <a
+href="http://linux.getinfomation.com/download/files/090724Wireless_LAN.csv">http://linux.getinfomation.com/download/files/090724Wireless_LAN.csv</a>
+          (CSV形式)（リンク切れ）</li>
+        <li><a href="http://wiki.debian.org/WiFi">Debian Wireless
+            Fidelity</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_3">日本語 FAQ集はありますか。</h4>
+      <p>無線LAN 全般については、<a
+          href="http://www12.atwiki.jp/linux2ch/?NetWorksFAQs"
+          title="2chLinux:NetWorksFAQs">2chLinux:NetWorksFAQs</a>
+        のページを見てください。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_4">使っている無線LANカードの情報を調べるには？<br>
+      </h4>
+      $ lspci<br>
+      比較的新しいマシンでは -nn オプションを付けた次のコマンドにも対応可能です。<br>
+      $ lspci -nn | grep Network<br>
+      表示される一例　***:Broadcom Corporation BCM4318<br>
+      この場合には、bcm43xx というチップに対応するファームウェアを入手すれば良いということになります。<br>
+      <br>
+      接続機器が USB デバイスの場合には、次のコマンドを試すと良いでしょう。<br>
+      $ lsusb<br>
+      <br>
+      <a href="#navigator">↑</a><br>
+      <span class="noexists"></span>
+      <h4 id="content_1_4"><span class="noexists">NetworkManager<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=NetworkManager&amp;refer=HardWares%2FWavelan">?</a></span>（ネッ
+        トワーク監視モニター）</h4>
+      <div class="img_margin" style="float: right;"><img
+          src="../../gnome/gnome-network-manager.png"
+          alt="gnome-network-manager.png"
+          title="gnome-network-manager.png" height="361" width="375"></div>
+      <p>これは、ネットワーク・デバイスの状態を表示する監視アプレットです。ネットワークの接続状態がグラフィカルに表示されます。</p>
+      <p>標準的な GNOME環境において、このアプレットを利用するには、パネル上で右クリックして
+        「パネルへ追加」＞「ネットワークを監視」を選択します。このソフトウェアは、KDE や Xfce環境などでも動作します。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://www.gnome.org/projects/NetworkManager/">http://www.gnome.org/projects/NetworkManager/</a></li>
+        <li><a href="http://live.gnome.org/NetworkManager">http://live.gnome.org/NetworkManager</a></li>
+        <li>Supported Wireless Cards &amp; Drivers<br>
+          <a href="http://live.gnome.org/NetworkManagerHardware">http://live.gnome.org/NetworkManagerHardware</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/NetworkManager">http://en.wikipedia.org/wiki/NetworkManager</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_5">無線LANデバイス情報 - Buffalo(Melco)編</h3>
+      <p>モデル名、チップセット、ドライバーの対応一覧が次のサイトで掲載されています。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://tomato.myftp.org/blog/readone.php?id=53">http://tomato.myftp.org/blog/readone.php?id=53</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_6">Intel Wireless <span class="noexists">WiFi<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=WiFi&amp;refer=HardWares%2FWavelan">?</a></span>
+        Link</h3>
+      <p>これは、近頃のノートPCに内蔵されることが多い無線LANアダプターです。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://www.intellinuxwireless.org/">Intel Wireless
+            WiFi
+            Link drivers for Linux</a><br>
+          iwlwifi-5000-ucode は、以下をサポートします。<br>
+          Intel Wireless <span class="noexists">WiFi<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=WiFi&amp;refer=HardWares%2FWavelan">?</a></span>
+          Link 5100AGN, 5300AGN, 5350AGN</li>
+        <li>ダウンロード・サイト<br>
+          <a href="http://www.intellinuxwireless.org/?n=Downloads">http://www.intellinuxwireless.org/?n=Downloads</a></li>
+        <li>Intel Wireless <span class="noexists">WiFi<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=WiFi&amp;refer=HardWares%2FWavelan">?</a></span>
+          Link for Debian<br>
+          <a href="http://wiki.debian.org/iwlagn">Intel Wireless WiFi
+            Link
+            4965, 5100, 5300, 5350, 5150, 1000, 6000 devices (iwlagn)</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_7">現行製品の動作報告 (2009.03.08 更新)</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_8">WLI-CB-G54S (11Mbps)　導入方法その1 (Debian Lenny
+        の場合)</h4>
+      <p>Debian 5.0 (Lenny) では、contrib セクションに b43-fwcutter
+        という名前のパッケージ名が用意されています。<a href="http://volatile.debian.org/">http://volatile.debian.org/</a>
+        にアップロードされている bcm43xx-fwcutter を利用することもできます。</p>
+      <p>実際のインストール方法は、以下の項目を参照してください。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_9">WLI-CB-G54S (11Mbps)　導入方法その2 (Debian Etch
+        の場合)</h4>
+      <div class="img_margin" style="float: right;"><img
+          src="../../debian/bcm43xx-fwcutter-setting.png"
+          alt="bcm43xx-fwcutter-setting.png"
+          title="bcm43xx-fwcutter-setting.png" height="251" width="637"></div>
+      <p>以下は、インターネットに接続、直接インストールする方法です。</p>
+      <p>bcm43xx-fwcutter の Debian stable (Etch)
+        パッケージにはバグ(bug=445133)があるため、「エラー 404: Not
+        Found。」と表示されてその後の作業が中断されます。<a href="http://volatile.debian.org/">http://volatile.debian.org/</a>
+        にアップロードされている bcm43xx-fwcutter をインストールします<a id="notetext_1"
+          href="#notefoot_1" class="note_super">*1</a>。面倒な導入作業が簡略化できます。</p>
+      <pre> # dpkg -i bcm43xx-fwcutter_006-3~volatile1_i386.deb</pre>
+      <p>としてインストールした後、この無線カードを差し込むと自動認識されます。GNOMEデスクトップであれば、グラフィカルなネットワー
+        ク管理ツール
+        でネットワーク環境が設定できます。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>注意：この導入作業には、有線LANによるインターネット接続環境が必要です。</li>
+      </ul>
+      <hr class="full_hr">
+      <p># apt-get install bcm43xx-fwcutter<br>
+        パッケージリストを読み込んでいます... 完了<br>
+        依存関係ツリーを作成しています... 完了<br>
+        以下のパッケージが新たにインストールされます:</p>
+      <pre>  bcm43xx-fwcutter</pre>
+      <p>アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 19 個。<br>
+        24.8kB のアーカイブを取得する必要があります。<br>
+        展開後に追加で 115kB のディスク容量が消費されます。<br>
+        取得:1 <a href="http://ftp.jp.debian.org">http://ftp.jp.debian.org</a>
+        etch/contrib bcm43xx-fwcutter 1:005-2 [24.8kB]<br>
+        24.8kB を 0s で取得しました (57.6kB/s)<br>
+        パッケージを事前設定しています ...<br>
+        未選択パッケージ bcm43xx-fwcutter を選択しています。<br>
+        (データベースを読み込んでいます ... 現在 95551 個のファイルとディレクトリがイン ストールされています。)<br>
+        (.../bcm43xx-fwcutter_1%3a005-2_i386.deb から) bcm43xx-fwcutter
+        を展開しています...<br>
+        bcm43xx-fwcutter (005-2) を設定しています ...</p>
+      <ul class="list2" style="padding-left: 32px; margin-left: 32px;">
+        <li>21:37:23-- <a
+            href="http://boredklink.googlepages.com/wl_apsta.o">http://boredklink.googlepages.com/wl_apsta.o</a>
+          <pre>           =&gt; `wl_apsta.o'</pre>
+          boredklink.googlepages.com をDNSに問いあわせています... 74.125.47.118<br>
+          boredklink.googlepages.com|74.125.47.118|:80 に接続しています...
+          接続しました。<br>
+          HTTP による接続要求を送信しました、応答を待っています... 404 Not Found<br>
+          21:37:24 エラー 404: Not Found。</li>
+      </ul>
+      <p>dpkg: bcm43xx-fwcutter の処理中にエラーが発生しました (--configure):</p>
+      <pre> サブプロセス post-installation script はエラー終了ステータス 1 を返しました</pre>
+      <p>以下のパッケージの処理中にエラーが発生しました:</p>
+      <pre> bcm43xx-fwcutter</pre>
+      <p>E: Sub-process /usr/bin/dpkg returned an error code (1)</p>
+      <hr class="full_hr">
+      <p><a
+          href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=445133">http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=445133</a></p>
+      <p>「エラー 404: Not Found。」が出た場合は、いったんアンインストールすること：<br>
+        # apt-get remove bcm43xx-fwcutter</p>
+      <p>Debian Wiki: Broadcom 43xx wireless devices<br>
+        <a
+href="http://wiki.debian.org/bcm43xx#head-4901912ee080fd62c8a3356049e822d86c09ef14">http://wiki.debian.org/bcm43xx#head-4901912ee080fd62c8a3356049e822d86c09ef14</a></p>
+      <p><a
+href="http://volatile.debian.org/debian-volatile/pool/volatile/contrib/b/bcm43xx-fwcutter/">http://volatile.debian.org/debian-volatile/pool/volatile/contrib/b/bcm43xx-fwcutter/</a></p>
+      <p>bcm43xx-fwcutter_006-3~volatile1_i386.deb</p>
+      <hr class="full_hr">
+      <p># dpkg -i bcm43xx-fwcutter_006-3~volatile1_i386.deb<br>
+        未選択パッケージ bcm43xx-fwcutter を選択しています。<br>
+        (データベースを読み込んでいます ... 現在 95551 個のファイルとディレクトリがイン ストールされています。)<br>
+        (bcm43xx-fwcutter_006-3~volatile1_i386.deb から) bcm43xx-fwcutter
+        を展開しています...<br>
+        bcm43xx-fwcutter (006-3~volatile1) を設定しています ...</p>
+      <ul class="list2" style="padding-left: 32px; margin-left: 32px;">
+        <li>23:31:19-- <a
+            href="http://downloads.openwrt.org/sources/wl_apsta-3.130.20.0.o">http://downloads.openwrt.org/sources/wl_apsta-3.130.20.0.o</a>
+          <pre>           =&gt; `wl_apsta.o'</pre>
+          downloads.openwrt.org をDNSに問いあわせています... 195.56.146.238<br>
+          downloads.openwrt.org|195.56.146.238|:80 に接続しています... 接続しました。<br>
+          HTTP による接続要求を送信しました、応答を待っています... 200 OK<br>
+          長さ: 652,866 (638K) [application/x-object]</li>
+      </ul>
+      <p>100%[====================================&gt;] 652,866
+        112.01K/s ETA
+        00:00</p>
+      <p>23:31:29 (91.39 KB/s) - `wl_apsta.o' を保存しました [652866/652866]</p>
+      <pre>  filename   :  wl_apsta.o<br>  version    :  3.130.20.0<br>  MD5        :  e08665c5c5b66beb9c3b2dd54aa80cb3<br>  microcodes :  2 4 5 11<br>  pcms       :  4 5</pre>
+      <pre>  microcode  :  2<br>  revision   :  0x0127<br>  patchlevel :  0x000e<br>  date       :  2005-04-18<br>  time       :  02:36:27</pre>
+      <pre>  microcode  :  4<br>  revision   :  0x0127<br>  patchlevel :  0x000e<br>  date       :  2005-04-18<br>  time       :  02:36:27</pre>
+      <pre>  microcode  :  5<br>  revision   :  0x0127<br>  patchlevel :  0x000e<br>  date       :  2005-04-18<br>  time       :  02:36:27</pre>
+      <pre>  microcode  :  11<br>  revision   :  0x0127<br>  patchlevel :  0x000e<br>  date       :  2005-04-18<br>  time       :  02:36:27</pre>
+      <p>extracting bcm43xx_microcode2.fw ...<br>
+        extracting bcm43xx_microcode4.fw ...<br>
+        extracting bcm43xx_microcode5.fw ...<br>
+        extracting bcm43xx_microcode11.fw ...<br>
+        extracting bcm43xx_pcm4.fw ...<br>
+        extracting bcm43xx_pcm5.fw ...<br>
+        extracting bcm43xx_initval01.fw ...<br>
+        extracting bcm43xx_initval02.fw ...<br>
+        extracting bcm43xx_initval03.fw ...<br>
+        extracting bcm43xx_initval04.fw ...<br>
+        extracting bcm43xx_initval05.fw ...<br>
+        extracting bcm43xx_initval06.fw ...<br>
+        extracting bcm43xx_initval07.fw ...<br>
+        extracting bcm43xx_initval08.fw ...<br>
+        extracting bcm43xx_initval09.fw ...<br>
+        extracting bcm43xx_initval10.fw ...</p>
+      <p>この後、無線LANカードをアダプターに差し込めば、カードの電源ランプ点灯するようになるので、ネットワーク設定ツールを使って作業
+        してくださ
+        い。以上の作業で、ネットワークに接続可能となります。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_10">WLI-CB-G54S (11Mbps)　導入方法その3（汎用的な方法）</h4>
+      <p>スタンドアローンで設定する場合。bcm43xx-fwcutter
+        は前もってインストールしておいてください。各ディストリビューションより配布されている bcm43xx-fwcutter
+        を利用してください。使用しているディストリビューションで配布されていない場合は、次のアドレスよりソースをダウンロードし、インス
+        トールすることが可
+        能です。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a
+            href="http://developer.berlios.de/project/showfiles.php?group_id=4547">http://developer.berlios.de/project/showfiles.php?group_id=4547</a></li>
+      </ul>
+      <p>付属の Melco AirNavi430 CD-ROM (Ver.4.30
+        で確認済み)の中にある、/mnt/cdrom/cbg54/bcmwl5.sys を利用します。Melco
+        ウェブサイトからダウンロード可能な最新版 (BUFFALO Wireless LAN Driver Disk Ver.10.52
+        -
+        2008年8月5日掲載、2008.11.1 現在) には、bcmwl5.sys
+        が含まれていません（bcm43xx-fwcutter
+        が対応していない場合があるので注意）。旧バージョンは、<a
+          href="http://buffalo.jp/download/driver/lan/old/wdrv.html">http://buffalo.jp/download/driver/lan/old/wdrv.html</a>
+        より直接ダウンロードできます。例えば、Ver.8.30 には、bcmwl5.sys が含まれます。</p>
+      <p>bcmwl5.sys をユーザーのディレクトリにコピーし、確認します。</p>
+      <pre> $ bcm43xx-fwcutter -i bcmwl5.sys <br>  filename   :  bcmwl5.sys<br>  version    :  3.30.15.1<br>  MD5        :  b3b3936d52a38b0257ffc7acf2d69a54<br>  microcodes :  2 4 5<br>  pcms       :  4 5</pre>
+      <pre>  microcode  :  2<br>  revision   :  0x00ef<br>  patchlevel :  0x000e<br>  date       :  2003-07-10<br>  time       :  18:59:00</pre>
+      <pre>  microcode  :  4<br>  revision   :  0x00ef<br>  patchlevel :  0x000e<br>  date       :  2003-07-10<br>  time       :  18:59:04</pre>
+      <pre>  microcode  :  5<br>  revision   :  0x00ef<br>  patchlevel :  0x000e<br>  date       :  2003-07-10<br>  time       :  18:59:06</pre>
+      <p>上記のとおり表示されれば対応しています。<br>
+        次のコマンド（例）で直接ファームウェアを取り出し保存します。</p>
+      <pre> # bcm43xx-fwcutter -w /lib/firmware/ bcmwl5.sys</pre>
+      <p>これで、無線カードが認識されるようになります。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_11">Broadcom b43xx ドライバ利用時の注意点</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://linuxwireless.org/en/users/Drivers/b43">http://linuxwireless.org/en/users/Drivers/b43</a><br>
+          "Then you must extract the firmware from that Broadcom driver
+          by using
+          b43-fwcutter (or bcm43xx-fwcutter) and install it in the
+          special
+          directory for firmware - usually /lib/firmware.Please note
+          that the
+          firmware from the binary drivers is Copyrighted by Broadcom
+          Corporation
+          and must not be redistributed."</li>
+      </ul>
+      <p>上記ウェブサイトのとおり、b43-fwcutter を使って /lib/firmware
+        ディレクトリに保存するのが通常の作業手順です。ただし、このバイナリー・ドライバーは著作権で保護されているため、勝手に再配布するこ
+        とはできません。</p>
+      <p>Debian 4.0 (Etch) で確認したところ、/lib/firmware には以下のファイルが保存されます。<br>
+        $ ls /lib/firmware</p>
+      <pre> bcm43xx_initval01.fw  bcm43xx_initval07.fw    bcm43xx_microcode4.fw<br> bcm43xx_initval02.fw  bcm43xx_initval08.fw    bcm43xx_microcode5.fw<br> bcm43xx_initval03.fw  bcm43xx_initval09.fw    bcm43xx_pcm4.fw<br> bcm43xx_initval04.fw  bcm43xx_initval10.fw    bcm43xx_pcm5.fw<br> bcm43xx_initval05.fw  bcm43xx_microcode11.fw<br> bcm43xx_initval06.fw  bcm43xx_microcode2.fw</pre>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_12">bcm43xx-fwcutter の使用方法（コマンド）</h4>
+      <p>$ bcm43xx-fwcutter -h<br>
+        bcm43xx-fwcutter version 006</p>
+      <p>Usage: bcm43xx-fwcutter [OPTION] [driver.sys]</p>
+      <pre>  -l|--list             List supported driver versions<br>  -i|--identify         Only identify the driver file (don't extract)<br>  -w|--target-dir DIR   Extract and write firmware to DIR<br>  -a|--alt-iv           Extract alternative initvals (only 3.10.x.x)<br>  -p|--postfix ".FOO"   Postfix for firmware filenames (.FOO.fw)<br>  -v|--version          Print bcm43xx-fwcutter version<br>  -h|--help             Print this help</pre>
+      <p>Example: bcm43xx-fwcutter bcmwl5.sys</p>
+      <pre>         to extract the firmware blobs from bcmwl5.sys</pre>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_13">旧製品の動作報告 (2008.01.06 追加)</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_14">WLI-U2-KG54L (11Mbps/54Mbps）</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>11Mbps で動作確認。チップは zd1211b。kernel 2.6.18 以降で実装済みとの情報があります。
+          <ul class="list2" style="padding-left: 16px; margin-left:
+            16px;">
+            <li>必要なファイルは次の URL からもインストールできます:<br>
+              <a href="http://sourceforge.net/projects/zd1211/">http://sourceforge.net/projects/zd1211/</a></li>
+          </ul>
+        </li>
+        <li>Mandriva Linux 2008 の場合<br>
+          # urpmi.update -a<br>
+          # urpmi zd1211-firmware<br>
+          　<a
+href="ftp://FTP.MIRROR/official/2008.0/i586/media/main/release/zd1211-firmware-1.1-2mdv2007.0.noarch.rpm">ftp://FTP.MIRROR/official/2008.0/i586/media/main/release/zd1211-firmware-1.1-2mdv2007.0.noarch.rpm</a><br>
+          　　　　0% / 15446 完了, ETA = 0:00:54, 速度 = 285 100% / 15446 完了,
+          ETA =
+          --:--:--, 速度 = 163k zd1211-firmware-1.1-2mdv2007.0.noarch.rpm
+          を
+          /var/cache/urpmi/rpms からインストール<br>
+          準備中... #############################################<br>
+          　　　　1/1: zd1211-firmware
+          #############################################</li>
+        <li>zd1211-firmware - Firmware files for the ZD1211 chip&#8203; &#65279;<br>
+          "This package contains the firmware files for the ZD1211 chip,
+          which is
+          used in WLAN USB sticks. The files are generated from C header
+          files
+          distributed in the original ZyDAS ZD1211 driver under the GNU
+          Public
+          License. The full source of the original ZYDAS driver is
+          available from <a href="http://www.deine-taler.de/zd1211/">http://www.deine-taler.de/zd1211/</a>"
+          (from
+          Mandriva
+          package)</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Debian 4.0 (Etch) の場合<br>
+          Debian にも、zd1211-firmware
+          というパッケージ名でバイナリー・パッケージが用意されているので、これを利用すると良いでしょう。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_15">旧製品（非現行製品）で動作確認できたもの</h3>
+      <p>次のカードは、アダプターに挿入するだけで自動認識されます。完動品が入手可能なら、推奨できる無線カードです。<br>
+        BUFFALO (メルコ)</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>WLI-PCM-L11</li>
+        <li>WLI-PCM-L11G</li>
+        <li>WLI-PCM-L11GP</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_16">古い情報（参考情報）</h3>
+      <p>以下で紹介した無線LAN カードは現時点（2008.01.06）で配布されている多くの Linuxディストリビューションの
+        kernel
+        に実装されているので、安心して利用できます。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_17">Fedora Core 1 の場合</h4>
+      <p>Fedora Core 1 に組み込まれている kernel-pcmcia-cs-3.1.31 の場合、次のようになります：</p>
+      <pre> Wireless network adapters:<br> <br>	[airo_cs driver] [x86]<br>	Aironet PC4500, PC4800<br>	Cisco 340<br>	Xircom Wireless Ethernet Adapter<br> <br>	[netwave_cs driver] [x86]<br>	Breezenet SA-PX<br>	Xircom CreditCard Netwave<br> <br>	[ray_cs driver] [x86,axp]<br>	BUSlink Wireless LAN Adapter<br>	Raytheon Raylink<br>	WebGear Aviator 2.4, Aviator Pro<br> <br>	[wavelan_cs driver] [x86,smp]<br>	AT&amp;T / NCR / Lucent WaveLAN version 2.0<br>	DEC RoamAbout/DS<br> <br>	[wvlan_cs driver] [x86,axp,ppc,smp]<br>	1stWave 1ST-PC-DSS11IS, DSS11IG, DSS11ES, DSS11EG<br>	ARtem Onair ComCard STD &amp; EMB versions, 128- &amp; 64-bit<br>	Cabletron/Enterasys RoamAbout 802.11 DS<br>	ELSA AirLancer MC-11<br>	HP F2136B<br>	IBM High Rate Wireless LAN<br>	Lucent Orinoco WaveLAN/IEEE 802.11(b)<br>	Melco WLI-PCM-L11, WLI-PCM-L11G<br>	NCR WaveLAN/IEEE 802.11<br>	PLANEX GeoWave/GW-CF110<br>	[ PrismII based cards: limited functionality ]<br>	Addtron AWP-100<br>	Ambicom WL1100 PC<br>	Compaq WL100<br>	Dell TrueMobile 1150 Series<br>	D-Link DWL-650<br>	Linksys WPC11 Instant Wireless<br>	SMC2632W<br>	ZCOMAX AirRunner/XI=300<br> <br>	[orinoco_cs driver]<br>	[ experimental backport of 2.4 driver for 2.2 kernels,<br>	supports same cards as wvlan_cs, requires wireless<br>	extensions version 10 or later ]<br> <br> (/usr/share/doc/kernel-pcmcia-cs-3.1.31/SUPPORTED.CARDS からの抜粋)</pre>
+      <p>上記一覧表は、2001/12/20時点の作成ですので、参考程度にしてください。現在入手でき、かつ実際に利用できるカードと一致し
+        ているわけで
+        はありません。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_18">Vine Linux の場合</h4>
+      <p>Vine Linux 2.6 での Melco WLI-PCM-L11, WLI-PCM-L11G 設定例を載せておきます。<br>
+        <br>
+        Vine Linux 付属のグラフィカルなネットワーク設定ツールでは、この Melco
+        のネットワークカードを有効にできないので、直接設定ファイルを次のように編集する必要があります。</p>
+      <p>/etc/sysconfig/network-scripts/ifcfg-eth1
+        を適当なエディターで開き、次の記述を冒頭に追加します。</p>
+      <pre> DEVICE=eth1<br> BOOTPROTO=dhcp<br> ESSID=******<br> KEY=s:******<br> ONBOOT=no</pre>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>ESSID= の ******の部分は、実際の設定値を調べて入力します。</li>
+        <li>KEY=s: ******の箇所は、未設定なら不要です。16進数で設定している場合は、s: を付けません。<br>
+          <br class="spacer">
+          設定後、次のコマンドで起動し、ネットワークに接続できます。
+          <pre> # /sbin/ifup eth1</pre>
+        </li>
+        <li>Vine Linux 2.93 (3.0 Beta) でもこの設定方法を利用する必要があります。</li>
+      </ul>
+      <hr size="2" width="100%"><a href="../../index.html">HOME</a>
+      <p><br>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>RemovalMedia</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../index.html">HOME</a> / <a href="index.html">Hardware
+</a><br>
+</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">USB Flash ドライブ</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">USB
+Flash
+ドライブ</a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">製品は Linux に対応していますか？</a></li>
+      <li><a href="#content_1_2">USB 1.0 / 2.0 対応</a></li>
+      <li><a href="#content_1_3">GNOME 環境</a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_4">USB disk がアンマウントできない (GNOME 2.8)</a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_5">KDE 環境</a></li>
+      <li><a href="#content_1_6">KNOPPIX で利用する</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">製品は Linux に対応していますか？</h3>
+<p>2006.05.20 現在、一般に USB フラッシュメモリと呼ばれている製品で、Linux
+正式対応を明記した大手メーカー製のものを筆者は知りません。<br>
+しかし、Linux でも使えることに違いはありません。ただしメーカーには保証してもらえないという状況にあります。</p>
+<p>もっとも、メーカー独自の追加機能は USB の仕様とは関係ないため、その利用は通常無理です。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">USB 1.0 / 2.0 対応</h3>
+<p>Linux kernel 2.6 を利用する場合、USB 2.0
+に標準で対応します。そのため、大変高速でデータの読み込みや書き込みができます。<br>
+USB 1.0 対応の製品も利用できます。</p>
+<p>kernel 2.4 では、USB 1.0 に対応します。</p>
+<hr class="full_hr">
+<p>[参考技術情報]</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://www.geocities.co.jp/SiliconValley-Bay/3897/usb/reports.html">Linux
+USB</a></li>
+  <li>以下のディストリビューションのバージョンでは USB2.0 は使用できないそうです。
+    <pre> ・MIRACLE LINUX V2.1<br> ・Turbolinux 8 Server<br> ・Redhat Enterprise Linux 3<br> ・MIRACLE LINUX V3</pre>
+    <blockquote>
+      <p class="quotation"><a
+ href="http://linux.toshiba-dme.co.jp/linux/magnia/check_inf/ch_restr_common.htm">http://linux.toshiba-dme.co.jp/linux/magnia/check_inf/ch_restr_common.htm</a></p>
+    </blockquote>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">GNOME 環境</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_4">USB disk がアンマウントできない (GNOME 2.8)</h4>
+<p>デスクトップ環境が GNOME 2.8
+であるときは、デフォルトの設定では取り出し（アンマウント）の操作に失敗することがあるようです。この場合には、次のいづれかの方法で対処可能です。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>デスクトップアプリケーション &gt; デスクトップの設定 &gt; リムーバルデバイスとメディア &gt;
+「メディアが挿入されたら参照する」のチェックを外します。</li>
+  <li>コマンドラインより lazy オプションを付けてアンマウントを実行します。
+    <pre> # umount /media/usbdisk -l</pre>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_5">KDE 環境</h3>
+<p>リムーバルメディアは、NO_NAME というデバイス名で表示（認識）される場合があります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_6">KNOPPIX で利用する</h3>
+<p>ライブCD として使用する KNOPPIX では、データの読み込みは可能ですが、書き込みは<br>
+通常できない設定になっています。これはデータが勝手に改変されるのを防ぐのに役立ちます。</p>
+<p>ユーザーが書き込むことを可能とするには、デスクトップにある設定項目を開き、そのプロパティでユーザーの書き込みに許可を与えてください。</p>
+<hr size="2" width="100%"><a href="../../index.html">HOME</a>
+</div>
+</body>
+</html>

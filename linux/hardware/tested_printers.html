@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Printing / Tested Printers</title>
+  </head>
+  <body>
+    <div id="body">
+      <p> </p>
+      <p> </p>
+      <a href="printing.html" title="HardWares/Printing (907d)">HardWares/Printing</a><br>
+      <br>
+      <ul id="mozToc">
+        <!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
+        <li><a href="#mozTocId413100">プリンターの機種別確認情報</a>
+          <ul>
+            <li><a href="#mozTocId884077">Brother 2170W</a><br>
+              <a href="#mozTocId663562">Canon PIXUS560i</a><br>
+              <a href="#mozTocId615886">EPSON PX-V500</a></li>
+          </ul>
+          <br>
+          <a href="#mozTocId300552">印刷結果が良くありません</a><br>
+          <a href="#mozTocId252243">ウェブページ印刷時、周囲が欠けて印刷されます。(Firefox 2.0)</a></li>
+      </ul>
+      <br>
+      <div class="contents">
+        <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+        </ul>
+      </div>
+      <h3 id="content_1_0"><a name="mozTocId413100" class="mozTocH3"></a>プ
+        リンターの機種別確認情報</h3>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=Printing%2FPrinters#navigator">↑</a></div>
+      <h4 id="content_1_1"><a name="mozTocId884077" class="mozTocH4"></a>Brother
+        2170W</h4>
+      <p>Brother_HL-2170W の設定方法です。HL-2170W
+        には、オープンソースなプリンター・ドライバーが配布されているので、ウェブブラウザより CUPS を利用して設定が行えます。下記
+        URL よりドライバーを入手し設定することができます。</p>
+      <p>このプリンターは、無線LANによる運用も可能です。</p>
+      <hr class="full_hr">
+      <p>説明:<br>
+        場所:<br>
+        メーカとモデル: Brother HL-2170W Foomatic/pxlmono (recommended)<br>
+        プリンタの状態: 待機中, ジョブを受け付け中, 公開。<br>
+        デバイス URI: ipp://123.456.78.9/binary_p1</p>
+      <hr class="full_hr">
+      <p><a
+href="http://www.openprinting.org/show_printer.cgi?recnum=Brother-HL-2170W">http://www.openprinting.org/show_printer.cgi?recnum=Brother-HL-2170W</a></p>
+      <p>so in two simple steps, using cups:<br>
+        1. make a new printer, with uri as
+        ipp://&lt;PRINTER_IP&gt;/binary_p1<br>
+        2. for driver, use "have ppd" and open the plxmono .ppd from the
+        bottom of this page.</p>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=Printing%2FPrinters#navigator">↑</a></div>
+      <h4 id="content_1_2"><a name="mozTocId663562" class="mozTocH4"></a>Canon
+        PIXUS560i</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>最新版(2008.11.22)の CUPS を利用する場合<br>
+          bjfilterpixus560i-*
+          を導入（インストール）する必要は無くなりました。ただし、この方法では専用のステータスモニタを使うことはできません。<br>
+          CUPS で用意されている CANON 560i
+          用プリンタドライバが選択できます。最適な状態で印刷するには、プリンタ・オプションの設定で、以下の項目を変更します。
+          <pre> Model Size: Letter → A4<br> Color Model: RGB color → CMYK<br> Ink Type: Photo CcMmYyK Color → CMYK Color</pre>
+          印字品質については次の項目で選択できますが、高品位にするとインクの消費量が増えます。
+          <pre> Resolution: 300x300 DPI ←→ 600x600 DPI</pre>
+        </li>
+      </ul>
+      <hr class="full_hr">
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>（過去の情報）Red Hat Linux 9<br>
+          <br>
+          このプリンターは、Red Hat Linux 9
+          での動作がメーカーで検証・確認されています。しかしながら、メーカー提供のマニュアル通りでは設定が不可能です。これは、CUPS
+          ドライバー等印刷関連
+          パッケージがリリース時より大幅に更新されているためと考えられます。確認した範囲では、次の手順で奇麗に日本語文書が印刷できるよ
+          うになります。<br>
+          <br>
+          まず、ダウンロードした2つのパッケージをインストールします。
+          <pre> # rpm -ivh bjfilterpixus560i-2.4-0.i386.rpm<br> Preparing...                ########################################### [100%]<br>   1:bjfilterpixus560i      ########################################### [100%]<br> # rpm -ivh bjfiltercups-2.4-0.i386.rpm<br> Preparing...                ########################################### [100%]<br>   1:bjfiltercups           ########################################### [100%]</pre>
+          プリンターサーバーを再起動させます。
+          <pre> # /etc/rc.d/init.d/cups restart<br> Stopping cups:                                             [  OK  ]<br> cupsを起動中:                                              [  OK  ]<br> # exit</pre>
+          次に、ブラウザーのアドレスに <a href="http://localhost:631/">http://localhost:631/</a>
+          を入力し、CUPSプリンター設定画面より [Printer] タブを選択します。
+          <pre> <br> [Add Printer]<br> "Add Printer"ボタンを選択し、"Continue"ボタンで先へ進みます。<br> <br> [Add New Printer]<br> PIXUS560i と入力して、"Continue"を選択<br> <br> [Device for PIXUS560i]<br> USB Printer #1 With Status readback for Canon BJ (Canon 560i) を設定し、"Continue"を選択<br> <br> [Model/Driver for PIXUS560i]<br> Canon を設定し、"Continue"を選択<br> <br> [Model/Driver for PIXUS560i]<br> Canon PIXUS 560i ver.2.4(en) を設定し、"Continue"を選択</pre>
+          Printer PIXUS560i has been modified successfully.
+          というメッセージが表示されたら、これで作業完了です。
+          <pre> <br> [PIXUS 560i のプユーティリティ表示・設定方法]<br> <br> ・ステータスモニタの起動<br> $ bjcupsmon pixus560i (あるいは単に $ bjcupsmon)<br> <br> ・GUIモードでのユーティリティ設定<br> $ bjcups pixus560i (プリンター名がPIXUS560iのとき)</pre>
+        </li>
+      </ul>
+      <hr class="full_hr">
+      <p>[別手順]<br>
+        gimp-print-cups の最新版 Gimp-Print 4.2.7 を利用することも可能です。設定の際、ドライバーには
+        Canon S800 または Canon BJC 8200
+        を選択します。ただし、メーカー専用のドライバーをインストールするのと比較した場合、一部の機能は制限されてしまいます。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Fedora Core (Fedora Core 1)<br>
+          <br>
+          bjfilterpixus560i-2.4-0.i386.rpm
+          のインストール時に依存性エラーが出るようになります(2004.11.23現在、アップデートパッチ全適用済の状態)。上記
+          Red Hat Linux 9 の方法で作業を行なう前に、準備作業が必要でです。<br>
+          libglade-0.17-12.2.i386.rpm
+          というパッケージを事前インストールしてから、上記作業を行なってください。
+          <pre> # apt-get install libglade</pre>
+          APT を使わないときは、<a href="ftp://rpmfind.net/">ftp://rpmfind.net/</a>
+          などから単独でパッケージが入手できます。
+          <pre> # rpm -ivh libglade-0.17-12.2.i386.rpm<br> Preparing...                ########################################### [100%]<br>    1:libglade               ########################################### [100%]</pre>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>White Box Linux 3.0 Respin 1<br>
+          <br>
+          bjfilterpixus560i-2.4-0.i386.rpm のインストール時 "Failed
+          dependencies: libglade.so.0 is needed ..." というエラーが出るので、事前に
+          libglade-0.17-12.1.i386.rpm をインストールします。
+          <pre> # yum install libglade (あるいは up2date -i libglade)</pre>
+          この後は、Red Hat Linux 9 の場合と全く同じ手順で作業すれば、何も問題ありません。</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>CentOS 4.1 RC1<br>
+          <br>
+          [Canon専用の BjFilterPixus560iドライバーを利用するとき]<br>
+          RHL 9 の手順で設定します。Gimp Print Cups ドライバーを利用するよりも、良好な印刷結果が得られます。<br>
+          ただし次のエラーが出るので、以下のパッケージを事前にインストールして回避します。
+          <pre> エラー: Failed dependencies:<br>         libglade.so.0 is needed by bjfilterpixus560i-2.4-0.i386<br>         libxml.so.1 is needed by bjfilterpixus560i-2.4-0.i386</pre>
+        </li>
+      </ul>
+      <pre> libxml-1.8.17-11.i386.rpm<br> libxml-devel-1.8.17-11.i386.rpm<br> libglade2-2.4.0-5.i386.rpm<br> libglade-0.17-12.1.i386.rpm (libglade-0.17-12.1.src.rpm)</pre>
+      <blockquote>
+        <p class="quotation">これらのパッケージは <a
+href="http://ftp.redhat.com/pub/redhat/linux/beta/nahant-beta2/en/Desktop/i386/RedHat/RPMS/">beta/nahant-beta2</a>
+          から入手可能です。<br>
+          <br>
+          [Gimp Print Cups ドライバーを利用するとき]<br>
+          <br>
+          Canon用の Cupsドライバー gimp-print-cups-4.2.7-2 を
+          CentOSサイトより追加インストールします。</p>
+        <pre> # yum install gimp-print-cups</pre>
+        <p class="quotation">その後、ブラウザーのアドレスに <a
+            href="http://localhost:631/">http://localhost:631/</a>
+          を入力し上記の手順で設定します。印刷品位を向上させるためには、[Printer] &gt; [Configure
+          Printer] &gt; [Extra] から Resolution 600x600 DPI に変更してください。</p>
+      </blockquote>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Mandrakelinux 10.0<br>
+          <br>
+          Mandrakelinux 10.0 に導入したところ、次のパッケージが依存性エラーのため、インストールができません。
+          <pre> bjfilterpixus560i-2.4-0.i386.rpm</pre>
+          そこで替わりの方法として、<a href="http://localhost:631/">http://localhost:631/</a>
+          より設定を行い、ドライバーには Canon S800
+          を利用することで、WEBページ（英語のみ、日本語は不可）の印刷が可能となります。<a
+            href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice"
+            title="OpenOffice (622d)">OpenOffice</a>.org
+          を開いて印刷を実行すれば、日本語ページも問題なく印刷できます。</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Debian3.1 (Sarge), Progeny Debian2.0 RC1<br>
+          <br>
+          次の手順でインストールは一見正常に完了しますが、実際に印刷が開始できません。ディストリビューションに含まれる印刷関連パッケー
+          ジ自体に不具合があり そうに思われますが、原因不明です。Cupsテストページ印刷は可能です。-2004.12.05)
+          <pre> # alien -d bjfiltercups-2.4-0.i386.rpm<br> bjfiltercups_2.4-1_i386.deb generated<br> <br> # alien -d bjfilterpixus560i-2.4-0.i386.rpm<br> bjfilterpixus560i_2.4-1_i386.deb generated<br> <br> # alien -d libglade-0.17-12.2.i386.rpm<br> # alien -d libxml-1.8.17-10.1.2.i386.rpm<br> <br> # dpkg -i libglade_0.17-13.2_i386.deb libxml_1.8.17-11.1_i386.deb<br> bjfilterpixus560i_2.4-1_i386.deb bjfiltercups_2.4-1_i386.deb</pre>
+          <br class="spacer">
+          [別手順 1]<br>
+          Canon 提供のCups用パッケージは一切インストールせず、 <a
+            href="http://localhost:631/">http://localhost:631/</a>
+          よりプリンタドライバー一覧から Canon Bjc-8200 を選択します。<br>
+          そして、 Mozilla ブラウザーで印刷した時の日本語の文字化け□□□を防ぐためには、さらに次のパッケージを追加します。
+          <pre> cmap-adobe-japan1 gs-cjk-resource psfontmgr<br> (※cmap-adobe-japan1 gs-cjk-resource は non-free にあります。)</pre>
+          以上の作業が済めば、Mozilla ブラウザーからWEBページの印刷が可能となります(日本語ページも印刷可能)。<a
+            href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice"
+            title="OpenOffice (622d)">OpenOffice</a>.org や
+          Geditを使っての、日本語文書の印刷も可能です。 <br class="spacer">
+          <br class="spacer">
+          [別手順 2]<br>
+          Debianパッケージが <a
+            href="http://mambo.kuhp.kyoto-u.ac.jp/%7Etakushi/japanese.html">http://mambo.kuhp.kyoto-u.ac.jp/~takushi/japanese.html</a>
+          にて公開されています。キャノン純正のLinux用プリンタドライバを
+          GPLライセンスのもと、Debian用に移植したそうです。公開先のページにインストール方法の説明があります。<br>
+          Canon Pixus (560i / 860i / 990i)、Canon Pixus iP3100 / iP4100 /
+          iP8600 (および Pixma iP1000 / iP1500) 対応プリンタドライバも公開されています
+          (2006-01-14 現在)。　なお、当方の環境（標準的な Sarge
+          環境）で当初動作しませんでしたが、新規インストールしたところ、動作確認ができました(2006-05-21)。<br>
+          以下の手順で設定してください。 <br class="spacer">
+          <br class="spacer">
+          まず、参照先の apt-line を追加します。
+          <pre> deb http://mambo.kuhp.kyoto-u.ac.jp/~takushi/debian ./</pre>
+          そして、
+          <pre> # apt-get update<br> # apt-get install libcnbj-2.4 bjfilter-2.4 pstocanonbj<br> パッケージリストを読みこんでいます... 完了<br> 依存関係ツリーを作成しています... 完了<br> 提案パッケージ:<br>   bjfilter-2.2 bjfilter-2.5<br> 以下のパッケージが新たにインストールされます:<br>   bjfilter-2.4 libcnbj-2.4 pstocanonbj<br> アップグレード: 0 個、新規インストール: 3 個、削除: 0 個、保留: 0 個。<br> 3633kB のアーカイブを取得する必要があります。<br> 展開後に追加で 6954kB のディスク容量が消費されます。<br> 取得:1 http://mambo.kuhp.kyoto-u.ac.jp ./ bjfilter-2.4 1-2 [93.1kB]<br> 取得:2 http://mambo.kuhp.kyoto-u.ac.jp ./ libcnbj-2.4 0-1 [3528kB]<br> 取得:3 http://mambo.kuhp.kyoto-u.ac.jp ./ pstocanonbj 3.1-1 [11.8kB]<br> 3633kB を 7s で取得しました (463kB/s)<br> 未選択パッケージ bjfilter-2.4 を選択しています。<br> (データベースを読み込んでいます... 現在 70511 個のファイルとディレクトリがインストールされています。)<br> (.../bjfilter-2.4_1-2_i386.deb から) bjfilter-2.4 を展開しています...<br> 未選択パッケージ libcnbj-2.4 を選択しています。<br> (.../libcnbj-2.4_0-1_i386.deb から) libcnbj-2.4 を展開しています...<br> 未選択パッケージ pstocanonbj を選択しています。<br> (.../pstocanonbj_3.1-1_i386.deb から) pstocanonbj を展開しています...<br> bjfilter-2.4 (1-2) を設定しています ...<br> libcnbj-2.4 (0-1) を設定しています ...<br> <br> pstocanonbj (3.1-1) を設定しています ...<br> Restarting Common Unix Printing System: cupsd.</pre>
+          <a href="http://localhost:631/">http://localhost:631/</a>
+          よりプリンタを追加します。<br>
+          ドライバは、 Canon PIXUS 560i ver.2.4 (en) を選択します。</li>
+        <li>この専用ドライバを使用する方が、Canon Bjc-8200 よりも印字品質が良好です。</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Debian 4.0 (Etch)<br>
+          Canon 提供のCups用パッケージは一切インストールせず、 <a
+            href="http://localhost:631/">http://localhost:631/</a>
+          よりプリンタドライバー一覧から Canon Bjc-8200 を選択します。 Canon Bjc-8200
+          用プリンタドライバは、gutenprint という Debian パッケージに含まれているので、併せてインストールします。
+          <pre> # apt-get install cupsys-driver-gutenprint</pre>
+        </li>
+      </ul>
+      <p>あるいは、上記の[別手順 2]の方法でも印刷可能です。</p>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=Printing%2FPrinters#navigator">↑</a></div>
+      <h4 id="content_1_3"><a name="mozTocId615886" class="mozTocH4"></a>EPSON
+        PX-V500</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>[Mandrakelinux 10.0 の場合]<br>
+          <br>
+          現行機種のうち、安価で気軽に利用できる EPSON PX-V500 の場合を紹介します。<br>
+          以下の手順で、PX-V500用Photo Image Print System が利用可能となります。
+          <pre> (1) rpmファイルのインストール<br> <br> [ インストール方法 ]<br> rpmコマンドを実行するとインストール完了です。<br> rpm -ivh pipsv500-cups-2.6.2-1.i386.rpm<br> <br> (2).... インストール後の設定<br> <br> Photo Image Print System を使用する為に、CUPSの設定を行う必要があります。<br> 最初に印刷を行う前に、必ず設定を行って下さい。<br> <br> [ CUPSの再起動 ]<br> インストールされたフィルタを有効化する為に、CUPSを再起動してください。<br> /etc/rc.d/init.d/cups restart<br> <br> [ プリンタの追加 ]<br> <br> ・ブラウザから追加する場合<br>  CUPSでは設定用のCGIが用意されており、プリンタの設定をブラウザ上で行う<br>  事が出来ます。プリンタの追加には、以下の手順を実行します。<br> <br>  (1) ブラウザから、CUPSサーバ(Port:631)に接続します。<br>      ※例えば、CUPSがlocalhost上にある場合は、"http://localhost:631/"に<br>        アクセスします。<br>  (2) "Manage Printers"を選択<br>  (3) "Add Printer"を選択<br>  (4) "Name"にプリンタ設定名称を記述して、"Continue"を選択 (他の項目は必須で<br>      はありません)<br>  (5) "Device"に"EPSON Inkjet Printer #1 (Photo Image Print System)"を設定し<br>      て、"Continue"を選択<br>  (6) "Make"に"EPSON"を設定して、"Continue"を選択<br>  (7) "Model"に"EPSON PX-V500 , Photo Image Print System (en)"を設定して、<br>      "Continue"を選択</pre>
+        </li>
+      </ul>
+      <p>[ 注意事項 ]<br>
+        <br>
+        ・上記手順は EPSON KOWA Corporation
+        提供のマニュアルより一部抜粋・引用しています。ただし、実際に即するように訂正・修正を加えています。<br>
+        <br>
+        ・rpmファイルのインストールのインストールは、一部のLinuxディストリビューションでは依存性エラーが原因で、実行できません。
+        強制的にインス
+        トールを実行しても、プリンターの設定は完了出来ません。次のディストリビューションでは、依存性エラーの発生を確認しています。<br>
+      </p>
+      <blockquote>
+        <p class="quotation">Fedora Core 1, White Box Enterprise Linux
+          3.0 respin1, Mandrakelinux 10.0</p>
+      </blockquote>
+      <hr class="full_hr">
+      <p>[別手順]<br>
+        <br>
+        開発中のベータ版 Gimp-Print 5.0.0-beta2 は、PX-V500
+        に対応したということがそのリリースノートに書かれているので、このドライバーが使えるのではないかと思われます（未確認）。</p>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=Printing%2FPrinters#navigator">↑</a></div>
+      <h3 id="content_1_4"><a name="mozTocId300552" class="mozTocH3"></a>印
+        刷結果が良くありません</h3>
+      <p>gimp-print-cups
+        ドライバーを利用した場合は、使用しているプリンタに最適な設定となっているか確認してください。汎用性のあるドライバーを選択して互換
+        機種で印刷を行う と、解像度や用紙設定などが適切でない場合があります。</p>
+      <p>ブラウザーのアドレスから <a href="http://localhost:631/">http://localhost:631/</a>
+        を開き、[Printer] &gt; [Configure] の項目で 解像度(Resolution)、用紙サイズ(Media
+        Size)等を変更するなどして印刷品質が改善されるか試してください。</p>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=Printing%2FPrinters#navigator">↑</a></div>
+      <h3 id="content_1_5"><a name="mozTocId252243" class="mozTocH3"></a>ウェ
+        ブページ印刷時、周囲が欠けて印刷されます。(Firefox 2.0)</h3>
+      <p>ウェブページの上部（ヘッダー）には、ウェブサイト名とアドレス、下部（フッター）には、ページ番号と印刷時刻が通常表示されます。た
+        だし、初期設 定のままでは、印刷プレビューどおりに印刷されない場合があります。</p>
+      <p>この設定を変更するには、ブラウザの印刷＞プリンタ＞プロパティ　の「用紙の端から余白までの距離」で行えます。</p>
+      <p>（変更前）</p>
+      <div class="img_margin" style="text-align: left;"><a
+href="http://www.h7.dion.ne.jp/%7Egreens/firefox/Screenshot-printer-property.png"
+          title="Screenshot-printer-property.png"><img
+src="http://www.h7.dion.ne.jp/%7Egreens/firefox/Screenshot-printer-property.png"
+            alt="Screenshot-printer-property.png"
+            title="Screenshot-printer-property.png"></a></div>
+      <p>（変更後の一例）</p>
+      <div class="img_margin" style="text-align: left;"><a
+href="http://www.h7.dion.ne.jp/%7Egreens/firefox/Screenshot-printer-property2.png"
+          title="Screenshot-printer-property2.png"><img
+src="http://www.h7.dion.ne.jp/%7Egreens/firefox/Screenshot-printer-property2.png"
+            alt="Screenshot-printer-property2.png"
+            title="Screenshot-printer-property2.png"></a></div>
+      <p>なお、ヘッダー/フッターの内容や位置、余白の有無などを変更したいときは、ファイル＞「ページ設定」の画面より行ってください。</p>
+      <div class="img_margin" style="text-align: left;"><a
+href="http://www.h7.dion.ne.jp/%7Egreens/firefox/Screenshot-page-setup.png"
+          title="Screenshot-page-setup.png"><img
+src="http://www.h7.dion.ne.jp/%7Egreens/firefox/Screenshot-page-setup.png"
+            alt="Screenshot-page-setup.png"
+            title="Screenshot-page-setup.png"></a></div>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>[参考]<br>
+          Firefox 3.0
+          では、上記のような設定項目が無くなりました。印刷用紙を選択すると、レイアウトはその用紙に応じた最適な値に自動的に設定されるよ
+          うになっています。</li>
+      </ul>
+    </div>
+  </body>
+</html>
