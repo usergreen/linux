@@ -1,0 +1,120 @@
+Language: English and Japanese
+Character set encoding: UTF-8
+(This page is a text version. Please set Text Encoding to Unicode.)
+
+RECREATIONS
+
+ちょっとした楽しみのためのページを作ってみました。（初公開日：September 4, 2020）-- Last updated: 2021-08-16 18:39 JST
+
+Linux とは直接関係ありませんが、Linux と同じような自由な考え方のもとで、ウェブ上で自由かつ無料で再配布されている著作物が多数あります。 小説や短編小説、エッセイなども取り上げて紹介しま す。著作権が無いパブリック・ドメインとなった作品がおもですが、 古今東西の有名な古典を読むことができます。なお、部分的に翻訳を施した文献もあります。この分野では、Project Gutenburg の取り組みが世界で先駆けとなりました。その後も収録される書籍は着実に増加しており、今日においてもその種の電子図書館では最も有名です。 日本の青空文庫も これと似た取り組みであると言えます。電子書籍は後述のとおり Linux 用のアプリが対応しています。 （このページは試験的にハイパーリンクを排除したので、外部サイトへアクセスしたい場合は掲載のアドレスをコピー＆ペーストして利用してください。このページの HTML 版は同じディレクトリの .html です。）
+
+--------------------------------------------------------------------------------
+目次 (Contents)
+
+VOA Special English programs
+
+長編小説
+* Dracula
+* Alice's Adventures in Wonderland
+* The Wonderful Wizard of Oz
+
+短編小説
+* A Primary Reader: Old-time Stories, Fairy Tales and Myths Retold by Children
+* Fifty Famous Stories Retold
+
+電子書籍の標準形式について
+
+外部リンク
+--------------------------------------------------------------------------------
+
+# VOA Special English programs
+
+Voice of America が放送用に作成した様々なコンテンツがパブリック・ドメインで公開されています。 コンテンツによってはオーディオとビデオを含みます。 英語を第二や第三の言語として学習する場合に役立つよう配慮された内容です。もちろん、語学学習のためでなく、 単に知識や教養を得る目的でも十分楽しめるように構成されています。内容のごく一部を紹介します。
+
+30 minutes programs for news and varieties - 毎日更新のニュースとバラエティ番組
+https://learningenglish.voanews.com/z/1689
+
+## America's National Parks - 特集 アメリカの国立公園紹介 
+https://learningenglish.voanews.com/p/5849.html
+
+　Washington's Cherry Blossoms Signal the Start of Spring - ウエスト・ポトマック国立公園
+　https://learningenglish.voanews.com/a/cherry-blossoms-signal-the-start-of-spring/3251616.html
+
+　National Park in New Orleans Celebrates Jazz
+　https://learningenglish.voanews.com/a/americas-national-parks-new-orleans-jazz-national-historical-park/3308628.html
+
+## American short stories - アメリカの短編小説
+https://learningenglish.voanews.com/z/1581
+
+## People In America - 著名人の伝記
+https://learningenglish.voanews.com/z/4852
+
+　George Gershwin, 1898-1937: One of America’s Greatest Composers
+  https://learningenglish.voanews.com/a/a-23-2009-02-07-voa3-83142912/130239.html
+
+  Willis Conover, 1920-1996: He Brought Jazz, 'the Music of Freedom,' to the World
+  https://learningenglish.voanews.com/a/a-23-2009-01-31-voa1-83140482/129453.html
+
+  Gene Kelly, 1912-1996: His Movies Made Dance More Popular in America
+  https://learningenglish.voanews.com/a/gene-kelly-1912-1996-his-movies-made-dance-popular-in-america-123161698/114457.html
+
+## Words and Their Stories - 言葉の起源とその物語
+  https://learningenglish.voanews.com/z/987
+        'When the Cat's Away, the Mice Will Play!'
+        https://learningenglish.voanews.com/a/when-the-cat-s-away-the-mice-will-play-/5336433.html 
+
+# 長編小説
+
+## Dracula
+
+Count Dracula had directed me to go to the Golden Krone Hotel, which I found, to my delight, to be thoroughly old-fashioned, for of course I wanted to see all I could of the ways of the country. I was evidently expected, for when I got near the door I faced a [Pg 4]cheery-looking elderly woman in the usual peasant dress—white undergarment with long double apron, front and back, of coloured stuff fitting almost too tight for modesty. When I came close she bowed, and said: “The Herr Englishman?” “Yes,” I said, “Jonathan Harker.” She smiled, and gave some message to an elderly man in white shirt-sleeves, who had followed her to the door. He went, but immediately returned with a letter:—
+
+ドラキュラ伯爵は、私にゴールデン・クローネ・ホテルに行くように指示していました。私が喜んで見つけたのは、完全に昔ながらのホテルでし た。も ちろん、私はこの国のやり方をすべて見たかったのです。 ドアに近づいたとき、私はいつもの農民の服を着た、つまり、白の下着と長い二重のエプロン、前と後ろの長いエプロンを着た、陽気な年配の女性 に出会ったので、間違いなく私の訪問を期待していたことが分かりました。私が近づいたとき、彼女はお辞儀をして言った：「イギリス人のお方ですか？」 「はい」と私は言い、続けて「ジョナサン・ハーカーです」と言った。彼女はにっこり笑って、ドアまで付き添ってきた白いシャツを着た年配の男 性にいくつか のメッセージを手渡しました。 彼は行きかけましたが、すぐに次のような内容の手紙を持って戻ってきました：—
+-------------------------------------------------
+Bram Stoker was an English writer. He was well known for his novel "Dracula". It is a classic novel today, as movie films according to its plot made very popular in the world. Dracula is a devil or called vampire that he created in the novel, who searches human's blood in the mid-night.
+
+“Do you not know that to-night, when the clock strikes midnight, all the evil things in the world will have full sway(=influence)?”  -Bram Stoker, Dracula
+
+    Original (原作) in html, epub and text formats from Project Gutenburg at https://www.gutenberg.org/ebooks/45839
+
+    A modified version in HTML format including partial Japanese translation at
+    https://linux.sakura.ne.jp/recreations/Dracula/Dracula_by_Bram_Stoker_in_Japanese_translation.htm
+
+    Familiar novels by the same author follows:
+    * The Jewel of Seven Stars by Bram Stoker
+    * The Lair of the White Worm by Bram Stoker
+
+## Alice's Adventures in Wonderland
+Alice's Adventures in Wonderland by Lewis Carroll 「不思議の国のアリス」ルイス・キャロル著
+ 原作 https://www.gutenberg.org/ebooks/28885
+
+## The Wonderful Wizard of Oz
+The Wonderful Wizard of Oz by L. Frank Baum 「オズの魔法使い」フランク・バーム著
+原作 https://www.gutenberg.org/ebooks/43936
+
+# 短編小説
+A Primary Reader: Old-time Stories, Fairy Tales and Myths Retold by　Children
+https://www.gutenberg.org/ebooks/7841
+
+Fifty Famous Stories Retold by James Baldwin
+https://www.gutenberg.org/ebooks/18442
+
+# 電子書籍の標準形式について
+
+2020年現在、電子書籍の配布は epub が標準的な形式です。epub 形式については「今更だけどEPUB（イーパブ）ファイルどうやって読むの？」 https://www.appleach.co.jp/2017/04/210/ というサイトの解説を参照してください。Linux のデスクトップ環境では、Atril Document Viewer で読むことが出来ます。Evince は2020年時点で未対応で、下記バグ報告を読んだ印象では今後も対応される見込みがないと思われます。
+
+"Evince doesn't support EPUB, and the request for support has been marked as WONTFIX (see https://bugzilla.gnome.org/show_bug.cgi?id=539347). However, Atril, which was originally forked from Evince, does support EPUB rather well." -- https://news.ycombinator.com/item?id=20392810
+
+GNOME デスクトップ向けとして、gnome-books が代替アプリとして開発済みです。ただし、このアプリを利用するには多数の GNOME 関連ライブラリーのインストールが必要です。EPUB ビューアはこの他に Bookworm や Calibre もあります。
+
+ebook reader for GNOME - "Books is a simple application to access and organize your e-books on GNOME. It is meant to be a simple and elegant replacement for using a file manager to deal with e-books. It's included in the default set of core applications since GNOME 3.16."
+https://wiki.gnome.org/Apps/Books
+https://packages.debian.org/buster/gnome-books
+
+# 外部リンク
+
+* Project Gutenberg https://www.gutenberg.org/
+　  Project Gutenberg is an online library of over 60,000 free eBooks.
+
+* 青空文庫 https://www.aozora.gr.jp/
+
