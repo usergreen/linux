@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"><html><head><title>download.fedora.us disk failure</title>
+   
+   <link rel="Index" href="http://www.fedora.us/pipermail/fedora-devel/2003-December/index.html">
+   <link rel="made" href="mailto:fedora-devel%40fedora.us">
+   <meta name="robots" content="index,nofollow">
+   
+   
+   <link rel="Next" href="http://www.fedora.us/pipermail/fedora-devel/2003-December/002370.html"></head>
+
+ <body bgcolor="#ffffff">
+   <h1>download.fedora.us disk failure
+   </h1>
+    <b>Warren Togami
+    </b> 
+    <a href="mailto:fedora-devel%40fedora.us" title="download.fedora.us disk failure">fedora-devel@fedora.us
+       </a><br>
+    <i>Tue Dec  2 17:52:00 2003</i>
+    <p></p><ul>
+        
+        <li> Next message: <a href="http://www.fedora.us/pipermail/fedora-devel/2003-December/002370.html">Proposal "Source Audit Clause"
+</a></li>
+         <li> <b>Messages sorted by:</b> 
+              <a href="http://www.fedora.us/pipermail/fedora-devel/2003-December/date.html#2369">[ date ]</a>
+              <a href="http://www.fedora.us/pipermail/fedora-devel/2003-December/thread.html#2369">[ thread ]</a>
+              <a href="http://www.fedora.us/pipermail/fedora-devel/2003-December/subject.html#2369">[ subject ]</a>
+              <a href="http://www.fedora.us/pipermail/fedora-devel/2003-December/author.html#2369">[ author ]</a>
+         </li>
+       </ul>
+    <hr>  
+<!--beginarticle-->
+<pre>Nov  9 13:11:23 videl kernel: hdc: dma_intr: status=0x51 { DriveReady
+SeekComplete Error }
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: error=0x40 {
+UncorrectableError }, LBAsect=53035364, sector=53035232
+Nov  9 13:11:23 videl kernel: end_request: I/O error, dev 16:01 (hdc),
+sector 53035232
+Nov  9 13:11:23 videl kernel: raid1: Disk failure on hdc1, disabling
+device.
+Nov  9 13:11:23 videl kernel: ^IOperation continuing on 1 devices
+Nov  9 13:11:23 videl kernel: raid1: hdc1: rescheduling block 53035232
+Nov  9 13:11:23 videl kernel: md: updating md0 RAID superblock on device
+Nov  9 13:11:23 videl kernel: md: (skipping faulty hdc1 )
+Nov  9 13:11:23 videl kernel: md: hda1 [events: 00000021]&lt;6&gt;(write)
+hda1's sb offset: 57576832
+Nov  9 13:11:23 videl kernel: md: recovery thread got woken up ...
+Nov  9 13:11:23 videl kernel: md0: no spare disk to reconstruct array!
+-- continuing in degraded mode
+Nov  9 13:11:23 videl kernel: md: recovery thread finished ...
+Nov  9 13:11:23 videl kernel: raid1: hda1: redirecting sector 53035232
+to another mirror
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: status=0x51 { DriveReady
+SeekComplete Error }
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: error=0x40 {
+UncorrectableError }, LBAsect=53035364, sector=53035240
+Nov  9 13:11:23 videl kernel: end_request: I/O error, dev 16:01 (hdc),
+sector 53035240
+Nov  9 13:11:23 videl kernel: raid1: hdc1: rescheduling block 53035240
+Nov  9 13:11:23 videl kernel: raid1: hda1: redirecting sector 53035240
+to another mirror
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: status=0x51 { DriveReady
+SeekComplete Error }
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: error=0x40 {
+UncorrectableError }, LBAsect=53035364, sector=53035248
+Nov  9 13:11:23 videl kernel: end_request: I/O error, dev 16:01 (hdc),
+sector 53035248
+Nov  9 13:11:23 videl kernel: raid1: hdc1: rescheduling block 53035248
+Nov  9 13:11:23 videl kernel: raid1: hda1: redirecting sector 53035248
+to another mirror
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: status=0x51 { DriveReady
+SeekComplete Error }
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: error=0x40 {
+UncorrectableError }, LBAsect=53035364, sector=53035256
+Nov  9 13:11:23 videl kernel: end_request: I/O error, dev 16:01 (hdc),
+sector 53035256
+Nov  9 13:11:23 videl kernel: raid1: hdc1: rescheduling block 53035256
+Nov  9 13:11:23 videl kernel: raid1: hda1: redirecting sector 53035256
+to another mirror
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: status=0x51 { DriveReady
+SeekComplete Error }
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: error=0x40 {
+UncorrectableError }, LBAsect=53035364, sector=53035264
+Nov  9 13:11:23 videl kernel: end_request: I/O error, dev 16:01 (hdc),
+sector 53035264
+Nov  9 13:11:23 videl kernel: raid1: hdc1: rescheduling block 53035264
+Nov  9 13:11:23 videl kernel: raid1: hda1: redirecting sector 53035264
+to another mirror
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: status=0x51 { DriveReady
+SeekComplete Error }
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: error=0x40 {
+UncorrectableError }, LBAsect=53035364, sector=53035272
+Nov  9 13:11:23 videl kernel: end_request: I/O error, dev 16:01 (hdc),
+sector 53035272
+Nov  9 13:11:23 videl kernel: raid1: hdc1: rescheduling block 53035272
+Nov  9 13:11:23 videl kernel: raid1: hda1: redirecting sector 53035272
+to another mirror
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: status=0x51 { DriveReady
+SeekComplete Error }
+Nov  9 13:11:23 videl kernel: hdc: dma_intr: error=0x40 {
+UncorrectableError }, LBAsect=53035364, sector=53035280
+Nov  9 13:11:23 videl kernel: end_request: I/O error, dev 16:01 (hdc),
+sector 53035280
+
+Apparently one of the disks in the RAID1 array of download.fedora.us
+failed during November.  I am hoping for donations to help pay for the
+replacement disk and other upcoming server upgrades that are needed. 
+(Ever noticed extremely slow page loading on the fedora.us site
+sometimes?  Yeah, that's a problem.)
+
+Donations from the United States of America can be tax deductible
+because donations go through the Hawaii Open Source Education
+Foundation, an IRS 501(c)(3) tax-exempt non-profit charity group.  Visit
+our site at <a href="http://www.hosef.org/">http://www.hosef.org</a> and also see
+<a href="http://videl.ics.hawaii.edu/">http://videl.ics.hawaii.edu</a> to see what else the group's server
+infrastructure hosts.
+
+If you have Paypal, you can send donations directly to me at
+<a href="mailto:warren@togami.com.">warren@togami.com.</a>  Unfortunately I can only accept money from
+"Verified" Paypal members.  Otherwise visit <a href="http://www.hosef.org/">http://www.hosef.org</a> and
+click on "Donations" to read about the other donation options.
+
+Thank you,
+Warren Togami
+<a href="mailto:warren@togami.com">warren@togami.com</a>
+<a href="http://www.fedora.us/">http://www.fedora.us</a>
+Fedora Linux Project
+<a href="http://www.hosef.org/">http://www.hosef.org</a>
+Hawaii Open Source Education Foundation
+
+
+</pre>
+<!--endarticle-->
+    <hr>
+    <p></p><ul>
+        <!--threads-->
+	
+	<li> Next message: <a href="http://www.fedora.us/pipermail/fedora-devel/2003-December/002370.html">Proposal "Source Audit Clause"
+</a></li>
+         <li> <b>Messages sorted by:</b> 
+              <a href="http://www.fedora.us/pipermail/fedora-devel/2003-December/date.html#2369">[ date ]</a>
+              <a href="http://www.fedora.us/pipermail/fedora-devel/2003-December/thread.html#2369">[ thread ]</a>
+              <a href="http://www.fedora.us/pipermail/fedora-devel/2003-December/subject.html#2369">[ subject ]</a>
+              <a href="http://www.fedora.us/pipermail/fedora-devel/2003-December/author.html#2369">[ author ]</a>
+         </li>
+       </ul>
+</body></html>

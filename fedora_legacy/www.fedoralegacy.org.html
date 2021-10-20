@@ -1,0 +1,123 @@
+Future home of Fedora Legacy<p>
+
+If you'd like to help us build the Fedora Legacy web page, please send an<br>
+email to <a href="mailto:jkeating@j2solutions.net">jkeating@j2solutions.net</a> or sign up to the Fedora Legacy mailing <br>
+list.  <a href="https://lists.dulug.duke.edu/mailman/listinfo/fedora-legacy-list">Fedora Legacy List</a>.<p><p>
+
+Here is the current plan, please sign up to the list to provide feedback on the plan:<p>
+
+The following is the Fedora Legacy Plan (draft 2).  This plan will
+<br>impact the future of older fedora.us repositories so fedora.us 
+<br>developers need to pay careful attention.  The purpose of this draft is 
+<br>mainly to make the plan public and invite questions, but we are 
+<br>essentially pushing forward with this plan NOW.
+<p>
+<br>Read the following post for details about what this means for Fedora 
+<br>Legacy users and developers.
+<br>
+<br>The below guidelines and procedures go a long way to launching a viable 
+<br>project largely based upon already proven & existing fedora.us 
+<br>infrastructure and procedures, with minor modifications necessary for 
+<br>Legacy.
+<br>
+<br>
+<br><b>*****
+<br>Fedora Legacy Launch Plan (draft 2)
+<br>*****</b>
+<br>
+<br>The Fedora Legacy project will use fedoralegacy.org as the home page.
+<br>This home page will contain:
+<br>1. Documentation & HOWTO
+<br>Since Legacy will use the existing <a href="download.fedora.us">download.fedora.us</a> structure and 
+<br>mirrors, HOWTO usage would basically be exactly how people us fedora.us 
+<br>today, except perhaps only "os" and "updates" channels.
+<br>2. Listings of package update details
+<br>3. link to <a href="http://bugzilla.fedora.us">Fedora.us Bugzilla</a>
+<br>This bugzilla serves as both the problem tracker and package submission & QA.
+<br>4. Mailing lists including announce, discuss, and devel
+<br>We need to request adding these lists at redhat.com.
+<br>
+<br>fedora.us will eventually become the Fedora Legacy project.
+<br>This means that all of the existing project infrastructure will be
+<br>leveraged in the community based maintenance of Legacy packages on EOL
+<br>distributions.  As mentioned above download.fedora.us and the many 
+<br>exisiting mirrors will carry the Fedora Legacy packages within the 
+<br>"updates" channel.  Repository users have the option of using the 
+<br>fedora.us Extras stable/testing/unstable repositories too.
+<br>
+<br>GPG use requirement
+<br>Like the previous fedora.us development, all Fedora Legacy developers 
+<br>are required to use GPG in a proper manner in all communications of 
+<br>substance.  This allows messages and packages to be verifiable back to 
+<br>individuals.  Most importantly this enables building the corpus of 
+<br>historical evidence necessary for anyone to read, verify GPG signatures, 
+<br>and decide based upon the contributor's good advice if they are to be 
+<br>trusted or not.  This is part of the "web of trust" concept.
+
+<br>Fedora Legacy project will continue to use bugzilla.fedora.us in almost 
+<br>exactly the same way currently used by fedora.us Extras.  The only 
+<br>difference will be the package release tags and location within the 
+<br>repository will be different from the fedora.us Extras packages.
+
+<br>The %release tag contains only a number incremented from the release
+<br>number of the previous EOL distribution package, then ".legacy" appended
+<br>to the end to make it clear that this is a Fedora Legacy package.
+<br>
+<br>evolution-1.2.2-5
+<br>This is the latest official RH update
+<br>evolution-1.2.2-6.legacy
+<br>This would be a theoretical package name of the Fedora Legacy update.
+<br>
+<br>Some cases like the kernel package has a distribution version at the 
+<br>end.  The Fedora Legacy package naming will be treated accordingly.
+<br>
+<br>kernel-2.4.20-27.8
+<br>kernel-2.4.20-27.9
+<br>kernel-2.4.20-28.8.legacy
+<br>kernel-2.4.20-28.9.legacy
+<br>
+<br>Legacy packages are to be published in the RPMS.updates channel along
+<br>with the existing official updates from the EOL distribution.  This
+<br>means that existing users of fedora.us mirrors will continue to benefit
+<br>from security updates.  Users can choose between using only the base 
+<br>"os" and "updates" channels for the core packages, or adding the Extras 
+<br>channels stable/testing/unstable for more functionality and package choices.
+<br>
+<br>Package development priority is is focused on mainly security updates of 
+<br>the core distribution "os" and "updates" channels.  We will keep an eye 
+<br>on security advisories for the Extras packages but they are lower 
+<br>priority than the base distribution.  Network exposed services have the 
+<br>highest priority, while client applications have lower development priority.
+<br>
+<br>Fedora Legacy packages in the "updates" channel may NEVER upgrade the 
+<br>version.  Instead these packages may be only patched, unless consensus 
+<br>dictates that we must do otherwise.  Updates are allowed primarily for 
+<br>security reasons, but sometimes bugfix updates can be allowed if 
+<br>consensus agrees it is serious enough.
+<br>
+<br>Legacy packages in QA testing will be placed in the fedora.us 
+<br>updates-testing repository for functionality and stability testing 
+<br>before publication.  We still need to discuss how we need to change the 
+<br>publication requirements and "trusted" status for Legacy packagers as 
+<br>the scope and people involved differ greatly from the fedora.us Extras 
+<br>development.  Please read the existing fedora.us Package Submission & QA 
+<br>procedure page and suggest ways to modify that procedure for Fedora Legacy.
+<br>
+<br><a href="http://www.fedora.us/wiki/PackageSubmissionQAPolicy">fedora.us Package Submission & QA Policy</a>
+<br>
+<br>What does this mean for the future of fedora.us and Extras?
+<br>Extras will probably no longer exist at fedora.us for newer 
+<br>distributions after being merged into fedora.redhat.com Extras around 
+<br>FC2 time.  fedora.redhat.com probably will not have three levels of 
+<br>Extras (stable/testing/unstable) but I personally am pushing for two 
+<br>levels (stable/unstable).
+<br>
+<br>Existing Extras packages for older distributions served by Legacy will 
+<br>sometimes be updated in version by the Extras package maintainer in the 
+<br>case of popular client applications like gaim.  Historically fedora.us 
+<br>Extras packages have been of nit-picky top quality, but this will wane. 
+<br>  Extras packages will not change much mainly due to lack of interest 
+<br>and time by developers, and new additions will be disallowed after a 
+<br>certain cut-off date.  It is the responsibility of all Fedora developers 
+<br>and users to watch for security advisories and report when package 
+<br>updates are needed in the Extras repository.

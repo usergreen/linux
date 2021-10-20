@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Fedora Wiki - Fedora HOWTO</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.0  (Linux)">
+	<META NAME="CREATED" CONTENT="20031220;15591900">
+	<META NAME="CHANGED" CONTENT="20040113;19161500">
+	<META NAME="DESCRIPTION" CONTENT="In order to install packages from Fedora, you could manually download and install packages from the Fedora tree, but you probably want to use an automatic package manager.  Fedora has two package managers available, apt and yum.  Both package managers handle automatic downloading and installation of packages that you specify, and are preconfigured to use the stable Fedora repositories.  You can use only one, or even both, though not at the same time.">
+	<META NAME="KEYWORDS" CONTENT="Fedora HOWTO, Fedora Wiki">
+	<META NAME="robots" CONTENT="index,follow">
+	<META NAME="language" CONTENT="">
+	<META NAME="document-type" CONTENT="Public">
+	<META NAME="document-rating" CONTENT="General">
+</HEAD>
+<BODY DIR="LTR">
+<FORM ACTION="TitleSearch" TARGET="_top">
+	<INPUT TYPE=HIDDEN NAME="auto_redirect" VALUE="1">
+</FORM>
+<FORM NAME="signin" ACTION="./FedoraHOWTO%3Faction=browse" METHOD="POST">
+	<INPUT TYPE=HIDDEN NAME="pagename" VALUE="FedoraHOWTO">
+	<INPUT TYPE=HIDDEN NAME="action" VALUE="browse">
+</FORM>
+<DIV ID="header" DIR="LTR">
+	<H1><FONT FACE="Thorndale, serif"><U><FONT FACE="Nimbus Roman No9 L, serif">Fedora
+	HOWTO</FONT></U><!-- Page title --></SPAN></FONT></H1>
+</DIV>
+<H2><FONT FACE="Nimbus Roman No9 L, serif"><FONT FACE="Nimbus Roman No9 L, serif">Fedora
+HOWTO</FONT></SPAN></FONT>　フェドーラを初めて使う方に</H2>
+<UL>
+	<LI><P>ご注意： <FONT FACE="Kochi Mincho">fedora.us
+	</FONT>が提供するパッケージは、レッドハットおよび私達
+	<FONT FACE="Kochi Mincho">fedora.us
+	</FONT>が提供している他のパッケージといっしょに利用することを前提として、開発され十分に検証されたものです。他のリポジトリーとの混用によって生じる互換性の問題については、<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="Repository_Mixing_Problems.html">Repository
+	Mixing Problems</A> </FONT></SPAN></FONT>（邦訳）をご覧になってください。</P>
+</UL>
+<P>始めに、<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">fedora.us
+</FONT></SPAN></FONT>がそれぞれのソフトウェア毎に提供している詳細について
+<FONT FACE="Kochi Mincho"><A HREF="http://www.fedora.us/wiki/FedoraChannels"><FONT FACE="Nimbus Roman No9 L, serif">FedoraChannels</FONT></A>
+</SPAN></FONT>というページの解説をご覧ください。</P>
+<P>フェドーラ プロジェクトのウェブサイトからパッケージをインストールする方法としては、
+<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://download.fedora.us/fedora/">Fedora
+tree</A>
+</FONT></SPAN></FONT>の中からいちいちダウンロードしてインストールするという方法も選べますが、長期的な運用を考慮した場合、数種類用意されているうちのいずれかの自動更新による運用方法を習得される方がずっと簡単です。
+<FONT FACE="Kochi Mincho">Fedora.us </FONT>では、「<FONT FACE="Kochi Mincho"><A HREF="https://moin.conectiva.com.br/AptRpm"><FONT FACE="Nimbus Roman No9 L, serif">APT
+</FONT></A></SPAN></FONT>」と「<FONT FACE="Kochi Mincho"><A HREF="http://linux.duke.edu/projects/yum/"><FONT FACE="Nimbus Roman No9 L, serif">YUM
+</FONT></A></SPAN></FONT>」の<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">2</FONT></SPAN></FONT>種類のパッケージ管理用のツールを用意しています。どちらを使っても、指定されたパッケージのダウンロードやインストールを自動的に行えます。使用するリポジトリーは、ステーブル（安定版）にあらかじめセットされています。<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">APT
+</FONT></SPAN></FONT>や <FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">YUM
+</FONT></SPAN></FONT>は、どちらか単独で使用することも、両方を使用することもできます。ただし、両方を同時に使用することはできません。</P>
+<P><FONT FACE="Kochi Mincho"><STRONG><FONT FACE="Nimbus Roman No9 L, serif">Current
+Package Managers </FONT></STRONG></SPAN></FONT><STRONG>現行のパッケージ管理ツール</STRONG></P>
+<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">Fedora
+Core 1 </FONT></SPAN></FONT>用</P>
+<UL>
+	<LI><P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://download.fedora.us/fedora/fedora/1/i386/RPMS.stable/apt-0.5.15cnc1-0.fdr.3.1.i386.rpm">http://download.fedora.us/fedora/fedora/1/i386/RPMS.stable/apt-0.5.15cnc1-0.fdr.3.1.i386.rpm</A>
+	APT</FONT></SPAN></FONT>を利用するためには、ウェブサイトサイトからこのパッケージをダウンロードしインストールします。</P>
+	<LI><P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">yum
+	is already included in FC1. Read <A HREF="http://www.fedora.us/wiki/FedoraSources">FedoraSources</A>
+	to configure fedora.us repositories. YUM </FONT></SPAN></FONT>の場合は、最初から
+	<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">Fedora
+	Core 1 (FC1) </FONT></SPAN></FONT>に含まれています。<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">fedora.us
+	</FONT></SPAN></FONT>のリポジトリー設定の詳細については、
+	<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://www.fedora.us/wiki/FedoraSources">FedoraSources</A>
+	</FONT></SPAN></FONT>をご覧ください。</P>
+</UL>
+<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">Red
+Hat Linux 9 </FONT></SPAN></FONT>用</P>
+<UL>
+	<LI><P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://download.fedora.us/fedora/redhat/9/i386/RPMS.stable/apt-0.5.5cnc6-0.fdr.8.rh90.i386.rpm">http://download.fedora.us/fedora/redhat/9/i386/RPMS.stable/apt-0.5.5cnc6-0.fdr.8.rh90.i386.rpm</A>
+	APT </FONT></SPAN></FONT>を利用する場合、これをダウンロードしインストールします。</P>
+	<LI><P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://download.fedora.us/fedora/redhat/9/i386/RPMS.stable/yum-2.0.3-0.fdr.1.rh90.noarch.rpm">http://download.fedora.us/fedora/redhat/9/i386/RPMS.stable/yum-2.0.3-0.fdr.1.rh90.noarch.rpm</A>
+	YUM </FONT></SPAN></FONT>を利用する場合、これをダウンロードしインストールします。</P>
+</UL>
+<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">Red
+Hat Linux 8.0 </FONT></SPAN></FONT>用</P>
+<UL>
+	<LI><P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://download.fedora.us/fedora/redhat/8.0/i386/RPMS.stable/apt-0.5.5cnc6-0.fdr.8.rh80.i386.rpm">http://download.fedora.us/fedora/redhat/8.0/i386/RPMS.stable/apt-0.5.5cnc6-0.fdr.8.rh80.i386.rpm</A>
+	APT </FONT></SPAN></FONT>を利用する場合、これをダウンロードしインストールします。</P>
+	<LI><P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://download.fedora.us/patches/redhat/8.0/i386/RPMS.stable/yum-2.0.3-0.fdr.1.rh80.noarch.rpm">http://download.fedora.us/patches/redhat/8.0/i386/RPMS.stable/yum-2.0.3-0.fdr.1.rh80.noarch.rpm</A>
+	<FONT FACE="Nimbus Roman No9 L, serif">YUM
+	</FONT></FONT></SPAN></FONT>を利用する場合、これをダウンロードしインストールします。<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><BR>(requires
+	<A HREF="http://download.fedora.us/patches/redhat/8.0/i386/RPMS.stable/">rpm
+	&gt;= 4.1.1</A>) </FONT></SPAN></FONT>（ただし、インストールの際使用する<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">RPM
+	</FONT></SPAN></FONT>管理ツールは、バージョン<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">4.1.1
+	</FONT></SPAN></FONT>以上であることが必要です。）</P>
+</UL>
+<P>お住いになっている場所の近くにある高速なミラーサイトを選ぶためには、
+<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="FedoraMirrorList.html">FedoraMirrorList</A>
+</FONT></SPAN></FONT>というページをご覧になってください。ミラーサイトが利用できるように、設定ファイルの記述を書き換えてください。<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">APT
+</FONT></SPAN></FONT>では、<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><FONT FACE="Nimbus Roman No9 L, serif">sources.list</FONT>
+</FONT></SPAN></FONT>という名のファイルがディレクトリー
+<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">/etc/apt/sources.list
+</FONT></SPAN></FONT>に存在します。<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">YUM
+</FONT></SPAN></FONT>の場合の設定は、 <FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">/etc/yum.conf
+</FONT></SPAN></FONT>に記述されています。</P>
+<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">YUM
+</FONT></SPAN></FONT>を利用する場合には、フェイルオーバー
+<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">[</FONT></SPAN></FONT>サーバー間で異常アプリケーションを代行処理するという<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">]</FONT></SPAN></FONT>機能が追加されているので、あるダウンロードサーバーが一時的に利用できない場合でも、その処理が継続されます。近くにあるミラーサーバーが最初に機能するように
+<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">/etc/yum.conf
+</FONT></SPAN></FONT>の<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">baseurl
+</FONT></SPAN></FONT>パラメーターにそのアドレスを登録してください。</P>
+<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">APT
+</FONT></SPAN></FONT>を利用する場合、他のプロジェクトのリポジトリーで提供されている
+<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">APT
+</FONT></SPAN></FONT>を使って、すでにお使いの
+<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">sources.list
+</FONT></SPAN></FONT>ファイルの記述にフェドーラのリポジトリーを追加されるよりは、フェドーラ専用に機能強化された
+<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">APT
+</FONT></SPAN></FONT>パッケージをインストールされるよう、強くお勧めします。どうしてもこの点にこだわりがあるのでしたら、
+<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://www.fedora.us/wiki/FedoraSources">FedoraSources</A>
+</FONT></SPAN></FONT>のページをお読みください。</P>
+<H2><FONT FACE="Nimbus Roman No9 L, serif"><FONT FACE="Nimbus Roman No9 L, serif">HOWTO
+use apt-get</FONT></SPAN></FONT>　<FONT FACE="Nimbus Roman No9 L, serif"><FONT FACE="Nimbus Roman No9 L, serif">apt-get
+</FONT></SPAN></FONT>コマンドの使い方</H2>
+<PRE><FONT FACE="Luxi Mono, monospace">apt-get update</FONT>
+    <FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">Download package lists.  Packages change several times daily, so do this often. </FONT></SPAN></FONT><FONT SIZE=3><FONT FACE="Kochi Mincho">（利用可能な）パッケージの一覧をダウンロードします。パッケージの変更は</FONT></FONT><FONT FACE="Luxi Mono, monospace"><FONT SIZE=3><FONT FACE="Kochi Gothic">1</FONT></FONT></SPAN></FONT><FONT SIZE=3><FONT FACE="Kochi Mincho">日の内に数回ありますので、頻繁に実行してください。</FONT></FONT>
+<FONT FACE="Luxi Mono, monospace">apt-get dist-upgrade</FONT>
+    <FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">Update all packages. </FONT></SPAN></FONT>インストールされている全てのパッケージを更新します。
+<FONT FACE="Luxi Mono, monospace">apt-get install &lt;packagename&gt;</FONT>
+    <FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">Install/upgrade specific package(s) (and its dependencies, if missing any).</FONT></SPAN></FONT>
+　　特定のパッケージを指定してインストールや更新を行えます。（パッケージの依存関係を含みます。）
+<FONT FACE="Luxi Mono, monospace">apt-cache search &lt;word&gt;</FONT>
+    <FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">Search all known packages entries (descriptions etc) for &lt;word&gt;.</FONT></SPAN></FONT>
+　　パッケージ名をもとにして、その詳細などを検索できます。
+<FONT FACE="Luxi Mono, monospace">apt-cache show &lt;packagename&gt;</FONT>
+    <FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">Show basic information about a package.</FONT></SPAN></FONT>
+　　あるパッケージについての基本情報を表示できます。</PRE><P>
+<FONT FACE="Kochi Mincho"><STRONG><FONT FACE="Nimbus Roman No9 L, serif">TODO:
+Write me!</FONT></STRONG></SPAN></FONT></P>
+<H3><FONT FACE="Nimbus Roman No9 L, serif"><FONT FACE="Nimbus Roman No9 L, serif">Synaptic
+GUI Frontend</FONT></SPAN></FONT>　グラフィカルなフロントエンド：シナプティック</H3>
+<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">apt
+users have an optional GUI frontend called <A HREF="http://www.nongnu.org/synaptic/">Synaptic</A>.
+<BR>APT
+</FONT></SPAN></FONT>を利用しているユーザーには、シナプティックと呼ばれているグラフィカルなツールが用意されています。次のファイルをダウンロードし、インストールしてください。</P>
+<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">Fedora
+Core 1</FONT></SPAN></FONT>　用</P>
+<UL>
+	<LI><P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://download.fedora.us/fedora/fedora/1/i386/RPMS.stable/synaptic-0.45-1.1.i386.rpm">http://download.fedora.us/fedora/fedora/1/i386/RPMS.stable/synaptic-0.45-1.1.i386.rpm</A>
+	</FONT></SPAN></FONT>
+	</P>
+</UL>
+<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">Red
+Hat Linux 9</FONT></SPAN></FONT>　用</P>
+<UL>
+	<LI><P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://download.fedora.us/fedora/redhat/9/i386/RPMS.stable/synaptic-0.45-1.rh90.i386.rpm">http://download.fedora.us/fedora/redhat/9/i386/RPMS.stable/synaptic-0.45-1.rh90.i386.rpm</A>
+	</FONT></SPAN></FONT>
+	</P>
+</UL>
+<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">Red
+Hat Linux 8.0 </FONT></SPAN></FONT>用</P>
+<UL>
+	<LI><P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://download.fedora.us/fedora/redhat/8.0/i386/RPMS.stable/synaptic-0.45-1.rh80.i386.rpm">http://download.fedora.us/fedora/redhat/8.0/i386/RPMS.stable/synaptic-0.45-1.rh80.i386.rpm</A>
+	</FONT></SPAN></FONT>
+	</P>
+</UL>
+<H2><FONT FACE="Nimbus Roman No9 L, serif"><FONT FACE="Nimbus Roman No9 L, serif">HOWTO
+use yum</FONT></SPAN></FONT>　<FONT FACE="Nimbus Roman No9 L, serif"><FONT FACE="Nimbus Roman No9 L, serif">YUM</FONT></SPAN></FONT>の使い方</H2>
+<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><FONT FACE="Nimbus Roman No9 L, serif">Make
+sure you have yum installed and then read <A HREF="http://www.fedora.us/wiki/FedoraSources">FedoraSources</A>
+to configure.</FONT><BR></FONT></SPAN></FONT>まず、<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">YUM
+</FONT></SPAN></FONT>がインストールされていることを確認してから、
+<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://www.fedora.us/wiki/FedoraSources">FedoraSources</A>
+</FONT></SPAN></FONT>をご覧になって設定してください。</P>
+<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><FONT FACE="Nimbus Roman No9 L, serif">Now
+you can run the following commands:</FONT><BR></FONT></SPAN></FONT>次のコマンドを使って操作します：</P>
+<PRE><FONT FACE="Luxi Mono, monospace">yum list</FONT>
+    <FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">List all available software.</FONT></SPAN></FONT>
+　　利用可能なソフトウェアの一覧を表示させます。
+<FONT FACE="Luxi Mono, monospace">yum check-update OR yum list updates</FONT>
+    <FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">See if there are updated packages available.</FONT></SPAN></FONT>
+　　更新可能なパッケージがあるかどうかの確認ができます。
+<FONT FACE="Luxi Mono, monospace">yum update</FONT>
+    <FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">Update all installed packages that have a newer version available.</FONT></SPAN></FONT>
+　　新しいパッケージがあれば、全て更新します。
+<FONT FACE="Luxi Mono, monospace">yum install &lt;packagename&gt;</FONT>
+    <FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">Install specific package (and its dependencies, if missing any).</FONT></SPAN></FONT>
+　　指定した特定のパッケージをインストールします。（この場合、依存関係も含まれます。）
+
+<FONT FACE="Luxi Mono, monospace">yum search &lt;word&gt;</FONT>
+    <FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">Search all known packages entries (descriptions etc) for &lt;word&gt;.</FONT></SPAN></FONT>
+　　パッケージ名をもとにして、その詳細などを検索できます。
+<FONT FACE="Luxi Mono, monospace">yum info &lt;packagename&gt;</FONT>
+    <FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">Show basic information about a package.</FONT></SPAN></FONT>
+　　あるパッケージについての基本情報を表示できます。</PRE><P>
+<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">All
+of the above commands can take shell-style wildcards (*,?) instead of
+a package name. Check the yum man page for more
+details.</FONT></SPAN></FONT>　上に挙げたコマンドを実行する際、パッケージ名の代わりに、ワイルドカードなどを使うことも可能です。詳しくは、<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">YUM
+</FONT></SPAN></FONT>のマニュアルのページをご覧ください。</P>
+<H2><FONT FACE="Nimbus Roman No9 L, serif"><FONT FACE="Nimbus Roman No9 L, serif">Up2date</FONT></SPAN></FONT>　アップ<FONT FACE="Nimbus Roman No9 L, serif"><FONT FACE="Nimbus Roman No9 L, serif">2</FONT></SPAN></FONT>デート</H2>
+<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">Fedora
+Core 1
+</FONT></SPAN></FONT>では、<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">YUM</FONT></SPAN></FONT>や<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">APT</FONT></SPAN></FONT>のリポジトリーを利用して、アップ<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">2</FONT></SPAN></FONT>デートの機能が利用可能となっています。この機能を利用したい場合には、ルート権限でログインし、
+<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">/etc/sysconfig/rhn/sources
+</FONT></SPAN></FONT>の場所にあるファイルの記述に以下のサイトを追加します。大抵のユーザーは、安定用（<FONT FACE="Kochi Mincho">stable</FONT>）のリポジトリーしか必要としませんが、オプションとして、（検証が不十分な）不安定版のパッケージを利用できるように設定することも可能です。</P>
+<PRE><FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">yum fedora-us-stable-fc1</FONT></SPAN></FONT>　　　 <FONT FACE="Luxi Mono, monospace"><A HREF="http://download.fedora.us/fedora/fedora/1/i386/yum/stable"><FONT FACE="Luxi Mono, monospace">http://download.fedora.us/fedora/fedora/1/i386/yum/stable</FONT></A></SPAN></FONT>
+<FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">yum fedora-us-testing-fc1 <A HREF="http://download.fedora.us/fedora/fedora/1/i386/yum/testing">http://download.fedora.us/fedora/fedora/1/i386/yum/testing</A></FONT></SPAN></FONT>
+<FONT FACE="Luxi Mono, monospace"><FONT FACE="Luxi Mono, monospace">yum fedora-us-unstable-fc1 <A HREF="http://download.fedora.us/fedora/fedora/1/i386/yum/unstable">http://download.fedora.us/fedora/fedora/1/i386/yum/unstable</A></FONT></SPAN></FONT></PRE>
+<DIV ID="footer" DIR="LTR">
+	<HR SIZE=3 NOSHADE>
+	<P><FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">Last
+	edited on Wednesday, December 31, 2003 8:53:03 pm.
+	</FONT></SPAN></FONT>最終更新日：<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">2003</FONT></SPAN></FONT>年<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif">12</FONT></SPAN></FONT>月<FONT FACE="Kochi Mincho">31</FONT>日（水）午後<FONT FACE="Kochi Mincho">8</FONT>：<FONT FACE="Kochi Mincho">58</FONT>：<FONT FACE="Kochi Mincho">03.(UTC)</FONT></P>
+	<HR SIZE=3 NOSHADE>
+	<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+		<TR>
+			<TD>
+				<DIV ID="actionbuttons" DIR="LTR">
+					<P>※原文へのリンク：<FONT FACE="Kochi Mincho"><FONT FACE="Nimbus Roman No9 L, serif"><A HREF="http://www.fedora.us/wiki/FedoraHOWTO">http://www.fedora.us/wiki/FedoraHOWTO</A>
+					</FONT></SPAN></FONT>
+					</P>
+				</DIV>
+			</TD>
+			<TD>
+				<DIV ID="signin" DIR="LTR">
+					<P ALIGN=RIGHT><BR>
+					</P>
+				</DIV>
+			</TD>
+		</TR>
+	</TABLE>
+</DIV>
+<P><!-- Add your Disclaimer here --><BR><BR>
+</P>
+</BODY>
+</HTML>

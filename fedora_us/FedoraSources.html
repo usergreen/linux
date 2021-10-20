@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Otherwise if you already have a non-Fedora version of apt or yum installed, be aware of the RepositoryMixingProblems.  If you still wish to mix repositories, here are the entries for the Fedora stable repository as well as the Red Hat official repositories in case you don't have them from elsewhere.  Please replace SERVERNAME with a real mirror server from the Fedora mirror list.">
+<meta name="keywords" content="Fedora Sources, Fedora Wiki">
+<meta name="language" content="">
+<meta name="document-type" content="Public">
+<meta name="document-rating" content="General">
+<meta name="generator" content="phpWiki">
+<meta name="PHPWIKI_VERSION" content="1.3.5pre">
+<!-- base href="http://www.fedora.us/wiki/" -->
+<link rel="shortcut icon" href="http://www.fedora.us/phpwiki/themes/default/images/favicon.ico">
+<link rel="home" title="HomePage" href="http://www.fedora.us/wiki/HomePage">
+<link rel="help" title="HowToUseWiki" href="http://www.fedora.us/wiki/HowToUseWiki">
+<link rel="copyright" title="GNU General Public License" href="http://www.gnu.org/copyleft/gpl.html#SEC1">
+<link rel="author" title="The PhpWiki Programming Team" href="http://phpwiki.sourceforge.net/phpwiki/ThePhpWikiProgrammingTeam">
+<link rel="search" title="FindPage" href="http://www.fedora.us/wiki/FindPage">
+<link rel="alternate" title="View Source: FedoraSources" href="http://www.fedora.us/wiki/FedoraSources?action=viewsource&amp;version=5">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.fedora.us/wiki/RecentChanges?format=rss">
+
+<link rel="bookmark" title="SandBox" href="http://www.fedora.us/wiki/SandBox">
+<link rel="bookmark" title="WikiWikiWeb" href="http://www.fedora.us/wiki/WikiWikiWeb">
+
+
+
+<link rel="stylesheet" type="text/css" charset="iso-8859-1" href="FedoraSources_files/MacOSX.css">
+<link rel="alternate stylesheet" type="text/css" charset="iso-8859-1" href="FedoraSources_files/phpwiki-printer.css" title="Printer">
+<link rel="alternate stylesheet" type="text/css" charset="iso-8859-1" href="FedoraSources_files/phpwiki-modern.css" title="Modern">
+<style type="text/css">
+<!--
+
+-->
+</style><title>Fedora Wiki - Fedora Sources</title></head>
+
+
+<body>
+
+<div id="header">  <!-- The logo -->
+<div align="right" id="logo"><a href="http://www.fedora.us/wiki/HomePage" target="_top"><img src="FedoraSources_files/logo.png" id="logo-img" border="0" alt="Fedora Wiki: HomePage" align="right"></a></div>
+
+<!-- The top navigation/search bar -->
+<div><!-- The top navigation/search bar -->
+<form action="TitleSearch" target="_top" method="get" accept-charset="iso-8859-1">
+  <div id="navbuttons">
+   <a href="http://www.fedora.us/wiki/RecentChanges"><img src="FedoraSources_files/RecentChanges.png" alt="RecentChanges" border="0"></a>   <a href="http://www.fedora.us/wiki/FindPage"><img src="FedoraSources_files/FindPage.png" alt="FindPage" border="0"></a>   <input type="hidden" name="auto_redirect" value="1">
+            <input type="text" name="s" size="12" maxlength="256" title="Quick Search" onmouseover="window.status='Quick Search'; return true;" onmouseout="window.status=''; return true;">
+         <a href="http://www.fedora.us/wiki/FedoraSources?action=LikePages"><img src="FedoraSources_files/LikePages.png" alt="LikePages" border="0"></a>     <a href="http://www.fedora.us/wiki/FedoraSources?action=BackLinks"><img src="FedoraSources_files/BackLinks.png" alt="BackLinks" border="0"></a>                      </div>
+</form>
+</div>
+
+<!-- Page title -->
+<h1><a href="http://www.fedora.us/wiki/FedoraSources?action=BackLinks" title="BackLinks for FedoraSources" onmouseover='window.status="BackLinks for FedoraSources"; return true;' onmouseout="window.status='';return true;">Fedora Sources</a></h1>
+</div>
+
+
+<div><h2>Fedora Sources</h2>
+<p>Please consider using <a href="http://www.fedora.us/wiki/FedoraHOWTO" title="FedoraHOWTO">Fedora's apt and yum</a> package because they contain enhancements for greater protection, speed and convenience.</p>
+<p>Otherwise if you already have a non-Fedora version of apt or yum installed, be aware of the <a href="http://www.fedora.us/wiki/RepositoryMixingProblems">RepositoryMixingProblems</a>.
+If you still wish to mix repositories, here are the entries for the
+Fedora stable repository as well as the Red Hat official repositories
+in case you don't have them from elsewhere. Please replace SERVERNAME
+with a real mirror server from the <a href="http://www.fedora.us/wiki/FedoraMirrorList" title="FedoraMirrorList">Fedora mirror list</a>.</p>
+<p>/etc/apt/sources.list entries for Fedora Core 1:</p>
+<pre>  rpm http://SERVERNAME/fedora fedora/1/i386 os updates stable
+  rpm-src http://SERVERNAME/fedora fedora/1/i386 os updates stable</pre>
+<p>/etc/apt/sources.list entries for Red Hat Linux 9:</p>
+<pre>  rpm http://SERVERNAME/fedora redhat/9/i386 os updates stable
+  rpm-src http://SERVERNAME/fedora redhat/9/i386 os updates stable</pre>
+<p>/etc/apt/sources.list entries for Red Hat Linux 8.0:</p>
+<pre>  rpm http://SERVERNAME/fedora redhat/8.0/i386 os updates stable
+  rpm-src http://SERVERNAME/fedora redhat/8.0/i386 os updates stable</pre>
+<p>/etc/yum.conf entries for Fedora Core 1:</p>
+<pre>  [fedora-us-1]
+  name=Fedora Core 1 -- Fedora US mirror
+  baseurl=http://SERVERNAME/fedora/fedora/1/i386/yum/os
+  [fedora-us-1-updates]
+  name=Fedora Core 1 updates -- Fedora US mirror
+  baseurl=http://SERVERNAME/fedora/fedora/1/i386/yum/updates
+  [fedora-us-1-stable]
+  name=Fedora Linux (stable) for Fedora Core 1 -- Fedora US mirror
+  baseurl=http://SERVERNAME/fedora/fedora/1/i386/yum/stable</pre>
+<p>/etc/yum.conf entries for Red Hat Linux 9:</p>
+<pre>  [fedora-us-9]
+  name=Red Hat Linux 9 -- Fedora US mirror
+  baseurl=http://SERVERNAME/fedora/redhat/9/i386/yum/os
+  [fedora-us-9-updates]
+  name=Red Hat Linux 9 updates -- Fedora US mirror
+  baseurl=http://SERVERNAME/fedora/redhat/9/i386/yum/updates
+  [fedora-us-9-stable]
+  name=Fedora Linux (stable) for Red Hat Linux 9 -- Fedora US mirror
+  baseurl=http://SERVERNAME/fedora/redhat/9/i386/yum/stable</pre>
+<p>/etc/yum.conf entries for Red Hat Linux 8.0:</p>
+<pre>  [fedora-us-8.0]
+  name=Red Hat Linux 8.0 -- Fedora US mirror
+  baseurl=http://SERVERNAME/fedora/redhat/8.0/i386/yum/os
+  [fedora-us-8.0-updates]
+  name=Red Hat Linux 8.0 updates -- Fedora US mirror
+  baseurl=http://SERVERNAME/fedora/redhat/8.0/i386/yum/updates
+  [fedora-us-8.0-stable]
+  name=Fedora Linux (stable) for Red Hat Linux 8.0 -- Fedora US mirror
+  baseurl=http://SERVERNAME/fedora/redhat/8.0/i386/yum/stable</pre>
+<p>/etc/sysconfig/rhn/sources entries for Fedora Core 1 (up2date):</p>
+<pre>  yum fedora-us-core-1 http://SERVERNAME/fedora/fedora/1/i386/yum/os
+  yum fedora-us-updates-1 http://SERVERNAME/fedora/fedora/1/i386/yum/updates
+  yum fedora-us-stable-1 http://SERVERNAME/fedora/fedora/1/i386/yum/stable</pre>
+</div>
+
+<div id="footer">  <hr noshade="noshade">
+<p>Last edited on Sunday, November 9, 2003  9:58:55 am.</p>
+<hr noshade="noshade">
+<div>
+
+<table summary="Toolbar 1: Page actions and user login." width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody><tr valign="baseline">
+  <td>
+  <div id="actionbuttons">
+    <a href="http://www.fedora.us/wiki/FedoraSources?action=edit"><img src="FedoraSources_files/Edit.png" alt="Edit" border="0"></a> 
+        <a href="http://www.fedora.us/wiki/FedoraSources?action=PageHistory"><img src="FedoraSources_files/PageHistory.png" alt="PageHistory" border="0"></a>    <a href="http://www.fedora.us/wiki/FedoraSources?action=diff"><img src="FedoraSources_files/Diff.png" alt="Diff" border="0"></a> 
+    <a href="http://www.fedora.us/wiki/FedoraSources?action=PageInfo"><img src="FedoraSources_files/PageInfo.png" alt="PageInfo" border="0"></a>  </div>
+  </td>
+  <td align="right">
+    <div id="signin">  <form method="post" action="FedoraSources?action=browse" accept-charset="iso-8859-1" name="signin">
+  <input type="hidden" name="pagename" value="FedoraSources"><input type="hidden" name="action" value="browse">  <script type="text/javascript"> <!--
+    function SignIn(form) {
+            form.submit();
+    }
+    //-->
+    document.write('&nbsp;Sign in:');
+  </script>
+  <input type="text" name="auth[userid]" size="12" maxlength="256" onchange="SignIn(this.form);" title="Enter your UserId to sign in" onmouseover='window.status="Enter your UserId to sign in"; return true;' onmouseout="window.status='';return true;">  
+    <input type="image" src="FedoraSources_files/SignIn.png" value="Sign In" alt="Sign In" name="auth[login]">  
+
+
+  </form>
+</div>
+  </td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<!-- Add your Disclaimer here -->
+</body></html>
