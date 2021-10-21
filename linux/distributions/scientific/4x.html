@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>4x</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../../index.html" title="FrontPage (3d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">ScientificLinux-FAQ</a>
+/ 4.x</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">バージョン 4.x に関すること</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">バージョン 4.x に関すること </a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">Scientific Linux
+のインストールに必要なisoイメージについて </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_2">SL 4.2</a></li>
+          <li><a href="#content_1_3">SL 4.1 </a></li>
+          <li><a href="#content_1_4">SL 4.0 </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_5">国内高速ミラーサーバーを利用するには？ (YUM編) </a></li>
+      <li><a href="#content_1_6">国内高速ミラーサーバーを利用するには？ (APT編) </a></li>
+      <li><a href="#content_1_7">SL 4.0 から SL 4.1 へアップグレードする方法は？ </a></li>
+      <li><a href="#content_1_8">SL 4.1 から SL 4.2
+へアップグレードする方法は(2005.11.30)？ </a></li>
+      <li><a href="#content_1_9">SL 3.0.x から SL 4.x へアップグレードする方法は？ </a></li>
+      <li><a href="#content_1_10">デフォルトの壁紙が気に入らないので変えたい。 </a></li>
+      <li><a href="#content_1_11">デスクトップに保存したファイルのアイコンが表示できません。 </a></li>
+      <li><a href="#content_1_12">アプリケーションの起動に時間がかかりませんか? </a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">Scientific Linux のインストールに必要なisoイメージについて</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_2">SL 4.2</h4>
+<p>●i386 Binary Discs</p>
+<pre> SL.42.112205.i386.disc1.iso<br> SL.42.112205.i386.disc2.iso<br> SL.42.112205.i386.disc3.iso<br> SL.42.112205.i386.disc4.iso</pre>
+<p>●x86_64 Binary Discs</p>
+<pre> SL.42.112205.x86_64.disc1.iso<br> SL.42.112205.x86_64.disc2.iso<br> SL.42.112205.x86_64.disc3.iso<br> SL.42.112205.x86_64.disc4.iso</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_3">SL 4.1</h4>
+<p>パーソナルデスクトップおよび、ワークステーションタイプでのインストールに必要なファイルは disc1 から disc3 までの3枚です。<br>
+●i386 Binary Discs</p>
+<pre> SL.41.080405.i386.disc1.iso<br> SL.41.080405.i386.disc2.iso<br> SL.41.080405.i386.disc3.iso<br> SL.41.080405.i386.disc4.iso</pre>
+<p>●x86_64 Binary Discs</p>
+<pre> SL.41.081805.x86_64.disc1.iso<br> SL.41.081805.x86_64.disc2.iso<br> SL.41.081805.x86_64.disc3.iso<br> SL.41.081805.x86_64.disc4.iso</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_4">SL 4.0</h4>
+<p>パーソナルデスクトップおよび、ワークステーションタイプでのインストールに必要なファイルは disc1 から disc3 までの3枚です。<br>
+●i386 Binary Discs</p>
+<pre> SL.40.042505.i386.disc1.iso<br> SL.40.042505.i386.disc2.iso<br> SL.40.042505.i386.disc3.iso<br> SL.40.042505.i386.disc4.iso</pre>
+<p>●x86_64 Binary Discs</p>
+<pre> SL.40.042105.x86_64.disc1.iso<br> SL.40.042105.x86_64.disc2.iso<br> SL.40.042105.x86_64.disc3.iso<br> SL.40.042105.x86_64.disc4.iso</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_5">国内高速ミラーサーバーを利用するには？ (YUM編)</h3>
+<p>/etc/yum.conf を次のとおり書き換えると、日本国内のミラーサーバー(RIKEN)が利用できます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>SL 4.1 の場合 (次のひな型に従って、ファイルの最後に国内ミラーを記述します。)
+    <pre> [sl41server]<br> name=SL 41 main<br> baseurl=ftp://ftp.riken.jp/Linux/scientific/41/$basearch/SL/RPMS/<br> <br> [sl41errata]<br> name=SL 41 errata<br> baseurl=ftp://ftp.riken.jp/Linux/scientific/41/$basearch/errata/SL/RPMS/</pre>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>SL 4.0 の場合 (次のひな型に従って、ファイルの最後に国内ミラーを記述します。)
+    <pre> [sl40server]<br> name=SL 40 main<br> baseurl=ftp://ftp.riken.jp/Linux/scientific/40/$basearch/SL/RPMS/<br> <br> [sl40errata]<br> name=SL 40 errata<br> baseurl=ftp://ftp.riken.jp/Linux/scientific/40/$basearch/errata/SL/RPMS/</pre>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_6">国内高速ミラーサーバーを利用するには？ (APT編)</h3>
+<p>APT (Advanced Package
+Tool)を使ってパッケージ管理する場合は、/etc/apt/sources.list.d/sl.list
+の記述を次のように書き換えます。(利用しないサーバをコメント(#)しておき、国内ミラーを追加します。)</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>SL 4.1 の場合
+    <pre> #apt-rpm pointing to SL<br> #rpm ftp://ftp.scientificlinux.org//linux/scientific/ 41/i386/apt os updates contrib <br> #rpm ftp://ftp.scientificlinux.org//linux/scientific/ 41/i386/apt contrib<br> rpm ftp://ftp.riken.jp/Linux/scientific/ 41/i386/apt os updates contrib</pre>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>SL 4.0 の場合
+    <pre> #apt-rpm pointing to SL<br> #rpm ftp://ftp.scientificlinux.org//linux/scientific/ 40/i386/apt os updates contrib <br> #rpm ftp://ftp.scientificlinux.org//linux/scientific/ 40/i386/apt contrib<br> rpm ftp://ftp.riken.jp/Linux/scientific/ 40/i386/apt os updates contrib</pre>
+  </li>
+</ul>
+<p>そして、</p>
+<pre> apt-get update</pre>
+<p>を実行します。これで次回より、apt-get upgrade コマンドが使えるようになります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_7">SL 4.0 から SL 4.1 へアップグレードする方法は？</h3>
+<p>YUM または APT を利用してアップグレードすることが可能です。</p>
+<blockquote>
+  <p class="quotation">"Installation Related Notes<br>
+In order to upgrade an already-installed Scientific Linux 4.x system to
+4.1, you must use yum or apt to update those packages that have
+changed."</p>
+  <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+    <li><a
+ href="http://listserv.fnal.gov/scripts/wa.exe?A2=ind0508&amp;L=scientific-linux-announce&amp;T=0&amp;F=&amp;S=&amp;P=767">Scientific
+Linux
+4.1 for i386 is now available</a>(SCIENTIFIC-LINUX-ANNOUNCE List,
+2005.08.04)</li>
+  </ul>
+</blockquote>
+<p>YUMを使って、以下の方法でSL4.0からSL4.1にアップグレードできます。</p>
+<p>1. rpm -Uvh <a
+ href="ftp://ftp.scientificlinux.org/linux/scientific/41/i386/misc/RPMS/yum-conf-4x.SL.noarch.rpm">ftp://ftp.scientificlinux.org/linux/scientific/41/i386/misc/RPMS/yum-conf-4x.SL.noarch.rpm</a>
+あるいはミラーをつかって<br>
+　 rpm -Uvh <a
+ href="ftp://ftp.riken.jp/Linux/scientific/41/i386/misc/RPMS/yum-conf-4x.SL.noarch.rpm">ftp://ftp.riken.jp/Linux/scientific/41/i386/misc/RPMS/yum-conf-4x.SL.noarch.rpm</a><br>
+2. /etc/yum.conf 　あるいは、/etc/yum.repos.d/sl.repo、
+/etc/yum.repos.d/sl-errta.repo を編集して SL 40 のディレクトリを SL 41にかえる。<br>
+3. yum update yum<br>
+4. yum upgrade</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_8">SL 4.1 から SL 4.2 へアップグレードする方法は(2005.11.30)？</h3>
+<p>YUMを使って、以下の方法でSL4.1からSL4.2にアップグレードできます。</p>
+<p>1. rpm -Uvh <a
+ href="ftp://ftp.scientificlinux.org/linux/scientific/42/i386/misc/RPMS/yum-conf-4x.SL.noarch.rpm">ftp://ftp.scientificlinux.org/linux/scientific/42/i386/misc/RPMS/yum-conf-4x.SL.noarch.rpm</a>
+あるいはミラーをつかって<br>
+　 rpm -Uvh <a
+ href="ftp://ftp.riken.jp/Linux/scientific/42/i386/misc/RPMS/yum-conf-4x.SL.noarch.rpm">ftp://ftp.riken.jp/Linux/scientific/42/i386/misc/RPMS/yum-conf-4x.SL.noarch.rpm</a><br>
+2. /etc/yum.conf 　あるいは、/etc/yum.repos.d/sl.repo、
+/etc/yum.repos.d/sl-errta.repo を編集して SL 41 のディレクトリを SL 42にかえる。<br>
+3. yum update yum<br>
+4. yum upgrade</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_9">SL 3.0.x から SL 4.x へアップグレードする方法は？</h3>
+<p>アナコンダ・インストーラー (= SL 4.x インストール CD disc1) を用いてのアップグレードが可能です。YUM
+を使ってアップグレードすることは無理とされています。(これも、RHEL 4 リリースノートの場合と準じています。)</p>
+<blockquote>
+  <p class="quotation">"It should be possible to upgrade from
+Scientific Linux 3.0.x via the anaconda<br>
+installer. Yum is known to NOT work."　（SL 4.0/4.1 リリースノートより）</p>
+</blockquote>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_10">デフォルトの壁紙が気に入らないので変えたい。</h3>
+<p>デフォルトの背景が SL 4.x
+では「黒色」が採用されました(デフォルトでの運用は、実際具合が悪いかもしれません)。しかし、この変更は簡単にできます。</p>
+<p>デスクトップ上で右クリックし、[デスクトップの背景の設定] &gt; [壁紙の追加] &gt; [images]
+より変更できます。壁紙には複数のオプションが用意されているので、その中から選択します。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>sl-light.jpg ー デザインを変更せず、背景を明るいグレー色に置き換えます。</li>
+  <li>Bluecurve.png ー これは、アップストリーム・ベンダーと同様な落ち着いた背景です。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_11">デスクトップに保存したファイルのアイコンが表示できません。</h3>
+<p>GNOME デスクトップ (~/home/Desktop)
+にファイルを保存しても、アイコンが表示されないというバグが時々発生します。(CentOS 4.0 においても同様のバグがあります。)</p>
+<p>実際には、ファイルは ~/home/Desktop に保存されているので、</p>
+<pre> $ cd Desktop<br> $ ls</pre>
+<p>とすることで確認できます。X の再起動でアイコンは正常に表示されるようになります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_12">アプリケーションの起動に時間がかかりませんか?</h3>
+<p>バージョン 3.4 と バージョン 4.0 を比較した場合、Firefox や OpenOffice.org
+など、全般的にアプリケーションの起動に時間がかかるようです。</p>
+<p>SL 4.0 は、CPU 700 MHz、メモリ 256 MB
+程度のマシンでも十分実用的ですが、起動時間を短縮するにはメモリを追加した方が良いかもしれません。これは、Kernel 2.6
+が採用されたこととも関係がありそうですが、今のところはっきりとした原因は分らないようです。同様に RHEL 4 CentOS 4.0
+でシステムを構成した場合にもその傾向がみられます。</p>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>Tips</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../../index.html" title="FrontPage (3d)">HOME</a>/ <a
+ href="../index.html">Distributions</a> / <a href="index.html">ScientificLinux-FAQ</a>
+/ Tips</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">Scientific Linux 使い方のヒント (便利な使い方)</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">Scientific Linux 使い方のヒント (便利な使い方) </a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">YUM 自動アップデートの利用について </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_2">YUM 自動アップデートとは何ですか? </a></li>
+          <li><a href="#content_1_3">全てが自動でアップデートされるのですか </a></li>
+          <li><a href="#content_1_4">どこからダウンロードされるのですか </a></li>
+          <li><a href="#content_1_5">何がアップデートされたのか分かりますか </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_6">APT 自動アップデートの利用について </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_7">apt-autoupdate を入手しインストールするには? </a></li>
+          <li><a href="#content_1_8">apt-autoupdate の開始/終了 </a></li>
+          <li><a href="#content_1_9">apt-autoupdate の設定変更 </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_10">Up2date
+アイコンがデスクトップに表示されませんが実際に利用できますか? </a></li>
+      <li><a href="#content_1_11">グラフィカルなパッケージ管理ツールを使いたい </a></li>
+      <li><a href="#content_1_12">サードパーティよりアドオンパッケージを利用したい その1 - DAG </a></li>
+      <li><a href="#content_1_13">サードパーティよりアドオンパッケージを利用したい その2 - ATrpms
+        </a></li>
+      <li><a href="#content_1_14">サードパーティよりアドオンパッケージを利用したい その3 -
+Fedora-Extras</a></li>
+      <li><a href="#content_1_15">アップデートでサードパーティのパッケージは除外したい </a></li>
+      <li><a href="#content_1_16">APT が使えないみたいなのですが・・・ </a></li>
+      <li><a href="#content_1_17">標準インストールで日本語 PDF ファイルは扱えますか? </a></li>
+      <li><a href="#content_1_18">起動時に Sendmail の処理で異常に時間がかかる </a></li>
+      <li><a href="#content_1_19">起動時「localhost.localdomain の URL
+が見つかりませんでした。」のエラーが出る </a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">YUM 自動アップデートの利用について</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_2">YUM 自動アップデートとは何ですか?</h4>
+<p>Nightly YUM Update あるいは YUM automatic updates
+と呼ばれているこの機能は、OSのアップデートを手放しで実行可能とするので、ネットワークに常時接続しているシステムにとっては非常に便利です。コン
+ソール(端末)からその都度マニュアルで YUM コマンドを実行し、システムのアップデートを行う必要がありません。</p>
+<p>実際のアップデートは、ダウンロードサーバーに負荷が集中しないようにするため、アットランダムに実行されるように設定されています。詳しくは <a
+ href="http://listserv.fnal.gov/scripts/wa.exe?A2=ind04&amp;L=linux-users-faq&amp;F=&amp;S=&amp;P=62">yum:
+security
+update policy question</a> を参照してください。<a
+ href="http://www.atmarkit.co.jp/flinux/rensai/linuxtips/263am4disk.html">こ
+ちら</a> も参考になるでしょう。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_3">全てが自動でアップデートされるのですか</h4>
+<p>いいえ。インストール直後の初期設定では、kernel、openafs 関係のパッケージは自動アップデートの対象から外されています。</p>
+<p>初期値を変更したいときは、/etc/yum.d/yum.cron.excludes
+を開き、その記述を書き換えてください。インストール直後は、次のとおり記述されています。</p>
+<pre> exclude=kernel* openafs*</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_4">どこからダウンロードされるのですか</h4>
+<p>/etc/yum.d/yum.cron.primary または /etc/yum.d/yum.cron.secondary
+に記述されたサーバーから優先的にダウンロードされるので、任意のミラーサーバーを利用したい時は、まず
+/etc/yum.d/yum.cron.primary で指定します。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_5">何がアップデートされたのか分かりますか</h4>
+<p>はい。アップデート実行時のログは、次のファイルで確認できます。</p>
+<pre> /var/log/yum.log</pre>
+<p>このログファイルには、マニュアルでアップデートした記録も含まれています。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_6">APT 自動アップデートの利用について</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_7">apt-autoupdate を入手しインストールするには?</h4>
+<p>APT を利用している場合にも、自動アップデートを実行させることが可能です。<br>
+以下は、Scientific Linux 4.1 の実行例です。</p>
+<pre> # apt-get install apt-autoupdate<br> Reading Package Lists... Done<br> Building Dependency Tree... Done<br> The following extra packages will be installed:<br>    apt-scripts (1-5.SL)<br> The following NEW packages will be installed:<br>    apt-autoupdate (1-5.SL)<br>    apt-scripts (1-5.SL)<br> 0 upgraded, 2 newly installed, 0 removed and 8 not upgraded.<br> Need to get 17.0kB of archives.<br> After unpacking 25.0kB of additional disk space will be used.<br> Do you want to continue? [Y/n] y</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_8">apt-autoupdate の開始/終了</h4>
+<p>開始するには、次のコマンドを実行します。</p>
+<pre> # /sbin/chkconfig --add apt-autoupdate<br> # /sbin/service apt-autoupdate start</pre>
+<p>インタラクティブに実行するには、次のコマンドを実行します。</p>
+<pre> # /sbin/apt-autoupdate</pre>
+<p>終了(停止)するには、次のコマンドを実行します。</p>
+<pre> # /sbin/service apt-autoupdate stop<br> # /sbin/chkconfig --del apt-autoupdate</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_9">apt-autoupdate の設定変更</h4>
+<p>/etc/sysconfig/apt-autoupdate
+というファイルをテキストエディタで開いて、時間や実行方法等の設定変更ができます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_10">Up2date アイコンがデスクトップに表示されませんが実際に利用できますか?</h3>
+<p>可能ですが、Up2date の利用は推奨されていません。SL 4.x では、すでに代替機能がリリースされています。</p>
+<p>[SL 3.0.x の場合]<br>
+SL 3.0.x 標準のパッケージ管理ツールは、YUM、YUMI、APT、Synaptic が想定されています。WBEL / CentOS
+で採用されているような Up2Date Network による利用を希望する場合には、up2date-4.2.57-2.i386.rpm
+および up2date-gnome-4.2.57-2.i386.rpm を YUM で追加インストールしてください。
+これで、コマンドラインからの利用は可能です。</p>
+<p>[SL 4.x の場合]<br>
+SL 4.x 以降のバージョンにおいては、 Yum Extender (YumEX) がオプションで利用できます。Up2Date
+が含まれるようになったので、利用できるようにはなっています (SL 4.0
+テスト版以降、実装済み)。この理由はリリースノートで、主として元のベンダーがデフォルトのツールとして付属している関係から、パッケージ間の依存関係
+を変更しないための措置であると説明されています。</p>
+<p>scientific/41/i386/contrib/RPMS/yum
+より次のパッケージをインストールすれば、デスクトップに更新通知アイコンを追加できます。</p>
+<pre> yum-2.4.0-2.SL.noarch.rpm<br> yumex-0.42-1.0.noarch.rpm<br> yumex-applet-2.1-1.i386.rpm</pre>
+<p>2005.11.06 現在、contrib ツリーに用意されているので、次のコマンドを実行すればインストールされます。この詳細情報は、<a
+ href="http://listserv.fnal.gov/scripts/wa.exe?A2=ind0510&amp;L=scientific-linux-devel&amp;T=0&amp;F=&amp;S=&amp;P=419">Subject:
+New
+yum in SL41 contrib</a> に見つかります。</p>
+<pre> # yum --enable=sl-contrib update yum\*<br> # yum --enable=sl-contrib install yumex\*</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Up2date に関する注意事項<br>
+SL 4.x では YUM 2.2 が採用されることとなったので、YUM 2.0 のもとで動作する Up2date
+は、本来とは異った挙動をする恐れがあるので、敢えて利用する際は注意を払ってください。GNOME
+デスクトップ上で従来どおりグラフィカルな操作をするには、rhn-applet を追加すれば可能となります。
+    <pre>  # yum install rhn-applet</pre>
+rhn-applet の自動更新通知機能は、アップデータのタイムリーなリリースを知る手段として便利です。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_11">グラフィカルなパッケージ管理ツールを使いたい</h3>
+<p>[SL 3.0.x の場合]</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>YUM によるパッケージ管理はコマンドラインから行うことになりますが、最近グラフィカルなツールとして新たに YUMI
+が開発されました。YUMI をインストールするには、次のようにします。
+    <pre> # yum install yumi</pre>
+インストール後 YUMI を起動するには、
+    <pre> # yumi</pre>
+とします。</li>
+  <li>Synaptic を使う場合。<br>
+Synaptic は初めからインストール済みですので、<br>
+メインメニュー（足マーク）＞ システムツール ＞ Synaptic パッケージマネージャ
+から起動させます。あるいは、コマンドラインから次のようにします。
+    <pre> # synaptic</pre>
+  </li>
+</ul>
+<hr class="full_hr">
+<p>[SL 4.2 の場合]</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>YumEX がリリースされたので、これをインストールできます。(<a
+ href="http://www.h7.dion.ne.jp/%7Egreens/sl-42/screenshot-YumExtender.png">YumEX
+スクリーンショット</a>)
+    <pre> # yum install yumex</pre>
+SL 4.0/4.1 で利用するには、yum-2.4.0 へのアップグレードが必要なため、contrib
+リポジトリより次のパッケージをインストールします。<a id="notetext_1" href="#notefoot_1"
+ class="note_super">*1</a>
+    <pre> # yum install yum yumex</pre>
+インストール後、デスクトップから [アプリケーション] &gt; [システムツール] &gt; [<span class="noexists">YumExtender<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=YumExtender&amp;refer=ScientificLinux-FAQ%2FTips">?</a></span>]
+で起動できます。YumEX は起動に時間がかかるので、Synaptic の方がずっと機能的に優れています。</li>
+  <li>Synaptic を使う場合。<br>
+専用パッケージは、 <a href="http://linuxsoft.cern.ch/tempsync/updatestodo/SL4X/">http://linuxsoft.cern.ch/tempsync/updatestodo/SL4X/</a>
+に用意されています。このパッケージは、現時点(2005.11.09)では未だ公式なものではありませんが、問題なく動作します。あるいは、サードパー
+ティより入手することもできます。<br>
+    <a
+ href="ftp://ftp.scientificlinux.org/linux/extra/dag/packages/synaptic/">ftp://ftp.scientificlinux.org/linux/extra/dag/packages/synaptic/</a>
+に見つかります。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_12">サードパーティよりアドオンパッケージを利用したい その1 - DAG</h3>
+<p><a href="http://dag.wieers.com/home-made/apt/">DAG's RPM Repository</a>
+がアドオン・パッケージとしてミラーされています。日本国内の高速ミラーを指定した方が快適に利用できます。これらパッケージの中には、GUI
+管理ツール Synaptic や Smart-GUI、 日本語メーラー Sylpheed を始めとして役立つパッケージが多く含まれています。</p>
+<p>[YUM を利用する場合]<br>
+/etc/yum.conf ファイルを開き、下記を追加してください(RIKEN ミラー)。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>SL 4.0 では
+    <pre> [dag]<br> name=DAG rpms<br> baseurl=ftp://ftp.riken.jp/Linux/dag/redhat/el4/en/$basearch/dag/</pre>
+  </li>
+  <li>SL 3.0.x では
+    <pre> #[dag]<br> #name=DAG rpms<br> #baseurl=ftp://ftp.scientificlinux.org/linux/extra/dag/redhat/el3/en/$basearch/dag/<br> baseurl=ftp://ftp.riken.jp/Linux/dag/redhat/el3/en/$basearch/dag/</pre>
+  </li>
+</ul>
+<hr class="full_hr">
+<p>[APT を利用する場合]<br>
+/etc/apt/sources.list.d ファイルを開き、下記を追加してください(RIKEN ミラー)。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>SL 4.0 では
+    <pre> ### Dag RPM Repository for Red Hat Enterprise Linux<br> rpm http://ftp.riken.jp Linux/dag/redhat/el4/en/i386 dag</pre>
+  </li>
+  <li>SL 3.0.x では
+    <pre> ### Dag RPM Repository for Red Hat Enterprise Linux<br> rpm http://ftp.riken.jp Linux/dag/redhat/el3/en/i386 dag</pre>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_13">サードパーティよりアドオンパッケージを利用したい その2 - ATrpms</h3>
+<p>ATrpms サイトからも、Scientific Linux用のアドオン・パッケージが利用できます。<br>
+リポジトリーの設定は、上記項目に習って行なってください。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>S.L. 3.0.x<br>
+    <a href="http://atrpms.net/dist/el3/">http://atrpms.net/dist/el3/</a>
+(browse through packages)<br>
+    <a href="http://dl.atrpms.net/sl3-i386/atrpms/">http://dl.atrpms.net/sl3-i386/atrpms/</a>
+(apt/yum repo for ia32)<br>
+    <a href="http://dl.atrpms.net/sl3-x86_64/atrpms/">http://dl.atrpms.net/sl3-x86_64/atrpms/</a>
+(apt/yum repo for x86_64)</li>
+  <li>S.L. 4.x<br>
+    <a href="http://atrpms.net/dist/el4/">http://atrpms.net/dist/el4/</a>
+(browse through packages)<br>
+    <a href="http://dl.atrpms.net/sl4-i386/atrpms/">http://dl.atrpms.net/sl4-i386/atrpms/</a>
+(apt/yum repo for ia32)<br>
+    <a href="http://dl.atrpms.net/sl4-x86_64/atrpms/">http://dl.atrpms.net/sl4-x86_64/atrpms/</a>
+(apt/yum repo for x86_64)</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_14">サードパーティよりアドオンパッケージを利用したい その3 - Fedora-Extras</h3>
+<p>関連項目 <a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?CentOS-FAQ%2F4.x#fedora-extras"
+ title="CentOS-FAQ/4.x (2028d)">サードパーティ リポジトリの利用 - Fedora Extras</a>
+を見てください。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_15">アップデートでサードパーティのパッケージは除外したい</h3>
+<p>公式サイトから配布されるセキュリティアップデートを適用する時、サードパーティのアドオンパッケージが利用可能に設定されていると、それも同時に
+取り込まれます。つまり、アップデートでは、パッケージのバージョンは全て最新のものに置き換わることになります。</p>
+<p>しかし、サードパーティのアドオンパッケージが確実に動作する保証はありません。公式リリース同様に検証されているとは限らないので、不用意にイン
+ストールするとシステムとの整合性が保てなくなる恐れが生じます。</p>
+<p>そこで、この問題に対処するために、複数のパッケージ管理ツールを使い分けるのが実際的です。Scentific Linux では APT と
+YUM
+が標準で提供されているので、一方をセキュリティアップデート専用で利用し、他方をアドオンパッケージ専用として利用することで上手く対処できます。</p>
+<p>バージョン 4.x 場合には、グラフィカルツール Yum Extender
+で提供されている機能を使って、リポジトリーの切り替えを瞬時に行なうことも可能です。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_16">APT が使えないみたいなのですが・・・&nbsp;</h3>
+<p>x86_64 (for Opteron) で使用すると不具合が発生した報告が公式メーリングリストに挙っています。i386
+の場合、特に問題は無いようです。<br>
+次のユーザーメーリングリストを参照してください。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://listserv.fnal.gov/scripts/wa.exe?A2=ind0412&amp;L=scientific-linux-users&amp;F=&amp;S=&amp;P=4823">Re:
+Using
+apt-get on Opteron</a></li>
+</ul>
+<p>なお参考までに、Scientific Linux の派生ディストリビューションである CERN Linux では APT
+がデフォルト(標準)で機能するように設計されています。しかし、APT-RPM の機能的な制約から、次期リリースでは見直されるかもしれません。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://listserv.fnal.gov/scripts/wa.exe?A2=ind0512&amp;L=scientific-linux-users&amp;T=0&amp;F=&amp;S=&amp;P=3455">Re:
+Bug:
+apt-get not working properly under SL 4.2</a>
+    <blockquote>
+      <p class="quotation">"Giving that apt for rpm is not developped
+anymore ..<br>
+since Mandrake took over Connectiva ...<br>
+(plus it does not understand multilib archs like ia64/x86_64<br>
+etc ..)<br>
+We at CERN start thinking about migrating to yum for<br>
+next SLC version(s) (SLC 5 most likely)"</p>
+    </blockquote>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_17">標準インストールで日本語 PDF ファイルは扱えますか?</h3>
+<p>はい。標準でインストールされている GGV (Gnome Ghostview) を使って開いてください。 GGV
+を起動させるには、デスクトップより [アプリケーション] &gt; [グラフィックス] &gt; [<span class="noexists">PostScript<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=PostScript&amp;refer=ScientificLinux-FAQ%2FTips">?</a></span>
+Viewer] を選択します。</p>
+<p>デフォルトで立ち上がる PDF ビューワー (GNOME PDF Viewer)
+を利用すると、日本語文書が表示できないことがある(十分に対応していない)ので、日本語の部分が空白となってしまうことがあります。</p>
+<p>広く一般的に利用されている Adobe Reader を利用することも可能です。その場合には、 RPM
+バイナリーを入手してインストールするのが最も簡単です。<span class="noexists">FAQ/ApplicationMisc/AdobeReader<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=FAQ%2FApplicationMisc%2FAdobeReader&amp;refer=ScientificLinux-FAQ%2FTips">?</a></span>
+にある手順に従って設定してください。7.0 日本語版をインストールすれば、文字化けの発生をほとんど心配することなく快適に日本語 PDF
+ファイルを扱うことができます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_18">起動時に Sendmail の処理で異常に時間がかかる</h3>
+<p>OS が起動するとき、sendmail, sm-client
+の箇所の処理に異常に時間(5分前後あるいはそれ以上)がかかることがあるかも知れません。一般ユーザーが Sendmail
+を利用することはまずありません(サーバー利用を除く)。</p>
+<p>Red Hat Linux 9 系統ではデフォルトで sendmail
+が自動起動しますが、不要なサービスは極力実行しないことが大切です。起動時 sendmail が停止するように設定するより、sendmail
+を削除しても構いません。sendmail は、ユーザーがメーラーを使うやり取りには直接関係しないソフトウェアです。</p>
+<p>もしこの問題が発生した場合には、rootで apt-get remove sendmail
+と実行して、このサービスを削除すれば、次回より迅速に起動可能となることでしょう。</p>
+<p>ps -ef | grep sendmail と実行することで、サービスが停止されたことが確認できます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>[参照] <a
+ href="http://www.cc.uec.ac.jp/newsite/network/tech/HIDE/sendmail.html">メー
+ルサーバの構築・管理・運用</a><br>
+Sendmail の運用に関する詳しい解説があります。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_19">起動時「localhost.localdomain の URL
+が見つかりませんでした。」のエラーが出る</h3>
+<p>GNOME にユーザーログイン時、「localhost.localdomain の URL が見つかりませんでした。そのため、GNOME
+が正しく動作しなくなるおそれがあります。/etc/hosts ファイルに localhost.localdomain
+を追加することでこの問題を解決できる場合があります。」というメッセージが出ることがあります。</p>
+<p>この場合には、とりあえずログインした後でそのメッセージに従って /etc/hosts ファイルに
+localhost.localdomain
+を追加し、システムを再起動させることで正常に復帰できる可能性があります。この現象が発生するかどうかは、お使いの環境に依ります。</p>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>

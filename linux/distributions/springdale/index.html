@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>Springdale Linux - SDL (PUIAS Linux) FAQ and Tips - Linux on the Desktop</title>
+  </head>
+  <body>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td valign="top"><a href="../../../index.html">HOME</a> / <a href="../index.html">ディストリビューション </a><br>
+        </td>
+          <td valign="middle" align="right">Last updated:&nbsp;2020/12/28 19:23 JST <br>
+</td>
+        </tr>
+      </tbody>
+</table>
+<hr width="100%"><br>
+<b><font size="+2">Springdale Linux に関する FAQ &amp; Tips</font></b><br>
+<br>
+Springdale Linux (SDL) に関するページです。<br>
+<br>
+<b>[目　次]</b><br>
+<a href="#1">Springdale Linux とは何ですか？</a><br>
+<a href="#2">Springdale という名前の由来は？</a><br>
+<a href="#3">CentOS と同じようなクローンなのですか？</a><br>
+<a href="#4">ダウンロードサイト (Downloading/Mirrors)</a><br>
+<a href="#5">どのインストール・イメージをダウンロードすべきですか？</a><br>
+<a href="#6">ダウンロードした isoファイル名が読み取れません</a><br>
+<a href="#7">イメージの checksum が見つかりません</a><br>
+<a href="#8">SDL 7.9-x86_64-netinst.iso の sha256sum が一致しません</a><br>
+<a href="#9">SDL のインストール手順について</a><br>
+- パーティションの自動構成 <br>
+- インストール時のオプション <br>
+<a href="#10">Springdale メーリングリスト</a><br>
+<a href="#11">参考情報について（外部リンク）</a><br>
+<br>
+<h3><a name="1"></a>Springdale Linux とは何ですか？</h3>Springdale Linux (略称：SDL) の公式ホームページは <a href="http://springdale.math.ias.edu/">http://springdale.math.ias.edu/</a> です。<br>
+<br>
+Springdale Linux（以前の名称は PUIAS Linux）は、Red Hat Enterprise Linux 
+のソースパッケージをコンパイルすることによって構築された、デスクトップおよびサーバー用の完全なオペレーティングシステムです。このアップストリーム
+のパッケージに加えて、このプロジェクトは他のいくつかのリポジトリも提供します。Red Hat 
+のディストリビューションに標準で含まれていない追加パッケージを含む「アドオン」、コンピュータ科学向けのソフトウェアを含む
+「Computational」、さまざまな実験パッケージを保持する「Unsupported」です。このディストリビューションは、アメリカ高等研究
+所とプリンストン大学によってメンテナンスされています（下記原文を翻訳）。<br>
+<br>
+"Springdale Linux (formerly PUIAS Linux) is a complete operating system 
+for desktops and servers, built by compiling the source packages for Red
+ Hat Enterprise Linux. Besides these upstream packages, the project also
+ provides several other repositories: "Addons" which contains additional
+ packages not included in a stock Red Hat distribution, "Computational" 
+which carries software specific to scientific computing, and 
+"Unsupported" which holds various experimental packages. The 
+distribution is maintained by the Institute for Advanced Study and 
+Princeton University in the USA."
+-- <a href="https://distrowatch.com/table.php?distribution=springdale">https://distrowatch.com/table.php?distribution=springdale</a> <br>
+<br>
+<h3><a name="2"></a>Springdale という名前の由来は？</h3>
+Springdale Linux は以前から PUIAS Linux (Princeton University and Institute for 
+Advanced Study Linux) という名前で知られています。新しいロゴは、プリンストン大学の2つの校舎のあいだにある Springdale 
+通りのサイン（標識）から採用されました。<br>
+<br>
+"PUIAS Linux is now known as Springdale Linux. The new logo is the 
+Springdale street sign, in honor of the road which runs in between the 
+two campuses." -- <a href="http://springdale.math.ias.edu/wiki#News">http://springdale.math.ias.edu/wiki#News</a><br>
+<br>
+<h3>
+  <a name="3"></a>CentOS と同じようなクローンなのですか？</h3>
+はい。CentOS 同じように無料で提供されているので自由に利用することができます。プリンストン大学およびその研究機関に係わる人々のうち Springdale Linux Team が中心となって開発と保守を行なっています。<br>
+<br>
+<h3>
+  <a name="4"></a>ダウンロードサイト (Downloading/Mirrors) </h3>
+公式サイト<br>
+<a href="http://springdale.princeton.edu/data/springdale/">http://springdale.princeton.edu/data/springdale/</a> <br>
+<br>
+ミラーサイト<br>
+Princeton University Mathematics Department <a href="http://mirror.math.princeton.edu/pub/springdale/">http://mirror.math.princeton.edu/pub/springdale/</a> <br>
+Rheinisch-Westfaelische Technische Hochschule Aachen <a href="http://ftp.halifax.rwth-aachen.de/puias/">http://ftp.halifax.rwth-aachen.de/puias/</a> <br>
+<br>
+日本国内のミラーサイト -- 理化学研究所<br>
+<a href="http://ftp.riken.jp/Linux/springdale/">http://ftp.riken.jp/Linux/springdale/</a> <br>
+<br>
+<h3><a name="5"></a>どのインストール・イメージをダウンロードすべきですか？</h3>
+最も簡単にインストールするには、次の ISOイメージの利用をお推めします。Debian Linux の場合と同様、ネットワーク・インストールが可能な ISOイメージもあります。<br>
+<h4>バージョン 7</h4>
+x86_64<br>
+Springdale Linux-7.5-x86_64-DVD.iso<br>
+Springdale Linux-7.5-x86_64-netinst.iso<br>
+ミラーサイトの以下より /springdale/7.5/x86_64/iso<br>
+<br>
+Springdale Linux-7.9-x86_64-netinst.iso<br>
+ミラーサイトの以下より /springdale/7/x86_64/iso/<br>
+<br>
+i386<br>
+Springdale Linux-7.3-i386-DVD.iso&nbsp;&nbsp;&nbsp; &nbsp;<br>
+Springdale Linux-7.3-i386-netinst.iso<br>
+ミラーサイトの以下より /springdale/7.3/i386/iso<br>
+<br>
+Springdale Linux-7.8-i386-netinst.iso<br>
+ミラーサイトの以下より /springdale/7/i386/iso/<br>
+<h4>バージョン 8</h4>
+x86_64<br>
+Springdale Linux-8.1-x86_64-netinst.iso<br>
+ミラーサイトの以下より /springdale/8.1/x86_64/iso/<br>
+<br>
+boot.iso<br>
+ミラーサイトの以下より /springdale/8.3/x86_64/os/images/<br>
+<br>
+i386<br>
+*-netinst.iso 未提供（i386 用リポジトリはあります）<br>
+<br>
+<h3><a name="6"></a>ダウンロードした isoファイル名が読み取れません</h3>
+端末（ターミナル）を使ってコマンドラインから操作していると問題が生じるかもしれません。「そのようなファイルは存在しません」というメッセージが表示されたりします。これはファイル名に空白（半角スペース）が含まれているからで
+す。支障が出る場合はファイル名の中の文字列 Springdale Linux に下線（正式名はアンダーラインあるいはアンダースコア）を加えて Springdale_Linux 
+のように変更してください。これで正しく扱えるはずです。<br>
+<br>
+<h3><a name="7"></a>イメージの checksum が見つかりません</h3>
+ミラーサイトにある isoイメージのすべてに checksum が添付されているわけではありません。checksum 
+リストがほぼ省略されています（2020.12.22 現在）。イメージの整合性を確認したい場合には、checksum 
+が添付されたイメージをダウンロードしてください。そういう事情によって、前記の項目に掲載したイメージにはあえて checksum 
+が添付されたものも含めてあります。<br>
+<br>
+<h3><a name="8"></a>SDL 7.9-x86_64-netinst.iso の sha256sum が一致しません</h3>
+当方で複数のミラーサイトにあるisoイメージを調べましたが、やはり一致しません。公式サイトに掲載された値が間違っていると思われます。確実を期したい向きには Springdale Linux-7.5-x86_64-netinst.iso を選択すべきです。<br>
+<br>
+<h3><a name="9"></a>SDL のインストール手順について</h3>
+RHEL のクローンなので、基本的なインストールの手順は、<a href="../centos/index.html">CentOS</a> や <a href="../scientific/index.html">Scientific Linux</a> の場合とまったく同じです。サイト内の関連ページや下記を参照してインストールしてください。<br>
+<br>
+<h4>パーティションの自動構成</h4>
+Springdale(SDL) 
+には、インストールのためのパーティション設定ツールがあります。このツールには「パーティションの自動構成」というメニューも含まれているので、設定方
+法が良く分からないときはこれを利用すると良いでしょう。UEFI を採用する現代的なマシンでは /boot/efi 
+の作成も必要となります。パーティションの自動構成の例を載せておきます。<br>
+<br>
+（自動設定の例）<br>
+/home -- 残り全部<br>
+/boot -- 1024 MiG<br>
+/boot/efi -- 200 MiB<br>
+/ -- 50 GiB<br>
+swap -- 3968 MiG<br>
+<br>
+自動パーティション設定の変更は、そのデバイスをもう一度選択して画面左上の「完了」ボタンを押すと、パーティションを手動で変更できます。手動で /home だけを任意のサイズに縮小することも可能です。設定の変更は画面右下の「設定の更新」ボタンで反映されます。<br>
+<br>
+パーティションの設定が終了したら画面左上の「完了」ボタンをクリックします。そうすると次には「変更を許可する」という画面が現れます。この画面がパーティション設定の最終確認で、このあとインストールを開始できます。<br>
+<br>
+<h4>インストール時のオプション</h4>
+Springdale(SDL) にはインストール・オプションとして、ソフトウェアの選択肢が複数用意されています。主なものとしては以下があります。<br>
+<br>
+ベース環境<br>
+・最小限のインストール<br>
+・ベーシック Web サーバー<br>
+・仮想化ホスト<br>
+・サーバー（GUI 使用）<br>
+・GNOME デスクトップ<br>
+・KDE Plasma Workspaces<br>
+<br>
+ベース環境に GNOME を選択した場合、以下のようなアドオンを追加可能<br>
+・GNOME アプリケーション<br>
+・インターネットアプリケーション<br>
+・オフィススイートと生産性<br>
+<br>
+<h3><a name="10"></a>Springdale メーリングリスト</h3>
+https://groups.google.com/g/springdale-users より以下のメーリングリストのアーカイブが公開されています。閲覧は自由に出来ますが、投稿するには Google アカウントの登録が必要です。<br>
+<br>
+springdale-users（一般ユーザー対象） <a href="https://groups.google.com/g/springdale-users">https://groups.google.com/g/springdale-users</a> <br>
+springdale-devel（おもに開発者向け） <a href="https://groups.google.com/g/springdale-devel">https://groups.google.com/g/springdale-devel</a> <br>
+springdale-announce （ニュースのみ） <a href="https://groups.google.com/g/springdale-announce">https://groups.google.com/g/springdale-announce</a> <br>
+<br>
+<h3><a name="11"></a>参考情報について（外部リンク）</h3>
+Centos8インストールのヒント <a href="https://ribf.riken.jp/ribfcomp/Centos8-setup">https://ribf.riken.jp/ribfcomp/Centos8-setup</a> <br>
+Scientific Linux のインストールのヒント <a href="https://ribf.riken.jp/comp/tips/SL3.html">https://ribf.riken.jp/comp/tips/SL3.html</a> <br>
+SL7 (Centos7) OS インストール後の初期設定 <a href="https://ribf.riken.jp/ribfcomp/SL7-initial-setup">https://ribf.riken.jp/ribfcomp/SL7-initial-setup</a><br>
+CentOS7 (SL7) OS デフォルトのカーネルを変更・指定する <a href="https://ribf.riken.jp/ribfcomp/CentOS7-kernel">https://ribf.riken.jp/ribfcomp/CentOS7-kernel</a> <br>
+CentOS 8 Linux@CERN <a href="https://linux.web.cern.ch/centos8/">https://linux.web.cern.ch/centos8/</a> <br>
+5ch RHELクローン (CentOS と Scientific Linux) 統合スレ <a href="https://mao.5ch.net/test/read.cgi/linux/1308619089/">https://mao.5ch.net/test/read.cgi/linux/1308619089/</a> <br>
+<br>
+<hr width="100%">
+<div style="text-align: left;"><a href="../../../index.html">HOME</a> / <a href="../index.html">ディストリビューション</a><br>
+</div>
+
+
+</body></html>

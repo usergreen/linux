@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>4</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../../index.html" title="FrontPage (3d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">WhiteBoxLinux-FAQ</a>
+/ 4</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">バージョン 4 (最新版) に関すること</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">バージョン 4 (最新版) に関すること </a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">インストール直後に発生する問題について </a></li>
+      <li><a href="#content_1_2">その他一般について </a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">インストール直後に発生する問題について</h3>
+<p>YUM が自動的にインストールされないので、インストールディスク 4 より手動で追加する必要があります。ディスク 4
+をドライブに挿入すれば自動マウントされるので、端末エミュレータより次のコマンドを実行してください。</p>
+<pre> # rpm -ivh /mnt/cdrom/WhiteBox/RPMS/yum-2.2.0-0.fc3.noarch.rpm</pre>
+<blockquote>
+  <p class="quotation">"Yum won't get installed as part of the base
+system so stick CD4 in and install it<br>
+before using either it or Up2date Network."</p>
+  <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+    <li><a
+ href="http://beau.org/pipermail/whitebox-announce/2005-May/000077.html">http://beau.org/pipermail/whitebox-announce/2005-May/000077.html</a></li>
+  </ul>
+</blockquote>
+<p>（環境によっては、自動マウントされないことがあるようです。また、CD-ROMのディレクトリも異なることがあります。）</p>
+<pre> # mount /media/cdrom/<br> # rpm -ivh /media/cdrom/WhiteBox/RPMS/yum-2.2.0-0.fc3.noarch.rpm<br> # umount /media/cdrom/</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">その他一般について</h3>
+<p>WBEL 4 に関することで、同様のクローン一般に共通する FAQ については、先にリリースされた <a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?CentOS-FAQ%2F4.x"
+ title="CentOS-FAQ/4.x (2028d)">CentOS のバージョン 4.0 に関する項目</a>
+を参照のうえ、適宜読みかえてください。</p>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>

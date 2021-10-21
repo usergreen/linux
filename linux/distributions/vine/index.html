@@ -1,0 +1,475 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>VineLinux-FAQ</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../../index.html" title="FrontPage (14d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / VineLinux-FAQ</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">Vine Linux に関する FAQ</h2>
+<p>Vine Linuxに関するFAQです。Linux全般のFAQについては<a
+ href="http://www12.atwiki.jp/linux2ch/?FAQ" title="2chLinux:FAQ">2chLinux:FAQ</a>へ。</p>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">Vine Linux に関するFAQ。 </a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">CDイメージはどれをダウンロードすればいいんでしょう? </a></li>
+      <li><a href="#content_1_2">インストールの参考になるドキュメントはありますか? </a></li>
+      <li><a href="#content_1_3">APT の使い方について教えてください </a></li>
+      <li><a href="#content_1_4">Netscape7 が起動しません。 </a></li>
+      <li><a href="#content_1_5">ウインドウ・マネージャを切り替えたい。 </a></li>
+      <li><a href="#content_1_6">デスクトップ・マネージャを切り替えたい。 </a></li>
+      <li><a href="#content_1_7">日本語入力ソフトを切り替えたい。 </a></li>
+      <li><a href="#content_1_8">vi の起動が異常に遅い </a></li>
+      <li><a href="#content_1_9">アップデート後にマシンを再起動したら Webmin
+にアクセスできなくなってしまいました。 </a></li>
+      <li><a href="#content_1_10">以前のバージョンから 2.6r4 へ乗り換える必要がありますか。 </a></li>
+      <li><a href="#content_1_11">デスクトップでマウスの右クリックが出来ません。 </a></li>
+      <li><a href="#content_1_12">Vineはイイ!んだけど パッケージが古くさくて
+xxxが使えない/用意されていないのでどうしましょう? </a></li>
+      <li><a href="#content_1_13">文書作成ソフト OpenOffice.org (OOo) を使いたい。 </a></li>
+      <li><a href="#content_1_14">KDE 環境や xfce 環境を利用できるようにしたい。 </a></li>
+      <li><a href="#content_1_15">無線LANカードが利用できないのですが。 </a></li>
+      <li><a href="#content_1_16">無線LANカードが利用できないのですが。(その2) </a></li>
+      <li><a href="#content_1_17">k3bを使いたい。 </a></li>
+      <li><a href="#content_1_18">MPlayerを使ってみたい。 </a></li>
+      <li><a href="#content_1_19">Xineを使ってみたい。 </a></li>
+      <li><a href="#content_1_20">起動時の OS 選択画面で linux と linux2.2up
+という二つの項目が表示されます。 </a></li>
+      <li><a href="#content_1_21">インストール作業はマウスを使わなくても行えますか。 </a></li>
+      <li><a href="#content_1_22">mkbootdiskがありません。 </a></li>
+      <li><a href="#content_1_23">webmin がインストールできないんですけど…。 </a></li>
+      <li><a href="#content_1_24">新しいウィンドウ・マネージャーをインストールしたんだけど、wdmが認識しませ
+ん。 </a></li>
+      <li><a href="#content_1_25">プログラムのソースを見たい。 </a></li>
+      <li><a href="#content_1_26">関連ドキュメント </a></li>
+      <li><a href="#content_1_27">関連リンク </a></li>
+      <li><a href="#content_1_28">関連メーリングリスト </a></li>
+      <li><a href="#content_1_29">2ch Linux板 Vine Linux スレッド </a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">CDイメージはどれをダウンロードすればいいんでしょう?</h3>
+<p><a href="http://vinelinux.org/getvine.html#ViaFTP">http://vinelinux.org/getvine.html#ViaFTP</a>
+の各サーバの下記のファイルです。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Vine Linux 2.6
+    <pre> Vine-2.6/CDIMAGE/Vine26r4-i386.iso</pre>
+  </li>
+  <li>Vine Linux 3.2
+    <pre> Vine-3.2/CDIMAGE/Vine32-i386.iso</pre>
+  </li>
+</ul>
+<p>PowerPC の Mac の場合は i386 の代わりに ppc を使います。なお、<a
+ href="http://vinelinux.org/ppc.html">Vine Linux 3.2 の PPC
+版についてはリリースされていません</a>ので、Vine Linux 3.1 を使用してください。<br>
+SRPMS.iso は OS のインストールには不要です。</p>
+<p>CD の作り方については<span class="noexists">インストール用のCDを作りたいんですが<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=FAQ%2FInstallation%2FGeneral&amp;refer=VineLinux-FAQ">?</a></span>参
+照のこと。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">インストールの参考になるドキュメントはありますか?</h3>
+<p><a href="http://vinelinux.org/manuals/install-vine.html">Vine Linux
+3.1 のインストール</a> が参考になります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">APT の使い方について教えてください</h3>
+<p><a href="http://vinelinux.org/manuals/using-rpm-2-1.html">APT -
+Advanced Packaging Tool (Vine Linuxオンラインマニュアル)</a> など参照。</p>
+<p>基本となるのは次のコマンドです。</p>
+<div class="ie5">
+<table class="style_table" border="0" cellspacing="1">
+  <thead><tr>
+    <td class="style_td">コマンド</td>
+    <td class="style_td">解説</td>
+  </tr>
+  </thead><tbody>
+    <tr>
+      <td class="style_td"># apt-get update</td>
+      <td class="style_td">最新のリストに更新する</td>
+    </tr>
+    <tr>
+      <td class="style_td"># apt-get upgrade</td>
+      <td class="style_td">更新されたリストに従って、パッケージの更新を行う</td>
+    </tr>
+    <tr>
+      <td class="style_td"># apt-get dist-upgrade</td>
+      <td class="style_td">依存関係を解消しながら、OS 全体の更新を行う</td>
+    </tr>
+    <tr>
+      <td class="style_td"># apt-get install <em>パッケージ名</em></td>
+      <td class="style_td">個別に指定してインストールする</td>
+    </tr>
+    <tr>
+      <td class="style_td"># apt-get remove <em>パッケージ名</em></td>
+      <td class="style_td">個別に指定して削除（アンインストール）する</td>
+    </tr>
+    <tr>
+      <td class="style_td"># apt-get clean</td>
+      <td class="style_td">一時保存されているキャッシュファイルを削除する</td>
+    </tr>
+    <tr>
+      <td class="style_td">$ apt-cache search <em>キーワード</em></td>
+      <td class="style_td">キーワードからパッケージを検索する</td>
+    </tr>
+    <tr>
+      <td class="style_td">$ apt-cache show <em>パッケージ名</em></td>
+      <td class="style_td">パッケージの説明をみる</td>
+    </tr>
+    <tr>
+      <td class="style_td">$ apt-cache list-nodeps</td>
+      <td class="style_td">インストール済みのパッケージのうち、他のパッケージから要求されていないものを表示する</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_4">Netscape7 が起動しません。</h3>
+<p><a href="http://www.mozilla.gr.jp/">Mozilla</a> の設定が邪魔をして <a
+ href="http://home.netscape.com/ja/download/">Netscape7</a>
+が起動しない場合があります。</p>
+<p>vinue-users ML の投稿 <a
+ href="http://search.luky.org/vine-users.5/msg07806.html">vine-users:057811</a>、<a
+ href="http://search.luky.org/vine-users.5/msg03863.html">vine-users:053866</a>
+を参照して解決してください。<br>
+ビギナーのためのネットスケープ7講座の掲示板にも<a
+ href="http://jbbs.shitaraba.com/computer/bbs/read.cgi?BBS=4290&amp;KEY=1051432537">同
+様の投稿</a>があるようです。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_5">ウインドウ・マネージャを切り替えたい。</h3>
+<p>vutils の <strong>setwm</strong> コマンドを使いましょう。setwm
+とオプションをつけずに実行すると使い方が表示されます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_6">デスクトップ・マネージャを切り替えたい。</h3>
+<p>vutils の <strong>setdm</strong> コマンドを使いましょう。setdm
+とオプションをつけずに実行すると使い方が表示されます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_7">日本語入力ソフトを切り替えたい。</h3>
+<p>vutils の <strong>setime</strong> コマンドを使いましょう。setime
+とオプションをつけずに実行すると使い方が表示されます。<br>
+Anthy を使いたい場合は <span class="noexists">VineLinux-FAQ/HOWTO/anthy<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=VineLinux-FAQ%2FHOWTO%2Fanthy&amp;refer=VineLinux-FAQ">?</a></span>
+を参考にしてください。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_8">vi の起動が異常に遅い</h3>
+<p>vi の起動に時間がかかってしまう場合は以下のリンクを参照しましょう。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>vine-users <a
+ href="http://search.luky.org/vine-users.5/msg07866.html">057871</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_9">アップデート後にマシンを再起動したら Webmin にアクセスできなくなってしまいました。</h3>
+<p>Webmin をアップデートしたら「ネットワーク接続を試みている時に接続が拒否されました。」と表示されてしまう。</p>
+<p>Webmin の起動設定が変わっている可能性があります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_10">以前のバージョンから 2.6r4 へ乗り換える必要がありますか。</h3>
+<p>2.6r4 の RELEASE-NOTES.ja にその注意書きがあるので、引用しておきます。</p>
+<blockquote>
+  <p class="quotation">2.6r1/r3
+を既にお使いの方は再インストールやアップグレードは基本的に必要ありません。ほぼ全てが errata として提供されていますので apt-get
+等で常に最新を保っていれば問題はありません。また一部のバグフィックスも 2.6r4 に対して apt-get upgrade
+することで修正されます。</p>
+</blockquote>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_11">デスクトップでマウスの右クリックが出来ません。</h3>
+<p>Vine Linux 2.6 以前のバージョンでは、インストール直後のデフォルトの状態で、 GNOME
+ファイルマネージャー」が有効となっていないからです。Fedora や KNOPPIX
+など他のディストリビューションを使っている方は戸惑うかもしれません。</p>
+<p>メイン・メニュー(足マークのアイコン)　＞プログラム　＞ファイルマネージャーと選択すれば、ファイルマネージャーが起動し、デスクトップには予
+め登録されているアイコンが表示されます。同時に、右クリックも機能するようになります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_12">Vineはイイ!んだけど パッケージが古くさくて
+xxxが使えない/用意されていないのでどうしましょう?</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>いくつか解決策
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li>自分でいれる
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><span class="noexists">src.rpm を他のディストリ（または
+VineSeed）から持って来て作り直す<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=VineLinux-FAQ%2FHOWTO%2FVineAddon&amp;refer=VineLinux-FAQ">?</a></span></li>
+          <li>/usr/local以下にソースからいれる</li>
+        </ul>
+      </li>
+      <li>Seedに移行
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li>apt-line を <span class="noexists">VineSeed<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=VineSeed&amp;refer=VineLinux-FAQ">?</a></span>
+に向けて、次のコマンドを実行する
+            <pre> # apt-get update<br> # apt-get install apt<br> # apt-get dist-upgrade 2&gt;&amp;1 | tee upgrade.log</pre>
+使用しているシェルが tcsh の場合は 2&gt;&amp;1 | の代わりに |&amp; としてください。</li>
+          <li>失敗した場合は upgrade.log を確認する</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_13">文書作成ソフト OpenOffice.org (OOo) を使いたい。</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Vine2.6 にはパッケージとしてはありませんが、<a href="http://ja.openoffice.org/">OpenOffice.org
+の公式サイト</a>
+からダウンロードしてインストールすれば問題なく使えます。具体的なインストール方法は公式サイトにありますが、次の関連項目にも出ています。
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?RedHatLinux-FAQ%2FGeneral#b0b3a82e"
+ title="RedHatLinux-FAQ/General (2110d)">Open Office.org の最新日本語版
+(1.1.4) を使えるようにしたい。</a><br>
+Vine Seed にもあります。apt-get コマンドでインストールしてください。<br>
+ただし、Vine Seed は基本的には常に unstable という位置づけになるので、重要なシステムでは使わないことを推奨しています。</li>
+    </ul>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>[Vine 3.0 でAPTを利用する場合の一例]
+    <pre> # apt-get update<br> # apt-get install openoffice.org openoffice.org-i18n<br> パッケージリストを読みこんでいます... 完了<br> 依存情報ツリーを作成しています... 完了<br> 以下の追加パッケージがインストールされます:<br>  openoffice.org-libs<br> 以下のパッケージが新たにインストールされます:<br>  openoffice.org openoffice.org-i18n openoffice.org-libs<br> アップグレード: 0 個, 新規インストール: 3 個, 削除: 0 個, 保留: 20 個<br> 172MB のアーカイブを取得する必要があります。<br> 展開後に 691MB のディスク容量が追加消費されます。<br> 続行しますか? [Y/n]y</pre>
+インストール後、コマンドラインから OpenOffice.org を起動するには、$ oowriter
+のようにします。<br>
+使用する言語が日本語または英語だけなら openoffice.org-i18n はインストールしなくても構いません。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_14">KDE 環境や xfce 環境を利用できるようにしたい。</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>KDE の場合：
+    <pre> # apt-get install task-kde</pre>
+Project Vine から配布されている比較的最近の KDE-3.x.x 一式がインストールできます。</li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>xfce の場合：
+    <pre> # apt-get install task-xfce</pre>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_15">無線LANカードが利用できないのですが。</h3>
+<p>Vine Linux 2.6 では、付属のグラフィカルなネットワーク設定ツールに不具合があります。<br>
+Vine Linux 2.6 での Melco WLI-PCM-L11, WLI-PCM-L11G 設定例を載せておきます。</p>
+<p>付属のグラフィカルなネットワーク設定ツールを使用すると、この Melco
+のネットワークカードを有効にできないので、直接設定ファイルを次のように編集する必要があります。</p>
+<p>/etc/sysconfig/network-scripts/ifcfg-eth1
+ファイルを適当なエディターで開き、次の記述を冒頭に追加します。</p>
+<pre> DEVICE=eth1<br> BOOTPROTO=dhcp<br> ESSID=******<br> KEY=s:******<br> ONBOOT=no</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>ESSID= の ******の部分は、実際の設定値を調べて入力します。</li>
+  <li>KEY=s: ******の箇所は、未設定なら不要です。16進数で設定している場合は、s: を付けません。</li>
+</ul>
+<p>設定後、/sbin/ifup eth1 で起動し、ネットワークに接続できます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>この設定方法は、Vine Linux 2.93 (3.0 Beta) でも利用できます。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_16">無線LANカードが利用できないのですが。(その2)</h3>
+<p>Vine Linux 3.0 の場合です。[アプリケーション] ＞ [システム・ツール] ＞ [ネットワークの管理]
+よりネットワークの設定を行えます。2.6 と比較して設定ツールは改善されたようですが、WEP KEY
+を有効にしている場合にはその設定項目が存在しないため自動接続ができず、設定が正常に完了できません。<br>
+そこで、 /etc/sysconfig/network-scripts/ifcfg-eth1
+ファイルを適当なエディターで開くと、次のように(一例)記述されているでしょうから、</p>
+<pre> BOOTPROTO=dhcp<br> ONBOOT=yes<br> USERCTL=yes<br> NAME="無線 LAN カード"<br> DEVICE=eth0<br> ESSID=**********<br> PEERDNS=yes</pre>
+<p>さらに次の一行を追加してください。これでたいていは接続できるようになるでしょう。</p>
+<pre> KEY=s:*************</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_17">k3bを使いたい。</h3>
+<p>k3b は KDE用の CD/DVD ライティングソフト。</p>
+<pre> # apt-get install k3b k3b-i18n</pre>
+<p>起動の仕方 [#b542afad]</p>
+<p>Menu → マルチメディア → k3b</p>
+<pre> $ k3b</pre>
+<p>でも起動できる。</p>
+<pre> </pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_18">MPlayerを使ってみたい。</h3>
+<div class="ie5">
+<table class="style_table" border="0" cellspacing="1">
+  <tbody>
+    <tr>
+      <td class="style_td"><span class="noexists">VineLinux-FAQ/HOWTO/超簡
+単MPlayer導入術<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=VineLinux-FAQ%2FHOWTO%2F%C4%B6%B4%CA%C3%B1MPlayer%C6%B3%C6%FE%BD%D1&amp;refer=VineLinux-FAQ">?</a></span></td>
+      <td class="style_td"><span class="noexists">VineLinux-FAQ/HOWTO
+/Vine用 Mplayer RPM 作成方法<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=VineLinux-FAQ%2FHOWTO%2FVine%CD%D1%20Mplayer%20RPM%20%BA%EE%C0%AE%CA%FD%CB%A1&amp;refer=VineLinux-FAQ">?</a></span></td>
+    </tr>
+    <tr>
+      <td class="style_td"><span class="noexists">VineLinux-FAQ/HOWTO/VineMPlayer<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=VineLinux-FAQ%2FHOWTO%2FVineMPlayer&amp;refer=VineLinux-FAQ">?</a></span></td>
+      <td class="style_td"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>インストール解説ページをいろいろな人が公開しています。検索してみましょう。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_19">Xineを使ってみたい。</h3>
+<div class="ie5">
+<table class="style_table" border="0" cellspacing="1">
+  <tbody>
+    <tr>
+      <td class="style_td"><span class="noexists">VineLinux-FAQ/HOWTO
+/Xineのインストール Source 編<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=VineLinux-FAQ%2FHOWTO%2FXine%A4%CE%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%EB%20Source%20%CA%D4&amp;refer=VineLinux-FAQ">?</a></span></td>
+      <td class="style_td"><span class="noexists">VineLinux-FAQ/HOWTO
+/Xineのインストール RPM編<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=VineLinux-FAQ%2FHOWTO%2FXine%A4%CE%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%EB%20RPM%CA%D4&amp;refer=VineLinux-FAQ">?</a></span></td>
+    </tr>
+    <tr>
+      <td class="style_td"><span class="noexists">VineLinux-FAQ/HOWTO/VineXine<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=VineLinux-FAQ%2FHOWTO%2FVineXine&amp;refer=VineLinux-FAQ">?</a></span></td>
+      <td class="style_td"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_20">起動時の OS 選択画面で linux と linux2.2up という二つの項目が表示されます。</h3>
+<p>Vine Linux 2.5/2.6 では2種類のカーネルがインストールされます。</p>
+<p>linux を選ぶと起動するのは 2.4 系のカーネルです。特に問題が起きていないならこれを使いましょう。linux2.2up は古い
+2.2 系のカーネルを起動します。</p>
+<p>間違って Vine Linux を二つインストールしてしまったわけではないので安心しましょう。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_21">インストール作業はマウスを使わなくても行えますか。</h3>
+<p>はい、もちろんグラフィカルなインストールを行えます。</p>
+<p>最近多く用いられている USB
+マウスは、使用環境によってはインストール時、機能しないことがあります。キーボードからの入力が可能であれば、接続されているマウスを一切使用しないで
+作業をすすめることが可能です。その場合の基本的な操作は、次の3つだけです。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>設定項目間の移動は、Tab キーで行います。連続して押打すると、最初の項目へ一巡させることができます。</li>
+  <li>各項目内での選択は、←↑↓→矢印キーを使います。</li>
+  <li>いずれの場合でも、選択の確定は Enter キーを押すことで行います。</li>
+</ul>
+<p>なお、インストール作業が無事完了すれば、システムの再起動後、接続されている USB マウスは利用可能な状態になっているはずです。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_22">mkbootdiskがありません。</h3>
+<p>廃止された模様。/sbin/mkrescueを使いましょう。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_23">webmin がインストールできないんですけど…。</h3>
+<p>Vine 3.1 では、/etc/apt/sources.list の apt-line に extras
+を追加すればインストールできます。</p>
+<pre> # apt-get update ; apt-get install webmin</pre>
+<p>なお、/etc/vine-release を書き換える必要はありません。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_24">新しいウィンドウ・マネージャーをインストールしたんだけど、wdmが認識しません。</h3>
+<p>/etc/X11/wdm/wdmReconfig*に項目を追加します。<br>
+たとえばxfce4なら次の項目を付け加えてください。</p>
+<pre> # entry for xfce4<br> rc_word=xfce4-session  #ここにウィンドウ・マネージャを立ち上げる命令を書く。<br> XFCE_PATH=""<br> for rc_dir in $path; do<br>   if test -x $rc_dir/$rc_word; then<br>      XFCE_PATH=$rc_dir/$rc_word<br>      WMLIST="$WMLIST:xfce4"<br>      setupWM xfce4 ${XFCE_PATH}<br>      break<br>   fi<br> done</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_25">プログラムのソースを見たい。</h3>
+<pre> $ apt-get source pakagename</pre>
+<p>カレント・ディレクトリに pakagename-version-release.src.rpmができる。</p>
+<pre> $ rpm -ivh pakagename-version-release.src.rpm</pre>
+<p>$HOME/rpm/SOURCES にソースが展開される。<br>
+Vine 3.0 以降では src.rpm の取得後、自動的に展開されるようです。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_26">関連ドキュメント</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://vinelinux.org/documentations.html">Documents for
+Vine Linux</a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="http://vinelinux.org/manuals/preface.html">Vine
+Linux 3.0について</a></li>
+      <li><a href="http://vinelinux.org/manuals/install-vine.html">インストー
+ル方法(インテル版)</a></li>
+      <li>Vine Linux の使い方
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="http://vinelinux.org/manuals/login.html">システムの設定と
+基本操作</a></li>
+          <li><a href="http://vinelinux.org/manuals/part4.html">Vine
+Linux の印刷環境の設定方法と使用方法</a></li>
+        </ul>
+      </li>
+      <li>Vine Linux のシステム管理
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="http://vinelinux.org/manuals/using_rpm.html">RPMに
+よるパッケージ管理</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="http://vinedocs.sourceforge.jp/">Vine Linuxドキュメントチーム</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_27">関連リンク</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://vinelinux.org/">Vine Linux Home Page</a></li>
+  <li><a href="http://vinecaves.com/">ヴァインカーブ</a></li>
+  <li><a href="http://www.n-brain.co.jp/vine/">株式会社日本ブレインウェア</a></li>
+  <li><a href="http://debian.dtdns.net/2ch-linux-vine/">Vine Linux
+スレッド過去ログ検索</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_28">関連メーリングリスト</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://search.luky.org/">アーカイブ検索</a></li>
+</ul>
+<form action="http://f40.aaa.livedoor.jp/~green/" method="post">
+  <div><input name="encode_hint" value="ぷ" type="hidden"></div>
+  <div> <input name="plugin" value="lookup" type="hidden"> <input
+ name="refer" value="VineLinux-FAQ" type="hidden"> <input name="inter"
+ value="Vine ML(luky)" type="hidden"> Vine ML(luky): <input name="page"
+ size="30" value="" type="text"> <input value="検索" type="submit"> </div>
+</form>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://vine.ic.sci.yamaguchi-u.ac.jp/">アーカイブ検索</a></li>
+</ul>
+<form action="http://f40.aaa.livedoor.jp/~green/" method="post">
+  <div><input name="encode_hint" value="ぷ" type="hidden"></div>
+  <div> <input name="plugin" value="lookup" type="hidden"> <input
+ name="refer" value="VineLinux-FAQ" type="hidden"> <input name="inter"
+ value="Vine ML" type="hidden"> Vine ML: <input name="page" size="30"
+ value="" type="text"> <input value="検索" type="submit"> </div>
+</form>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://www.vinelinux.org/ml.html">メーリングリスト登録案内</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_29">2ch Linux板 Vine Linux スレッド</h3>
+<p>最新スレッドは、<a href="http://hibari.2ch.net/linux/">2ch Linux板</a>から検索してください。</p>
+<p>其の38 <a href="http://pc8.2ch.net/test/read.cgi/linux/1138982458/">http://pc8.2ch.net/test/read.cgi/linux/1138982458/</a><br>
+其の37 <a href="http://pc8.2ch.net/test/read.cgi/linux/1135250731/">http://pc8.2ch.net/test/read.cgi/linux/1135250731/</a><br>
+其の36 <a href="http://pc8.2ch.net/test/read.cgi/linux/1129827028/">http://pc8.2ch.net/test/read.cgi/linux/1129827028/</a><br>
+其の35 <a href="http://pc8.2ch.net/test/read.cgi/linux/1126679488/">http://pc8.2ch.net/test/read.cgi/linux/1126679488/</a><br>
+其の34 <a href="http://pc8.2ch.net/test/read.cgi/linux/1122743990/">http://pc8.2ch.net/test/read.cgi/linux/1122743990/</a><br>
+其の33 <a href="http://pc8.2ch.net/test/read.cgi/linux/1120231280/">http://pc8.2ch.net/test/read.cgi/linux/1120231280/</a><br>
+其の32 <a href="http://pc8.2ch.net/test/read.cgi/linux/1116863183/">http://pc8.2ch.net/test/read.cgi/linux/1116863183/</a><br>
+其の31 <a href="http://pc8.2ch.net/test/read.cgi/linux/1113494093/">http://pc8.2ch.net/test/read.cgi/linux/1113494093/</a><br>
+其の30 <a href="http://pc8.2ch.net/test/read.cgi/linux/1110107988/">http://pc8.2ch.net/test/read.cgi/linux/1110107988/</a><br>
+其の29 <a href="http://pc5.2ch.net/test/read.cgi/linux/1107704438/">http://pc5.2ch.net/test/read.cgi/linux/1107704438/</a><br>
+其の28 <a href="http://pc5.2ch.net/test/read.cgi/linux/1103908631/">http://pc5.2ch.net/test/read.cgi/linux/1103908631/</a><br>
+其の27 <a href="http://pc5.2ch.net/test/read.cgi/linux/1098350544/">http://pc5.2ch.net/test/read.cgi/linux/1098350544/</a><br>
+其の26 <a href="http://pc5.2ch.net/test/read.cgi/linux/1098350544/">http://pc5.2ch.net/test/read.cgi/linux/1098350544/</a><br>
+其の25 <a href="http://pc5.2ch.net/test/read.cgi/linux/1094831763/">http://pc5.2ch.net/test/read.cgi/linux/1094831763/</a><br>
+其の24 <a href="http://pc5.2ch.net/test/read.cgi/linux/1092820313/">http://pc5.2ch.net/test/read.cgi/linux/1092820313/</a><br>
+其の23 <a href="http://pc5.2ch.net/test/read.cgi/linux/1091614123/">http://pc5.2ch.net/test/read.cgi/linux/1091614123/</a><br>
+其の22 <a href="http://pc5.2ch.net/test/read.cgi/linux/1090324132/">http://pc5.2ch.net/test/read.cgi/linux/1090324132/</a><br>
+其の21 <a href="http://pc5.2ch.net/test/read.cgi/linux/1087581260/">http://pc5.2ch.net/test/read.cgi/linux/1087581260/</a><br>
+其の20 <a href="http://pc5.2ch.net/test/read.cgi/linux/1084294058/">http://pc5.2ch.net/test/read.cgi/linux/1084294058/</a><br>
+其の19 <a href="http://pc5.2ch.net/test/read.cgi/linux/1080401644/">http://pc5.2ch.net/test/read.cgi/linux/1080401644/</a><br>
+其の18 <a href="http://pc3.2ch.net/test/read.cgi/linux/1076088476/">http://pc3.2ch.net/test/read.cgi/linux/1076088476/</a><br>
+其の17 <a href="http://pc.2ch.net/test/read.cgi/linux/1070886677/">http://pc.2ch.net/test/read.cgi/linux/1070886677/</a><br>
+其の16 <a href="http://pc.2ch.net/test/read.cgi/linux/1066403433/">http://pc.2ch.net/test/read.cgi/linux/1066403433/</a><br>
+其の15 <a href="http://pc.2ch.net/test/read.cgi/linux/1061746337/">http://pc.2ch.net/test/read.cgi/linux/1061746337/</a><br>
+其の14 <a href="http://pc.2ch.net/test/read.cgi/linux/1055604491/">http://pc.2ch.net/test/read.cgi/linux/1055604491/</a><br>
+其の13 <a href="http://pc.2ch.net/test/read.cgi/linux/1051436146/">http://pc.2ch.net/test/read.cgi/linux/1051436146/</a><br>
+其の12 <a href="http://pc.2ch.net/test/read.cgi/linux/1047747664/">http://pc.2ch.net/test/read.cgi/linux/1047747664/</a><br>
+其の11 <a href="http://pc.2ch.net/test/read.cgi/linux/1043375119/">http://pc.2ch.net/test/read.cgi/linux/1043375119/</a><br>
+其の10 <a href="http://pc.2ch.net/test/read.cgi/linux/1039024291/">http://pc.2ch.net/test/read.cgi/linux/1039024291/</a><br>
+其の9 <a href="http://pc.2ch.net/linux/kako/1036/10361/1036171785.html">http://pc.2ch.net/linux/kako/1036/10361/1036171785.html</a><br>
+其の8 <a href="http://pc.2ch.net/linux/kako/1034/10341/1034140238.html">http://pc.2ch.net/linux/kako/1034/10341/1034140238.html</a><br>
+其の7 <a href="http://pc.2ch.net/linux/kako/1029/10296/1029655159.html">http://pc.2ch.net/linux/kako/1029/10296/1029655159.html</a><br>
+其の6 <a href="http://pc.2ch.net/linux/kako/1024/10240/1024030037.html">http://pc.2ch.net/linux/kako/1024/10240/1024030037.html</a><br>
+其の5 <a href="http://pc.2ch.net/linux/kako/1021/10213/1021343354.html">http://pc.2ch.net/linux/kako/1021/10213/1021343354.html</a><br>
+其の4 <a href="http://pc.2ch.net/linux/kako/1019/10190/1019001710.html">http://pc.2ch.net/linux/kako/1019/10190/1019001710.html</a><br>
+其の3 <a href="http://pc.2ch.net/linux/kako/1016/10160/1016085342.html">http://pc.2ch.net/linux/kako/1016/10160/1016085342.html</a><br>
+其の2 <a href="http://pc.2ch.net/linux/kako/1008/10085/1008556539.html">http://pc.2ch.net/linux/kako/1008/10085/1008556539.html</a><br>
+其の1 <a href="http://pc.2ch.net/linux/kako/997/997886457.html">http://pc.2ch.net/linux/kako/997/997886457.html</a><br>
+2.1.5リリース <a href="http://pc.2ch.net/linux/kako/985/985745359.html">http://pc.2ch.net/linux/kako/985/985745359.html</a><br>
+Vain Caves設立! <a
+ href="http://pc.2ch.net/linux/kako/1006/10068/1006818001.html">http://pc.2ch.net/linux/kako/1006/10068/1006818001.html</a></p>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>

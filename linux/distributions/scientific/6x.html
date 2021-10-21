@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>6x</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../../index.html" title="FrontPage (3d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">ScientificLinux-FAQ</a>
+/ 6.x</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">バージョン 6.x に関すること</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">バージョン 6.x に関すること </a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">Scientific Linux 6.0 リリース情報</a></li>
+      <li><a href="#content_1_2">Scientific Linux 6.0 公式インストールガイド</a></li>
+      <li><a href="#content_1_3">インストール用の iso イメージについて</a></li>
+      <li><a href="#content_1_4">標準のファイルシステムが以前と違うのですが。</a></li>
+      <li><a href="#content_1_5">日本語はサポートされているのですか？</a></li>
+      <li><a href="#content_1_6">標準の日本語入力方式は何ですか？</a></li>
+      <li><a href="#content_1_7">ライブCDについて</a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_8">Scientific Linux のライブCDはありますか？</a></li>
+          <li><a href="#content_1_9">ライブCDには、どんなパッケージが含まれているのですか？</a></li>
+          <li><a href="#content_1_10">ライブCDを使ってハードディスクへインストール出来ますか？</a></li>
+          <li><a href="#content_1_11">グラフィカルなログインが出来ません。</a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_12">TUV とは何ですか？</a></li>
+      <li><a href="#content_1_13">TUV Documentation について</a></li>
+      <li><a href="#content_1_14">日本語参考文献 - Red Hat Enterprise Linux 6
+インストールガイド</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">Scientific Linux 6.0 リリース情報</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://www.scientificlinux.org/distributions/6x/60/">http://www.scientificlinux.org/distributions/6x/60/</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">Scientific Linux 6.0 公式インストールガイド</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://www.scientificlinux.org/distributions/6x/installing/install-guide-full.html">http://www.scientificlinux.org/distributions/6x/installing/install-guide-full.html</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">インストール用の iso イメージについて</h3>
+<p>用途に応じて、複数の iso イメージから選択可能です。</p>
+<pre> ネットワーク・インストール向け／<br>  SL-60-i386-&lt;date&gt;-boot.iso<br> <br> 通常のインストール向け／<br> SL-60-i386-&lt;date&gt;-Install-DVD.iso<br> <br> 追加的なパッケージを含む全てをインストール／<br> SL-60-i386-&lt;date&gt;-Everything-DVD1.iso<br> SL-60-i386-&lt;date&gt;-Everything-DVD2.iso</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://ftp.ne.jp/Linux/distributions/scientificlinux/6.0/i386/iso/README">scientificlinux/6.0/i386/iso/README</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_4">標準のファイルシステムが以前と違うのですが。</h3>
+<p>Scietific Linux バージョン 6 では、標準のファイルシステムとして Ext4 filesystem
+がデフォルトで採用されています。これは従来の Ext3 と互換性があります。インストール時に Ext3 を選択することも可能です。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_5">日本語はサポートされているのですか？</h3>
+<p>日本語環境を整えるため、以下のようなパッケージが標準で用意されています。</p>
+<pre> ibus-anthy<br> ipa-gothic-fonts<br> ipa-mincho-fonts<br> ipa-pgothic-fonts<br> ipa-pmincho-fonts<br> kde-i18n-Japanese<br> kde-l10n-Japanese<br> man-pages-ja<br> openoffice.org-langpack-ja_JP<br> vlgothic-fonts<br> vlgothic-p-fonts</pre>
+<p>詳しくは、<a
+ href="http://ftp.riken.jp/Linux/scientific/6.0/i386/os/repoview/japanese-support.group.html">日
+本語サポートのページ</a> を見てください。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_6">標準の日本語入力方式は何ですか？</h3>
+<p>バージョン 6 では、Fedora で新たに採用された IBus-Anthy に変更されています。<br>
+IBus-Anthy を利用するには、次のパッケージを必要とします。</p>
+<pre> ibus<br> ibus-anthy</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>入力方式の切替え<br>
+英語から日本語へ入力方式を切替えるには、パネルのメニューより行います。<br>
+System &gt; Preferences &gt; input Method &gt; IM Chooser &gt; Enable
+input method feature &gt; input Method &gt; Select an input method &gt;
+Japanese &gt; I<span class="noexists">BusAnthy<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=BusAnthy&amp;refer=ScientificLinux-FAQ%2F6.x">?</a></span>
+の順番に選択します。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_7">ライブCDについて</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_8">Scientific Linux のライブCDはありますか？</h4>
+<p>はい。2011年3月12日時点で、次の iso イメージがパブリック・ミラーからダウンロードできます。</p>
+<pre> SL-60-i386-2011-03-07-LiveCD</pre>
+<p>さらに容量が大きく、多数のパッケージを含んだライブDVDも用意されています。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_9">ライブCDには、どんなパッケージが含まれているのですか？</h4>
+<p>1枚のCDメディアに収めるため、必要最低限と考えられるパッケージだけが含まれています。この中には日本語関連のパッケージも含まれるので、
+Ctrl + Space キーで日本語入力が行えます。ただし、メディア容量の制約から、オフィススイート <a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice"
+ title="OpenOffice (611d)">OpenOffice</a>.org は入っていません。詳しくは、<a
+ href="http://ftp.riken.jp/Linux/scientific/livecd/60/i386/SL-60-i386-2011-03-07-LiveCD_rpmlist.txt">SL-60-i386-2011-03-07-LiveCD_rpmlist.txt</a>
+を参照してください。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_10">ライブCDを使ってハードディスクへインストール出来ますか？</h4>
+<p>はい。Scientific Linux 6 では、ハードディスク(HDD)へのインストールもサポートします。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_11">グラフィカルなログインが出来ません。</h4>
+<p>インストール後、テキストモードで自動的に起動する場合には、次のコマンドを実行してください。</p>
+<pre> $ startx</pre>
+<p>ディスプレイ・マネージャー(GDM) が立ち上がらない時は、gdm
+が適切にインストールされていない可能性があるので確認します。必要なら、gdm のインストールを実行します。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_12">TUV とは何ですか？</h3>
+<p>"The Upstream Vendor" のことを指します。<br>
+すなわち、Red Hat, Inc. のことです。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_13">TUV Documentation について</h3>
+<p>Scientific Linux 6 は、TUV バージョン 6
+に準拠したものです。したがって、詳細なドキュメントを利用することが可能です。英文については、以下のウェブサイトより入手できます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://ftp.riken.jp/Linux/scientific/documents/tuv/6/">http://ftp.riken.jp/Linux/scientific/documents/tuv/6/</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_14">日本語参考文献 - Red Hat Enterprise Linux 6 インストールガイド</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://docs.redhat.com/docs/ja-JP/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/index.html">http://docs.redhat.com/docs/ja-JP/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/index.html</a>
+  </li>
+</ul>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>

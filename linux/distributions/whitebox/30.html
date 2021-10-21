@@ -1,0 +1,361 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>3.0</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../../index.html" title="FrontPage (3d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">WhiteBoxLinux-FAQ</a>
+/ 3.0</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">バージョン 3.0 Respin に関すること</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">バージョン 3.0 Respin に関すること </a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">インストールのごく初期段階で、画面が停止します。 </a></li>
+      <li><a href="#content_1_2">インストールCDからプログラムの追加は行えますか。 </a></li>
+      <li><a href="#content_1_3">パッケージ管理の基本的な作業はどのようにしますか。 </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_4">まずパッケージ管理ツールを選択します </a></li>
+          <li><a href="#content_1_5">Up2Date を利用するとき </a></li>
+          <li><a href="#content_1_6">YUM を利用するとき </a></li>
+          <li><a href="#content_1_7">Up2Date を利用する場合のミラーサイト設定方法は? </a></li>
+          <li><a href="#content_1_8">Up2Date を利用する場合、国内高速ミラーサイト設定方法は? </a></li>
+          <li><a href="#content_1_9">アップデートの途中で固まってしまいます。 </a></li>
+          <li><a href="#content_1_10">YUM を利用する場合のデフォルトの yum.conf について </a></li>
+          <li><a href="#content_1_11">YUM を利用する場合、国内高速ミラーサイト設定方法は? </a></li>
+          <li><a href="#content_1_12">APT は使えますか。 </a></li>
+          <li><a href="#content_1_13">利用可能なサードパーティのリポジトリーはどこですか。 </a></li>
+          <li><a href="#content_1_14">Up2Date
+更新通知アイコンが常時赤く点滅して目障りになります。 </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_15">デスクトップに保存したはずのファイルが表示されません。 </a></li>
+      <li><a href="#content_1_16">WBEL3 用のパッケージ「hoge」がどうしても見つからないのですが。 </a></li>
+      <li><a href="#content_1_17">日本語変換について </a></li>
+      <li><a href="#content_1_18">ATOK X のインストール方法は？ </a></li>
+      <li><a href="#content_1_19">Wnn 7 のインストール方法は？ </a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">インストールのごく初期段階で、画面が停止します。</h3>
+<p>この場合、USBデバイス（キーボードあるいはマウス）が自動設定できないために、その後の作業が停止された可能性が高いと思われま
+す。この際には、次のようなテキストメッセージで中断します。</p>
+<pre> usb-uhci,c: UHCI at I/O xxx,IRQ xxx<br> usb-uhci,c: Detected xports</pre>
+<p>リセットボタンを押してシステムを再起動させ、boot: linux nousb
+オプションを試してください。解決できる場合があります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">インストールCDからプログラムの追加は行えますか。</h3>
+<p>はい。メイン・メニュー(足のアイコン) ＞システム設定
+＞「アプリケーションの追加/削除」を選択するとプログラムの一覧が表示されます。メッセージに従って必要なプログラムを選択し、追加や削除を行ってくだ
+さい。KDEデスクトップ環境がインストールされていないシステムでは、ここから追加インストールすることができます。</p>
+<p>先に「アプリケーションの追加/削除」画面を立ち上げずに、インストールCDを直接 CD/RW
+ドライブに挿入した場合には、「/mnt/cdrom/autorun を実行しますか」と尋ねられるので
+、「はい」を選択して作業を進めてください。この方法でも構いません。</p>
+<p>なお、インターネットに接続できる環境では、このページで紹介しているように Up2Date や YUM、APT
+を用いると、その時点で利用可能な最新のプログラムが追加できます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">パッケージ管理の基本的な作業はどのようにしますか。</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_4">まずパッケージ管理ツールを選択します</h4>
+<p>[A] Up2Date の利用<br>
+Up2Date を利用することが可能です。ただしこれは YUM リポジトリーに関連付けられているので、Red Hat社が運営する本来の Red
+Hat Network には接続できません。注意が必要です。</p>
+<p>[B] YUM の利用<br>
+YUM
+というパッケージ管理ツールも、インストール直後から利用できるように設定済みです。普段の作業で頻繁に利用するコマンドは以下に紹介しています。詳しく
+は関連項目を見てください。</p>
+<p>いずれのツールを選択する場合でも、快適に利用できるようにするためには、後述の項目の説明のように設定ファイルを編集する必要がある
+と思われます。</p>
+<p>任意のパッケージを追加するといった補助的な用途でのみ、APT をパッケージ管理ツールに追加することも可能です。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_5">Up2Date を利用するとき</h4>
+<p>デスクトップ上でグラフィカルな操作ができるので、扱いが簡単です。画面右下に表示される「Up2Date Network
+Alert Notification Tool」のアイコンをマウスでクリックすれば、すぐにこのツールが起動します。<br>
+Up2Date は、仮想端末(コンソール)からのコマンド入力による操作にも対応します。APT/YUM
+同様、パッケージ間の依存性を自動的に解決してくれます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>仮想端末(コンソール)から操作するときの基本的なコマンド<br>
+    <br>
+    <div class="ie5">
+    <table class="style_table" border="0" cellspacing="1">
+      <thead><tr>
+        <td class="style_td">コマンド</td>
+        <td class="style_td">解説</td>
+      </tr>
+      </thead><tbody>
+        <tr>
+          <td class="style_td"># up2date</td>
+          <td class="style_td">グラフィカルな操作でアップデートする</td>
+        </tr>
+        <tr>
+          <td class="style_td"># up2date -u</td>
+          <td class="style_td">全てのパッケージをアップデートする</td>
+        </tr>
+        <tr>
+          <td class="style_td"># up2date -i <em>パッケージ名</em></td>
+          <td class="style_td">特定のパッケージをインストールする</td>
+        </tr>
+        <tr>
+          <td class="style_td"># up2date --nodownload <em>パッケージ名</em></td>
+          <td class="style_td">テスト(シミュレート)のみ実行する</td>
+        </tr>
+        <tr>
+          <td class="style_td"># up2date -l</td>
+          <td class="style_td">アップデート可能な全一覧を表示させる</td>
+        </tr>
+        <tr>
+          <td class="style_td"># up2date -h</td>
+          <td class="style_td">Up2Date のヘルプを表示させる</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>[注意] Up2date
+にはパッケージをアンインストール(削除)する機能がありません。したがって、一連の作業をすべてグラフィカルなデスクトップ環境で行ないたいときは、
+Synaptic と併用するのが良いでしょう。</li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>初回 Up2Date 実行の際、ヘッダー(Header)情報が /var/spool/up2date
+ディレクトリ以下に保存されます。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_6">YUM を利用するとき</h4>
+<p>これは、仮想端末(コンソール)からのコマンド入力によって利用します。次のような基本コマンドを使って、パッケージの管理を行いま
+す。<a id="notetext_1" href="#notefoot_1" class="note_super">*1</a></p>
+<dl class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <dt>yum list</dt>
+  <dd>ヘッダー(header)情報をダウンロードし、データベースを最新のものに更新します。（1度目は、数秒から数10秒かかりま
+す。ヘッダー情報は /var/cache/yum/ ディレクトリに保存されます。）</dd>
+</dl>
+<dl class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <dt>yum check-update</dt>
+  <dd>インターネットに接続し、アップデートできるパッケージがあるかどうかの確認を行います。利用できるパッケージがあれば、画面に
+その一覧が表示されます。</dd>
+</dl>
+<dl class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <dt>yum update</dt>
+  <dd>新しいパッケージがあれば、その全てをダウンロードしてインストールします。</dd>
+</dl>
+<dl class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <dt>yum install <em>package(s)</em></dt>
+  <dd>特定のパッケージを個別に指定してインストールすることができます。依存関係のパッケージがあれば、それも同時に取り込みます。</dd>
+</dl>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?FedoraCore-FAQ%2FSystem#yum"
+ title="FedoraCore-FAQ/System (2099d)">YUM について教えてください。</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_7">Up2Date を利用する場合のミラーサイト設定方法は?</h4>
+<p>設定ファイル /etc/sysconfig/rhn/sources を適当なエディターで編集します。</p>
+<p>一例として、34〜40行目をコメントし、</p>
+<pre> [OS]<br> [UPDATES]<br> [EXTRAS]</pre>
+<p>にそれぞれ複数用意されているミラーサイトの中から、適当なものを追加することができます。MIRROR の部分を実際の URL
+に置き換えてください。</p>
+<pre> [設定例]<br> #yum WBEL3 http://whiteboxlinux.org/pub/3.0/en/os/$ARCH<br> #yum WBEL3-Updates http://whiteboxlinux.org/pub/3.0/en/updates<br> #yum WBEL3-Extras http://whiteboxlinux.org/pub/3.0/en/extras<br> #<br> #yum-mirror WBEL3 http://whiteboxlinux.org/up2date-mirrors/wbel3-base<br> #yum-mirror WBEL3-Updates http://whiteboxlinux.org/up2date-mirrors/wbel3-updates<br> #yum-mirror WBEL3-Extras http://whiteboxlinux.org/up2date-mirrors/wbel3-extras<br> <br> yum WBEL3 MIRROR<br> yum WBEL3-Updates MIRROR<br> yum WBEL3-Extras MIRROR</pre>
+<pre> [OS]<br> ftp://ftp.esat.net/mirrors/whiteboxlinux.org/3.0/en/os/$ARCH/<br> ftp://ftp.kspei.com/mirrors/whiteboxlinux.org/whitebox/3.0/en/os/$ARCH/<br> ftp://ftp.jach.hawaii.edu/pub/linux/whitebox/3.0/en/os/$ARCH/<br> ftp://gd.tuwien.ac.at/opsys/linux/whiteboxlinux/3.0/en/os/$ARCH/<br> ftp://ftp.opensourcemirrors.org/linux/whitebox/3.0/en/os/$ARCH/<br> http://whitebox.phantomhosting.com/3.0/en/os/$ARCH/<br> ftp://whitebox.wicks.co.nz/pub/linux/dist/whitebox/3.0/en/os/$ARCH/</pre>
+<pre> [UPDATES]<br> ftp://whitebox.wicks.co.nz/pub/linux/dist/whitebox/3.0/en/updates/<br> http://whitebox.phantomhosting.com/3.0/en/updates/<br> ftp://ftp.opensourcemirrors.org/linux/whitebox/3.0/en/updates/<br> ftp://gd.tuwien.ac.at/opsys/linux/whiteboxlinux/3.0/en/updates/<br> ftp://ftp.jach.hawaii.edu/pub/linux/whitebox/3.0/en/updates/<br> ftp://ftp.kspei.com/mirrors/whiteboxlinux.org/whitebox/3.0/en/updates/<br> ftp://ftp.esat.net/mirrors/whiteboxlinux.org/3.0/en/updates/</pre>
+<pre> [EXTRAS]<br> http://whitebox.phantomhosting.com/3.0/en/extras/<br> ftp://ftp.opensourcemirrors.org/linux/whitebox/3.0/en/extras/<br> ftp://gd.tuwien.ac.at/opsys/linux/whiteboxlinux/3.0/en/extras/<br> ftp://ftp.jach.hawaii.edu/pub/linux/whitebox/3.0/en/extras/<br> ftp://ftp.kspei.com/mirrors/whiteboxlinux.org/whitebox/3.0/en/extras/<br> ftp://ftp.esat.net/mirrors/whiteboxlinux.org/3.0/en/extras/</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_8">Up2Date を利用する場合、国内高速ミラーサイト設定方法は?</h4>
+<p>MIRROR を記述する行を次の URL に置き換えます。</p>
+<pre> (理化学研究所を設定する場合)<br> <br> yum WBEL3 ftp://ftp.riken.jp/Linux/whitebox/3.0/en/os/$ARCH<br> yum WBEL3-Updates ftp://ftp.riken.jp/Linux/whitebox/3.0/en/updates<br> yum WBEL3-Extras ftp://ftp.riken.jp/Linux/whitebox/3.0/en/extras</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>他の国内ミラーサイトを設定する場合は、これに習って書き換えてください。</li>
+  <li>http:// 接続のほうが効率がいいようですが、サーバ高負荷時は httpd
+がハングして接続できない場合がよくあるので、 ftp:// のほうが接続はしやすいようです。これは YUM を利用する場合も同じです。</li>
+  <li>接続先を複数設定していればダウンロード中にCtrl+Cを押すことで接続先を次のサイトへ切り替えることができます。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_9">アップデートの途中で固まってしまいます。</h4>
+<p>インストール直後の初回アップデートの際には、かなりのヘッダー情報(header
+info.)を取り込むことになるので、動作が重くなりがちです。数分待機しても変化が現れない場合には、一度「キャンセル」ボタンをクリックして終了さ
+せ、もう一度やり直した方が良いでしょう。この操作だけで、問題が解決する可能性があります。</p>
+<p>この Up2Date は YUM リポジトリーを利用するものなので、 YUM
+を利用している場合もそうですが、途中で固まってしまうという状況は、バグとまでは言えないでしょうが元の Fedora Core に採用されている
+YUM 同様、時々発生することがあるかもしれません。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_10">YUM を利用する場合のデフォルトの yum.conf について</h4>
+<p>デフォルトの /etc/yum.conf
+ファイルは次の通りの設定となっています。これを参考にして、次項のようにミラーサイトの設定が行えます。</p>
+<pre> [base]<br> name=White Box Enterprise Linux $releasever - $basearch - Base<br> baseurl=ftp://mirror.physics.ncsu.edu/pub/whitebox/$releasever/en/os/$basearch/<br>         ftp://ftp.esat.net/mirrors/whiteboxlinux.org/$releasever/en/os/$basearch/<br>         ftp://ftp.kspei.com/mirrors/whiteboxlinux.org/whitebox/$releasever/en/os/$basearch/<br>         ftp://ftp.jach.hawaii.edu/pub/linux/whitebox/$releasever/en/os/$basearch/<br>         ftp://gd.tuwien.ac.at/opsys/linux/whiteboxlinux/$releasever/en/os/$basearch/<br>         ftp://ftp.opensourcemirrors.org/linux/whitebox/$releasever/en/os/$basearch/<br>         http://whitebox.phantomhosting.com/$releasever/en/os/$basearch/<br> <br> [updates-released]<br> name=White Box Enterprise Linux $releasever - $basearch - Released Updates<br> baseurl=http://whitebox.phantomhosting.com/$releasever/en/updates/<br>         ftp://ftp.opensourcemirrors.org/linux/whitebox/$releasever/en/updates/<br>         ftp://gd.tuwien.ac.at/opsys/linux/whiteboxlinux/$releasever/en/updates/<br>         ftp://ftp.jach.hawaii.edu/pub/linux/whitebox/$releasever/en/updates/<br>         ftp://ftp.kspei.com/mirrors/whiteboxlinux.org/whitebox/$releasever/en/updates/<br>         ftp://ftp.esat.net/mirrors/whiteboxlinux.org/$releasever/en/updates/<br>         ftp://mirror.physics.ncsu.edu/pub/whitebox/$releasever/en/updates/</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_11">YUM を利用する場合、国内高速ミラーサイト設定方法は?</h4>
+<p>/etc/yum.conf ファイルを編集すると、国内の高速ミラーを使用して update
+が簡単にできます。/etc/yum.conf 中の</p>
+<pre> [base]<br> [updates-released]</pre>
+<p>の baseurl を以下のように編集します。</p>
+<pre> (理化学研究所を設定する場合)<br> <br> [base]<br> name=White Box Enterprise Linux $releasever - $basearch - Base<br> baseurl=http://ftp.riken.jp/Linux/whitebox/$releasever/en/os/$basearch/<br>         ftp://ftp.riken.jp/Linux/whitebox/$releasever/en/os/$basearch/<br> <br> [updates-released]<br> name=White Box Enterprise Linux $releasever - $basearch - Released Updates<br> baseurl=http://ftp.riken.jp/Linux/whitebox/$releasever/en/updates/<br>         ftp://ftp.riken.jp/Linux/whitebox/$releasever/en/updates/</pre>
+<p>これで、yum update で一気にアップデートできます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_12">APT は使えますか。</h4>
+<p>オプションとして、FreshRPMS や ATrpms のリポジトリーを参照することはできます。White Box
+Linux は
+RHEL をもとにしているため、Red Hat Linux 9
+向けのパッケージとの互換性が高いと考えられます。ただ、こうしたサードパーティが提供するパッケージは、追加的なものなので、APT
+をメインのパッケージ管理として使うことはできません。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>どうしても APT を使ってアップデートを含めたパッケージ管理を行いたいのであれば、Lineox Linux や
+Scientific Linux など他の RHEL クローンの導入を検討してください。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_13">利用可能なサードパーティのリポジトリーはどこですか。</h4>
+<p>WBELプロジェクトからは、次のリポジトリーが公式に紹介されています。</p>
+<div class="ie5">
+<table class="style_table" border="0" cellspacing="1">
+  <thead><tr>
+    <td class="style_td">YUM リポジトリー：</td>
+  </tr>
+  </thead><tbody>
+    <tr>
+      <td class="style_td">ATrpms <a
+ href="http://atrpms.physik.fu-berlin.de/">http://atrpms.physik.fu-berlin.de/</a></td>
+    </tr>
+    <tr>
+      <td class="style_td">JPackage <a href="http://www.jpackage.org/">http://www.jpackage.org/</a></td>
+    </tr>
+    <tr>
+      <td class="style_td">Dag Wieers Apt RPM repository <a
+ href="http://dag.wieers.com/home-made/apt/">http://dag.wieers.com/home-made/apt/</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<br class="spacer">
+<div class="ie5">
+<table class="style_table" border="0" cellspacing="1">
+  <thead><tr>
+    <td class="style_td">APT リポジトリー (apt パッケージのインストールが必要です。)：</td>
+  </tr>
+  </thead><tbody>
+    <tr>
+      <td class="style_td">Dag Wieers Apt RPM repository <a
+ href="http://dag.wieers.com/home-made/apt/">http://dag.wieers.com/home-made/apt/</a></td>
+    </tr>
+    <tr>
+      <td class="style_td">FreshRPMS <a href="http://www.freshrpms.net">http://www.freshrpms.net</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>たとえ
+ば、Dag Wieers サイトより Red Hat Enterprise Linux 用の YUM
+リポジトリーを追加する場合には、Up2date を利用するのが最も簡単です。/etc/sysconfig/rhn/sources
+ファイルの記述を編集します。具体的には、sources ファイル49行目の冒頭にあるコメント(#)を外してファイルを上書き保存します。
+    <pre> #(←この部分を削除) yum Dag http://apt.sw.be/redhat/el3/en/$ARCH/dag</pre>
+そしてターミナルから rpm --import <a
+ href="http://dag.wieers.com/packages/RPM-GPG-KEY.dag.txt">http://dag.wieers.com/packages/RPM-GPG-KEY.dag.txt</a>
+を実行すると、設定作業は完了です。</li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>サードパーティの主なミラーサイト
+    <blockquote>
+      <p class="quotation">[ATrpms] - 理化学研究所 (RIKEN)<br>
+      <a href="http://ftp.riken.jp/Linux/atrpms/">http://ftp.riken.jp/Linux/atrpms/</a><br>
+      <a href="ftp://ftp.riken.jp/Linux/atrpms/">ftp://ftp.riken.jp/Linux/atrpms/</a></p>
+      <br class="spacer">
+      <p class="quotation">[DAG's RPM Repository] - 理化学研究所 (RIKEN)<br>
+      <a href="http://ftp.riken.jp/Linux/dag/">http://ftp.riken.jp/Linux/dag/</a><br>
+      <a href="ftp://ftp.riken.jp/Linux/dag/">ftp://ftp.riken.jp/Linux/dag/</a></p>
+      <br class="spacer">
+      <p class="quotation">[JPackage Project Repositories]</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://www.jpackage.org/repos.php">http://www.jpackage.org/repos.php</a></li>
+      </ul>
+    </blockquote>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>(注
+意) YUM や APT を使う場合、rpm --import /usr/share/rhn/RPM-GPG-KEY-hoge などとして、
+GPG キー のインポートを必要とする場合があります。また、sources.list あるいは yum.conf
+ファイルの編集が必要なこともあります。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_14">Up2Date 更新通知アイコンが常時赤く点滅して目障りになります。</h4>
+<p>追加パッケージ用にサードパーティのリポジトリーを設定した場合、そのリポジトリーで新しいバージョンが提供されていれば更新対象とな
+ります。その結果、デスクトップ右下に表示される自動更新通知アイコンが赤く点滅するようになります。</p>
+<p>しかし、サードパーティが提供するパッケージ全てが WBEL
+で正常に機能するかどうかは判りません。自動更新通知アイコンが任意の対象を無視するように設定するには、そのアイコンをマウスでクリックし、「無視した
+パッケージ」タブから &gt;&gt; を使って 無視したパッケージ に追加します。これで、アイコンを赤色から青色に戻すことができます。</p>
+<p>これに替わる方法として、設定ファイル /etc/sysconfig/rhn/sources
+より、追加したサードパーティのリポジトリーを一時的にコメントアウトしても良いでしょう。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_15">デスクトップに保存したはずのファイルが表示されません。</h3>
+<p>ユーザがデスクトップに保存したファイルは、通常ユーザの ~/.gnome-desktop
+ディレクトリ以下に置かれることになります。ところがサードパーティの Dag Wieers Apt RPM repository <a
+ href="http://dag.wieers.com/home-made/apt/">http://dag.wieers.com/home-made/apt/</a>
+を YUM リポジトリーに追加して yum update で自動更新すると、GNOME
+デスクトップ関連のファイルが書き換えられてしまい、ユーザの ~/Desktop
+ディレクトリが生成されてしまうようです。こうした使い方が本来想定されていないことが原因のように思われます。</p>
+<p>つまり、~/.gnome-desktop と ~/Desktop が併存する状態となって、すでに ~/Desktop
+以下に保存したファイルは実際に保存されてはいるものの、デスクトップには表示されなくなります。気になる場合には ~/Desktop
+ディレクトリーを削除しても、その後の運用には支障がないようです。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_16">WBEL3 用のパッケージ「hoge」がどうしても見つからないのですが。</h3>
+<p>RHEL3 向けのパッケージは、実際には Red hat Linux 9
+向けのものとほぼ同一(99%同一)とされるため、WBEL3 は RHL9 との互換性が広く認められます。このため、<a
+ href="http://www.fedora.us/">Fedora Extra Project</a> が RHL9
+に用意している追加パッケージなら APT/YUM で利用可能です。 RHL9 用として <a
+ href="http://rpmfind.net/">Rpmfind.net</a> や <a
+ href="http://rpmseek.com/myrpmseek.html?hl=com">rpmSEEK.com</a> にある
+RPM/SRPM の豊富な資産が活用可能です。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://whiteboxlinux.org/faq.html">Frequently
+Asked Questions</a> NO.4 "Ok, so where can I get package foo?"<br>
+"If you cannot find a package built specifically for RHEL3 or WBEL3 you
+can try a package for RH9 since many of the packages in RHEL3 are the
+exact same packages as appeared in RH9. If that search also fails try
+the RH7.3 version or rebuild it from the srpm."</li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>一例として、CD/DVDライティング・ツールの K3b や X-CD-Roast が <a
+ href="http://www.fedora.us/">Fedora Extra Project</a> から利用できます。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_17">日本語変換について</h3>
+<p>標準設定では、日本語入力・変換は Fedora Core 1 や Red Hat Linux と同様、kinput2 +
+canna の組合せです。</p>
+<p>ただし、ユーザのディレクトリにある ~/.canna ファイルの設定は次のとおりです。</p>
+<pre> (use-dictionary<br> "gcanna"<br> "gcannaf"<br> "chimei"<br> ; "iroha" ←60行目のコメントは外した方が良いかもしれません。<br> "fuzokugo"</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_18">ATOK X のインストール方法は？</h3>
+<p>Redhat Linux 9 の方法でインストールすると iiimf-1-2.i386.rpm
+が、im-sdk-20030118-6 と衝突します。<br>
+コンソールに入り以下のように im-sdk を削除した後インストールしてください。</p>
+<pre> # rpm -e im-sdk<br> # cd /mnt/cdrom<br> # ./install_atokx</pre>
+<p>また以下の HP にある２つの patch(iiimとatokx)を当てておきます。</p>
+<pre> http://support.justsystem.co.jp/faq/jspupdate.asp?pid=0126&amp;sc=35</pre>
+<p>続いて kinput2 に ATOK が使えるよう設定します。下の HP を見て、 xinput を Redhat
+Linux 9 と同じ設定にしてコンソールを終了します。</p>
+<pre> http://faq.justsystem.co.jp/faq/1003/app/jsfaq.jsp?22055+0126</pre>
+<p>そして任意のユーザーでログインすれば使えるはずです。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_19">Wnn 7 のインストール方法は？</h3>
+<p>インストール方法は、Red Hat 9
+の方法に準じます。次のようなメッセージが出るかもしれませんが、そのまま作業を続行できます。</p>
+<pre> あなたがご使用の OS は Red Hat Linux だと思われます。<br> しかし、OS のバージョンが 9 または 9.0 ではありません。<br> 上記バージョン以外では動作確認されていません。<br> インストール作業を続けてよろしいですか？ (y/n) : y<br> 稼働中の jserver があります。強制終了させてもよろしいですか?  (y/n) : y</pre>
+<p>なお、新製品となる Wnn 8 が近々ベンダーよりリリースされる予定となっています。</p>
+</div>
+<div id="note">
+<hr class="note_hr"><a id="notefoot_1" href="#notetext_1"
+ class="note_super">*1</a>
+<span class="small">現在、Cobind社が開発したグラフィカルな管理ツールのBeta版 <a
+ href="http://cobind.com/download_yumgui.html">YUMGUI</a> およびその改変版 <a
+ href="http://fedoranews.org/tchung/gyum/">GYUM</a> の存在が知られています。yumi
+(2.0.7-2.1.el3.dag dag:Red Hat Enterprise Linux 3) は正常に動作するようです。</span>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a><span
+ class="small"></span>
+</div>
+</body>
+</html>
