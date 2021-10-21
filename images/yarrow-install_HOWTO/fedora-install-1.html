@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=shift_jis">
+  <title>fedora Linux-install_HOWTO</title>
+  <meta name="GENERATOR" content="OpenOffice.org 1.1.0  (Win32)">
+  <meta name="CREATED" content="20031108;13174881">
+  <meta name="CHANGED" content="20031116;17150531">
+</head>
+<body dir="ltr">
+<div id="範囲1" dir="ltr">
+<p align="center"><font size="5">フェドーラ リナックス（</font><font
+ face="Times New Roman, serif"><font size="5"><font
+ face="Times New Roman, serif">Yarrow)</font></font></font><font
+ size="5">のインストール手順について　その（１）</font><font face="Times New Roman, serif"><font
+ size="5"><font face="Times New Roman, serif"><br>
+Fedora-HowTo Install</font></font></font></p>
+</div>
+<p>標準的なインストール手順をこれから説明します。ユーザーが、家庭でデスクトップ・パソコンにインストールして、インターネットを楽しんだり文書作
+成を行える程度の環境を構築する場合です。</p>
+<h3><font color="#0000ff">■事前準備　<font face="Times New Roman, serif">ISO</font>イ
+メージの入手と点検</font></h3>
+<p><font color="#000000">　フェドーラ・プロジェクトのウェブサイトから、<font
+ face="Times New Roman, serif">ISO</font>イメージのファイルをお使いのパソコンにダウンロードしてくださ
+い。<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">ISO</font></font>イメージは３つのファイルから構成されていて、それ
+ぞれ<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">620</font></font>～<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">630MB</font></font>の
+容量があります。<font face="Times New Roman, serif">Linux</font>関連の雑誌に付録として添付される
+かもしれません。ダウンロードが完了したファイルは、必ず<font face="Times New Roman, serif">MD5SUM</font>に
+よるチェックを行い、改ざんがないかどうかを点検します。</font></p>
+<h3><font color="#0000ff">■事前準備　<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">ISO</font></font>イメージ<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">CD-R</font></font>の
+作成</font></h3>
+<p>　ファイルのダウンロードが完了すれば、それぞれのファイルをコピーして、<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">CD-R</font></font>を
+作成します。<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">CD-R</font></font>を作成するためのソフトウェアを用意し、そのソフ
+トウェアのマニュアルに従がって作業を進めてください。<strike>例えば、<font
+ face="Times New Roman, serif">CDRWIN</font>を使って焼く場合には、<font
+ face="Times New Roman, serif"><a
+ href="http://www.moridaira.com/Alesis/HowtoOS.htm">http://www.moridaira.com/Alesis/HowtoOS.htm</a>
+</font>で紹介している手順を参考にして作業を進めます。</strike></p>
+<h3><font color="#0000ff">■インストール直前の準備</font></h3>
+<p>　出来上がった<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">CD(CD-R)</font></font>に不良箇所（不具合）が無いかどうか、の
+点検をします。フェドーラの<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">CD</font></font>には、メディアチェック<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">(Media
+Check)</font></font>という機能がオプションで用意されており、この使用が推奨されています。その手順を書きます。</p>
+<p>　まず、パソコンに<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">CD</font></font>を挿入してしばらくすると、メディアチェックを実行す
+るかどうかを尋ねる初期画面が表示されます。この画面が表示された時、「←」「→」キーを用いてカーソルを「<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">Test</font></font>」
+に移動させて、<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">Enter</font></font>キーで選択します。メディアチェックが完了し問
+題が無い場合には、画面下部に”<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">It
+is OK to install from this media.”</font></font>というメッセージが表示されるので、必ず確認してく
+ださい。</p>
+<p>　続けて<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">2</font></font>枚目以降の<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">CD</font></font>に
+ついても、画面上の指示通り、同じ手順でチェックを行います。</p>
+<h3><font color="#0000ff">■<font size="5">インストール前の環境設定</font></font></h3>
+<p>　メディアチェックが済めば、引き続いてインストールの作業に入ります。メッセージに従がって、<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">1</font></font>枚
+目の<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">CD</font></font>をパソコンのスロットに挿入し、矢印キー「→」を使っ
+て「<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">Skip</font></font>」を選択して、<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">Enter</font></font>キー
+を押します。すると<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">CD</font></font>が読み込まれ、その後の作業手順は対話形式で画面に順
+次表示される仕組みになっています。</p>
+<p align="right">＊グラフィカルなインストール作業を開始するには、<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">Enter</font></font>キー
+を押して続行するだけです。</p>
+<p align="left">グラフィカル・インストールを選択した場合、最初に次の画面が表示されます。</p>
+<p><img src="../Screenshots-Fedora1_Install/screenshot-0000.png"
+ name="図1" align="left" width="800" height="600" border="0"><br
+ clear="left">
+<br>
+<br>
+</p>
+<p>　＊注意　これから説明する環境設定が完了して、実際にインストール開始の画面が表示されるまでは、いつでも作業を安全に中止することが出来ます。
+作業の中止は、キーボードから<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">Ctrl+Alt+Del</font></font>を入力するか、またはパソコンの
+リセットボタンを押下することで行えます。</p>
+<p>１．インストール作業で使用する言語をこの画面から選びます。<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">Japanese</font></font>（日本語）を選んで、次へ<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">(Next)</font></font>進
+むボタンを押します。</p>
+<p><img src="../Screenshots-Fedora1_Install/screenshot-0001.png"
+ name="図2" align="left" width="800" height="600" border="0"><br
+ clear="left">
+<br>
+<br>
+</p>
+<p>２．これで、設定作業の画面は日本語で表示されるようになっています。ここでは、キーボードの種類を設定します。日本語を扱うのであれば、<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">Japanese</font></font>を
+選択しておきます。</p>
+<p><img src="../Screenshots-Fedora1_Install/screenshot-0002.png"
+ name="図3" align="left" width="800" height="600" border="0"><br
+ clear="left">
+<br>
+<br>
+</p>
+<p>３．使用するマウスの種類を選びます。下の図のように、現在ウインドウズパソコンで一般的な<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">2</font></font>ボ
+タン式のホイールマウス選択することも出来ます。マウスのメーカーが一覧にない場合には、<font
+ face="Times New Roman, serif"><font face="Times New Roman, serif">Generic</font></font>（汎
+用）から選びます。</p>
+<p align="right"><img
+ src="../Screenshots-Fedora1_Install/screenshot-0003.png" name="図4"
+ align="left" width="800" height="600" border="0"><br clear="left">
+<a href="fedora-install-2.html">次へ<font face="Times New Roman, serif"><font
+ face="Times New Roman, serif">&lt;NEXT&gt;</font></font></a></p>
+</body>
+</html>
