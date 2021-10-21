@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>RedHatLinux-FAQ/RedHatNetwork</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../../index.html" title="FrontPage (13d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">RedHatLinux-FAQ</a>
+/ RedHatNetwork</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">Red Hat Network について</h2>
+<p>まずは Red Hat が公開している <a
+ href="http://www.redhat.co.jp/products/Native/RHN/rhn_qsg-html/">Red
+Hat Network クイックスタートガイド</a>を読んでみよう。</p>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">Red Hat Network について </a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">Red Hat Network にはお金が必要ですか? </a></li>
+      <li><a href="#content_1_2">Red Hat Network のアカウントがあるのに Up2date
+がエラーになります。 </a></li>
+      <li><a href="#content_1_3">Problem registering username と表示される </a></li>
+      <li><a href="#content_1_4">誤ってパネルから Red Hat Network Alert
+Notification Toolを削除してしまいました。 </a></li>
+      <li><a href="#content_1_5">アカウントを削除したいのですが。 </a></li>
+      <li><a href="#content_1_6">アカウントが無効になってしまいました。 </a></li>
+      <li><a href="#content_1_7">更新通知アプレット(RHN Atert Notification
+Tool)が赤く点滅して気になります。 </a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">Red Hat Network にはお金が必要ですか?</h3>
+<p>demo
+ユーザーならタダ。同一アカウントで2台以上利用するなら必要。(それぞれのマシンに別アカウントを割り当てるなら、それぞれ1台ずつになるのでタダにな
+る)</p>
+<p>しかし、Red Hat には Alan Cox
+を始め著名なハッカー達がいたり、いろいろなオープンソースプロジェクトをサポートしていたりするので、その人達をサポートするつもりでお金を払うのもい
+いかもしれない。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">Red Hat Network のアカウントがあるのに Up2date がエラーになります。</h3>
+<pre> Error Message:<br> Your demo account has been disabled.  To enable your account, you must<br> fill out the latest Red Hat Network survey by visiting:<br> https://rhn.redhat.com/renew/<br> You may also enable your Red Hat Network account by purchasing service at:<br> https://rhn.redhat.com/network/sales/index.pxt<br> Your account name: hogehoge</pre>
+<p>上のようなメッセージが出るなら rhn のアカウントが有効になっていません。<a
+ href="https://rhn.redhat.com/renew/">https://rhn.redhat.com/renew/</a>
+にアクセスしてアンケートに答えると有効になります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">Problem registering username と表示される</h3>
+<p>03/08/28にUp2dateがバージョンアップしてるので、パッケージをアップデートしないとRHNに接続できないです。<br>
+<a
+ href="http://www.jp.redhat.com/support/errata/RHSA/RHSA-2003-267J.html">http://www.jp.redhat.com/support/errata/RHSA/RHSA-2003-267J.html</a></p>
+<p>up2date と up2date-gnome のパッケージをダウンロードし、# rpm -Fvh up2date*
+としてインストールしましょう。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_4">誤ってパネルから Red Hat Network Alert Notification
+Toolを削除してしまいました。</h3>
+<p>左下の赤帽を右クリック→メニューエディタ→好きなところで新規項目作ってる。</p>
+<p>コマンドのところに rhn-applet-gui といれて、名前とかコメントとか好きにつけたらオケ。</p>
+<p>ちなみに、rpm -qf rhn-applet で、そのパッケージに入ってるファイル名がでるから、アイコンはそこから探してね。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_5">アカウントを削除したいのですが。</h3>
+<p><a href="https://rhn.redhat.com/help/faq/account_management.pxt#222">FAQ
+-
+Account
+Management</a> を参照のこと。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_6">アカウントが無効になってしまいました。</h3>
+<p>RHN のデモユーザはアンケートに答えなければなりません。</p>
+<p>RHN に登録したときのメールアドレスに送られてくる RHN Demo Account Survey Notice
+という件名の英文メールにアンケートへのリンクが貼られてます。</p>
+<p>アンケートに答えると無効になっていたアカウントが復活するはずです。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_7">更新通知アプレット(RHN Atert Notification
+Tool)が赤く点滅して気になります。</h3>
+<p>Red Hat Linux 9 に対する
+Redhat社のアップデートサービスは既に終了しました。しかしながらインストール直後から、デスクトップに表示される自動更新通知アプレットが赤く点
+滅しユーザーに更新を促すようになります。</p>
+<p>この状態が目障りなら、次の手順でアプレットは削除できます。</p>
+<p>[マウスでアプレットを右クリック] &gt; [設定] &gt; [進む] &gt; [パネルから除去]</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>[注意]<br>
+Redhat社から新規アップデータの提供終了していますが、デモアカウントを取得して <a
+ href="https://rhn.redhat.com/">https://rhn.redhat.com/</a>
+より2004.4.30 時点までのアップデータのダウンロードサービスを受けることは可能となっています。それ以降のアップデータは Fedora
+Legacy Project より入手してください。(Fedora Legacy は全てのアップデータをミラーしています。)
+  </li>
+</ul>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>

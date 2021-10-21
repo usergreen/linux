@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>34HddInstall</title>
+</head>
+<body>
+<div id="body">
+<p><a href="../../../index.html" title="FrontPage (2d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">KNOPPIX</a>
+/ 3.4HddInstall</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">KNOPPIX 3.4 Hard Disk Installation</h2>
+<p>KNOPPIX のハードディスクへのインストール方法 -V3.4 (20040629)日本語版向け。</p>
+<p>ここでは、 KNOPPIX 日本語版(20040629)
+をハードディスクにインストールする手順を説明します。このバージョンには、さらに改良されたインストーラー Knoppix Installer
+V03-11 が採用されています。</p>
+<blockquote>
+  <p class="quotation">(注意) 以下は KNOPPIX V3.4(20040629)版
+日本語版をハードディスクにインストールした場合(例)です。これよりも以前にリリースされたバージョンをインストールしたいのであれば、以前のインス
+トール方法のページ <a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?KNOPPIX-FAQ%2F3.3HddInstall"
+ title="KNOPPIX-FAQ/3.3HddInstall (2099d)">3.3HddInstall</a> あるいは <a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?KNOPPIX-FAQ%2F3.2HddInstall"
+ title="KNOPPIX-FAQ/3.2HddInstall (2099d)">3.2HddInstall</a>
+を見てください。パーティションを切り直す必要がある場合も、以前のページの関係部分の説明を参照してください。</p>
+</blockquote>
+<p>1.デスクトップの左下にある　「K アイコン」から、＞　KNOPPIX ＞　Root Shell　と選択します。<br>
+root のコンソール画面が表示されます。</p>
+<p>2.次のコマンドを入力して、リターンキーを押します。</p>
+<pre> # knoppix-installer</pre>
+<p>3.「このスクリプトは、Knoppix を Hard Disk
+へインストールするものです。注意：このバージョンは、とても初期段階でまだかなり開発中のものです・・・。」というメッセージが表示されるので、確認の
+うえ OK を押します。</p>
+<p>4.次の一覧が表示されます。</p>
+<pre> 1.インストールの設定　新しい設定を作成します<br> 2.インストールの開始　インストールを開始します<br> 3.パーティション設定　ハードディスクを分割します<br> 4.設定の読み込み　　　既存の設定を読み込みます<br> 5.設定の保存　　　　　設定を保存します<br> 6.終了　　　　　　　　このプログラムを終了</pre>
+<p>5.「1.インストールの設定」を選ぶと次の3つの選択肢が表示されます。</p>
+<pre> beginner: マルチユーザーシステムと自動認識 (より良い方法)<br> Knoppix： CD 起動のような Knoppix-System<br> debian：　Debian 形式のシステム（以前のインストーラの様に）</pre>
+<p>この画面では、「beginner: マルチユーザーシステムと自動認識 (より良い方法)」を選択しましょう。これは Linux
+初心者向けに新しく追加されたインストール方法です。インストール中の自動設定・自動認識に優れているので、作業がさらに簡略化できるようになります。</p>
+<p>6.次に、パーティションの選択画面になります。最も適当と思われるパーティションが自動的に選択されるので、確認のうえ作業を進めてください。</p>
+<p>7.次に、システム名の設定をします。ここでは適当な名前を付けておきます。（例： name surname）</p>
+<blockquote>
+  <p class="quotation">この名前は、初期ユーザー作成に使用されます。入力が済めば、Next を押します。</p>
+</blockquote>
+<p>8.ユーザー名を入力します。好きなユーザー名（例：roroot）を入れて、Next を押します。</p>
+<p>9.ユーザーのパスワードを設定し入力します。確認のため２回入力してから、Next を押します。</p>
+<p>10.管理者(root)用のパスワードを設定し入力します。確認のため２回入力してから、Next を押します。</p>
+<p>11.ホスト名を設定します。そのパソコンの名前になります。（例：box）</p>
+<p>12.ブートローダー (lilo) を入れる場所を指定します。</p>
+<blockquote>
+  <p class="quotation">多くの場合、Master Boot Record を選ぶことになります。</p>
+</blockquote>
+<p>13.自動的に最初の一覧画面に戻ります。この中から、「2.インストールの開始」を選びます。</p>
+<p>14.「これらの設定で実行してもよろしいですか？」というメッセージが表示されます。</p>
+<blockquote>
+  <p class="quotation">これでよいのであれば、 Next を押します。</p>
+</blockquote>
+<blockquote>
+  <p class="quotation">この画面は、インストール直前の最終確認の画面です。インストールの設定に関する変更を希望するときは、
+この画面をキャンセルし<br>
+元に戻って再度設定し直してください。 Next ボタンを押すと、取り消すことはできません。</p>
+</blockquote>
+<p>15./dev/hda* の初期化が開始され、続いて CD
+からハードディスクへのコピーが行なわれます。そのあいだの経過状況は、進捗バーで表示されます。</p>
+<blockquote>
+  <p class="quotation">ここでの一連の所要時間は、およそ２０分以上かかります。やがてインストールは、自動的に完了します。完
+了した時点で、ブートディスク作成の画面に切り替わります。</p>
+</blockquote>
+<p>16.ブートディスク（起動用ディスク）を作成をするかどうか尋ねられます。</p>
+<blockquote>
+  <p class="quotation">作成を希望する場合は、 フロッピーディスクを挿入して Yes を押します。</p>
+</blockquote>
+<p>17.「インストール成功」の画面が出ます。</p>
+<blockquote>
+  <p class="quotation">「ハードディスクへ Knoppix を入れることに成功しました。」というメッセージが表示されます。</p>
+</blockquote>
+<p>18.システムを終了させます。 Root Shell は、 exit で閉じ、ログアウトします。</p>
+<blockquote>
+  <p class="quotation">正常に終了できれば CD
+が自動的に排出されるので、忘れずに取り出してからリターンキーを押します。これでパソコンの電源が切れます。</p>
+</blockquote>
+<p>19.再び、パソコンの電源を入れます。途中でログイン画面が表示されるので、登録したパスワードを入力します。</p>
+<p>20.パソコンが完全に起動したら、 KNOPPIX を使い始めることができます。</p>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?KNOPPIX-FAQ%2F3.4HddInstall#navigator">↑</a></div>
+<h2 id="content_1_1">参照</h2>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://japan.linux.com/desktop/03/05/08/0239236.shtml?topic=1">Knoppix
+のインストールに関するヒント</a></li>
+  <li><a
+ href="http://homepage3.nifty.com/shinchandesu/knoppix/knoppix.html">KNOPPIX
+to
+HDD</a>
+  </li>
+</ul>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>

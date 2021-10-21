@@ -1,0 +1,487 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>Installation</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../../index.html" title="FrontPage (3d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">MandrivaLinux-FAQ</a>
+/ Installation</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">Mandriva Linux のインストールに関する FAQ</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">Mandriva Linux のインストールに関するFAQ。 </a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">ダウンロード / ミラーサイト (Downloading /
+Mirrors) </a></li>
+      <li><a href="#content_1_2">ダウンロードエディション (FTP 版) </a></li>
+      <li><a href="#content_1_3">簡易版 ISO イメージ (Mini ISO-CD：1枚もの) </a></li>
+      <li><a href="#content_1_4">ライブCD版 </a></li>
+      <li><a href="#content_1_5">ダウンロードエディションと製品版の具体的な違いは? </a></li>
+      <li><a href="#content_1_6">インストール方法に関すること </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_7">[インストールの流れ] </a></li>
+          <li><a href="#content_1_8">[インストール方法の概要] </a></li>
+          <li><a href="#content_1_9">グラフィカルなデスクトップが立ち上がりません。 </a></li>
+          <li><a href="#content_1_10">テキストモードでインストールしたい </a></li>
+          <li><a href="#content_1_11">ネットワークインストールを行いたい。（推奨） </a></li>
+          <li><a href="#content_1_12">2007.1 (2007 Spring)
+のインストールができません。</a></li>
+          <li><a href="#content_1_13">アップグレード・インストールできますか？ </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_14">Kernel 2.4 をインストールするには? (10.0
+Official) </a></li>
+      <li><a href="#content_1_15">GNOME は使えますか? </a></li>
+      <li><a href="#content_1_16">OS起動時、ログインできないのですが？ </a></li>
+      <li><a href="#content_1_17">OS起動時、自動ログインしたくありません。 (10.0 Official)
+        </a></li>
+      <li><a href="#content_1_18">日本語入力環境に関すること </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_19">日本語入力を行うには？ </a></li>
+          <li><a href="#content_1_20">kinput2 + canna の組み合わせではないのですか？ </a></li>
+          <li><a href="#content_1_21">カタカナが思うように入力できません。 </a></li>
+          <li><a href="#content_1_22">いわゆる「言語バー」をデスクトップに表示できますか。 </a></li>
+          <li><a href="#content_1_23">手書き文字入力ができますか？</a></li>
+          <li><a href="#content_1_24">日本語入力方式を変更するには？ </a></li>
+          <li><a href="#content_1_25">日本語フォントを追加したい </a></li>
+          <li><a href="#content_1_26">Mandriva の日本語入力に特に関連する参照リンク </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_27">インターネット(ネットワーク)に接続できません。 </a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">ダウンロード / ミラーサイト (Downloading / Mirrors)</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>海外のミラーサイト一覧へは、Mandriva 公式サイトのページ <a
+ href="http://www.mandriva.com/en/download.html">http://www.mandriva.com/en/download.html</a>
+よりアクセスできます。無償のダウンロードエディションは、「パブリック・ミラー・ネットワークよりダウンロード」というリンクを選択します。</li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>日本国内ミラーサイト (Japanese Mirrors)
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li>KDDI研究所 (Saitama, Japan)<br>
+FTP: <a
+ href="ftp://ftp.kddlabs.co.jp/Linux/distributions/Mandrake/official/iso/">ftp://ftp.kddlabs.co.jp/Linux/distributions/Mandrake/official/iso/</a><br>
+HTTP: <a
+ href="http://ftp.kddlabs.co.jp/Linux/distributions/Mandrake/official/iso/">http://ftp.kddlabs.co.jp/Linux/distributions/Mandrake/official/iso/</a><br>
+RSYNC: rsync://ftp.ne.jp/Linux/distributions/Mandrake/official/iso/</li>
+    </ul>
+  </li>
+</ul>
+<ul class="list2" style="padding-left: 32px; margin-left: 32px;">
+  <li>理化学研究所 (RIKEN) (Saitama, Japan)<br>
+FTP: <a href="ftp://ftp.riken.jp/Linux/mandrake/official/iso/">ftp://ftp.riken.jp/Linux/mandrake/official/iso/</a><br>
+HTTP: <a href="http://ftp.riken.jp/Linux/mandrake/official/iso/">http://ftp.riken.jp/Linux/mandrake/official/iso/</a><br>
+RSYNC: rsync://ftp.riken.jp/Linux/mandrake/official/iso/</li>
+</ul>
+<ul class="list2" style="padding-left: 32px; margin-left: 32px;">
+  <li>奈良先端科学技術大学院大学 [NARA Inst of Science and Technology] (Nara, Japan)<br>
+FTP: <a
+ href="ftp://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/iso/">ftp://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/iso/</a><br>
+HTTP: <a
+ href="http://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/iso/">http://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/iso/</a><br>
+RSYNC: rsync://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/iso/</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">ダウンロードエディション (FTP 版)</h3>
+<p>無償のダウンロードエディション (Free Download Edition) が配布されています。このダウンロードエディションでは、
+Mandoriva 社のウェブサイトから購入可能な製品版とは若干仕様が変更されているので、一部のサービスは利用できないようになっています。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Mandriva Linux 2008 Official Free Edition ( /official/iso/2008.0/
+)
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li>ISO-DVD Download
+        <pre> mandriva-linux-2008.0-free-dvd-i586.iso</pre>
+      </li>
+      <li>3-ISO-CD Download
+        <pre> mandriva-linux-2008.0-free-cd1-i586.iso<br> mandriva-linux-2008.0-free-cd2-i586.iso<br> mandriva-linux-2008.0-free-cd3-i586.iso</pre>
+      </li>
+      <li>ONE-CD Download<br>
+（このISO-CDはHDDへのインストールが可能なLiveCDとして提供されます。）
+        <pre> mandriva-linux-2008-one-GNOME-cdrom-i586.iso<br> mandriva-linux-2008-one-KDE-cdrom-i586.iso</pre>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Mandriva Linux 2007 Spring Official Free Edition (
+/official/iso/2007.1/ )
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li>ISO-DVD Download
+        <pre> mandriva-linux-2007-spring-free-dvd-i586.iso</pre>
+      </li>
+      <li>ISO-CD Download<br>
+（このISO-CDはHDDへのインストールが可能なLiveCDとして提供されます。）
+        <pre> mandriva-linux-2007-spring-one-GNOME-cdrom-i586.iso<br> mandriva-linux-2007-spring-one-KDE-cdrom-i586.iso<br> mandriva-linux-2007-spring-free-mini.iso</pre>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Mandriva Linux 2007 Free Edition ( /official/iso/2007.0/ )<br>
+各ミラーの /official/iso/2007.0/ ディレクトリより入手可能です。
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li>4-ISO-CD Download
+        <pre> Mandriva-Free-2007-CD1.i586.iso<br> Mandriva-Free-2007-CD2.i586.iso<br> Mandriva-Free-2007-CD3.i586.iso<br> Mandriva-Free-2007-CD4.i586.iso</pre>
+      </li>
+      <li>ISO-DVD Download
+        <pre> Mandriva-Free-2007-DVD.i586.iso</pre>
+      </li>
+      <li>Mandriva One</li>
+    </ul>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>2006 Download Edition ( /official/iso/i586/2006.0/ )<br>
+[ISO イメージ]　最新の公式なバージョンは、CD3枚分のISOイメージから構成されています。
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li>3-ISO-CD Download
+        <pre> Mandriva-Linux-Free-2006-CD1.i586.iso<br> Mandriva-Linux-Free-2006-CD2.i586.iso<br> Mandriva-Linux-Free-2006-CD3.i586.iso</pre>
+      </li>
+      <li>ISO-DVD Download
+        <pre> Mandriva-Linux-Free-2006-DVD.i586.iso</pre>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Limited Edition 2005 Download Edition ( /official/iso/i586/10.2/ )<br>
+[ISO イメージ]　最新の公式なバージョンは、CD3枚分のISOイメージから構成されています。
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li>3-ISO-CD Download
+        <pre> Mandriva-Linux-2005-Limited-Edition-Download-CD1.i586.iso<br> Mandriva-Linux-2005-Limited-Edition-Download-CD2.i586.iso<br> Mandriva-Linux-2005-Limited-Edition-Download-CD3.i586.iso</pre>
+      </li>
+      <li>ISO-DVD Download
+        <pre> Mandriva-Linux-2005-Limited-Edition-Download-DVD.i586.iso</pre>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>10.1 Official Download Edition<br>
+[ISO イメージ]
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li>3-ISO-CD Download
+        <pre> Mandrakelinux-10.1-Official-Download-CD1.i586.iso<br> Mandrakelinux-10.1-Official-Download-CD2.i586.iso<br> Mandrakelinux-10.1-Official-Download-CD3.i586.iso</pre>
+      </li>
+      <li>ISO-DVD Download
+        <pre> Mandrakelinux-10.1-Official-Download-DVD.i586.iso</pre>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>10.0 Official Download Edition<br>
+[ISO イメージ]
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li>3-ISO-CD Download
+        <pre> Mandrakelinux-10.1-Offic<br> Mandrakelinux10.0-Official-Download-CD1.i586.iso<br> Mandrakelinux10.0-Official-Download-CD2.i586.iso<br> Mandrakelinux10.0-Official-Download-CD3.i586.iso</pre>
+      </li>
+    </ul>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">簡易版 ISO イメージ (Mini ISO-CD：1枚もの)</h3>
+<p>パッケージを大幅に省略したインストール用 ISO イメージで、標準の言語環境は英語です。グラフィカル環境として、 IceWM
+デスクトップをサポートしています。日本語入力環境を整えるためには、この Mini ISO-CD
+以外のソースから必要なパッケージを追加してください。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>2006 Edition
+    <pre> Mandriva-Linux-Free-Mini-2006-CD.i586.iso</pre>
+これに含まれるパッケージ一覧は、Mandriva-Linux-Free-Mini-2006-CD.i586.idx にあります。</li>
+  <li>Mandrakelinux 10.1
+    <pre> Mandrakelinux-10.1-Official-Mini.i586.iso<br> Mandrakelinux-10.1-Official-Mini.md5</pre>
+  </li>
+</ul>
+<p>(Mini ISO-CD
+は、インストール時にインターネット経由でパッケージの追加インストールを行うことも可能です。この場合には、Internetへ高速アクセスが条件とな
+ります。）</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_4">ライブCD版</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Mandriva Live (2006 Edition ベース)
+    <pre> Mandriva-Linux-Free-Live-2006-CD.i586.iso</pre>
+  </li>
+  <li>2.0 Move (Mandrakelinux 10.0 ベース)<br>
+    <br>
+これは CDから起動する Mandrakelinux で、ハードディスクへのインストールは不要です。<br>
+このバージョンの正式な英語表記は「Mandrakelinux Move Download
+Edition」となっていますが、ふつうは単に「Move」と呼ばれています。最新のバージョンは 2.0 で、Mandrakelinux
+10.0 がベースです。<br>
+各ミラーサイトの /mandrakelinux/official/iso/move/2.0/i586 ディレクトリーからダウンロードできます。<br>
+    <pre> Mandrakelinux-Move.i586.iso</pre>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>[注意] ライブCD の FTP版(Download Edition) は、日本語表示や日本語入力に対応していません。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_5">ダウンロードエディションと製品版の具体的な違いは?</h3>
+<p>ダウンロードエディションには製品版とは違って公式なサポートがないだけでなく、次のような相違点があります。</p>
+<p>Mandriva Linux Downloads <a
+ href="http://www.mandrakelinux.com/ja/ftp.php3">http://www.mandrakelinux.com/ja/ftp.php3</a>
+によれば、<br>
+<br>
+「Mandriva Linux 10.0 Official製品版は
+Mandrivastore.com（英語）よりご注文いただけます。この製品は(またはMandrivaclubのメンバーの方は対象となりま
+す)NVIDIAのグラフィックカードのドライバ、Flash Player、Java Runtime EnvironementやAcrobat
+Readerその他のダウンロードエディションには含まれていないものがたくさん付属されています。」とされています。</p>
+<p>インストール時に、ディスプレイの設定や適切なグラフィックカードのドライバを設定する必要があります(自動設定されない場合)。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://www.mandrakesoft.com/company/licenseFAQ">FAQ
+concerning licensing</a><br>
+ダウンロードエディションと製品版の相異点や再配布の条件等について書かれてあります。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_6">インストール方法に関すること</h3>
+<p>インストールCDROMはブータブルです。ほとんどの場合、CDをドライブに挿入してマシンを再起動するだけです。画面に表示された説明に従い
+[Enter]キーを押すとインストールが始まります。[F1]キーを押した場合は追加ヘルプが表示されます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_7">[インストールの流れ]</h4>
+<p>標準のインストール作業は、以下の順番で進行します。</p>
+<ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>言語を選択</li>
+  <li>ライセンスの同意</li>
+  <li>セキュリティの設定</li>
+  <li>パーティションの設定</li>
+  <li>システムをインストール</li>
+  <li>root のパスワード設定</li>
+  <li>ユーザーを追加</li>
+  <li>ブートローダーを設定</li>
+  <li>設定の要約を確認</li>
+  <li>システムを更新</li>
+  <li>インストール終了</li>
+</ol>
+<p>Windows とのデュアルブートを構築したときは、最初に表示されるブートローダーのメニュー画面は次のようになるので、一覧から
+linux を選択して起動させます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>linux</li>
+  <li>2425-2</li>
+  <li>windows</li>
+  <li>floppy</li>
+  <li>failsafe</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_8">[インストール方法の概要]</h4>
+<ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>インストール用CDROM(もしくはインストール用フロッピーディスク)を挿入してマシンを再起動</li>
+  <li>Mandrakelinuxの最初の画面が出たら[Enter]を押し、表示される説明によく注意して従う</li>
+  <li>インストールが完了したらCDROM(もしくはインストール用フロッピーディスク)を取り出す。マシンが自動的に再起動されます。再起動しな
+い場合は手動で行ってください。</li>
+  <li>Mandrakelinuxが立ち上がります。起動したらインストール中に設定したユーザ名もしくは"root"でログインすることができま
+す。</li>
+</ol>
+<p>日本語版インストールマニュアルが file:///mnt/cdrom/doc/install/ja/install.htm
+に用意されています。上記の解説は、そのうちの特に関連する箇所を一部を引用したものです。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_9">グラフィカルなデスクトップが立ち上がりません。</h4>
+<p>インストール時に、適切なグラフィック・ドライバーの選択に失敗している可能性があります。<br>
+通常のインストール手順では、その途中でグラフィック・ドライバーの設定画面が表示されます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>ベンダ</li>
+  <li>XFree 4</li>
+</ul>
+<p>のうちから、最も適切なドライバーを選択する必要があります。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>適切なドライバーが不明なときは、XFree 4 から汎用ドライバーの vesa を選択すれば、対応できる可能性があります。</li>
+  <li>設定項目からグラフィック・ドライバ-のテストが行えますが、その結果が正しく反映されているとは限らないようです。たとえテストに失敗して
+いるとしても、実際には利用可能な場合があり得ます。</li>
+  <li>KNOPPIX CD
+の自動認識機能を利用して、そのシステムの最適なグラフィック・ドライバーを見つけるという方法も考えられます。CDライブ版の
+Mandrakelinux Move も自動認識機能が優れているようで、インストール版と違い適切なドライバーを認識できる場合があります。</li>
+  <li>インストール時にグラフィック・ドライバーの設定の設定に失敗しても、「システムの更新」を実行すれば任意の別のドライバーに再設定すること
+がで
+きます。その場合には、起動中のシステムにインストールCD 1 を挿入した後再起動(reboot)させ、
+システムの更新を実行します。途中でシステムの更新画面が表示されるので、グラフィック・ドライバ-の再設定を行ってください。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_10">テキストモードでインストールしたい</h4>
+<p>最初のブート画面で F1キーを押し、表示されたオプション画面で text
+と入力してリターンキーを押すと、テキストモードでのインストールを開始できます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_11">ネットワークインストールを行いたい。（推奨）</h4>
+<p>インターネット接続環境があれば、この方法が最も推奨できます。インストールする時点での最新パッケージを取得するため、CD-ROM
+からインストールした場合のように後でアップグレードする必要がありません。また、プロプラエタリなソフトウェアが同時にインストールされるという利点も
+あります。</p>
+<p>Boot.iso が公開されているので、これを使ってネットワークインストール (FTP インストール)を行います。Boot.iso は約
+11MB 前後のコンパクトなファイルです。このイメージを CD-ROM
+に焼いて、これから起動することが可能です。この方法はすべてのインストールメディア(CDROM/ネットワーク/ハードディスク)をサポートしていま
+す。フロッピーディスクから起動してインストールするためのブートイメージも用意されています。</p>
+<p>詳しい解説は、ミラーサイトにある
+/official/2008.0/i586/doc/install/ja/install.htm#other を見てください。<br>
+これらのブートイメージは、Mandriva 2008 Official の場合なら
+/official/2008.0/i586/install/images/ ディレクトリ以下に、また、 Mandriva Cooker
+の場合なら /devel/cooker/i586/install/images/ ディレクトリ以下にあります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_12">2007.1 (2007 Spring) のインストールができません。</h4>
+<p>一部のユーザーより、インストールができない（インストールの途中で止まる）という報告が上がっています。何かしら問題が発生しているようです。次
+のトリックを試してみると良いでしょう。</p>
+<ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>boot.iso をダウンロードし、起動用CDを作成します。</li>
+  <li>その起動用CDよりシステムを起動させます。</li>
+  <li>インストールの参照元をHDDあるいは、ネットワーク上に指定します。<br>
+（参照元をHDDに指定する場合は、予めCD/DVDイメージをダウンロードしておくこと。）</li>
+</ol>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_13">アップグレード・インストールできますか？</h4>
+<p>Limited Edition 2005 → Mandriva 2006 Official
+へのアップグレードが可能です。インストール用メディアを使い、その指示に従って作業を進めます。</p>
+<p>アップグレードの手段として、インストール用CDイメージから行うことや、ネットワーク（インターネット）に接続して行うことなど、いずれの方法も
+選択できます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_14">Kernel 2.4 をインストールするには? (10.0 Official)</h3>
+<p>標準のインストール方法では、Kernel 2.6 がインストールされます。Kernel 2.4
+のインストールを希望する場合は、インストール・オプションを選択します。ブート時に F1キーを押して alt1 を入力すれば、Kernel
+2.4 がデフォルトに設定されます。これは、Kernel 2.6 ではシステムに問題が発生するときの回避方法として有効な場合があります。</p>
+<p>Kernel 2.6 と Windows XP のNTFS パーティションが併存するデュアルブート環境では、Windows
+が正常に起動しないといった不具合が報告されています。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>10.1 Official では、この不具合が解消されたようです。</li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>A
+2.6 kernel is now available and will be installed as the default. If a
+2.4 series kernel is desired, this must be selected during installation
+during the package selection phase.</li>
+</ul>
+<p>If you have problems the 2.6 installation kernel, type F1 at the
+installation first screen and alt1, this will boot the installation
+with a 2.4 kernel and select it as system default.</p>
+<p>Official-Download-1 CD-ROM /mnt/cdrom/release-notes.txt
+に重要な注意事項があります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_15">GNOME は使えますか?</h3>
+<p>標準のデスクトップ環境は KDE ですが、インストール作業中のパッケージグループ選択オプションより GNOMEワークステーション
+を選択することで、GNOMEデスクトップ環境の利用が可能です。ディスプレイマネージャーには、GNOME標準の gdm あるいは IceWM
+を選択できます。</p>
+<p>なお、KDE と GNOME の両方をインストールする場合には、ディスプレイマネージャーは標準の kdm あるいはオプションの gdm
+のどちらかが一覧から選択できるようになります。パッケージを追加することで、予め用意されているその他多数のディスプレイマネージャーから選択して利用
+することも可能です。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_16">OS起動時、ログインできないのですが？</h3>
+<p>Mandriva Linux 2005 LE では、起動時 Num Lock
+が有効となっています。これが原因でアルファベットの入力ができなくなってしまいます。一度 Num Lock を解除した後、入力してください。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>起動時に Num Lock が常時機能しないようにする方法<br>
+この設定変更は、Mandriva コントロールセンターより行えます。具体的には、デスクトップのパネルメニューより　[アプリケーション]
+&gt; [システム] . [コンピューターを設定] &gt; [システムサービス] &gt; [numlock] &gt; [起動時に開始]
+のチェックを外します。<br>
+  </li>
+  <li>KDE の場合には、　[システム] &gt; [KDE] &gt; [設定] &gt; [キーボード]　より変更することもできます。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_17">OS起動時、自動ログインしたくありません。 (10.0 Official)</h3>
+<p>標準のインストール作業（デフォルト設定）では、便利に起動できるよう自動ログインする設定となります。ユーザー毎で明示的にログインしたい場合に
+は、インストール後次の手順で変更します。</p>
+<p>[アプリケーション] &gt; [システム] &gt; [設定] &gt; [コンピュータを設定] &gt; [起動] &gt;
+[自動ログイン] &gt; [「自動ログインを使わない」]をチェックします。 (GNOME環境の場合、KDE環境もそれに準じます)</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>[参考] Limited Edition 2005
+では、デフォルトで自動ログインしません。自動ログインしたい時には、上の手順とは逆になり、[「自動ログインを使わない」]のチェックを外します。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_18">日本語入力環境に関すること</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_19">日本語入力を行うには？</h4>
+<p>10.0 Official Download Edition
+は、標準で日本語対応となっています。日本語入力へ切替えるためには、全角／半角キーを押します。再度全角／半角キーを押すと、英語入力に切り替わりま
+す。なお、一般的な Shift + Space キー でも同様に切替えることが可能です。</p>
+<p>10.1 Official からは、標準の日本語入力がSCIM経由となりました。Ctrl + Space キー で、 SCIM の On
+/ Off を切り替えることができます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_20">kinput2 + canna の組み合わせではないのですか？</h4>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>2006 Edition では、標準の日本語入力・かな漢字変換エンジンが SCIM + Anthy です。</li>
+  <li>10.0 Official では、日本語入力・かな漢字変換エンジンに uim + Anthy が採用されています。Limited
+Edition 2005 では、SCIM + Anthy も追加されました。したがって、 kinput2 + canna が標準で使われている
+Red Hat Linux 9 や Fedora Core 1 といった他のディストリビューションと比較して、「キーバインド」が異なります。</li>
+</ul>
+<p>uim-anthy のキーバインドについては、<a
+ href="http://anthy.sourceforge.jp/cgi-bin/hikija/hiki.cgi?%A5%AD%A1%BC%A5%D0%A5%A4%A5%F3%A5%C9">こ
+ちらの一覧</a> を参照してください。ただし独自にカスタマイズされているようなので、リンク先の一覧とは一致しません。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_21">カタカナが思うように入力できません。</h4>
+<p>通常はスペースキーで変換候補を表示させますが、目的の候補に変換できないときは次の操作をします。</p>
+<p>入力中のひらがな/カタカナをトグルし、変換確定とき：　q キーを押します</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_22">いわゆる「言語バー」をデスクトップに表示できますか。</h4>
+<p>日本語入力に uim が採用されているので、「Uim Helper
+Applet」と呼ばれる入力表示バーをパネルに追加表示できます。表示させるには、次のようにします。</p>
+<p>[パネルをマウスで右クリック] &gt; [パネルに追加] &gt; [Utility] &gt; [uimアプレット]</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>10.0
+Official では、この uimアプレット
+は入力可能な状態を表示させるだけで、マウスで直接クリックしても入力方法を切替える機能は備わっていません。Mandriva 2005 LE
+では、入力方式の切替を始めとする多くの機能が uimアプレットに追加されました。</li>
+  <li>テキストエディタ(GEdit)では正しく表示しますが、OpenOffice.org や Mozilla などでは機能しないようです。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_23">手書き文字入力ができますか？</h4>
+<p>はい。パッケージ Tomoe を追加すれば、文字認識が可能になります。</p>
+<pre> # urpmi scim-tomoe<br> 依存を満たすために以下の 10 個のパッケージをインストールします(4 MB):<br> libdirectfb0.9_22-0.9.22-5mdk.i586<br> libe0-0.16.999.013-0.20050904.1mdk.i586<br> libecore1-0.9.9.013-0.20050904.1mdk.i586<br> libedb1-1.0.5.004-0.20050904.1mdk.i586<br> libeet0-0.9.10.013-0.20050904.1mdk.i586<br> libevas1-0.9.9.013-0.20050904.1mdk.i586<br> libscim-tomoe0-0.1.0-1mdk.i586<br> libtomoe0-0.2.1-1mdk.i586<br> scim-tomoe-0.1.0-1mdk.i586<br> tomoe-0.2.1-1mdk.i586<br> よろしいですか？ (Y/n)[デフォルトはY]</pre>
+<p>手書き文字入力の機能は、再ログインしないと有効になりません。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_24">日本語入力方式を変更するには？</h4>
+<p>パネル・メニューより　[アプリケーション] &gt; [システム] &gt; [設定] &gt; [その他] &gt; [<span
+ class="noexists">LocaleDrake<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=LocaleDrake&amp;refer=MandrivaLinux-FAQ%2FInstallation">?</a></span>
+(ユーザ)]　を選択し、その後は自動設定ウィザードに従って作業を行います。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_25">日本語フォントを追加したい</h4>
+<p>パネル・メニューより　[アプリケーション] &gt; [システム] &gt; [設定] &gt; [コンピュータを設定] &gt;
+[システム] &gt; [フォントの管理と追加メニュー]　を開いて、希望するフォントを追加することができます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_26">Mandriva の日本語入力に特に関連する参照リンク</h4>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://www.h4.dion.ne.jp/%7Eapricots/scim-anthy/howto.html">Let's
+type
+Japanese
+- SCIM-anthy: getting started</a> (Mandriva Linux 2006
+Edition 向けの日本語入力解説 - 英語 - )</li>
+  <li><a
+ href="http://www.h4.dion.ne.jp/%7Eapricots/scim-anthy-0.3.1/howto.html">Let's
+type
+Japanese
+- SCIM-anthy: getting started</a> (Mandriva Limited
+Edition 2005 向けの日本語入力解説 - 英語 - )</li>
+  <li><a
+ href="http://www.h4.dion.ne.jp/%7Eapricots/mandrake/miniguide.html">Internationalization
+in
+Mandrakelinux
+10.1 -a mini guide to SCIM/UIM-</a> (Mandriva Linux
+10.1 向けの日本語入力解説 - 英語 - )</li>
+  <li>[Anthy-dev 1005] uim周辺のニュース<br>
+    <a
+ href="http://lists.sourceforge.jp/mailman/archives/anthy-dev/2004-August/001004.html">http://lists.sourceforge.jp/mailman/archives/anthy-dev/2004-August/001004.html</a></li>
+  <li>uim-anthy: Getting started<br>
+    <a
+ href="http://anthy.sourceforge.jp/cgi-bin/hikien/hiki.cgi?uim-anthy">http://anthy.sourceforge.jp/cgi-bin/hikien/hiki.cgi?uim-anthy</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_27">インターネット(ネットワーク)に接続できません。</h3>
+<p>インストール時にネットワークの設定を行う項目があります。確認された限りでは、 Melco(Buffalo
+WLI-PCML11GP)の設定がインストール時には行えないようです。どうやら起動時に自動認識されるようなので、インストール後に再設定を行えば特
+に問題は無いようです。</p>
+<p>インストール後にネットワーク設定を実行する場合、デスクトップからマウスを使ってグラフィカルな操作が可能です。</p>
+<p>GNOME デスクトップから設定する場合は、[アプリケーション] &gt; [システム] &gt; [設定] &gt;
+[コンピュータを設定] &gt; [ネットワークとインターネット] &gt; [新しい設定]
+を開いて、ネットワーク設定ウィザードに従って新しいデバイス(ネットワークカード)を追加します。</p>
+<p>[注意]</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Melco WLI-PCML11GP を設定するには、wireless tool
+の追加インストールが必要となります。設定ウィザードの途中で インストールCD
+１の挿入を要求されるので、メッセージに従って作業を進めてください。
+  </li>
+</ul>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>

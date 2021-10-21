@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>TinyMe</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../../index.html">HOME</a> / <a href="../index.html">Distributions</a>
+/ <a href="index.html" title="PCLinuxOS/Remaster (1523d)">PCLinuxOS</a></p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">TinyME</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">TinyME</a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">TinyME とは？</a></li>
+      <li><a href="#content_1_2">TinyME の特徴は？</a></li>
+      <li><a href="#content_1_3">TinyME をカスタマイズする</a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_4">GNOME を追加するには？ (For GNOME Desktop)</a></li>
+          <li><a href="#content_1_5">OpenOffice.org のインストール</a></li>
+          <li><a href="#content_1_6">印刷システム(CUPS)のインストール</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">TinyME とは？</h3>
+<p>最小構成で、かつグラフィカルなデスクトップを提供するリマスターCDです。提供されるイメージは約170MB足らずと小さいので、HDDへのイン
+ストールが楽に行え、リマスターCD作成のベースとして活用するのにも最適です。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>TinyME ウェブサイト<br>
+    <a href="http://docs.mypclinuxos.com/TinyME">http://docs.mypclinuxos.com/TinyME</a><br>
+    <a href="http://tinyme.mypclinuxos.com/">http://tinyme.mypclinuxos.com/</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">TinyME の特徴は？</h3>
+<p>最近新たに開発された軽量デスクトップ環境「<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?DesktopEnvironment#content_1_7"
+ title="DesktopEnvironment (1071d)">LXDE</a>」を採用した、PCLOSリマスターです。最小構成といえど
+も見栄えのするデスクトップ環境を備えています。</p>
+<p>現時点(2007.07.01)では未だ開発段階ですが、すでに Test 4
+リリースが公開されています。Operaウェブブラウザーと、Meditテキストエディタが含まれます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://www.tuxmachines.org/node/17717">Mini Review of a
+Tiny PCLOS, Submitted by srlinuxx on Mon, 07/02/2007</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">TinyME をカスタマイズする</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_4">GNOME を追加するには？ (For GNOME Desktop)</h4>
+<pre> # apt-get install task-gnome-minimal</pre>
+<p>Reading Package Lists... Done<br>
+Building Dependency Tree... Done<br>
+The following extra packages will be installed:</p>
+<pre>  alacarte desktop-common-data docbook-dtd412-xml docbook-dtd42-xml<br>  docbook-dtd43-xml eel enchant evolution-data-server flock fortune-mod<br>  gnome-applets gnome-control-center gnome-desktop gnome-doc-utils gnome-menus<br>  gnome-mount gnome-panel gnome-python gnome-python-applet gnome-python-bonobo<br>  gnome-python-canvas gnome-python-desktop gnome-python-extras<br>  gnome-python-gconf gnome-python-gnomevfs gnome-screensaver gnome-session<br>  gnome-system-monitor gnome-terminal gnome-user-docs gnome-utils gnome-vfs2<br>  gnome-volume-manager gstreamer0.10-plugins-base gstreamer0.10-plugins-good<br>  gstreamer0.10-tools libaspell15 libbeagle0 libbonobo libbonobo2_0<br>  libbonoboui libbonoboui2_0 libcaca0 libcpufreq0 libdb4.2 libeel2_2<br>  libenchant1 libgdict1.0_5 libgnome-applets0 libgnome-desktop-2_2<br>  libgnome-vfs2_0 libgnome-window-settings1 libgnome2 libgnome2_0<br>  libgnomeprint libgnomeprint2-2_0 libgnomeprintui libgnomeprintui2-2_0<br>  libgnomeui2 libgnomeui2_0 libgsf-1_114 libgstreamer-plugins-base0.10<br>  libgstreamer0.10_0.10 libgtop2 libgtop2.0_7 libgucharmap5 libmesagl1<br>  libmesaglu1 libmetacity-private0 libnautilus1 libnotify1 libpanel-applet-2_0<br>  librecode0 librsvg2_2 libsexy2 libshout3 libsmbclient0 libstdc++5<br>  libvorbisenc2 libxklavier-data libxklavier11 libxml2-python libxslt-proc<br>  metacity nautilus notification-daemon pclinuxos-menu-messages<br>  pclinuxos-theme pygtk2.0 pygtk2.0-libglade pyorbit python python-gnome-menus<br>  python-gobject python-numeric scrollkeeper sox system-tools-backends<br>  vorbis-tools xlockmore yelp</pre>
+<p>The following NEW packages will be installed:</p>
+<pre>  alacarte desktop-common-data docbook-dtd412-xml docbook-dtd42-xml<br>  docbook-dtd43-xml eel enchant evolution-data-server flock fortune-mod<br>  gnome-applets gnome-control-center gnome-desktop gnome-doc-utils gnome-menus<br>  gnome-mount gnome-panel gnome-python gnome-python-applet gnome-python-bonobo<br>  gnome-python-canvas gnome-python-desktop gnome-python-extras<br>  gnome-python-gconf gnome-python-gnomevfs gnome-screensaver gnome-session<br>  gnome-system-monitor gnome-terminal gnome-user-docs gnome-utils gnome-vfs2<br>  gnome-volume-manager gstreamer0.10-plugins-base gstreamer0.10-plugins-good<br>  gstreamer0.10-tools libaspell15 libbeagle0 libbonobo libbonobo2_0<br>  libbonoboui libbonoboui2_0 libcaca0 libcpufreq0 libdb4.2 libeel2_2<br>  libenchant1 libgdict1.0_5 libgnome-applets0 libgnome-desktop-2_2<br>  libgnome-vfs2_0 libgnome-window-settings1 libgnome2 libgnome2_0<br>  libgnomeprint libgnomeprint2-2_0 libgnomeprintui libgnomeprintui2-2_0<br>  libgnomeui2 libgnomeui2_0 libgsf-1_114 libgstreamer-plugins-base0.10<br>  libgstreamer0.10_0.10 libgtop2 libgtop2.0_7 libgucharmap5 libmesagl1<br>  libmesaglu1 libmetacity-private0 libnautilus1 libnotify1 libpanel-applet-2_0<br>  librecode0 librsvg2_2 libsexy2 libshout3 libsmbclient0 libstdc++5<br>  libvorbisenc2 libxklavier-data libxklavier11 libxml2-python libxslt-proc<br>  metacity nautilus notification-daemon pclinuxos-menu-messages<br>  pclinuxos-theme pygtk2.0 pygtk2.0-libglade pyorbit python python-gnome-menus<br>  python-gobject python-numeric scrollkeeper sox system-tools-backends<br>  task-gnome-minimal vorbis-tools xlockmore yelp</pre>
+<p>0 upgraded, 102 newly installed, 0 removed and 8 not upgraded.<br>
+Need to get 106MB of archives.<br>
+After unpacking 308MB of additional disk space will be used.<br>
+Do you want to continue? [Y/n] y</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_5"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?OpenOffice"
+ title="OpenOffice (611d)">OpenOffice</a>.org のインストール</h4>
+<p># apt-get install openoffice.org
+openoffice.org-l10n-jaパッケージリストを読みこんでいます... 完了<br>
+依存情報ツリーを作成しています... 完了<br>
+以下の追加パッケージがインストールされます:</p>
+<pre>  ghostscript ghostscript-common ghostscript-fonts libgs8 libunixODBC1<br>  urw-fonts</pre>
+<p>以下のパッケージが新たにインストールされます:</p>
+<pre>  ghostscript ghostscript-common ghostscript-fonts libgs8 libunixODBC1<br>  openoffice.org openoffice.org-l10n-ja urw-fonts</pre>
+<p>アップグレード: 0 個, 新規インストール: 8 個, 削除: 0 個, 保留: 1 個<br>
+159MB のアーカイブを取得する必要があります。<br>
+展開後に 467MB のディスク容量が追加消費されます。<br>
+続行しますか? [Y/n] y</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_6">印刷システム(CUPS)のインストール</h4>
+<p># apt-get install cups<br>
+パッケージリストを読みこんでいます... 完了<br>
+依存情報ツリーを作成しています... 完了<br>
+以下の追加パッケージがインストールされます:<br>
+　cups-common printer-testpages<br>
+以下のパッケージが新たにインストールされます:<br>
+　cups cups-common printer-testpages<br>
+アップグレード: 0 個, 新規インストール: 3 個, 削除: 0 個, 保留: 1 個<br>
+3462kB のアーカイブを取得する必要があります。<br>
+展開後に 8925kB のディスク容量が追加消費されます。<br>
+続行しますか? [Y/n]y</p>
+<p># apt-get install cups-drivers<br>
+パッケージリストを読みこんでいます... 完了<br>
+依存情報ツリーを作成しています... 完了<br>
+以下の追加パッケージがインストールされます:<br>
+　<span class="noexists">ImageMagick<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=ImageMagick&amp;refer=PCLinuxOS%2FTinyMe">?</a></span>
+libMagick10.4.0 libwmf libwmf0.2_7<br>
+以下のパッケージが新たにインストールされます:<br>
+　<span class="noexists">ImageMagick<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=ImageMagick&amp;refer=PCLinuxOS%2FTinyMe">?</a></span>
+cups-drivers libMagick10.4.0 libwmf libwmf0.2_7<br>
+アップグレード: 0 個, 新規インストール: 5 個, 削除: 0 個, 保留: 1 個<br>
+4944kB のアーカイブを取得する必要があります。<br>
+展開後に 12.9MB のディスク容量が追加消費されます。<br>
+続行しますか? [Y/n]y</p>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>

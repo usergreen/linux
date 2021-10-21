@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=Shift_JIS"
+      http-equiv="Content-Type">
+    <title>RepositoryMixingProblems</title>
+  </head>
+  <body>
+    <div id="body">
+      <p><a href="http://f40.aaa.livedoor.jp/%7Egreen/?FrontPage"
+          title="FrontPage (2d)">Top</a> / <a
+          href="http://f40.aaa.livedoor.jp/%7Egreen/?FedoraCore-FAQ">FedoraCore-FAQ</a>
+        / <a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?FedoraCore-FAQ%2FTranslationDocs">TranslationDocs</a>
+        / <a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?FedoraCore-FAQ%2FTranslationDocs%2FRepositoryMixingProblems">RepositoryMixingProblems</a></p>
+      <h2 id="content_1_0">リポジトリー混用による問題点&nbsp;</h2>
+      <p>最終更新：2004年1月24日（金） 午後 1:40:10</p>
+      <blockquote>
+        <p class="quotation">訳注）＊１　リポジトリ(repository)：複数のRPMパッケージを保存している、
+          FTPサー
+          バー上の保管庫。英語のrepositoryには、倉庫・書庫という意味があります。</p>
+      </blockquote>
+      <p>原文へのリンク：<a
+          href="http://www.fedora.us/wiki/RepositoryMixingProblems">http://www.fedora.us/wiki/RepositoryMixingProblems</a></p>
+      <div class="contents">
+        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+          <li><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FRepositoryMixingProblems#content_1_0">リ
+              ポジトリー混用による問題点 </a>
+            <ul class="list2" style="padding-left: 16px; margin-left:
+              16px;">
+              <li><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FRepositoryMixingProblems#content_1_1">リ
+                  ポジトリー混用による問題点 </a></li>
+              <li><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FRepositoryMixingProblems#content_1_2">問
+                  題点とその対処について </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FRepositoryMixingProblems#navigator">↑</a></div>
+      <h3 id="content_1_1">リポジトリー混用による問題点&nbsp;</h3>
+      <p>フェドーラが提供する（RPM)パッケージは、レッドハット・リナックスと他のフェドーラのパッケージで使用することを前提に開発さ
+        れ、十分機能す
+        ることが検証されています。もしあなたが他のリポジトリー（＊１）から独自のパッケージを入手してインストールされる場合は、互換性の問
+        題に突き当たる可
+        能性があります。フェドーラ・リナックス・プロジェクトでは、他のリポジトリーとの互換性は保証しないことにしています。なぜなら、次に
+        述べるような理由
+        から、メンテナンス（保守）出来ないからです：</p>
+      <p>複数のリポジトリーを利用する際、パッケージ同士で不都合が発生するのを回避する唯一の手段は、他の誰かがパッケージすることを完全に
+        排除すること
+        です。しかし、これではフェドーラ・プロジェクトの活動を制約しすぎるので、このやり方を採ることはとても出来ません。</p>
+      <p>２つかそれ以上あるリポジトリーの互換性を確保することは、はるかに困難なことで、一層問題を引き起こします。ユーザーに問題を発生さ
+        せないために
+        は、更新が複数のリポジトリー管理者の協力のもとに運ばれ、同時に公開されるようにしなくてはなりません。これでは非常に余計な時間がか
+        かります。</p>
+      <p>ユーザーが勝手にリポジトリーを混用して、悪夢のような状況に陥る可能性があります。</p>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FRepositoryMixingProblems#navigator">↑</a></div>
+      <h3 id="content_1_2">問題点とその対処について&nbsp;</h3>
+      <p>ユーザーが複数のリポジトリーを利用する最大の理由は、１つのリポジトリーだけでは必要なすべてのパッケージを揃えていないからです。
+        フェドーラが
+        目指している本来の目的は、個別に提供されているパッケージを一括し、いっそう高品質でかつ多数のパッケージを保有する、１つに集約され
+        たリポジトリーを
+        確立すべく、１つの開発チームのもとで協力して取り組むことにあります。ですから、ユーザーが利用したいと思うようなパッケージをフェ
+        ドーラが提供してい
+        ないからといって、導入しているApt/Yumに他のリポジトリーを追加するようなことをなさらずに、どうか次のことを実行してくださ
+        い：</p>
+      <p>独自にパッケージを開発されている方にFedoraの品質テストを受けるように勧めてください。そうしたパッケージは、改良され、品質
+        テストやセ
+        キュリティが検証された後に、フェドーラの組み込まれます。パッケージを作った元の開発者は、提出されたパッケージの互換性や品質の向上
+        を図ろうと努めて
+        いる、他のフェドーラの開発者やバグジラ、その他の組織からの支援を受けることができます。</p>
+      <p>たとえ、独自にパッケージを開発している方がフェドーラのプロジェクト参加に興味が無いとしても、フェドーラが提供する検証方法をつか
+        んで、本人自
+        らで検証することもできます。あるいは、フェドーラの開発者に話しを持ちかけて、フェドーラの品質テストに耐えるようにそのパッケージを
+        改良してもらうこ
+        ともできます。</p>
+      <p>以上のように、リポジトリーを混用すると、時には互換性が保証できなくなるので、注意する必要があります。リポジトリーの混用から発生
+        した不具合に
+        関して苦情を訴えても、サポートは受けられないことでしょう。どうか、フェドーラが可能な限りすべてのパッケージを管理することで、上に
+        述べたような問題
+        がいつの日にか過去のものとなるようにご協力お願いします。</p>
+    </div>
+  </body>
+</html>

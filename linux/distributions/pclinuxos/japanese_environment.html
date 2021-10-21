@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>JapaneseEnvironment</title>
+</head>
+<body>
+<div id="navigator">
+<div><a href="../../../index.html" title="FrontPage (3d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">PCLinuxOS</a>
+/ JapaneseEnvironment</div>
+<hr size="2" width="100%">
+<h3 id="content_1_0">日本語環境 (For Japanese Environment)</h3>
+<div class="contents">
+<ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">日本語環境 (For Japanese Environment)</a>
+    <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">パッケージの追加インストール</a></li>
+      <li><a href="#content_1_2">ユーザーのロケール変更方法（ユーザーレベルでの変更）</a></li>
+      <li><a href="#content_1_3">日本語版リマスターCD を入手する</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<p>以下の手順どおり、パッケージの追加インストールとシステムのロケール変更を行います。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_1">パッケージの追加インストール</h4>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>KDE デスクトップの場合
+    <pre> # apt-get update <br> # apt-get install scim scim-anthy scim-qtimm scim-input-pad fonts-ttf-japanese</pre>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>GNOME / Xfce デスクトップの場合
+    <pre> # apt-get install scim scim-anthy scim-input-pad fonts-ttf-japanese locales-ja<br> # apt-get install mozilla-firefox-ja openoffice.org openoffice.org-l10n-ja</pre>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_2">ユーザーのロケール変更方法（ユーザーレベルでの変更）</h4>
+<ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Panel &gt; System &gt; Configuration &gt; Other &gt; <span
+ class="noexists">LocaleDrake<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=LocaleDrake&amp;refer=PCLinuxOS%2FJapaneseEnvironment">?</a></span>
+(User)</li>
+  <li>Set the language as Japanese.</li>
+  <li>Log-off &amp; log-in</li>
+</ol>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_3">日本語版リマスターCD を入手する</h4>
+<p>ライブCDの部屋（日本語版）が公開されています。これは、KDEデスクトップが標準です。<br>
+<a href="http://simosnet.com/livecd/pclinuxos/">http://simosnet.com/livecd/pclinuxos/</a></p>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>

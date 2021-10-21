@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>MandrivaLinux / AptSourceslist</title>
+</head>
+<body>
+<table style="width: 100%;" border="0">
+  <tbody>
+    <tr>
+      <td valign="top">
+      <div id="body">
+      <p><a href="http://f40.aaa.livedoor.jp/%7Egreen/?MandrivaLinux"
+ title="MandrivaLinux (2109d)">MandrivaLinux</a><br>
+/etc/apt/souces.list 設定例（国内ミラーサイトの場合）<br>
+書式が他の RPM 系ディストリビューションと異なるので、注意します。</p>
+      <pre> # Package repository URL's<br> <br> # Signed repositories have a [&lt;key&gt;] where &lt;key&gt; is the name of the key<br> # as it appears in vendors.list. If you remove it, no digital signature check<br> # will be made.<br> <br> # See http://qa.mandriva.com/twiki/bin/view/Main/CookerMirrors for a full list <br> # of mirrors.<br> <br> # You can also get mirrors from easyurpmi.zarb.org<br> <br> # format is simple :<br> # 1) rpm is the type of archive<br> # 2) server is the path to the main directory<br> # 3) list is the relative path to the list, from the main directory<br> # 4) rpms is the relative path to the rpms, from the main directory<br> <br> # you cannot use synthesis.hdlist, but you can take a hdlist.src, to install SRPM<br> # with apt.<br> <br> # example <br> # rpm ftp://ftp.lip6.fr/pub/linux/distributions/Mandrakelinux/devel/cooker/i586/media/ media_info/hdlist_main main <br> <br> rpm http://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/2006.0/i586/media/ media_info/hdlist_main main <br> <br> rpm http://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/2006.0/i586/media/ media_info/hdlist_contrib contrib <br> <br> rpm http://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/updates/2006.0/ main_updates/media_info/hdlist main_updates</pre>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

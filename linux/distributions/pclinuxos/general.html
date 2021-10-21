@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=Shift_JIS"
+      http-equiv="Content-Type">
+    <title>General</title>
+  </head>
+  <body>
+    <div id="navigator">
+      <div><a href="../../../index.html" title="FrontPage (3d)">HOME</a>
+        / <a href="../index.html">Distributions</a> / <a
+          href="index.html">PCLinuxOS</a>
+        / General</div>
+      <hr size="2" width="100%">
+      <h2 id="content_1_0">PCLinuxOS</h2>
+      <div class="contents">
+        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_0">PCLinuxOS</a>
+            <ul class="list2" style="padding-left: 16px; margin-left:
+              16px;">
+              <li><a href="#content_1_1">公式サイトとガイド、レビュー</a></li>
+              <li><a href="#content_1_2">日本語版</a></li>
+              <li><a href="#content_1_3">デスクトップ環境の変更</a></li>
+              <li><a href="#content_1_4">HDD へのインストール</a></li>
+              <li><a href="#content_1_5">日本語環境</a></li>
+              <li><a href="#content_1_6">3D デスクトップ効果</a></li>
+              <li><a href="#content_1_7">Remaster CD</a></li>
+              <li><a href="#content_1_8">ミラーリスト Official mirror lists
+                  (from
+                  /etc/apt/sources.list)</a></li>
+              <li><a href="#content_1_9">関連リンク</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_1">公式サイトとガイド、レビュー</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>公式サイト<br>
+          <a href="http://www.pclinuxos.com/">http://www.pclinuxos.com/</a></li>
+        <li>公式インストールガイド<br>
+          Installing PCLinuxOS to your Hard Drive<br>
+          <a href="http://www.pclinuxonline.com/wiki/InStallation93">http://www.pclinuxonline.com/wiki/InStallation93</a></li>
+        <li>レビュー：PCLinuxOS 2007――美しさと実用性を兼ね備えたライブCD Linux<br>
+          <a
+            href="http://opentechpress.jp/developer/article.pl?sid=07/05/25/0122240">http://opentechpress.jp/developer/article.pl?sid=07/05/25/0122240</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_2">日本語版</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>ライブCDの部屋（日本語版） <a
+            href="http://simosnet.com/livecd/pclinuxos/">http://simosnet.com/livecd/pclinuxos/</a>
+          <pre> pclinuxos-2007-0917-jp.iso	17-Sep-2007 22:07 	699M</pre>
+        </li>
+        <li><a href="http://tomcat.nyanta.jp/sb2/sb.cgi?eid=119">Operation
+Normal
+            ? | PCLinuxOS 2007 インストールメモ ＞自分用</a></li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_3">デスクトップ環境の変更</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>GNOME デスクトップ環境のインストール
+          <pre> # apt-get install task-gnome</pre>
+          あるいは、
+          <pre> # apt-get install task-gnome-minimal</pre>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Xfce デスクトップ環境のインストール
+          <pre> # apt-get install task-xfce</pre>
+        </li>
+      </ul>
+      <hr class="full_hr">
+      <p>ライブCDの部屋（日本語版）に GNOME の最小環境を追加したとき。</p>
+      <blockquote>
+        <p class="quotation"># apt-get install task-gnome-minimal<br>
+          Reading Package Lists... Done<br>
+          Building Dependency Tree... Done<br>
+          The following extra packages will be installed:</p>
+        <pre>  alacarte eel evolution-data-server gksu gnome-applets gnome-control-center<br>  gnome-doc-utils gnome-menus gnome-mount gnome-panel gnome-python<br>  gnome-python-applet gnome-python-bonobo gnome-python-canvas<br>  gnome-python-desktop gnome-python-extras gnome-python-gconf<br>  gnome-python-gnomevfs gnome-screensaver gnome-session gnome-system-monitor<br>  gnome-terminal gnome-user-docs gnome-utils gnome-volume-manager<br>  gstreamer0.10-plugins-good libbeagle0 libcpufreq0 libeel2_2 libgdict1.0_5<br>  libgksu1.2_0 libgksuui1.0_1 libgnome-applets0 libgtop2 libgtop2.0_7<br>  libgucharmap5 libnautilus1 libnotify1 libshout3 libxklavier-data<br>  libxklavier11 libxml2-python libxslt-proc metacity nautilus<br>  notification-daemon pyorbit python-gnome-menus system-tools-backends<br>  vorbis-tools xlockmore yelp</pre>
+        <p class="quotation">The following NEW packages will be
+          installed:</p>
+        <pre>  alacarte eel evolution-data-server gksu gnome-applets gnome-control-center<br>  gnome-doc-utils gnome-menus gnome-mount gnome-panel gnome-python<br>  gnome-python-applet gnome-python-bonobo gnome-python-canvas<br>  gnome-python-desktop gnome-python-extras gnome-python-gconf<br>  gnome-python-gnomevfs gnome-screensaver gnome-session gnome-system-monitor<br>  gnome-terminal gnome-user-docs gnome-utils gnome-volume-manager<br>  gstreamer0.10-plugins-good libbeagle0 libcpufreq0 libeel2_2 libgdict1.0_5<br>  libgksu1.2_0 libgksuui1.0_1 libgnome-applets0 libgtop2 libgtop2.0_7<br>  libgucharmap5 libnautilus1 libnotify1 libshout3 libxklavier-data<br>  libxklavier11 libxml2-python libxslt-proc metacity nautilus<br>  notification-daemon pyorbit python-gnome-menus system-tools-backends<br>  task-gnome-minimal vorbis-tools xlockmore yelp</pre>
+        <p class="quotation">0 upgraded, 53 newly installed, 0 removed
+          and
+          130 not upgraded.<br>
+          Need to get 50.5MB of archives.<br>
+          After unpacking 150MB of additional disk space will be used.<br>
+          Do you want to continue? [Y/n] y</p>
+      </blockquote>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_4">HDD へのインストール</h3>
+      <p>デスクトップのインストール用アイコンを選択します。このアイコンは、/usr/sbin/draklive-install　への
+        ショートカット
+        です（root権限を必要とします）。<br>
+        コマンドラインからは、次のコマンドを実行します。</p>
+      <pre> # draklive-install</pre>
+      <blockquote>
+        <p class="quotation">drakelive-install<br>
+          Live installer for PCLinuxOS<br>
+          This tool allows to install PCLinuxOS from a running live CD.</p>
+      </blockquote>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_5"><a href="japanese_environment.html"
+          title="PCLinuxOS/JapaneseEnvironment (1527d)">日本語環境</a></h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_6">3D デスクトップ効果</h3>
+      <p>Applications &gt; システムツール &gt; Beryl Manager 起動</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_7"><a href="remaster.html"
+          title="PCLinuxOS/Remaster (1523d)">Remaster CD</a></h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_8">ミラーリスト Official mirror lists (from
+        /etc/apt/sources.list)</h3>
+      <p># Package repository URL's</p>
+      <p># Signed repositories have a [&lt;key&gt;] where &lt;key&gt; is
+        the
+        name of the key<br>
+        # as it appears in vendors.list. If you remove it, no digital
+        signature
+        check<br>
+        # will be made.</p>
+      <p>rpm <a
+          href="http://spout.ussg.indiana.edu/linux/pclinuxos/pclinuxos/apt/">http://spout.ussg.indiana.edu/linux/pclinuxos/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a href="http://ftp.heanet.ie/pub/pclinuxos/apt/">http://ftp.heanet.ie/pub/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a
+href="http://distro.ibiblio.org/pub/linux/distributions/texstar/pclinuxos/apt/">http://distro.ibiblio.org/pub/linux/distributions/texstar/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a
+href="http://www.gtlib.gatech.edu/pub/metalab/distributions/texstar/pclinuxos/apt/">http://www.gtlib.gatech.edu/pub/metalab/distributions/texstar/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a
+          href="ftp://ftp.belnet.be/pub/mirror/pclinuxonline.com/apt/">ftp://ftp.belnet.be/pub/mirror/pclinuxonline.com/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a href="ftp://ftp.ch.debian.org/mirror/pclinuxos/apt/">ftp://ftp.ch.debian.org/mirror/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a href="http://ftp.sh.cvut.cz/MIRRORS/pclinuxos/apt/">http://ftp.sh.cvut.cz/MIRRORS/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a
+          href="http://ftp.nl.freebsd.org/os/Linux/distr/texstar/pclinuxos/apt/">http://ftp.nl.freebsd.org/os/Linux/distr/texstar/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a href="ftp://ftp.pbone.net/pub/pclinuxos/apt/">ftp://ftp.pbone.net/pub/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a href="ftp://rm.mirror.garr.it/mirrors/pclinuxos/apt/">ftp://rm.mirror.garr.it/mirrors/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a href="http://mirrors.lastdot.org:1280/pclos/apt/">http://mirrors.lastdot.org:1280/pclos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a href="ftp://ftp.eth0-up.com/pclinuxos/apt/">ftp://ftp.eth0-up.com/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a href="http://linuxstation.net/pub/pclinuxos/apt/">http://linuxstation.net/pub/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a href="http://pclosusers.com/pclosusers/pclosfiles/">http://pclosusers.com/pclosusers/pclosfiles/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a
+          href="http://ftp.leg.uct.ac.za/pub/linux/pclinuxos/apt/">http://ftp.leg.uct.ac.za/pub/linux/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a
+          href="http://mirror.pacific.net.au/pub1/linux/texstar/pclinuxos/apt/">http://mirror.pacific.net.au/pub1/linux/texstar/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a
+          href="ftp://mirror.internode.on.net/pub/pclinuxos/apt/">ftp://mirror.internode.on.net/pub/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <p># rpm <a href="ftp://klid.dk/pclinuxos/apt/">ftp://klid.dk/pclinuxos/apt/</a>
+        pclinuxos/2007 main extra nonfree kde</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_9">関連リンク</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://tomcat.nyanta.jp/sb2/sb.cgi?cid=6">Operation
+            Normal ? | PCLinuxOS</a>（PCLinuxOS 日本語Tips集） </li>
+      </ul>
+      <hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+    </div>
+  </body>
+</html>

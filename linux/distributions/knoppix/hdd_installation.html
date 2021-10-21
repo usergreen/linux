@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=Shift_JIS"
+      http-equiv="Content-Type">
+    <title>HddInstallation</title>
+  </head>
+  <body>
+    <div id="navigator">
+      <p><a href="../../../index.html" title="FrontPage (2d)">HOME</a> /
+        <a href="../index.html">Distributions</a> / <a
+          href="index.html">KNOPPIX</a>
+        / Hdd
+        Installation</p>
+      <hr size="2" width="100%">
+      <h2 id="content_1_0">ハードディスクにインストールしての使用</h2>
+      <div class="contents">
+        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_0">ハー
+              ドディスクにインストールしての使用 </a>
+            <ul class="list2" style="padding-left: 16px; margin-left:
+              16px;">
+              <li><a href="#content_1_1">ハー
+                  ドディスク（HDD)にインストールして使えますか。 </a></li>
+              <li><a href="#content_1_2">KNOPPIX
+                  を HDD にインストールする手順について </a></li>
+              <li><a href="#content_1_3">HDD
+                  インストール時の Debian形式システムと Knoppix-System との違いは何ですか。 </a></li>
+              <li><a href="#content_1_4">Debian
+                  GNU/Linux
+                  をインストールする簡易な方法として活用できますか。 </a></li>
+              <li><a href="#content_1_5">起
+                  動時、ログイン画面が表示されず、デスクトップからその設定もできません。 </a></li>
+              <li><a href="#content_1_6">HDD
+                  インストールしたら、パッケージ管理ツール APT は使えますか。 </a></li>
+              <li><a href="#content_1_7">HDD
+                  インストールしたら、メールソフト Sylpheed の本文が文字化けして読めません。 </a></li>
+              <li><a href="#content_1_8">新
+                  機能 install2win [KNOPPIX2WIN] とは何ですか。 </a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a href="#content_1_9">起
+                      動できなくなる問題とその対処方法 </a></li>
+                </ul>
+              </li>
+              <li><a href="#content_1_10">install2win
+                  と従来のHDDインストールの違いは何ですか。 </a></li>
+              <li><a href="#content_1_11">GNOME
+                  2.2
+                  をインストールするには? </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_1">ハードディスク（HDD)にインストールして使えますか。</h3>
+      <p>KNOPPIX は CD
+        から起動するLinuxなのでインストール作業は必要ありませんが、ハードディスクにインストールして利用することも可能です。その場合
+        は、次の説明を参
+        考にしてください。グラフィカルな画面上から、日本語の操作手順に従って作業を行えます。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>最新版
+          のKnoppix V3.4日本語版では knoppix-installer が導入されていて、従来の
+          knx-hdinstall
+          と別物です。これは、産総研のページで解説されています。最新版のKnoppix V3.4日本語版では、従来の
+          knx-hdinstall.ja
+          を使うことはできなくなりました。
+          <p>コンソールで knoppix-installer
+            を入力してください。最新版ではこちらがメインになるそうですが、産総研によると
+            knoppix-installer
+            はまだ動作が確認されていないということです。インストールする際には気をつけてください。</p>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>KNOPPIX
+          3.3 では、knx-hdinstall.ja で HD
+          インストールすると日本語が入力できないという不具合が見られるようです。その際には、/etc/X11/Xsession.d
+          /31xinput
+          ファイルの冒頭又は2行目に次の記述を追加してください。
+          <pre> export LANG="ja_JP.eucJP"<br> export LC_ALL="ja_JP.eucJP"</pre>
+          ログインし直すと、日本語入力が可能となります。</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Knoppix3.2 以前の日本語版の場合、スタートから-Root Shell（コンソール）を開き、キーボードから
+          knx-hdinstall.ja と入力すれば、インストーラーが立ち上がります。
+          <ul class="list2" style="padding-left: 16px; margin-left:
+            16px;">
+            <li>knx-hdinstall と入力すると英語のメッセージが表示されてしまうので、注意します。</li>
+          </ul>
+        </li>
+      </ul>
+      <blockquote>
+        <p class="quotation">グラフィカルな画面上で、対話形式で作業を進めるので、Windowsをインストー
+          ルした経験があれば、ハードルは高くありません。より詳細な手順は、秀和システムより発行されたリナックス入門書「Knoppixで
+          はじめるLinux入
+          門」の巻末に載せられているので、参考にしてください。</p>
+      </blockquote>
+      <blockquote>
+        <p class="quotation">KNOPPIX風に味付けされたDebian
+          GNU/Linuxが楽しめます。もちろん、機能や設定は CD ブート時のものを引き継ぐので、使い勝手が劣ることはありません。</p>
+      </blockquote>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_2">KNOPPIX を HDD にインストールする手順について</h3>
+      <p>簡単な手順を作成しました。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>KNOPPIX 3.4(20040629) 日本語版以降のリリースを対象とする最新のインストール方法は、<a
+            href="http://f40.aaa.livedoor.jp/%7Egreen/?KNOPPIX-FAQ%2F3.4HddInstall"
+            title="KNOPPIX-FAQ/3.4HddInstall (2099d)">3.4 日本語版のインストール手順</a>を
+          見てください。
+          さらに簡略化されたインストールを実現しています。</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>KNOPPIX 3.3 日本語版以降を対象とした新しいインストール方法は、<a
+            href="http://f40.aaa.livedoor.jp/%7Egreen/?KNOPPIX-FAQ%2F3.3HddInstall"
+            title="KNOPPIX-FAQ/3.3HddInstall (2099d)">3.3 日本語版のインストール手順</a>を
+          見てください。</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>主として、KNOPPIX 3.2 日本語版以前をインストールする場合には、<a
+            href="http://f40.aaa.livedoor.jp/%7Egreen/?KNOPPIX-FAQ%2F3.2HddInstall"
+            title="KNOPPIX-FAQ/3.2HddInstall (2099d)">3.2 日本語版のインストール手順</a>を
+          見てください。</li>
+      </ul>
+      <p>なお、各国語に翻訳されたインストール方法を収集している <a
+          href="http://www.freenet.org.nz/misc/knoppix-install.html">Knoppix
+Hard
+          Disk Installation HOWTO</a> というサイトがあります。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_3">HDD インストール時の Debian形式システムと Knoppix-System
+        との違いは何ですか。</h3>
+      <p>まず、Debian形式はあくまで形式であって、Debian形式を選んでも<strong>Debian
+          GNU/Linuxにはなりません。</strong>(理
+        由は『<a href="#k594af02">Debian
+          GNU/Linux
+          をインストールする簡易な方法として活用できますか。</a>』を参照)<br>
+        それを踏まえて以下を読んでください。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>「Debian形式のシステムでインストールした場合、networkの設定は受け継がれません。netcardconfigな
+          どでの再設定
+          が必要です。また、user名を knoppix以外にした場合は、mozillaの再設定も必要になります。」</li>
+        <li>「Knoppix-Systemでのインストールの場合、user名はknoppixで固定されているため問題はありません。た
+          だし、CD版
+          でのユーザ環境などは引き継がれなく、インストール時に設定したパスワードも利用されません。」</li>
+      </ul>
+      <blockquote>
+        <p class="quotation">Aist の<a
+            href="http://unit.aist.go.jp/itri/knoppix/news/news031124.html">2003/11
+            /24
+            ニュース</a>では、このように触れられている箇所があります。</p>
+      </blockquote>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>HDD インストールしたら、日本語入力ができなくなりました。
+          <blockquote>
+            <p class="quotation">KNOPPIX 3.3 では、HDD
+              インストールすると日本語が入力できないという不具合が見られるかも知れません。/etc/X11/Xsession.d
+              /31xinput
+              ファイルの冒頭又は2行目に次の記述を追加したあと、ログインし直してみてください。</p>
+            <pre> export LANG="ja_JP.eucJP"<br> export LC_ALL="ja_JP.eucJP"</pre>
+          </blockquote>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>[Shift]+[Space]で日本語入力モードにした後、元の英文入力モードに戻らなくなりました。
+          <blockquote>
+            <p class="quotation">[Ctrl] + ? を試してみたら直るようです。</p>
+          </blockquote>
+        </li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_4">Debian GNU/Linux をインストールする簡易な方法として活用できますか。</h3>
+      <p>できません。<br>
+        KNOPPIX独自パッケージの依存性によって、Debian
+        GNU/Linuxに必要なシステムのパッケージをインストールすることができないので完全なDebian
+        GNU/Linuxにはなりません。</p>
+      <p>Debian GNU/Linuxをインストールしたいなら <a
+          href="http://www.jp.debian.org/devel/debian-installer/index.ja.html">公
+          式
+          インストーラ (Debian-Installer)</a>、もしくはインストーラに Anaconda for Debian
+        を利用した <a href="http://componentizedlinux.org/progeny/">Progeny
+          Debian</a>
+        を使ってインストールしてください。(<span class="noexists">Progeny Debian 日本語FAQ<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=FAQ%2FDistribution%2FProgeny&amp;refer=KNOPPIX-FAQ%2FHarddiskInstallation">?</a></span>
+        を参照してください。)</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_5">起動時、ログイン画面が表示されず、デスクトップからその設定もできません。</h3>
+      <p>knoppix-installer を使ってKNOPPIX3.3 20040220
+        版をハードディスクにインストールした場合にこの状況になるようです。</p>
+      <p>これは、インストールする手順の途中で、システムタイプに Knoppix-system を選択したからです。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>変更するには、再インストールを実行し、debian
+          形式のシステム（以前のインストーラの様に）を設定する以外、今のところ対処方法が他に見つかりません。</li>
+      </ul>
+      <p>なお、knx-hdinstall.jp
+        でハードディスクへインストールしている場合では、起動時にログイン画面が正しく立ち上がり、root
+        ユーザーと一般ユーザーの使い分けができるようです。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_6">HDD インストールしたら、パッケージ管理ツール APT は使えますか。</h3>
+      <p>はい。使えます。</p>
+      <p>ただしインストール直後の設定のままでは、膨大な数のパッケージが更新／新規インストールの対象となってしまうのと、それらのパッケー
+        ジをネット
+        ワーク的に遠い場所からダウンロードしようとするので、お使いの環境に応じて /etc/apt/sources.list ファイルを
+        Kwrite
+        などのエディターで編集するか、apt-setup
+        を使って近い場所を追加しておくと良いでしょう。(apt-setupを使うと、sources.list の末尾に apt-line
+        が追加されます。)</p>
+      <p>詳しくは<a href="http://debian.fam.cx/index.php?AptGet">Debian
+          GNU/Linux
+          スレッドテンプレ aptとその周辺</a>をどうぞ。</p>
+      <p>追加する場合、クライアント用には安定版 (Stable) を使用するのではなく、テスト版 (Testing)
+        を利用する設定にすると比較的最近のパッケージが入手できます。<br>
+        <br>
+        不安定版 (Unstable) や実験版 (Experimental) は主に開発者向けなので、apt-line
+        をコメントアウト(行頭に #
+        を書き込んで無効にすること)しておくか、/etc/apt/apt.conf.d/99target ファイルに</p>
+      <pre> APT::Default-Release "testing";</pre>
+      <p>と書いて testing 以上にはアップグレードされないようにしておいたほうが無難です。</p>
+      <p>また、次の部分はセキュリティ関連用アップデートに必要なので、コメントアウトしないことをおすすめします。</p>
+      <pre> # Security updates for "stable"<br> deb http://security.debian.org stable/updates main contrib non-free<br> deb http://security.debian.org testing/updates main contrib non-free</pre>
+      <p>グラフィカルな画面上でさらに分かり易い作業を希望する場合には、「Synaptic」（Testing
+        版）を追加インストールしてください。Red Hat Linux や Fedora Core 1 など RPM 系
+        のディストリビューションでもすでに採用されている GUI フロントエンドです。インストールするには apt-get
+        install
+        synaptic を実行します。</p>
+      <p>設定例を上げておきます：</p>
+      <pre> # See sources.list(5) for more information, especialy<br> # Remember that you can only use http, ftp or file URIs<br> # CDROMs are managed through the apt-cdrom tool.<br> <br> # Security updates for "stable"<br> deb http://security.debian.org/ stable/updates main contrib non-free   <br> deb http://security.debian.org/ testing/updates main contrib non-free  <br> <br> # Stable<br> deb ftp://ftp.jp.debian.org/debian/ stable main contrib  <br> # deb-src ftp://ftp.jp.debian.org/debian/ stable main contrib <br> <br> # Stable original<br> # deb http://ftp2.de.debian.org/pub/debian/ stable main contrib non-free <br> # deb http://ftp2.de.debian.org/pub/debian-non-US/ stable/non-US main contrib non-free <br> <br> # Sources original<br> # deb-src http://ftp2.de.debian.org/pub/debian/ stable main contrib non-free <br> # deb-src http://ftp2.de.debian.org/pub/debian-non-US/ stable/non-US main contrib non-free <br> <br> # Testing<br> deb ftp://ftp.jp.debian.org/debian/ testing main contrib <br> # deb-src ftp://ftp.jp.debian.org/debian/ testing main contrib <br> <br> # Testing original<br> # deb http://ftp2.de.debian.org/pub/debian/ testing main contrib non-free <br> # deb http://ftp2.de.debian.org/pub/debian-non-US/ testing/non-US main contrib non-free <br> <br> # Sources original<br> # deb-src http://ftp2.de.debian.org/pub/debian/ testing main contrib non-free <br> # deb-src http://ftp2.de.debian.org/pub/debian-non-US/ testing/non-US main contrib non-free <br> <br> # Unstable<br> # deb ftp://ftp.jp.debian.org/debian/ unstable main contrib <br> # deb-src ftp://ftp.jp.debian.org/debian/ unstable main contrib <br> <br> # Unstable original<br> # deb http://ftp2.de.debian.org/debian/ unstable main contrib non-free <br> # deb http://ftp2.de.debian.org/debian-non-US/ unstable/non-US main contrib non-free <br> <br> # Sources original<br> # deb-src http://ftp2.de.debian.org/debian/ unstable main contrib non-free <br> # deb-src http://ftp2.de.debian.org/debian-non-US/ unstable/non-US main contrib non-free <br> <br> # Experimental<br> # deb http://ftp2.de.debian.org/debian/ ../project/experimental main contrib non-free <br> # deb-src http://ftp2.de.debian.org/debian/ ../project/experimental main contrib non-free <br> <br> # Mozilla<br> # deb http://non-us.debian.org/~kitame/mozilla/ ./ <br> # deb-src http://non-us.debian.org/~kitame/mozilla/ ./ <br> <br> # GNOME 2.0<br> # deb http://www.gnome.de/debian/ ./ <br> <br> # KDE 3<br> # deb http://ktown.kde.org/~nolden/kde/ stable main <br> # deb-src http://ktown.kde.org/~nolden/kde/ stable main <br> # We get packages from testing/unstable for now<br> <br> # cdbakeoven<br> # deb http://coyote.asoc.euitt.upm.es/mud/debian/ ./ <br> <br> # XFree 4.2/4.3<br> # deb http://people.debian.org/~branden/packages/ sid/i386/ <br> # deb-src http://people.debian.org/~branden/packages/ sid/source/ <br> # deb http://www.penguinppc.org/~daniels/sid/i386/ ./ <br> # deb-src http://www.penguinppc.org/~daniels/sid/source/ ./ <br> <br> # Java<br> # deb ftp://ftp.gwdg.de/pub/languages/java/linux/debian/ woody main non-free <br> # deb-src ftp://ftp.gwdg.de/pub/languages/java/linux/debian/ woody main non-free <br> # deb ftp://ftp.gwdg.de/pub/languages/java/linux/debian/ unstable main non-free <br> # deb-src ftp://ftp.gwdg.de/pub/languages/java/linux/debian/ unstable main non-free <br> # deb http://people.debian.org/~sgybas/jdk13<br> <br> # LyX &amp; others (now in debian/unstable)<br> # deb ftp://ntama.uni-mainz.de/pub/debian/ unofficial/  <br> # deb-src ftp://ntama.uni-mainz.de/pub/debian/ unofficial/ <br> <br> # Evolution<br> # deb ftp://ftp.ximian.com/pub/debian/ stable main <br> # deb-src ftp://ftp.ximian.com/pub/debian/ stable main <br> <br> # Blades Repository (pppoeconf &amp; co)<br> # deb http://people.debian.org/~blade/testing/ ./ <br> # deb-src http://people.debian.org/~blade/testing/ ./ <br> <br> # Wine CVS snapshot<br> # deb http://people.debian.org/~andreas/debian/ wine main <br> # deb-src http://people.debian.org/~andreas/debian/ wine main <br> <br> <br> deb ftp://ftp.jp.debian.org/debian-jp/ stable-jp main contrib <br> # deb-src ftp://ftp.jp.debian.org/debian-jp/ stable-jp main contrib <br> deb ftp://ftp.jp.debian.org/debian-jp/ testing-jp main contrib <br> # deb-src ftp://ftp.jp.debian.org/debian-jp/ testing-jp main contrib <br> # deb ftp://ftp.jp.debian.org/debian-jp/ unstable-jp main contrib  <br> # deb-src ftp://ftp.jp.debian.org/debian-jp/ unstable-jp main contrib <br> <br> #OpenOffice.org<br> # deb http://www.phy.olemiss.edu/openoffice/ woody main contrib <br> # deb-src http://www.phy.olemiss.edu/openoffice/ woody main contrib <br> <br> # Anthy for Debian sid<br> # deb http://anthy.sourceforge.jp/debian/ sid main <br> # deb-src http://anthy.sourceforge.jp/debian/ sid main <br> <br> # PRIME<br> # deb http://prime.sourceforge.jp/debian/ ./ <br> # deb http://taiyaki.org/debian/ ./ <br> # deb-src http://prime.sourceforge.jp/debian/ ./ </pre>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_7">HDD インストールしたら、メールソフト Sylpheed
+        の本文が文字化けして読めません。</h3>
+      <p>V3.3 (20040220) を knoppix-installer でインストールした場合に見られる不具合のようです。</p>
+      <p>set-language-env というコマンドを使って日本語の設定の見直しを行なってみるのも解決につながるかもしれません。</p>
+      <p>knx-hdinstall.ja で再インストールすれば、とりあえず Sylpheed で日本語が扱えます。</p>
+      <p>Sylpheed の替わりに、付属している Mozilla Mail を利用すれば、日本語が正常に利用できる可能性があります。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_8">新機能 install2win [KNOPPIX2WIN] とは何ですか。</h3>
+      <p>これは、 KNOPPIX を Winodows 2000, XP
+        のファイルシステムに自動的にインストールすることができるプログラムです。KNOPPIX V3.4
+        (20040517-20040629)
+        に追加されました。</p>
+      <p>インストールの仕方は Windows で install2win.bat をダブルクリックするだけです。
+        インストールに際して、
+        Cドライブに700M 程度の空き容量が必要となります。インストール作業は、 Administorator
+        権限で行います。詳しい手順については、CD に収録されている README.ja を見てください。</p>
+      <p>なお、この作業は Windows
+        の基本部分を変更するので、自分の責任で作業を行なって下さい。万一トラブルが発生しても大丈夫なように、準備を整えてから作業を開始す
+        るようお勧めしま
+        す。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>インストール(正確にはコピー)に要する時間は、およそ5～10分程度です。カーネルは、Linux Kernel 2.6.6
+          を使用します。<br>
+          正常にインストールが済めば、プロンプト画面が自動的に終了するので、KNOPPIX CD を取り出してから再起動してください。</li>
+      </ul>
+      <p>起動時には、次のような選択画面が表示されます。</p>
+      <pre> オペレーティング システムの選択<br> <br> 　Microsoft Windows XP Home Edition<br> 　GNU GRUB for KNOPPIX<br> <br> 　上矢印キーと下矢印キーを使って項目を選択し、Enter キーを押してください。</pre>
+      <p>[LILO や GRUB を使って既にデュアルブートを構築している場合]</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>この場合には、上の選択画面が最初に表示されることはありません。LILO や GRUB の起動画面から、まず
+          Windows
+          のラベルを選択すると上の画面に切り替わります。起動時の手順に注意してください。</li>
+      </ul>
+      <p>[削除する場合の注意点]</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>いきなり c:?boot と c:?KNOPPIX
+          フォルダを削除してはいけません。起動時の選択画面を削除することができなくなります。</li>
+        <li>メインメニュー ＞ 「ファイル名を指定して実行」でファイル名 c:?boot.ini を入力し、メモ帳で
+          c:?boot?grub?stage1="GNU GRUB for KNOPPIX
+          という記述行を削除し上書き保存します。ただし、Windows
+          の初期設定ではシステムファイルが保護される設定に固定されているので、「読み取り」属性を解除しないと上書き保存できないと思われ
+          ます。この属性は、
+          ファイルを右クリックしプロパティから変垢任?泙后KNOPPIX を全て削除したい場合には、この作業を済ませた後で
+          c:?KNOPPIX
+          をフォルダごと削除するようにします。</li>
+        <li>手順を誤って c:?boot フォルダを先に消してしまった場合は、もう一度 "install2win"
+          を実行し、正しい手順を実行します。</li>
+      </ul>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h4 id="content_1_9">起動できなくなる問題とその対処方法</h4>
+      <p>起動時にブートローダー GRUB の表示で止まってしまうなど、起動できなくなることがあります。これは Windows
+        が自動的に実行するデフラグのために GRUB が使うファイルが移動されてしまったために起こります。</p>
+      <p>この対処は、Windowsを立ち上げて c:?boot?grub?setup.exe
+        を再実行するだけです済むようです。詳しい説明は次のURLを参照してください： <a
+          href="http://unit.aist.go.jp/itri/knoppix/win/#mondai">http://unit.aist.go.jp/itri/knoppix/win/#mondai</a></p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_10">install2win と従来のHDDインストールの違いは何ですか。</h3>
+      <p>この install2win は、従来のHDDインストールをWindows上で行なうものではありません。イメージを
+        Windows
+        内のパーティションに置いて、GRUB から起動するものです。</p>
+      <p>したがって install2win は、インストールする際 ISO イメージを CD-R
+        に焼かなくてもいいとか、パーティションを切らなくてもいいとかいうメリットはありますが、基本的にはCDブート同様、従来のHDDイン
+        ストールしたとき
+        のように /usr や /lib フォルダに書き込めるわけではありません。起動方法も、CDブートそのものです。</p>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_11">GNOME 2.2 をインストールするには?</h3>
+      <p>APT を利用して、以下の作業を行います。GNOME 2.2 一式がインストールできます。</p>
+      <p>エディターで /etc/apt/sources.list ファイルを開き、次の apt-line を追加します。</p>
+      <pre> deb http://ftp.acc.umu.se/mirror/mirrors.evilgeniuses.org.uk/debian/backports/woody gnome2.2/</pre>
+      <p>そして、コンソール(ターミナル)から apt-get update &amp;&amp; apt-get install
+        x-window-system gnome fontconfig と入力します。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://people.debian.org/%7Ewalters/gnome2.html">GNOME
+            2
+            on Debian</a></li>
+        <li><a href="http://tipps.gnome-de.org/installieren/debian.php">GNOME
+            Deutschland</a> </li>
+      </ul>
+      <hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+    </div>
+  </body>
+</html>

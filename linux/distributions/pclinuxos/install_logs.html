@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=Shift_JIS" http-equiv="Content-Type">
+  <title>InstallLogs</title>
+</head>
+<body>
+<div id="navigator">
+<div><a href="../../../index.html" title="FrontPage (3d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">PCLinuxOS</a>
+/ InstallLogs</div>
+<hr size="2" width="100%">
+<h2 id="content_1_0">インストール・ログ</h2>
+<p>以下の記録は、「ライブCDの部屋日本語版」の場合です。(2007.06.23)</p>
+<div class="contents">
+<ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">インストール・ログ</a>
+    <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">GNOME デスクトップ環境</a></li>
+      <li><a href="#content_1_2">最小構成の GNOME デスクトップ環境</a></li>
+      <li><a href="#content_1_3">Xfce デスクトップ環境</a></li>
+      <li><a href="#content_1_4">RPM build</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_1">GNOME デスクトップ環境</h4>
+<p># apt-get update<br>
+# apt-get install task-gnome<br>
+Reading Package Lists... Done<br>
+Building Dependency Tree... Done<br>
+The following extra packages will be installed:</p>
+<pre>  alacarte beagle bug-buddy dasher dbus-python deskbar-applet dhcdbd eel ekiga<br>  eog epiphany epiphany-extensions evolution evolution-data-server<br>  evolution-webcal expat f-spot festival festlex-CMU festlex-POSLEX<br>  festvox-kallpc-common festvox-kallpc16k file-roller gcalctool gconf-editor<br>  gdb gdm gedit gksu glade-sharp2 glib-sharp2 gmime-sharp gnome-applets<br>  gnome-control-center gnome-doc-utils gnome-games gnome-mag gnome-media<br>  gnome-menus gnome-mount gnome-panel gnome-pilot gnome-python<br>  gnome-python-applet gnome-python-bonobo gnome-python-canvas<br>  gnome-python-desktop gnome-python-extras gnome-python-gconf<br>  gnome-python-gnomeprint gnome-python-gnomevfs gnome-python-gtksourceview<br>  gnome-screensaver gnome-session gnome-sharp2 gnome-speech gnome-spell<br>  gnome-system-monitor gnome-terminal gnome-user-docs gnome-utils<br>  gnome-volume-manager gok gsf-sharp gstreamer0.10-cdparanoia<br>  gstreamer0.10-gnomevfs gstreamer0.10-plugins-good gstreamer0.10-plugins-ugly<br>  gstreamer0.10-speex gthumb gtk-sharp2 gtkhtml-3.14 gtksourceview gucharmap<br>  guile iso-codes libOpenSP3 libavahi-compat-howl0 libbeagle0 libcddb-slave2_0<br>  libchm0 libcpufreq0 libeel2_2 libgdict1.0_5 libgdiplus0 libgksu1.2_0<br>  libgksuui1.0_1 libgnome-applets0 libgnome-mag2 libgnome-pilot2<br>  libgnomespeech7 libgtksourceview-1.0_0 libgtop2 libgtop2.0_7 libgucharmap5<br>  libguile17 libmono0 libmozilla-firefox2.0.0.4 libnautilus-burn4 libnautilus1<br>  libnl1 libnspr4 libnss3 libnvtvsimple0 libpisync0 libshout3 libsqlite0<br>  libtotem-plparser1 libwv-1.2_0 libxklavier-data libxklavier11 libxml2-python<br>  libxslt-proc metacity mono mono-data mono-data-sqlite mono-nunit mono-web<br>  mono-winforms mozilla-firefox mozilla-firefox-ja nautilus nautilus-cd-burner<br>  nautilus-filesharing networkmanager orca perl-Archive-Tar perl-DB_File<br>  perl-Geography-Countries perl-INET6 perl-IO-Socket-SSL perl-IO-Zlib<br>  perl-IP-Country perl-Mail-SPF-Query perl-Mail-SpamAssassin<br>  perl-Net-CIDR-Lite perl-Net-DNS perl-Net-IP perl-Net-Ident<br>  perl-Net_SSLeay.pm perl-Socket6 perl-Sys-Hostname-Long perl-XML-LibXML<br>  perl-XML-LibXML-Common perl-XML-NamespaceSupport perl-XML-SAX pidgin pyorbit<br>  python-beagle python-elementtree python-gnome-menus rhythmbox spamassassin<br>  system-tools-backends task-gnome-minimal tomboy totem totem-common<br>  umb-scheme vorbis-tools xdg-utils xlockmore xpdf-tools yelp zenity</pre>
+<p>The following packages will be upgraded</p>
+<pre>  libnspr4 libnss3 mozilla-firefox mozilla-firefox-ja</pre>
+<p>The following packages will be REPLACED:</p>
+<pre>  libmozilla-firefox2.0.0.3 (by libmozilla-firefox2.0.0.4)</pre>
+<p>The following NEW packages will be installed:</p>
+<pre>  alacarte beagle bug-buddy dasher dbus-python deskbar-applet dhcdbd eel ekiga<br>  eog epiphany epiphany-extensions evolution evolution-data-server<br>  evolution-webcal expat f-spot festival festlex-CMU festlex-POSLEX<br>  festvox-kallpc-common festvox-kallpc16k file-roller gcalctool gconf-editor<br>  gdb gdm gedit gksu glade-sharp2 glib-sharp2 gmime-sharp gnome-applets<br>  gnome-control-center gnome-doc-utils gnome-games gnome-mag gnome-media<br>  gnome-menus gnome-mount gnome-panel gnome-pilot gnome-python<br>  gnome-python-applet gnome-python-bonobo gnome-python-canvas<br>  gnome-python-desktop gnome-python-extras gnome-python-gconf<br>  gnome-python-gnomeprint gnome-python-gnomevfs gnome-python-gtksourceview<br>  gnome-screensaver gnome-session gnome-sharp2 gnome-speech gnome-spell<br>  gnome-system-monitor gnome-terminal gnome-user-docs gnome-utils<br>  gnome-volume-manager gok gsf-sharp gstreamer0.10-cdparanoia<br>  gstreamer0.10-gnomevfs gstreamer0.10-plugins-good gstreamer0.10-plugins-ugly<br>  gstreamer0.10-speex gthumb gtk-sharp2 gtkhtml-3.14 gtksourceview gucharmap<br>  guile iso-codes libOpenSP3 libavahi-compat-howl0 libbeagle0 libcddb-slave2_0<br>  libchm0 libcpufreq0 libeel2_2 libgdict1.0_5 libgdiplus0 libgksu1.2_0<br>  libgksuui1.0_1 libgnome-applets0 libgnome-mag2 libgnome-pilot2<br>  libgnomespeech7 libgtksourceview-1.0_0 libgtop2 libgtop2.0_7 libgucharmap5<br>  libguile17 libmono0 libmozilla-firefox2.0.0.4 libnautilus-burn4 libnautilus1<br>  libnl1 libnvtvsimple0 libpisync0 libshout3 libsqlite0 libtotem-plparser1<br>  libwv-1.2_0 libxklavier-data libxklavier11 libxml2-python libxslt-proc<br>  metacity mono mono-data mono-data-sqlite mono-nunit mono-web mono-winforms<br>  nautilus nautilus-cd-burner nautilus-filesharing networkmanager orca<br>  perl-Archive-Tar perl-DB_File perl-Geography-Countries perl-INET6<br>  perl-IO-Socket-SSL perl-IO-Zlib perl-IP-Country perl-Mail-SPF-Query<br>  perl-Mail-SpamAssassin perl-Net-CIDR-Lite perl-Net-DNS perl-Net-IP<br>  perl-Net-Ident perl-Net_SSLeay.pm perl-Socket6 perl-Sys-Hostname-Long<br>  perl-XML-LibXML perl-XML-LibXML-Common perl-XML-NamespaceSupport<br>  perl-XML-SAX pidgin pyorbit python-beagle python-elementtree<br>  python-gnome-menus rhythmbox spamassassin system-tools-backends task-gnome<br>  task-gnome-minimal tomboy totem totem-common umb-scheme vorbis-tools<br>  xdg-utils xlockmore xpdf-tools yelp zenity</pre>
+<p>4 upgraded, 163 newly installed, 1 replaced, 0 removed and 30 not
+upgraded.<br>
+Need to get 211MB of archives.<br>
+After unpacking 528MB of additional disk space will be used.<br>
+Do you want to continue? [Y/n] y</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_2">最小構成の GNOME デスクトップ環境</h4>
+<p># apt-get update<br>
+# apt-get install task-gnome-minimal<br>
+Reading Package Lists... Done<br>
+Building Dependency Tree... Done<br>
+The following extra packages will be installed:</p>
+<pre>  alacarte eel evolution-data-server gksu gnome-applets gnome-control-center<br>  gnome-doc-utils gnome-menus gnome-mount gnome-panel gnome-python<br>  gnome-python-applet gnome-python-bonobo gnome-python-canvas<br>  gnome-python-desktop gnome-python-extras gnome-python-gconf<br>  gnome-python-gnomevfs gnome-screensaver gnome-session gnome-system-monitor<br>  gnome-terminal gnome-user-docs gnome-utils gnome-volume-manager<br>  gstreamer0.10-plugins-good libbeagle0 libcpufreq0 libeel2_2 libgdict1.0_5<br>  libgksu1.2_0 libgksuui1.0_1 libgnome-applets0 libgtop2 libgtop2.0_7<br>  libgucharmap5 libnautilus1 libnotify1 libshout3 libxklavier-data<br>  libxklavier11 libxml2-python libxslt-proc metacity nautilus<br>  notification-daemon pyorbit python-gnome-menus system-tools-backends<br>  vorbis-tools xlockmore yelp</pre>
+<p>The following NEW packages will be installed:</p>
+<pre>  alacarte eel evolution-data-server gksu gnome-applets gnome-control-center<br>  gnome-doc-utils gnome-menus gnome-mount gnome-panel gnome-python<br>  gnome-python-applet gnome-python-bonobo gnome-python-canvas<br>  gnome-python-desktop gnome-python-extras gnome-python-gconf<br>  gnome-python-gnomevfs gnome-screensaver gnome-session gnome-system-monitor<br>  gnome-terminal gnome-user-docs gnome-utils gnome-volume-manager<br>  gstreamer0.10-plugins-good libbeagle0 libcpufreq0 libeel2_2 libgdict1.0_5<br>  libgksu1.2_0 libgksuui1.0_1 libgnome-applets0 libgtop2 libgtop2.0_7<br>  libgucharmap5 libnautilus1 libnotify1 libshout3 libxklavier-data<br>  libxklavier11 libxml2-python libxslt-proc metacity nautilus<br>  notification-daemon pyorbit python-gnome-menus system-tools-backends<br>  task-gnome-minimal vorbis-tools xlockmore yelp</pre>
+<p>0 upgraded, 53 newly installed, 0 removed and 67 not upgraded.<br>
+Need to get 50.5MB of archives.<br>
+After unpacking 150MB of additional disk space will be used.<br>
+Do you want to continue? [Y/n] y</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_3">Xfce デスクトップ環境</h4>
+<p># apt-get update<br>
+# apt-get install task-xfce<br>
+Reading Package Lists... Done<br>
+Building Dependency Tree... Done<br>
+The following extra packages will be installed:</p>
+<pre>  exo libexo-0.3_0 libnotify1 libthunar1_2 libxfce4mcs4 libxfce4panel1<br>  libxfce4util4 libxfcegui4_4 libxfprint0 libxfsm-4.2_0 mousepad<br>  notification-daemon orage terminal thunar thunar-volman xarchiver<br>  xfce-appfinder xfce-icon-theme xfce-mcs-manager xfce-mcs-plugins xfce-mixer<br>  xfce-panel xfce-session xfce-taskmanager xfce-utils xfdesktop xfmedia<br>  xfprint xfwm xfwm-themes</pre>
+<p>The following NEW packages will be installed:</p>
+<pre>  exo libexo-0.3_0 libnotify1 libthunar1_2 libxfce4mcs4 libxfce4panel1<br>  libxfce4util4 libxfcegui4_4 libxfprint0 libxfsm-4.2_0 mousepad<br>  notification-daemon orage task-xfce terminal thunar thunar-volman xarchiver<br>  xfce-appfinder xfce-icon-theme xfce-mcs-manager xfce-mcs-plugins xfce-mixer<br>  xfce-panel xfce-session xfce-taskmanager xfce-utils xfdesktop xfmedia<br>  xfprint xfwm xfwm-themes</pre>
+<p>0 upgraded, 32 newly installed, 0 removed and 67 not upgraded.<br>
+Need to get 21.5MB of archives.<br>
+After unpacking 47.6MB of additional disk space will be used.<br>
+Do you want to continue? [Y/n] y</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_4">RPM build</h4>
+<p># apt-get install rpm-build<br>
+Reading Package Lists... Done<br>
+Building Dependency Tree... Done<br>
+The following extra packages will be installed:</p>
+<pre>  autoconf2.1 autoconf2.5 automake1.8 elfutils gcc-c++ gettext libgettextmisc<br>  libstdc++6-devel libtool-base rpm-pclinuxos-setup-build spec-helper</pre>
+<p>The following NEW packages will be installed:</p>
+<pre>  autoconf2.1 autoconf2.5 automake1.8 elfutils gcc-c++ gettext libgettextmisc<br>  libstdc++6-devel libtool-base rpm-build rpm-pclinuxos-setup-build<br>  spec-helper</pre>
+<p>0 upgraded, 12 newly installed, 0 removed and 0 not upgraded.<br>
+Need to get 22.8MB of archives.<br>
+After unpacking 88.3MB of additional disk space will be used.<br>
+Do you want to continue? [Y/n] y</p>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>

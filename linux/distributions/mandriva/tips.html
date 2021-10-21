@@ -1,0 +1,603 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>FAQ&amp;Tips</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../../index.html" title="FrontPage (3d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">MandrivaLinux-FAQ</a>
+/ Tips</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">Mandriva Linux 使い方のヒント</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">Mandriva Linux 使い方のヒント。 </a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">アップデート(更新)の方法が分かりません。 </a></li>
+      <li><a href="#content_1_2">URPMI に任意のリポジトリーを追加するには? </a></li>
+      <li><a href="#content_1_3">日本国内の高速ミラーサーバーを利用してアップデートするには？ </a></li>
+      <li><a href="#content_1_4">コマンドラインからパッケージ管理するには？ (基本コマンド) </a></li>
+      <li><a href="#content_1_5">コマンドラインからパッケージ管理するには？ (詳細オプション) </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_6">urpmi 詳細オプション </a></li>
+          <li><a href="#content_1_7">urpme 詳細オプション </a></li>
+          <li><a href="#content_1_8">urpmq 詳細オプション </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_9">基本コマンド対応表 (urpm vs APT)</a></li>
+      <li><a href="#content_1_10">パッケージ追加時に、インストールCDを毎回参照しないようにしたい。 </a></li>
+      <li><a href="#content_1_11">サードパーティの RPM パッケージは利用できますか。 </a></li>
+      <li><a href="#content_1_12">Smart はどうすれば使えるようになりますか。 </a></li>
+      <li><a href="#content_1_13">APT / Synaptic は使えるのでしょうか？ </a></li>
+      <li><a href="#content_1_14">Macromedia Flash を使いたい。 </a></li>
+      <li><a href="#content_1_15">KDE 3.3 にアップデートしたい </a></li>
+      <li><a href="#content_1_16">メーラー Sylpheed を使いたいのですが。 </a></li>
+      <li><a href="#content_1_17">Adobe
+Readerをインストールしたのにスプラッシュ画面で消えてしまいます。 </a></li>
+      <li><a href="#content_1_18">Real Player 10 が使えません。 </a></li>
+      <li><a href="#content_1_19">付属のメディアプレーヤー「Totem」について </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_20">「Totem」とは何ですか。 </a></li>
+          <li><a href="#content_1_21">メディアをドライブに挿入すると画面がフリーズします </a></li>
+          <li><a href="#content_1_22">DVDは再生できないのですか。 </a></li>
+          <li><a href="#content_1_23">Xine 標準のインターフェイスに切替えたい。 </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_24">付属のメディアプレーヤー「Kaffeine」について (10.1
+Official) </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_25">「Kaffeine」とは何ですか </a></li>
+          <li><a href="#content_1_26">XXXのムービーが再生できません </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_27">メニューやツールバーが日本語で表示されません。(2006.0 Free
+Edition ) </a></li>
+      <li><a href="#content_1_28">Firefox 1.0 がインストールできません (10.1
+Official) </a></li>
+      <li><a href="#content_1_29">2ch ブラウザー「おちゅ〜しゃ」のインストールができません。 </a></li>
+      <li><a href="#content_1_30">ruby で Qt/KDE の GUI が使いたい </a></li>
+      <li><a href="#content_1_31">Mozilla / Firefox
+ウェブブラウザーより日本語ページの印刷ができません。 </a></li>
+      <li><a href="#content_1_32">GNOME 環境で Konqueror ウェブブラウザーを使いたい </a></li>
+      <li><a href="#content_1_33">起動時の各種サービスを 追加 / 停止 するには？ </a></li>
+      <li><a href="#content_1_34">デスクトップ・メニューにアプリを追加できますか。 </a></li>
+      <li><a href="#content_1_35">メタパッケージ（Task-Oriented パッケージ）の利用について
+(2006 Official) </a></li>
+      <li><a href="#content_1_36">ソースパッケージからリビルドできる環境を整えたい。 </a></li>
+      <li><a href="#content_1_37">サーバーとして活用する方法など。 </a></li>
+      <li><a href="#content_1_38">毎回起動時に日本語 keymap の設定に失敗する（Failed
+と表示される）のですが？ (Mandriva 2008)</a></li>
+      <li><a href="#content_1_39">GNOME環境でログイン画面が日本語表示されない。(Mandriva
+2008.0)</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">アップデート(更新)の方法が分かりません。</h3>
+<p>Mandriva のシステムでは、グラフィカルなフロントエンド [Mandriva アップデート]
+を使って簡単にアップデートができます。</p>
+<p>システムの更新を行うには、まず [デスクトップ] &gt; [アプリケーション] &gt; [システム] &gt; [設定]
+&gt;
+[RPMの管理] &gt; [Mandrakeアップデート]
+を開きます。ダウンロードするミラーサイトを選択した後には、アップデート可能なパッケージが自動的に一覧表示されるので、画面の指示に従って「インス
+トール」ボタンを選択します。アップデートには、次の３つの区分があります。</p>
+<ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>セキュリティアップデート</li>
+  <li>バグ修正の更新</li>
+  <li>通常の更新</li>
+</ol>
+<p>選択したパッケージがダウンロードされ、インストールは自動的に完了します。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>セキュリティアップデートは、mandriva security-announce
+メーリングリストで直ちに通知されると共に、アップデータがダウンロード可能となります。<a
+ href="mailto:security-announce@linux-mandriva.com">security-announce@linux-mandriva.com</a>
+に登録するためには、「subscribe security-announce」「subscribe
+security-discuss」「subscribe security-firewall」等を <a
+ href="mailto:sympa@linux-mandriva.com">sympa@linux-mandriva.com</a>
+の本文部分に書き込んで申し込んでください。</li>
+  <li><a href="http://www.mandriva.com/mandrivaonline">Mandrivaonline</a>
+は、登録ユーザー(会員)向けのサービスです。登録会員でなければ、デスクトップ右下のパネルに現れる自動更新通知アプレットの機能は利用できません。<a
+ href="http://www.mandriva.com/mandrivaonline">Mandrivaonline</a>
+に関する詳細は、<a href="https://www.mandrivaonline.net/page.php?page=info">Mandrivaonline
+FAQ</a> を見てください。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">URPMI に任意のリポジトリーを追加するには?</h3>
+<p>インストールCDを用いてインストールを行った直後は、参照可能なリポジトリーはCDメディアのみです。外部のリポジトリーを追加しな
+いことには、パッケージ管理ツール URPMI は本来の機能を発揮できません。Fedora/<span class="noexists">RedHat<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=RedHat&amp;refer=MandrivaLinux-FAQ%2FTips">?</a></span>
+Linux ではインストール直後には初期設定がすんでいて、直ちに利用可能となっているのに対して、Mandriva Linux
+の場合はこの点が異なっています。</p>
+<p>リポジトリーの追加は [デスクトップ] &gt; [アプリケーション] &gt; [システム] &gt; [設定] &gt;
+[RPMの管理] &gt; [RPMのメディアを管理] から、グラフィカルな設定が可能です。<br>
+<a href="http://easyurpmi.zarb.org/">Easy urpmi config</a>
+というWEBブラウザーから設定コマンドを自動生成できる便利なツールもあります。</p>
+<p>[Easy URPMI 手順と設定例]　（コマンドラインからの設定）</p>
+<pre> </pre>
+<ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>バージョン名や使用しているシステムを選択</li>
+  <li>追加したいソース (contrib / main / updates など) とそのミラーを選択</li>
+  <li>ルートユーザーになって、作成された次のコマンド（一例）を実行
+    <pre> <br> # urpmi.addmedia contrib http://ftp.riken.jp/Linux/mandrake/official/2005/i586/<br> media/contrib with media_info/hdlist.cz</pre>
+  </li>
+</ol>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://www.urpmi.org/">Urpmi</a></li>
+  <li><a
+ href="http://qa.mandrakesoft.com/twiki/bin/view/Main/UrpmiResources">URPMI
+resources
+page</a></li>
+  <li><a
+ href="http://www.cs.utexas.edu/users/walter/geek/rpm-howto.html">URPMI
+and RPM Tutorial</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">日本国内の高速ミラーサーバーを利用してアップデートするには？</h3>
+<p>グラフィカル・デスクトップでは、[RPMのメディアを管理] からまず設定を行います。</p>
+<p>ターミナルからコマンドを実行して設定することもできます。その場合は、次のコマンドを実行します。その他のミラーサーバーを利用した
+いときも、この書式に習って設定が行えます。</p>
+<pre> [奈良先端科学技術大学院大学ミラーを設定]<br> <br> # urpmi.addmedia main http://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/<br> 2006.0/i586/media/main<br> <br> # urpmi.addmedia contrib http://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/<br> 2006.0/i586/media/contrib<br> <br> # urpmi.addmedia updates http://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/<br> updates/2006.0/RPMS</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>注意：相対パス（例：with
+../base/hdlist.cz）の入力は省略できます。正規表現は、次の例（KDDI研究所やRIKENミラー）になります。
+    <pre> # urpmi.addmedia contrib http://ftp.riken.jp/Linux/mandrake/official/2006.0/i586/<br> media/contrib with media_info/hdlist.cz<br> <br> # urpmi.addmedia updates ftp://ftp.kddlabs.co.jp/Linux/distributions/Mandrake/official/<br> updates/2006.0/RPMS with ../base/hdlist.cz</pre>
+  </li>
+</ul>
+<p>以上で初期設定は完了です。これで urpmi コマンドを用いてアップデートが実行できます。<br>
+この設定ファイルは、[/etc/urpmi/urpmi.cfg]に作成されています。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_4">コマンドラインからパッケージ管理するには？ (基本コマンド)</h3>
+<p>Mandrakelinux ではパッケージ管理に Red Hat Package Manager(RPM)
+が採用されています。そのため、コマンドの使用方法は他の Red Hat 系ディストリビューションと同じです。<a
+ href="http://www.redhat.co.jp/manual/Doc9/rhl-cg-ja-9/index.html">Red
+Hat Linux 9: Red Hat Linux カスタマイズガイド</a> の <a
+ href="http://www.redhat.co.jp/manual/Doc9/rhl-cg-ja-9/ch-rpm.html">RPMに
+よるパッケージ管理</a> や <a
+ href="http://www.redhat.co.jp/manual/Doc9/rhl-cg-ja-9/s1-rpm-using.html">RPM
+の使用法</a> で分かりやすく解説されています。(<span class="noexists">RPM 関連<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=Applications-FAQ%2FPackageManagement%2FRPM&amp;refer=MandrivaLinux-FAQ%2FTips">?</a></span>
+も参照のこと)</p>
+<p>ただし、パッケージのインストールや削除の際、他のパッケージに「依存する」ときは、この例のようにエラーメッセージが出て警告しま
+す。</p>
+<pre> Preparing...                ########################################### [100%]<br> error: Failed dependencies:<br>        bar.so.2 is needed by foo-1.0-1</pre>
+<p>Mandriva Linux では、この「依存性」解決のために、"urpm*"
+というコマンドが考案されました。このコマンドは
+Mandriva Linux 独自のもので、 Red Hat Linux や Fedora Linux の場合の APT や YUM
+と似た機能を備えています。基本的なコマンドは、次のとおりです。</p>
+<div class="ie5">
+<table class="style_table" border="0" cellspacing="1">
+  <thead><tr>
+    <td class="style_td">コマンド</td>
+    <td class="style_td">解説</td>
+  </tr>
+  </thead><tbody>
+    <tr>
+      <td class="style_td"># urpmi <em>パッケージ名</em></td>
+      <td class="style_td">新しいパッケージをインストールする</td>
+    </tr>
+    <tr>
+      <td class="style_td"># urpme <em>パッケージ名</em></td>
+      <td class="style_td">パッケージを削除する</td>
+    </tr>
+    <tr>
+      <td class="style_td"># urpmi.addmedia <em>名前</em> <em>url</em></td>
+      <td class="style_td">新しいメディアを追加する</td>
+    </tr>
+    <tr>
+      <td class="style_td"># urpmi.removemedia <em>名前</em></td>
+      <td class="style_td">メディアを削除する</td>
+    </tr>
+    <tr>
+      <td class="style_td"># urpmi.update <em>名前</em></td>
+      <td class="style_td">パッケージをアップデートする</td>
+    </tr>
+    <tr>
+      <td class="style_td"># urpmi.update -a</td>
+      <td class="style_td">システムのデータベースを最新のものへ更新する</td>
+    </tr>
+    <tr>
+      <td class="style_td"># urpmi --update --auto-select</td>
+      <td class="style_td">すべてのパッケージをアップデートする</td>
+    </tr>
+    <tr>
+      <td class="style_td">$ urpmq -i <em>ファイル名</em></td>
+      <td class="style_td">ファイル名からパッケージ情報を検索する</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>詳しくは <a
+ href="http://doc.mandrivalinux.com/MandrakeLinux/100/en/Starter.html/ch20s05.html">Package
+Management
+through
+the
+Command Line</a> という英語ページを参照してください。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>[関連公式ページ] <a
+ href="http://qa.mandriva.com/twiki/bin/view/Main/UrpmiResources">Mandrake
+RPM
+HOWTO</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_5">コマンドラインからパッケージ管理するには？ (詳細オプション)</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_6">urpmi 詳細オプション</h4>
+<p>使い方:</p>
+<pre>  --help         - このヘルプを表示<br>  --update       - 更新メディアのみを使う<br>  --media        - 指定したメディアのみを使う(コンマで区切る)<br>  --searchmedia   - 指定したメディアのみを要求した(または更新された)パッケージの 検索に使う<br>  --excludemedia - 指定したメディアは使わない(コンマで区切る)<br>  --sortmedia    - カンマ区切りで指定したメディアごとにソートする<br>  --synthesis    - urpmiのデータベースではなく指定したsynthesisを使う<br>  --auto         - 複数の選択肢から自動的にパッケージを選択<br>  --auto-select  - 自動的にパッケージを選択してシステムを更新<br>  --no-uninstall - パッケージを削除する必要があるときは自動的にインストールを中 止<br>  --keep         - 既存のパッケージを維持し、削除要求は拒否する<br>  --split-level  - 一定数以上のパッケージがインストールまたは更新される<br>                    ときは分割して行う。デフォルトは 20<br>  --split-length - 分割する最低パッケージ数。デフォルトは 1<br>  --fuzzy        - ファジー検索(-yと同じ)<br>  --src          - ソースパッケージを指定(-s と同じ)<br>  --install-src  - ソースのみをインストール(バイナリなし)<br>  --clean        - キャッシュからRPMを削除<br>  --noclean      - RPMをキャッシュに残す<br>  --force        - 足りないパッケージがあっても強制的に実行する<br>  --allow-nodeps - 依存関係に問題が発生した時に、自動的に終了せずに<br>                   [--nodeps]でインストールするかどうか質問する<br>  --allow-force  - 依存関係に問題が発生した時に、自動的に終了せずに<br>                   [--force]でインストールするかどうか質問する<br>  --parallel     - urpmiをエイリアスの複数のマシンに使う<br>  --root         - RPMのインストールに他のルートを使う<br>  --use-distrib  - ディストリビューションのツリーからurpmiをオンザフライで<br>                   設定。chrootを'--root'オプション付きで(アン)インストール<br>                   する際に使用。<br>  --wget         - リモートファイルの取得にwgetを使う<br>  --curl         - リモートファイルの取得にcurlを使う<br>  --limit-rate   - ダウンロード速度を制限<br>  --resume       - 不完全なファイルのダウンロードを再開する<br>                   ([--no-resume]で無効化、デフォルトで無効)<br>  --proxy        - 指定したHTTPプロキシを使う。デフォルトのポート番号は<br>                   1080。(形式: &lt;proxyhost[:port]&gt;)<br>  --proxy-user   - プロキシ認証に使うユーザ名とパスワードを<br>                   指定する。(形式: &lt;user:password&gt;)<br>  --bug          - 指定したディレクトリにバグレポートを出力<br>  --env          - 特定の環境を使う<br>                   (バグレポートなどのため)<br>  --verify-rpm   - インストールする前にRPMの署名を確認する<br>                   (=デフォルト。[--no-verify-rpm]で無効)<br>  --test         - 正しくインストールされるかどうかテストする<br>  --excludepath  - 除外するパスを指定(カンマで区切る)<br>  --excludedocs  - docファイルを除外する<br>  --skip         - インストールをスキップするパッケージ<br>  --more-choices - 複数のパッケージがある場合に、デフォルト以外の選択肢を<br>                   表示する<br>  --norebuild    - 読み込み不可ならhdlistをリビルドしない<br>  --strict-arch  - 同じアーキテクチャのパッケージのみを更新<br>  -a             - 指定した表現を含むすべてのパッケージを選択する<br>  -p             - provide(提供)タグも検索対象に含める<br>  -P             - provide(提供)タグは検索の対象にしない<br>  -y             - ファジー検索(--fuzzyと同じ)<br>  -s             - ソースパッケージを指定(--src と同じ)<br>  -q             - 詳細を表示しない<br>  -v             - 詳細モード。</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_7">urpme 詳細オプション</h4>
+<p>使い方:</p>
+<pre>  --help         - このヘルプを表示<br>  --auto         - 複数の選択肢から自動的にパッケージを選択<br>  --test         - 問題なく削除できるかどうかテストする<br>  --force        - 足りないパッケージがあっても強制的に実行する<br>  --parallel     - urpmiをエイリアスの複数のマシンに使う<br>  --root         - RPMの削除に他のルートを使う<br>  --use-distrib  - ディストリビューションのツリーからurpmiをオンザフライで<br>                   設定。chrootを'--root'オプション付きで(アン)インストール<br>                   する際に使用。<br>  -v             - 詳細モード。<br>  -a             - 指定した表現を含むすべてのパッケージを選択</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_8">urpmq 詳細オプション</h4>
+<p>使い方:</p>
+<pre>  --help         - このヘルプを表示<br>  --update       - 更新メディアのみを使う<br>  --media        - 指定したメディアのみを使う(コンマで区切る)<br>  --searchmedia   - 指定したメディアのみを要求した(または更新された)パッケージの検索に使う<br>  --excludemedia - 指定したメディアは使わない(コンマで区切る)<br>  --sortmedia    - カンマ区切りで指定したメディアごとにソートする<br>  --synthesis    - urpmiデータベースの代わりに指定したsynthesisを使う<br>  --auto-select  - 自動的にパッケージを選択してシステムを更新<br>  --fuzzy        - ファジー検索(-yと同じ)<br>  --keep         - 既存のパッケージを維持し、削除要求は拒否する<br>  --list         - 利用できるパッケージを表示<br>  --list-media   - 利用できるメディアを表示<br>  --list-url     - 利用できるメディアとURLを表示<br>  --list-nodes   - [--parallel]に利用できるノードを表示<br>  --list-aliases - 利用できるパラレルエイリアスを表示<br>  --dump-config  - メディアの設定をurpmi.addmediaの引数の形式で表示<br>  --src          - ソースパッケージを指定(-s と同じ)<br>  --headers      - 指定したパッケージのヘッダをurpmiデータベースから<br>                   標準出力する(rootのみ)<br>  --sources      - ダウンロードする前にすべてのソースパッケージを表示(rootのみ)<br>  --force        - 足りないパッケージがあっても強制的に実行する<br>  --parallel     - urpmiをエイリアスの複数のマシンに使う<br>  --use-distrib  - ディストリビューションのツリーからurpmiをオンザフライで<br>                   設定。ディストリビューションの検索を可能にする。<br>  --wget         - リモートファイルの取得にwgetを使う<br>  --curl         - リモートファイルの取得にcurlを使う<br>  --proxy        - 指定したHTTPプロキシを使う。デフォルトのポート番号は<br>                   1080。(形式: &lt;proxyhost[:port]&gt;)<br>  --proxy-user   - プロキシ認証に使うユーザ名とパスワードを<br>                   指定する。(形式: &lt;user:password&gt;)<br>  --env          - 特定の環境を使う<br>                   (バグレポートなどのため)<br>  --changelog    - チェンジログを表示<br>  -a             - 指定した表現を含むすべてのパッケージを選択する<br>  -c             - 削除されるパッケージを表示<br>  -d             - 依存するパッケージも検索して表示<br>  -f             - 名前, バージョン, リリース番号, アーキテクチャを表示<br>  -g             - グループと名前を表示<br>  -i             - 読みやすい形で情報を表示<br>  -l             - パッケージに含まれるファイルを表示<br>  -P             - provideタグを検索しない(デフォルト)<br>  -p             - パッケージを探すためにprovideタグを検索<br>  -r             - 名前, バージョン, リリース番号を表示<br>  -R             - 指定したパッケージに依存するパッケージを検索<br>  -s             - ソースパッケージを指定(--src と同じ)<br>  -u             - 新しい版がインストールされているときはパッケージを削除<br>  -v             - 詳細モード。<br>  -y             - ファジー検索(--fuzzyと同じ)<br>  -Y             - 大文字/小文字を区別しない[-y](ファジー検索)</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>指定したパッケージ名/RPMファイルがあるか調べます。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_9">基本コマンド対応表 (urpm vs APT)</h3>
+<p>APT は、RPM および Debian
+系のディストリビューションで広く採用されているので、初めての方の参考となるよう以下の対応表を挙げておきます。</p>
+<div class="ie5">
+<table class="style_table" border="0" cellspacing="1">
+  <thead><tr>
+    <td class="style_td">urpm コマンド</td>
+    <td class="style_td">対応する APTコマンド</td>
+    <td class="style_td">簡単な説明</td>
+  </tr>
+  </thead><tbody>
+    <tr>
+      <td class="style_td">urpmi.update -a</td>
+      <td class="style_td">apt-get update</td>
+      <td class="style_td">データベースの更新</td>
+    </tr>
+    <tr>
+      <td class="style_td">urpmi --update --auto-select</td>
+      <td class="style_td">apt-get upgrade</td>
+      <td class="style_td">システムの更新</td>
+    </tr>
+    <tr>
+      <td class="style_td">urpmi パッケージ名</td>
+      <td class="style_td">apt-get install パッケージ名</td>
+      <td class="style_td">パッケージのインストール</td>
+    </tr>
+    <tr>
+      <td class="style_td">urpme パッケージ名</td>
+      <td class="style_td">apt-get remove パッケージ名</td>
+      <td class="style_td">パッケージの削除</td>
+    </tr>
+    <tr>
+      <td class="style_td">--test</td>
+      <td class="style_td">-s</td>
+      <td class="style_td">テストのみ実行する</td>
+    </tr>
+    <tr>
+      <td class="style_td">urpmq -i ファイル名</td>
+      <td class="style_td">apt-cache show ファイル名</td>
+      <td class="style_td">パッケージ情報の表示</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_10">パッケージ追加時に、インストールCDを毎回参照しないようにしたい。</h3>
+<p>デフォルトでは、追加したいパッケージがインストールCDに含まれる場合、インストールCD (1-3)
+の利用を優先します。すべての作業をネットワーク経由で行いたいときには、次のコマンドを実行してください。</p>
+<pre> # urpmi.removemedia cdrom1 cdrom2 cdrom3<br> メディア Installation CD1 (cdrom1) を削除<br> メディア Installation CD2 (cdrom2) を削除<br> メディア Installation CD3 (cdrom3) を削除<br> ...設定ファイル[/etc/urpmi/urpmi.cfg]を作成</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_11">サードパーティの RPM パッケージは利用できますか。</h3>
+<p>有名なサードパーティが配布している RPM パッケージの多くが Red Hat, Fedora Linux
+用に最適化されています。そのため、Mandrakelinux にインストールしても、確実に動作するとは限りません。source RPM から
+rebuild する方が動作する可能性が高いといえます。</p>
+<p>ただし一例として、ATrpms からは特定のディストリビューションに依存しないとされるパッケージ (distribution
+independent packages) も配布されています。もし関心があるのなら、<a
+ href="http://atrpms.net/dist/common/">http://atrpms.net/dist/common/</a>
+を見てください。<br>
+また、以下のサイトからも Mandrakelinux 用のRPMパッケージが多数配布されています。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://rpmfind.net/">Rpmfind.Net Server</a> からは、 <a
+ href="http://rpmfind.net/linux/RPM/mandrake/">Mandrakelinux 用 RPM</a>
+のページを見てください。</li>
+  <li><a href="http://rpm.pbone.net/">RPM PBone Net</a>
+からも、バージョン別に検索できます。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_12">Smart はどうすれば使えるようになりますか。</h3>
+<p><span class="noexists">ソフトウェア Smart の FAQ<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=Applications-FAQ%2FPackageManagement%2FSmart&amp;refer=MandrivaLinux-FAQ%2FTips">?</a></span>に
+その導入方法が書いてあります。インストール後の使い方もそのページに載せています。</p>
+<p>Urpmi がすでに設定済みの環境では、 Smart をインストールした際、メディア設定を自動的に引き継いでくれます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_13">APT / Synaptic は使えるのでしょうか？</h3>
+<p>パッケージ管理は基本的には RPM なので、Red Hat Linux ではサードパーティから既に提供されている APT
+も同様に使えないかと思う方もいるでしょう。Mandrakelinux 向けの APT / Aptitude パッケージが実際、Mandriva
+から配布されています（Contrib セクションにあります）。</p>
+<p>APTを導入するには、libapt-pkg、apt-common なども必要となります。参考までに、 Urpmi
+を使えば、次のように処理されます。</p>
+<pre> # urpmi apt<br> 依存を満たすために以下のパッケージをインストールします(2 MB):<br> apt-0.5.15cnc5-4mdk.i586<br> libapt-pkg0-0.5.15cnc5-4mdk.i586<br> よろしいですか？ (Y/n)[デフォルトはY] y</pre>
+<p>APT のフロントエンド Synaptic は、デスクトッップでグラフィカルな操作を可能にしてくれます。Synaptic
+のインターフェースは、日本語化されています。次のコマンドでインストールできます。</p>
+<pre> # urpmi synaptic</pre>
+<p>インストール後、root になって /etc/apt/sources.list
+をテキストエディタで開き、そのファイルの最後に以下の記述を追加します。<br>
+（コピー＆ペイストする際、各項目は必ず一行に収めてください。）</p>
+<pre> [国内ミラーの設定例]<br> <br> rpm http://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/<br> 2006.0/i586/media/ media_info/hdlist_main main<br> <br> rpm http://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/<br> 2006.0/i586/media/ media_info/hdlist_contrib contrib<br> <br> rpm http://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/<br> 2006.0/i586/media/ media_info/hdlist_jpackage jpackage<br> <br> rpm http://ftp.nara.wide.ad.jp/pub/Linux/Mandrivalinux/official/<br> updates/2006.0/ main_updates/media_info/hdlist main_updates</pre>
+<p>/etc/apt/sources.list の設定が済んだら、アップデートを実行します。</p>
+<pre> # apt-get update</pre>
+<p>これで、APT コマンドを使ってのパッケージ更新ができます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>[関連項目] <span class="noexists">Applications-FAQ/PackageManagement/APT<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=Applications-FAQ%2FPackageManagement%2FAPT&amp;refer=MandrivaLinux-FAQ%2FTips">?</a></span></li>
+  <li>[外部リンク] <a
+ href="http://www.debian.org/doc/manuals/apt-howto/ch-distros.ja.html">APT
+に対応しているディストリビューションは?</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_14">Macromedia Flash を使いたい。</h3>
+<p><a
+ href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">Adobe
+Flash
+Playerダウンロードセンター</a>より .rpm
+をダウンロードしてインストールします。ダウンロードしたファイルを右クリックし、「Software
+Installer」を選択すれば、グラフィカルな操作で簡単にインストールできます。</p>
+<p>なお、コマンドラインからのインストールは、次のように行います。</p>
+<pre> # urpmi flash-plugin</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_15">KDE 3.3 にアップデートしたい</h3>
+<p>URPMI のメディアに非公式サイト<a href="http://rpm.nyvalls.se/">Thac's RPMs
+for Mandrake</a>を
+urpmi.addmedia か drakeconf（drakeconf は、command line
+でのツール名、メニュー名はMandrakelinux コントロールセンター）を使って登録する。後は、 kdebase
+などを選択して、インストールする。インストール時にtext モードにする必要はない。<br>
+この際ダウンロード後に依存(dependency)でエラーがでるパッケージがあった場合、あらためて明示的に指定してやり直します。衝突
+(conflict)でエラーがでたパッケージは、メモっておき削除し、KDE のアップデート後に新しいパッケージをインストールし直します。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_16">メーラー Sylpheed を使いたいのですが。</h3>
+<p>Mandriva 2006 Official Edition では、次のコマンドでインストールできます。</p>
+<pre> [Sylpheed 1.0]<br>  # urpmi sylpheed<br> <br>  [Sylpheed 2.0]<br>  # urpmi sylpheed2</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Sylpheed のインストールに必要なパッケージ (標準インストール時) -バージョン 10.0 向けのもの<br>
+    <a
+ href="http://rpmfind.net/linux/RPM/mandrake/10.0/contrib/i586/sylpheed-0.9.10-1mdk.i586.html">sylpheed-0.9.10-1mdk
+RPM
+for
+i586</a><br>
+    <a
+ href="http://rpmfind.net//linux/RPM/mandrake/10.1/i586/media/contrib/libgpgme03_6-0.3.16-5mdk.i586.html">libgpgme03_6-0.3.16-5mdk
+RPM
+for
+i586</a><br>
+    <a
+ href="http://rpmfind.net//linux/RPM/mandrake/10.0/i586/Mandrake/RPMS/libpisock8-0.11.8-5mdk.i586.html">libpisock8-0.11.8-5mdk
+RPM
+for
+i586</a></li>
+</ul>
+<blockquote>
+  <p class="quotation">ダウンロードした各パッケージは、次の手順でインストールします。</p>
+</blockquote>
+<pre> # rpm -ivh libgpgme03_6-0.3.16-5mdk.i586.rpm<br> 以下のパッケージは署名が間違っています:<br> libgpgme03_6-0.3.16-5mdk.i586.rpm: 無効な署名((SHA1) DSA sha1 md5 (GPG)<br> (MISSING KEY) GPG#78d019f5 NOT OK)<br> インストールを続けますか？ (y/N)[デフォルトはN] y<br> libgpgme03_6-0.3.16-5mdk.i586.rpm をインストール<br> 準備..                      ##################################################<br>   1:libgpgme03_6           ##################################################<br> <br> # rpm -ivh libpisock8-0.11.8-5mdk.i586.rpm<br> libpisock8-0.11.8-5mdk.i586.rpm をインストール<br> 準備..                      ##################################################<br>   1:libpisock8             ##################################################<br> <br> # rpm -ivh sylpheed-0.9.10-1mdk.i586.rpm<br> 以下のパッケージは署名が間違っています:<br> sylpheed-0.9.10-1mdk.i586.rpm: 無効な署名((SHA1) DSA sha1 md5 (GPG)<br> (MISSING KEY) GPG#78d019f5 NOT OK)<br> インストールを続けますか？ (y/N)[デフォルトはN] y<br> sylpheed-0.9.10-1mdk.i586.rpm をインストール<br> 準備..                      ##################################################<br>    1:sylpheed               ##################################################</pre>
+<p>URPMI リポジトリーの追加設定が済んでいれば、次の方法も使えるようになります。</p>
+<pre> [別手順]<br> <br> # urpmi sylpheed<br> 次のパッケージのいずれかが必要です:<br>  1- libpisock8-0.11.8-5mdk.i586<br>  2- opengroupware-pilot-link-0.11.8-20031201.1mdk.i586<br> どれを選びますか？(1-2) 1<br> 依存を満たすために以下のパッケージをインストールします(5 MB):<br> libgpgme03_6-0.3.16-2mdk.i586<br> libpisock8-0.11.8-5mdk.i586<br> sylpheed-0.9.10-1mdk.i586<br> よろしいですか？ (Y/n)[デフォルトはY] y<br> メディア(Installation CD 1 (x86) )を /dev/hdc に挿入して下さい。<br> 準備ができましたらEnterを押してください</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>バージョン 9.1/9.2 向けに用意されたものも公開されています。<br>
+    <a href="http://gcutter.free.fr/logiciels/en.html">http://gcutter.free.fr/logiciels/en.html</a>
+や <a href="http://rpmfind.net/">Rpmfind.Net Server</a> から入手できます。</li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://y-imai.good-day.net/sylpheed/">http://y-imai.good-day.net/sylpheed/</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_17">Adobe Readerをインストールしたのにスプラッシュ画面で消えてしまいます。</h3>
+<p>スーパーユーザで/usr/bin/acroreadをエディタで開き、任意の行に<br>
+<br>
+GTK_IM_MODULE=xim <br>
+<br>
+と追記します。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_18">Real Player 10 が使えません。</h3>
+<p>「ダウンロードエディション」を利用する場合、Real Player
+はデフォルトでインストールされないので、追加インストールします。メディアの再生時、Totem メディアプレーヤーがデフォルトで起動するため、<span
+ class="noexists">RealPlayer<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=RealPlayer&amp;refer=MandrivaLinux-FAQ%2FTips">?</a></span>
+が使えるようにするには次の作業をします。</p>
+<pre> # rpm -ivh RealPlayer10GOLD.rpm<br> RealPlayer10GOLD.rpm をインストール<br> 準備..                      ##################################################<br>   1:RealPlayer             ##################################################<br> # exit<br> $ realplay<br> 　（リアルプレーヤーが起動すれば、画面の指示に従って設定し、一度終了させます。）</pre>
+<p>※これで次回より、Mozilla ブラウザーから直接自動起動します。<br>
+　（上の例では urpmi RealPlayer10GOLD.rpm と入力しても同じです。）</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_19">付属のメディアプレーヤー「Totem」について</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_20">「Totem」とは何ですか。</h4>
+<p>Totem Movie Player とは、簡単にいうと xine-lib version 1.0.0
+を使った動画プレーヤです。ムービーと音楽(CD)の再生が可能です。広く知られている XINE
+に比べると、操作方法が幾分シンプルになっている分、扱いやすいかもしれません。Totem Movie Player に関する詳細は、 <a
+ href="http://www.hadess.net/totem.php3">Totem Movie Player Home Page</a>
+から入手できます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_21">メディアをドライブに挿入すると画面がフリーズします</h4>
+<p>市販DVDをドライブに挿入して再生しようとすると、画面がフリーズしてしまう（固まってしまう）ことがあるようです。この場合、画面
+を元の正常な
+状態に戻すには Totem
+を強制終了させる必要があるようです。原因はソフトウェアにあって、パソコンのハード関係に不具合が発生したからではありません。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_22">DVDは再生できないのですか。</h4>
+<p>市販のDVDの再生については、そのうちの多くがデフォルトでは対応できません。これは、メディアを読み込もうとしてもコピープロテク
+トを実現する
+ための CSS (Content Scrambling System) が働いているからです。このソフトェア自体にバグがあるわけではありません。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_23">Xine 標準のインターフェイスに切替えたい。</h4>
+<p>次のコマンドを実行してパッケージを追加インストールしてください。デスクトップ・メニューには、 Xine
+の起動アイコンが自動的に登録されます。</p>
+<pre> # urpmi xine-ui</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_24">付属のメディアプレーヤー「Kaffeine」について (10.1 Official)</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_25">「Kaffeine」とは何ですか</h4>
+<p>xine-lib を使用し、KDE のフロントエンドを持ったメディアプレイヤーです。音楽、動画の再生ができます。<br>
+公式サイト <a href="http://kaffeine.sourceforge.net/">http://kaffeine.sourceforge.net/</a></p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_26">XXXのムービーが再生できません</h4>
+<p>ライセンスの問題をはらんだパッケージは、公式サイトからは配布されていません。plf パッケージを使って Codec
+などのインストールが必要です。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>URPMI リポジトリに　plf サイトを登録する。</li>
+  <li>urpmi を使って xine-win32, win32-codecs をインストール。</li>
+  <li><a href="http://www1.mplayerhq.hu/homepage/design7/codecs.html">Binary
+Codecs
+for
+MPlayer</a>(xine-lib を使った別のメディアプレイヤー)で取得した Codec を
+/usr/lib/win32 ディレクトリにコピーする。</li>
+</ul>
+<p>上記の方法で、quicktime,realplayer,window media video 7/8/9
+が再生できるようになります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_27">メニューやツールバーが日本語で表示されません。(2006.0 Free Edition
+)</h3>
+<p>Mandriva 2006.0 無償版では、Mozilla-Firefox
+のメニューは英語表示です。これは、3枚組のインストールCDに収まらなくなったため、一部のパッケージが削除されたからです。</p>
+<p>公式パッケージ　mozilla-firefox-ja-1.0.6-1mdk.i586.rpm　を追加すれば解決できます。</p>
+<pre> # rpm -ivh mozilla-firefox-ja-1.0.6-1mdk.i586.rpm</pre>
+<p>2006 Free Edition では、OpenOffice.org 1.1.5
+に日本語化パッケージも含まれていません。したがって、OpenOffice.org-l10n-ja-1.1.5-2.mdk
+を追加することで、メニューが日本語で表示できるようになります。</p>
+<pre> # rpm -ivh OpenOffice.org-l10n-ja-1.1.5-2.mdk.i586.rpm</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_28">Firefox 1.0 がインストールできません (10.1 Official)</h3>
+<p>SCIM-Anthy を使用していると問題が起きるようです。下記の方法で回避してください。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>インストール時
+    <pre> env GTK_IM_MODULE=xim ./firefox-installer</pre>
+  </li>
+  <li>起動時
+    <pre> env GTK_IM_MODULE=xim firefox</pre>
+  </li>
+</ul>
+<p>mozilla の bugzilla での報告<br>
+<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=261194">https://bugzilla.mozilla.org/show_bug.cgi?id=261194</a></p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_29">2ch ブラウザー「おちゅ〜しゃ」のインストールができません。</h3>
+<p><a href="http://ochusha.sourceforge.jp/">おちゅ〜しゃの公式サイト</a>
+で公開されている RPM バイナリーは Fedora Core 用なので、そのままでインストールすることは無理です。<a
+ href="http://ecololi.plala.jp/linux/mandrake/">http://ecololi.plala.jp/linux/mandrake/</a>
+というサイトより Mandriva 用バイナリーRPMが公開されています。これをダウンロードし、次のコマンドでインストールすれば簡単です。</p>
+<pre> # urpmi ochusha-0.5.7.2-1mdk101.i586.rpm</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>外部リンクを開くことが可能とするには、おちゅ〜しゃの [ツール] &gt; [オプション] &gt;
+[外部ウェブブラウザ] の設定を変更する必要があります。GNOME 環境では、
+    <pre> (変更前) mozilla -raise -remote "openURL(%s,new-window)"<br> <br> (変更後) mozilla-firefox %s</pre>
+    <blockquote>
+      <p class="quotation">KDE 環境では、替わりに konqueror %s
+と指定すれば対処できます。</p>
+    </blockquote>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>公式なソースパッケージからインストールするには、 rpmbuild コマンドを使って、 RPM
+パッケージに変換してからインストールします。（tarball に RPM の spec ファイルが入っています。）
+    <pre> rpmbuild -ta ochusha-0.5.8.1.tar.bz2</pre>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_30">ruby で Qt/KDE の GUI が使いたい</h3>
+<p>KDE 3.3 から ruby で Qt/KDE の GUI が使える用になりました。Smoke
+という技術をもちいて、Qt/KDE へフルにアクセスできます。もちろん GUI でない機能も使えます。<br>
+しかし、公式サイトのファイルをコンパイルすると、コンパイル時に1ギガ以上のメモリを使用し、メモリが通常程度のユーザーではスワップが頻発し丸一日程
+時間がかかりますし、スワップ領域が足りなくなりコンパイルさえできないこともあります。コンパイルしてのインストールはお薦めしません。<br>
+非公式サイトの rpm パッケージで手軽にインストールできるので、そちらの方法を薦めます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://rpm.nyvalls.se/">Thac's RPMs for Mandrake</a>を
+URPMI リポジトリに登録する。</li>
+  <li>KDE 3.3 インストールする。</li>
+  <li>kderuby, qtruby, libkderuby, libqtruby を urpmi でインストールする。</li>
+</ul>
+<p>Qtruby 公式サイト <a
+ href="http://developer.kde.org/language-bindings/ruby/index.html">http://developer.kde.org/language-bindings/ruby/index.html</a></p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_31">Mozilla / Firefox
+ウェブブラウザーより日本語ページの印刷ができません。</h3>
+<p>この問題については、<span class="noexists">印刷関連の FAQ ページ<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=FAQ%2FConfiguration%2FPrinting&amp;refer=MandrivaLinux-FAQ%2FTips">?</a></span>
+を参照してください。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_32">GNOME 環境で Konqueror ウェブブラウザーを使いたい</h3>
+<p>次のコマンドを使うと必要な KDE 関連パッケージが同時にインストールされるので、GNOME 環境で利用可能となります。</p>
+<pre> # urpmi konqueror</pre>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>[注
+意] Konqueror をインストールすると、それ以降は KDE がデフォルトのデスクトップに置き換えられてしまいます。引き続き GNOME
+環境で利用したいときは、ユーザーのログイン時に画面下部のオプションメニューより [Session] &gt; [GNOME]
+に変更しログインしてください。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_33">起動時の各種サービスを 追加 / 停止 するには？</h3>
+<p>この設定変更は、Mandriva
+コントロールセンターより行えます。具体的には、デスクトップのパネルメニューより　[アプリケーション]
+&gt; [システム] . [コンピューターを設定] &gt; [システムサービス] より、任意のサービスを選択して変更ができます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_34">デスクトップ・メニューにアプリを追加できますか。</h3>
+<p>Mandriva Linux には、Menudrake
+というグラフィカルな専用エディタが用意されているので、これを使ってメニューの追加や編集ができます。</p>
+<p>パネルより　[アプリケーション] &gt; [システム] &gt; [設定] &gt; [その他] &gt; [<span
+ class="noexists">MenuDrake<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=MenuDrake&amp;refer=MandrivaLinux-FAQ%2FTips">?</a></span>]
+を選択します。メニューの編集は直感的に行えます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>詳しくは、
+file:///usr/share/doc/mandrake/en/Drakxtools-Guide/Drakxtools-Guide.html
+/menudrake.html
+参照。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_35">メタパッケージ（Task-Oriented パッケージ）の利用について (2006
+Official)</h3>
+<p>2006 Official には、Conectiva
+より導入された下記メタパッケージが利用できます。関連パッケージ一式を一括してインストールするためのものです。</p>
+<pre> # task-c-devel         C     開発環境<br> # task-c++-devel       C++   開発環境<br> # task-gnome           GNOME 環境<br> # task-kde             KDE   環境<br> # task-kde-devel       KDE   開発環境</pre>
+<p>一連のコマンドでどのようなパッケージがインストールされるのか知りたいときは、次のコマンドで確認できます。</p>
+<pre> $ urpmq -d task-パッケージ名</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_36">ソースパッケージからリビルドできる環境を整えたい。</h3>
+<p>インストール時に、一般的な標準インストール(グラフィカル)
+を選択した場合、ソースからリビルドできる環境にありません。そこで次のようにして、rpm-build
+を始めとする必要なパッケージを追加インストールします。</p>
+<pre> # urpmi rpm-build<br> 次のパッケージのいずれかが必要です:<br>  1- automake1.8-1.9.4-3mdk.noarch : A GNU tool for automatically creating Makefiles (to install)<br>  2- automake1.7-1.7.9-2mdk.noarch : A GNU tool for automatically creating Makefiles. (to install)<br>  3- automake1.6-1.6.3-2mdk.noarch : A GNU tool for automatically creating Makefiles. (to install)<br>  4- automake1.4-1.4-25.p6.mdk.noarch : A GNU tool for automatically creating Makefiles. (to install)<br> どれを選びますか？(1-4) 1<br> 依存を満たすために以下の 8 個のパッケージをインストールします(10 MB):<br> autoconf2.1-2.13-21mdk.noarch<br> autoconf2.5-2.59-6mdk.noarch<br> automake1.8-1.9.4-3mdk.noarch<br> gettext-0.14.1-10mdk.i586<br> libgettextmisc-0.14.1-10mdk.i586<br> libtool-1.5.12-4mdk.i586<br> rpm-build-4.2.3-9mdk.i586<br> spec-helper-0.11-1mdk.noarch<br> よろしいですか？ (Y/n)[デフォルトはY] y</pre>
+<p>以上で、 rpmbuild コマンドが利用可能となります。ソースパッケージからの実際のリビルド方法については、<span
+ class="noexists">Applications-FAQ/PackageManagement/RPM<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=Applications-FAQ%2FPackageManagement%2FRPM&amp;refer=MandrivaLinux-FAQ%2FTips">?</a></span>
+を見てください。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_37">サーバーとして活用する方法など。</h3>
+<p><a href="http://tkns.homelinux.net/memo/mandrivalinux10.1/index.html">Mandriva
+Linux
+10.1
+Memo</a> というサイトでは、サーバーの運用に関連した実用的な情報が公開されているので大変参考になるでしょう。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_38">毎回起動時に日本語 keymap の設定に失敗する（Failed
+と表示される）のですが？ (Mandriva 2008)</h3>
+<p>以下のいづれかの方法で解決できます。</p>
+<p>/etc/sysconfig/keyboard<br>
+KEYTABLE=jp106 =&gt; KEYTABLE=jp106.uni</p>
+<p>または、<br>
+# cp /usr/lib/kbd/keymaps/i386/qwerty/jp106.uni.map.gz
+/usr/lib/kbd/keymaps/i386/qwerty/jp106.map.gz<br>
+cp: `/usr/lib/kbd/keymaps/i386/qwerty/jp106.map.gz'
+を上書きしてもよろしいですか(yes/no)? yes</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>関連情報 <a href="http://expert.mandriva.com/question/91057">http://expert.mandriva.com/question/91057</a></li>
+  <li>この不具合は 2008.01.01 現在、修復されています。</li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_39">GNOME環境でログイン画面が日本語表示されない。(Mandriva 2008.0)</h3>
+<p>GNOME環境の時、デフォルトのログイン画面(gdm)が日本語ではなく、英語で表示されます。メニューより 言語 ＞ 英語
+を選択して一時的にユーザーログインし、その後ログオフすればログイン画面が日本語に変更されます。</p>
+<p>しかし、システムを再起動させると元の状態に戻ってしまい、英語で表示されたままになります。言語設定の関連で不具合が生じているよう
+に思われます。(2008.02.17 現在)</p>
+</div>
+<hr class="full_hr">
+<div id="toolbar"> <a href="../../../index.html">HOME</a></div>
+</body>
+</html>

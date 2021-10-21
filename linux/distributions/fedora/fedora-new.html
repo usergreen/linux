@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>Fedora Linux FAQ - Linux on the Desktop</title>
+  </head>
+  <body>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td valign="top"><a href="../../../index.html"><b>HOME</b></a> / <a href="../index.html">distributions</a> / Fedora / fedora-new</td>
+          <td valign="middle" align="right">Last updated: 2021-09-04 14:13 JST</td>
+        </tr>
+      </tbody>
+</table>
+<hr width="100%">
+<b><font size="+2">Fedora Linux のページ</font></b><br>
+<br>
+Fedora (Fedora Core の後継プロジェクト) に関する FAQ/Tips です。<br>
+<blockquote>
+  <ol>
+    <li><a href="#1">公式サイト</a></li>
+    <li><a href="#2">リリース情報について</a></li>
+    <li><a href="#3">公式の関連文書</a></li>
+    <li><a href="#4">Fedora の日本語入力環境について<br></a>
+      <a href="#4-1">日本語入力へ切り替えるには？</a><br>
+      <a href="#4-2">ログイン直後は英数入力にできませんか？</a><br>
+      <a href="#4-3">好きな日本語フォントを追加したい</a><br>
+      <a href="#4-4">日本語入力の開発状況について</a><br>
+      </li>
+    <li><a href="#5">インストールに必要なハードウェア環境は？</a></li>
+    <li><a href="#6">次期メジャーバージョンへのアップグレード方法は？</a></li>
+    <li><a href="#7">デスクトップ環境の選択について</a></li>
+    <li><a href="#8">dnf とは何ですか？</a></li>
+    <li><a href="#9">グラフィカルインストーラが動きません</a></li>
+    <li><a href="#10">root アカウントがありません</a></li>
+    <li><a href="#11">Firefox ブラウザの日本語文字が汚いのですが</a></li>
+    <li><a href="#12">Fedora おすすめのアプリケーションについて</a></li>
+    <li><a href="#13">ニュース記事 (外部リンク)</a></li>
+  </ol>
+</blockquote>
+<h3><a name="1"></a>公式サイト</h3>
+<ul>
+  <li>公式ウェブサイト <a href="https://getfedora.org/">https://getfedora.org/</a></li>
+  <li>Fedora Wiki　　　<a href="https://fedoraproject.org/wiki/Fedora_Project_Wiki">https://fedoraproject.org/wiki/Fedora_Project_Wiki</a></li>
+  <li>Fedora FAQ　　　 <a href="https://fedoraproject.org/wiki/FAQ">https://fedoraproject.org/wiki/FAQ</a></li>
+  <li>Fedora Planet　　<a href="http://fedoraplanet.org/">http://fedoraplanet.org/</a></li>
+</ul>
+<h3><a name="2"></a>リリース情報について</h3>
+デスクトップ向けには、Fedora ワークステーションがあります: <a href="https://getfedora.org/ja/workstation/">https://getfedora.org/ja/workstation/</a><br>
+<br>
+ダウンロード: <a href="https://getfedora.org/ja/workstation/download/">https://getfedora.org/ja/workstation/download/</a><br>
+<br>
+2021.8.30 現在の最新版 (Fedora 34)<br>
+<ul>
+  <li>Fedora-Workstation-Live-x86_64-34-1.2.iso　 (ライブ/スタンドアロンのインストール用)<br>
+</li>
+  <li>Fedora-Everything-netinst-x86_64-34-1.2.iso (ネットワークインストール用)<br>
+</li>
+</ul>
+Fedora 34 の公式リリースアナウンス<br>
+"Fedora Linux 34 is officially here!": <a href="https://fedoramagazine.org/announcing-fedora-34/">https://fedoramagazine.org/announcing-fedora-34/</a><br>
+<h3><a name="3"></a>公式の関連文書</h3>
+公式な文書類が無償で公開されています: <a href="https://docs.fedoraproject.org/ja/docs/">https://docs.fedoraproject.org/ja/docs/</a><br>
+<ul>
+  <li>リリースノート　　 <a href="https://docs.fedoraproject.org/ja/fedora/f34/release-notes/">https://docs.fedoraproject.org/ja/fedora/f34/release-notes/</a></li>
+  <li>インストールガイド <a href="https://docs.fedoraproject.org/ja/fedora/f34/install-guide/">https://docs.fedoraproject.org/ja/fedora/f34/install-guide/</a></li>
+</ul>
+<h3><a name="4"></a>Fedora の日本語入力環境について</h3>
+ibus-anthy が標準で採用されています。辞書は kasumi を使うことができます。<br>
+<a href="https://docs.fedoraproject.org/ja/fedora/f34/release-notes/desktop/I18n/">https://docs.fedoraproject.org/ja/fedora/f34/release-notes/desktop/I18n/</a><br>
+<h4><a name="4-1"></a>日本語入力へ切り替えるには？</h4>
+Fedora は最近のバージョンで入力切替に使用する標準キーを変更したようです。インストール直後は、半角/全角キーが効きません。<br>
+英語入力から日本語入力への切り替えは、Windows(Super)キー＋スペースキーです。一度日本語入力を有効にすると、その後の切り替えは半角/
+全角キー、または Ctrl + スペースが使えます。これはおかしな仕様だとは思いますが、担当開発者が英語圏のせいだと思います。英語環境では 
+日本語-Anthy を追加するだけなので設定の重複は発生しません。<br>
+<br>
+この変な仕様を修正するには、メニュー &gt; システム &gt; ユーザ向け &gt; 入力メソッドのセレクタ 
+の項目で、重複する日本語のうちの一方「日本語」を削除することで解決します。「日本語-Anthy」は残します。この設定画面は、パネルの IBus アイ
+コンをクリックし、入力メソッドの項目を開くことでも同様に行えます。 <br>
+<blockquote>
+参照サイト: 「日本語(ja)なる謎の物があったので削除」 <a href="http://linux.ikoinoba.net/index.php?UID=1359558980">http://linux.ikoinoba.net/index.php?UID=1359558980</a><br>
+</blockquote>
+<h4><a name="4-2"></a>ログイン直後は英数入力にできませんか？</h4>
+Fedora 34 
+の日本語入力設定は、デスクトップにログインした直後から入力切り替えなしですぐ日本語が入力できます。この標準設定を変更するには、パネルのIBusア
+イコンをクリックし、「設定」項目で初期値をひらがなから英数へと変更してください。これで次回ログイン時より変更が有効になります。
+<h4><a name="4-3"></a>好きな日本語フォントを追加したい</h4>
+たとえば VL ゴシックを追加するには、次のコマンドで行えます。* 印はワイルドカードで、これによってゴシック体とプロポーショナル・ゴシック体の2つがインストールされます。<br>
+<blockquote>
+# dnf -y install vlgothic*<br>
+</blockquote>
+<h4><a name="4-4"></a>日本語入力の開発状況について</h4>次のウェブサイトに最近の開発状況が出ています。ibus-anthy が標準採用なのは、Anthy の開発が再開されたのが影響しているようです。<br>
+<ul>
+  <li>Fedora 34 Change proposal: ibus-anthy for default Japanese IME 
+(System-Wide Change) 
+    <a href="https://lists.fedoraproject.org/archives/list/devel-announce@lists.fedoraproject.org/thread/DVGQNYAHEU6HOFDZWS6UNEPV6GAF2VH2/">https://lists.fedoraproject.org/archives/list/devel-announce@lists.fedoraproject.org/thread/DVGQNYAHEU6HOFDZWS6UNEPV6GAF2VH2/</a></li>
+  <li>
+Changes/ibus-anthy for default Japanese IME <a href="https://fedoraproject.org/wiki/Changes/ibus-anthy_for_default_Japanese_IME">https://fedoraproject.org/wiki/Changes/ibus-anthy_for_default_Japanese_IME</a></li>
+</ul>
+<h3><a name="5"></a>インストールに必要なハードウェア環境は？</h3>
+標準の x86_64 ワークステーションをインストールするためには、次のシステム環境が推奨されています。<br>
+<blockquote>
+  <div align="left">2GHz quad core プロセッサー<br>
+4GB システムメモリ<br>
+20GB のドライブの空き容量<br>
+  </div>
+
+出典: <a href="https://docs.fedoraproject.org/ja/fedora/f34/release-notes/welcome/Hardware_Overview/">https://docs.fedoraproject.org/ja/fedora/f34/release-notes/welcome/Hardware_Overview/</a>
+</blockquote>
+<h3><a name="6"></a>次期メジャーバージョンへのアップグレード方法は？</h3>
+複数の方法が存在しますが、Software applicationを利用する方法とdnf-plugin-system-upgradeプラグインを使う方法が推奨されています。詳しくは次の文書をご覧ください: <a href="https://docs.fedoraproject.org/ja/quick-docs/upgrading/">https://docs.fedoraproject.org/ja/quick-docs/upgrading/</a><br>
+<h3><a name="7"></a>デスクトップ環境の選択について</h3>
+Software Selection でデスクトップ環境が選択可能です。 (Fedora Workstation の標準は GNOME Desktop です)<br>
+<ul>
+  <li>Cinnamon Desktop</li>
+  <li>KDE Plasma Workkspaces</li>
+  <li>LXDE Desktop</li>
+  <li>LXQT Desktop</li>
+  <li>MATE Desktop</li>
+  <li>Sugar Desktop Environment</li>
+  <li>Xfce Desktop</li>
+</ul>
+なお、Live.iso の標準は GNOME です。ISO イメージを利用してインストールする場合、次のようなコマンドで他のデスクトップ環境を追加でインストールできます。<br>
+
+<blockquote>
+  <div align="left"># dnf groupinstall "KDE Plasma Workspaces"<br>
+# dnf install @mate-desktop-environment</div>
+出典: <a href="https://docs.fedoraproject.org/en-US/fedora/f34/install-guide/install/Installing_Using_Anaconda/#sect-installation-gui-software-selection">https://docs.fedoraproject.org/en-US/fedora/f34/install-guide/install/Installing_Using_Anaconda/#sect-installation-gui-software-selection</a><br>
+
+</blockquote>
+<h3><a name="8"></a>dnf とは何ですか？</h3>
+これは従来の yum に代わる新しいパッケージマネージャです。使い方は以前とほとんど同じです。dnf という名前は dandified yum から来ています。粧し込んだ高機能な yum ということなのでしょう。<br>
+<h3><a name="9"></a>グラフィカルインストーラが動きません</h3>
+指示された処理の解決に時間が掛かっていると考えられます。長時間無反応な場合はウィンドウ右上の × をクリックして強制終了することができます。コマンドラインから dnf を使う方が快適に処理することが可能です。<br>
+<h3><a name="10"></a>root アカウントがありません</h3>
+ライブ ISO のインストーラは root アカウントを作成せず、sudo を使用します。そのため、root アカウントを利用するにはパスワードの作成が必要です。<br>
+<blockquote>
+$ sudo passwd root<br>
+</blockquote>
+<h3><a name="11"></a>Firefox ブラウザの日本語文字が汚いのですが</h3>
+標準フォントが noto sans cjk に指定済みですが、システム設定が適切でないと考えられます。ブラウザの既定言語を英語 (en_US) 
+に変更してブラウザを再起動すれば、非常に綺麗に表示されるようになります。おそらくは英語環境でしか検証されていないのでしょう。ただし、ブラウザのイ
+ンターフェース (UI) は英語になってしまいます。<br>
+<br>
+別の方法としては、上記で紹介した VL ゴシックをインストールして、ブラウザの既定フォントに指定するやり方があります。VL ゴシックであれば適正化されているらしく、綺麗に表示されます。
+<h3><a name="12"></a>Fedora おすすめのアプリケーションについて</h3>
+Fedora マガジンの連載記事 "Apps for daily needs" 
+では、デスクトップで役に立つ各種アプリケーションが紹介されています。一般にはあまり知られていないアプリケーションもあるので興味深いです。- 
+Apps for daily needs: <a href="https://fedoramagazine.org/apps-for-daily-needs-part-1-web-browsers/">https://fedoramagazine.org/apps-for-daily-needs-part-1-web-browsers/</a><br>
+<h3><a name="13"></a>ニュース記事 (外部リンク)</h3>
+5ch Fedora 総合スレッド <a href="https://mao.5ch.net/test/read.cgi/linux/1609128095/">https://mao.5ch.net/test/read.cgi/linux/1609128095/</a><br>
+Fedora コミュニティフォーラム　<a href="https://www.fedoraforum.org/">https://www.fedoraforum.org/</a><br>
+<br>
+<hr width="100%">
+<div style="text-align: left;"><a href="../../../index.html"><b>HOME</b></a> / <a href="../index.html">distributions</a> / Fedora / fedora-new</div>
+
+
+</body></html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=Shift_JIS"
+      http-equiv="Content-Type">
+    <title>FedoraHOWTO</title>
+  </head>
+  <body>
+    <div id="body">
+      <p><a href="http://f40.aaa.livedoor.jp/%7Egreen/?FrontPage"
+          title="FrontPage (2d)">Top</a> / <a
+          href="http://f40.aaa.livedoor.jp/%7Egreen/?FedoraCore-FAQ">FedoraCore-FAQ</a>
+        / <a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?FedoraCore-FAQ%2FTranslationDocs">TranslationDocs</a>
+        / <a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO">FedoraHOWTO</a></p>
+      <h2 id="content_1_0">Fedora HOWTO</h2>
+      <p>原文へのリンク：Fedora HOWTO <a
+          href="http://www.fedora.us/wiki/FedoraHOWTO">http://www.fedora.us/wiki/FedoraHOWTO</a></p>
+      <p>原文の更新年月日等：2004年5月18日（火）午前 9：44：53</p>
+      <div class="contents">
+        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+          <li><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#content_1_0">Fedora
+              HOWTO </a>
+            <ul class="list2" style="padding-left: 16px; margin-left:
+              16px;">
+              <li><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#content_1_1">Fedora.us
+                  を使って始めましょう </a></li>
+              <li><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#content_1_2">APT
+                  を fedora.us で利用するには </a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#content_1_3">apt-get
+                      コマンドの使い方 </a></li>
+                  <li><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#content_1_4">Synaptic
+                      -グラフィカルなフロントエンド </a></li>
+                </ul>
+              </li>
+              <li><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#content_1_5">YUM
+                  を fedora.us で利用するには </a>
+                <ul class="list3" style="padding-left: 16px;
+                  margin-left: 16px;">
+                  <li><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#content_1_6">YUM
+                      コマンドの使い方 </a></li>
+                </ul>
+              </li>
+              <li><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#content_1_7">Up2date
+                  　を fedora.us で利用するには </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#navigator">↑</a></div>
+      <h3 id="content_1_1">Fedora.us を使って始めましょう</h3>
+      <p>ご注意： fedora.us が提供するパッケージは、 Red Hat Linux や Fedora Core および私達
+        fedora.us
+        が提供している他のパッケージといっしょに利用することだけを前提として開発され、十分に動作確認されています。他のリポジトリーとの混
+        用によって生じる
+        互換性の問題については、<a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?FedoraCore-FAQ%2FTranslationDocs%2FRepositoryMixingProblems"
+          title="FedoraCore-FAQ/TranslationDocs/RepositoryMixingProblems
+          (2099d)">RepositoryMixingProblems</a>
+        をご覧になってください。</p>
+      <p>始めに、fedora.us がそれぞれのソフトウェア毎に提供している詳細について <a
+          href="http://www.fedora.us/wiki/FedoraChannels">FedoraChannels:http://www.fedora.us/wiki/FedoraChannels</a>
+        というページの解説をご覧ください。</p>
+      <p>fedora.us のウェブサイトからパッケージをインストールする方法としては、 <a
+          href="http://download.fedora.us/fedora/">fedora tree</a>
+        の中からいちいちダウンロードしてインストールするという方法も選べますが、長期的な運用を考慮した場合、数種類用意されているうちのい
+        ずれかの自動更新
+        による運用方法を習得される方がずっと簡単です。 Fedora.us では、<a
+          href="https://moin.conectiva.com.br/AptRpm">「APT」</a> と<a
+          href="http://linux.duke.edu/projects/yum/">「YUM」</a>
+        の2種類のパッケージ管理用のツールを用意しています。どちらを使っても、あなたが指定したパッケージのダウンロードやインストールを自
+        動的に行えます。
+        使用するリポジトリーは、ステーブル（安定版）にあらかじめセットされています。</p>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#navigator">↑</a></div>
+      <h3 id="content_1_2">APT を fedora.us で利用するには</h3>
+      <p>APT で fedora.us を利用するには、ウェブサイトから次のいずれかのパッケージをダウンロードします。</p>
+      <div class="ie5">
+        <table class="style_table" cellspacing="1" border="0">
+          <tbody>
+            <tr>
+              <td class="style_td">Fedora Core 2</td>
+              <td class="style_td"><a
+href="http://download.fedora.us/fedora/fedora/2/i386/RPMS.stable/apt-0.5.15cnc6-0.fdr.11.2.i386.rpm">Download
+                  apt-0.5.15cnc6-0.fdr.11.2.i386.rpm</a></td>
+            </tr>
+            <tr>
+              <td class="style_td">Fedora Core 1</td>
+              <td class="style_td"><a
+href="http://download.fedora.us/fedora/fedora/1/i386/RPMS.stable/apt-0.5.15cnc6-0.fdr.11.1.i386.rpm">Download
+                  apt-0.5.15cnc6-0.fdr.11.1.i386.rpm</a></td>
+            </tr>
+            <tr>
+              <td class="style_td">Red Hat Linux 9</td>
+              <td class="style_td"><a
+href="http://download.fedora.us/fedora/redhat/9/i386/RPMS.stable/apt-0.5.5cnc6-0.fdr.8.rh90.i386.rpm">Download
+                  apt-0.5.5cnc6-0.fdr.8.rh90.i386.rpm</a></td>
+            </tr>
+            <tr>
+              <td class="style_td">Red Hat Linux 8.0</td>
+              <td class="style_td"><a
+href="http://download.fedora.us/fedora/redhat/8.0/i386/RPMS.stable/apt-0.5.5cnc6-0.fdr.8.rh80.i386.rpm">Download
+                  apt-0.5.5cnc6-0.fdr.8.rh80.i386.rpm</a> (<a
+                  href="http://download.fedora.us/patches/redhat/8.0/i386/RPMS.stable/">rpm
+&gt;=
+                  4.1.1</a> 以上が必要)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>もしあなたが、fedora.us 以外のプロジェクトのリポジトリーから入手した APT
+        をすでにインストールされているのなら、当リポジトリー向けに特に用意された APT を再インストールされることを是非お推めします。</p>
+      <p>お住いになっている場所の近くにある高速なミラーサイトを選ぶため、Fedora Core 1
+        や上記のバージョンでは、"apt-get
+        mirror-select" というコマンドを実行してください。それよりも前にリリースされたバージョンについては、 <a
+          href="http://www.fedora.us/wiki/FedoraSources">FedoraSources</a>
+        というページで詳しく説明されているとおり、 /etc/apt/sources.list
+        に存在する設定ファイルの記述を書き換えてください。</p>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#navigator">↑</a></div>
+      <h4 id="content_1_3">apt-get コマンドの使い方</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>apt-get update
+          <blockquote>
+            <p class="quotation">（利用可能な）パッケージの一覧をダウンロードします。パッケージの変更は1日の内
+              に数回ありま
+              すので、頻繁に実行するようにしてください。</p>
+          </blockquote>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>apt-get dist-upgrade
+          <blockquote>
+            <p class="quotation">インストールされている全てのパッケージを更新します。</p>
+          </blockquote>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>apt-get install &lt;packagename&gt;
+          <blockquote>
+            <p class="quotation">特定のパッケージを指定してインストールや更新を行えます。（パッケージの依存関係
+              を含みま
+              す。）</p>
+          </blockquote>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>apt-get mirror-select
+          <blockquote>
+            <p class="quotation">APT で利用するリポジトリーとミラーサイトを選択します。(これは、特に
+              Fedora.US 向けの拡張機能です。)</p>
+          </blockquote>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>apt-cache search &lt;word&gt;<br>
+          パッケージ名&lt;word&gt;をもとにして、その詳細を検索できます。</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>apt-cache show &lt;packagename&gt;
+          <blockquote>
+            <p class="quotation">あるパッケージについての基本情報を表示できます。</p>
+          </blockquote>
+        </li>
+      </ul>
+      <p>より詳しい説明を入手するには、man apt-get や man apt-cache コマンドを実行してください。</p>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#navigator">↑</a></div>
+      <h4 id="content_1_4">Synaptic -グラフィカルなフロントエンド</h4>
+      <p>APT を利用しているユーザーには、<a href="http://www.nongnu.org/synaptic/">シナプ
+          ティック</a>と
+        呼ばれているグラフィカルなツールが用意されています。apt-get install synaptic
+        コマンドを使ってインストールできます。</p>
+      <div class="ie5">
+        <table class="style_table" cellspacing="1" border="0">
+          <tbody>
+            <tr>
+              <td class="style_td">Red Hat Linux 9</td>
+              <td class="style_td">Download
+                yum-2.0.3-0.fdr.1.rh90.noarch.rpm</td>
+            </tr>
+            <tr>
+              <td class="style_td">Red Hat Linux 8.0</td>
+              <td class="style_td">Download
+                yum-2.0.3-0.fdr.1.rh80.noarch.rpm
+                (requires rpm &gt;= 4.1.1)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <blockquote>
+        <p class="quotation">(requires rpm &gt;= 4.1.1) インストールの際使用するRPM
+          管理ツールは、バージョン4.1.1 以上であることが必要です。）</p>
+      </blockquote>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#navigator">↑</a></div>
+      <h3 id="content_1_5">YUM を fedora.us で利用するには</h3>
+      <p>YUM で fedora.us を利用するには、YUM がすでにインストールされている必要があります。Fedora Core
+        には
+        YUM が含まれていますが、Red Hat Linux には含まれていないので、次のいずれかの YUM
+        パッケージをダウンロードしてインストールする必要があります。</p>
+      <p>YUM を利用する場合には、フェイルオーバー
+        [サーバー間で異常アプリケーションを代行処理するという]機能が追加されているので、あるダウンロードサーバーが一時的に利用できない
+        場合でも、その処
+        理が継続されます。近くにあるミラーサーバーが最初に機能するように /etc/yum.conf のbaseurl
+        パラメーターにそのアドレスを登録してください。</p>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#navigator">↑</a></div>
+      <h4 id="content_1_6">YUM コマンドの使い方</h4>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>yum list
+          <blockquote>
+            <p class="quotation">利用可能なソフトウェアの一覧を表示させます。</p>
+          </blockquote>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>yum check-update OR yum list updates
+          <blockquote>
+            <p class="quotation">更新可能なパッケージがあるかどうかの確認ができます。</p>
+          </blockquote>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>yum update
+          <blockquote>
+            <p class="quotation">U新しいパッケージがあれば、全て更新します。</p>
+          </blockquote>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>yum install &lt;packagename&gt;
+          <blockquote>
+            <p class="quotation">指定した特定のパッケージをインストールします。（この場合、依存関係も含まれま
+              す。）</p>
+          </blockquote>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>yum search &lt;word&gt;
+          <blockquote>
+            <p class="quotation">パッケージ名をもとにして、その詳細などを検索できます。</p>
+          </blockquote>
+        </li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>yum info &lt;packagename&gt;
+          <blockquote>
+            <p class="quotation">あるパッケージについての基本情報を表示できます。</p>
+          </blockquote>
+        </li>
+      </ul>
+      <p>All of the above commands can take shell-style wildcards (*,?)
+        instead of a package name. Check the yum man page for more
+        details.　上に挙げたコマンドを実行する際、パッケージ名の代わりに、ワイルドカードなどを使うことも可能です。詳しくは、
+        YUM
+        のマニュアルのページを見てください。</p>
+      <div class="jumpmenu"><a
+href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO#navigator">↑</a></div>
+      <h3 id="content_1_7">Up2date　を fedora.us で利用するには</h3>
+      <p>Fedora Core では、配布されている Up2date で YUM や APT
+        用のリポジトリーが利用可能です。この機能を利用したい場合には、 /etc/sysconfig/rhn/sources
+        の場所にあるファイルに適当な記述を追加します。大抵のユーザーは、安定用（stable）のリポジトリーしか必要としませんが、オプ
+        ションとして、（検
+        証が不十分な）不安定版のパッケージを利用できるように設定することも可能です。詳しくは、<a
+          href="http://www.fedora.us/wiki/FedoraSources">FedoraSources</a>
+        をご覧ください。</p>
+    </div>
+  </body>
+</html>

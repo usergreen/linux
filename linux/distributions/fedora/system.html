@@ -1,0 +1,536 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=Shift_JIS" http-equiv="Content-Type">
+  <title>System</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../../../index.html" title="FrontPage (2d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">FedoraCore-FAQ</a>
+<br>
+</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">Fedora Core に関する FAQ</h2>
+<div class="contents">
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="#content_1_0">Fedora Core に関するFAQ </a>
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><a href="#content_1_1">Fedora Core のインストールの手順を教えてください。 </a></li>
+      <li><a href="#content_1_2">アップデート(updates)はどうやったら良いのですか？ </a></li>
+      <li><a href="#content_1_3">Up2date の設定方法について具体的に教えてください。 </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_4">国内の高速サーバーに接続するには? (Fedora Core 3
+の例) </a></li>
+          <li><a href="#content_1_5">Fedora Legacy に接続するには? (Fedora
+Core 1 の例) </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_6">APT for RPM
+(APT-RPM)導入の方法や使い方について教えてください。 </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_7">APT for RPM (APT-RPM)導入の方法 </a></li>
+          <li><a href="#content_1_8">Synaptic とは何ですか。 </a></li>
+          <li><a href="#content_1_9">APT リポジトリーのミラーサイトの設定を変更する方法は? </a></li>
+          <li><a href="#content_1_10">Fedora Legacy に接続するには? </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_11">YUM の設定方法、使用方法について具体的に教えてください。 </a>
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="#content_1_12">YUM とは何ですか? </a></li>
+          <li><a href="#content_1_13">国内の高速サーバーに接続するには? </a></li>
+          <li><a href="#content_1_14">Fedora Legacy に接続するには? </a></li>
+          <li><a href="#content_1_15">YUM の自動更新機能を利用したい。 </a></li>
+        </ul>
+      </li>
+      <li><a href="#content_1_16">Fedora の日本語のディフォルトのロケールを EUC-JP にしたい。
+        </a></li>
+      <li><a href="#content_1_17">ログイン時のbeepを消すには？ </a></li>
+      <li><a href="#content_1_18">GPG Key はどうやったらインポートできますか。 </a></li>
+      <li><a href="#content_1_19">MPlayer や Xine、VideoLAN Client
+などを追加できますか? </a></li>
+      <li><a href="#content_1_20">リポジトリー混用は問題がありますか？ </a></li>
+      <li><a href="#content_1_21">Red Hat 社や、旧 Fedora
+Project以外で開発されたRPMの一覧を抽出したい。 </a></li>
+      <li><a href="#content_1_22">英文フォントと和文フォントが明らかに違う </a></li>
+      <li><a href="#content_1_23">VMware にインストールした時ネットワークが起動しない </a></li>
+      <li><a href="#content_1_24">マクロメディア Flash 6 プラグインがインストールできません。 </a></li>
+      <li><a href="#content_1_25">日本語のPDF文書が文字化けして読めません。 </a></li>
+      <li><a href="#content_1_26">かな漢字変換がおかしい。辞書が壊れているのですか。 </a></li>
+      <li><a href="#content_1_27">Fedora の非 UTF 環境で man が文字化けする </a></li>
+      <li><a href="#content_1_28">Beepが鳴らない </a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_1">Fedora Core のインストールの手順を教えてください。</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Red Hat の場合が参考になります。<a href="http://fedora.redhat.com/download/">ダ
+ウンロード（英文）</a>や<a href="http://fedora.redhat.com/docs/release-notes/">リリー
+ス・ノート（英文）</a>が公開されていて、そこには具体的な手順と注意事項が載せられています。やる気があるなら是非読んでみましょう。</li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://wiki.fedora.jp/?Fedora%20Core%204%20%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%EB%A5%AC%A5%A4%A5%C9">Fedora
+Core
+4 インストールガイド</a><a
+ href="http://fedora.redhat.com/docs/fedora-install-guide-en/fc4/">（Fedora
+Core
+4 インストールガイド（原文：英文））</a></li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>FC1(Release name: Yarrow)のグラフィカルなインストールの手順については <a
+ href="http://www.h7.dion.ne.jp/%7Egreens/yarrow-install_HOWTO/fedora-install-1.html">fedora
+Linux-install_HOWTO</a> も参考のこと。</li>
+</ul>
+<p>Fedora Core 4は、そのレスキューディスクとネットワークを使ってインストールすることができる。<br>
+<a
+ href="http://www.atmarkit.co.jp/flinux/rensai/linuxtips/752instfc4.html">CD-
+Rを焼かずにFedora Core 4をインストールするには</a><br>
+レスキューディスクイメージは、CD-Rに焼く必要がある。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2">アップデート(updates)はどうやったら良いのですか？</h3>
+<p>新しいパッケージの追加やセキュリティ、バグの更新に関しては、次のサイトからダウンロードできます。<br>
+<a href="http://fedora.redhat.com/download/updates.html">http://fedora.redhat.com/download/updates.html</a></p>
+<p>アップデートを実行するには、以下の項目で紹介しているように APT (APT-RPM)のほか、YUM や従来の Red Hat
+Update Agent (Up2date)といったパッケージ管理ツールが用意されているので、その中からお好きな方法を選択してください。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">Up2date の設定方法について具体的に教えてください。</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_4">国内の高速サーバーに接続するには? (Fedora Core 3 の例)</h4>
+<p>適当なテキストエディターで /etc/sysconfig/rhn/sources を以下のように書き換えてください。<br>
+redhat.com に自動接続しないように、必ず # でコメントしておきます。</p>
+<pre> #yum fedora-core-3 http://download.fedora.redhat.com/pub/fedora/linux/core/3/$ARCH/os/ <br> #yum updates-released-fc3 http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/$ARCH/<br> <br> #yum-mirror fedora-core-3 http://fedora.redhat.com/download/up2date-mirrors/fedora-core-3<br> #yum-mirror updates-released-fc3 http://fedora.redhat.com/download/up2date-mirrors/updates-released-fc3<br> <br> yum fedora-core-3 http://ftp.riken.jp/Linux/fedora/core/3/$ARCH/os/<br> yum updates-released-fc3 http://ftp.riken.jp/Linux/fedora/core/updates/3/$ARCH/</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_5">Fedora Legacy に接続するには? (Fedora Core 1 の例)</h4>
+<p>適当なテキストエディターで /etc/sysconfig/rhn/sources を以下のように書き換えてください。redhat.com
+に接続するのを希望しない場合は、# でコメントしておきます。</p>
+<pre> #yum fedora-core-1 http://fedora.redhat.com/releases/fedora-core-1<br> #yum updates-released http://fedora.redhat.com/updates/released/fedora-core-1<br> #yum updates-testing http://fedora.redhat.com/updates/testing/fedora-core-1<br> <br> # Fedora Legacy FC1 os repository<br> yum os http://download.fedoralegacy.org/fedora/1/os/i386/<br> # Fedora Legacy FC1 updates repository<br> yum updates http://download.fedoralegacy.org/fedora/1/updates/i386/<br> # Fedora Legacy FC1 legacy-utils repository<br> yum legacy-utils http://download.fedoralegacy.org/fedora/1/legacy-utils/i386/</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_6">APT for RPM (APT-RPM)導入の方法や使い方について教えてください。</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_7">APT for RPM (APT-RPM)導入の方法</h4>
+<dl class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <dt>１．APTのRPMパッケージの入手</dt>
+  <dd>　Fedora Projectのウェブサイト<a
+ href="http://www.fedora.us/wiki/FedoraHOWTO">FedoraHOWTO</a>（<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?FedoraCore-FAQ%2FTranslationDocs%2FFedoraHOWTO"
+ title="FedoraCore-FAQ/TranslationDocs/FedoraHOWTO (2099d)">仮訳はこちら</a>）
+からファイル名「apt-0.5.15cnc5-0.fdr.10.1.i386.rpm」（Fedora Core
+1の場合）を任意の場所にダウンロードします。（ここでは、ルート・ディレクトリーにダウンロードしたものとして、以下説明します。）ダウンロードサイズ
+は、約831KBです。</dd>
+</dl>
+<dl class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <dt>２．APTのRPMパッケージのインストール</dt>
+  <dd>　まず、コンソールからrootでログインします。既にユーザーログインしている場合には、 su コマンドで root
+になるためのパスワードを入力します。ダウンロードしたファイルは、RPMでパッケージされていますので、インストールはコンソール画面から rpm
+-ivh apt-0.5.15cnc5-0.fdr.10.1.i386.rpm
+と入力します。入力したらリターンキーを押します。自動的にインストールが開始されると次の例のように表示され、数秒の内に完了します。
+    <pre> [user@localhost xxxx]$ su<br> Password: xxxxxxxx<br> [root@localhost xxxx]# rpm -ivh apt-0.5.15cnc5-0.fdr.10.1.i386.rpm<br> 警告: apt-0.5.15cnc5-0.fdr.10.1.i386.rpm: V3 DSA signature: NOKEY, key ID 8df56d0 5<br> Preparing... ########################################### [100%]<br> 1:apt ########################################### [100%]</pre>
+  </dd>
+</dl>
+<dl class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <dt>３.APT リポジトリの設定とリストの更新</dt>
+  <dd>　APTのインストールが無事に済めば、次に行う作業は最新のリストにアップデートする作業です。コンソール画面から、apt-get
+update と入力します。入力したらリターンキーを押します。GPG キーが自動的にインポートされます。
+    <pre> [root@localhost xxxx]# apt-get update<br> You don't seem to have one or more of the needed GPG keys in your RPM database.<br> Importing them now...<br> Fetching list of repositories/mirrors... </pre>
+APT の初回起動時には次のメッセージが表示され、リポジトリの設定を行います。
+    <pre>                                                                                <br> This appears to be the first time you are running APT.<br> Before you can use apt for software installation you need to select some software repositories first.<br>                                                                                <br> Choose the repositories you want to use from the list below:<br> 1       Fedora Core<br> 2       Fedora Extras<br> 3       Macromedia<br>                                                                                <br> When finished choose 'c' to continue or choose 'q' to quit repository selector without changing anything.<br> Enter your selection(s) in a comma-separated list:</pre>
+上
+の英文の手順に従いますが、説明がやや分かりにくいかも知れませんので、注意してください。例えば、Fedora Core・ Fedora
+Extras ・ Macromedia の３つを選択する場合は、1,2,3
+と選択した数字をコンマで区切って入力し、リターンキーを押します。そうすると、次のように確認画面が表示されます。[(x)印の項目が選択済みというこ
+とです]
+    <pre> Choose the repositories you want to use from the list below:<br> 1 (x)   Fedora Core<br> 2 (x)   Fedora Extras<br> 3 (x)   Macromedia</pre>
+この選択で良ければ c を入力し、リターンキーを押します。(取り消す場合は、q を入力します。)
+どのミラーサイトを利用するか選択する画面になります。
+    <pre> Choose the geographically nearest mirror(s)for use with:<br>                                                                                <br>  Fedora Core<br> 1       Indiana University, Bloomington Indiana, USA<br> 2       University of Southern California, USA<br> 3       Kernel.org, San Francisco California, USA<br> 4       University Aachen, Germany<br> 5       Technical University Chemnitz, Germany<br> 6       University of Applied Sciences Esslingen, Germany<br> 7       London, Great Britain<br> 8       Multikabel N.V. Alkmaar, The Netherlands<br> 9       Romanian Education Network, Iasi, Romania<br> 10      SdV Plurim醇Pdia, Strasbourg, France<br> 11      University of Hawaii Honolulu, Hawaii, USA<br>                                                                                <br> When finished choose 'c' to continue or choose 'q' to quit repository selector without changing anything.<br> Enter your selection(s) in a comma-separated list:</pre>
+ここで一例として、3 の Kernel.org, と 11 の University of Hawaii
+を選択してみます(このように複数の選択も可能です)。
+    <pre> Choose the geographically nearest mirror(s)for use with:<br>                                                                                <br>  Fedora Core<br> 1       Indiana University, Bloomington Indiana, USA<br> 2       University of Southern California, USA<br> 3 (x)   Kernel.org, San Francisco California, USA<br> 4       University Aachen, Germany<br> 5       Technical University Chemnitz, Germany<br> 6       University of Applied Sciences Esslingen, Germany<br> 7       London, Great Britain<br> 8       Multikabel N.V. Alkmaar, The Netherlands<br> 9       Romanian Education Network, Iasi, Romania<br> 10      SdV Plurim醇Pdia, Strasbourg, France<br> 11 (x)  University of Hawaii Honolulu, Hawaii, USA<br>                                                                                <br> When finished choose 'c' to continue or choose 'q' to quit repository selector without changing anything.<br> Enter your selection(s) in a comma-separated list:</pre>
+先の手順と同様、上記の選択で良い場合には、c を入力しリターンキーを押します。Macromedia
+のリポジトリーを設定する場合も、同じ手順で行ってください。
+    <pre>  Macromedia<br> 1       USA West, University of California at Santa Cruz<br> 2       USA East, Rutgers University, New Jersey<br> 3       Europe, Centro de Comunicaciones CSIC/RedIRIS, Madrid Spain<br> 4 (x)   Pacific, University of Hawaii</pre>
+以上で選択設定が完了です。直ちに APT リストが自動更新され、sources list
+はバックアップされます。回線の都合等によってはしばらく時間がかかることもあるので、終了するまで待ちます。
+    <pre> Writing source list entries...<br> NOTE: /etc/apt/sources.list moved to /etc/apt/sources.list.backup !!<br> Done.<br> Get:1 http://download.fedora.us fedora/1/i386 release [2494B]<br> Get:2 http://mirrors.kernel.org fedora/1/i386 release [2494B]<br> Get:3 http://macromedia.mplug.org fedora/1 release [505B]<br> Fetched 5493B in 1s (4456B/s)<br> Get:1 http://mirrors.kernel.org fedora/1/i386/os pkglist [1445kB]<br> Get:2 http://macromedia.mplug.org fedora/1/macromedia pkglist [1036B]<br> （ーーー途中経過省略ーーー)<br> Get:21 http://download.fedora.us fedora/1/i386/stable srclist [49.6kB]<br> Fetched 4525kB in 23s (192kB/s)<br> Reading Package Lists... Done<br> Building Dependency Tree... Done<br>  [root@localhost xxxx]#</pre>
+  </dd>
+</dl>
+<dl class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <dt>４．アップグレードの実行</dt>
+  <dd>　インターネットの配布先から、最新のRPMパッケージをダウンロードし、インストールするためには、引き続いて apt-get
+upgrade
+と入力します。入力したらリターンキーを押します。回線速度にも依りますが、現在更新されたパッケージが追加されているので多少時間がかかります。下記の
+画面表示は、あくまで一例です。
+    <pre> [root@localhost xxxx]# apt-get upgrade<br> Reading Package Lists... Done<br> Building Dependency Tree... Done<br> The following packages will be upgraded<br> perl-DateManip<br> 1 upgraded, 0 newly installed, 0 removed and 0 not upgraded.<br> Need to get 157kB of archives.<br> After unpacking 82.8kB of additional disk space will be used.<br> Do you want to continue? [Y/n] y</pre>
+　途中、上の例のように作業を続けるか取消すかを尋ねてくるので、ここでは「y」を入力しリターンキーを押します。すると作業が再開され、次のような画面
+が表示されます。経過表示が１００％になれば、作業終了です。
+    <pre> Get:1 http://download.fedora.us fedora/1/i386/stable perl-DateManip 0:5.42-0.fdr .2.a.1 [157kB]<br> Fetched 157kB in 2s (59.6kB/s)<br> Checking GPG signatures...<br> Executing RPM (-Uvh)...<br> Preparing... ########################################### [100%]<br> 1:perl-DateManip ########################################### [100%]<br> [root@localhost xxxx]#</pre>
+  </dd>
+</dl>
+<dl class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <dt>５．APTコマンドについて</dt>
+  <dd>　以上の一連の手順で、パッケージ管理はすでにAPTで行えるようになりましたので、今後はAPTリストの更新とアップグレードの実行を随時
+繰り返すだけです。APTで使用する代表的なコマンドを参考までに載せておきます。基本となるのは次のコマンドです。<br>
+    <br>
+    <div class="ie5">
+    <table class="style_table" border="0" cellspacing="1">
+      <thead><tr>
+        <td class="style_td">コマンド</td>
+        <td class="style_td">解説</td>
+      </tr>
+      </thead><tbody>
+        <tr>
+          <td class="style_td"># apt-get update</td>
+          <td class="style_td">最新のリストに更新する</td>
+        </tr>
+        <tr>
+          <td class="style_td"># apt-get upgrade</td>
+          <td class="style_td">更新されたリストに従って実行をする</td>
+        </tr>
+        <tr>
+          <td class="style_td"># apt-get dist-upgrade</td>
+          <td class="style_td">OS（カーネル）自体の更新を実行する</td>
+        </tr>
+        <tr>
+          <td class="style_td">$ apt-cache search <em>キーワード</em></td>
+          <td class="style_td">キーワードからパッケージを検索する</td>
+        </tr>
+        <tr>
+          <td class="style_td">$ apt-cache show <em>パッケージ名</em></td>
+          <td class="style_td">パッケージの説明をみる。</td>
+        </tr>
+        <tr>
+          <td class="style_td"># apt-get install <em>パッケージ名</em></td>
+          <td class="style_td">個別に指定してインストールする</td>
+        </tr>
+        <tr>
+          <td class="style_td"># apt-get remove <em>パッケージ名</em></td>
+          <td class="style_td">個別に指定して削除（アンインストール）する</td>
+        </tr>
+        <tr>
+          <td class="style_td"># apt-get clean</td>
+          <td class="style_td">一時保存されているキャッシュファイルを削除する</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </dd>
+</dl>
+<dl class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <dt>６．グラフィカル管理ツール：Synaptic の導入について</dt>
+  <dd>　Synaptic と呼ばれる GUI フロントエンドを使っても APT の操作ができます。詳しくは、下の項目を参照してください。</dd>
+</dl>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_8">Synaptic とは何ですか。</h4>
+<p>APT の<a
+ href="http://www.h7.dion.ne.jp/%7Egreens/Fedora_apt-for-rpm/Screenshot-Synaptic.jpg">グ
+ラフィカルな管理ツール</a>です。Fedora Core 1に対しても提供が開始されました。</p>
+<p>Synaptic を導入するには、上記のサイトに上がっている synaptic-0.47-fdr.4.1.i386.rpm
+をダウンロードし、インストールします。もしくは、コンソールから apt-get install synaptic と入力します。</p>
+<p>インストール後、Synaptic を起動させるには、次の２つの方法があります。</p>
+<div class="ie5">
+<table class="style_table" border="0" cellspacing="1">
+  <thead><tr>
+    <td class="style_td">起動</td>
+    <td class="style_td">メニュー/コマンド</td>
+  </tr>
+  </thead><tbody>
+    <tr>
+      <td class="style_td">メニューから起動</td>
+      <td class="style_td">メインメニュー（赤帽アイコン）＞ システムツール ＞他のシステム設定 ＞Synaptic
+パッケージマネージャ</td>
+    </tr>
+    <tr>
+      <td class="style_td">コマンドで起動</td>
+      <td class="style_td"># synaptic</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_9">APT リポジトリーのミラーサイトの設定を変更する方法は?</h4>
+<p>コンソールから、rootで apt-get mirror-select と入力します。画面上から、対話形式で簡単に設定ができます。</p>
+<p>(注意) APT ツールのバージョンアップ(2004.02.29
+付)にともない、設定方法が変更されています。以前のように、sources .list をエディターで直接書き換えることは薦めていません。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_10">Fedora Legacy に接続するには?</h4>
+<p>適当なエディターを使って /etc/apt/sources を開き、その冒頭に次の一行を挿入して保存します。</p>
+<pre> rpm http://download.fedoralegacy.org/apt fedora/1/i386 os updates legacy-utils</pre>
+<p>次に GPG キーをインポートするため、rpm --import <a
+ href="http://www.fedoralegacy.org/FEDORA-LEGACY-GPG-KEY">http://www.fedoralegacy.org/FEDORA-LEGACY-GPG-KEY</a>
+と実行します。</p>
+<p>以上の設定作業が済んだら、必ず apt-get update &amp;&amp; apt-get upgrade を実行してください。</p>
+<p>日本国内のミラーサーバーを利用するには、<a href="http://download.fedoralegacy.org">http://download.fedoralegacy.org</a>
+の箇所を以下のうちのいずれかに置き換えます。</p>
+<pre> KDDI R&amp;D Laboratories Inc. (Kamifkuoka-shi, Saitama, Japan)<br>  HTTP: http://ftp.kddilabs.jp/Linux/packages/fedora.legacy<br>  FTP: ftp://ftp.kddilabs.jp/Linux/packages/fedora.legacy<br>  RSYNC: rsync://ftp.kddilabs.jp/fedora.leagacy<br> <br> RIKEN (Saitama, Japan)<br>  HTTP: http://ftp.riken.go.jp/pub/Linux/fedoralegacy<br>  FTP: ftp://ftp.riken.go.jp/pub/Linux/fedoralegacy<br>  RSYNC: rsync://ftp.riken.go.jp/fedoralegacy</pre>
+<p>なお Fedora Legacy のミラーサイトのみ利用したい場合には、apt-get mirror-select
+を使って設定の変更を行います。</p>
+<pre> # apt-get mirror-select<br> Fetching list of repositories/mirrors...<br> <br> Choose the repositories you want to use from the list below:<br> 1       Fedora Core<br> 2       Fedora Extras<br> 3       Macromedia<br> <br> When finished choose 'c' to continue or choose 'q'<br> to quit repository selector without changing anything.<br> Enter your selection(s) in a comma-separated list:<br> c (←ここで何も選択しないで、c を入力します)  <br> <br> Writing source list entries...<br> Done.</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_11">YUM の設定方法、使用方法について具体的に教えてください。</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_12">YUM とは何ですか?</h4>
+<p>Fedora Core では、パッケージ管理ツールとして Up2date や APT に加えて、YUM が利用できます。YUM
+という名前は、the Yellow dog Updater, Modified の頭文字から来ていて、もともと Power PC 向け
+Linux のために開発された経緯があります。</p>
+<p>現在、Yellow Dog Linux に組み込まれているので、そのサイトの中の <a
+ href="http://www.yellowdoglinux.com/support/solutions/ydl_general/yum.shtml">YUM
+の使い方 (How to use the "yum")</a> に簡単な説明を見つけることができます。</p>
+<p>YUM 全般に関するさらに詳しい情報を入手したい方は、アメリカ デューク大学内の <a
+ href="http://linux.duke.edu/projects/yum/">YUM プロジェクト</a> を訪ねてください。</p>
+<p>yumコマンドでよく利用するコマンド<br>
+<a
+ href="http://www.atmarkit.co.jp/flinux/rensai/linuxtips/611usefllyum.html">http://www.atmarkit.co.jp/flinux/rensai/linuxtips/611usefllyum.html</a></p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_13">国内の高速サーバーに接続するには?</h4>
+<p>Fedora Core 1 に付属のYUMを使用すると非常に簡単にパッケージの管理、更新ができます。ただ、現在 Fedora Core
+1 をインストールした時の /etc/yum.conf
+のままでは、海外の非常に混雑したサーバーに接続するように設定されているので、なかなかうまく接続、実行できません。また、接続できても指定のリンクが
+なくエラーで終了する場合があります。</p>
+<p>そこで、 /etc/yum.conf ファイル中の</p>
+<pre> [base]<br> [updates-released]</pre>
+<p>を以下のように編集すると国内の高速サーバーに接続するので、快適に動作します。（各、エントリーの順番は環境、好みにあわせて指定してください。
+URLを複数指定する時は、baseurl=　は最初のエントリーのみつけて、２番目以降はURLだけを書いてください。</p>
+<pre> [base]<br> name=Fedora Core $releasever - $basearch - Base<br> #baseurl=http://fedora.redhat.com/releases/fedora-core-$releasever<br> baseurl=ftp://ftp.riken.go.jp/pub/Linux/fedora/core/$releasever/$basearch/os<br>         ftp://ftp.kddlabs.co.jp/Linux/packages/fedora/core/$releasever/$basearch/os<br> <br> [updates-released]<br> name=Fedora Core $releasever - $basearch - Released Updates<br> #baseurl=http://fedora.redhat.com/updates/released/fedora-core-$releasever<br> baseurl=ftp://ftp.riken.go.jp/pub/Linux/fedora/core/updates/$releasever/$basearch<br>         ftp://ftp.kddlabs.co.jp/Linux/packages/fedora/core/updates/$releasever/$basearch</pre>
+<p>http://で接続したい場合は上記中 ftp:// をhttp://
+に変更してください。（http://接続のほうが効率がいいようですが、サーバ高負荷時は httpd
+がハングして接続できない場合がよくあるので、 ftp://のほうが接続はしやすいようです）</p>
+<p>この /etc/yum.conf ファイルの変更の後、yum list と実行すると、最初に baseパッケージ
+のヘッダー情報をサーバーからコピーし一覧が表示されます。（１度目は、数秒から数１０秒かかります）</p>
+<p>次に yum check-update とすると、update可能なパッケージの一覧が表示され、さらに yum update <em>パッ
+ケージ名</em> で
+パッケージをupdateしてくれます。＜パッケージ名＞を省略するとアップデート可能なすべてのパッケージがリストされ、確認の後、アップデートしてく
+れます。Kernel もちゃんと最新の適切な物にアップデートされます。</p>
+<p>1月12日の時点で、フルインストールに近い Fedore Core 1 の場合、yum update
+コマンドで更新されるパッケージはカーネルを含めて４１個ありました。</p>
+<p>また、yum install <em>パッケージ名</em> でパッケージの新規インストールもできます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_14">Fedora Legacy に接続するには?</h4>
+<p>YUM を利用している場合には、/etc/yum.conf ファイルに次の記述を追加します。</p>
+<pre> [base]<br> name=Fedora Core Linux $releasever base<br> baseurl=http://download.fedoralegacy.org/fedora/$releasever/os/$basearch <br> <br> [updates]<br> name=Fedora Core Linux $releasever updates<br> baseurl=http://download.fedoralegacy.org/fedora/$releasever/updates/$basearch <br> <br> [legacy-utils]<br> name=Fedora Legacy utilities for Fedora Core $releasever<br> baseurl=http://download.fedoralegacy.org/fedora/$releasever/legacy-utils/$basearch</pre>
+<p>国内の高速ミラーサイトを利用するには、この書式に従って、設定ファイルを編集します。実際の 国内ミラーサイトの URL
+を置き換えてください。(以下は例です）</p>
+<pre> [base]<br> name=Fedora Core Linux $releasever base<br> baseurl=http://ftp.riken.jp/pub/Linux/fedoralegacy/fedora/$releasever/os/$basearch<br> <br> [updates]<br> name=Fedora Core Linux $releasever updates<br> baseurl=http://ftp.riken.jp/pub/Linux/fedoralegacy/fedora/$releasever/updates/$basearch</pre>
+<p>上記参考<br>
+<a href="http://rarfaxp.riken.jp/comp/tips/fedora.html">http://rarfaxp.riken.jp/comp/tips/fedora.html</a></p>
+<p>現時点で Fedora Legacy が利用できる Fedora Core Releases は FC1とFC2です。将来、FC3
+以降のリリースも追加されることになります。</p>
+<p>yumコマンドでよく利用するコマンド<br>
+<a
+ href="http://www.atmarkit.co.jp/flinux/rensai/linuxtips/611usefllyum.html">http://www.atmarkit.co.jp/flinux/rensai/linuxtips/611usefllyum.html</a></p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_15">YUM の自動更新機能を利用したい。</h4>
+<p>YUM
+には自動更新機能が備わっていますが、デフォルトではその機能が無効となるように設定されています。自動更新を利用したい場合は、ターミナルから、
+rootで chkconfig yum on &amp;&amp; service yum start と入力します。</p>
+<p>自動更新による実行結果は、/var/log/yum.log に保存されたログで知ることができます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_16">Fedora の日本語のディフォルトのロケールを EUC-JP にしたい。</h3>
+<p>これまでRedhatや多くのLinuxの日本語の標準のロケール（文字コード）はUNIXと同じ EUC-JP でしたが、Fedoraからは
+UTF-8
+になっています。UTF-8はEUC-JPに比べ日本語処理に1.5倍のコストがかかる、使える漢字が減る、などの弊害があります。他のUNIXシステム
+や従来のファイル等と日本語文字コードに互換性を保ちたい場合は、システムインストール直後に</p>
+<p>1. /etc/sysconfig/i18n ファイル内の</p>
+<pre> LANG="ja_JP.UTF-8"</pre>
+<p>を　</p>
+<pre> LANG="ja_JP.eucJP"</pre>
+<p>に変更して、</p>
+<p>２.　/etc/man.config ファイル内の</p>
+<pre> PAGER /usr/bin/less -iRs</pre>
+<p>を</p>
+<pre> PAGER /usr/bin/lv </pre>
+<p>に変更すると、日本語のデフォルトのロケール（文字コード）を従来のRedhatと同じ EUCに設定する事ができます。</p>
+<p>すでに GNOME デスクトップを開いていて、デスクトップ環境で日本語のデフォルトのロケールが UTF-8
+に設定されている場合はユーザの ~/.dmrc ファイルの中の Language を以下のよう変更にします。</p>
+<pre> Language=ja_JP.eucJP</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_17">ログイン時のbeepを消すには？</h3>
+<p><a
+ href="http://www.redhat.com/archives/fedora-list/2003-November/msg03641.html">http://www.redhat.com/archives/fedora-list/2003-November/msg03641.html</a></p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_18">GPG Key はどうやったらインポートできますか。</h3>
+<p>以下の手順（Livna.org rpms GPG key をインポートする場合）を参考にしてください。（引用先：<a
+ href="http://rpm.livna.org/">http://rpm.livna.org/</a>）</p>
+<p>All packages are be signed with the Livna.org rpms GPG Key and you
+will need to install this key. So before trying to install packages you
+will have to install the Livna.org rpms GPG key.</p>
+<p>If you're using apt, as root:</p>
+<p>* run : cd /etc/apt/gpg; wget <a
+ href="http://rpm.livna.org/RPM-LIVNA-GPG-KEY">http://rpm.livna.org/RPM-LIVNA-GPG-KEY</a></p>
+<p>* and then : rpm --import /etc/apt/gpg/RPM-LIVNA-GPG-KEY</p>
+<p>If you're using yum, as root:</p>
+<p>* run: rpm --import <a href="http://rpm.livna.org/RPM-LIVNA-GPG-KEY">http://rpm.livna.org/RPM-LIVNA-GPG-KEY</a></p>
+<p>If you're using both, you, of course, dont need to run 'rpm
+--import' twice.</p>
+<p>NB: if you're not using fedora.us apt/yum package, you will need to
+install www.fedora.us GPG Key w hich is available at <a
+ href="http://www.fedora.us/FEDORA-GPG-KEY">http://www.fedora.us/FEDORA-GPG-KEY</a></p>
+<p>rikenサーバーの場合(FC3)</p>
+<pre> #rpm --import ftp://ftp.riken.go.jp/pub/Linux/fedora/core/3/i386/os/RPM-GPG-KEY-fedora</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_19">MPlayer や Xine、VideoLAN Client などを追加できますか?</h3>
+<p>フェドーラ
+プロジェクトでは、ライセンス上の問題から、これらマルチメディア関連のソフトウェアが最初から含まれていません。公式なリポジト
+リー（fedora.redhat.com や
+fedora.us）では、追加パッケージとしても提供されません。このため、他のリポジトリーも追加したいと考える方もあるでしょう。しかしながら、勝
+手に他のリポジトリーを追加すると、リポジトリー混用の問題が発生し、パッケージ同士のクラッシュが起こる可能性が出てきます。</p>
+<p>この問題を回避するために、<a href="http://rpm.livna.org/">http://rpm.livna.org/</a>
+と <a href="http://jpackage.org/">http://jpackage.org/</a>
+の両サイトにおいて、追加用のパッケージが用意されています。不具合が発生する可能性が低く、信頼性が高いことを保証しているので、こちらを利用するとよ
+いでしょう。</p>
+<p>"the Jargon File" の編纂で有名なエリック・レイモンド氏が、<a
+ href="http://tldp.org/HOWTO/Fedora-Multimedia-Installation-HOWTO/index.html">Fedora
+Multimedia
+Installation HOWTO</a>を公開しています。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>参照： <a href="http://radio1.jp/cgi-bin/moin.cgi/OggVorbis">オーディオ圧縮
+技術と特許ライセンス</a></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_20">リポジトリー混用は問題がありますか？</h3>
+<p>はい。<a href="http://www.fedora.us/wiki/RepositoryMixingProblems">RepositoryMixingProblems</a>を
+参照のこと。<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?FedoraCore-FAQ%2FTranslationDocs%2FRepositoryMixingProblems"
+ title="FedoraCore-FAQ/TranslationDocs/RepositoryMixingProblems (2099d)">日
+本語仮訳</a>です。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_21">Red Hat 社や、旧 Fedora Project以外で開発されたRPMの一覧を抽出したい。</h3>
+<p>(Red Hat Linuxからのアップグレードに有用)</p>
+<p>rpm -qa --queryformat '%{VENDOR}\t%{NAME}\n' | grep -v "^Red Hat,
+Inc." | sort で一覧を作成することができる。末尾に &gt; <em>file</em> をつけて保存したり、 | wc -l
+をつけて総数を知ることが出来る。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_22">英文フォントと和文フォントが明らかに違う</h3>
+<p>~/.gtkrc-2.0 をいじることによって解決できます。gtkrc-2.0 font_nameで<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?%5B%5Bgoogle%3Agtkrc-2.0%20font_name%5D%5D"
+ title="google:gtkrc-2.0 font_name">ぐぐる</a>とよいでしょう。</p>
+<p>あるいはgnome-settings-daemon
+(FC2では/usr/libexec/gnome-settings-daemon)を起動しても解決できます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_23">VMware にインストールした時ネットワークが起動しない</h3>
+<p>VMware上にインストールした時、DHCP で
+IPアドレスを取得する設定にしているとネットワークがリンクアップしていないため起動しません。</p>
+<p>以下のファイルを編集します。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>/etc/sysconfig/network-scripts/if-cfg[n]</li>
+  <li>/etc/sysconfig/networking/devices/ifcfg-eth[n] &lt;-- ない場合は作成</li>
+</ul>
+<p>[追加]</p>
+<pre>  check_link_down () {<br>  return 1;<br>  }</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_24">マクロメディア Flash 6 プラグインがインストールできません。</h3>
+<p>Flash が必要とするライブラリを入れる必要があります。</p>
+<p>Up2date や rpm コマンドでパッケージを入れましょう。Up2dateで入れる場合はrootで up2date
+compat-libstdc++ と入力します。</p>
+<p>Fedora Core Release 1 の場合で、APT を導入済みであるなら、次の手順に従ってインストールすることも可能です：</p>
+<ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>APT を使って apt-get install flash-plugin
+とすれば、依存関係を含めて、必要な最新のパッケージが全てインストールされます。具体的には、
+    <pre> binutils<br> compat-gcc<br> compat-gcc-c++<br> compat-libstdc++<br> compat-libstdc++-devel<br> flash-plugin<br> glibc-devel<br> glibc-headers<br> glibc-kernheaders</pre>
+の各パッケージが順にインストールされることになります。</li>
+  <li>使っているブラウザーの Java Script を有効にします。 <br class="spacer">
+    <blockquote>
+      <p class="quotation">以上の手順で、Macromedia Flash Plugin が利用できるようになります。</p>
+    </blockquote>
+  </li>
+</ol>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>(参考)アップデートされた Macromedia Flash Player 7.0 が 2004年5月27日付で <a
+ href="http://www.fedora.us">fedora.us</a> からリリースされています。</li>
+</ul>
+<p>Macromedia Flash Player 7.0は、<a
+ href="http://www.macromedia.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">Macromedia
+-
+Flash Player ダウンロードセンター</a>からダウンロードすることができる。インストールには、同梱のflashplayer-
+installerを使う。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_25">日本語のPDF文書が文字化けして読めません。</h3>
+<p>PDF を読み込む場合、GNOME PDF Viewer
+がデフォルトで立ち上がりますが、日本語を表示しないことがあります。その際は、GNOME Ghostview (GGV)
+に切替えるか、Adobe Reader (Adobe Acrobat Reader) を用意します。</p>
+<p>なお、Open Office.org で作成されたPDF文書は、問題なく表示されます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><span class="noexists">Adobe Reader [旧称：Acrobat Reader]<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=Applications-FAQ%2FDocumentationAndPrinting%2FAdobeReader&amp;refer=FedoraCore-FAQ%2FSystem">?</a></span></li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_26">かな漢字変換がおかしい。辞書が壊れているのですか。</h3>
+<p>原因がはっきりとしないようですが、初期設定の状態では、漢字変換の精度に欠ける場合があります。対処方法として次の方法が考えられます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>デスク
+トップあるユーザーフォルダのアイコンをダブルクリックし、編集 ＞ 設定
+の項目から、デフォルト表示の「隠しフォルダを表示する」にチェックを入れるとユーザの ~/.canna
+ファイルが表示されるので、ファイル名を変更し、保存します。設定の変更を反映するためには、ログインし直します。</li>
+  <li>
+    <p>~/.canna ファイルの中の fuzokugo のコメントを外します。iroha のコメントも外した方が良いそうです。
+(FC3標準では~/.cannaの代わりに/etc/canna/default.cannaが使われるみたいです。)</p>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Cannaを別のものに置き換えます。フリーで利用できる優秀なかな漢字変換ソフトがあります。
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li>UIM:
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a
+ href="http://anthy.sourceforge.jp/cgi-bin/hikija/hiki.cgi?FrontPage">http://anthy.sourceforge.jp/cgi-bin/hikija/hiki.cgi?FrontPage</a></li>
+          <li><a href="http://uim.freedesktop.org/Software/UimDownload">http://uim.freedesktop.org/Software/UimDownload</a></li>
+        </ul>
+      </li>
+      <li>Anthy:
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a
+ href="http://anthy.sourceforge.jp/cgi-bin/hiki/hiki.cgi?%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%EB">http://anthy.sourceforge.jp/cgi-bin/hiki/hiki.cgi?%A5%A4%A5%F3%A5%B9%A5%C8%A1%BC%A5%EB</a></li>
+          <li><a href="http://people.redhat.com/tagoh/anthy/">http://people.redhat.com/tagoh/anthy/</a></li>
+        </ul>
+      </li>
+      <li>Prime:
+        <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
+          <li><a href="http://taiyaki.org/prime/">http://taiyaki.org/prime/</a></li>
+          <li><a href="http://www.digital-genes.com/%7Eyatsu/prime/">http://www.digital-genes.com/~yatsu/prime/</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Cannaの辞書を<a href="http://cannadic.oucrc.org/">cannadic</a>に変えるだけで
+も、それなりに精度はよくなるようです。</li>
+  <li>関連項目
+    <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+      <li><span class="noexists">Canna の操作を ATOK 風や Microsoft IME
+風に変更したい。<a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=Applications-FAQ%2FInputMethods%2FCanna&amp;refer=FedoraCore-FAQ%2FSystem">?</a></span>
+        <blockquote>
+          <p class="quotation">このカスタマイズを行う場合には、 "fuzokugo" や"iroha"
+辞書がデフォルトで利用できる設定となっているので、上で述べた作業は必要ありません。</p>
+          <ul class="list2"
+ style="padding-left: 32px; margin-left: 32px;">
+            <li><a
+ href="http://pc5.2ch.net/test/read.cgi/linux/1066563302/310">http://pc5.2ch.net/test/read.cgi/linux/1066563302/310</a></li>
+          </ul>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_27">Fedora の非 UTF 環境で man が文字化けする</h3>
+<p>~/.bashrc などに</p>
+<pre> export MANPAGER=lv</pre>
+<p>などと追記して環境変数 MANPAGER を設定しましょう。</p>
+<p><a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=105764">japanese
+man
+pages are unreadble in non-UTF8 locale</a>も参照。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_28">Beepが鳴らない</h3>
+<p><a href="http://www.nga.jp/%7Esawa/?date=200406">http://www.nga.jp/~sawa/?date=200406</a>よ
+り引用</p>
+<p>/etc/rc.local ファイルに</p>
+<pre> /sbin/modprobe pcspkr</pre>
+<p>という1行を加えて解決。</p>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>

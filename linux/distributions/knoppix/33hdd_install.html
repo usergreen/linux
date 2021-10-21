@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>33HddInstall</title>
+</head>
+<body>
+<div id="body">
+<p><a href="../../../index.html" title="FrontPage (2d)">HOME</a> / <a
+ href="../index.html">Distributions</a> / <a href="index.html">KNOPPIX</a>
+/ 3.3HddInstall</p>
+<hr size="2" width="100%">
+<h2 id="content_1_0">KNOPPIX 3.3 Hard Disk Installation</h2>
+<p>KNOPPIX をハードディスクにインストールする手順です。この手順では、KNOPPIX
+日本語版に採用されているインストーラーについて説明しています。同じV3.4版といっても、
+(20040520)版とその後にリリースされた(20040629)版を比較すると、インストーラーが改良され若干の変更が加えられていますので、注意
+してください。</p>
+<blockquote>
+  <p class="quotation">以下、KNOPPIX V3.3(20040220)版
+日本語版をハードディスクにインストールした場合(例)を説明します。<br>
+  <br>
+注意！　このページの手順は knoppix-installer を使用した場合ですから、 KNOPPIX 3.3
+以降でのみ利用可能な方法です。それよりも以前のバージョンでは提供されていません。</p>
+</blockquote>
+<p>1.デスクトップの左下にある　「K アイコン」から、＞　KNOPPIX ＞　Root Shell　と選択します。<br>
+root のコンソール画面が表示されます。</p>
+<p>2.次のコマンドを入力して、リターンキーを押します。</p>
+<pre> # knoppix-installer</pre>
+<p>3.「このスクリプトは、Knoppix を Hard Disk
+へインストールするものです。このバージョンは、まだ開発中のものです・・・。」というメッセージが表示されるので、確認のうえ OK を押します。</p>
+<p>4.次のような一覧が表示されます。（使用している環境によっては、表示される項目が次とは異なる場合があります。）</p>
+<pre> 1.インストールの設定 （新しい設定を作成します）<br> 2.インストールの開始<br> 3.パーティションの設定 （ハードディスクを分割）<br> 4.設定の読み込み<br> 5.設定の保存<br> 6.終了</pre>
+<p>5.新たにインストールを行うとき、多くの場合は上記一覧から「3.パーティションの設定」を選択します。<br>
+</p>
+<blockquote>
+  <p class="quotation">QTParted (v0.4.1) というインストーラーが起動します。QTParted は
+Partition Magic のクローンです。<br>
+グラフィカルにパーティションのサイズ変更や削除などを行なうことができます。</p>
+</blockquote>
+<blockquote>
+  <p class="quotation">Linux 用の　swap
+パーティションも作成する場合には、任意にその分だけ差し引いて基本領域の数値を入力します。<br>
+例えば、10GB の領域を充てることができる場合で、swap パーティションを
+512MB　に設定する場合、10GB-512MB=9.48888MB という計算になりますが、9400
+としておよその数値を入力しても問題ありません。</p>
+  <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+    <li>swap
+パーティションのサイズは、搭載メモリーの約2倍に設定するのが目安です。例えば、256MB のメモリーを積んでいれば、512MB
+になります。ただし、512MB 以上のメモリーを積んでいない場合には、swap パーティションは最低、128MB 必要とされるようです。</li>
+  </ul>
+</blockquote>
+<blockquote>
+  <p class="quotation">パーティションの種類は、次の5つの中から選べます。</p>
+  <pre> ext2<br> ext3<br> fat32<br> fat16<br> jfs<br> linux-swap<br> ntfs<br> reiserfs<br> xsf</pre>
+</blockquote>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Linux 用としては、一般的に ext2, ext3, reiserfs のうちから選択します。ext3 が無難です。</li>
+  <li>一般的には、Linux をインストールするパーティションを Primary Partition として設定します。</li>
+  <li>ボリュームのラベルは、hda1 hda2 hda3 などど任意に付けることができますが、既存のラベルと重複しないようにします。</li>
+  <li>予めパーティションの設定が済んでいる場合には、「3.パーティションの設定」を実行する必要はありませんが、その中のサブメニューから現在
+のパーティションの確認を行なうことができます。</li>
+  <li>パーティション設定ツールの挙動がやや不安定に感じられる場合があるかもしれません。そのときは、作業を中止して始めからやり直してくださ
+い。</li>
+</ul>
+<p>Linux 用の基本領域を作成する上で注意すべき点として、<br>
+</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Windows がインストールしてある場合でこれを削除しても構わないときには、その領域を選択し削除します。</li>
+  <li>使っているパソコンにすでに Windows
+がインストールしてある場合で、これを残しておきたいが他に利用できる空き領域がないときは、別途、空き領域を作成する必要があるので、作業を中止してく
+ださい。</li>
+  <li>他の　Linux　ディストリビューションをインストール済みで、これを保持する必要がない（削除してもよい）場合には、この領域を削除して
+空き領域を作成することが可能です。</li>
+</ul>
+<p>6.パーティションの設定が済んだら、メニューの項目から ファイル　＞　確定 を選んでを実行します。<br>
+</p>
+<blockquote>
+  <p class="quotation">「全ての変更を確定します：全てのデータは消えます」というメッセージが出るので、確認のうえ　Yes
+を押します。</p>
+</blockquote>
+<p>7.パーティションの作成が自動的に開始されます。<br>
+</p>
+<blockquote>
+  <p class="quotation">作業経過状況は、進捗バーで表示されます。「作業は成功しました。」とメッセージが表示されたら、
+OK ボタンを押します。</p>
+</blockquote>
+<p>8.引き続いて、 swap パーティションを作成します。</p>
+<blockquote>
+  <p class="quotation">先の例では swap 領域のサイズを 512MB に設定しています。<br>
+  <br>
+パーティションの種類から Linux swap を選び、サイズを 512MB に指定して確定させます。 swap
+パーティションのラベルは自動付加されます。</p>
+</blockquote>
+<blockquote>
+  <p class="quotation">作成が完了すれば、ファイル　＞　終了　で作業画面を終了します。</p>
+</blockquote>
+<p>9.すぐに自動的に、元の一覧画面に戻ります。その中から「1.インストールの設定」を選んで　OK　を押します。</p>
+<p>10.KNOPPIX をインストールするパーティションが表示されるので、正しければ Next を押します。</p>
+<blockquote>
+  <p class="quotation">ラベル名（hda*）が合っているかよく確認してください。</p>
+</blockquote>
+<p>11.次に、システム名の設定をします。ここでは適当な名前を付けておきます。（例： name surname）</p>
+<blockquote>
+  <p class="quotation">この名前は、初期ユーザー作成に使用されます。入力が済めば、Next を押します。</p>
+</blockquote>
+<p>12.ユーザー名を入力します。好きなユーザー名（例：roroot）を入れて、Next を押します。</p>
+<p>13.ユーザーのパスワードを設定し入力します。確認のため２回入力してから、Next を押します。</p>
+<p>14.管理者(root)用のパスワードを設定し入力します。確認のため２回入力してから、Next を押します。</p>
+<p>15.ホスト名を設定します。そのパソコンの名前になります。（例：box）</p>
+<p>16.ブートローダー (lilo) を入れる場所を指定します。</p>
+<blockquote>
+  <p class="quotation">多くの場合、Master Boot Record を選ぶことになります。</p>
+</blockquote>
+<p>17.システムのタイプを設定する画面になります。ここで、システムの種類を選びます。</p>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li>Knoppix-system では、 CD からの起動と同じように動作し、 apt-get のようなツール類も動きます。</li>
+  <li>debian 形式のシステム（以前のインストーラの様に）では、そのまま debian の機能を使うシステムとして動きます。</li>
+</ul>
+<blockquote>
+  <p class="quotation">どちらかを選択したら、 next を押します。</p>
+</blockquote>
+<p>18.最初の一覧画面に戻ります。この中から、「2.インストールの開始」を選びます。</p>
+<p>19.「これらの設定で実行してもよろしいですか？」というメッセージが表示されます。</p>
+<blockquote>
+  <p class="quotation">これでよいのであれば、 Next を押します。</p>
+</blockquote>
+<blockquote>
+  <p class="quotation">この画面は、インストール直前の最終確認の画面です。インストールの設定に関する変更を希望するときは、
+この画面をキャンセルし<br>
+元に戻って再度設定し直してください。 Next ボタンを押すと、取り消すことはできません。</p>
+  <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+    <li>いくつかの選択は、次の設定ファイルの中で設定されます：
+      <pre> /home/knoppix/.konfig</pre>
+    </li>
+  </ul>
+</blockquote>
+<p>20./dev/hda* の初期化が開始され、続いて CD
+からハードディスクへのコピーが行なわれます。そのあいだの経過状況は、進捗バーで表示されます。</p>
+<blockquote>
+  <p class="quotation">ここでの一連の所要時間は、およそ２０分以上かかります。やがてインストールは、自動的に完了します。完
+了した時点で、ブートディスク作成の画面に切り替わります。</p>
+</blockquote>
+<p>21.ブートディスク（起動用ディスク）を作成をするかどうか尋ねられます。</p>
+<blockquote>
+  <p class="quotation">作成を希望する場合は、 フロッピーディスクを挿入して Yes を押します。</p>
+</blockquote>
+<p>22.「インストール成功」の画面が出ます。</p>
+<blockquote>
+  <p class="quotation">「ハードディスクに Knoppix を入れることに成功しました。」というメッセージが表示されます。</p>
+</blockquote>
+<p>23.システムを終了させます。 Root Shell は、 exit で閉じ、ログアウトします。</p>
+<blockquote>
+  <p class="quotation">正常に終了できれば CD
+が自動的に排出されるので、忘れずに取り出してからリターンキーを押します。これでパソコンの電源が切れます。</p>
+</blockquote>
+<p>24.再び、パソコンの電源を入れます。途中でログイン画面が表示される場合には、登録したパスワードを入力します。</p>
+<p>25.パソコンが完全に起動したら、 KNOPPIX を使い始めることができます。</p>
+<blockquote>
+  <p class="quotation">「17.システムのタイプ設定」で、debian 形式のシステムを選択している場合には、「 KDE
+へようこそ」という画面が現れるので、お好きな設定を選んでください。</p>
+</blockquote>
+<div class="jumpmenu"><a
+ href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=read&amp;page=KNOPPIX-FAQ%2F3.3HddInstall#navigator">↑</a></div>
+<h2 id="content_1_1">参照</h2>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a
+ href="http://japan.linux.com/desktop/03/05/08/0239236.shtml?topic=1">Knoppix
+のインストールに関するヒント</a></li>
+  <li><a
+ href="http://homepage3.nifty.com/shinchandesu/knoppix/knoppix.html">KNOPPIX
+to
+HDD</a>
+  </li>
+</ul>
+<hr size="2" width="100%"><a href="../../../index.html">HOME</a>
+</div>
+</body>
+</html>
