@@ -1,0 +1,62 @@
+
+--- Select amazing games from Debian's games list ---
+
+childsplay　幼い子供向けの教育用ゲームスイート
+楽しく遊びながら音、画像、文字、数字を覚えられます。子供にマウスやキーボードの使いかたを訓練させる作業と、パズル、ピンポン、パックマン、ビリヤードといった純粋なゲームとが含まれます。
+
+flobopuyo (0.20-5+b2)　ぷよぷよゲームのクローン
+
+icebreaker 氷山を崩せ
+
+jumpnbump バニーが登場するキュートなマルチプレイヤゲーム
+DOS 用の古いゲームの、 UNIX への移植です。
+
+lincity-ng　旧式の LinCity ゲームの洗練された改良版
+
+mazeofgalious　Galious の迷宮
+
+MoonLander 古典的な月着陸船に基づくゲーム
+
+Neverputt　三次元ミニチュアゴルフゲーム
+
+Nikwi キャンディーの収集が任務のプラットフォームゲーム
+
+Open invaders　スペース・インベーダーのクローン
+
+OpenCity 三次元都市構築ゲーム
+
+OpenJazz a free, open-source version of the classic Jazz Jackrabbit™ games.
+
+Packman 迷宮でモンスターを追いかけるゲーム
+
+Pingus 人気の高いゲームである Lemmings (レミングス) のフリーなクローン 
+
+pipenightdreams 水が入り口から出口まで流れるようにパイプをつなぐ
+
+ri-li toy train simulation game
+
+robotfindskitten 仔猫を探すロボットの禅シミュレーション
+
+Rock Dodger 岩や突起を避けながら小惑星地帯を突破
+
+Simutrans 鉄道経営シミュレーションゲーム
+日本語解説サイト http://japanese.simutrans.com/
+
+snowballz ペンギンと雪合戦をする楽しい RTS ゲーム
+
+Star Voyager 'スタートレック' がテーマの二次元宇宙空間アーケードゲーム
+
+I Have No Tomatoes - tomato smashing game
+
+Toppler Tower Toppler あるいは Nebulous の名で知られている古いゲー ムのクローン
+
+Trigger 3D rally car racing game
+
+Trophy 2D カーレーシング・アクションゲーム
+
+TuxMath　子供向けの Tux による数学ゲーム
+
+TuxPuck air hockey game and clone of the Amiga/Atari ST game Shufflepuck Café
+
+UFOai　エイリアン侵略 -- 部隊を編成してエイリアンを阻止
+
