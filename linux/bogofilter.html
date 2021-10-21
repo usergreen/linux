@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>Bogofilter - Linux on the Desktop</title>
+</head>
+<body>
+<div id="navigator">
+<p><a href="../index.html">HOME</a> / <a href="software/index.html"
+ title="SoftWares (1320d)">Software</a> <br>
+</p>
+<hr size="2" width="100%">
+<h3 id="content_1_0">Bogofilter をインストールするには？<!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
+<br>
+</h3>
+<div class="jumpmenu">
+<ul id="mozToc">
+  <li><a href="#mozTocId77214">各Linuxディストリビューション向けパッケージ</a>
+    <ul>
+      <li><a href="#mozTocId141470">Debian 3.1 - Sarge の場合</a></li>
+      <li><a href="#mozTocId691688">簡単な使い方</a></li>
+    </ul>
+  </li>
+</ul>
+<a href="#navigator">↑</a></div>
+<h4 id="content_1_1"><a class="mozTocH4" name="mozTocId77214"></a>各Linux
+ディストリビューション向けパッケージ</h4>
+<p>まず、<a href="http://bogofilter.sourceforge.net/distros.shtml">Bogofilter
+On
+Distribution
+Media
+(Linux, Unix)</a> を見てください。<br>
+各ディストリビューション向けの情報が入手できます。</p>
+<div class="ie5">
+<table class="style_table" border="0" cellspacing="1">
+  <thead><tr>
+    <td class="style_td">ディストリビューション</td>
+    <td class="style_td">配布先</td>
+  </tr>
+  </thead><tbody>
+    <tr>
+      <td class="style_td">Debian</td>
+      <td class="style_td">公式Mainセクション</td>
+    </tr>
+    <tr>
+      <td class="style_td">RHEL およびクローンOS</td>
+      <td class="style_td"><a
+ href="http://dag.wieers.com/packages/bogofilter/">bogofilter RPM
+packages for Red Hat/Fedora</a></td>
+    </tr>
+    <tr>
+      <td class="style_td">Mandriva Linux</td>
+      <td class="style_td">公式Contribセクション</td>
+    </tr>
+    <tr>
+      <td class="style_td">SUSE Linux</td>
+      <td class="style_td"><a href="http://www.opensuse.org/">OpenSUSE</a>
+inst-sourceセクション</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_2"><a class="mozTocH4" name="mozTocId141470"></a>Debian
+3.1
+-
+Sarge の場合</h4>
+<p># apt-cache show bogofilter<br>
+Package: bogofilter<br>
+Priority: optional<br>
+Section: mail<br>
+Installed-Size: 968<br>
+Maintainer: Clint Adams &lt;<a href="mailto:schizo@debian.org">schizo@debian.org</a>&gt;<br>
+Architecture: i386<br>
+Version: 0.94.4-1<br>
+Depends: libc6 (&gt;= 2.3.2.ds1-4), libdb4.3, libgsl0 (&gt;= 1.4)<br>
+Recommends: db4.3-util<br>
+Suggests: pax<br>
+Filename: pool/main/b/bogofilter/bogofilter_0.94.4-1_i386.deb<br>
+Size: 372034<br>
+MD5sum: 8df526263900146ecb41f3c0ba290da4<br>
+Description: a fast Bayesian spam filter</p>
+<pre> This package implements a fast Bayesian spam filter along the lines suggested<br> by Paul Graham in his article "A Plan For Spam".<br> .<br> This version substantially improves on Paul's proposal by doing smarter<br> lexical analysis.  In particular, hostnames and IP addresses are retained<br> as recognition features rather than broken up. Various kinds of MTA<br> cruft such as dates and message-IDs are discarded so as not to bloat<br> the word lists.</pre>
+<hr class="full_hr">
+<p># apt-get -s install bogofilter<br>
+パッケージリストを読みこんでいます... 完了<br>
+依存関係ツリーを作成しています... 完了<br>
+以下の特別パッケージがインストールされます:</p>
+<pre>  libgsl0</pre>
+<p>提案パッケージ:</p>
+<pre>  pax gsl-ref-psdoc gsl-doc-pdf gsl-ref-html</pre>
+<p>推奨パッケージ:</p>
+<pre>  db4.3-util</pre>
+<p>以下のパッケージが新たにインストールされます:</p>
+<pre>  bogofilter libgsl0</pre>
+<p>アップグレード: 0 個、新規インストール: 2 個、削除: 0 個、保留: 0 個。<br>
+Inst libgsl0 (1.6-2 Debian:3.1r1/stable)<br>
+Inst bogofilter (0.94.4-1 Debian:3.1r1/stable)<br>
+Conf libgsl0 (1.6-2 Debian:3.1r1/stable)<br>
+Conf bogofilter (0.94.4-1 Debian:3.1r1/stable)</p>
+<hr class="full_hr">
+<p># apt-get install bogofilter<br>
+パッケージリストを読みこんでいます... 完了<br>
+依存関係ツリーを作成しています... 完了<br>
+以下の特別パッケージがインストールされます:</p>
+<pre>  libgsl0</pre>
+<p>提案パッケージ:</p>
+<pre>  pax gsl-ref-psdoc gsl-doc-pdf gsl-ref-html</pre>
+<p>推奨パッケージ:</p>
+<pre>  db4.3-util</pre>
+<p>以下のパッケージが新たにインストールされます:</p>
+<pre>  bogofilter libgsl0</pre>
+<p>アップグレード: 0 個、新規インストール: 2 個、削除: 0 個、保留: 0 個。<br>
+1055kB のアーカイブを取得する必要があります。<br>
+展開後に追加で 2912kB のディスク容量が消費されます。<br>
+続行しますか? [Y/n] y<br>
+取得:1 <a href="http://ftp.jp.debian.org/">http://ftp.jp.debian.org</a>
+stable/main libgsl0 1.6-2 [683kB]<br>
+取得:2 <a href="http://ftp.jp.debian.org/">http://ftp.jp.debian.org</a>
+stable/main bogofilter 0.94.4-1 [372kB]<br>
+1055kB を 3s で取得しました (273kB/s)<br>
+未選択パッケージ libgsl0 を選択しています。<br>
+(データベースを読み込んでいます... 現在 114383 個のファイルとディレクトリがイン ストールされています。)<br>
+(.../libgsl0_1.6-2_i386.deb から) libgsl0 を展開しています...<br>
+未選択パッケージ bogofilter を選択しています。<br>
+(.../bogofilter_0.94.4-1_i386.deb から) bogofilter を展開しています...<br>
+libgsl0 (1.6-2) を設定しています ...</p>
+<p>bogofilter (0.94.4-1) を設定しています ...<br>
+debian:/home/user# exit<br>
+exit</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3"><a class="mozTocH3" name="mozTocId691688"></a>簡単な使い
+方</h3>
+<ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+  <li><a href="http://bogofilter.sourceforge.net/faq.shtml#training">How
+do
+I
+start
+my bogofilter training?</a></li>
+</ul>
+<p>To classify messages as ham (non-spam) or spam, bogofilter
+needs to
+learn from your mail. To start with it is best to have collections
+(that are as large as possible) of messages you know for sure are ham
+or spam. (Errors here will cause problems later, so try hard;-).
+Warning: Only use your mail; using other collections (like a spam
+collection found on the web), might cause bogofilter to draw a wrong
+conclusion — after all you want it to understand your mail.</p>
+<p>Once you have the spam and ham collections, you have basically
+four
+choices. In all cases it works better if your training base (the above
+collections) is bigger, rather than smaller. The smaller your training
+collection is, the higher the number of errors bogofilter will make in
+production. Let's assume your collection is two mbox files: ham.mbox
+and spam.mbox.</p>
+<pre>      Method 1) Full training. Train bogofilter with all your messages. In our example:<br> <br>    bogofilter -s &lt; spam.mbox<br>    bogofilter -n &lt; ham.mbox</pre>
+<p>Note: Bogofilter's contrib directory includes two scripts that
+both
+use a train-on-error technique. This technique scores each message and
+adds to the database only those messages that were scored incorrectly
+(messages scored as uncertain, ham scored as spam, or spam scored as
+ham). The goal is to build a database of those words needed to
+correctly classify messages. The resulting database is smaller than the
+one build using full training.<br>
+</p>
+<hr size="2" width="100%"><a href="../index.html">HOME</a>
+<p><br>
+</p>
+</div>
+</body>
+</html>
