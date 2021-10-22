@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=shift_jis">
+	<TITLE>APT-HOWTO_RedHatLinux9</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.0  (Win32)">
+	<META NAME="CREATED" CONTENT="20031018;19455340">
+	<META NAME="CHANGED" CONTENT="20040221;15054567">
+</HEAD>
+<BODY DIR="LTR">
+<P ALIGN=CENTER><FONT COLOR="#0000ff"><FONT FACE="Times New Roman, serif"><FONT SIZE=5><FONT FACE="Times New Roman, serif">APT
+for RPM [APT-RPM] </FONT></FONT></SPAN></FONT><FONT SIZE=5>導入の方法について（</FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=5><FONT FACE="Times New Roman, serif">Red
+Hat Linux 9 </FONT></FONT></SPAN></FONT><FONT SIZE=5>編）</FONT></FONT></P>
+<P><FONT SIZE=4>はじめに</FONT></P>
+<P>　「<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">APT</FONT></SPAN></FONT>」とは、<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Advanced
+Package
+Tool</FONT></SPAN></FONT>の略で、<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Linux</FONT></SPAN></FONT>のパッケージ管理〔プログラムの追加や削除〕を行ってくれる便利なツールです。<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Windows</FONT></SPAN></FONT>の<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Update</FONT></SPAN></FONT>は、今使っているパソコンに必要なファイルをウェブサイトから自動的にダウンロードして<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">OS</FONT></SPAN></FONT>の更新をしてくれます。それに相当する働きを持ちます。もともと<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Debian
+Linux</FONT></SPAN></FONT>のために開発されたツールでしたが、その後ブラジルの<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Conectiva</FONT></SPAN></FONT>社によって<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM</FONT></SPAN></FONT>パッケージの管理も出来るように移植され、現在では<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Red
+Hat Linux</FONT></SPAN></FONT>でもパッケージ管理ツールとして利用できるようになっています。<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM</FONT></SPAN></FONT>を管理する機能を備えていることから、一般に<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">apt
+for rpm </FONT></SPAN></FONT>あるいは<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">APT-RPM</FONT></SPAN></FONT>と呼ばれています。</P>
+<P><FONT FACE="Times New Roman, serif"><FONT SIZE=4><FONT FACE="Times New Roman, serif">APT</FONT></FONT></SPAN></FONT><FONT SIZE=4>を利用することのメリット</FONT></P>
+<P>　<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Red
+Hat</FONT></SPAN></FONT>社では、<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM</FONT></SPAN></FONT>パッケージを自動的にダウンロードし最新に更新してくれる「<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">up2date</FONT></SPAN></FONT>」という無料のサービスを提供しています。しかし、サーバーの容量が十分でないため、混んでいるとアクセスすることができないという問題が生じます。さらには、「<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">up2date</FONT></SPAN></FONT>」はパソコンにすでにインストール済みの<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM</FONT></SPAN></FONT>の更新を行うことだけが目的なので、このサービスでは新規にプログラムを追加するということは出来ません。</P>
+<P>　そこで、別のプログラム（<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM)</FONT></SPAN></FONT>を追加したり、あるいはインストール済みのものを削除する場合には、個別に作業する必要が生じます。この作業で、<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM</FONT></SPAN></FONT>管理上の最も厄介な問題とされている「依存関係の問題」に悩まされる場合が出てきます。あるプログラムが単独でインストールや削除を認められている場合には何ら問題はありませんが、依存関係にあって、あるプログラムが別のプログラムの追加を必要としていたり、これから削除しようとするプログラムが別のプログラムで必要とされている場合には、システムを保護するためのエラーメッセージが出て、作業は強制的に中断させられます。エラーメッセージに従がって他のプログラムを追加するなり削除するなりして、依存関係が正しくなるように解決しなくてはなりません。多数のプログラムが依存関係にあることも珍しくありません。</P>
+<P>　こうした依存問題を気にせず、自動的にプログラムの追加と削除を行ってくれる便利なツールが、この<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">APT</FONT></SPAN></FONT>と呼ばれるものです。</P>
+<P>　この<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">APT</FONT></SPAN></FONT>を利用すれば、<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">up2date
+</FONT></SPAN></FONT>の開始に当たって<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Red
+Hat</FONT></SPAN></FONT>のサイトに情報を登録するという手間も要らなくなります。</P>
+<P><FONT SIZE=4>１．</FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=4><FONT FACE="Times New Roman, serif">APT</FONT></FONT></SPAN></FONT><FONT SIZE=4>の</FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=4><FONT FACE="Times New Roman, serif">RPM</FONT></FONT></SPAN></FONT><FONT SIZE=4>パッケージの入手</FONT></P>
+<P>　<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Fedora
+Project</FONT></SPAN></FONT>のウェブサイト
+<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif"><A HREF="http://www.fedora.us/wiki/FedoraHOWTO">http://www.fedora.us/wiki/FedoraHOWTO</A>
+</FONT></SPAN></FONT>からファイル名「<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">apt-0.5.5cnc6-0.fdr.8.rh90.i386.rpm</FONT></SPAN></FONT>」（<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Red
+Hat Linux
+9</FONT></SPAN></FONT>の場合）を任意の場所にダウンロードします。（ここでは、ルート・ディレクトリーにダウンロードしたものとして、以下説明します。）ダウンロードサイズは、<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">783KB</FONT></SPAN></FONT>です。</P>
+<P>　【<FONT FACE="Times New Roman, serif"><FONT FACE="Kochi Mincho">md5sum</FONT></SPAN></FONT>：
+<FONT FACE="Times New Roman, serif"><FONT FACE="Kochi Mincho">apt-0.5.5cnc6-0.fdr.8.rh90.i386.rpm</FONT></SPAN></FONT>　<FONT FACE="Times New Roman, serif"><FONT FACE="Kochi Mincho">c4c5877fc9e2c508819dd31a689d082e
+</FONT></SPAN></FONT>】</P>
+<P><FONT SIZE=4>２．</FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=4><FONT FACE="Times New Roman, serif">APT</FONT></FONT></SPAN></FONT>の<FONT FACE="Times New Roman, serif"><FONT SIZE=4><FONT FACE="Times New Roman, serif">RPM</FONT></FONT></SPAN></FONT><FONT SIZE=4>パッケージのインストール</FONT></P>
+<P>　まず、<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">root</FONT></SPAN></FONT>でログインします。ダウンロードしたファイルは、<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM</FONT></SPAN></FONT>でパッケージされていますので、インストールはコンソール画面から次のように入力します。入力が面倒な方は、次のコマンドを予めコピーしておき、それをコンソール画面に貼り付けたら楽でしょうし、入力間違いも防げます。</P>
+<P ALIGN=LEFT><FONT FACE="Times New Roman, serif"><FONT SIZE=4>rpm
+-ivh apt-0.5.5cnc6-0.fdr.8.rh90.i386.rpm</FONT></FONT></P>
+<P ALIGN=CENTER><FONT SIZE=3>　入力したらリターンキーを押します。自動的にインストールが開始されると次の例のように表示され、数秒の内に完了します。</FONT></P>
+<P ALIGN=LEFT><FONT FACE="Times New Roman, serif"><FONT FACE="ＭＳ ゴシック, monospace">[root@
+xxxx]# rpm -ivh apt-0.5.5cnc6-fr1.i386.rpm<BR></FONT></SPAN></FONT><FONT FACE="ＭＳ ゴシック, monospace">警告</FONT><FONT FACE="Times New Roman, serif"><FONT FACE="ＭＳ ゴシック, monospace">:
+apt-0.5.5cnc6-fdr.i386.rpm: V3 DSA signature: NOKEY, key ID
+xxxxxxxx<BR>Preparing... ###########################################
+[100%]<BR>1:apt ########################################### [100%]</FONT></SPAN></FONT></P>
+<P ALIGN=LEFT><BR>
+</P>
+<P ALIGN=LEFT><FONT SIZE=4>３．</FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=4><FONT FACE="Times New Roman, serif">APT</FONT></FONT></SPAN></FONT><FONT SIZE=4>リストの更新</FONT></P>
+<P ALIGN=LEFT>　<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">APT</FONT></SPAN></FONT>のインストールが無事に済めば、最初に行う作業は最新のリストにアップデートする作業です。コンソール画面から、次のコマンドを入力します。</P>
+<P ALIGN=LEFT><FONT FACE="Times New Roman, serif"><FONT SIZE=4>apt-get
+update</FONT></FONT></P>
+<P ALIGN=CENTER><FONT SIZE=3>入力したらリターンキーを押します。回線の込み具合によっては時間がかかります。</FONT></P>
+<P><FONT FACE="ＭＳ ゴシック, monospace">[root@
+xxxx]# apt-get update<BR>Get:1 http://***** redhat/9/i386 release
+[1170B]<BR>Fetched 1170B in 1s (1049B/s)<BR>Get:1 http://***.***
+redhat/9/i386/os pkglist [1357kB]<BR>Get:2 http://***.***
+redhat/9/i386/os release [140B]<BR>Get:3 http://***.***
+redhat/9/i386/updates pkglist [361kB]<BR>Fetched 1866kB in 2m29s
+(12.5kB/s)<BR>Reading Package Lists... Done<BR>Building Dependency
+Tree... Done</FONT></P>
+<P><BR>
+</P>
+<P ALIGN=LEFT><FONT SIZE=4>４．アップグレードの実行</FONT></P>
+<P ALIGN=LEFT>　インターネットの配布先から、最新の<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM</FONT></SPAN></FONT>パッケージをダウンロードし、インストールするためには、引き続いて次のように入力します。</P>
+<P ALIGN=LEFT><FONT FACE="Times New Roman, serif"><FONT SIZE=4>apt-get
+upgrade</FONT></FONT></P>
+<P ALIGN=LEFT>　入力したらリターンキーを押します。初めて実行する時で更新すべきパッケージが多数ある場合には、作業が完了するまでに１時間くらいかかることがあります。</P>
+<P><FONT FACE="ＭＳ ゴシック, monospace">[root@
+xxxx]# apt-get upgrade<BR>Reading Package Lists... Done<BR>Building
+Dependency Tree... Done<BR>The following packages will be
+upgraded<BR>bash cdda2wav cdrecord cups cups-libs eog ethereal
+evolution foomatic gdm ghostscript glibc glibc-common glibc-devel
+gnupg gstreamer<BR>53 packages upgraded, 0 newly installed, 0 removed
+and 5 not upgraded.<BR>Need to get 105MB of archives.<BR>After
+unpacking 1582kB of additional disk space will be used.<BR>Do you
+want to continue? [Y/n]</FONT></P>
+<P ALIGN=LEFT><BR>
+</P>
+<P ALIGN=LEFT><FONT FACE="ＭＳ ゴシック, monospace">　途中、上の例のように作業を続けるか取消すかを尋ねてくるので、ここでは「</FONT><FONT FACE="Times New Roman, serif"><FONT FACE="ＭＳ ゴシック, monospace">Y</FONT></SPAN></FONT><FONT FACE="ＭＳ ゴシック, monospace">」を入力しリターンキーを押します。すると作業が再開され、次のような画面が延々と表示されます。経過表示が１００％になれば、作業終了です。</FONT></P>
+<P ALIGN=LEFT><BR>
+</P>
+<P><FONT FACE="ＭＳ ゴシック, monospace">et:1
+http://***.*** redhat/9/i386/updates glibc-common 2.3.2-27.9
+[12.4MB]<BR>Get:2 http://***.*** redhat/9/i386/updates glibc
+2.3.2-27.9 [4878kB]<BR>Get:3 http://***.*** redhat/9/i386/updates
+bash 2.05b-20.1 [755kB]</FONT></P>
+<P ALIGN=LEFT><BR>
+</P>
+<P><FONT FACE="Times New Roman, serif"><FONT FACE="ＭＳ ゴシック, monospace">Executing
+RPM (-Uvh)...<BR></FONT></SPAN></FONT><FONT FACE="ＭＳ ゴシック, monospace">警告</FONT><FONT FACE="Times New Roman, serif"><FONT FACE="ＭＳ ゴシック, monospace">:
+/var/cache/apt/archives/gstreamer_0.6.2-0.1.fdr_i386.rpm: V3 DSA
+signature: NOKEY, key ID xxxxxxxx<BR>Preparing...
+########################################### [100%]<BR>1:glibc-common
+########################################### [ 2%]<BR>2:glibc
+########################################### [
+4%]<BR>(</FONT></SPAN></FONT><FONT FACE="ＭＳ ゴシック, monospace">途中省略）</FONT><FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif"><BR><FONT FACE="ＭＳ ゴシック, monospace">51:samba-client
+########################################### [ 96%]<BR>52:unzip
+########################################### [ 98%]<BR>53:xpdf
+########################################### [100%]</FONT></FONT></SPAN></FONT></P>
+<P ALIGN=LEFT><BR>
+</P>
+<P ALIGN=LEFT><FONT SIZE=4>５．</FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=4><FONT FACE="Times New Roman, serif">APT</FONT></FONT></SPAN></FONT><FONT SIZE=4>コマンドについて</FONT></P>
+<P ALIGN=LEFT>　以上の手順で、パッケージの管理はすでに<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">APT</FONT></SPAN></FONT>で行えるようになっていますので、今後は<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">APT</FONT></SPAN></FONT>リストの更新とアップグレードの実行を定期的に繰り返すだけです。<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">APT</FONT></SPAN></FONT>で使用する代表的なコマンドを参考までに載せておきます。基本となるのは次のコマンドです。</P>
+<P ALIGN=LEFT><FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">#apt-get
+update</FONT></SPAN></FONT>　・・・・・・・・・・・・・・最新のリストに更新する<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif"><BR>#apt-get
+upgrade</FONT></SPAN></FONT>　・・・・・・・・・・・・・更新されたリストに従って実行をする<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif"><BR>#apt-get
+dist-upgrade</FONT></SPAN></FONT>　・・・・・・・・・・<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">OS</FONT></SPAN></FONT>（カーネル）自体の更新を実行する<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif"><BR>#apt-get
+install </FONT></SPAN></FONT>〔パッケージ名〕・・・個別に指定してインストールする<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif"><BR>#apt-get
+remove </FONT></SPAN></FONT>〔パッケージ名〕
+・個別に指定して削除（アンインストール）する<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif"><BR>#apt-get
+clean</FONT></SPAN></FONT>　・・・・・・・・・・・・・・・一時保存されているキャッシュファイルを削除する</P>
+<P ALIGN=LEFT><FONT SIZE=4>６．グラフィカル管理ツール：</FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=4><FONT FACE="Times New Roman, serif">SYNAPTIC</FONT></FONT></SPAN></FONT><FONT SIZE=4>の導入</FONT></P>
+<P ALIGN=LEFT>　<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">APT</FONT></SPAN></FONT>は、グラフィカル（<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">GUI</FONT></SPAN></FONT>ベースでという意味です。）な操作でも利用することができます。それには、<FONT FACE="Times New Roman, serif"><A HREF="Fedora_apt-for-rpm/Screenshot-Synaptic.jpg"><FONT FACE="Times New Roman, serif">SYNAPTIC</FONT></A></SPAN></FONT>というグラフィカルなツールを使います。このツールを導入すれば、コンソールからコマンド入力する必要がありません。</P>
+<P ALIGN=LEFT>　入手は、先ほどと同じウェブページから行えます。ファイル名「<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">synaptic-0.45-1.rh90.i386.rpm</FONT></SPAN></FONT>」をダウンロードします。ダウンロードサイズは、約<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">469KB</FONT></SPAN></FONT>です。当サイトでも、<A HREF="Fedora_apt-for-rpm/synaptic-0.45-1.rh90.i386.rpm">こちら</A>で再配布しています。</P>
+<P ALIGN=LEFT>　【<FONT FACE="Times New Roman, serif"><FONT FACE="Kochi Mincho">md5sum</FONT></SPAN></FONT>：
+<FONT FACE="Times New Roman, serif"><FONT FACE="Kochi Mincho">synaptic-0.45-1.rh90.i386.rpm</FONT></SPAN></FONT>　<FONT FACE="Times New Roman, serif"><FONT FACE="Kochi Mincho">3d51035586539569eaada39485023994
+</FONT></SPAN></FONT>】</P>
+<P ALIGN=LEFT>　インストールは、<FONT FACE="Times New Roman, serif"><FONT SIZE=4><FONT FACE="Times New Roman, serif">rpm
+-ivh synaptic-0.45-1.rh90.i386.rpm
+</FONT></FONT></SPAN></FONT>と入力すれば自動的にインストールが開始されます。インストール完了後、<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">SYNAPTIC</FONT></SPAN></FONT>を操作するためには、デスクトップのスタートボタン（赤帽子のアイコン）＞システム設定＞他のアプリケーション＞<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Synaptic</FONT></SPAN></FONT>のメニューをクリックしてプログラムを起動させます。</P>
+<P ALIGN=LEFT>　<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Synaptic</FONT></SPAN></FONT>について、原文（英文）では次のとおり明記されています：<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Graphical
+frontend for APT package manager. Synaptic (previously known as
+raptor) is a graphical package management program for apt. It
+provides the same features as the apt-get command line utility with a
+GUI front-end Fedora Linux GPL Applications/System
+<A HREF="http://www.nongnu.org/synaptic/">http://www.nongnu.org/synaptic/</A>
+</FONT></SPAN></FONT>
+</P>
+<P ALIGN=LEFT><FONT SIZE=4>７．プログラム管理の注意点</FONT></P>
+<P ALIGN=LEFT>　<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">APT</FONT></SPAN></FONT>はパソコンにインストールされている<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM</FONT></SPAN></FONT>パッケージを管理しています。言い換えれば、<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM</FONT></SPAN></FONT>以外の個人で単独にインストールしたバイナリーパッケージには関与しません。たとえば、文書作成ソフトウェアの「<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">OpenOffice.org</FONT></SPAN></FONT>」は、公式サイトでは<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM</FONT></SPAN></FONT>パッケージの配布を行っていませんので、追加インストールした場合には、たえず更新情報には気をつけるようにして、適正に管理することが望まれます。</P>
+<P ALIGN=LEFT>　プログラムが<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM</FONT></SPAN></FONT>パッケージと<FONT FACE="Times New Roman, serif"><FONT FACE="Kochi Mincho">tar</FONT></SPAN></FONT>形式のバイナリーの両方で提供されているような場合には、是非とも<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">RPM</FONT></SPAN></FONT>パッケージを選択してインストールしておくことが、将来にわたるプログラムの管理を効率的に行うコツです。ブラウザーの「<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Mozilla</FONT></SPAN></FONT>」は、<FONT FACE="Times New Roman, serif"><FONT FACE="Kochi Mincho">RPM</FONT></SPAN></FONT>での配布も始まりました。</P>
+<P ALIGN=LEFT><FONT SIZE=4>８．さらに</FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=4><FONT FACE="Times New Roman, serif">APT</FONT></FONT></SPAN></FONT><FONT SIZE=4>の操作方法を知るためには</FONT></P>
+<P ALIGN=LEFT>　パッケージ管理ユーティリティである <FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">APT
+</FONT></SPAN></FONT>の働きについて、さらに深く理解するには、<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">Debian
+</FONT></SPAN></FONT>プロジェクトのために作成された「<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">APT
+HOWTO</FONT></SPAN></FONT>」を利用することが出来ます。ご覧になってください。</P>
+<P ALIGN=CENTER><FONT FACE="Times New Roman, serif"><A HREF="http://www.debian.org/doc/manuals/apt-howto/index.ja.html"><FONT FACE="Times New Roman, serif">http://www.debian.org/doc/manuals/apt-howto/index.ja.html</FONT></A></SPAN></FONT></P>
+<P ALIGN=RIGHT><A HREF="linux_top.htm#5.Fedora Core (Red Hat Linux)|outline">戻る《<FONT FACE="Times New Roman, serif"><FONT FACE="Times New Roman, serif">BACK</FONT></A></SPAN></FONT><A HREF="linux_top.htm#5.Fedora Core (Red Hat Linux)|outline">》</A></P>
+</BODY>
+</HTML>
