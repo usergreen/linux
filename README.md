@@ -1,7 +1,7 @@
 # usergreen.github.io
 Project to make online manual for Linux on the Desktop
 
-Provided under:
+Provided under:<br>
 GNU Free Documentation License
 
 Instructions:
