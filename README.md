@@ -2,7 +2,7 @@
 Project to make online manual for Linux on the Desktop
 
 Provided under:<br>
-GNU Free Documentation License
+<a href="fdl-1.3.txt">GNU Free Documentation License</a>
 
 Instructions:<br>
 1. Download archived file to your local directory.
