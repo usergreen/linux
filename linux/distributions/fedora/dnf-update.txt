@@ -1,0 +1,357 @@
+[user@fedora ~]$ sudo dnf update
+
+あなたはシステム管理者から通常の講習を受けたはずです。
+これは通常、以下の3点に要約されます:
+
+    #1) 他人のプライバシーを尊重すること。
+    #2) タイプする前に考えること。
+    #3) 大いなる力には大いなる責任が伴うこと。
+
+[sudo] user のパスワード:
+Fedora 34 openh264 (From Cisco) - x86_64        1.4 kB/s | 2.5 kB     00:01    
+Fedora Modular 34 - x86_64                      1.9 MB/s | 4.9 MB     00:02    
+Fedora Modular 34 - x86_64 - Updates            677 kB/s | 4.6 MB     00:06    
+Fedora 34 - x86_64 - Updates                    3.0 MB/s |  26 MB     00:08    
+Fedora 34 - x86_64                              3.7 MB/s |  74 MB     00:20    
+依存関係が解決しました。
+..........
+--------------------------------------------------------------------------------
+合計                                            2.6 MB/s | 1.1 GB     07:26     
+トランザクションの確認を実行中
+エラー: トランザクションの確認 vs depsolve:
+glibc = 2.33-5.fc34 は (インストール済み)glibc-langpack-ja-2.33-5.fc34.x86_64 に必要とされています
+glibc-common = 2.33-5.fc34 は (インストール済み)glibc-langpack-ja-2.33-5.fc34.x86_64 に必要とされています
+libreoffice-core(x86-64) = 1:7.1.2.2-1.fc34 は (インストール済み)libreoffice-help-ja-1:7.1.2.2-1.fc34.x86_64 に必要とされています
+libreoffice-core(x86-64) = 1:7.1.2.2-1.fc34 は (インストール済み)libreoffice-langpack-ja-1:7.1.2.2-1.fc34.x86_64 に必要とされています
+問題を診断するには実行してみてください: 'rpm -Va --nofiles --nodigest'.
+RPMDB を破損させたかもしれませんが、'rpm --rebuilddb' を実行することでこの問題を解決できる可能性があります。
+ダウンロード済みのパッケージは、次の正常なトランザクションまでキャッシュに保存されました。
+'dnf clean packages' を実行することでキャッシュパッケージを削除できます。
+[user@fedora ~]$
+
+
+[user@fedora ~]$ sudo dnf groupinstall mate-desktop
+[sudo] user のパスワード:
+メタデータの期限切れの最終確認: 0:14:17 時間前の 2021年08月28日 18時01分52秒 に実施しました。
+依存関係が解決しました。
+================================================================================
+ パッケージ                           Arch   バージョン           Repo    サイズ
+================================================================================
+アップグレード:
+ blivet-gui-runtime                   noarch 2.3.0-1.fc34         updates 316 k
+ fedora-release-common                noarch 34-36                updates  19 k
+ fedora-release-identity-workstation  noarch 34-36                updates  12 k
+ fedora-release-workstation           noarch 34-36                updates  10 k
+ firewalld                            noarch 0.9.4-1.fc34         updates 433 k
+ firewalld-filesystem                 noarch 0.9.4-1.fc34         updates 9.7 k
+ gvfs                                 x86_64 1.48.1-1.fc34        updates 357 k
+ gvfs-afc                             x86_64 1.48.1-1.fc34        updates  59 k
+ gvfs-afp                             x86_64 1.48.1-1.fc34        updates  74 k
+ gvfs-archive                         x86_64 1.48.1-1.fc34        updates  24 k
+ gvfs-client                          x86_64 1.48.1-1.fc34        updates 762 k
+ gvfs-fuse                            x86_64 1.48.1-1.fc34        updates  30 k
+ gvfs-goa                             x86_64 1.48.1-1.fc34        updates  71 k
+ gvfs-gphoto2                         x86_64 1.48.1-1.fc34        updates  64 k
+ gvfs-mtp                             x86_64 1.48.1-1.fc34        updates  64 k
+ gvfs-smb                             x86_64 1.48.1-1.fc34        updates  42 k
+ nspr                                 x86_64 4.32.0-1.fc34        updates 138 k
+ nss                                  x86_64 3.69.0-1.fc34        updates 684 k
+ nss-softokn                          x86_64 3.69.0-1.fc34        updates 378 k
+ nss-softokn-freebl                   x86_64 3.69.0-1.fc34        updates 324 k
+ nss-sysinit                          x86_64 3.69.0-1.fc34        updates  21 k
+ nss-util                             x86_64 3.69.0-1.fc34        updates  88 k
+ python3-firewall                     noarch 0.9.4-1.fc34         updates 343 k
+ usermode                             x86_64 1.114-2.fc34         updates 175 k
+ vim-minimal                          x86_64 2:8.2.3367-1.fc34    updates 702 k
+group/moduleパッケージをインストール:
+ NetworkManager-iodine-gnome          x86_64 1.2.0-12.fc34        fedora   20 k
+ NetworkManager-l2tp-gnome            x86_64 1.8.6-5.fc34         fedora   51 k
+ NetworkManager-libreswan-gnome       x86_64 1.2.14-1.fc34.1      fedora   34 k
+ NetworkManager-ovs                   x86_64 1:1.30.2-1.fc34      fedora   48 k
+ NetworkManager-sstp-gnome            x86_64 1:1.2.6-8.fc34       fedora   44 k
+ NetworkManager-strongswan-gnome      x86_64 1.5.0-3.fc34         fedora   29 k
+ atril                                x86_64 1.26.0-1.fc34        updates 1.7 M
+ atril-caja                           x86_64 1.26.0-1.fc34        updates  20 k
+ atril-thumbnailer                    x86_64 1.26.0-1.fc34        updates 8.1 k
+ blivet-gui                           noarch 2.3.0-1.fc34         updates  21 k
+ blueberry                            noarch 1.4.2-2.fc34         fedora  1.2 M
+ caja                                 x86_64 1.26.0-1.fc34        updates 1.5 M
+ caja-actions                         x86_64 1.26.0-1.fc34        updates 424 k
+ caja-image-converter                 x86_64 1.26.0-1.fc34        updates  26 k
+ caja-open-terminal                   x86_64 1.26.0-1.fc34        updates  21 k
+ caja-sendto                          x86_64 1.26.0-1.fc34        updates  68 k
+ caja-wallpaper                       x86_64 1.26.0-1.fc34        updates  16 k
+ caja-xattr-tags                      x86_64 1.26.0-1.fc34        updates  16 k
+ dconf-editor                         x86_64 3.38.3-1.fc34        fedora  680 k
+ dnfdragora-updater                   noarch 2.1.0-3.fc34         fedora   21 k
+ engrampa                             x86_64 1.26.0-1.fc34        updates 1.4 M
+ eom                                  x86_64 1.26.0-1.fc34        updates 1.9 M
+ f34-backgrounds-extras-base          noarch 34.0.1-1.fc34        fedora   14 k
+ f34-backgrounds-extras-mate          noarch 34.0.1-1.fc34        fedora  7.3 k
+ f34-backgrounds-mate                 noarch 34.0.1-1.fc34        fedora  7.5 k
+ fedora-release-matecompiz            noarch 34-36                updates  10 k
+ filezilla                            x86_64 3.55.0-1.fc34        updates 4.4 M
+ firewall-config                      noarch 0.9.4-1.fc34         updates  84 k
+ gnome-epub-thumbnailer               x86_64 1.6-5.fc34           fedora   28 k
+ gnote                                x86_64 40.2-1.fc34          updates 3.7 M
+ gparted                              x86_64 1.3.1-1.fc34         updates 2.0 M
+ gtk2-engines                         x86_64 2.20.2-22.fc34       fedora  304 k
+ gucharmap                            x86_64 13.0.8-1.fc34        updates 514 k
+ gvfs-nfs                             x86_64 1.48.1-1.fc34        updates  32 k
+ hexchat                              x86_64 2.14.3-15.fc34       updates 1.2 M
+ initial-setup-gui                    x86_64 0.3.90-1.fc34        fedora   22 k
+ libmatekbd                           x86_64 1.26.0-1.fc34        updates 189 k
+ libmatemixer                         x86_64 1.26.0-1.fc34        updates 196 k
+ libmateweather                       x86_64 1.26.0-1.fc34        updates  62 k
+ lm_sensors                           x86_64 3.6.0-8.fc34         fedora  135 k
+ marco                                x86_64 1.26.0-1.fc34        updates 126 k
+ mate-applets                         x86_64 1.26.0-1.fc34        updates 9.2 M
+ mate-backgrounds                     noarch 1.26.0-1.fc34        updates  44 M
+ mate-calc                            x86_64 1.26.0-1.fc34        updates 1.1 M
+ mate-control-center                  x86_64 1.26.0-1.fc34        updates 2.8 M
+ mate-desktop                         x86_64 1.26.0-1.fc34        updates  84 k
+ mate-dictionary                      x86_64 1.26.0-1.fc34        updates 7.0 M
+ mate-disk-usage-analyzer             x86_64 1.26.0-1.fc34        updates 6.9 M
+ mate-icon-theme                      noarch 1.26.0-1.fc34        updates  14 M
+ mate-media                           x86_64 1.26.0-1.fc34        updates 299 k
+ mate-menus                           x86_64 1.26.0-1.fc34        updates 111 k
+ mate-menus-preferences-category-menu x86_64 1.26.0-1.fc34        updates 8.4 k
+ mate-notification-daemon             x86_64 1.26.0-1.fc34        updates 180 k
+ mate-panel                           x86_64 1.26.0-1.fc34        updates 2.3 M
+ mate-polkit                          x86_64 1.26.0-1.fc34        updates  88 k
+ mate-power-manager                   x86_64 1.26.0-1.fc34        updates 5.9 M
+ mate-screensaver                     x86_64 1.26.0-1.fc34        updates 4.6 M
+ mate-screenshot                      x86_64 1.26.0-1.fc34        updates  48 k
+ mate-search-tool                     x86_64 1.26.0-1.fc34        updates 6.9 M
+ mate-session-manager                 x86_64 1.26.0-1.fc34        updates 414 k
+ mate-settings-daemon                 x86_64 1.26.0-1.fc34        updates 707 k
+ mate-system-log                      x86_64 1.26.0-1.fc34        updates 7.0 M
+ mate-system-monitor                  x86_64 1.26.0-1.fc34        updates 2.2 M
+ mate-terminal                        x86_64 1.26.0-1.fc34        updates 1.5 M
+ mate-themes                          noarch 3.22.22-1.fc34       fedora  5.9 M
+ mate-user-admin                      x86_64 1.6.0-1.fc34         fedora  989 k
+ mate-user-guide                      noarch 1.26.0-1.fc34        updates 8.9 M
+ mozo                                 noarch 1.26.0-1.fc34        updates 142 k
+ network-manager-applet               x86_64 1.20.0-4.fc34        fedora  199 k
+ p7zip                                x86_64 16.02-20.fc34        updates 645 k
+ p7zip-plugins                        x86_64 16.02-20.fc34        updates 1.0 M
+ parole                               x86_64 4.16.0-2.fc34        fedora  480 k
+ pavucontrol                          x86_64 4.0-6.fc34           fedora  170 k
+ pluma                                x86_64 1.26.0-1.fc34        updates 581 k
+ seahorse                             x86_64 40.0-1.fc34          updates 1.4 M
+ seahorse-caja                        x86_64 1.18.1-9.fc34        fedora  182 k
+ setroubleshoot                       x86_64 3.3.26-1.fc34        updates  71 k
+ slick-greeter-mate                   noarch 1.5.4-1.fc34         updates 8.9 k
+ system-config-language               noarch 3.5.0-6.fc34         fedora   99 k
+ system-config-printer                x86_64 1.5.15-2.fc34        fedora  290 k
+ system-config-printer-applet         x86_64 1.5.15-2.fc34        fedora   25 k
+ thunderbird                          x86_64 78.11.0-1.fc34       updates  92 M
+ transmission-gtk                     x86_64 3.00-7.fc34          fedora  933 k
+ usermode-gtk                         x86_64 1.114-2.fc34         updates  89 k
+ vim-enhanced                         x86_64 2:8.2.3367-1.fc34    updates 1.8 M
+ xfburn                               x86_64 0.6.2-4.fc34         fedora  593 k
+依存関係のインストール:
+ ImageMagick                          x86_64 1:6.9.11.27-3.fc34   fedora  162 k
+ ImageMagick-libs                     x86_64 1:6.9.11.27-3.fc34   fedora  2.3 M
+ NetworkManager-iodine                x86_64 1.2.0-12.fc34        fedora   46 k
+ NetworkManager-l2tp                  x86_64 1.8.6-5.fc34         fedora  185 k
+ NetworkManager-libreswan             x86_64 1.2.14-1.fc34.1      fedora  126 k
+ NetworkManager-sstp                  x86_64 1:1.2.6-8.fc34       fedora  150 k
+ NetworkManager-strongswan            x86_64 1.5.0-3.fc34         fedora   12 k
+ atril-libs                           x86_64 1.26.0-1.fc34        updates 327 k
+ bluez-tools                          x86_64 0.2.0-0.16.git20170912.7cb788c.fc34
+                                                                  fedora  105 k
+ caja-actions-doc                     noarch 1.26.0-1.fc34        updates 5.7 M
+ caja-core-extensions                 x86_64 1.26.0-1.fc34        updates  27 k
+ caja-extensions-common               noarch 1.26.0-1.fc34        updates 187 k
+ caja-schemas                         x86_64 1.26.0-1.fc34        updates 2.0 M
+ comps-extras                         noarch 24-9.fc34            fedora   75 k
+ desktop-backgrounds-compat           noarch 34.0.0-2.fc34        fedora  8.8 k
+ dnfdaemon                            noarch 0.3.20-4.fc34        fedora   63 k
+ dnfdragora                           noarch 2.1.0-3.fc34         fedora  456 k
+ dpdk                                 x86_64 2:20.11-1.fc34       fedora  5.5 M
+ exo                                  x86_64 4.16.2-1.fc34        updates 456 k
+ fftw-libs-double                     x86_64 3.3.8-10.fc34        fedora  924 k
+ freeipmi                             x86_64 1.6.8-1.fc34         updates 2.0 M
+ google-noto-sans-fonts               noarch 20181223-9.fc34      fedora  8.5 M
+ gpm-libs                             x86_64 1.20.7-26.fc34       fedora   20 k
+ graphviz                             x86_64 2.44.0-18.fc34       updates 3.2 M
+ group-service                        x86_64 1.3.0-1.fc34         fedora   75 k
+ gtk-layer-shell                      x86_64 0.6.0-1.fc34         fedora   69 k
+ gtk-murrine-engine                   x86_64 0.98.2-21.fc34       fedora  139 k
+ gtk2                                 x86_64 2.24.33-4.fc34       fedora  3.5 M
+ gtksourceview3                       x86_64 3.24.11-5.fc34       fedora  593 k
+ gts                                  x86_64 0.7.6-39.20121130.fc34
+                                                                  fedora  237 k
+ gucharmap-libs                       x86_64 13.0.8-1.fc34        updates 1.2 M
+ hddtemp                              x86_64 0.3-0.47.beta15.fc34 fedora   58 k
+ ibus-gtk2                            x86_64 1.5.24-3.fc34        fedora   27 k
+ initial-setup                        x86_64 0.3.90-1.fc34        fedora  130 k
+ inxi                                 noarch 3.3.06-1.fc34        updates 392 k
+ iodine-client                        x86_64 0.7.0-16.fc34        fedora   43 k
+ ipmitool                             x86_64 1.8.18-21.fc34       fedora  390 k
+ kernel-tools-libs                    x86_64 5.13.6-200.fc34      updates  25 k
+ lasi                                 x86_64 1.1.3-6.fc34         fedora   56 k
+ ldns                                 x86_64 1.7.1-4.fc34         updates 160 k
+ libXaw                               x86_64 1.0.13-17.fc34       fedora  202 k
+ libXpresent                          x86_64 1.0.0-14.fc34        fedora   17 k
+ libappindicator-gtk3                 x86_64 12.10.0-30.fc34      fedora   42 k
+ libburn                              x86_64 1.5.4-2.fc34         updates 173 k
+ libcryptui                           x86_64 3.12.2-21.fc34       fedora  784 k
+ libdbusmenu                          x86_64 16.04.0-17.fc34      fedora  136 k
+ libdbusmenu-gtk3                     x86_64 16.04.0-17.fc34      fedora   41 k
+ libfilezilla                         x86_64 0.30.0-1.fc34        updates 273 k
+ libgnome-keyring                     x86_64 3.12.0-21.fc34       fedora  113 k
+ libindicator-gtk3                    x86_64 12.10.1-20.fc34      fedora   67 k
+ libisofs                             x86_64 1.5.4-1.fc34         fedora  222 k
+ liblqr-1                             x86_64 0.4.2-16.fc34        fedora   49 k
+ libmateweather-data                  noarch 1.26.0-1.fc34        updates 2.8 M
+ libnatpmp                            x86_64 20150609-13.fc34     fedora   19 k
+ libreswan                            x86_64 4.4-3.fc34           updates 1.3 M
+ libsodium                            x86_64 1.0.18-7.fc34        fedora  165 k
+ libwmf-lite                          x86_64 0.2.12-5.fc34        fedora   73 k
+ libxfce4ui                           x86_64 4.16.0-3.fc34        fedora  286 k
+ libxfce4util                         x86_64 4.16.0-3.fc34        fedora  181 k
+ libyui                               x86_64 3.10.0-3.fc34        fedora  309 k
+ libyui-mga                           x86_64 1.1.0-2.fc34         fedora   45 k
+ libyui-mga-ncurses                   x86_64 1.1.0-2.fc34         fedora   73 k
+ libyui-ncurses                       x86_64 2.55.0-3.fc34        fedora  389 k
+ lightdm                              x86_64 1.30.0-14.fc34       fedora  223 k
+ lightdm-gobject                      x86_64 1.30.0-14.fc34       fedora   66 k
+ lm_sensors-libs                      x86_64 3.6.0-8.fc34         fedora   41 k
+ marco-libs                           x86_64 1.26.0-1.fc34        updates 1.0 M
+ mate-control-center-filesystem       x86_64 1.26.0-1.fc34        updates 8.2 k
+ mate-desktop-libs                    x86_64 1.26.0-1.fc34        updates 647 k
+ mate-menus-libs                      x86_64 1.26.0-1.fc34        updates  46 k
+ mate-panel-libs                      x86_64 1.26.0-1.fc34        updates  43 k
+ mate-utils-common                    noarch 1.26.0-1.fc34        updates 6.8 M
+ mathjax                              noarch 2.7.4-8.fc34         fedora   11 M
+ mathjax-ams-fonts                    noarch 2.7.4-8.fc34         fedora  131 k
+ mathjax-caligraphic-fonts            noarch 2.7.4-8.fc34         fedora   62 k
+ mathjax-fraktur-fonts                noarch 2.7.4-8.fc34         fedora  138 k
+ mathjax-main-fonts                   noarch 2.7.4-8.fc34         fedora  272 k
+ mathjax-math-fonts                   noarch 2.7.4-8.fc34         fedora  126 k
+ mathjax-sansserif-fonts              noarch 2.7.4-8.fc34         fedora  127 k
+ mathjax-script-fonts                 noarch 2.7.4-8.fc34         fedora   43 k
+ mathjax-size1-fonts                  noarch 2.7.4-8.fc34         fedora   24 k
+ mathjax-size2-fonts                  noarch 2.7.4-8.fc34         fedora   23 k
+ mathjax-size3-fonts                  noarch 2.7.4-8.fc34         fedora   16 k
+ mathjax-size4-fonts                  noarch 2.7.4-8.fc34         fedora   22 k
+ mathjax-stixweb-fonts                noarch 2.7.4-8.fc34         fedora  987 k
+ mathjax-typewriter-fonts             noarch 2.7.4-8.fc34         fedora   61 k
+ mathjax-vector-fonts                 noarch 2.7.4-8.fc34         fedora   13 k
+ mathjax-winchrome-fonts              noarch 2.7.4-8.fc34         fedora   13 k
+ mathjax-winie6-fonts                 noarch 2.7.4-8.fc34         fedora   44 k
+ mkfontscale                          x86_64 1.2.1-2.fc34         fedora   31 k
+ netpbm                               x86_64 10.95.00-1.fc34      updates 185 k
+ newt                                 x86_64 0.52.21-9.fc34       fedora  101 k
+ nss-tools                            x86_64 3.69.0-1.fc34        updates 531 k
+ onboard-data                         noarch 1.4.1-23.fc34        fedora  4.2 M
+ openssl                              x86_64 1:1.1.1k-1.fc34      fedora  667 k
+ openvswitch                          x86_64 2.15.0-2.fc34        fedora  2.0 M
+ perl-Compress-Raw-Bzip2              x86_64 2.101-3.fc34         fedora   34 k
+ perl-Compress-Raw-Zlib               x86_64 2.101-3.fc34         fedora   61 k
+ perl-Cpanel-JSON-XS                  x86_64 4.25-2.fc34          fedora  152 k
+ perl-JSON-XS                         x86_64 1:4.03-3.fc34        fedora  110 k
+ perl-Math-Complex                    noarch 1.59-477.fc34        updates  57 k
+ perl-Types-Serialiser                noarch 1.01-2.fc34          fedora   20 k
+ perl-XML-Dumper                      noarch 0.81-39.fc34         fedora   26 k
+ perl-XML-Parser                      x86_64 2.46-7.fc34          fedora  233 k
+ perl-common-sense                    x86_64 3.7.5-5.fc34         fedora   32 k
+ pluma-data                           noarch 1.26.0-1.fc34        updates 2.1 M
+ python3-cairocffi                    noarch 1.2.0-3.fc34         fedora  134 k
+ python3-cairosvg                     noarch 2.5.2-1.fc34         fedora   87 k
+ python3-cssselect2                   noarch 0.3.0-6.fc34         fedora   34 k
+ python3-defusedxml                   noarch 0.7.0~rc2-1.fc34     fedora   51 k
+ python3-dnfdaemon                    noarch 0.3.20-4.fc34        fedora   19 k
+ python3-gettext                      noarch 4.0-2.fc34           fedora   25 k
+ python3-manatools                    noarch 0.0.3-2.fc34         fedora   41 k
+ python3-newt                         x86_64 0.52.21-9.fc34       fedora   41 k
+ python3-psutil                       x86_64 5.8.0-5.fc34         fedora  400 k
+ python3-pystray                      noarch 0.17.3-1.fc34        updates  67 k
+ python3-pyyaml                       x86_64 5.4.1-2.fc34         fedora  194 k
+ python3-setproctitle                 x86_64 1.1.10-20.fc34       fedora   21 k
+ python3-tinycss2                     noarch 1.1.0-2.fc34         fedora   44 k
+ python3-webencodings                 noarch 0.5.1-14.fc34        fedora   27 k
+ python3-xapp                         noarch 2.2.1-1.fc34         updates  43 k
+ python3-xapps-overrides              x86_64 2.2.2-1.fc34         updates  12 k
+ python3-xcffib                       noarch 0.9.0-4.fc34         fedora  190 k
+ python3-xlib                         noarch 0.29-1.fc34          updates 262 k
+ python3-yui                          x86_64 2.0.2-3.fc34         fedora  400 k
+ recode                               x86_64 3.7.8-2.fc34         fedora  472 k
+ setroubleshoot-plugins               noarch 3.3.14-1.fc34        fedora  325 k
+ setroubleshoot-server                x86_64 3.3.26-1.fc34        updates 318 k
+ slang                                x86_64 2.3.2-9.fc34         fedora  379 k
+ slick-greeter                        x86_64 1.5.4-1.fc34         updates 358 k
+ sstp-client                          x86_64 1.0.11-19.fc34       fedora   64 k
+ strongswan                           x86_64 5.9.3-1.fc34         updates 1.5 M
+ strongswan-charon-nm                 x86_64 5.9.3-1.fc34         updates  34 k
+ thunderbird-librnp-rnp               x86_64 78.11.0-1.fc34       updates 1.0 M
+ transmission-common                  x86_64 3.00-7.fc34          fedora  346 k
+ vim-common                           x86_64 2:8.2.3367-1.fc34    updates 6.7 M
+ vim-filesystem                       noarch 2:8.2.3367-1.fc34    updates  22 k
+ wmctrl                               x86_64 1.07-30.fc34         fedora   35 k
+ wxBase3                              x86_64 3.0.5.1-4.fc34       updates 975 k
+ wxGTK3                               x86_64 3.0.5.1-4.fc34       updates 4.4 M
+ wxGTK3-i18n                          noarch 3.0.5.1-4.fc34       updates 528 k
+ xapps                                x86_64 2.2.2-1.fc34         updates 5.2 M
+ xfconf                               x86_64 4.16.0-2.fc34        fedora  196 k
+ xl2tpd                               x86_64 1.3.15-2.fc34        fedora   92 k
+ xorg-x11-fonts-ISO8859-1-100dpi      noarch 7.5-31.fc34          updates 1.0 M
+ xrandr                               x86_64 1.5.1-2.fc34         fedora   45 k
+弱い依存関係のインストール:
+ dnfdaemon-selinux                    noarch 0.3.20-4.fc34        fedora  7.9 k
+ fortune-mod                          x86_64 3.6.1-1.fc34         updates 1.0 M
+ libcanberra-gtk2                     x86_64 0.30-24.fc34         fedora   26 k
+ libyui-gtk                           x86_64 2.49.0-2.fc34        fedora  231 k
+ libyui-mga-gtk                       x86_64 1.1.0-3.fc34         fedora   54 k
+ libyui-mga-qt                        x86_64 1.1.0-3.fc34         fedora   49 k
+ libyui-qt                            x86_64 2.53.0-2.fc34        fedora  355 k
+ libyui-qt-graph                      x86_64 2.45.5-2.fc34        fedora   57 k
+ lightdm-settings                     noarch 1.5.5-1.fc34         updates 135 k
+ onboard                              x86_64 1.4.1-23.fc34        fedora  674 k
+ perl-IO-Compress                     noarch 2.102-2.fc34         fedora  256 k
+ perl-Math-BigInt                     noarch 1:1.9998.18-458.fc34 fedora  190 k
+グループのインストール中:
+ MATE                                                                          
+
+トランザクションの概要
+================================================================================
+インストール    244 パッケージ
+アップグレード   25 パッケージ
+
+合計サイズ: 370 M
+ダウンロードサイズの合計: 365 M
+これでよろしいですか? [y/N]: y
+
+
+[user@fedora ~]$ sudo dnf install uim-anthy
+Fedora 34 - x86_64 - Updates                   5.1 kB/s | 4.8 kB     00:00    
+メタデータの期限切れの最終確認: 0:00:03 時間前の 2021年08月28日 18時54分11秒 に実施しました。
+依存関係が解決しました。
+===============================================================================
+ パッケージ         Arch   バージョン                             Repo   サイズ
+===============================================================================
+インストール:
+ uim-anthy          x86_64 1.8.8-7.20200828git0c2fbfa6.fc34       fedora  52 k
+依存関係のインストール:
+ anthy              x86_64 9100h-42.fc34                          fedora 5.7 M
+ eb                 x86_64 4.4.3-17.fc34                          fedora 163 k
+ im-chooser         x86_64 1.7.3-5.fc34                           fedora  20 k
+ im-chooser-common  x86_64 1.7.3-5.fc34                           fedora 227 k
+ imsettings         x86_64 1.8.2-3.fc34                           fedora 209 k
+ imsettings-gsettings
+                    x86_64 1.8.2-3.fc34                           fedora  94 k
+ imsettings-libs    x86_64 1.8.2-3.fc34                           fedora 107 k
+ libgcroots         x86_64 0.3.2-2.fc34                           fedora  14 k
+ uim                x86_64 1.8.8-7.20200828git0c2fbfa6.fc34       fedora 2.5 M
+ xemacs-filesystem  noarch 21.5.34-39.20200331hge2ac728aa576.fc34 fedora 9.5 k
+
+トランザクションの概要
+===============================================================================
+インストール  11 パッケージ
+
+ダウンロードサイズの合計: 9.1 M
+インストール後のサイズ: 39 M
+これでよろしいですか? [y/N]: y
+
