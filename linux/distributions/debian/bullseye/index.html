@@ -1,25 +1,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja"><head>
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-<title>Debian 11 bullseye - Linux on the Desktop</title>
+<title>Debian 11 (bullseye) - Linux on the Desktop</title>
   </head>
   <body>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
       <tbody>
         <tr>
-          <td valign="top"><a href="../../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> / <a href="../index.html">Debian</a> / bullseye<big><br>
-</big></td>
-          <td valign="middle" align="right">Last updated:&nbsp;2021-08-19 16:23 JST<br>
-</td>
+          <td valign="top"><a href="../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> /　<a href="../index.html">Debian</a> / bullseye</td>
+          <td valign="middle" align="right">Last updated&nbsp;2021/11/12 13:45 JST</td>
         </tr>
       </tbody>
 </table>
 <hr width="100%">
-<b><font size="+2">Debian GNU/Linux 11 (bullseye) のぺージ</font></b><br>
-<br>
-Debian GNU/Linux Bullseye (最新安定版) に関する FAQ/Tips です。<br>
+<b><font size="+2">Debian 11 (bullseye)</font></b><br>
+Debian GNU/Linux Bullseye (最新の安定版) に関する FAQ/Tips です。<br>
 <ol>
-  <li><a href="#1">リリース情報について</a></li>
+  <li><a href="#1">Debian 11 リリース情報について</a></li>
   <li><a href="#2">ダウンロード</a></li>
   <li><a href="#3">リリースノート</a></li>
   <li><a href="#4">インストールガイド</a></li>
@@ -31,31 +28,39 @@ Debian GNU/Linux Bullseye (最新安定版) に関する FAQ/Tips です。<br>
   <li><a href="#10">デスクトップにゴミ箱がありません</a></li>
   <li><a href="#11">Firefox に余分なロケールが大量にあって困ります</a></li>
   <li><a href="#12">apt-key が廃止予定になりました</a></li>
-  <li><a href="#13">ニュース記事 (外部リンク)</a></li>
+  <li><a href="#13">起動時のスプラッシュ画面を変更するには？</a></li>
+  <li><a href="#14">ニュース記事 (外部リンク)</a></li>
 </ol>
+<a name="1"></a><h3>Debian 11 リリース情報について</h3>
+Debian 11 (bulleseye) の初版 (バージョン 11.0) は 2021年8月14日にリリースされました。<a href="press_release.html">プレスリリース (press release) の日本語訳ページ</a>を作成したのでご参照ください。<br>
+　Debian bulleseye に関するリリース情報 - <a href="https://www.debian.org/releases/bullseye/index.html">https://www.debian.org/releases/bullseye/index.html</a> (＊英語ページです)
 <br>
-<h3><a name="1"></a>リリース情報について</h3>
-2021年8月14日、Debian 10 (bullseye) が正式にリリースされました。<a href="press_release.html">プレスリリース (press release) の日本語訳ページ</a>を作成したのでご参照ください。<br>
-<br>
-<h3><a name="2"></a>ダウンロード</h3>
+<a name="2"></a><h3>ダウンロード</h3>
 Debian 11 (bullseye) のダウンロードは次のページを見てください。インストール時にインターネット接続環境は要りません。<br>
-&nbsp;Live/インストールイメージ: <a href="https://www.debian.org/CD/live/index.ja.html">https://www.debian.org/CD/live/index.ja.html</a> <br>
-<br>
+&nbsp;Live/インストールイメージ: <a href="https://www.debian.org/CD/live/index.ja.html">https://www.debian.org/CD/live/index.ja.html</a>
+<p>
+インストールメディアの入手先：<br>
+インストールのための CD/DVD イメージのダウンロードは <a href="https://www.debian.org/releases/bullseye/debian-installer/">https://www.debian.org/releases/bullseye/debian-installer/</a> より可能となっています。<br>
 また、従来から配布されてきた netinst.iso も用意されています。これはインストールだけの目的で利用される、ネットワークインストール専用の ISO イメージで、CD に収まるような小さなサイズです。次のアドレスより入手できます。<br>
-&nbsp;netinst イメージ: <a href="https://www.debian.org/CD/netinst/index.ja.html">https://www.debian.org/CD/netinst/index.ja.html</a> <br>
-<br>
-<h3><a name="3"></a>リリースノート</h3>
+&nbsp;netinst イメージ: <a href="https://www.debian.org/CD/netinst/index.ja.html">https://www.debian.org/CD/netinst/index.ja.html</a>
+</p>
+<a name="3"></a><h3>リリースノート</h3>
 リリースノート (64 ビット PC 用)の日本語版は次のアドレスにあります。<br>
 <a href="https://www.debian.org/releases/bullseye/amd64/release-notes/index.ja.html">https://www.debian.org/releases/bullseye/amd64/release-notes/index.ja.html</a> <br>
 <br>
 その他の用途には次のページから各種リリースノートを選択できます。<br>
 <a href="https://www.debian.org/releases/bullseye/releasenotes">https://www.debian.org/releases/bullseye/releasenotes</a> <br>
 <br>
-<h3><a name="4"></a>インストールガイド</h3>
+<a name="4"></a><h3>インストールガイド</h3>
 インストール向けに、次の詳しいマニュアルが用意されています。<br>
-<a href="https://www.debian.org/releases/bullseye/amd64/index.ja.html">https://www.debian.org/releases/bullseye/amd64/index.ja.html</a> <br>
+<a href="https://www.debian.org/releases/bullseye/amd64/index.ja.html">https://www.debian.org/releases/bullseye/amd64/index.ja.html</a><br>
 <br>
-<h3><a name="5"></a>必要な最低限のハードウェアは？</h3>
+Debian Bullseye インストールガイドが用意されています。
+　-https://www.debian.org/releases/bullseye/amd64/index.ja.html (64 ビット PC 用)
+　-https://www.debian.org/releases/bullseye/i386/index.ja.html (32 ビット PC 用)
+その他のアーキテクチャー用のインストール・ガイドは <a href="https://www.debian.org/releases/bullseye/installmanual">https://www.debian.org/releases/bullseye/installmanual</a> のページより検索できます。
+<br>
+<a name="5"></a><h3>必要な最低限のハードウェアは？</h3>
 <table class="table" summary="最低限必要なシステム (推奨値)" border="1">
 <thead><tr><th>インストールタイプ</th>
 <th>RAM (最小)</th>
@@ -78,10 +83,9 @@ Debian 11 (bullseye) のダウンロードは次のページを見てくださ�
 <br>
 &nbsp;出典: <a href="https://www.debian.org/releases/bullseye/amd64/ch03s04.ja.html#idm596">https://www.debian.org/releases/bullseye/amd64/ch03s04.ja.html#idm596</a><br>
 <br>
-<h3><a name="6"></a>デスクトップに必要な空き容量は？</h3>
+<a name="6"></a><h3>デスクトップに必要な空き容量は？</h3>
 標準 (standard) インストールの 971MB に加えて、タスク (デスクトップなど) をインストールするには、ディスクの空き容量が以下のとおり必要です。<br>
 <br>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <table class="informaltable" border="1">
 <thead><tr><th>タスク</th>
 <th>インストールサイズ (MB)</th>
@@ -143,7 +147,7 @@ Debian 11 (bullseye) のダウンロードは次のページを見てくださ�
 <td>0</td>
 <td>2</td></tr></tbody>
 </table>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"><br>
+<br>
 英語以外の言語でインストールする場合、<span class="command"><strong>tasksel</strong></span> が <em class="firstterm">地域化タスク</em> を自動的にインストールします。ダウンロードとインストールで最大 350MB 必要です。(出典: <a href="https://www.debian.org/releases/bullseye/amd64/apds02.ja.html">https://www.debian.org/releases/bullseye/amd64/apds02.ja.html</a> )<br>
 <br>
 <h3><a name="7"></a>インストールの手順</h3>
@@ -172,7 +176,7 @@ Debian 11 (bullseye) のダウンロードは次のページを見てくださ�
 <br>
 <img src="screenshots/bullseye-install7.png" alt="bullseye-install7.png" width="600" height="328"><br>
 <br>
-<h3><a name="8"></a>標準の日本語入力について</h3>
+<a name="8"></a><h3>標準の日本語入力について</h3>
 Debian Live 
 には標準で複数の日本語入力方式が用意されているので、その中から自由に選択することができます。Liveイメージには、かな漢字変換ソフトウェアとして
 Mozcが入っています。Anthy を使いたい場合は、これを追加でインストールする必要があります。<br>
@@ -184,7 +188,7 @@ Mozcが入っています。Anthy を使いたい場合は、これを追加で�
 <br>
 入力方式の設定や変更は、デスクトップメニューまたはコマンドラインから im-config を用いて行います。<br>
 <br>
-<h3><a name="9"></a>root アカウントがありません</h3>
+<a name="9"></a><h3>root アカウントがありません</h3>
 Live メディアの Caramares インストーラーでインストールした場合は、標準で sudo を使います。root 
 自体は存在しますがアカウントが未設定なので、次のコマンドでアカウントのパスワードを設定してください。設定後は root アカウントが利用可能になります。<br>
 <br>
@@ -193,7 +197,7 @@ debian@user:~$ sudo passwd root<br>
 新しい パスワードを再入力してください:<br>
 passwd: パスワードは正しく更新されました<br>
 <br>
-<h3><a name="10"></a>デスクトップにゴミ箱がありません</h3>
+<a name="10"></a><h3>デスクトップにゴミ箱がありません</h3>
 Debian MATE の標準ではゴミ箱がありません。mate-tweak パケージを追加インストールする必要があります。<br>
 <br>
 debian@user:~$ sudo apt install mate-tweak<br>
@@ -267,7 +271,7 @@ debian@user:~$ sudo apt install firefox-esr-l10n-ja<br>
 599 kB のアーカイブを取得する必要があります。<br>
 この操作後に追加で 735 kB のディスク容量が消費されます。<br>
 <br>
-<h3><a name="12"></a>apt-key が廃止予定になりました</h3>
+<a name="12"></a><h3>apt-key が廃止予定になりました</h3>
 Debian ではこれまでパッケージの管理で apt-key 
 を使っていましたが、非推奨（deprecated⁠）の扱いとなりました(*1)。リリースノートにも明記されています。したがって、将来的には廃止予定となり，2022年の半ばには削除さ
 れることになっています。今回リリースされた Debian 11 では apt-key 
@@ -276,7 +280,41 @@ Debian ではこれまでパッケージの管理で apt-key
 &nbsp;*1 https://salsa.debian.org/apt-team/apt/-/commit/ee284d5917d09649b68ff1632d44e892f290c52f<br>
 &nbsp;*2 https://gihyo.jp/admin/serial/01/ubuntu-recipe/0675<br>
 <br>
-<h3><a name="13"></a>ニュース記事 (外部リンク)</h3>
+<a name="13"></a><h3>起動時のスプラッシュ画面を変更するには？</h3>
+<p>
+debian 11 はグラフィカルなスプラッシュ画面で起動します。したがって、debian 10 のときのようにスクリーンにテキストを出力しません。
+/etc/default/grub ファイルを編集します。このスプラッシュの動作に係わっているのは Plymouth というプログラムです。
+</p>
+<p>
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash...という記述の行をコメントします。<br>
+#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash...<br>
+編集後 update-grub を実行すると/boot/grub/grub.cfgに自動的に設定が反映されます。あるいは直接下記のスプラッシュのオプションに書き換えても構いません。オプションによって、テキスト出力、黒い画面、スプラッシュ画面、のうちのどれかになります。
+<p>
+root@user-fmva52dawj:~# update-grub<br>
+Generating grub configuration file ...<br>
+Found background image: /usr/share/images/desktop-base/desktop-grub.png<br>
+Found linux image: /boot/vmlinuz-5.10.0-8-amd64<br>
+Found initrd image: /boot/initrd.img-5.10.0-8-amd64<br>
+done
+</P>
+<p>
+スプラッシュのオプション:<br>
+GRUB_CMDLINE_LINUX_DEFAULT=""<br>
+GRUB_CMDLINE_LINUX_DEFAULT="quiet"<br>
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"<br>
+GRUB_CMDLINE_LINUX_DEFAULT="splash"<br>
+参照:<br>
+https://wiki.debian.org/plymouth<br>
+https://qastack.jp/ubuntu/248/how-can-i-show-or-hide-boot-messages-when-ubuntu-starts<br>
+</p>
+<p>
+参考までに、Red Hat 系のディストリビューションでは次のようになります:<br>
+CentOS 6 を起動時に下図進捗バーが表示されたら「→」キーか、「Esc」キーを押下します。<br>
+また、恒久的に起動時に詳細情報を表示させたい場合は、「/etc/grub.conf」ファイルを編集します。<br>
+上記の行の行末にある「rhgb quiet」を削除して保存します。<br>
+https://www.linuxmaster.jp/linux_skill/2012/10/centos6-1.html<br>
+</p>
+<a name="14"></a><h3>ニュース記事 (外部リンク)</h3>
 7 New Features in the Newly Released Debian 11 ‘Bullseye’ Linux Distro<br>
 &nbsp;<a href="https://news.itsfoss.com/debian-11-feature/">https://news.itsfoss.com/debian-11-feature/</a><br>
 <br>
@@ -285,8 +323,7 @@ Debian GNU/Linux 11 “Bullseye” Officially Released, This Is What’s New<br>
 <br>
 Debian Edu 11 “Bullseye” Released as a Complete Linux Solution for Schools<br>
 &nbsp;<a href="https://9to5linux.com/debian-edu-11-bullseye-released-as-a-complete-linux-solution-for-schools">https://9to5linux.com/debian-edu-11-bullseye-released-as-a-complete-linux-solution-for-schools</a><br>
-<br>
 <hr width="100%">
-<div style="text-align: left;"><a href="../../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> / <a href="../index.html">Debian</a> / bullseye<big><br>
-</big></div>
+<div style="text-align: left;"><a href="../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> /　<a href="../index.html">Debian</a> / bullseye</div>
 </body></html>
+
