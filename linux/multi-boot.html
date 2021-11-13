@@ -4,29 +4,28 @@
     <title>MultiBoot - Linux on the Desktop</title>
   </head>
   <body>
-    <div id="navigator"> <a href="../index.html">HOME</a>
+    <a href="../index.html">HOME</a>
       <hr width="100%" size="2">
-      <h2 id="content_1_0">マルチブートに関する Tips</h2>
-      <p>Windows PC にLinux を追加したり複数の OS で運用したいときのヒント集です。-- Last updated: 2021.11.13 12:30 JST<br>
-</p>
-          <li><a href="#content_1_0">マルチブー トに関する TIPs</a>
+      <h2>マルチブートに関する Tips</h2>
+      <p>Windows PC にLinux を追加したり複数の OS で運用したいときのヒント集です。-- Last updated: 2021.11.13 14:38 JST<br>
+      </p>
       <ul>
           <li><a href="#1">Windows でパーティションを増やすには?</a></li>
           <li><a href="#2">[Windows 10] パーティションを作成／削除する方法</a></li>
            <li><a href="#3">[Windows 8] パーティションの作成や削除をする方法</a></li>
-              <li><a href="#4">[Windows 7] パーティションの作成や削除をする方法</a></li>
-              <li><a href="#5">[Windows Vista] パーティションの作成・削除方法</a></li>
-              <li><a href="#6">[Windows Vista] パーティションの圧縮（縮小）</a></li>
-              <li><a href="#7">ブート・マネージャとは何ですか。</a></li>              
-              <li><a href="#8">Windows PC に Linux を追加したい。</a></li>
-                <ul>
+           <li><a href="#4">[Windows 7] パーティションの作成や削除をする方法</a></li>
+           <li><a href="#5">[Windows Vista] パーティションの作成・削除方法</a></li>
+           <li><a href="#6">[Windows Vista] パーティションの圧縮（縮小）</a></li>
+           <li><a href="#7">ブート・マネージャとは何ですか。</a></li>              
+           <li><a href="#8">Windows PC に Linux を追加したい。</a></li>
+              <ul>
                   <li><a href="#8-1">汎用的な方法でインストール</a></li>
                   <li><a href="#8-2">Windows32-Loaderを使う方法</a></li>
-                </ul>
-              <li><a href="#9">グラフィカルな Linux 用の設定ツールはありますか？</a></li>
-              <li><a href="#10">OS（ディストリビューション）を削除するには？</a></li>
-              <li><a href="#11">マルチブー ト設定の実際について（注意：この項目は非現行です）</a>
-                <ul>
+              </ul>
+           <li><a href="#9">グラフィカルな Linux 用の設定ツールはありますか？</a></li>
+           <li><a href="#10">OS（ディストリビューション）を削除するには？</a></li>
+           <li><a href="#11">マルチブー ト設定の実際について（注意：この項目は非現行です）</a></li>
+              <ul>
                   <li><a href="#11-1">Chainloader の利用によるマルチブートの例
                       (Debian 3.1 -Sarge)</a></li>
                   <li><a href="#11-2">インストー ラーの自動設定によるマルチブート
@@ -39,45 +38,47 @@
                   <li><a href="#11-7">Windows と Linux のマルチブートの例</a></li>
                   <li><a href="#11-8">起動時の OS 選択画面（表示例）</a></li>
                   <li><a href="#11-9">GRUB を誤ってインストールしたとき</a></li>
-                </ul>
-        </ul>
-      </div>
+               </ul>
+        </ul><br>
       <h3><a name="1"></a>Windows でパーティションを増やすには?</h3>
+<!--
       まず始めに、<a href="http://support.microsoft.com/kb/944248/ja">http://support.microsoft.com/kb/944248/ja</a>
-      を参照してください。「ハード ディスク パーティションを作成してフォーマットする」 - Windows ヘルプ<br>
+      を参照してください。
+-->
+<!-- Commented out above because the page linking does not exist anymore. -->
+<p>
+まず始めに、マイクロソフト社のサポートページ<a href="https://support.microsoft.com/ja-jp/windows/ディスクの管理のヘルプ-ad88ba19-f0d3-0809-7889-830f63e94405">「ディスクの管理のヘルプ」</a>をご覧になることをおすすめします。そのページの中に
+<a href="https://docs.microsoft.com/en-us/windows-server/storage/disk-management/shrink-a-basic-volume">「ベーシック ボリュームを圧縮する (Shrink a basic volume)」</a>という項目が存在します（ただし現時点で日本語ページが存在しません）。
+これは英語ページなので、以下の SONY Vaio サポートの日本語ページ解説を読めばこと足ります。
+</p>
+「ハード ディスク パーティションを作成してフォーマットする」 - Windows ヘルプ<br>
       <a href="https://support.microsoft.com/ja-jp/help/17418/windows-7-create-format-hard-disk-partition">https://support.microsoft.com/ja-jp/help/17418/windows-7-create-format-hard-disk-partition</a>
       にも関連記事があります。
       <h3><a name="2"></a>[Windows 10] パーティションを作成／削除する方法<br></h3>
       具体的な作業手順は、Vaio サポート FAQ -&nbsp; <a href="https://solutions.vaio.com/2122">https://solutions.vaio.com/2122</a>
       に掲載されています。<br>
       <h3><a name="3"></a>[Windows 8] パーティションを作成／削除する方法</h3>
-      具体的な作業手順については、<a href="http://qa.support.sony.jp/solution/S1206280039400/">http://qa.support.sony.jp/solution/S1206280039400/</a>
-      を参照してください。ハードディスク(HDD)に空き領域を用意すれば、Linux
+      具体的な作業手順については、<a href="http://qa.support.sony.jp/solution/S1206280039400/">http://qa.support.sony.jp/solution/S1206280039400/</a>を参照してください。ハードディスク(HDD)に空き領域を用意すれば、Linux
       をお使いのシステムに追加し、デュアルブートにすることが可能です。<br>
       <h3><a name="4"></a>[Windows 7] パーティションを作成／削除する方法等</h3>
       具体的な作業手順については、以下のリンク先を参照してください。<br>
       <a href="http://qa.support.sony.jp/solution/S0907091064543/">http://qa.support.sony.jp/solution/S0907091064543/</a><br>
       <a href="http://faq.askpc.panasonic.co.jp/faq/docs/002563">http://faq.askpc.panasonic.co.jp/faq/docs/002563</a><br>
       <h3><a name="5"></a>[Windows Vista] パーティションの作成・削除方法</h3>
-      <p>Windows に Linux 用の空き領域を作成したいとき、以下の方法を採れば簡単に作業できます。</p>
-        <li><a href="http://qa.support.sony.jp/solution/S0610051016852/#2">Windows
-            Vista パーティションの削除方法</a><br>
-          なお、一度作成したパーティションは、Windows 側から後で削除することも可能です。
-          <blockquote>
-            <p class="quotation">（参照先）<a href="http://search2.vaio.sony.co.jp/qasearch/cbswebgw">ソ
+      Windows に Linux 用の空き領域を作成したいとき、以下の方法を採れば簡単に作業できます。<br>
+        <li><a href="http://qa.support.sony.jp/solution/S0610051016852/#2">Windows Vista パーティションの削除方法</a></li><br>
+          なお、一度作成したパーティションは、Windows 側から後で削除することも可能です。<br>
+          （参照先）<a href="http://search2.vaio.sony.co.jp/qasearch/cbswebgw">ソ
                 ニー製品情報 ＞ VAIO ＞ サポート</a> ページより。<a href="http://qa.support.sony.jp/solution/S0610051016852/#1">Windows
-                Vista パーティションの作成方法</a>は、Windows 環境に復元したいとき参考にしてください。</p>
-          </blockquote>
-        </li>
-      </ul>
+                Vista パーティションの作成方法</a>は、Windows 環境に復元したいとき参考にしてください。
         <li>Windows XP の場合にも、「マイコンピューター」のメニューに「コンピューターの管理」という項目があります。上記手順を参考にしてください。</li>
-      </ul>
+
       <h3><a name="6"></a>[Windows Vista] パーティションの圧縮（縮小）</h3>
       <p>「コンピュータ」を右クリックして[コンピュータの管理] &gt; [記憶域] &gt; [ディスクの管理] &gt;
         [パーティションの圧縮]
         より、選択しているパーティションのサイズを小さくできます。圧縮することによって、未割り当ての領域を作成し、その領域から新しいパー
         ティションを作成 します。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li><a href="http://qa.support.sony.jp/solution/S0612131022642/">[Windows
             Vista] ドライブの圧縮方法</a> (ソニー製品情報 VAIOサポート)</li>
         <li><a href="http://xfreak.com/mcp/vista/labroom/nph-bbs_sys.cgi?&amp;dsp_bbs_thread=1&amp;sid=1183338785000">Vista
@@ -87,7 +88,7 @@
       </ul>
       <h3><a name="7"></a>ブート・マネージャとは何ですか。</h3>
       <p>次のウェブサイトでその仕組みについて解説があります。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li><a href="http://itpro.nikkeibp.co.jp/article/Keyword/20070309/264352/">ブート・マネージャ とは : ITpro</a></li>
       </ul>
       <h3><a name="8"></a>Windows PC に Linux を追加したい。</h3>
