@@ -7,8 +7,7 @@
     <a href="../index.html">HOME</a>
       <hr width="100%" size="2">
       <h2>マルチブートに関する Tips</h2>
-      <p>Windows PC にLinux を追加したり複数の OS で運用したいときのヒント集です。-- Last updated: 2021.11.13 15:00 JST<br>
-      </p>
+      <p>Windows PC にLinux を追加したり複数の OS で運用したいときのヒント集です。-- Last updated: Nov.13, 2021 18:42 JST</p>
       <ul>
           <li><a href="#1">Windows でパーティションを増やすには?</a></li>
           <li><a href="#2">[Windows 10] パーティションを作成／削除する方法</a></li>
@@ -17,14 +16,15 @@
            <li><a href="#5">[Windows Vista] パーティションの作成・削除方法</a></li>
            <li><a href="#6">[Windows Vista] パーティションの圧縮（縮小）</a></li>
            <li><a href="#7">ブート・マネージャとは何ですか。</a></li>              
-           <li><a href="#8">Windows PC に Linux を追加したい。</a></li>
+           <li><a href="#8">Windows PC に Linux を追加したい。</a>
               <ul>
                   <li><a href="#8-1">汎用的な方法でインストール</a></li>
                   <li><a href="#8-2">Windows32-Loaderを使う方法</a></li>
+           </li>
               </ul>
            <li><a href="#9">グラフィカルな Linux 用の設定ツールはありますか？</a></li>
            <li><a href="#10">OS（ディストリビューション）を削除するには？</a></li>
-           <li><a href="#11">マルチブー ト設定の実際について（注意：この項目は非現行です）</a></li>
+           <li><a href="#11">マルチブー ト設定の実際について（注意：この項目は非現行です）</a>
               <ul>
                   <li><a href="#11-1">Chainloader の利用によるマルチブートの例
                       (Debian 3.1 -Sarge)</a></li>
@@ -39,6 +39,7 @@
                   <li><a href="#11-8">起動時の OS 選択画面（表示例）</a></li>
                   <li><a href="#11-9">GRUB を誤ってインストールしたとき</a></li>
                </ul>
+           </li>
         </ul><br>
       <h3><a name="1"></a>Windows でパーティションを増やすには?</h3>
 <!--
@@ -66,12 +67,14 @@
       <a href="http://faq.askpc.panasonic.co.jp/faq/docs/002563">http://faq.askpc.panasonic.co.jp/faq/docs/002563</a><br>
       <h3><a name="5"></a>[Windows Vista] パーティションの作成・削除方法</h3>
       Windows に Linux 用の空き領域を作成したいとき、以下の方法を採れば簡単に作業できます。<br>
-        <li><a href="http://qa.support.sony.jp/solution/S0610051016852/#2">Windows Vista パーティションの削除方法</a></li><br>
-          なお、一度作成したパーティションは、Windows 側から後で削除することも可能です。<br>
-          （参照先）<a href="http://search2.vaio.sony.co.jp/qasearch/cbswebgw">ソ
-                ニー製品情報 ＞ VAIO ＞ サポート</a> ページより。<a href="http://qa.support.sony.jp/solution/S0610051016852/#1">Windows
-                Vista パーティションの作成方法</a>は、Windows 環境に復元したいとき参考にしてください。
-        <li>Windows XP の場合にも、「マイコンピューター」のメニューに「コンピューターの管理」という項目があります。上記手順を参考にしてください。</li>
+    <ul>
+        <li><a href="http://qa.support.sony.jp/solution/S0610051016852/#2">Windows Vista パーティションの削除方法</a></li>
+        <li>Windows XP の場合には「マイコンピューター」のメニューより「コンピューターの管理」を利用（上記の参考）。</li>
+    </ul> 
+        <p>
+      なお、一度作成したパーティションは、Windows 側から後で削除することも可能です。<br>
+      （参照先）<a href="http://search2.vaio.sony.co.jp/qasearch/cbswebgw">ソニー製品情報 ＞ VAIO ＞ サポート</a> ページより。<br>
+      <a href="http://qa.support.sony.jp/solution/S0610051016852/#1">Windows Vista パーティションの作成方法</a>は、Windows 環境に復元したいとき参考にしてください。
 
       <h3><a name="6"></a>[Windows Vista] パーティションの圧縮（縮小）</h3>
       <p>「コンピュータ」を右クリックして[コンピュータの管理] &gt; [記憶域] &gt; [ディスクの管理] &gt;
@@ -116,10 +119,9 @@ Advantages:<br>
 <p>
 Win32-Loader は、次の外部リンクのダウンロード先より、またはDebian 公式ミラーサイトの /debian/tools/win32-loader ディレクトリより入手可能です。<br>
 外部リンク:<br>
- 公式サイト: <a href="https://packages.debian.org/stable/win32-loader">https://packages.debian.org/stable/win32-loader</a><br>
- ネットワーク版: <a href="https://people.debian.org/~rmh/goodbye-microsoft/">https://packages.debian.org/stable/win32-loader</a><br>
-解説記事:<br>
- <a href="https://en.wikipedia.org/wiki/Win32-loader">https://en.wikipedia.org/wiki/Win32-loader</a>
+ 公式サイト - <a href="https://packages.debian.org/stable/win32-loader">https://packages.debian.org/stable/win32-loader</a><br>
+ ネットワーク版 - <a href="https://people.debian.org/~rmh/goodbye-microsoft/">https://packages.debian.org/stable/win32-loader</a><br>
+ 解説記事 - <a href="https://en.wikipedia.org/wiki/Win32-loader">https://en.wikipedia.org/wiki/Win32-loader</a>
 </p>
 <h3><a name="9"></a>グラフィカルな Linux 用の設定ツールはありますか？</h3>
 はい。GParted というパーティション設定ツールが存在します。Linux 環境で利用することが可能です。
