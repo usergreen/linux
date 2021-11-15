@@ -6,8 +6,8 @@
   <body>
     <div id="navigator"> <a href="../../../index.html">HOME</a> / <a href="../index.html">Distributions</a> / Debian <br>
       <hr size="2" width="100%">
-      <h2 id="content_1_0"><a name="mozTocId574577" class="mozTocH2"></a>Debian Desktop</h2>
-      <p>Debian デスクトップ共通の FAQ です。Linux全般に関するFAQは<a href="http://www12.atwiki.jp/linux2ch/?FAQ" title="2chLinux:FAQ">2chLinux:FAQ</a>へ。-- Last updated: 2021-08-16 14:29 JST<br>
+      <h2 id="content_1_0"><a name="mozTocId574577" class="mozTocH2"></a>Debian on the Desktop</h2>
+      <p>Debian Desktop に関する共通する全般的な FAQ & Tips を集めました。-- Last updated: 2021-11-15 10:59 JST<br>
 </p>  
 <p>■Debian LTS版（長期サポート版）に関することは、<a href="LTS/index.html">Debian-LTS</a>
         のページへ。<br>
@@ -26,145 +26,101 @@
         ■Debian 3.1 (sarge) (廃止)に関することは、<a href="sarge/index.html" title="DebianLinux-FAQ/3.1-Sarge (997d)">DebianSarge-FAQ</a>
         参照。<br>
         ■Debian 3.0 (woody) (廃止)に関することは、<a href="woody/index.html" title="DebianLinux-FAQ/3.0-Woody (997d)">DebianWoody-FAQ</a>
-        参照。<br>
+        参照。
 </p>
       <div class="contents"> <br>
         <ol id="mozToc">
           <!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
-          <li><a href="#mozTocId574577">Debian Desktop</a>
-            <ol>
-              <li>
-                <ol>
-                  <li><a href="#mozTocId550582">Debian Linux (デビアン
-                      リナックス) とは何ですか?</a></li>
-                  <li><a href="#mozTocId151340">公 式ミラー/ダウンロードサイト
-                      (Downloading/Mirrors)</a></li>
-                  <li><a href="#mozTocId140623">イ ンストール用 DVD は入手可能ですか？</a></li>
+                  <li><a href="#mozTocId550582">Debian Linux (デビアンリナックス) とは何ですか?</a></li>
+                  <li><a href="#mozTocId151340">公式ミラー/ダウンロードサイト (Downloading/Mirrors)</a></li>
+                  <li><a href="#mozTocId140623">インストール用 DVD は入手可能ですか？</a></li>
                   <li><a href="#mozTocId515240">アッ プデート・インストール関係</a>
                     <ol>
-                      <li><a href="#mozTocId775729">シ
-                          ステムやパッケージの更新(アップデート)を行う（コマンドラインで操作）</a></li>
-                      <li><a href="#mozTocId138662">グ ラフィカルな自動アップデート（APT
-                          Update Watcher）[2020-01 現在廃止]</a></li>
-                      <li><a href="#mozTocId405148">グ
-                          ラフィカルなパッケージ・インストーラー（GDebi）</a></li>
-                      <li><a href="#mozTocId913238">APT
-                          でローカルに保存したファイルをインストールする</a></li>
-                      <li><a href="#mozTocId602146">利 用可能な公式パッケージを検索する</a></li>
-                      <li><a href="#mozTocId741561">公 式サイト以外から、利用可能な
-                          Debian パッケージを検索／入手する</a></li>
-                      <li><a href="#mozTocId801694">パッ ケージの古いバージョンを入手する
-                          - snashot.debian.net </a></li>
-                      <li><a href="#mozTocId13397">ツー ルを使ってミラーサイトを変更する
-                          (apt-setup)</a></li>
-                      <li><a href="#mozTocId790102">Debian のインストール用 CDを
-                          APT-line に追加するには？</a></li>
-                      <li><a href="#mozTocId910611">ロー カルに保存したファイルを
-                          APT-line に追加するには？</a></li>
-                      <li><a href="#mozTocId979727">パッ ケージのダウンロードのみ行う</a></li>
+                      <li><a href="#mozTocId775729">システムやパッケージの更新(アップデート)を行う（コマンドラインで操作）</a></li>
+                      <li><a href="#mozTocId138662">グラフィカルな自動アップデート（APT Update Watcher）[2020-01 現在廃止]</a></li>
+                      <li><a href="#mozTocId405148">グラフィカルなパッケージ・インストーラー（GDebi）</a></li>
+                      <li><a href="#mozTocId913238">APT でローカルに保存したファイルをインストールする</a></li>
+                      <li><a href="#mozTocId602146">利用可能な公式パッケージを検索する</a></li>
+                      <li><a href="#mozTocId741561">公式サイト以外から、利用可能な Debian パッケージを検索／入手する</a></li>
+                      <li><a href="#mozTocId801694">パッケージの古いバージョンを入手する - snashot.debian.net </a></li>
+                      <li><a href="#mozTocId13397">ツールを使ってミラーサイトを変更する (apt-setup)</a></li>
+                      <li><a href="#mozTocId790102">Debian のインストール用 CDを APT-line に追加するには？</a></li>
+                      <li><a href="#mozTocId910611">ロー カルに保存したファイルを APT-line に追加するには？</a></li>
+                      <li><a href="#mozTocId979727">パッケージのダウンロードのみ行う</a></li>
                       <li><a href="#mozTocId349746">APT で行われた履歴を表示する方法は？</a></li>
                     </ol>
                   </li>
-                  <li><a href="#mozTocId663590">デ スクトップ環境を簡単にインストールするには？
-                      (Tasksel)</a></li>
-                  <li><a href="#mozTocId389230">デ スクトップ環境を簡単にインストールするには？
-                      (aptitude)</a></li>
-                  <li><a href="#mozTocId769429">言 語設定（ロケール）を追加・変更するには？</a></li>
-                  <li><a href="#mozTocId123575">一 時的にテキストモード (CUI)
-                      でログインする</a></li>
-                  <li><a href="#mozTocId50855">シ ステムをシャットダウン(終了)させるには？</a></li>
-                  <li><a href="#mozTocId678583">ディ
-                      スプレイ・マネージャー（ログイン・マネージャー）について</a>
+                  <li><a href="#mozTocId663590">デスクトップ環境を簡単にインストールするには？ (Tasksel)</a></li>
+                  <li><a href="#mozTocId389230">デスクトップ環境を簡単にインストールするには？ (aptitude)</a></li>
+                  <li><a href="#mozTocId769429">言語設定（ロケール）を追加・変更するには？</a></li>
+                  <li><a href="#mozTocId123575">一時的にテキストモード (CUI) でログインする</a></li>
+                  <li><a href="#mozTocId50855">システムをシャットダウン(終了)させるには？</a></li>
+                  <li><a href="#mozTocId678583">ディスプレイ・マネージャー（ログイン・マネージャー）について</a>
                     <ol>
                       <li><a href="#mozTocId770971">gdm (GDM) スクリーンショット</a></li>
                       <li><a href="#mozTocId711446">gdm のテーマを追加するには？</a></li>
                       <li><a href="#mozTocId172372">xdm スクリーンショット</a></li>
-                      <li><a href="#mozTocId234771">ディ スプレイ・マネージャー (gdm,
-                          xdm) を交互に変更する</a></li>
-                      <li><a href="#mozTocId961204">ディ スプレイ・マネージャーで KDM
-                          を使う</a></li>
-                      <li><a href="#mozTocId380673">ロ グイン画面が日本語にならないときは？</a></li>
+                      <li><a href="#mozTocId234771">ディスプレイ・マネージャー (gdm, xdm) を交互に変更する</a></li>
+                      <li><a href="#mozTocId961204">ディスプレイ・マネージャーで KDM を使う</a></li>
+                      <li><a href="#mozTocId380673">ログイン画面が日本語にならないときは？</a></li>
                     </ol>
                   </li>
-                  <li><a href="#mozTocId600300">GNOME
-                      の日本語ユーザーガイドはありませんか?</a></li>
-                  <li><a href="#mozTocId525485">GNOME デスクトップ環境の TIPs
-                      &amp; FAQs</a>
+                  <li><a href="#mozTocId600300">GNOME の日本語ユーザーガイドはありませんか?</a></li>
+                  <li><a href="#mozTocId525485">GNOME デスクトップ環境の TIPs &amp; FAQs</a>
                     <ol>
                       <li><a href="#mozTocId422816">GNOME とは何ですか？</a></li>
-                      <li><a href="#mozTocId261436">ファ
-                          イルの操作を「シングルクリック」で済ませたい</a></li>
-                      <li><a href="#mozTocId599211">ク イック起動アイコンをタスクバー
-                          (Panel) に追加する</a></li>
-                      <li><a href="#mozTocId574453">ク イック起動アイコンの大きさを変更する</a></li>
+                      <li><a href="#mozTocId261436">ファイルの操作を「シングルクリック」で済ませたい</a></li>
+                      <li><a href="#mozTocId599211">クイック起動アイコンをタスクバー (Panel) に追加する</a></li>
+                      <li><a href="#mozTocId574453">クイック起動アイコンの大きさを変更する</a></li>
                     </ol>
                   </li>
-                  <li><a href="#mozTocId455389">K Desktop Environment
-                      (KDE) について</a>
+                  <li><a href="#mozTocId455389">K Desktop Environment (KDE) について</a>
                     <ol>
                       <li><a href="#mozTocId114015">KDE のユーザーガイドは?</a></li>
                     </ol>
                   </li>
                   <li><a href="#mozTocId653279">Xfce デスクトップ環境について</a></li>
-                  <li><a href="#mozTocId249747">Mozilla
-                      ブラウザーのメニューが日本語化されていないときは？</a></li>
+                  <li><a href="#mozTocId249747">Mozilla ブラウザーのメニューが日本語化されていないときは？</a></li>
                   <li><a href="#mozTocId321443">利 用できる無線LANカードについて</a></li>
-                  <li><a href="#mozTocId600462">コ
-                      ンピュータの時計を正確に合わせる(同期させる)</a></li>
-                  <li><a href="#mozTocId614108">イ ンクジェット・プリンター等を使って印刷する</a></li>
+                  <li><a href="#mozTocId600462">コンピュータの時計を正確に合わせる(同期させる)</a></li>
+                  <li><a href="#mozTocId614108">インクジェット・プリンター等を使って印刷する</a></li>
                   <li><a href="#mozTocId881061">RPM 形式のパッケージとの互換性がありますか。</a></li>
-                  <li><a href="#mozTocId8990">開 発環境をインストールするには？</a></li>
-                  <li><a href="#mozTocId332894">ソー スから
-                      Debパッケージを自動作成するには？(1) (CheckInstall?)</a></li>
-                  <li><a href="#mozTocId712498">ソー スから
-                      Debパッケージを自動作成するには？(2) (Debuild)</a></li>
+                  <li><a href="#mozTocId8990">開発環境をインストールするには？</a></li>
+                  <li><a href="#mozTocId332894">ソースから Debパッケージを自動作成するには？(1) (CheckInstall?)</a></li>
+                  <li><a href="#mozTocId712498">ソースから Debパッケージを自動作成するには？(2) (Debuild)</a></li>
                   <li><a href="#mozTocId374388">テ スト版(Testing)とは何ですか？</a>
                     <ol>
-                      <li><a href="#mozTocId897974">リ リース-クリティカル・バグについて</a></li>
+                      <li><a href="#mozTocId897974">リリース-クリティカル・バグについて</a></li>
                     </ol>
                   </li>
-                  <li><a href="#mozTocId521222">メー リングリストの購読方法</a></li>
+                  <li><a href="#mozTocId521222">メーリングリストの購読方法</a></li>
                   <li><a href="#mozTocId98876">Debian ドキュメント</a>
                     <ol>
-                      <li><a href="#mozTocId230134">ユー ザー向け公式マニュアル
-                          （オンライン・マニュアル）</a></li>
+                      <li><a href="#mozTocId230134">ユーザー向け公式マニュアル（オンライン・マニュアル）</a></li>
                       <li><a href="#mozTocId946956">APT HOWTO</a></li>
-                      <li><a href="#mozTocId23909">APT and Dpkg Quick
-                          Reference Sheet</a></li>
+                      <li><a href="#mozTocId23909">APT and Dpkg Quick Reference Sheet</a></li>
                     </ol>
                   </li>
-                  <li><a href="#mozTocId1734">関 連情報</a>
+                  <li><a href="#mozTocId1734">関連情報</a>
                     <ol>
-                      <li><a href="#mozTocId180745">Debian GNU/Linux
-                          搭載の市販PCについて</a></li>
+                      <li><a href="#mozTocId180745">Debian GNU/Linux 搭載の市販PCについて</a></li>
                       <li><a href="#mozTocId8085">Debian GNU/Hurd に関すること</a></li>
                     </ol>
                   </li>
-                  <li><a href="#mozTocId640097">外 部リンク（Debian 関係日本語情報）</a>
+                  <li><a href="#mozTocId640097">外部リンク（Debian 関係日本語情報）</a>
                     <ol>
                       <li><a href="#mozTocId598780">Debian 公式ウェブサイト</a></li>
-                      <li><a href="#mozTocId732102">実 際の運用に役立つサイト-
+                      <li><a href="#mozTocId732102">実際の運用に役立つサイト-
                           Debian GNU/Linux スレッドテンプレ</a></li>
-                      <li><a href="#mozTocId166971">2ch Linux板
-                          Debian/GNU Linux スレッド</a></li>
-                      <li><a href="#mozTocId456433">『Debian GNU/Linux
-                          徹底入門 第3版 〜Sarge対応』情報ページ</a></li>
-                      <li><a href="#mozTocId999659">『Debian GNU/Linux
-                          徹底入門 potato 対応』 Q&amp;Aコーナー</a></li>
-                      <li><a href="#mozTocId541705">Debian Developer
-                          K.ムトウ氏ウェブサイト</a></li>
+                      <li><a href="#mozTocId166971">2ch Linux板 Debian/GNU Linux スレッド</a></li>
+                      <li><a href="#mozTocId456433">『Debian GNU/Linux 徹底入門 第3版 〜Sarge対応』情報ページ</a></li>
+                      <li><a href="#mozTocId999659">『Debian GNU/Linux 徹底入門 potato 対応』 Q&amp;Aコーナー</a></li>
+                      <li><a href="#mozTocId541705">Debian Developer K.ムトウ氏ウェブサイト</a></li>
                     </ol>
                   </li>
-                </ol>
-              </li>
-            </ol>
-          </li>
         </ol>
         <br>
-        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        </ul>
       </div>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_1"><a name="mozTocId550582" class="mozTocH3"></a>Debian Linux (デビアン リナックス) とは何ですか?</h3>
       <p>組み込まれているソフトウェア・パッケージのすべてが、オープンソースなプロジェクトで開発され、あらゆるアーキテクチャーに対応する
         ように設計さ れた「ユニバーサル・オペレーティング・システム」が Debian です。</p>
@@ -172,7 +128,6 @@
         ディストリビューションは、再配布したり改変したりすることが自由に認められています。ここでいうフリーな(Free)ディストリビュー
         ションとは、無償 で入手でき、かつ再配布も自由なことをいいます。それが可能なのは、そうした行為を許可する GPL
         というライセンスに基づいて広く公開されているからです。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_2"><a name="mozTocId151340" class="mozTocH3"></a>公
         式ミラー/ダウンロードサイト (Downloading/Mirrors)</h3>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
@@ -186,9 +141,7 @@
         <li>注意 ダウンロードする際は、最新の修正版を入手します。<a href="%2FCdimageProblem" title="DebianLinux-FAQ/CdimageProblem (2079d)">DebianLinux-FAQ/CdimageProblem</a>
           参照。</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h3 id="content_1_3"><a name="mozTocId140623" class="mozTocH3"></a>イ
-        ンストール用 DVD は入手可能ですか？</h3>
+      <h3 id="content_1_3"><a name="mozTocId140623" class="mozTocH3"></a>インストール用 DVD は入手可能ですか？</h3>
       <p>インターネットに接続し、デビアン・インストーラー (DI)
         で作業を行うことが一般的ですが、この環境を用意するのが難しい場合には、インストール用 DVD が入手可能です。</p>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
@@ -199,10 +152,8 @@
             World 2005年9月号「Debian特集号」</a><br>
           約50ページに及ぶ解説記事と共に、インストール用 DVD-ROM が添付されています。</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_4"><a name="mozTocId515240" class="mozTocH3"></a>アッ
         プデート・インストール関係</h3>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_5"><a name="mozTocId775729" class="mozTocH4"></a>シ
         ステムやパッケージの更新(アップデート)を行う（コマンドラインで操作）</h4>
       <p>デスクトップ・メニューにある「ターミナル コンソール」より、次のコマンドを使ってアップデートが行えます。</p>
@@ -214,7 +165,6 @@
           Aptitude コマンドの詳細については、<a href="aptitude.html" title="DebianLinux-FAQ/Aptitude (2048d)">DebianLinux-FAQ/Aptitude</a>
           参照。</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_6"><a name="mozTocId138662" class="mozTocH4"></a>グ
         ラフィカルな自動アップデート（APT Update Watcher）[2020-01 現在廃止]</h4>
       <p>APT Update Watcher (apt-watch) は、Debian の安定版からは削除されました。開発版(sid)
@@ -223,12 +173,10 @@
       <p>GNOME 環境では、大変便利なアップデートツールが用意されています。<br>
         &nbsp;# apt-get install apt-watch<br>
         インストール後、このアプレットをパネルに追加してください。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_7"><a name="mozTocId405148" class="mozTocH4"></a>グ
         ラフィカルなパッケージ・インストーラー（GDebi）</h4>
       <p>グラフィカルな操作で、Debianパッケージを個別にインストールします。ローカルに保存した
         debパッケージが適切にインストールできます。詳細は<a href="gdebi.html" title="DebianLinux-FAQ/Gdebi (1460d)">こちらのメモ</a>を参照。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a><br>
         <h4><a name="mozTocId913238" class="mozTocH4"></a>APT
           でローカルに保存したファイルをインストールする</h4>
         ユーザーのカレント・ディレクトリ（ローカルフォルダ）へダウンロードしたDebパッケージを直接インストールすることが可能です。別の
@@ -257,8 +205,7 @@
         <br>
         &nbsp; ＊リモート・コンピュータ＝ネットワーク上の別のコンピュータのことです。<br>
         <br>
-        <h4 id="content_1_38"><a name="mozTocId602146" class="mozTocH3"></a>利
-          用可能な公式パッケージを検索する</h4>
+        <h4 id="content_1_38"><a name="mozTocId602146" class="mozTocH3"></a>利用可能な公式パッケージを検索する</h4>
         <a href="https://www.debian.org/distrib/packages#view">「パッケー ジ」</a>
         という日本語検索ページが用意されています。パッケージ名より直接検索が行え、ダウンロードができます。ここで扱う全てのパッケージは、
         次の区分に従いま す。<br>
@@ -271,7 +218,6 @@
           <li>Non-Free<br>
             このディレクトリにあるパッケージは、 そのソフトウェアの利用や再配布になんらかの煩わしい制限があるものです。</li>
         </ul>
-        <div class="jumpmenu"><a href="file:///home/user/webpage/linux/distributions/debian/index.html#navigator">↑</a></div>
         <h4 id="content_1_39"><a name="mozTocId741561" class="mozTocH3"></a>公
           式サイト以外から、利用可能なパッケージを検索／入手する</h4>
         <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
@@ -309,9 +255,7 @@
             backports.debian.org?"<br>
             "A: Unfortunately not."</li>
         </ul>
-        <div class="jumpmenu"><a href="file:///home/user/webpage/linux/distributions/debian/index.html#navigator">↑</a></div>
-        <h4 id="content_1_40"><a name="mozTocId801694" class="mozTocH3"></a>パッ
-          ケージの古いバージョンを入手する - snashot.debian.net<br>
+        <h4 id="content_1_40"><a name="mozTocId801694" class="mozTocH3"></a>パッケージの古いバージョンを入手する - snashot.debian.net<br>
         </h4>
         Debian
         公式サイトでは、新しいバージョンのパッケージがリリースされると、古いものは自動的に一覧から削除されます。古いバージョンが必要な場合は、次のアーカ
@@ -328,13 +272,11 @@
         サービスは、たとえばパッケージのどのバージョンで前のバージョンになかった不具合が発生したかを特定するために、より正確に言えば、不具合が修正される
         までの期間中に古いバージョンを利用するために使えます。』としています。出典：<a href="https://debian-handbook.info/browse/ja-JP/stable/apt.html#sidebar.snapshot.debian.org">https://debian-handbook.info/browse/ja-JP/stable/apt.html#sidebar.snapshot.debian.org</a><br>
       </div>
-      <h4 id="content_1_8"><a name="mozTocId13397" class="mozTocH4"></a>ツー
-        ルを使ってミラーサイトを変更する (apt-setup)</h4>
+      <h4 id="content_1_8"><a name="mozTocId13397" class="mozTocH4"></a>ツールを使ってミラーサイトを変更する (apt-setup)</h4>
       <p>他のミラーサイトへと変更するには、次のコマンドを使用します。4.0 (Etch) では、この機能は含まれていません。</p>
       <pre> # apt-setup</pre>
       <p>表示されるメッセージに従って対話式に設定を行うので、/etc/apt/sources.list
         を直接書き換える必要が無くて便利です。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_9"><a name="mozTocId790102" class="mozTocH4"></a>Debian
         のインストール用 CDを APT-line に追加するには？</h4>
       <p>次のコマンドを実行し、メッセージにしたがって操作してください。</p>
@@ -358,9 +300,7 @@
           NETINST Binary-1 20070 407-11:29]/ etch contrib main<br>
           CD-ROM をアンマウントしています ...あなたの持っている CD セットの残り全部に、こ の手順を繰り返してください。</p>
       </blockquote>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h4 id="content_1_10"><a name="mozTocId910611" class="mozTocH4"></a>ロー
-        カルに保存したファイルを APT-line に追加するには？</h4>
+      <h4 id="content_1_10"><a name="mozTocId910611" class="mozTocH4"></a>ローカルに保存したファイルを APT-line に追加するには？</h4>
       <ol class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li>Debian パッケージ用の書庫（フォルダ）を任意の場所に任意の名前で作成<br>
           例： /tem/deb あるいは /home/hoge/deb など。</li>
@@ -381,12 +321,9 @@
         <li>参照サイト：<br>
           <a href="http://lagendra.s.kanazawa-u.ac.jp/ogurisu/manuals/linux/debian-tips.html#mypackage">自
             前のpackageをaptでinstall</a><br>
-          <a href="http://debian.fam.cx/index.php?AptGet#content_1_22">ロー
-            カルにある パッケージを apt-get でインストールしたい</a></li>
+          <a href="http://debian.fam.cx/index.php?AptGet#content_1_22">ローカルにある パッケージを apt-get でインストールしたい</a></li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h4 id="content_1_11"><a name="mozTocId979727" class="mozTocH4"></a>パッ
-        ケージのダウンロードのみ行う</h4>
+      <h4 id="content_1_11"><a name="mozTocId979727" class="mozTocH4"></a>パッケージのダウンロードのみ行う</h4>
       <p>パッケージのダウンロードだけを行う便利なコマンドがあります（以下実行例）。</p>
       <pre> # apt-get install flashplayer-mozilla -d</pre>
       <blockquote>
@@ -417,29 +354,22 @@
       す。<br>
       &nbsp;＊参考になるサイト： <a href="https://www.laddy.info/2019/06/29352/">https://www.laddy.info/2019/06/29352/</a><br>
       <br>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h3 id="content_1_12"><a name="mozTocId663590" class="mozTocH3"></a>デ
-        スクトップ環境を簡単にインストールするには？ (Tasksel)</h3>
+      <h3 id="content_1_12"><a name="mozTocId663590" class="mozTocH3"></a>デスクトップ環境を簡単にインストールするには？ (Tasksel)</h3>
       <p>最も一般的な方法は、インストール時に自動的に表示される tasksel
         という項目の中で「デスクトップ環境」を選択することです。GNOME、KDE、Xfce
         あるいは印刷サーバやデータベースなど、それぞれに必要なパッケージ一式をまとめてインストールしてくれます。</p>
       <p>インストール時に Tasksel
         の項目を選択しなかった場合でも、インストール後、次のコマンドで追加インストールが実行できます。詳しくは<a href="http://f40.aaa.livedoor.jp/%7Egreen/?DebianTasks" title="DebianTasks (1021d)">DebianTasks</a>を見てください。</p>
       <pre> # tasksel</pre>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h3 id="content_1_13"><a name="mozTocId389230" class="mozTocH3"></a>デ
-        スクトップ環境を簡単にインストールするには？ (aptitude)</h3>
+      <h3 id="content_1_13"><a name="mozTocId389230" class="mozTocH3"></a>デスクトップ環境を簡単にインストールするには？ (aptitude)</h3>
       <p>テキストベースのインターフェース aptitude でも、Tasksel
         と同じように、それぞれの関連パッケージを一括インストールする機能があります。</p>
       <pre> # aptitude</pre>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li><a href="http://dolphin.c.u-tokyo.ac.jp/%7Enori1/aptitude-ja/">aptitude ユーザマニュアル</a></li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h3 id="content_1_14"><a name="mozTocId769429" class="mozTocH3"></a>言
-        語設定（ロケール）を追加・変更するには？</h3>
+      <h3 id="content_1_14"><a name="mozTocId769429" class="mozTocH3"></a>言語設定（ロケール）を追加・変更するには？</h3>
       <p><a href="%2F3.1-Sarge#content_1_29" title="DebianLinux-FAQ/3.1-Sarge (997d)">関連項目</a> を参照してください。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_15"><a name="mozTocId123575" class="mozTocH3"></a>一
         時的にテキストモード (CUI) でログインする</h3>
       <p>普段グラフィカルログインで利用していて、一時的にテキストモードに切替えたいという場合は結構あり得ます。runlevel
@@ -457,60 +387,48 @@
         の場合も、Ctrl + Alt + F1〜F6
         キーでテキストモードに切り替わります。ただし、バックグランドでは既にディスプレイマネージャが起動しているようなので、startx
         コマンドは使えません。グラフィカルログインに切替える場合は、必ず Ctrl + Alt + F7 キーで元に戻る必要があります。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h3 id="content_1_16"><a name="mozTocId50855" class="mozTocH3"></a>シ
-        ステムをシャットダウン(終了)させるには？</h3>
+      <h3 id="content_1_16"><a name="mozTocId50855" class="mozTocH3"></a>システムをシャットダウン(終了)させるには？</h3>
       <p>ユーザーはグラフィカルログイン時、直接シャットダウンさせることはできません。<br>
         <br>
-        Debian では Fedora や Red Hat Linux の場合と勝手が違って、グラフィカルログイン時(例えば
-        GNOME
+        Debian では Fedora や Red Hat Linux の場合と勝手が違って、グラフィカルログイン時(例えばGNOME
         環境での運用時)には、ユーザーが直接シャットダウンできない仕組みを採用しています。これはセキュリティ確保のためと考えられます。</p>
       <p>具体的には、一度ログオフし、ディスプレイマネージャー (xdm: X Display Manager) から今度は root
         ログインした後で「シャットダウン」の項目が選択できるようになります。<br>
         ただし、ディスプレイマネージャーに gdm (GNOME Display Mamnager) を使用した場合には、ログイン画面で
         root 権限のシャットダウンが可能となるので、この方が実際便利でしょう。「GNOME デスクトップマネージャ」のメニューから
         アクション ＞ 停止 の項目を選択してシャットダウンさせます。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h3 id="content_1_17"><a name="mozTocId678583" class="mozTocH3"></a>ディ
-        スプレイ・マネージャー（ログイン・マネージャー）について</h3>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3 id="content_1_17"><a name="mozTocId678583" class="mozTocH3"></a>ディスプレイ・マネージャー（ログイン・マネージャー）について</h3>
       <h4 id="content_1_18"><a name="mozTocId770971" class="mozTocH4"></a>gdm (GDM) スクリーンショット</h4>
       <p><a href="http://www.gnome.org/projects/gdm/">gdm (GNOME Display
           Manager)</a>は、Debian
         の標準的なログイン・マネージャーです。gdmはその設定・変更が容易に行えるという特徴があります。<br>
-        <img src="../../../../images/debian/Screenshot-gdm_ja.jpg" alt="Screenshot-gdm_ja.jpg" title="Screenshot-gdm_ja.jpg" width="480" height="345" border="0"></p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+        <img src="../../../images/debian/Screenshot-gdm_ja.jpg" alt="Screenshot-gdm_ja.jpg" title="Screenshot-gdm_ja.jpg" width="480" height="345" border="0"></p>
       <h4 id="content_1_19"><a name="mozTocId711446" class="mozTocH4"></a>gdm のテーマを追加するには？</h4>
       <p>gdm-themes という Debパッケージをインストールします。</p>
       <pre> #apt-get install gdm-themes</pre>
       <p>ログイン画面の設定変更は、デスクトップ ＞ システム管理 ＞ ログイン画面 より行えます。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_20"><a name="mozTocId172372" class="mozTocH4"></a>xdm スクリーンショット</h4>
       <p><a href="http://en.wikipedia.org/wiki/Xdm">xdm (XDM: X Window
           Display Manager)</a>は、軽快に動作する、シンプルなディスプレイ・マネージャーです。</p>
       <pre> # apt-get install xdm</pre>
-      <p><img src="../../../../images/debian/Screenshot-xdm.jpg" alt="Screenshot-xdm.jpg" title="Screenshot-xdm.jpg" width="480" height="222" border="0"></p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <p><img src="../../../images/debian/Screenshot-xdm.jpg" alt="Screenshot-xdm.jpg" title="Screenshot-xdm.jpg" width="480" height="222" border="0"></p>
       <h4 id="content_1_21"><a name="mozTocId234771" class="mozTocH4"></a>ディ
         スプレイ・マネージャー (gdm, xdm) を交互に変更する</h4>
       <p>次のいづれかのコマンドを実行すれば、デフォルトのディスプレイマネージャーを交互に変更可能です。</p>
       <pre> # dpkg-reconfigure gdm</pre>
       <p>あるいは</p>
       <pre> # dpkg-reconfigure xdm</pre>
-      <p><img src="../../../../images/debian/Screenshot-xdm_configure.jpg" alt="Screenshot-xdm_configure.jpg" title="Screenshot-xdm_configure.jpg" width="480" height="334" border="0"></p>
-      <p><img src="../../../../images/debian/Screenshot-xdm_configure-1.jpg" alt="Screenshot-xdm_configure-1.jpg" title="Screenshot-xdm_configure-1.jpg" width="480" height="305" border="0"></p>
+      <p><img src="../../../images/debian/Screenshot-xdm_configure.jpg" alt="Screenshot-xdm_configure.jpg" title="Screenshot-xdm_configure.jpg" width="480" height="334" border="0"></p>
+      <p><img src="../../../images/debian/Screenshot-xdm_configure-1.jpg" alt="Screenshot-xdm_configure-1.jpg" title="Screenshot-xdm_configure-1.jpg" width="480" height="305" border="0"></p>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li>単に xdm を削除しシステムを再起動させても、元の gdm に戻すことができます。
           <pre> # apt-get remove xdm</pre>
         </li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h4 id="content_1_22"><a name="mozTocId961204" class="mozTocH4"></a>ディ
-        スプレイ・マネージャーで KDM を使う</h4>
+      <h4 id="content_1_22"><a name="mozTocId961204" class="mozTocH4"></a>ディスプレイ・マネージャーで KDM を使う</h4>
       <p>K デスクトップ環境では、 <a href="http://docs.kde.org/development/en/kdebase/kdm/">KDM</a>
         を使うことを推奨します。</p>
       <pre> # apt-get install kdm</pre>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_23"><a name="mozTocId380673" class="mozTocH4"></a>ロ
         グイン画面が日本語にならないときは？</h4>
       <p>4.0 Etch
@@ -524,19 +442,15 @@
         <li>3.1 Sarge
           の場合は言語設定の挙動が異なり、標準の言語で「なし」を選択していてもログイン画面は、通常日本語で表示されます。</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_24"><a name="mozTocId600300" class="mozTocH3"></a>GNOME の日本語ユーザーガイドはありませんか?</h3>
       <p><a href="http://www.gnome.gr.jp/docs/gnome-users-guide/index.html">GNOME 1.4 ユーザガイド(日本語訳)</a> が日本 GNOME
         ユーザー会のサイトにあります。解説の対象となっているバージョンが古いですが、基本的な操作を理解するには十分参考になります。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_25"><a name="mozTocId525485" class="mozTocH3"></a>GNOME デスクトップ環境の TIPs &amp; FAQs</h3>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_26"><a name="mozTocId422816" class="mozTocH4"></a>GNOME とは何ですか？</h4>
       <p>GNOME とは正式には GNU Network Object Model Environment と呼ばれ、X Window
         System
         においてウインドゥマネージャーと共に利用され、ユーザーの使い勝手を向上させてくれる一連のアプリケーションやデスクトップ・ツールの
         ことを指していま す。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_27"><a name="mozTocId261436" class="mozTocH4"></a>ファ
         イルの操作を「シングルクリック」で済ませたい</h4>
       <p>Windows 標準では、アイコンの「ダブルクリック」でファイルが開きます。一方、Linux の場合、GNOME
@@ -544,28 +458,22 @@
       <p>GNOME 環境でシングルクリックへと設定変更するには、デスクトップの「ここからスタート」または「ホームのアイコン」 ＞
         デスクトップの設定 ＞ ファイル管理 ＞ 「動作」タブ ＞ 「シングル・クリックでアイテムを起動する」
         にチェックを入れてください。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_28"><a name="mozTocId599211" class="mozTocH4"></a>ク
         イック起動アイコンをタスクバー (Panel) に追加する</h4>
       <p>タスクバー上でマウスの右ボタンをクリックします。追加できるメニューが表示されるので、任意のアプリケーションを選択します。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_29"><a name="mozTocId574453" class="mozTocH4"></a>ク
         イック起動アイコンの大きさを変更する</h4>
       <p>タスクバー上でマウスの右ボタンをクリックし、プロパティから
         サイズの項目で設定を変更します。初期設定では、サイズが24ピクセルになっています。この数字を36くらいにすると Red Hat
         9、Fedora Core Linux で採用されている GNOME とほぼ同じ見栄えになるでしょう。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_30"><a name="mozTocId455389" class="mozTocH3"></a>K
         Desktop Environment (KDE) について</h3>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_31"><a name="mozTocId114015" class="mozTocH4"></a>KDE のユーザーガイドは?</h4>
       <p>公式な日本語版が見当たらないようなので、どうしてもという方は英語版の <a href="http://www.kde.org/documentation/userguide/index.html">Users'
           Guide</a> を読んでください。もっとも、KDE の日本語ヘルプには操作方法があります。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_32"><a name="mozTocId653279" class="mozTocH3"></a>Xfce デスクトップ環境について</h3>
       <p>Xfce デスクトップ環境での利用については、<a href="../../de/xfce.html" title="SoftWares/XfceDesktop (1314d)">Desktop/XfceDesktop</a>
         に詳しい説明があります。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_33"><a name="mozTocId249747" class="mozTocH3"></a>Mozilla
         ブラウザーのメニューが日本語化されていないときは？</h3>
       <p>コマンドライン（端末）から、mozilla-locale-ja を追加インストールします。</p>
@@ -575,14 +483,12 @@
           Edit &gt; Preferences &gt; Appearance &gt; Languages/Content
           から Japanese(Japan) を選択します。ブラウザーを再起動させれば、日本語表示に切り替わります。</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_34"><a name="mozTocId321443" class="mozTocH3"></a>利
         用できる無線LANカードについて</h3>
       <p><a href="http://kmuto.jp/open.cgi?%cc%b5%c0%feLAN%c6%b0%ba%ee%be%f5%b6%b7&amp;l=jp">無
           線LAN動作状況</a> というページ(外部リンク)があります。</p>
       <p>BUFFALO (メルコ) WLI-PCM-L11GP
         については、当方でも自動認識され問題なく利用できることを確認しています。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_35"><a name="mozTocId600462" class="mozTocH3"></a>コ
         ンピュータの時計を正確に合わせる(同期させる)</h3>
       <p>コンピュータ内蔵の時計はかなり不正確ですが、インターネット上のタイムサーバーと同期させると非常に正確になります。ntp
@@ -620,7 +526,6 @@
         NTP server
         が起動すれば、デスクトップのパネルにある時計アイコンをマウスで右クリックし、「日付と時刻の調整」から時刻をネットワークサーバーと
         同期できます。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_36"><a name="mozTocId614108" class="mozTocH3"></a>イ
         ンクジェット・プリンター等を使って印刷する</h3>
       <p>必要な印刷関連のパッケージをインストールします。インストールの方法は複数あります。</p>
@@ -678,7 +583,6 @@
         を起動させて設定する方法などもあります。</p>
       <p>Mozilla ブラウザーで印刷した時の日本語の文字化け□□□を防ぐためには、さらに次のパッケージを追加します。</p>
       <pre> cmap-adobe-japan1 gs-cjk-resource psfontmgr<br> (※cmap-adobe-japan1 gs-cjk-resource は non-free にあります。)</pre>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_37"><a name="mozTocId881061" class="mozTocH3"></a>RPM 形式のパッケージとの互換性がありますか。</h3>
       <p>alien というパッケージを使えば、RPM、Deb さらに Tar ３種類間の相互変換が可能です。</p>
       <p>Debian で運用する場合には、alien は、LSB, Red Hat, Stampede, Slackware
@@ -689,7 +593,6 @@
         <li><a href="http://packages.debian.org/stable/admin/alien">alien
             (8.52)</a> -"install non-native packages with dpkg"</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_41"><a name="mozTocId8990" class="mozTocH3"></a>開
         発環境をインストールするには？</h3>
       <p>上記で紹介したインストール手順では、開発環境を含んでいません。したがって、ソースからビルド（＝コンパイル）することができませ
@@ -703,13 +606,11 @@
         は、その環境内で起動中のプログラムのファイルアクセスを監視し、プログラムが、インストールしていないパッケージに属することが知られ
         ているファイルに アクセスしようとしている場合、auto-apt はそのパッケージを apt-get
         によりインストールします。」- <a href="http://packages.debian.org/etch/auto-apt">http://packages.debian.org/etch/auto-apt</a></p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_42"><a name="mozTocId332894" class="mozTocH3"></a>ソー
         スから Debパッケージを自動作成するには？(1) (<span class="noexists">CheckInstall<a href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=CheckInstall&amp;refer=DebianLinux-FAQ">?</a></span>)</h3>
       <p>以下は、hoge-1.2.3.tar.gz というソース・パッケージから
         .deb形式のバイナリー・パッケージを作成する手順です。</p>
       <pre> # apt-get install checkinstall<br> $ tar xvfz hoge-1.2.3.tar.gz<br> $ cd hoge-1.2.3<br> $ ./configure<br> $ make<br> # checkinstall</pre>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_43"><a name="mozTocId712498" class="mozTocH3"></a>ソー
         スから Debパッケージを自動作成するには？(2) (Debuild)</h3>
       <p>以下は、hoge-1.2.3.tar.gz というソース・パッケージから
@@ -727,7 +628,6 @@
         <li><a href="http://d.hatena.ne.jp/gunshot/20051010">間違いだらけの備忘録
             [debian]debuildとdpkg-buildpackageの違い</a></li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_44"><a name="mozTocId374388" class="mozTocH3"></a>テ
         スト版(Testing)とは何ですか？</h3>
       <p>次期リリース候補としてテスト中の段階にある Debian
@@ -738,7 +638,6 @@
         アップグレードが頻繁にリリースされる関係で、ある日突然不具合が生じソフトウェアが正常に起動しなくなるということも珍しくありませ
         ん。</p>
       <p>セキュリティ・アップデートについては、安定版のような迅速な対応を受けることができない点にも注意してください。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_45"><a name="mozTocId897974" class="mozTocH4"></a>リ
         リース-クリティカル・バグについて</h4>
       <p>リリース-クリティカル・バグ (Release-Critical bugs)
@@ -750,7 +649,6 @@
         <li><a href="http://bugs.debian.org/release-critical/">http://bugs.debian.org/release-critical/</a></li>
         <li><a href="http://bts.turmzimmer.net/">http://bts.turmzimmer.net/</a></li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_46"><a name="mozTocId521222" class="mozTocH3"></a>メー
         リングリストの購読方法</h3>
       <p>次のウェブサイトから、購読の申し込みができます：<br>
@@ -765,15 +663,12 @@
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li><a href="http://lists.debian.org/debian-japanese/">http://lists.debian.org/debian-japanese/</a></li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_47"><a name="mozTocId98876" class="mozTocH3"></a>Debian ドキュメント</h3>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_48"><a name="mozTocId230134" class="mozTocH4"></a>ユー
         ザー向け公式マニュアル （オンライン・マニュアル）</h4>
       <p>次のマニュアルが用意されているので、活用してください。</p>
       <pre>    * Debian GNU/Linux FAQ<br>    * Debian インストールマニュアル<br>    * Debian リリースノート<br>    * Debian リファレンス<br>    * APT-HOWTO<br>    * 初心者むけの dselect 文書<br>    * ユーザーズガイド (Progeny から)<br>    * Debian Linux ユーザーズガイド<br>    * Debian GNU/Linux におけるユーロのサポート<br>    * Debian GNU/Linux and Java FAQ<br>    * Debian セキュリティマニュアル<br>    * Linux クックブック</pre>
       <p>　これらのマニュアルは、こちらから入手できます：<a href="http://www.debian.org/doc/">http://www.debian.org/doc/</a></p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_49"><a name="mozTocId946956" class="mozTocH4"></a>APT HOWTO</h4>
       <p>APT コマンド全般の詳細な解説。（本文は日本語）<br>
         apt-howto のインストール方法と閲覧</p>
@@ -794,7 +689,6 @@
         <li>Gustavo Noronha Silva &lt;<a href="mailto:kov@debian.org">kov@debian.org</a>&gt;,
           Wed Jul 2 18:39:10 2003</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_50"><a name="mozTocId23909" class="mozTocH4"></a>APT
         and Dpkg Quick Reference Sheet</h4>
       <p><a href="http://f40.aaa.livedoor.jp/%7Egreen/?APTandDpkgQuickReferenceSheet" title="APTandDpkgQuickReferenceSheet (2058d)">APT
@@ -802,10 +696,8 @@
       <pre> # apt-get install apt-dpkg-ref</pre>
       <p>インストール後、file:///usr/share/doc/apt-dpkg-ref/apt-dpkg-ref.html
         をブラウザで開く。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_51"><a name="mozTocId1734" class="mozTocH3"></a>関
         連情報</h3>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_52"><a name="mozTocId180745" class="mozTocH4"></a>Debian
         GNU/Linux 搭載の市販PCについて</h4>
       <p><a href="http://desktop.good-day.net/">http://desktop.good-day.net/</a>
@@ -817,7 +709,6 @@
             デイ、オープンソー スのデスクトップサイトを開設</a> (<span class="noexists">LinuxToday<a href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=LinuxToday&amp;refer=DebianLinux-FAQ">?</a></span>
           2004年9月22日)</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_53"><a name="mozTocId8085" class="mozTocH4"></a>Debian
         GNU/Hurd に関すること</h4>
       <p>debian プロジェクトでは現在、「Debian Hurd」の実現に向けて取組みが行われています。今の Linux
@@ -834,42 +725,33 @@
         (Debian)によって形づくられ、守られているfree
         softwareの主義を忠実に守るものです。HurdはLinuxカーネルと置き換わるでしょう。また、GNU/Hurdオペレーティ
         ングシステムは GNU/Linuxを構成しているGNU toolを利用することができるでしょう。」(上記サイトより一部引用)</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_54"><a name="mozTocId640097" class="mozTocH3"></a>外
         部リンク（Debian 関係日本語情報）</h3>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_55"><a name="mozTocId598780" class="mozTocH4"></a>Debian 公式ウェブサイト</h4>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li><a href="http://www.debian.org/">http://www.debian.org/</a></li>
         <li><a href="http://wiki.debian.org/">http://wiki.debian.org/</a>
           (Wiki)</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_56"><a name="mozTocId732102" class="mozTocH4"></a>実
         際の運用に役立つサイト- Debian GNU/Linux スレッドテンプレ</h4>
       <p><a href="http://debian.fam.cx/">Debian GNU/Linux スレッドテンプレ</a>
-        が大変役立ちます。</p>
+        が大変役立ちます。リンク切れの場合は <a href="https://web.archive.org/web/20170316025043/http://debian.fam.cx/">ウェブアーカイブ</a>からも利用できます。</p>
       <h4><a name="mozTocId166971" class="mozTocH4"></a>2ch Linux板
         Debian/GNU Linux スレッド</h4>
       <p>最新スレッドは、<a href="http://hibari.2ch.net/linux/">2ch Linux板</a>から
         検索してくだ さい。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_57"><a name="mozTocId456433" class="mozTocH4"></a>『Debian
         GNU/Linux 徹底入門 第3版 〜Sarge対応』情報ページ</h4>
       <p><a href="http://kmuto.jp/debian/debian_sarge/">http://kmuto.jp/debian/debian_sarge/</a>
         参照。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_58"><a name="mozTocId999659" class="mozTocH4"></a><a href="http://www.topstudio.co.jp/%7Ekmuto/debian/qa/">『Debian
           GNU/Linux 徹底入門 potato 対応』 Q&amp;Aコーナー</a></h4>
       <p>書籍「Debian GNU/Linux 徹底入門」 で紹介している Debian
         に関するよくある質問と回答がデータベースにまとめられていて、オンラインで利用できます。検索も可能です。</p>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h4 id="content_1_59"><a name="mozTocId541705" class="mozTocH4"></a>Debian
         Developer K.ムトウ氏ウェブサイト</h4>
       <p><a href="http://kmuto.jp/">http://kmuto.jp/</a><br>
       </p>
       <hr size="2" width="100%"><a href="../../../index.html">HOME</a>
-      <p><br>
-      </p>
-    </div>
 </body></html>
