@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>Linux games - Linux on the Desktop</title>
+  </head>
+  <body>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td valign="top"> <a href="../index.html">HOME</a><br></td>
+          <td valign="middle" align="right">Last updated: 2021-11-19 09:31 JST<br></td>
+        </tr>
+      </tbody>
+</table>
+      <hr width="100%" size="2">
+      <h2 id="content_1_0"><a name="mozTocId150268"></a>Linux で楽しめるゲーム集</h2>
+<ol>
+<li><a href="#mozTocId671">気軽に楽しめる人気ゲーム</a>
+<ol>
+<li><a href="#mozTocId568910">sgt-puzzles</a></li>
+<li><a href="#mozTocId141605">Frozen Bubble</a></li>
+<li><a href="#mozTocId88891">Super Tux</a>
+<ol>
+<li><a href="#mozTocId405095">起動時、言語の自動判別 (auto-detect) に失敗します</a></li>
+</ol>
+</li>
+<li><a href="#mozTocId853256">Super TuxKart</a></li>
+<li><a href="#mozTocId290926">Extreme Tux Racer (etracer)</a></li>
+<li><a href="#mozTocId705329">Tux Typing</a></li>
+<li><a href="#mozTocId168472">Kinoa Shogi (きのあ将棋): Japanese Chess</a></li>
+<li><a href="#mozTocId122662">Komao (こまお): Japanese Chess</a></li>
+</ol>
+</li>
+<li><a href="#mozTocId236088">Beneath A Steel Sky - アドベンチャー・ゲーム</a></li>
+<li><a href="#mozTocId688138">LinCity - 都市建設シミュレーション・ゲーム</a></li>
+<li><a href="#mozTocId736262"> OpenTTD - 経営シミュレーションゲーム</a>
+<ol>
+<li><a href="#mozTocId69895">OpenTTD の基本的なこと</a></li>
+<li><a href="#mozTocId64185">インストール方法 (Debian 10)</a></li>
+<li><a href="#mozTocId185779">OpenTTD 1.8.0 の初期設定（例）について</a></li>
+<li><a href="#mozTocId560658">日本語フォントを変更するには？</a></li>
+</ol>
+</li>
+<li><a href="#mozTocId704673">Simutrans - 鉄道経営シミュレーション・ゲーム</a>
+<ol>
+<li><a href="#mozTocId494190">Simutrans の基本的なこと</a></li>
+<li><a href="#mozTocId906319">インストール方法 (Debian 10)</a></li>
+<li><a href="#mozTocId960212">PAK セットをインストール（追加）する方法</a></li>
+<li><a href="#mozTocId306672">複数のパックセット (graphic set) をインストールしたとき</a></li>
+<li><a href="#mozTocId978703"> 起動時に PAKセットの選択画面を表示させない方法</a></li>
+<li><a href="#mozTocId734275"> pak128.japan (version 120.0 5.8MB, 2015/01/04) の不具合と解決法 (2019.11.21)</a></li>
+<li><a href="#mozTocId105079">駅名や都市名、乗り物の名前を変更する方法</a></li>
+<li><a href="#mozTocId561905">Simutrans 公式サイトでも見つかりにくいような Tips</a></li>
+</ol>
+</li>
+<li><a href="#mozTocId779792">Vega Strike - 宇宙飛行シミュレーター</a></li>
+<li><a href="#mozTocId48350">将棋ソフト「デーモン将棋」(Daemonshogi)</a></li>
+<li><a href="#mozTocId840056">XShogi (Linux向けで古くからある将棋ゲーム)</a></li>
+<li><a href="#mozTocId469496">KNOPPIX DVD 版収録のゲーム</a></li>
+<li><a href="#mozTocId760513">Linux で動作するゲームのリスト</a></li>
+<li><a href="#mozTocId387371">ゲーム関連のリンク</a></li>
+</ol>
+<br>
+      <h3><a name="mozTocId671"></a>気軽に楽しめる人気ゲーム</h3>
+<h4><a name="mozTocId568910"></a>sgt-puzzles</h4>
+1 人で遊べるシンプルなパズルゲーム集です。正式名を「Simon Tatham's Portable Puzzle Collection」といいます。<br>
+各ディストリビューションより sgt-puzzles という名前で配布されているバイナリパッケージをインストールします。インストールせずに直接ブラウザ上でプレイすることも可能で、その場合のアクセス先は <a href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/">https://www.chiark.greenend.org.uk/~sgtatham/puzzles/</a> です。<br>
+<br>      
+<h4><a name="mozTocId141605"></a>Frozen Bubble</h4>
+
+      Puzzle Bobble を真似たフリーなパズルゲーム。<br>
+      参考までに、Debian 10 では次のようにしてインストールします。<br>
+      <br>
+      # apt install frozen-bubble<br>
+      パッケージリストを読み込んでいます... 完了<br>
+      依存関係ツリーを作成しています <br>
+      状態情報を読み取っています... 完了<br>
+      以下の追加パッケージがインストールされます:<br>
+      &nbsp; frozen-bubble-data libalien-sdl-perl libcapture-tiny-perl<br>
+      &nbsp; libclass-inspector-perl libcompress-bzip2-perl
+      libfile-sharedir-perl<br>
+      &nbsp; libfile-which-perl libmad0 libmikmod3 libsdl-gfx1.2-5
+      libsdl-image1.2<br>
+      &nbsp; libsdl-mixer1.2 libsdl-pango1 libsdl-perl libsdl-ttf2.0-0
+      libsdl2-2.0-0<br>
+      &nbsp; libtie-simple-perl timgm6mb-soundfont<br>
+      提案パッケージ:<br>
+      &nbsp; fonts-freefont-ttf fluid-soundfont-gm fluidsynth timidity
+      musescore<br>
+      以下のパッケージが新たにインストールされます:<br>
+      &nbsp; frozen-bubble frozen-bubble-data libalien-sdl-perl
+      libcapture-tiny-perl<br>
+      &nbsp; libclass-inspector-perl libcompress-bzip2-perl
+      libfile-sharedir-perl<br>
+      &nbsp; libfile-which-perl libmad0 libmikmod3 libsdl-gfx1.2-5
+      libsdl-image1.2<br>
+      &nbsp; libsdl-mixer1.2 libsdl-pango1 libsdl-perl libsdl-ttf2.0-0
+      libsdl2-2.0-0<br>
+      &nbsp; libtie-simple-perl timgm6mb-soundfont<br>
+      アップグレード: 0 個、新規インストール: 19 個、削除: 0 個、保留: 0 個。<br>
+      29.1 MB のアーカイブを取得する必要があります。<br>
+      この操作後に追加で 37.3 MB のディスク容量が消費されます。<br>
+      続行しますか? [Y/n]<br>
+      <br>
+      <h4><a name="mozTocId88891" class="mozTocH5"></a>Super Tux</h4>
+      スーパーマリオブラザース風のゲーム。ペンギンの Tux が主人公。<br>
+      同じく、Debian 10 では、次のようにしてインストールします。<br>
+      <br>
+      # apt install supertux<br>
+      パッケージリストを読み込んでいます... 完了<br>
+      依存関係ツリーを作成しています <br>
+      状態情報を読み取っています... 完了<br>
+      以下の追加パッケージがインストールされます:<br>
+      &nbsp; libraqm0 libsdl2-2.0-0 libsdl2-image-2.0-0 supertux-data<br>
+      以下のパッケージが新たにインストールされます:<br>
+      &nbsp; libraqm0 libsdl2-2.0-0 libsdl2-image-2.0-0 supertux
+      supertux-data<br>
+      アップグレード: 0 個、新規インストール: 5 個、削除: 0 個、保留: 0 個。<br>
+      115 MB のアーカイブを取得する必要があります。<br>
+      この操作後に追加で 177 MB のディスク容量が消費されます。<br>
+      続行しますか? [Y/n]<br>
+      <br>
+      <h5><a name="mozTocId405095" class="mozTocH4"></a>起動時、言語の自動判別
+        (auto-detect) に失敗します<br>
+      </h5>
+      Debian 10 で発生した事象です
+      (2019-10-15)。プログラムの不具合で、言語の自動判別に失敗します。この結果、正しく言語設定されず、文字化けが発生して判読不能に陥りま
+      す。デフォルトの自動判別の設定を止め、特定の言語を選択することで回避可能です。具体的には、最初のメニューの３つ目の ?? が設定
+      (Options) の項目なのでこれを選択し、次画面でメニュートップを選択、その後現れる一覧から Japanese
+      を選択することで、すべて日本語に変換できます。<br>
+      <br>
+      <h4><a name="mozTocId853256" class="mozTocH5"></a>Super TuxKart</h4>
+      マリオカートシリーズに似せたレースゲーム。<br>
+      <br>
+      # apt install supertuxkart<br>
+      パッケージリストを読み込んでいます... 完了<br>
+      依存関係ツリーを作成していま す <br>
+      状態情報を読み取っています... 完了<br>
+      以下の追加パッケージがインストールされます:<br>
+      &nbsp; fonts-freefont-ttf fonts-noto-hinted libenet7
+      supertuxkart-data<br>
+      以下のパッケージが新たにインストールされます:<br>
+      &nbsp; fonts-freefont-ttf fonts-noto-hinted libenet7 supertuxkart
+      supertuxkart-data<br>
+      アップグレード: 0 個、新規インストール: 5 個、削除: 0 個、保留: 0 個。<br>
+      522 MB のアーカイブを取得する必要があります。<br>
+      この操作後に追加で 598 MB のディスク容量が消費されます。<br>
+      続行しますか? [Y/n]<br>
+      <br>
+      <h4><a name="mozTocId290926" class="mozTocH4"></a>Extreme Tux
+        Racer (etracer)</h4>
+      有名な Tux Racer のフォーク。3D レーシングゲーム。<br>
+      <br>
+      # apt install extremetuxracer<br>
+      パッケージリストを読み込んでいます... 完了<br>
+      依存関係ツリーを作成していま す <br>
+      状態情報を読み取っています... 完了<br>
+      以下の追加パッケージがインストールされます:<br>
+      &nbsp; extremetuxracer-data libsfml-audio2.5 libsfml-graphics2.5
+      libsfml-system2.5<br>
+      &nbsp; libsfml-window2.5<br>
+      以下のパッケージが新たにインストールされます:<br>
+      &nbsp; extremetuxracer extremetuxracer-data libsfml-audio2.5
+      libsfml-graphics2.5<br>
+      &nbsp; libsfml-system2.5 libsfml-window2.5<br>
+      アップグレード: 0 個、新規インストール: 6 個、削除: 0 個、保留: 0 個。<br>
+      44.5 MB のアーカイブを取得する必要があります。<br>
+      この操作後に追加で 49.1 MB のディスク容量が消費されます。<br>
+      続行しますか? [Y/n]<br>
+      <br>
+      <h4><a name="mozTocId705329" class="mozTocH4"></a>Tux Typing</h4>
+      Tux が主人公のタイピング練習用ゲーム。<br>
+      <br>
+      # apt install tuxtype<br>
+      パッケージリストを読み込んでいます... 完了<br>
+      依存関係ツリーを作成していま す <br>
+      状態情報を読み取っています... 完了<br>
+      以下の追加パッケージがインストールされます:<br>
+      &nbsp; fonts-beng fonts-beng-extra fonts-deva fonts-deva-extra
+      fonts-gargi<br>
+      &nbsp; fonts-gubbi fonts-gujr fonts-gujr-extra fonts-guru
+      fonts-guru-extra<br>
+      &nbsp; fonts-kalapi fonts-knda fonts-lohit-beng-assamese
+      fonts-lohit-beng-bengali<br>
+      &nbsp; fonts-lohit-deva fonts-lohit-gujr fonts-lohit-guru
+      fonts-lohit-knda<br>
+      &nbsp; fonts-lohit-orya fonts-lohit-taml
+      fonts-lohit-taml-classical<br>
+      &nbsp; fonts-lohit-telu fonts-nakula fonts-navilu fonts-orya
+      fonts-orya-extra<br>
+      &nbsp; fonts-sahadeva fonts-samyak-deva fonts-samyak-gujr
+      fonts-samyak-taml<br>
+      &nbsp; fonts-sarai fonts-sil-andika fonts-sil-doulos fonts-taml
+      fonts-telu<br>
+      &nbsp; fonts-telu-extra fonts-yrsa-rasa libmad0 libmikmod3
+      libsdl-image1.2<br>
+      &nbsp; libsdl-mixer1.2 libsdl-net1.2 libsdl-pango1 libsdl2-2.0-0
+      libt4k-common0<br>
+      &nbsp; timgm6mb-soundfont tuxtype-data<br>
+      提案パッケージ:<br>
+      &nbsp; fluid-soundfont-gm fluidsynth timidity musescore<br>
+      以下のパッケージが新たにインストールされます:<br>
+      &nbsp; fonts-beng fonts-beng-extra fonts-deva fonts-deva-extra
+      fonts-gargi<br>
+      &nbsp; fonts-gubbi fonts-gujr fonts-gujr-extra fonts-guru
+      fonts-guru-extra<br>
+      &nbsp; fonts-kalapi fonts-knda fonts-lohit-beng-assamese
+      fonts-lohit-beng-bengali<br>
+      &nbsp; fonts-lohit-deva fonts-lohit-gujr fonts-lohit-guru
+      fonts-lohit-knda<br>
+      &nbsp; fonts-lohit-orya fonts-lohit-taml
+      fonts-lohit-taml-classical<br>
+      &nbsp; fonts-lohit-telu fonts-nakula fonts-navilu fonts-orya
+      fonts-orya-extra<br>
+      &nbsp; fonts-sahadeva fonts-samyak-deva fonts-samyak-gujr
+      fonts-samyak-taml<br>
+      &nbsp; fonts-sarai fonts-sil-andika fonts-sil-doulos fonts-taml
+      fonts-telu<br>
+      &nbsp; fonts-telu-extra fonts-yrsa-rasa libmad0 libmikmod3
+      libsdl-image1.2<br>
+      &nbsp; libsdl-mixer1.2 libsdl-net1.2 libsdl-pango1 libsdl2-2.0-0
+      libt4k-common0<br>
+      &nbsp; timgm6mb-soundfont tuxtype tuxtype-data<br>
+      アップグレード: 0 個、新規インストール: 48 個、削除: 0 個、保留: 0 個。<br>
+      22.6 MB のアーカイブを取得する必要があります。<br>
+      この操作後に追加で 38.5 MB のディスク容量が消費されます。<br>
+      続行しますか? [Y/n]<br>
+      <br>
+<h4><a name="mozTocId168472" class="mozTocH4"></a>Kinoa Shogi (きのあ将棋): Japanese Chess</h4>
+ウェブブラウザを使うだけの将棋ソフトです。インストール不要です。以下の URL より。<br>
+&nbsp;- <a href="https://syougi.qinoa.com/ja/game/">https://syougi.qinoa.com/ja/game/</a><br>
+<br>
+      <h4><a name="mozTocId122662"></a>Komao (こまお): Japanese
+        Chess</h4>
+      これもウェブブラウザを使うだけの将棋ソフト。インストール不要です。以下の URL より。<br>
+      <br>
+      - <a href="http://web.archive.org/web/20190331100452/http://www.geocities.jp/komao81/">http://web.archive.org/web/20190331100452/http://www.geocities.jp/komao81/</a><br>
+      「Yahoo!ジオシティーズは終了しました」との事ですが、もう「こまお」は帰ってこないのでしょうか？<br>
+      https://games.yahoo.co.jp/qa/detail?qid=12205759182<br>
+      - <a href="http://komao.ihostfull.com/">http://komao.ihostfull.com/</a><br>
+      「こまお」を複製したものです。このサイトは作者の承認を得ていない非公式ミラーサイトです。<br>
+      <br>
+      <h3><a name="mozTocId236088"></a>Beneath A Steel Sky - アドベンチャー・ゲーム<br>
+      </h3>
+      古典的なポイントアンドクリック SF アドベンチャーゲーム<br>
+      <br>
+      # apt install beneath-a-steel-sky<br>
+      パッケージリストを読み込んでいます... 完了<br>
+      依存関係ツリーを作成していま す<br>
+      状態情報を読み取っています... 完了<br>
+      以下の追加パッケージがインストールされます:<br>
+      &nbsp; libmad0 libmpeg2-4 libsdl2-2.0-0 scummvm scummvm-data<br>
+      提案パッケージ:<br>
+      &nbsp; fluidsynth | timidity drascula flight-of-the-amazon-queen<br>
+      &nbsp; lure-of-the-temptress<br>
+      以下のパッケージが新たにインストールされます:<br>
+      &nbsp; beneath-a-steel-sky libmad0 libmpeg2-4 libsdl2-2.0-0
+      scummvm scummvm-data<br>
+      アップグレード: 0 個、新規インストール: 6 個、削除: 0 個、保留: 0 個。<br>
+      80.3 MB のアーカイブを取得する必要があります。<br>
+      この操作後に追加で 119 MB のディスク容量が消費されます。<br>
+      続行しますか? [Y/n] <br>
+      <br>
+      インストール後、ゲームは デスクトップ &gt; アプリケーション &gt; ゲーム &gt; Beneath A Steel
+      Sky より起動します。遊び方を理解するのがかなりやっかいかも知れませんが、幸いなことに日本語の攻略法が次の URL にあります。<br>
+      &nbsp;<a href="https://virtualwastefulness.hatenablog.com/entry/2019/03/07/162239">https://virtualwastefulness.hatenablog.com/entry/2019/03/07/162239</a><br>
+      <br>
+      <h3 id="content_1_4"><a name="mozTocId688138"></a> - 都市建設シミュレーション・ゲーム</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="lincity.html" title="LinCity (1325d)">LinCity</a>のページを見てください。</li>
+      </ul>
+        <h3><a name="mozTocId736262"></a> OpenTTD - 経営シミュレーションゲーム</h3>
+        輸送機関の経営シミュレーションゲーム。これは、Transport Tycoon Deluxe のオープンソース版です。<br>
+        <br>
+        <h4><a name="mozTocId69895"></a>OpenTTD の基本的なこと</h4>
+        ・OpenTTD Start guide (日本語解説サイト) <a href="http://bunga.main.jp/openttd/">http://bunga.main.jp/openttd/</a><br>
+        ・ウィキペディア（Wikipedia）- "OpenTTD" <a href="https://ja.wikipedia.org/wiki/OpenTTD">https://ja.wikipedia.org/wiki/OpenTTD</a><br>
+        ・開発元公式サイト <a href="https://www.openttd.org/">https://www.openttd.org/</a><br>
+        ・公式ゲームプレイ・マニュアル（英文） <a href="http://wiki.openttd.org/OpenTTD">http://wiki.openttd.org/OpenTTD</a><br>
+        <br>
+        <h4><a name="mozTocId64185" class="mozTocH4"></a>インストール方法
+          (Debian 10)</h4>
+        # apt install openttd<br>
+        パッケージリストを読み込んでいます... 完了<br>
+        依存関係ツリーを作成していま
+        す&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        状態情報を読み取っています... 完了<br>
+        以下の追加パッケージがインストールされます:<br>
+        &nbsp; fluid-soundfont-gm liblzo2-2 libxdg-basedir1 openttd-data
+        openttd-opengfx<br>
+        &nbsp; openttd-openmsx timidity<br>
+        提案パッケージ:<br>
+        &nbsp; fluid-soundfont-gs fluidsynth openttd-opensfx freepats
+        pmidi timidity-daemon<br>
+        以下のパッケージが新たにインストールされます:<br>
+        &nbsp; fluid-soundfont-gm liblzo2-2 libxdg-basedir1 openttd
+        openttd-data<br>
+        &nbsp; openttd-opengfx openttd-openmsx timidity<br>
+        アップグレード: 0 個、新規インストール: 8 個、削除: 0 個、保留: 0 個。<br>
+        128 MB のアーカイブを取得する必要があります。<br>
+        この操作後に追加で 173 MB のディスク容量が消費されます。<br>
+        続行しますか? [Y/n]<br>
+        <br>
+        ------------------------------------------------<br>
+        ただし、このまま起動すると以下のメッセージが出るので、OpenSFX パッケージ (基本効果音) を追加します。なお、OpenMSX は基本音楽です。<br>
+        <br>
+        <blockquote>x メッセージ<br>
+          フェイルバック用の効果音セットしか見<br>
+          つかりませんでした。効果音セットは「<br>
+          オンラインコンテンツを確認」からダウ<br>
+          　ロード可能です。<br>
+        </blockquote>
+        <br>
+        # apt install openttd-opensfx<br>
+        パッケージリストを読み込んでいます... 完了<br>
+        依存関係ツリーを作成していま
+        す&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        状態情報を読み取っています... 完了<br>
+        以下のパッケージが新たにインストールされます:<br>
+        &nbsp; openttd-opensfx<br>
+        アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 0 個。<br>
+        9,474 kB のアーカイブを取得する必要があります。<br>
+        この操作後に追加で 13.2 MB のディスク容量が消費されます。<br>
+        取得:1 http://deb.debian.org/debian buster/non-free amd64
+        openttd-opensfx all 0.2.3-6 [9,474 kB]<br>
+        9,474 kB を 3秒 で取得しました (2,780 kB/s)&nbsp; <br>
+        以前に未選択のパッケージ openttd-opensfx を選択しています。<br>
+        (データベースを読み込んでいます ... 現在 202633 個のファイルとディレクトリがインストールされています。)<br>
+        .../openttd-opensfx_0.2.3-6_all.deb を展開する準備をしています ...<br>
+        openttd-opensfx (0.2.3-6) を展開しています...<br>
+        openttd-opensfx (0.2.3-6) を設定しています ...<br>
+        <br>
+        <h4><a name="mozTocId185779" class="mozTocH4"></a>OpenTTD 1.8.0
+          の初期設定（例）について</h4>
+        パネルのメニューより　アプリケーション &gt; ゲーム &gt; OpenTTD　で起動。<br>
+        基本設定という画面で以下のとおり項目を変更します。<br>
+        <br>
+        自動車：左側通行<br>
+        通貨単位：日本円<br>
+        基本効果音セット：OpenSFX<br>
+        <br>
+        設定が済んだら左上の x 印で設定画面を終了させ、初期画面へ戻ります。<br>
+        「新しいゲーム」という項目を選択すると、地域設定の画面が表示されます。<br>
+        「作成」というボタンを押すとゲームを開始します。<br>
+        <br>
+        <h4><a name="mozTocId560658" class="mozTocH4"></a>日本語フォントを変更するに
+          は？</h4>
+        初期設定のフォントを変更する手順です。明朝体からゴシック体に直したい場合の参考にしてください。<br>
+        openttd.cfg という名称のファイルは、OpenTTD の基本の設定ファイルです。このファイルは、Linux
+        ディストリビューションでは以下の場所に存在します（参照：　<a href="http://wiki.openttd.org/Openttd.cfg">http://wiki.openttd.org/Openttd.cfg</a>
+        ）。<br>
+        &nbsp;"~/.openttd"<br>
+        もしくは以下の場所に在ります（Debian の場合はこちらにあります）。<br>
+        &nbsp;"~/.config/openttd/openttd.cfg"<br>
+        <br>
+        日本語フォントを VL Pゴシックへ変更したいときは、18行目〜21行目を次のように書き換えます。ただし Debian 10
+        では、同じ手順で IPAゴシックや Note Sans CJK JP
+        といったフォントへは変更できません（システム的な制約があるようです）。<br>
+        <br>
+        &nbsp;small_font = VL Pゴシック<br>
+        &nbsp;medium_font = VL Pゴシック<br>
+        &nbsp;large_font = VL Pゴシック<br>
+        &nbsp;mono_font = VL Pゴシック<br>
+        <br>
+        <h3><a name="mozTocId704673"></a>Simutrans - 鉄道経営シミュレーション・ゲーム</h3>
+        これは、鉄道やバスなどの交通機関を運営するシミュレーション・ゲームのうちでは、広く人気があります。シミュレーションなので決まった
+        ルールはありませんが、細かい操作の仕方を習得しないと充分楽しめません。以下の Tips を参照してください。<br>
+        <br>
+        <h4><a name="mozTocId494190"></a>Simutrans の基本的なこと<br>
+        </h4>
+        ・日本語解説サイト <a href="http://japanese.simutrans.com/">http://japanese.simutrans.com/</a>
+        に丁寧で詳しい説明があります。まずはそちらを読んでください。<br>
+        <br>
+        ・simutrans-pak64 は基本のパックセットです。通常のインストールに含まれています。<br>
+        <br>
+        ・simutrans-pak128 はオプションで追加インストール可能です。pak128 は pak64
+        よりもグラフィックが細密なので画面表示がきれいです。<br>
+        <br>
+        ・代表的なパックセットのリストは、Simutrans 公式サイトの中の <a href="https://www.simutrans.com/en/paksets/">https://www.simutrans.com/en/paksets/</a>
+        にあります。この中から選択すれば、不具合もあまり発生することなく楽しめます。この公式サイトの一覧にはありませんが、
+        pak.nippon という日本語版PAKセットもあって、この配布先は <a href="https://wa-st.github.io/pak-nippon/">https://wa-st.github.io/pak-nippon/</a>
+        です。<br>
+        <br>
+        <h4><a name="mozTocId906319"></a>インストール方法 (Debian 10)</h4>
+        # apt install simutrans<br>
+        パッケージリストを読み込んでいます... 完了<br>
+        依存関係ツリーを作成していま す <br>
+        状態情報を読み取っています... 完了<br>
+        以下の追加パッケージがインストールされます:<br>
+        &nbsp; simutrans-data simutrans-pak64<br>
+        提案パッケージ:<br>
+        &nbsp; freepats<br>
+        以下のパッケージが新たにインストールされます:<br>
+        &nbsp; simutrans simutrans-data simutrans-pak64<br>
+        アップグレード: 0 個、新規インストール: 3 個、削除: 0 個、保留: 0 個。<br>
+        5,956 kB のアーカイブを取得する必要があります。<br>
+        この操作後に追加で 24.5 MB のディスク容量が消費されます。<br>
+        続行しますか? [Y/n]<br>
+        <br>
+        <h4><a name="mozTocId960212" class="mozTocH4"></a>PAK
+          セットをインストール（追加）する方法</h4>
+        ・パックを個別に追加（インストール）したいときは、/usr/share/games/simutrans
+        にあるフォルダの中へそのパックを追加（コピー）するだけで動作します。具体的には、次の例のようにコマンドラインからインストールできます。パックを
+        フォルダごとインストールするには、-r
+        オプションが必要です。また、必要に応じてユーザーがアクセス可能なように設定してください（元のファイルの構成や属性を一切変更しないときは
+        -a オプション追加）。<br>
+        <br>
+        &nbsp;# cp -r -a ./pak.abc /usr/share/games/simutrans<br>
+        <br>
+        ・ユーザのゲームデータは、ユーザ・ディレクトリの ./.simutrans save/hoge.sve
+        に保存されます。失っては困るような場合には、別の場所へバックアップしておくことをお推めします。<br>
+        <br>
+        ・pak128.britain を Debian 10
+        にインストールすると、次回以降ゲームが起動しなくなるという不具合を当方で確認しました（2019-10-14）。pak128
+        が正しく動作するために必要なパッケージが不足するというメッセージが初回起動時に出て、次回以降起動しなくなるというものです。そこで再インストールし
+        ましたが、「パッケージが壊れています」という表示が出て治らなかったのですが、ユーザ・ディレクトリ ./.simutrans
+        以下の設定ファイルを全て削除すると、修復されて正常に起動するようになりました。ただし、この設定ファイルの中にある
+        save/hoge.sve
+        はユーザがゲームを継続するのに必要なデータなので、事前にデスクトップなどへバックアップしてください。pak128.britain
+        だけを使う分には問題ないようです。<br>
+        <br>
+        <h4><a name="mozTocId306672" class="mozTocH4"></a>複数のパックセット
+          (graphic set) をインストールしたとき</h4>
+        複数のパックセット (graphic set)
+        をインストールした場合、ゲーム起動時に選択画面が表示されます。以前保存したゲームは、それぞれのパックセットの利用環境で利用しないと、互換性の問
+        題か
+        ら動作障害を起こす可能性があります（必ず障害が発生するというわけではありません）。「以下のオブジェクト(pak)が不足しているため、転送
+        （障害をもたらす可能性があります：」というような警告が表示されたときは、いったんゲームを終了して、適切なパックセットを選び直して
+        ください。これは、上記の pak128.britain を Debian 10 にインストールしたとき同様、気を付けてください。<br>
+        <br>
+        <blockquote>＊＊＊＊＊ 具体例 ＊＊＊＊＊<br>
+          <br>
+          pak64 で作成したゲームデータ → ◯ pak64 セットで起動<br>
+          pak64 で作成したゲームデータ → ☓ pak128 セットで起動<br>
+          pak128 で作成したゲームデータ → ◯ pak128 セットで起動<br>
+          pak128 で作成したゲームデータ → ☓ pak64 セットで起動<br>
+        </blockquote>
+        <h4><a name="mozTocId978703" class="mozTocH4"></a> 起動時に
+          PAKセットの選択画面を表示させない方法</h4>
+        　上記のように複数の PAK をインストールした場合、以下のような画面（例）が立ち上がります。<br>
+        <blockquote>Choose one graphics set for playing:<br>
+          &nbsp;pak<br>
+          &nbsp;pak.nippon<br>
+          To avoid seeing this dialogue define a path by:<br>
+          &nbsp;-adding 'pak_file_path = pak/' to your simuconf.tab<br>
+          &nbsp;-using '-objects pakxyz/' on the command line<br>
+        </blockquote>
+        <br>
+        デフォルトの設定を規定するファイルが
+        /use/share/games/simutrans/config/simuconf.tab
+        にあります。このファイルの37〜42行目には、起動時に選択されるグラフィック・セット（PAKセットのこと）とその設定例が記述されています。上に挙
+        げた例の場合であれば、行頭の #
+        記号を外し次のように書き換えれば、この選択画面なしで任意のパックセットを直接起動できるようになります。<br>
+        #pak_file_path = pak/<br>
+        #pak_file_path = pak.german/<br>
+        #pak_file_path = pak128/<br>
+        pak_file_path = pak.nippon/<br>
+        #pak_file_path = pak.winter/<br>
+        #pak_file_path = pak.ttd/<br>
+        <h4><a name="mozTocId734275" class="mozTocH4"></a> pak128.japan
+          (version 120.0 5.8MB, 2015/01/04) の不具合と解決法 (2019.11.21)</h4>
+        　　インストールしたのち、起動すると以下の画面が現れる可能性があります。<br>
+        <blockquote><u>Error</u><br>
+          <br>
+          pak128.japan/ contains the<br>
+          following doubled objects:<br>
+          Object vehicle::Highway Postal<br>
+          Truck is overlaid!<br>
+          Object vehicle::Pelican Truck is<br>
+          overlaid!<br>
+          Object vehicle::Kuro-Neko Truck is<br>
+          overlaid!<br>
+          Object vehicle::Hikyaku Truck is<br>
+          overlaid!<br>
+          <br>
+          Continue by ESC, SPACE, or<br>
+          BACKSPACE.<br>
+        </blockquote>
+        上記エラーは、Simutrans
+        フォーラムでも複数のユーザーから再現性が報告されています。ただし、キーボードを複数回連打することで、一時的に回避することは可能です。<br>
+        "I have hit this "doubled objects" warning too. But I can't
+        close it with neither ESC, SPACE, ENTER or BACKSPACE. However it
+        goes away if I bash them fast and randomly...." - <a href="https://forum.simutrans.com/index.php/topic,18506.msg176230.html#msg176230">https://forum.simutrans.com/index.php/topic,18506.msg176230.html#msg176230</a><br>
+        <br>
+        この問題を根本的に回避するには、pak128.japan/
+        フォルダの中にある以下のファイルを削除します。これで、今後このエラーが一切発生しないようになります。<br>
+        <br>
+        &nbsp;vehicle_713_truck.pak<br>
+        <br>
+        <h4><a name="mozTocId105079"></a>駅名や都市名、乗り物の名前を変更する方法</h4>
+        変更したい対象物をクリックし、詳細情報のボックスで名称を書き換えるだけです。下記参照。<br>
+        "How to rename stations, cities, vehicles, ..."<br>
+        <a href="https://www.tips.simutrans.com/wiki/tiki-index.php?page=en_Rename&amp;structure=Tips">https://www.tips.simutrans.com/wiki/tiki-index.php?page=en_Rename&amp;structure=Tips</a><br>
+        <br>
+        <h4><a name="mozTocId561905"></a>Simutrans 公式サイトでも見つかりにくいような Tips</h4>
+        次のサイトに色々な Tips があります： Simutrans tutorials and tips - <a href="https://www.tips.simutrans.com">https://www.tips.simutrans.com</a><br>
+        <br>
+      <h3 id="content_1_5"><a name="mozTocId779792"></a>Vega Strike - 宇宙飛行シミュレーター</h3>
+      <p>宇宙飛行シミュレーター。ハイスペックなマシンが必須。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="http://vegastrike.sourceforge.net/">http://vegastrike.sourceforge.net/</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/Vega_Strike">http://en.wikipedia.org/wiki/Vega_Strike</a></li>
+      </ul>
+      <p>システムの最低要件 (Reasonable Minimum Requirement)</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Processor: Pentium III 500 MHz</li>
+        <li>Video card: 3d card with 32 MB of memory, and HT&amp;L
+          support</li>
+        <li>Screen color depth: 16 bit</li>
+        <li>RAM: 384 MB</li>
+        <li>Swap space: 512 MB</li>
+      </ul>
+      <p>通常のインストール手順<br>
+        # apt-get install bzip2<br>
+        # chmod +x vegastrike-0.4.3-base.bz2.run<br>
+        $ ./vegastrike-0.4.3-base.bz2.run</p>
+      <p>Mandriva Linux 2008 には専用のバイナリーパッケージがあるので、rpmdrake
+        または次のコマンドでインストールします。<br>
+        　# urpmi vegastrike<br>
+        　依存を満たすために以下のパッケージをインストールします:<br>
+        　 パッケージ バージョン リリース アーキテクチャ<br>
+        　(メディア Mandriva Linux - 2008.0 (Free) - Installer)<br>
+        　 libfreealut0 1.1.0 3mdv2007.1 i586<br>
+        　 libmesaglut3 7.0.1 10mdv2008.0 i586<br>
+        　 libopenal0 0.0.8 5mdv2008.0 i586<br>
+        　(メディア Main (Official2008.0-4))<br>
+        　 libboost1 1.33.1 6mdv2008.0 i586<br>
+        　(メディア Contrib (Official2008.0-8))<br>
+        　 vegastrike 0.4.3 14mdv2008.0 i586<br>
+        　 vegastrike-data 0.4.3 3mdv2008.0 noarch<br>
+        　ディスク容量を 310MB 使います。<br>
+        　6 個のパッケージのインストールを開始しますか？ (Y/n)[デフォルトはY]</p>
+      <p>PCLinuxOS にも専用のバイナリーパッケージがあるので、次のコマンドでインストールします。<br>
+        　# apt-get install vegastrike</p>
+      <br>
+      <h3 id="content_1_3"><a name="mozTocId48350" class="mozTocH3"></a>将
+        棋ソフト「デーモン将棋」(Daemonshogi)</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>デーモン将棋のインストール<br>
+          Debian 3.1 (Sarge) / 4.0 (Etch) にインストールする場合は、<a href="http://f40.aaa.livedoor.jp/%7Egreen/?DebianLinux-FAQ%2FDaemonshogi" title="DebianLinux-FAQ/Daemonshogi (1295d)">DebianLinux-FAQ/Daemonshogi</a>
+          参照。</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>メニューが文字化けして読めないときは？ (UTF-8 環境) †<br>
+          UTF-8 に対応していないのが原因です。これに対処するには、EUC_JP の言語環境に変更して起動させてください。
+          <pre> $ LANG=ja_JP.EUC-JP daemonshogi</pre>
+          英語のメニューで良いのなら、次のコマンドで起動させます。
+          <pre> $ LANG=C daemonshogi</pre>
+          デスクトップメニュー（ランチャー）に登録するには、次のように env オプションを付ける必要があります。
+          <pre> env LANG=ja_JP.EUC-JP daemonshogi</pre>
+          [重要] ja_JP.EUC_JP のロケールが利用可能でないと、メニューは日本語に出来ません。Debian Etch
+          の場合 UTF-8 が標準のロケールであるため、# dpkg-reconfigure locales として EUC_JP
+          の追加が必要です。</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>daemonshogi gtk2 version
+          <pre> daemonshogi-0.1.4gtk2-0.1.tar.gz</pre>
+          <a href="http://www.nslabs.jp/daemonshogi-gtk2.rhtml">http://www.nslabs.jp/daemonshogi-gtk2.rhtml</a>
+          にて公開されています。</li>
+      </ul>
+      <br>
+      <h3><a name="mozTocId840056" class="mozTocH3"></a>XShogi (Linux向けで古くからある将棋ゲーム)<br>
+      </h3>
+      デスクトップに将棋盤が現れ、コンピュータと対局することができます。次の手順でインストールします（Debian 10 で検証済み）。<br>
+      <br>
+      # apt install xshogi xfonts-100dpi<br>
+      <br>
+      GNOME系デスクトップを使っていれば、起動用のメニューは メインメニュー　＞　アプリケーション　＞　ゲーム　＞　Xshogi
+      に自動的に作成されます。起動後、将棋盤がデスクトップに現れます。コマンドラインから起動したい方は、メインメニュー　＞　アプリケーション　＞　シス
+      テム　＞　端末（ターミナル）より起動させます。xshogi コマンドで起動します。<br>
+      <br>
+      $ xshogi <br>
+      <br>
+      XShogi
+      の操作方法が判りにくいと思いますが下記コマンドで画面に説明が表示されます。オンライン・ヘルプもこちらで用意されています： <a href="https://www.gnu.org/software/gnushogi/manual/">https://www.gnu.org/software/gnushogi/manual/</a><br>
+      <br>
+      $ xshogi -h<br>
+      <br>
+      <h3 id="content_1_1"><a name="mozTocId469496"></a>KNOPPIX DVD 版収録のゲーム</h3>
+      <p>手軽に楽しめる<a href="linux_games_knoppixdvd.html" title="LinuxGames/KnoppixDVD (1674d)">KNOPPIX DVD 版収録のゲーム一覧</a>を
+        掲載しておきます（一覧は最新版ではありません）。KNOPPIX
+        はライブCDとして利用可能なため、実際にハードディスクにインストールしないで収録されたゲームを楽しくことができます。<br>
+        KNOPPIX 日本語版は、KDDI研究所 http://ftp.ne.jp/ より以下のリンクでダウンロード可能です。<br>
+        &nbsp;http://ftp.ne.jp/Linux/distributions/knoppix-jp/iso/<br>
+      </p>
+      <h3 id="content_1_2"><a name="mozTocId760513" class="mozTocH4"></a>Linux で動作するゲームのリスト</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="linux_games.txt">Linux で動作するフリーなゲームの一覧</a>です。
+          Debian で配布のゲームをパッケージ名のアルファベット順に掲載しました。その中から特に<a href="linux_games_select.txt">面白そうなゲームの一覧</a>を作成してみました。</li>
+        <li><a href="https://www.debian.org/distrib/packages.ja.html">パッケージの内容を検索</a>できます。
+<a href="http://en.wikipedia.org/wiki/List_of_Linux_games"></a></li>
+        <li><a href="distributions/debian/index.html" title="DebianLinux
+            (1966d)">Debian/GNU Linux</a> では「 # apt-get install パッケージ名
+          」あるいは、「 # apt install パッケージ名
+          」でゲームをインストールできます。パッケージ名とゲーム名が違う場合がよくあるので、気を付けてください。</li>
+      </ul>
+      <br>
+      <h3 id="content_1_6"><a name="mozTocId387371"></a>ゲーム関連のリンク</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li><a href="https://wiki.archlinux.jp/index.php/ゲーム一覧">Arch Wiki ゲーム一覧</a></li>
+        <li><a href="https://mao.5ch.net/test/read.cgi/linux/1223086045/">Linux de ゲーム 総合スレ</a></li>
+        <li><a href="http://www12.atwiki.jp/linux2ch/?Games" title="2chLinux:Games">ゲーム for Linux (@WIKI)</a></li>
+        <li><a href="https://linuxgamelibrary.wiki.fc2.com/">LinuxGame大辞典 (wiki.fc2.com)</a></li>
+        <li>Desktop Linux Memo &gt; ゲーム・アミューズメント <a href="https://w.atwiki.jp/gleaning/pages/32.html">https://w.atwiki.jp/gleaning/pages/32.html</a></li>
+        <li>Linux games - <a href="https://www.linux-games.com/">https://www.linux-games.com/</a></li>
+        <li>Linux JG Project - <a href="http://www.mars.dti.ne.jp/%7Ehiro-a/JG/">http://www.mars.dti.ne.jp/%7Ehiro-a/JG/</a></li>
+        <li>Linux Gamers' FAQ - <a href="http://www.icculus.org/lgfaq/">http://www.icculus.org/lgfaq/</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/Linux_gaming">Linux gaming (en.wikipedia.org)</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/Category:Linux_games">Category:Linux games (en.wikipedia.org)</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/List_of_open_source_games">List of open source games (en.wikipedia.org)</a></li>
+      </ul>
+      <hr width="100%" size="2"><a href="../index.html">HOME</a>
+  </body>
+</html>
