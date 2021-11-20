@@ -5,20 +5,25 @@
     <title>Software/Text editors - Linux on the Desktop</title>
   </head>
   <body>
-    <div id="body">
-      <div><a href="../../index.html" title="FrontPage (13d)">HOME</a> / <a href="index.html">Software</a> / Text editors</div>
-      <hr width="100%" size="2">
-      <h2><a name="mozTocId472905" class="mozTocH2"></a>テキストエディタ</h2>
-      &nbsp;Last updated: Nov.14, 2021 21:50 JST<br>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+        <tr>
+          <td valign="top"><a href="../../index.html">HOME</a> / <a href="index.html">Software</a> / Text editors</td>
+          <td valign="middle" align="right">Last updated: 2021-11-20 20:43 JST</td>
+        </tr>
+      </tbody>
+</table>
+      <hr width="100%">
+      <h2><a name="mozTocId472905"></a>テキストエディタ</h2>
       <ul id="mozToc">
         <!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
                 <li><a href="#mozTocId698915">代表的なテキストエディタ</a></li>
-                <li><a href="#mozTocId823855">Leafpad - とてもシンプルなテキストエディタ</a>
+                <li><a href="#mozTocId823855">Leafpad - シンプルな軽量テキストエディタ</a>
                   <ul>
-                    <li><a href="#mozTocId813876">Leafpad のインストール</a></li>
-                    <li><a href="#mozTocId12850">Leafpad を ja_JP.UTF-8
-                        で使用するとき</a></li>
-                    <li><a href="#mozTocId13546">Leafpad は Debian 10 で放棄されました</a></li>
+                    <li><a href="#mozTocId813876">Leafpad のインストール (Debian 3.1)</a></li>
+                    <li><a href="#mozTocId813877">Leafpad のインストール (Debian 10/11)</a></li>
+                    <li><a href="#mozTocId12850">Leafpad を ja_JP.UTF-8 で使用するとき</a></li>
+                    <li><a href="#mozTocId13546">Leafpad は Debian 10 で外されました</a></li>
                   </ul>
                 </li>
                 <li><a href="#mozTocId696435">FeatherPad</a>
@@ -32,7 +37,7 @@
                 <li><a href="#mozTocId323667">テキスト/HTMLファイルの文字コードを変換する方法</a></li>
       </ul>
       <br>
-      <h3><a name="mozTocId698915" class="mozTocH3"></a>代表的なテキストエディタ</h3>
+      <h3><a name="mozTocId698915"></a>代表的なテキストエディタ</h3>
       多くのディストリビューションで広く採用されているエディタには、おもに以下のものがあります(これ以外にも多数あります)。<br>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li>FeatherPad</li>
@@ -64,7 +69,7 @@
       Debian では標準でインストールされます。詳しくは、<a
         href="http://www.gentoo.org/doc/ja/nano-basics-guide.xml">nanoの基本ガイド</a> や
       <a href="http://pc-unix.goco.ne.jp/howto2.html">超簡素 UNIX入門講座</a> を見てください。<br>
-      <h3><a name="mozTocId823855" class="mozTocH3"></a>Leafpad - とてもシンプルなテキストエディタ</h3>
+      <h3><a name="mozTocId823855"></a>Leafpad - シンプルな軽量テキストエディタ</h3>
       Leafpad について
       <p>
       "Leafpad is a simple GTK+ based text editor, the user interface is
@@ -73,7 +78,7 @@
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li>Homepage: <a href="http://tarot.freeshell.org/leafpad/">http://tarot.freeshell.org/leafpad/</a></li>
       </ul>
-      <h4><a name="mozTocId813876" class="mozTocH4"></a>Leafpad のインストール</h4>
+      <h4><a name="mozTocId813876"></a>Leafpad のインストール (Debian 3.1)</h4>
       多くのディストリビューションで専用のパッケージが用意されています。<br>
       <P>
       Debian Sarge へのインストール：
@@ -86,13 +91,33 @@
       アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 0 個。<br>
       57.3kB のアーカイブを取得する必要があります。<br>
       展開後に追加で 393kB のディスク容量が消費されます。<br>
-      <h4><a name="mozTocId12850" class="mozTocH4"></a>Leafpad を ja_JP.UTF-8 で使用するとき</h4>
+
+      <h4><a name="mozTocId813877"></a>Leafpad のインストール (Debian 10/11)</h4>
+      Leafpad は Debian の現行の公式リストからは外されましたが、下記で触れたように引き続き利用可能です。各ミラーの /mxlinux/antix/bullseye/pool/main/l/leafpad にもあります。この debian パッケージは次のようにしてインストールできます。
+<blockquote>
+<pre>
+root@debian:/home/user# apt install ./leafpad_0.8.18.1-5_amd64.deb
+パッケージリストを読み込んでいます... 完了
+依存関係ツリーを作成しています                
+状態情報を読み取っています... 完了
+注意、'./leafpad_0.8.18.1-5_amd64.deb' の代わりに 'leafpad' を選択します
+提案パッケージ:
+  evince-gtk
+以下のパッケージが新たにインストールされます:
+  leafpad
+アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 0 個。
+90.9 kB 中 0 B のアーカイブを取得する必要があります。
+この操作後に追加で 465 kB のディスク容量が消費されます。
+（以下省略）
+</pre>
+</blockquote>
+      <h4><a name="mozTocId12850"></a>Leafpad を ja_JP.UTF-8 で使用するとき</h4>
       ロケール ja_JP.euc-JP で作成された過去の文書は、UTF-8
       環境では直接読み込めない場合があるようです。平文テキスト・ドキュメントとしてではなく、不明な種類のファイルとして認識されることがあります。<br>
       その場合には、ファイル名を「hoge」から「hoge.txt」に変更するか、一度 Leafpad
       を起動させそのメニューから開くと、表示ができるようになります。（Debian Etch の GNOMEセッションで確認 - 2007.02.11）
       <br>
-      <h4><a name="mozTocId13546" class="mozTocH4"></a>Leafpad は Debian 10 で放棄されました</h4>
+      <h4><a name="mozTocId13546"></a>Leafpad は Debian 10 で外されました</h4>
       <p>Leadpad は、gtk
       ベースで開発されたテキストエディタですが、アップストリーム（つまり本家の開発元において）長らくメンテナスが行われていないうえ、gtk+3
       には対応されていません。そうした事情から、Leafpad をDebian
@@ -103,13 +128,13 @@
       を参照してください。</p>
       <p>なお、Leafpad は Debian Archive より入手可能です。また、Debian 派生の MX Linux、antiX Linux には含まれています。
       </p>
-      <h3><a name="mozTocId696435" class="mozTocH3"></a>FeatherPad</h3>
-      <h4><a name="mozTocId22064" class="mozTocH4"></a>FeatherPad とは？</h4>
+      <h3><a name="mozTocId696435"></a>FeatherPad</h3>
+      <h4><a name="mozTocId22064"></a>FeatherPad とは？</h4>
       FeatherPad が初めてリリースされた2016年、このエディタは gtk
       を用いて作成された軽量エディタとして登場しましたが、その後 C++ で開発されるようになり、さらに Qt
       を用いて全面的に書き直されました。2019年にリリースされたバージョンでは、画面上の表示や付属するヘルプ（操作マニュアル）が全て日本語に対応して
       います。<br>
-      <h4><a name="mozTocId889637" class="mozTocH4"></a>インストール方法 (Debian 10)</h4>
+      <h4><a name="mozTocId889637"></a>インストール方法 (Debian 10)</h4>
       # apt install featherpad<br>
       パッケージリストを読み込んでいます... 完了<br>
       依存関係ツリーを作成していま
@@ -125,7 +150,7 @@
       この操作後に追加で 2,669 kB のディスク容量が消費されます。<br>
       続行しますか? [Y/n]<br>
       <br>
-      <h3><a name="mozTocId839247" class="mozTocH3"></a>Medit</h3>
+      <h3><a name="mozTocId839247"></a>Medit</h3>
       これは本来、プログラム作成用に特化したエディタとして開発されましたが、色々な機能が追加されたので、一般的なテキストエディタとしても充
       分利用できます。<br>
       Debian 10 には、Synaptic
@@ -133,7 +158,7 @@
       <br>
       &nbsp;# apt install medit<br>
       <br>
-      <h3><a name="mozTocId669344" class="mozTocH3"></a>Mousepad</h3>
+      <h3><a name="mozTocId669344"></a>Mousepad</h3>
       Xfce デスクトップ環境で利用するデフォルトのテキストエディタとして開発されました。Leafpad
       のソースコードを使って、印刷などの機能を付加した使い勝手の良いエディタとして開発が進展しました。Mousepad はもちろん、
       Xfce 環境でしか使えないエディタではありません。GNOME や MATE
@@ -141,9 +166,8 @@
       Debian 10 へインストールする場合、コマンドラインからは以下のとおり行います。<br>
       <br>
       &nbsp;# apt install mousepad<br>
-    </div>
     <br>
-    <h3><a name="mozTocId323667" class="mozTocH3"></a>テキスト/ HTML ファイルの文字コードを変換する方法</h3>
+    <h3><a name="mozTocId323667"></a>テキスト/ HTML ファイルの文字コードを変換する方法</h3>
     対応テキストエディタ<br>
     Geany<br>
     Leafpad<br>
@@ -163,6 +187,6 @@
     <br>
     なお、Leafpad の場合は「文字コード」という項目の中から選択して変換を行います。<br>
     <br>
-    <hr width="100%" size="2"><a href="../../index.html">HOME</a> <br>
+    <hr width="100%"><a href="../../index.html">HOME</a> <br>
   </body>
 </html>
