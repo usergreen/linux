@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"> <a href="../index.html">HOME</a><br></td>
-          <td valign="middle" align="right">Last updated: 2021-11-19 18:26 JST<br></td>
+          <td valign="middle" align="right">Last updated: 2021-11-23 16:45 JST<br></td>
         </tr>
       </tbody>
 </table>
@@ -46,9 +46,11 @@
 <li><a href="#mozTocId494190">Simutrans の基本的なこと</a></li>
 <li><a href="#mozTocId906319">インストール方法 (Debian 10)</a></li>
 <li><a href="#mozTocId906320">インストール方法 (Fedora 34)</a></li>
-<li><a href="#mozTocId64187">PAK セットをインストール（追加）する方法</a></li>
+<li><a href="#mozTocId64186">PAK セットをインストール（追加）する方法 (get_pak.sh)</a></li>
+<li><a href="#mozTocId64187">PAK セットをインストール（追加）する方法 (Debian)</a></li>
 <li><a href="#mozTocId306672">複数のパックセット (graphic set) をインストールしたとき</a></li>
 <li><a href="#mozTocId978703"> 起動時に PAKセットの選択画面を表示させない方法</a></li>
+<li><a href="#mozTocId978704"> カレンダーの表示形式を変更するには？</a></li>
 <li><a href="#mozTocId734275"> pak128.japan (version 120.0 5.8MB, 2015/01/04) の不具合と解決法 (2019.11.21)</a></li>
 <li><a href="#mozTocId105079">駅名や都市名、乗り物の名前を変更する方法</a></li>
 <li><a href="#mozTocId561905">Simutrans 公式サイトでも見つかりにくいような Tips</a></li>
@@ -410,7 +412,41 @@ https://docs.fedoraproject.org/en-US/Fedora/17/html/System_Administrators_Guide/
          # dnf install simutrans-uni-122 simutrans-uni-pak128
         </pre>
 
-        <h4><a name="mozTocId64187"></a>PAK セットをインストール（追加）する方法</h4>
+        <h4><a name="mozTocId64186"></a>PAK セットをインストール（追加）する方法 (get_pak.sh)</h4>
+Simutrans の基本（ベース）パッケージを公式サイトから直接ダウンロードした場合は、解凍後 /usr/local/bin/ ディレクトリへコピーします。get_pak.sh を利用してお好きなパックセットを追加できます。Linux ディストリビューションの配布パッケージではなく開発元のサイトから自動的にダウンロードして取得し、インストールまで実行します。以下に、実際の追加手順を載せておきます。<br>
+<blockquote>
+<pre>
+/usr/local/bin/simutrans/get_pak.sh ファイルを右クリック（コンテキストメニュー）の「開く」＞「端末内で実行する」
+
+-- Choose at least one of these paks --
+1) pak64-122-0
+2) pak64.german_0-122-0-0-2_full
+3) pak64.japan-120-0-1
+4) pak.nippon-v0.4.0
+5) pakHAJO_0-102-2-2
+6) pak96.comic-0.4.10-plus
+7) pak128
+8) pak128.Britain.1.18-120-3
+9) PAK128.german_2.0_for_ST_122.0
+10) pak192.comic.0.6.RC1
+11) pak32.comic_102-0
+12) pak64.Contrast_910
+13) PakHD_v04B_100-0
+14) pak128.japan.120.0
+15) pak64.scifi_112.x_v0.2
+16) pak48-excentrique_v018
+17) pak64.ho-scale-latest
+Which paks to install? (enter number or (i) to install or (x) to exit)4
+adding pak.nippon-v0.4.0
+Which paks to install? (enter number or (i) to install or (x) to exit)i
+
+You will install now
+4) pak.nippon-v0.4.0
+into directory '/usr/local/bin/simutrans'
+Is this correct? (y/n)
+</pre>
+</blockquote>
+        <h4><a name="mozTocId64187"></a>PAK セットをインストール（追加）する方法 (Debian)</h4>
         ・パックを個別に追加（インストール）したいときは、/usr/share/games/simutrans
         にあるフォルダの中へそのパックを追加（コピー）するだけで動作します。具体的には、次の例のようにコマンドラインからインストールできます。パックを
         フォルダごとインストールするには、-r
@@ -467,6 +503,13 @@ https://docs.fedoraproject.org/en-US/Fedora/17/html/System_Administrators_Guide/
         pak_file_path = pak.nippon/<br>
         #pak_file_path = pak.winter/<br>
         #pak_file_path = pak.ttd/<br>
+
+        <h4><a name="mozTocId978704"> カレンダーの表示形式を変更するには？</a></h4>
+ゲーム中、カレンダーが画面左下に表示されます。このカレンダーの表示の仕方は各国によって異なります。パックセットによってもデフォルトの表示形式で違いがあります。欧州式、米国式、日本式などがあります。この設定は simuconf.tab という設定ファイルで自由に変更できます。日本式にするときは次のように書き換えます。<br>
+<blockquote>
+simutrans/config/simuconf.tab の 587 行目あたりにある設定項目を下記へ変更し、# 記号を外して有効にしてください。<br>
+show_month = 2
+</blockquote>
         <h4><a name="mozTocId734275"></a> pak128.japan (version 120.0 5.8MB, 2015/01/04) の不具合と解決法 (2019.11.21)</h4>
         　　インストールしたのち、起動すると以下の画面が現れる可能性があります。<br>
         <blockquote><u>Error</u><br>
