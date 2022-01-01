@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"> <a href="../index.html">HOME</a><br></td>
-          <td valign="middle" align="right">Last updated: 2022-01-01 11:59 JST<br></td>
+          <td valign="middle" align="right">Last updated: 2022-01-01 13:58 JST<br></td>
         </tr>
       </tbody>
 </table>
@@ -372,7 +372,9 @@
         です。<br>
         <br>
         <h4><a name="mozTocId906319"></a>インストール方法 (Debian 10)</h4>
-        # apt install simutrans<br>
+<p>
+以下の手順は Debian が公式に配布している専用パッケージをインストールする場合です。この方法以外に下記で紹介するように Simutrans Germany universal repository の debian ディレクトリ ( https://simutrans-germany.com/simutrans/linux-package/deb/ )より最新版をインストールすることも可能です。詳しい解説は https://simutrans-germany.com/wiki/wiki/en_Simutrans_repo_deb にあります。それぞれインストール先のディレクトリが異なるので、支障なく利用できます。</p>
+      root@debian:/home/user# apt install simutrans<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す <br>
         状態情報を読み取っています... 完了<br>
@@ -386,7 +388,21 @@
         5,956 kB のアーカイブを取得する必要があります。<br>
         この操作後に追加で 24.5 MB のディスク容量が消費されます。<br>
         続行しますか? [Y/n]<br>
-        <br>
+<hr>
+<pre>
+root@debian:/home/user# apt install simutrans-uni
+パッケージリストを読み込んでいます... 完了
+依存関係ツリーを作成しています                
+状態情報を読み取っています... 完了
+以下の追加パッケージがインストールされます:
+  libopusfile0 libsdl2-mixer-2.0-0 simutrans-uni-data simutrans-uni-pak64 simutrans-uni-pak64-food
+以下のパッケージが新たにインストールされます:
+  libopusfile0 libsdl2-mixer-2.0-0 simutrans-uni simutrans-uni-data simutrans-uni-pak64 simutrans-uni-pak64-food
+アップグレード: 0 個、新規インストール: 6 個、削除: 0 個、保留: 0 個。
+6,910 kB のアーカイブを取得する必要があります。
+この操作後に追加で 32.5 MB のディスク容量が消費されます。
+続行しますか? [Y/n] 
+</pre>
         <h4><a name="mozTocId906320"></a>インストール方法 (Fedora 34)</h4>
 Simutrans Germany universal repository が提供されています。これを yum のリポジトリに追加
 すれば必要なパッケージを自動的に取得できます。参考資料: 
