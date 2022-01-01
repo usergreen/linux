@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"> <a href="../index.html">HOME</a><br></td>
-          <td valign="middle" align="right">Last updated: 2022-01-01 13:58 JST<br></td>
+          <td valign="middle" align="right">Last updated: 2022-01-01 17:13 JST<br></td>
         </tr>
       </tbody>
 </table>
@@ -373,7 +373,8 @@
         <br>
         <h4><a name="mozTocId906319"></a>インストール方法 (Debian 10)</h4>
 <p>
-以下の手順は Debian が公式に配布している専用パッケージをインストールする場合です。この方法以外に下記で紹介するように Simutrans Germany universal repository の debian ディレクトリ ( https://simutrans-germany.com/simutrans/linux-package/deb/ )より最新版をインストールすることも可能です。詳しい解説は https://simutrans-germany.com/wiki/wiki/en_Simutrans_repo_deb にあります。それぞれインストール先のディレクトリが異なるので、支障なく利用できます。</p>
+Debian に Simutrans をインストールするには２つの方法があります。<br>
+まず１つ目は Debian が公式に配布している専用パッケージをインストールする方法です。この方法は下記のコマンドを実行するかグラフィカルなインストーラで実行するだけです。</p>
       root@debian:/home/user# apt install simutrans<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す <br>
@@ -389,6 +390,8 @@
         この操作後に追加で 24.5 MB のディスク容量が消費されます。<br>
         続行しますか? [Y/n]<br>
 <hr>
+<p>
+２つ目の方法は、下記のようにして Simutrans Germany universal repository の debian ディレクトリ ( https://simutrans-germany.com/simutrans/linux-package/deb/ )より最新版をインストールするやり方です。詳しい解説は https://simutrans-germany.com/wiki/wiki/en_Simutrans_repo_deb にあります。上記の場合とは異なるディレクトリを利用するので支障は生じません。simutrans-uni リポジトリを追加したら下記コマンドを実行します。</p>
 <pre>
 root@debian:/home/user# apt install simutrans-uni
 パッケージリストを読み込んでいます... 完了
@@ -429,11 +432,11 @@ https://docs.fedoraproject.org/en-US/Fedora/17/html/System_Administrators_Guide/
         </pre>
 
         <h4><a name="mozTocId64186"></a>PAK セットをインストール（追加）する方法 (get_pak.sh)</h4>
-Simutrans の基本（ベース）パッケージを公式サイトから直接ダウンロードした場合は、解凍後に下記のようにして /usr/local/bin/ ディレクトリへコピーします。
+Simutrans の基本（ベース）パッケージを公式サイトから直接ダウンロードした場合は、解凍後に下記のようにして /usr/local/bin/ ディレクトリへコピーできます。
 <blockquote>
 # cp -r -a simutrans /usr/local/bin/
 </blockquote>
-次に、get_pak.sh を利用してお好きなパックセットを追加します。Linux ディストリビューションの配布パッケージではなく開発元のサイトから自動的にダウンロードして取得し、インストールまで実行します。以下に、実際の追加手順を載せておきます。<br>
+get_pak.sh を利用すれば、お好きなパックセットを簡単に追加できます。各 Linux ディストリビューションが配布する専用パッケージではなく開発元の本家サイトから自動的にダウンロードして取得し、インストールまで実行します。以下、実際の手順を載せておきます。<br>
 <blockquote>
 <pre>
 /usr/local/bin/simutrans/get_pak.sh ファイルを右クリック（コンテキストメニュー）の「開く」＞「端末内で実行する」
