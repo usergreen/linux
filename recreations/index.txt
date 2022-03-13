@@ -75,7 +75,7 @@ Bram Stoker was an English writer. He was well known for his novel "Dracula". It
 
 “Do you not know that to-night, when the clock strikes midnight, all the evil things in the world will have full sway(=influence)?”  -Bram Stoker, Dracula
 
-    Original (原作) in html, epub and text formats from Project Gutenburg at https://www.gutenberg.org/ebooks/345
+    Original (原作) in html, epub and text formats from Project Gutenburg at https://www.gutenberg.org/ebooks/45839
 
     A modified version in HTML format including partial Japanese translation is at
     https://usergreen.github.io/recreations/Dracula/Dracula, by Bram Stoker, in Japanese.htm
