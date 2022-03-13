@@ -78,7 +78,7 @@ Bram Stoker was an English writer. He was well known for his novel "Dracula". It
     Original (原作) in html, epub and text formats from Project Gutenburg at https://www.gutenberg.org/ebooks/45839
 
     A modified version in HTML format including partial Japanese translation at
-    https://linux.sakura.ne.jp/recreations/Dracula/Dracula_by_Bram_Stoker_in_Japanese_translation.htm
+    https://usergreen.github.io/recreations/Dracula/Dracula, by Bram Stoker, in Japanese.htm
 
     Familiar novels by the same author follows:
     * The Jewel of Seven Stars by Bram Stoker
