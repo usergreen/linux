@@ -1,16 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja"><head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-    <title>Multimedia</title>
-  </head>
-  <body>
+    <title>Multimedia - Linux on the Desktop</title>
+ </head>
+ <body>
     <div id="navigator">
 
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
       <tbody>
         <tr>
           <td valign="top"><a href="../../index.html">HOME</a> / <a href="index.html">Software</a></td>
-          <td valign="middle" align="right">Last updated: 2022-03-31 20:07 JST</td>
+          <td valign="middle" align="right">Last updated: 2022-04-01 22:11 JST</td>
         </tr>
       </tbody>
 </table>
@@ -79,7 +79,9 @@
     <li><a href="#mozTocId127988">Audacity オーディオエディタ（音声編集ソフト）</a>
      <ol>
       <li><a href="#audacity">Audacity とは何ですか - 関連情報</a></li>
-      <li><a href="#mozTocId265406">インストール方法 (debian 10)</a></li></ol></li>
+      <li><a href="#mozTocId265406">インストール方法 (debian 10)</a></li>
+      <li><a href="#audacity2">音声ファイルが表示されません</a></li>
+     </ol></li>
     <li><a href="#mozTocId893708">SoundTracker オーディオエディタ</a>
      <ol>
       <li><a href="#mozTocId938770">インストール</a></li></ol></li>
@@ -195,27 +197,63 @@
           Do you want to continue? [Y/n] y</li>
       </ul>
       <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h3 id="content_1_6"><a name="mozTocId464372" class="mozTocH3"></a>K3b
-        (CD/DVD作成ツール)</h3>
-      <p>K3b は KDE デスクトップ環境用の
-        CD ライターです。KDE環境のライブラリを追加すれば、GNOME環境でも利用できます。</p>
+      <h3 id="content_1_6"><a name="mozTocId464372" class="mozTocH3"></a>K3b (CD/DVD作成ツール)</h3>
+      <p>K3b は KDE デスクトップ環境用の CD ライターです。KDE環境のライブラリを追加すれば、GNOME環境でも利用できます。</p>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li>CD ライティング・ツールのインストールについて。以下は CentOS 4 の例です。</li>
       </ul>
-      <pre> [root@localhost user]# up2date -i k3b<br> <br> Fetching Obsoletes list for channel: centos4-Base... <br> Fetching Obsoletes list for channel: centos4-Updates... <br> Fetching Obsoletes list for channel: centos4-extras... <br> Fetching Obsoletes list for channel: centos4-contrib... <br> Fetching Obsoletes list for channel: centos4-addons...<br> <br> Fetching rpm headers...<br> ########################################<br> <br> Name                                    Version        Rel<br> ----------------------------------------------------------<br> k3b                                     0.11.14        2                 i386<br>  <br> Testing package set / solving RPM inter-dependencies...<br> <br> Downloading headers to solve dependencies...<br> ########################################<br> k3b-0.11.14-2.i386.rpm:     ########################## Done.<br> kdelibs-3.3.1-3.3.i386.rpm: ########################## Done.<br> Preparing              ########################################### [100%]<br> <br> Installing...<br>    1:kdelibs                ########################################### [100%]<br>    2:k3b                    ########################################### [100%]<br> The following packages were added to your selection to satisfy dependencies:<br> <br> Name                                    Version        Release<br> --------------------------------------------------------------<br> kdelibs                                 3.3.1          3.3</pre>
+      <pre> [root@localhost user]# up2date -i k3b
+
+ Fetching Obsoletes list for channel: centos4-Base... 
+ Fetching Obsoletes list for channel: centos4-Updates... 
+ Fetching Obsoletes list for channel: centos4-extras... 
+ Fetching Obsoletes list for channel: centos4-contrib... 
+ Fetching Obsoletes list for channel: centos4-addons...
+
+ Fetching rpm headers...
+ ########################################
+
+ Name                                    Version        Rel
+ ----------------------------------------------------------
+ k3b                                     0.11.14        2                 i386
+
+ Testing package set / solving RPM inter-dependencies...
+
+ Downloading headers to solve dependencies...
+ ########################################
+ k3b-0.11.14-2.i386.rpm:     ########################## Done.
+ kdelibs-3.3.1-3.3.i386.rpm: ########################## Done.
+ Preparing              ########################################### [100%]
+
+ Installing...
+    1:kdelibs                ########################################### [100%]
+    2:k3b                    ########################################### [100%]
+ The following packages were added to your selection to satisfy dependencies:
+
+ Name                                    Version        Release
+ --------------------------------------------------------------
+ kdelibs                                 3.3.1          3.3</pre>
+
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li>CD ライティング・ツールのインストールについて。以下は Debian Sarge の例です。<br>
           # apt-get install k3b<br>
           パッケージリストを読みこんでいます... 完了<br>
           依存関係ツリーを作成しています... 完了<br>
           以下の特別パッケージがインストールされます:
-          <pre>  cdparanoia k3blibs kcontrol kdebase-bin kdebase-data kdelibs-bin<br>  kdelibs-data kdelibs4 libarts1 libartsc0 libcdparanoia0 libflac++4<br>  libid3-3.8.3 libjack0.80.0-0 libjasper-1.701-1 libnetpbm10 libopenexr2<br>  libqt3c102-mt libraw1394-5 libvorbisfile3 menu-xdg netpbm</pre>
+          <pre>  cdparanoia k3blibs kcontrol kdebase-bin kdebase-data kdelibs-bin
+  kdelibs-data kdelibs4 libarts1 libartsc0 libcdparanoia0 libflac++4
+  libid3-3.8.3 libjack0.80.0-0 libjasper-1.701-1 libnetpbm10 libopenexr2
+  libqt3c102-mt libraw1394-5 libvorbisfile3 menu-xdg netpbm</pre>
           提案パッケージ:
-          <pre>  k3b-i18n normalize toolame khelpcenter libjasper-runtime libqt3c102-mt-psql<br>  libqt3c102-mt-mysql libqt3c102-mt-odbc</pre>
+          <pre>  k3b-i18n normalize toolame khelpcenter libjasper-runtime libqt3c102-mt-psql
+  libqt3c102-mt-mysql libqt3c102-mt-odbc</pre>
           推奨パッケージ:
           <pre>  vcdimager cdrdao dvd+rw-tools perl-suid akode jackd</pre>
           以下のパッケージが新たにインストールされます:
-          <pre>  cdparanoia k3b k3blibs kcontrol kdebase-bin kdebase-data kdelibs-bin<br>  kdelibs-data kdelibs4 libarts1 libartsc0 libcdparanoia0 libflac++4<br>  libid3-3.8.3 libjack0.80.0-0 libjasper-1.701-1 libnetpbm10 libopenexr2<br>  libqt3c102-mt libraw1394-5 libvorbisfile3 menu-xdg netpbm</pre>
+          <pre>  cdparanoia k3b k3blibs kcontrol kdebase-bin kdebase-data kdelibs-bin
+  kdelibs-data kdelibs4 libarts1 libartsc0 libcdparanoia0 libflac++4
+  libid3-3.8.3 libjack0.80.0-0 libjasper-1.701-1 libnetpbm10 libopenexr2
+  libqt3c102-mt libraw1394-5 libvorbisfile3 menu-xdg netpbm</pre>
           アップグレード: 0 個、新規インストール: 23 個、削除: 0 個、保留: 0 個。<br>
           38.2MB のアーカイブを取得する必要があります。<br>
           展開後に追加で 105MB のディスク容量が消費されます。<br>
@@ -224,47 +262,115 @@
       <p>以下のパッケージを追加すると便利です。</p>
       <pre> # apt-get install cdrdao k3b-18n</pre>
       <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h3 id="content_1_7"><a name="mozTocId743412" class="mozTocH3"></a>X-CD-Roast
-        (CD/DVD作成ツール)</h3>
+      <h3 id="content_1_7"><a name="mozTocId743412" class="mozTocH3"></a>X-CD-Roast (CD/DVD作成ツール)</h3>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li><a href="xcdroast.html" title="SoftWares/Xcdroast (1638d)">X-CD-Roast</a>
-          のページを見てください。<br>
-        </li>
+        <li><a href="xcdroast.html" title="SoftWares/Xcdroast (1638d)">X-CD-Roast</a> のページを見てください。</li>
       </ul>
       <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <div class="jumpmenu"> <br>
-        <h3 id="content_1_1"><a name="mozTocId233131" class="mozTocH3"></a>ffmpeg
-          (エフエフエムペッグ)</h3>
+        <h3 id="content_1_1"><a name="mozTocId233131" class="mozTocH3"></a>ffmpeg (エフエフエムペッグ)</h3>
         <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_2"><a name="mozTocId540944" class="mozTocH4"></a>For
-          Fedora Core 3</h4>
-        <pre> # up2date -i ffmpeg<br> <br> Fetching Obsoletes list for channel: atrpms-stable...<br> <br> Fetching obsoletes list for http://dl.atrpms.net/fc3-i386/atrpms...<br> #######################################<br> Fetching Obsoletes list for channel: fedora-core-3...<br> <br> Fetching Obsoletes list for channel: updates-released-fc3...<br> <br> Fetching rpm headers...<br> ########################################<br> <br> Name                                    Version        Rel<br> ----------------------------------------------------------<br> ffmpeg                                  0.4.9          9_cvs20050517.rhfc3.ati386<br> <br> <br> Testing package set / solving RPM inter-dependencies...<br> ########################################<br> ffmpeg-0.4.9-9_cvs20050517. ########################## Done.<br> The package ffmpeg-0.4.9-9_cvs20050517.rhfc3.at is not signed with a GPG signature.  Aborting...<br> Package ffmpeg-0.4.9-9_cvs20050517.rhfc3.at does not have a GPG signature.<br> Aborting...<br> # rpm --import http://ATrpms.net/RPM-GPG-KEY.atrpms<br> # up2date -i ffmpeg<br> <br> Fetching Obsoletes list for channel: atrpms-stable...<br> <br> Fetching Obsoletes list for channel: fedora-core-3...<br> <br> Fetching Obsoletes list for channel: updates-released-fc3...<br> <br> Fetching rpm headers...<br> ########################################<br> <br> Name                                    Version        Rel<br> ----------------------------------------------------------<br> ffmpeg                                  0.4.9          9_cvs20050517.rhfc3.ati386<br> <br> <br> Testing package set / solving RPM inter-dependencies...<br> ########################################<br> ffmpeg-0.4.9-9_cvs20050517. ########################## Done.<br> imlib2-1.1.2-3.rhfc3.at.i38 ########################## Done.<br> libdc1394_control13-1.1.0-4 ########################## Done.<br> libraw1394_8-1.2.0-1_6.rhfc ########################## Done.<br> libxvidcore4-1.0.3-7.rhfc3. ########################## Done.<br> Preparing              ########################################### [100%]<br> <br> Installing...<br>    1:libraw1394_8           ########################################### [100%]<br>    2:libdc1394_control13    ########################################### [100%]<br>    3:libxvidcore4           ########################################### [100%]<br>    4:imlib2                 ########################################### [100%]<br>    5:ffmpeg                 ########################################### [100%]<br> The following packages were added to your selection to satisfy dependencies:<br> <br> Name                                    Version        Release<br> --------------------------------------------------------------<br> imlib2                                  1.1.2          3.rhfc3.at<br> libdc1394_control13                     1.1.0          4.rhfc3.at<br> libraw1394_8                            1.2.0          1_6.rhfc3.at<br> libxvidcore4                            1.0.3          7.rhfc3.at</pre>
+        <h4 id="content_1_2"><a name="mozTocId540944" class="mozTocH4"></a>For Fedora Core 3</h4>
+        <pre> # up2date -i ffmpeg<br>
+ Fetching Obsoletes list for channel: atrpms-stable...<br>
+ Fetching obsoletes list for http://dl.atrpms.net/fc3-i386/atrpms...
+ #######################################<br> Fetching Obsoletes list for channel: fedora-core-3...<br>
+ Fetching Obsoletes list for channel: updates-released-fc3...<br>
+ Fetching rpm headers...
+ ########################################<br>
+ Name                                    Version        Rel
+ ----------------------------------------------------------
+ ffmpeg                                  0.4.9          9_cvs20050517.rhfc3.ati386<br> <br>
+ Testing package set / solving RPM inter-dependencies...
+ ########################################
+ ffmpeg-0.4.9-9_cvs20050517. ########################## Done.
+ The package ffmpeg-0.4.9-9_cvs20050517.rhfc3.at is not signed with a GPG signature.  Aborting...
+ Package ffmpeg-0.4.9-9_cvs20050517.rhfc3.at does not have a GPG signature.
+ Aborting...
+ # rpm --import http://ATrpms.net/RPM-GPG-KEY.atrpms
+ # up2date -i ffmpeg<br>
+ Fetching Obsoletes list for channel: atrpms-stable...<br>
+ Fetching Obsoletes list for channel: fedora-core-3...<br>
+ Fetching Obsoletes list for channel: updates-released-fc3...<br>
+ Fetching rpm headers...
+ ########################################<br>
+ Name                                    Version        Rel
+ ----------------------------------------------------------
+ ffmpeg                                  0.4.9          9_cvs20050517.rhfc3.ati386<br> <br>
+ Testing package set / solving RPM inter-dependencies...
+ ########################################
+ ffmpeg-0.4.9-9_cvs20050517. ########################## Done.
+ imlib2-1.1.2-3.rhfc3.at.i38 ########################## Done.
+ libdc1394_control13-1.1.0-4 ########################## Done.
+ libraw1394_8-1.2.0-1_6.rhfc ########################## Done.
+ libxvidcore4-1.0.3-7.rhfc3. ########################## Done.
+ Preparing              ########################################### [100%]<br>
+ Installing...
+    1:libraw1394_8           ########################################### [100%]
+    2:libdc1394_control13    ########################################### [100%]
+    3:libxvidcore4           ########################################### [100%]
+    4:imlib2                 ########################################### [100%]
+    5:ffmpeg                 ########################################### [100%]
+ The following packages were added to your selection to satisfy dependencies:
+
+ Name                                    Version        Release
+ --------------------------------------------------------------
+ imlib2                                  1.1.2          3.rhfc3.at
+ libdc1394_control13                     1.1.0          4.rhfc3.at
+ libraw1394_8                            1.2.0          1_6.rhfc3.at
+ libxvidcore4                            1.0.3          7.rhfc3.at</pre>
         <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_3"><a name="mozTocId591891" class="mozTocH4"></a>For
-          Mandriva 2006 .1 Cooker</h4>
-        <pre> # urpmi ffmpeg<br> 依存を満たすために以下の 5 個のパッケージをインストールします(3 MB):<br> ffmpeg-0.4.9-0.pre1.5mdk.i586<br> libffmpeg0-0.4.9-0.pre1.5mdk.i586<br> libimlib2_1-1.2.1-1mdk.i586<br> libimlib2_1-filters-1.2.1-1mdk.i586<br> libimlib2_1-loaders-1.2.1-1mdk.i586<br></pre>
+        <h4 id="content_1_3"><a name="mozTocId591891" class="mozTocH4"></a>For Mandriva 2006 .1 Cooker</h4>
+        <pre> # urpmi ffmpeg
+ 依存を満たすために以下の 5 個のパッケージをインストールします(3 MB):
+ ffmpeg-0.4.9-0.pre1.5mdk.i586
+ libffmpeg0-0.4.9-0.pre1.5mdk.i586
+ libimlib2_1-1.2.1-1mdk.i586
+ libimlib2_1-filters-1.2.1-1mdk.i586
+ libimlib2_1-loaders-1.2.1-1mdk.i586</pre>
         よろしいですか？ (Y/n)[デフォルトはY]<br>
         <a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a>
-        <h4><a name="mozTocId2417" class="mozTocH4"></a>DAG Repository
-          for CentOS 4.1</h4>
+        <h4><a name="mozTocId2417" class="mozTocH4"></a>DAG Repository for CentOS 4.1</h4>
         # apt-get install ffmpeg<br>
-        <pre> Reading Package Lists... Done<br> Building Dependency Tree... Done<br> The following extra packages will be installed:<br>   faac faad2 imlib2 libpostproc xvidcore<br> The following NEW packages will be installed:<br>   faac faad2 ffmpeg imlib2 libpostproc xvidcore<br> 0 upgraded, 6 newly installed, 0 removed and 8 not upgraded.<br> Need to get 3882kB of archives.<br> After unpacking 9742kB of additional disk space will be used.<br> Do you want to continue? [Y/n] y<br> Get:1 http://apt.sw.be redhat/el4/en/i386/dag faac 1.24-1.2.el4.rf [79.2kB]<br> Get:2 http://apt.sw.be redhat/el4/en/i386/dag faad2 2.0-4.2.el4.rf [456kB]<br> Get:3 http://apt.sw.be redhat/el4/en/i386/dag imlib2 1.2.0-1.2.el4.rf [638kB]<br> Get:4 http://apt.sw.be redhat/el4/en/i386/dag libpostproc 1.0-0.17.pre7.2.el4.rf [58.3kB]<br> Get:5 http://apt.sw.be redhat/el4/en/i386/dag xvidcore 1.0.3-1.2.el4.rf [266kB]<br> Get:6 http://apt.sw.be redhat/el4/en/i386/dag ffmpeg 0.4.9-0.20041110.3.2.el4.rf [2385kB]<br> Fetched 3882kB in 27s (140kB/s)<br> Committing changes...<br> Preparing...                ########################################### [100%]<br>    1:faac                   ########################################### [ 17%]<br>    2:faad2                  ########################################### [ 33%]<br>    3:imlib2                 ########################################### [ 50%]<br>    4:libpostproc            ########################################### [ 67%]<br>    5:xvidcore               ########################################### [ 83%]<br>    6:ffmpeg                 ########################################### [100%]<br> Done.</pre>
+
+        <pre> Reading Package Lists... Done
+ Building Dependency Tree... Done
+ The following extra packages will be installed:
+   faac faad2 imlib2 libpostproc xvidcore
+ The following NEW packages will be installed:
+   faac faad2 ffmpeg imlib2 libpostproc xvidcore
+ 0 upgraded, 6 newly installed, 0 removed and 8 not upgraded.
+ Need to get 3882kB of archives.<br> After unpacking 9742kB of additional disk space will be used.
+ Do you want to continue? [Y/n] y
+ Get:1 http://apt.sw.be redhat/el4/en/i386/dag faac 1.24-1.2.el4.rf [79.2kB]
+ Get:2 http://apt.sw.be redhat/el4/en/i386/dag faad2 2.0-4.2.el4.rf [456kB]
+ Get:3 http://apt.sw.be redhat/el4/en/i386/dag imlib2 1.2.0-1.2.el4.rf [638kB]
+ Get:4 http://apt.sw.be redhat/el4/en/i386/dag libpostproc 1.0-0.17.pre7.2.el4.rf [58.3kB]
+ Get:5 http://apt.sw.be redhat/el4/en/i386/dag xvidcore 1.0.3-1.2.el4.rf [266kB]
+ Get:6 http://apt.sw.be redhat/el4/en/i386/dag ffmpeg 0.4.9-0.20041110.3.2.el4.rf [2385kB]
+ Fetched 3882kB in 27s (140kB/s)
+ Committing changes...
+ Preparing...                ########################################### [100%]
+    1:faac                   ########################################### [ 17%]
+    2:faad2                  ########################################### [ 33%]
+    3:imlib2                 ########################################### [ 50%]
+    4:libpostproc            ########################################### [ 67%]
+    5:xvidcore               ########################################### [ 83%]
+    6:ffmpeg                 ########################################### [100%]
+ Done.</pre>
+
         <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_4"><a name="mozTocId302755" class="mozTocH4"></a>「フ
-          レームレート」とは？</h4>
+        <h4 id="content_1_4"><a name="mozTocId302755" class="mozTocH4"></a>「フレームレート」とは？</h4>
         「動画では、連続する画像の１枚を「フレーム」と呼びます。１秒あたりのフレーム数を表す、サンプリングレートを「フレームレート」と
-        いい、単位 は、fps (: Frames per
-        second)で表します。つまり、このフレームレートが大きければ大きいほど、動画像の動きは滑らかになる訳です。しかし、人間の分解
-        能は、動きに対し てあまり高くはありません。」 - <a href="http://www.nime.ac.jp/%7Einaba/LR/MOV/1-1.html">http://www.nime.ac.jp/~inaba/LR/MOV/1-1.html</a>
+        いい、単位 は、fps (: Frames per second)で表します。つまり、このフレームレートが大きければ大きいほど、動画像の動きは滑らかになる訳です。
+        しかし、人間の分解能は、動きに対し てあまり高くはありません。」 - <a href="http://www.nime.ac.jp/%7Einaba/LR/MOV/1-1.html">http://www.nime.ac.jp/~inaba/LR/MOV/1-1.html</a>
         より一部引用。<br>
         <br>
-        <h3><a name="mozTocId441889" class="mozTocH3"></a>Kazam
-          スクリーンキャスタ（録画ソフト）</h3>
+        <h3><a name="mozTocId441889" class="mozTocH3"></a>Kazam スクリーンキャスタ（録画ソフト）</h3>
         スクリーンキャスタとは、動画（ビデオ）を録るためのツール（ソフトウェア）です。<br>
         紹介記事「Linuxでスクリーンキャストを撮るKazamの使い方」<a href="https://news.mynavi.jp/article/20180924-696076/">https://news.mynavi.jp/article/20180924-696076/</a><br>
         <br>
-        <a name="mozTocId852270" class="mozTocH4"></a> Debian 10
-        (buster)<br>
+        <a name="mozTocId852270" class="mozTocH4"></a> Debian 10 (buster)<br>
         # apt install kazam<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -288,11 +394,8 @@
         この操作後に追加で 3,612 kB のディスク容量が消費されます。<br>
         続行しますか? [Y/n]<br>
         <br>
-        <h3 id="content_1_9"><a name="mozTocId973924" class="mozTocH3"></a>Kino
-          ビデオエディタ<br>
-        </h3>
-        <h4><a name="mozTocId905674" class="mozTocH4"></a> Kino
-          プロジェクトについて</h4>
+        <h3 id="content_1_9"><a name="mozTocId973924" class="mozTocH3"></a>Kino ビデオエディタ</h3>
+        <h4><a name="mozTocId905674" class="mozTocH4"></a> Kino プロジェクトについて</h4>
         ビデオカメラなどで録画された動画を記録、作成、編集、再生するためのソフトウェアです。Kino開発チームは、2013年8月5日、こ
         の開発中止を公表しました。<br>
         "Kino has not been actively maintained since 2009. We encourage
@@ -300,8 +403,7 @@
         Flowblade, OpenShot, PiTiVi, LiVES, and LightWorks." 出典 <a href="https://web.archive.org/web/20140214045913/http://kinodv.org/">https://web.archive.org/web/20140214045913/http://kinodv.org/</a><br>
         なお、2020年1月現在、公式サイトから古いバージョンの配布は引き続き行われていますが、この利用は推奨されていません。<br>
         <br>
-        <h4><a name="mozTocId933218" class="mozTocH4"></a>インストール方法
-          (Debian 10)</h4>
+        <h4><a name="mozTocId933218" class="mozTocH4"></a>インストール方法 (Debian 10)</h4>
         Debian で独自に保守されている Kino パッケージがあります。公式版に色々な修正を加えたうえで利用可能にしています。<br>
         <br>
         # apt install kino<br>
@@ -319,8 +421,7 @@
         この操作後に追加で 9,879 kB のディスク容量が消費されます。<br>
         続行しますか? [Y/n]<br>
         <br>
-        <h4><a name="mozTocId276032" class="mozTocH4"></a>インストール方法
-          (Fedora Core 3)</h4>
+        <h4><a name="mozTocId276032" class="mozTocH4"></a>インストール方法 (Fedora Core 3)</h4>
         # yum install kino<br>
         Repository updates-released already added, not adding again<br>
         Repository base already added, not adding again<br>
@@ -410,8 +511,7 @@
         Complete!<br>
         <br>
         <a href="#navigator">↑</a><br>
-        <h3><a name="mozTocId292533" class="mozTocH3"></a>MPlayer
-          (エムプレーヤ)</h3>
+        <h3><a name="mozTocId292533" class="mozTocH3"></a>MPlayer (エムプレーヤ)</h3>
         MPlayer - The Movie Player<br>
         <br>
         <a name="mozTocId360330" class="mozTocH4"></a>Debian 10 (buster)<br>
@@ -458,8 +558,7 @@
         MPlayer を元にして、多くの新機能が追加されています。簡単なグラフィカル・インターフェイスも備えますが、mpv
         単独で使用するときは基本的にコマンドラインから操作します。<br>
         <br>
-        <h4><a name="mozTocId720588" class="mozTocH4"></a>インストール
-          (Debian10)</h4>
+        <h4><a name="mozTocId720588" class="mozTocH4"></a>インストール (Debian10)</h4>
         # apt install mpv<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -495,8 +594,7 @@
         SMPlayer 公式サイト: <a href="https://www.smplayer.info/ja/info">https://www.smplayer.info/ja/info</a><br>
         ファーストステップ・ガイド: <a href="https://www.smplayer.info/first-steps.php?">https://www.smplayer.info/first-steps.php?</a><br>
         <br>
-        <h4><a name="mozTocId172960" class="mozTocH4"></a> インストール
-          (Debian 10)</h4>
+        <h4><a name="mozTocId172960" class="mozTocH4"></a> インストール (Debian 10)</h4>
         # apt install smplayer<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -517,8 +615,7 @@
       </h3>
       GStreamer ベースで GNOME デスクトップ向けのメディア・プレーヤです。<br>
       <br>
-      <h4 id="content_1_29"><a name="mozTocId420689" class="mozTocH4"></a>ラ
-        イブ中継を見ることが出来ません。</h4>
+      <h4 id="content_1_29"><a name="mozTocId420689" class="mozTocH4"></a>ライブ中継を見ることが出来ません。</h4>
       <p>GStreamer プラグインの追加が必要となる場合があります。<br>
         この場合、Totem
         メディアプレーヤーがネットワーク上からプラグインを自動検索したのち、インストールが実行されます。インストール完了後、視聴可能とな
@@ -531,20 +628,17 @@
       <pre> http://www.nhk.or.jp/rj/asx/jp/japanese.asx</pre>
       <p>他のウェブサイトで同様な状況が発生した場合にも、この方法を試してください。</p>
       <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h4 id="content_1_31"><a name="mozTocId366844" class="mozTocH4"></a>再
-        生した映像の色調が良くないので調整したい。</h4>
+      <h4 id="content_1_31"><a name="mozTocId366844" class="mozTocH4"></a>再生した映像の色調が良くないので調整したい。</h4>
       <p>このメディアプレーヤー独自で、明るさ・コントラストなど色調の調整ができます。<br>
         [メニュー] &gt; [編集] &gt; [設定] &gt; [表示] &gt; [色のバランス] より行います。</p>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li>接続しているディスプレイのハード側の設定も適切かどうか確認した方が良いでしょう。</li>
       </ul>
       <div class="jumpmenu"><a href="#navigator">↑</a><br>
-        <h3><a name="mozTocId318880" class="mozTocH3"></a>VLC (VLC
-          メディアプレーヤ)</h3>
+        <h3><a name="mozTocId318880" class="mozTocH3"></a>VLC (VLC メディアプレーヤ)</h3>
         非常に多くのコーデックが内蔵されているので、多数のメディア・ファイルに対応します。同類のプレーヤーのうちで、VLC
         メディアプレーヤーは開発が活発な方なので頻繁にリリースが行われています。<br>
-        <h4><a name="mozTocId418470" class="mozTocH4"></a>インストール -- Debian 10
-          (buster)</h4>
+        <h4><a name="mozTocId418470" class="mozTocH4"></a>インストール -- Debian 10 (buster)</h4>
         # apt install vlc<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -642,8 +736,7 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
         インすると反映されるようです。<br>
         <br>
         <div class="jumpmenu"><a href="#navigator">↑</a></div>
-        <h4 id="content_1_33"><a name="mozTocId963664" class="mozTocH4"></a>CETUC
-          - Network Simulation Laboratory</h4>
+        <h4 id="content_1_33"><a name="mozTocId963664" class="mozTocH4"></a>CETUC - Network Simulation Laboratory</h4>
         <p>These rpms are build in a <span class="noexists">RedHat<a href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=RedHat&amp;refer=SoftWares%2FMultimedia">?</a></span>
           Linux 7.3 server. Some care is taken to keep them portable
           across different distros, so they should also work on RH 7.x,
@@ -651,7 +744,12 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
         <p>Step by step guide to run xine</p>
         <p>1. You need to download the xine engine (libxine). Get the
           libxine rpm which more closely matches yourCPU:</p>
-        <pre>  libxine1-(version)-xxxxxx.i586.rpm for Pentium/Pentium MMX<br>  libxine1-(version)-xxxxxx.i686.rpm for Pentium II/III/IV<br>  libxine1-(version)-xxxxxx.k6.rpm for AMD K6<br>  libxine1-(version)-xxxxxx.k7.rpm for AMD Athlon/Duron<br> <br>      If you don't know your CPU just get the i586 package.</pre>
+        <pre>  libxine1-(version)-xxxxxx.i586.rpm for Pentium/Pentium MMX
+  libxine1-(version)-xxxxxx.i686.rpm for Pentium II/III/IV
+  libxine1-(version)-xxxxxx.k6.rpm for AMD K6
+  libxine1-(version)-xxxxxx.k7.rpm for AMD Athlon/Duron
+
+      If you don't know your CPU just get the i586 package.</pre>
         <p>2. Download xine-ui:</p>
         <pre>      xine-ui-(version)-xxxxxx.i586.rpm for any CPU.</pre>
         <p>3. Install the packages (you need to be root):</p>
@@ -666,15 +764,13 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
               - Network Simulation Laboratory</a> &gt; <a href="http://cambuca.ldhs.cetuc.puc-rio.br/xine">Daily
               xine builds with CSS support</a></li>
         </ul>
-        <h3><a name="mozTocId649611" class="mozTocH3"></a> Sound
-          Recorder (GNOME サウンドレコーダ)</h3>
+        <h3><a name="mozTocId649611" class="mozTocH3"></a> Sound Recorder (GNOME サウンドレコーダ)</h3>
         デスクトップ用のシンプルで洗練されたサウンドレコーダです。もともと、GNOME デスクトップ用として開発されましたが、MATE
         デスクトップでも動作します。音声の録音が簡単にできるユーティリティ・ソフトウェアです。再生機能もあります。OGG, MP3,
         FLAC などのフォーマットをサポートします。<br>
         Sound Recorder 公式サイト <a href="https://wiki.gnome.org/Design/Apps/SoundRecorder">https://wiki.gnome.org/Design/Apps/SoundRecorder<br>
         </a><br>
-        <h4><a name="mozTocId295960" class="mozTocH4"></a>インストール方法
-          (debian 10)</h4>
+        <h4><a name="mozTocId295960" class="mozTocH4"></a>インストール方法 (debian 10)</h4>
         # apt install gnome-sound-recorder<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -702,8 +798,7 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
         Palse Audio Volume Control (pavucontrol)
         と連携させてサウンドを録る方法について書いています。<br>
         <br>
-        <h3><a name="mozTocId311725" class="mozTocH3"></a>Audacious
-          オーディオプレーヤ</h3>
+        <h3><a name="mozTocId311725" class="mozTocH3"></a>Audacious オーディオプレーヤ</h3>
         Audacious は Winamp に似た外観をもったオーディオ・プレーヤーです。Xmms と似る
         beep-media-player
         があって、これをさらにフォークして開発されました。このプレーヤーの特徴は、より多くのコーディックに対応可能なことです。以下のコーディックに対応し
@@ -718,8 +813,7 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
         &nbsp;* WAVE<br>
         公式ウェブサイト <a href="https://www.audacious-media-player.org/">https://www.audacious-media-player.org/</a><br>
         <br>
-        <h4><a name="mozTocId483097" class="mozTocH4"></a>インストール方法
-          (Debian 10)</h4>
+        <h4><a name="mozTocId483097" class="mozTocH4"></a>インストール方法 (Debian 10)</h4>
         # apt install audacious<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -739,8 +833,7 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
         この操作後に追加で 8,958 kB のディスク容量が消費されます。<br>
         続行しますか? [Y/n]<br>
         <br>
-        <h3><a name="mozTocId127988" class="mozTocH3"></a>Audacity
-          オーディオエディタ（音声編集ソフト）</h3>
+        <h3><a name="mozTocId127988" class="mozTocH3"></a>Audacity オーディオエディタ（音声編集ソフト）</h3>
 <h4><a name="audacity"></a>Audacity とは何ですか - 関連情報</h4>
         マルチトラック対応のオーディオ・エディタ（音声編集ソフト）です。デジタル音楽ファイルが簡単に録音、再生、編集できるように設計されています。デジタル
         効果やスペクトル分析ツールの機能も備えています。<br>
@@ -750,30 +843,37 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
 <li><a href="https://mag.osdn.jp/21/07/07/122000">買収された「Audacity」の新しいプライバシーポリシーに批判</a></li>
 <li><a href="https://forest.watch.impress.co.jp/docs/news/1337507.html">「Audacity」のフォーク（分岐）プロジェクト、名称は「Tenacity」に</a></li>
 </ul>
-        <h4><a name="mozTocId265406" class="mozTocH4"></a>インストール方法 (debian 10)</h4>
-        # apt install audacity<br>
-        パッケージリストを読み込んでいます... 完了<br>
-        依存関係ツリーを作成していま す&nbsp; <br>
-        状態情報を読み取っています... 完了<br>
-        以下の追加パッケージがインストールされます:<br>
-        &nbsp; audacity-data libflac++6v5 libid3tag0 libportaudio2
-        libportsmf0 libsuil-0-0<br>
-        &nbsp; libvamp-hostsdk3v5 libwxbase3.0-0v5 libwxgtk3.0-0v5<br>
-        提案パッケージ:<br>
-        &nbsp; ladspa-plugin<br>
-        以下のパッケージが新たにインストールされます:<br>
-        &nbsp; audacity audacity-data libflac++6v5 libid3tag0
-        libportaudio2 libportsmf0<br>
-        &nbsp; libsuil-0-0 libvamp-hostsdk3v5 libwxbase3.0-0v5
-        libwxgtk3.0-0v5<br>
-        アップグレード: 0 個、新規インストール: 10 個、削除: 0 個、保留: 0 個。<br>
-        11.1 MB のアーカイブを取得する必要があります。<br>
-        この操作後に追加で 46.3 MB のディスク容量が消費されます。<br>
-        続行しますか? [Y/n]<br>
-        <br>
+<h4><a name="mozTocId265406" class="mozTocH4"></a>インストール方法 (debian 10)</h4>
+ <pre>
+  root@debian:/home/foo# apt install audacity
+  パッケージリストを読み込んでいます... 完了
+  依存関係ツリーを作成しています                
+  状態情報を読み取っています... 完了
+  以下の追加パッケージがインストールされます:
+    audacity-data libdouble-conversion1 libflac++6v5 libpcre2-16-0 libportsmf0
+    libqt5core5a libqt5dbus5 libqt5gui5 libqt5network5 libqt5svg5 libqt5widgets5
+    libsuil-0-0 libvamp-hostsdk3v5 libwxbase3.0-0v5 libwxgtk3.0-0v5
+    libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0
+    libxcb-render-util0 libxcb-xinerama0 libxcb-xkb1 libxkbcommon-x11-0
+    qt5-gtk-platformtheme qttranslations5-l10n
+  提案パッケージ:
+    qt5-image-formats-plugins qtwayland5
+  以下のパッケージが新たにインストールされます:
+    audacity audacity-data libdouble-conversion1 libflac++6v5 libpcre2-16-0
+    libportsmf0 libqt5core5a libqt5dbus5 libqt5gui5 libqt5network5 libqt5svg5
+    libqt5widgets5 libsuil-0-0 libvamp-hostsdk3v5 libwxbase3.0-0v5
+    libwxgtk3.0-0v5 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0
+    libxcb-render-util0 libxcb-xinerama0 libxcb-xkb1 libxkbcommon-x11-0
+    qt5-gtk-platformtheme qttranslations5-l10n
+  アップグレード: 0 個、新規インストール: 26 個、削除: 0 個、保留: 0 個。
+  21.4 MB のアーカイブを取得する必要があります。
+  この操作後に追加で 89.2 MB のディスク容量が消費されます。
+  続行しますか? [Y/n] 
+ </pre>
+<h4><a name="audacity2"></a>音声ファイルが表示されません</h4>
+おそらくこれは、Audacity の仕様のせいだと考えられます。ファイル名には sample.mp3 というように拡張子が必要です。sample のように拡張子がないファイルを指定したりクリックして選択しても再生可能ですが、再生リストには自動的に表示されません。
 <h3><a name="mozTocId893708" class="mozTocH3"></a>SoundTracker オーディオエディタ</h3>
 公式サイト <a href="http://www.soundtracker.org/">http://www.soundtracker.org/</a> <br>
-
 開発サイト <a href="https://sourceforge.net/projects/soundtracker/">https://sourceforge.net/projects/soundtracker/</a> <br>
 <h4><a name="mozTocId938770" class="mozTocH4"></a>インストール</h4>
 Unix/Linux 向けに作られています。バイナリパッケージが用意されていないので、ソースからコンパイルしてインストールする必要がありますが、詳しい作業手順がソースパッケージに同梱されています。<br>
@@ -803,12 +903,10 @@ root@debian:/home/hoge# apt install sweep<br>
 したがって sample というファイル名ではオーディオファイルとして認識されないので、sample.mp3 へ変更してください。
 <br>
         <a href="#navigator">↑</a>
-        <h3><a name="mozTocId27665" class="mozTocH3"></a>XMMS2 (X
-          Multimedia System 2)</h3>
+        <h3><a name="mozTocId27665" class="mozTocH3"></a>XMMS2 (X Multimedia System 2)</h3>
         Winamp に良く似たフリーなオーディオ・プレーヤで有名な XMMS の刷新板<br>
         <a href="#navigator">↑</a><br>
-        <h4><a name="mozTocId823946" class="mozTocH4"></a>Debian 10
-          (buster)</h4>
+        <h4><a name="mozTocId823946" class="mozTocH4"></a>Debian 10 (buster)</h4>
         # apt install xmms2<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -841,22 +939,286 @@ root@debian:/home/hoge# apt install sweep<br>
         続行しますか? [Y/n]<br>
       </div>
       <div class="jumpmenu"><a href="#navigator">↑</a><br>
-        <h3 id="content_1_10"><a name="mozTocId964901" class="mozTocH3"></a>MythTV
-          - a homebrew PVR project. (Fedora Core 3 w/ATrpm)</h3>
+        <h3 id="content_1_10"><a name="mozTocId964901" class="mozTocH3"></a>MythTV - a homebrew PVR project. (Fedora Core 3 w/ATrpm)</h3>
         <p>自家製 Personal Video Recorder の構築。<br>
           MythTV を利用するための関連パッケージ一式をインストール。</p>
-        <pre> # up2date -i mythtv-suite<br> <br> Fetching Obsoletes list for channel: atrpms-stable...<br> <br> Fetching Obsoletes list for channel: fedora-core-3...<br> <br> Fetching Obsoletes list for channel: updates-released-fc3...<br> <br> Fetching rpm headers...<br> ########################################<br> <br> Name                                    Version        Rel<br> ----------------------------------------------------------<br> mythtv-suite                            0.18.1         55.at             i386<br> <br> <br> Testing package set / solving RPM inter-dependencies...<br> ########################################<br> mythtv-suite-0.18.1-55.at.i ########################## Done.<br> apr-0.9.4-24.2.i386.rpm:    ########################## Done.<br> apr-util-0.9.4-17.i386.rpm: ########################## Done.<br> atrpms-61-1.at.noarch.rpm:  ########################## Done.<br> directfb-0.9.20-5.rhfc3.at. ########################## Done.<br> faad2-2.0-4.rhfc3.at.i386.r ########################## Done.<br> fftw2-single-2.1.5-9.rhfc3. ########################## Done.<br> fribidi-0.10.4-6.i386.rpm:  ########################## Done.<br> httpd-2.0.53-3.3.i386.rpm:  ########################## Done.<br> httpd-suexec-2.0.53-3.3.i38 ########################## Done.<br> kdelibs-3.4.2-0.fc3.2.i386. ########################## Done.<br> libFLAC6-1.1.1-7.rhfc3.at.i ########################## Done.<br> libcdaudio-0.99.12-5.rhfc3. ########################## Done.<br> libdvdread-0.9.4-3_1.rhfc3. ########################## Done.<br> libid3tag-0.15.0b-3_1.rhfc3 ########################## Done.<br> libiec61883_0-1.0.0-7.rhfc3 ########################## Done.<br> libmad-0.15.0b-2_1.rhfc3.at ########################## Done.<br> libmyth-0.18.1-114.rhfc3.at ########################## Done.<br> lzo-1.08-2_1.rhfc3.at.i386. ########################## Done.<br> mplayer-1.0-48_pre7try2.rhf ########################## Done.<br> mplayer-fonts-1.0-6.at.noar ########################## Done.<br> mysql-3.23.58-16.FC3.1.i386 ########################## Done.<br> mysql-server-3.23.58-16.FC3 ########################## Done.<br> mythbrowser-0.18.1-113.rhfc ########################## Done.<br> mythdvd-0.18.1-113.rhfc3.at ########################## Done.<br> mythgallery-0.18.1-113.rhfc ########################## Done.<br> mythgame-0.18.1-113.rhfc3.a ########################## Done.<br> mythmkmovie-1.1.4-4.rhfc3.a ########################## Done.<br> mythmusic-0.18.1-113.rhfc3. ########################## Done.<br> mythnews-0.18.1-113.rhfc3.a ########################## Done.<br> mythphone-0.18.1-113.rhfc3. ########################## Done.<br> mythplugins-0.18.1-113.rhfc ########################## Done.<br> myththemes-0.18-104.at.noar ########################## Done.<br> mythtv-0.18.1-114.rhfc3.at. ########################## Done.<br> mythtv-backend-0.18.1-114.r ########################## Done.<br> mythtv-frontend-0.18.1-114. ########################## Done.<br> mythtv-setup-0.18.1-114.rhf ########################## Done.<br> mythtv-theme-MediaCenter-0. ########################## Done.<br> mythtv-theme-MythCenter-0.1 ########################## Done.<br> mythtv-theme-abstract-0.200 ########################## Done.<br> mythtv-theme-isthmus-0.2004 ########################## Done.<br> mythtv-theme-photo-4-6.at.n ########################## Done.<br> mythtv-theme-purplegalaxy-0 ########################## Done.<br> mythtv-theme-sleek-0.35-2.a ########################## Done.<br> mythtv-theme-visor-0.16.2-5 ########################## Done.<br> mythtv-themes-0.18.1-114.rh ########################## Done.<br> mythvideo-0.18.1-113.rhfc3. ########################## Done.<br> mythweather-0.18.1-113.rhfc ########################## Done.<br> mythweb-0.18-68.at.noarch.r ########################## Done.<br> perl-Archive-Zip-1.14-0.99_ ########################## Done.<br> perl-Class-MethodMaker-1.12 ########################## Done.<br> perl-Compress-Zlib-1.37-1.f ########################## Done.<br> perl-Curses-1.06-4.rhfc3.at ########################## Done.<br> perl-DBD-MySQL-2.9003-5.i38 ########################## Done.<br> perl-DBI-1.40-6.fc3.i386.rp ########################## Done.<br> perl-HTML-TableExtract-1.08 ########################## Done.<br> perl-HTML-Tree-3.18-5.rhfc3 ########################## Done.<br> perl-IO-stringy-2.110-7.rhf ########################## Done.<br> perl-Lingua-Preferred-0.2.4 ########################## Done.<br> perl-SOAP-Lite-0.60a-3.rhfc ########################## Done.<br> perl-Term-ProgressBar-2.05- ########################## Done.<br> perl-TermReadKey-2.30-2.rhf ########################## Done.<br> perl-Tk-804.027-9.rhfc3.at. ########################## Done.<br> perl-Tk-TableMatrix-1.1-14. ########################## Done.<br> perl-WWW-Mechanize-1.12-2.r ########################## Done.<br> perl-XML-Simple-2.09-6.rhfc ########################## Done.<br> perl-XML-Writer-0.4.6-8.rhf ########################## Done.<br> perl-XMLTV-0.5.40-62.rhfc3. ########################## Done.<br> php-4.3.11-2.7.i386.rpm:    ########################## Done.<br> php-mysql-4.3.11-2.7.i386.r ########################## Done.<br> php-pear-4.3.11-2.7.i386.rp ########################## Done.<br> qt-MySQL-3.3.4-0.fc3.0.i386 ########################## Done.<br> transcode-1.0.0-18.rhfc3.at ########################## Done.<br> xmltv-0.5.40-62.rhfc3.at.no ########################## Done.<br> xmltv-grabbers-0.5.40-62.rh ########################## Done.<br> xmltv-gui-0.5.40-62.rhfc3.a ########################## Done.<br> liba52_0-0.7.4-6.rhfc3.at.i ########################## Done.<br> libmpeg2_0-0.4.0b-1.rhfc3.a ########################## Done.<br> libmpeg2convert0-0.4.0b-1.r ########################## Done.<br> perl-MIME-Lite-3.01-2.rhfc3 ########################## Done.<br> Preparing              ########################################### [100%]<br> <br> Installing...<br>    1:atrpms                 ########################################### [100%]<br>    2:mythtv                 ########################################### [100%]<br>    3:libiec61883_0          ########################################### [100%]<br>    4:perl-Tk                ########################################### [100%]<br>    5:perl-DBI               ########################################### [100%]<br>    6:libdvdread             ########################################### [100%]<br>    7:perl-TermReadKey       ########################################### [100%]<br>    8:perl-WWW-Mechanize     ########################################### [100%]<br>    9:perl-Compress-Zlib     ########################################### [100%]<br>   10:mythtv-themes          ########################################### [100%]<br>   11:lzo                    ########################################### [100%]<br>   12:libmad                 ########################################### [100%]<br>   13:apr                    ########################################### [100%]<br>   14:apr-util               ########################################### [100%]<br>   15:perl-Archive-Zip       ########################################### [100%]<br>   16:perl-Tk-TableMatrix    ########################################### [100%]<br>   17:perl-Class-MethodMaker ########################################### [100%]<br>   18:perl-Term-ProgressBar  ########################################### [100%]<br>   19:perl-Curses            ########################################### [100%]<br>   20:perl-HTML-TableExtract ########################################### [100%]<br>   21:perl-HTML-Tree         ########################################### [100%]<br>   22:perl-IO-stringy        ########################################### [100%]<br>   23:perl-Lingua-Preferred  ########################################### [100%]<br>   24:perl-XML-Simple        ########################################### [100%]<br>   25:perl-XML-Writer        ########################################### [100%]<br>   26:perl-XMLTV             ########################################### [100%]<br>   27:xmltv-gui              ########################################### [100%]<br>   28:perl-MIME-Lite         ########################################### [100%]<br>   29:perl-SOAP-Lite         ########################################### [100%]<br>   30:xmltv-grabbers         ########################################### [100%]<br>   31:xmltv                  ########################################### [100%]<br>   32:libmpeg2convert0       ########################################### [100%]<br>   33:libmpeg2_0             ########################################### [100%]<br>   34:liba52_0               ########################################### [100%]<br>   35:transcode              ########################################### [100%]<br>   36:mplayer-fonts          ########################################### [100%]<br>   37:libid3tag              ########################################### [100%]<br>   38:libcdaudio             ########################################### [100%]<br>   39:libFLAC6               ########################################### [100%]<br>   40:kdelibs                ########################################### [100%]<br>   41:fribidi                ########################################### [100%]<br>   42:fftw2-single           ########################################### [100%]<br>   43:faad2                  ########################################### [100%]<br>   44:directfb               ########################################### [100%]<br>   45:mplayer                ########################################### [100%]<br>   46:mysql                  ########################################### [100%]<br>   47:httpd                  ########################################### [100%]<br>   48:perl-DBD-MySQL         ########################################### [100%]<br>   49:mythmkmovie            ########################################### [100%]<br>   50:httpd-suexec           ########################################### [100%]<br>   51:mysql-server           ########################################### [100%]<br>   52:qt-MySQL               ########################################### [100%]<br>   53:libmyth                ########################################### [100%]<br>   54:mythtv-frontend        ########################################### [100%]<br>   55:mythtv-backend         ########################################### [100%]<br>   56:mythtv-setup           ########################################### [100%]<br>   57:mythbrowser            ########################################### [100%]<br>   58:mythdvd                ########################################### [100%]<br>   59:mythgallery            ########################################### [100%]<br>   60:mythgame               ########################################### [100%]<br>   61:mythmusic              ########################################### [100%]<br>   62:mythnews               ########################################### [100%]<br>   63:mythphone              ########################################### [100%]<br>   64:myththemes             ########################################### [100%]<br>   65:mythtv-theme-MediaCente########################################### [100%]<br>   66:mythtv-theme-MythCenter########################################### [100%]<br>   67:mythtv-theme-abstract  ########################################### [100%]<br>   68:mythtv-theme-isthmus   ########################################### [100%]<br>   69:mythtv-theme-photo     ########################################### [100%]<br>   70:mythtv-theme-purplegala########################################### [100%]<br>   71:mythtv-theme-sleek     ########################################### [100%]<br>   72:mythtv-theme-visor     ########################################### [100%]<br>   73:mythvideo              ########################################### [100%]<br>   74:mythweather            ########################################### [100%]<br>   75:mythplugins            ########################################### [100%]<br>   76:php                    ########################################### [100%]<br>   77:php-mysql              ########################################### [100%]<br>   78:mythweb                ########################################### [100%]<br>   79:mythtv-suite           ########################################### [100%]<br>   80:php-pear               ########################################### [100%]<br> The following packages were added to your selection to satisfy dependencies:<br> <br> Name                                    Version        Release<br> --------------------------------------------------------------<br> apr                                     0.9.4          24.2<br> apr-util                                0.9.4          17<br> atrpms                                  61             1.at<br> directfb                                0.9.20         5.rhfc3.at<br> faad2                                   2.0            4.rhfc3.at<br> fftw2-single                            2.1.5          9.rhfc3.at<br> fribidi                                 0.10.4         6<br> httpd                                   2.0.53         3.3<br> httpd-suexec                            2.0.53         3.3<br> kdelibs                                 3.4.2          0.fc3.2<br> libFLAC6                                1.1.1          7.rhfc3.at<br> libcdaudio                              0.99.12        5.rhfc3.at<br> libdvdread                              0.9.4          3_1.rhfc3.at<br> libid3tag                               0.15.0b        3_1.rhfc3.at<br> libiec61883_0                           1.0.0          7.rhfc3.at<br> libmad                                  0.15.0b        2_1.rhfc3.at<br> libmyth                                 0.18.1         114.rhfc3.at<br> lzo                                     1.08           2_1.rhfc3.at<br> mplayer                                 1.0            48_pre7try2.rhfc3.at<br> mplayer-fonts                           1.0            6.at<br> mysql                                   3.23.58        16.FC3.1<br> mysql-server                            3.23.58        16.FC3.1<br> mythbrowser                             0.18.1         113.rhfc3.at<br> mythdvd                                 0.18.1         113.rhfc3.at<br> mythgallery                             0.18.1         113.rhfc3.at<br> mythgame                                0.18.1         113.rhfc3.at<br> mythmkmovie                             1.1.4          4.rhfc3.at<br> mythmusic                               0.18.1         113.rhfc3.at<br> mythnews                                0.18.1         113.rhfc3.at<br> mythphone                               0.18.1         113.rhfc3.at<br> mythplugins                             0.18.1         113.rhfc3.at<br> myththemes                              0.18           104.at<br> mythtv                                  0.18.1         114.rhfc3.at<br> mythtv-backend                          0.18.1         114.rhfc3.at<br> mythtv-frontend                         0.18.1         114.rhfc3.at<br> mythtv-setup                            0.18.1         114.rhfc3.at<br> mythtv-theme-MediaCenter                0.17           4.at<br> mythtv-theme-MythCenter                 0.17           1.at<br> mythtv-theme-abstract                   0.20040910     2.at<br> mythtv-theme-isthmus                    0.20040804     1.at<br> mythtv-theme-photo                      4              6.at<br> mythtv-theme-purplegalaxy               0.20031214     3.at<br> mythtv-theme-sleek                      0.35           2.at<br> mythtv-theme-visor                      0.16.2         5.at<br> mythtv-themes                           0.18.1         114.rhfc3.at<br> mythvideo                               0.18.1         113.rhfc3.at<br> mythweather                             0.18.1         113.rhfc3.at<br> mythweb                                 0.18           68.at<br> perl-Archive-Zip                        1.14           0.99_2.rhfc3.at<br> perl-Class-MethodMaker                  1.12           4.rhfc3.at<br> perl-Compress-Zlib                      1.37           1.fc3<br> perl-Curses                             1.06           4.rhfc3.at<br> perl-DBD-MySQL                          2.9003         5<br> perl-DBI                                1.40           6.fc3<br> perl-HTML-TableExtract                  1.08           5.rhfc3.at<br> perl-HTML-Tree                          3.18           5.rhfc3.at<br> perl-IO-stringy                         2.110          7.rhfc3.at<br> perl-Lingua-Preferred                   0.2.4          2.rhfc3.at<br> perl-SOAP-Lite                          0.60a          3.rhfc3.at<br> perl-Term-ProgressBar                   2.05           4.rhfc3.at<br> perl-TermReadKey                        2.30           2.rhfc3.at<br> perl-Tk                                 804.027        9.rhfc3.at<br> perl-Tk-TableMatrix                     1.1            14.rhfc3.at<br> perl-WWW-Mechanize                      1.12           2.rhfc3.at<br> perl-XML-Simple                         2.09           6.rhfc3.at<br> perl-XML-Writer                         0.4.6          8.rhfc3.at<br> perl-XMLTV                              0.5.40         62.rhfc3.at<br> php                                     4.3.11         2.7<br> php-mysql                               4.3.11         2.7<br> php-pear                                4.3.11         2.7<br> qt-MySQL                                3.3.4          0.fc3.0<br> transcode                               1.0.0          18.rhfc3.at<br> xmltv                                   0.5.40         62.rhfc3.at<br> xmltv-grabbers                          0.5.40         62.rhfc3.at<br> xmltv-gui                               0.5.40         62.rhfc3.at<br> liba52_0                                0.7.4          6.rhfc3.at<br> libmpeg2_0                              0.4.0b         1.rhfc3.at<br> libmpeg2convert0                        0.4.0b         1.rhfc3.at<br> perl-MIME-Lite                          3.01           2.rhfc3.at</pre>
+
+<pre>
+ # up2date -i mythtv-suite
+ 
+ Fetching Obsoletes list for channel: atrpms-stable...
+ 
+ Fetching Obsoletes list for channel: fedora-core-3...
+ 
+ Fetching Obsoletes list for channel: updates-released-fc3...
+ 
+ Fetching rpm headers...
+ ########################################
+ 
+ Name                                    Version        Rel
+ ----------------------------------------------------------
+ mythtv-suite                            0.18.1         55.at             i386
+ 
+ 
+ Testing package set / solving RPM inter-dependencies...
+ ########################################
+ mythtv-suite-0.18.1-55.at.i ########################## Done.
+ apr-0.9.4-24.2.i386.rpm:    ########################## Done.
+ apr-util-0.9.4-17.i386.rpm: ########################## Done.
+ atrpms-61-1.at.noarch.rpm:  ########################## Done.
+ directfb-0.9.20-5.rhfc3.at. ########################## Done.
+ faad2-2.0-4.rhfc3.at.i386.r ########################## Done.
+ fftw2-single-2.1.5-9.rhfc3. ########################## Done.
+ fribidi-0.10.4-6.i386.rpm:  ########################## Done.
+ httpd-2.0.53-3.3.i386.rpm:  ########################## Done.
+ httpd-suexec-2.0.53-3.3.i38 ########################## Done.
+ kdelibs-3.4.2-0.fc3.2.i386. ########################## Done.
+ libFLAC6-1.1.1-7.rhfc3.at.i ########################## Done.
+ libcdaudio-0.99.12-5.rhfc3. ########################## Done.
+ libdvdread-0.9.4-3_1.rhfc3. ########################## Done.
+ libid3tag-0.15.0b-3_1.rhfc3 ########################## Done.
+ libiec61883_0-1.0.0-7.rhfc3 ########################## Done.
+ libmad-0.15.0b-2_1.rhfc3.at ########################## Done.
+ libmyth-0.18.1-114.rhfc3.at ########################## Done.
+ lzo-1.08-2_1.rhfc3.at.i386. ########################## Done.
+ mplayer-1.0-48_pre7try2.rhf ########################## Done.
+ mplayer-fonts-1.0-6.at.noar ########################## Done.
+ mysql-3.23.58-16.FC3.1.i386 ########################## Done.
+ mysql-server-3.23.58-16.FC3 ########################## Done.
+ mythbrowser-0.18.1-113.rhfc ########################## Done.
+ mythdvd-0.18.1-113.rhfc3.at ########################## Done.
+ mythgallery-0.18.1-113.rhfc ########################## Done.
+ mythgame-0.18.1-113.rhfc3.a ########################## Done.
+ mythmkmovie-1.1.4-4.rhfc3.a ########################## Done.
+ mythmusic-0.18.1-113.rhfc3. ########################## Done.
+ mythnews-0.18.1-113.rhfc3.a ########################## Done.
+ mythphone-0.18.1-113.rhfc3. ########################## Done.
+ mythplugins-0.18.1-113.rhfc ########################## Done.
+ myththemes-0.18-104.at.noar ########################## Done.
+ mythtv-0.18.1-114.rhfc3.at. ########################## Done.
+ mythtv-backend-0.18.1-114.r ########################## Done.
+ mythtv-frontend-0.18.1-114. ########################## Done.
+ mythtv-setup-0.18.1-114.rhf ########################## Done.
+ mythtv-theme-MediaCenter-0. ########################## Done.
+ mythtv-theme-MythCenter-0.1 ########################## Done.
+ mythtv-theme-abstract-0.200 ########################## Done.
+ mythtv-theme-isthmus-0.2004 ########################## Done.
+ mythtv-theme-photo-4-6.at.n ########################## Done.
+ mythtv-theme-purplegalaxy-0 ########################## Done.
+ mythtv-theme-sleek-0.35-2.a ########################## Done.
+ mythtv-theme-visor-0.16.2-5 ########################## Done.
+ mythtv-themes-0.18.1-114.rh ########################## Done.
+ mythvideo-0.18.1-113.rhfc3. ########################## Done.
+ mythweather-0.18.1-113.rhfc ########################## Done.
+ mythweb-0.18-68.at.noarch.r ########################## Done.
+ perl-Archive-Zip-1.14-0.99_ ########################## Done.
+ perl-Class-MethodMaker-1.12 ########################## Done.
+ perl-Compress-Zlib-1.37-1.f ########################## Done.
+ perl-Curses-1.06-4.rhfc3.at ########################## Done.
+ perl-DBD-MySQL-2.9003-5.i38 ########################## Done.
+ perl-DBI-1.40-6.fc3.i386.rp ########################## Done.
+ perl-HTML-TableExtract-1.08 ########################## Done.
+ perl-HTML-Tree-3.18-5.rhfc3 ########################## Done.
+ perl-IO-stringy-2.110-7.rhf ########################## Done.
+ perl-Lingua-Preferred-0.2.4 ########################## Done.
+ perl-SOAP-Lite-0.60a-3.rhfc ########################## Done.
+ perl-Term-ProgressBar-2.05- ########################## Done.
+ perl-TermReadKey-2.30-2.rhf ########################## Done.
+ perl-Tk-804.027-9.rhfc3.at. ########################## Done.
+ perl-Tk-TableMatrix-1.1-14. ########################## Done.
+ perl-WWW-Mechanize-1.12-2.r ########################## Done.
+ perl-XML-Simple-2.09-6.rhfc ########################## Done.
+ perl-XML-Writer-0.4.6-8.rhf ########################## Done.
+ perl-XMLTV-0.5.40-62.rhfc3. ########################## Done.
+ php-4.3.11-2.7.i386.rpm:    ########################## Done.
+ php-mysql-4.3.11-2.7.i386.r ########################## Done.
+ php-pear-4.3.11-2.7.i386.rp ########################## Done.
+ qt-MySQL-3.3.4-0.fc3.0.i386 ########################## Done.
+ transcode-1.0.0-18.rhfc3.at ########################## Done.
+ xmltv-0.5.40-62.rhfc3.at.no ########################## Done.
+ xmltv-grabbers-0.5.40-62.rh ########################## Done.
+ xmltv-gui-0.5.40-62.rhfc3.a ########################## Done.
+ liba52_0-0.7.4-6.rhfc3.at.i ########################## Done.
+ libmpeg2_0-0.4.0b-1.rhfc3.a ########################## Done.
+ libmpeg2convert0-0.4.0b-1.r ########################## Done.
+ perl-MIME-Lite-3.01-2.rhfc3 ########################## Done.
+ Preparing              ########################################### [100%]
+ 
+ Installing...
+    1:atrpms                 ########################################### [100%]
+    2:mythtv                 ########################################### [100%]
+    3:libiec61883_0          ########################################### [100%]
+    4:perl-Tk                ########################################### [100%]
+    5:perl-DBI               ########################################### [100%]
+    6:libdvdread             ########################################### [100%]
+    7:perl-TermReadKey       ########################################### [100%]
+    8:perl-WWW-Mechanize     ########################################### [100%]
+    9:perl-Compress-Zlib     ########################################### [100%]
+   10:mythtv-themes          ########################################### [100%]
+   11:lzo                    ########################################### [100%]
+   12:libmad                 ########################################### [100%]
+   13:apr                    ########################################### [100%]
+   14:apr-util               ########################################### [100%]
+   15:perl-Archive-Zip       ########################################### [100%]
+   16:perl-Tk-TableMatrix    ########################################### [100%]
+   17:perl-Class-MethodMaker ########################################### [100%]
+   18:perl-Term-ProgressBar  ########################################### [100%]
+   19:perl-Curses            ########################################### [100%]
+   20:perl-HTML-TableExtract ########################################### [100%]
+   21:perl-HTML-Tree         ########################################### [100%]
+   22:perl-IO-stringy        ########################################### [100%]
+   23:perl-Lingua-Preferred  ########################################### [100%]
+   24:perl-XML-Simple        ########################################### [100%]
+   25:perl-XML-Writer        ########################################### [100%]
+   26:perl-XMLTV             ########################################### [100%]
+   27:xmltv-gui              ########################################### [100%]
+   28:perl-MIME-Lite         ########################################### [100%]
+   29:perl-SOAP-Lite         ########################################### [100%]
+   30:xmltv-grabbers         ########################################### [100%]
+   31:xmltv                  ########################################### [100%]
+   32:libmpeg2convert0       ########################################### [100%]
+   33:libmpeg2_0             ########################################### [100%]
+   34:liba52_0               ########################################### [100%]
+   35:transcode              ########################################### [100%]
+   36:mplayer-fonts          ########################################### [100%]
+   37:libid3tag              ########################################### [100%]
+   38:libcdaudio             ########################################### [100%]
+   39:libFLAC6               ########################################### [100%]
+   40:kdelibs                ########################################### [100%]
+   41:fribidi                ########################################### [100%]
+   42:fftw2-single           ########################################### [100%]
+   43:faad2                  ########################################### [100%]
+   44:directfb               ########################################### [100%]
+   45:mplayer                ########################################### [100%]
+   46:mysql                  ########################################### [100%]
+   47:httpd                  ########################################### [100%]
+   48:perl-DBD-MySQL         ########################################### [100%]
+   49:mythmkmovie            ########################################### [100%]
+   50:httpd-suexec           ########################################### [100%]
+   51:mysql-server           ########################################### [100%]
+   52:qt-MySQL               ########################################### [100%]
+   53:libmyth                ########################################### [100%]
+   54:mythtv-frontend        ########################################### [100%]
+   55:mythtv-backend         ########################################### [100%]
+   56:mythtv-setup           ########################################### [100%]
+   57:mythbrowser            ########################################### [100%]
+   58:mythdvd                ########################################### [100%]
+   59:mythgallery            ########################################### [100%]
+   60:mythgame               ########################################### [100%]
+   61:mythmusic              ########################################### [100%]
+   62:mythnews               ########################################### [100%]
+   63:mythphone              ########################################### [100%]
+   64:myththemes             ########################################### [100%]
+   65:mythtv-theme-MediaCente########################################### [100%]
+   66:mythtv-theme-MythCenter########################################### [100%]
+   67:mythtv-theme-abstract  ########################################### [100%]
+   68:mythtv-theme-isthmus   ########################################### [100%]
+   69:mythtv-theme-photo     ########################################### [100%]
+   70:mythtv-theme-purplegala########################################### [100%]
+   71:mythtv-theme-sleek     ########################################### [100%]
+   72:mythtv-theme-visor     ########################################### [100%]
+   73:mythvideo              ########################################### [100%]
+   74:mythweather            ########################################### [100%]
+   75:mythplugins            ########################################### [100%]
+   76:php                    ########################################### [100%]
+   77:php-mysql              ########################################### [100%]
+   78:mythweb                ########################################### [100%]
+   79:mythtv-suite           ########################################### [100%]
+   80:php-pear               ########################################### [100%]
+ The following packages were added to your selection to satisfy dependencies:
+ 
+ Name                                    Version        Release
+ --------------------------------------------------------------
+ apr                                     0.9.4          24.2
+ apr-util                                0.9.4          17
+ atrpms                                  61             1.at
+ directfb                                0.9.20         5.rhfc3.at
+ faad2                                   2.0            4.rhfc3.at
+ fftw2-single                            2.1.5          9.rhfc3.at
+ fribidi                                 0.10.4         6
+ httpd                                   2.0.53         3.3
+ httpd-suexec                            2.0.53         3.3
+ kdelibs                                 3.4.2          0.fc3.2
+ libFLAC6                                1.1.1          7.rhfc3.at
+ libcdaudio                              0.99.12        5.rhfc3.at
+ libdvdread                              0.9.4          3_1.rhfc3.at
+ libid3tag                               0.15.0b        3_1.rhfc3.at
+ libiec61883_0                           1.0.0          7.rhfc3.at
+ libmad                                  0.15.0b        2_1.rhfc3.at
+ libmyth                                 0.18.1         114.rhfc3.at
+ lzo                                     1.08           2_1.rhfc3.at
+ mplayer                                 1.0            48_pre7try2.rhfc3.at
+ mplayer-fonts                           1.0            6.at
+ mysql                                   3.23.58        16.FC3.1
+ mysql-server                            3.23.58        16.FC3.1
+ mythbrowser                             0.18.1         113.rhfc3.at
+ mythdvd                                 0.18.1         113.rhfc3.at
+ mythgallery                             0.18.1         113.rhfc3.at
+ mythgame                                0.18.1         113.rhfc3.at
+ mythmkmovie                             1.1.4          4.rhfc3.at
+ mythmusic                               0.18.1         113.rhfc3.at
+ mythnews                                0.18.1         113.rhfc3.at
+ mythphone                               0.18.1         113.rhfc3.at
+ mythplugins                             0.18.1         113.rhfc3.at
+ myththemes                              0.18           104.at
+ mythtv                                  0.18.1         114.rhfc3.at
+ mythtv-backend                          0.18.1         114.rhfc3.at
+ mythtv-frontend                         0.18.1         114.rhfc3.at
+ mythtv-setup                            0.18.1         114.rhfc3.at
+ mythtv-theme-MediaCenter                0.17           4.at
+ mythtv-theme-MythCenter                 0.17           1.at
+ mythtv-theme-abstract                   0.20040910     2.at
+ mythtv-theme-isthmus                    0.20040804     1.at
+ mythtv-theme-photo                      4              6.at
+ mythtv-theme-purplegalaxy               0.20031214     3.at
+ mythtv-theme-sleek                      0.35           2.at
+ mythtv-theme-visor                      0.16.2         5.at
+ mythtv-themes                           0.18.1         114.rhfc3.at
+ mythvideo                               0.18.1         113.rhfc3.at
+ mythweather                             0.18.1         113.rhfc3.at
+ mythweb                                 0.18           68.at
+ perl-Archive-Zip                        1.14           0.99_2.rhfc3.at
+ perl-Class-MethodMaker                  1.12           4.rhfc3.at
+ perl-Compress-Zlib                      1.37           1.fc3
+ perl-Curses                             1.06           4.rhfc3.at
+ perl-DBD-MySQL                          2.9003         5
+ perl-DBI                                1.40           6.fc3
+ perl-HTML-TableExtract                  1.08           5.rhfc3.at
+ perl-HTML-Tree                          3.18           5.rhfc3.at
+ perl-IO-stringy                         2.110          7.rhfc3.at
+ perl-Lingua-Preferred                   0.2.4          2.rhfc3.at
+ perl-SOAP-Lite                          0.60a          3.rhfc3.at
+ perl-Term-ProgressBar                   2.05           4.rhfc3.at
+ perl-TermReadKey                        2.30           2.rhfc3.at
+ perl-Tk                                 804.027        9.rhfc3.at
+ perl-Tk-TableMatrix                     1.1            14.rhfc3.at
+ perl-WWW-Mechanize                      1.12           2.rhfc3.at
+ perl-XML-Simple                         2.09           6.rhfc3.at
+ perl-XML-Writer                         0.4.6          8.rhfc3.at
+ perl-XMLTV                              0.5.40         62.rhfc3.at
+ php                                     4.3.11         2.7
+ php-mysql                               4.3.11         2.7
+ php-pear                                4.3.11         2.7
+ qt-MySQL                                3.3.4          0.fc3.0
+ transcode                               1.0.0          18.rhfc3.at
+ xmltv                                   0.5.40         62.rhfc3.at
+ xmltv-grabbers                          0.5.40         62.rhfc3.at
+ xmltv-gui                               0.5.40         62.rhfc3.at
+ liba52_0                                0.7.4          6.rhfc3.at
+ libmpeg2_0                              0.4.0b         1.rhfc3.at
+ libmpeg2convert0                        0.4.0b         1.rhfc3.at
+ perl-MIME-Lite                          3.01           2.rhfc3.at
+</pre>
+
         <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_11"><a name="mozTocId759375" class="mozTocH4"></a>MythTV
-          のインストール後の設定について</h4>
+        <h4 id="content_1_11"><a name="mozTocId759375" class="mozTocH4"></a>MythTV のインストール後の設定について</h4>
         <p>MythTVでTV録画 <a href="http://www.d3.dion.ne.jp/%7Ekoetaka/mythtv.html">http://www.d3.dion.ne.jp/~koetaka/mythtv.html</a>
           というページが参考になります。<br>
         </p>
         <p><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></p>
-        <h3 id="content_1_24"><a name="mozTocId99290" class="mozTocH3"></a>Xawtv
-          - X Application for Watching TV</h3>
-        <h4 id="content_1_25"><a name="mozTocId649698" class="mozTocH4"></a>For
-          Debian Etch (2007-02-09)</h4>
+
+        <h3 id="content_1_24"><a name="mozTocId99290" class="mozTocH3"></a>Xawtv - X Application for Watching TV</h3>
+        <h4 id="content_1_25"><a name="mozTocId649698" class="mozTocH4"></a>For Debian Etch (2007-02-09)</h4>
         <p># apt-get install xawtv<br>
           パッケージリストを読み込んでいます... 完了<br>
           依存関係ツリーを作成しています... 完了<br>
@@ -898,17 +1260,96 @@ root@debian:/home/hoge# apt install sweep<br>
           warning: /usr/lib/X11/fonts/misc does not exist or is not a
           directory</p>
         <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_26"><a name="mozTocId507597" class="mozTocH4"></a>For
-          Debian 3.1 - Sarge</h4>
-        <pre> # apt-get install xawtv<br> パッケージリストを読みこんでいます... 完了<br> 依存関係ツリーを作成しています... 完了<br> 以下の特別パッケージがインストールされます:<br>   libdv4 libzvbi-common libzvbi0 pia scantv v4l-conf xawtv-plugins<br> 提案パッケージ:<br>   xawtv-plugin-qt tv-fonts<br> 推奨パッケージ:<br>   libdv-bin<br> 以下のパッケージが新たにインストールされます:<br>   libdv4 libzvbi-common libzvbi0 pia scantv v4l-conf xawtv xawtv-plugins<br> アップグレード: 0 個、新規インストール: 8 個、削除: 0 個、保留: 0 個。<br> 749kB のアーカイブを取得する必要があります。<br> 展開後に追加で 2531kB のディスク容量が消費されます。<br> 続行しますか? [Y/n] y<br> ---------------------------------------------------<br> # apt-get install tv-fonts<br> パッケージリストを読みこんでいます... 完了<br> 依存関係ツリーを作成しています... 完了<br> 以下のパッケージが新たにインストールされます:<br>   tv-fonts</pre>
+        <h4 id="content_1_26"><a name="mozTocId507597" class="mozTocH4"></a>For Debian 3.1 - Sarge</h4>
+
+        <pre> # apt-get install xawtv
+ パッケージリストを読みこんでいます... 完了
+ 依存関係ツリーを作成しています... 完了
+ 以下の特別パッケージがインストールされます:
+   libdv4 libzvbi-common libzvbi0 pia scantv v4l-conf xawtv-plugins
+ 提案パッケージ:
+   xawtv-plugin-qt tv-fonts
+ 推奨パッケージ:<br>   libdv-bin
+ 以下のパッケージが新たにインストールされます:
+   libdv4 libzvbi-common libzvbi0 pia scantv v4l-conf xawtv xawtv-plugins
+ アップグレード: 0 個、新規インストール: 8 個、削除: 0 個、保留: 0 個。
+ 749kB のアーカイブを取得する必要があります。
+ 展開後に追加で 2531kB のディスク容量が消費されます。
+ 続行しますか? [Y/n] y
+ ---------------------------------------------------
+ # apt-get install tv-fonts
+ パッケージリストを読みこんでいます... 完了
+ 依存関係ツリーを作成しています... 完了
+ 以下のパッケージが新たにインストールされます:
+   tv-fonts</pre>
+
         <pre> manuals:<br> /usr/share/doc/xawtv</pre>
         <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_27"><a name="mozTocId734856" class="mozTocH4"></a>For
-          CentOS 4.1</h4>
-        <pre> # apt-get install xawtv<br> Reading Package Lists... Done<br> Building Dependency Tree... Done<br> The following extra packages will be installed:<br>   aalib lame libquicktime lirc zvbi<br> The following NEW packages will be installed:<br>   aalib lame libquicktime lirc xawtv zvbi<br> 0 upgraded, 6 newly installed, 0 removed and 8 not upgraded.<br> Need to get 2601kB of archives.<br> After unpacking 7019kB of additional disk space will be used.<br> Do you want to continue? [Y/n]<br> Get:1 http://apt.sw.be redhat/el4/en/i386/dag aalib 1.4.0-5.2.el4.rf [108kB]<br> Get:2 http://apt.sw.be redhat/el4/en/i386/dag lame 3.96.1-2.2.el4.rf [529kB]<br> Get:3 http://apt.sw.be redhat/el4/en/i386/dag libquicktime 0.9.7-2.2.el4.rf [483kB]<br> Get:4 http://apt.sw.be redhat/el4/en/i386/dag lirc 0.6.6-4.2.el4.rf [237kB]<br> Get:5 http://apt.sw.be redhat/el4/en/i386/dag zvbi 0.2.15-1.2.el4.rf [387kB]<br> Get:6 http://apt.sw.be redhat/el4/en/i386/dag xawtv 3.94-2.2.el4.rf [857kB]<br> Fetched 2601kB in 34s (76.3kB/s)<br> Committing changes...<br> Preparing...                ########################################### [100%]<br>    1:aalib                  ########################################### [ 17%]<br>    2:lame                   ########################################### [ 33%]<br>    3:libquicktime           ########################################### [ 50%]<br>    4:lirc                   ########################################### [ 67%]<br>    5:zvbi                   ########################################### [ 83%]<br>    6:xawtv                  ########################################### [100%]<br> Done.</pre>
-        <pre> # apt-get install kernel<br> Reading Package Lists... Done<br> Building Dependency Tree... Done<br> Package kernel is a virtual package provided by:<br>   kernel-smp#2.6.9-5.0.5.106.unsupported 2.6.9-5.0.5.106.unsupported<br>   kernel-smp#2.6.9-11.106.unsupported 2.6.9-11.106.unsupported<br>   kernel-hugemem#2.6.9-5.0.5.106.unsupported 2.6.9-5.0.5.106.unsupported<br>   kernel-hugemem#2.6.9-11.106.unsupported 2.6.9-11.106.unsupported<br>   kernel#2.6.9-5.0.5.106.unsupported 2.6.9-5.0.5.106.unsupported<br>   kernel#2.6.9-11.106.unsupported 2.6.9-11.106.unsupported<br>   kernel-smp#2.6.9-11.EL 2.6.9-11.EL<br>   kernel-hugemem#2.6.9-11.EL 2.6.9-11.EL<br>   kernel#2.6.9-11.EL 2.6.9-11.EL [Installed]<br> You should explicitly select one to install.<br> E: Package kernel is a virtual package with multiple good providers.<br> <br> # apt-get install kernel#2.6.9-11.106.unsupported<br> Reading Package Lists... Done<br> Building Dependency Tree... Done<br> The following NEW packages will be installed:<br>   kernel#2.6.9-11.106.unsupported<br> 0 upgraded, 1 newly installed, 0 removed and 8 not upgraded.<br> Need to get 12.8MB of archives.<br> After unpacking 32.3MB of additional disk space will be used.<br> Get:1 http://ftp.nara.wide.ad.jp /pub/Linux/centos/4/apt/i386/centosplus<br> kernel#2.6.9-11.106.unsupported 2.6.9-11.106.unsupported [12.8MB]<br> Fetched 12.8MB in 48s (265kB/s)<br> Committing changes...<br> Preparing...                ########################################### [100%]<br>    1:kernel                 ########################################### [100%]<br> Done.<br><br></pre>
-        <h3 id="content_1_19"><a name="mozTocId906640" class="mozTocH3"></a>Adobe
-          Flash Player (フラッシュ・プレーヤー)</h3>
+        <h4 id="content_1_27"><a name="mozTocId734856" class="mozTocH4"></a>For CentOS 4.1</h4>
+
+<pre>
+ # apt-get install xawtv
+ Reading Package Lists... Done
+ Building Dependency Tree... Done
+ The following extra packages will be installed:
+   aalib lame libquicktime lirc zvbi
+ The following NEW packages will be installed:
+   aalib lame libquicktime lirc xawtv zvbi
+ 0 upgraded, 6 newly installed, 0 removed and 8 not upgraded.
+ Need to get 2601kB of archives.
+ After unpacking 7019kB of additional disk space will be used.
+ Do you want to continue? [Y/n]
+ Get:1 http://apt.sw.be redhat/el4/en/i386/dag aalib 1.4.0-5.2.el4.rf [108kB]
+ Get:2 http://apt.sw.be redhat/el4/en/i386/dag lame 3.96.1-2.2.el4.rf [529kB]
+ Get:3 http://apt.sw.be redhat/el4/en/i386/dag libquicktime 0.9.7-2.2.el4.rf [483kB]
+ Get:4 http://apt.sw.be redhat/el4/en/i386/dag lirc 0.6.6-4.2.el4.rf [237kB]
+ Get:5 http://apt.sw.be redhat/el4/en/i386/dag zvbi 0.2.15-1.2.el4.rf [387kB]
+ Get:6 http://apt.sw.be redhat/el4/en/i386/dag xawtv 3.94-2.2.el4.rf [857kB]
+ Fetched 2601kB in 34s (76.3kB/s)
+ Committing changes...
+ Preparing...                ########################################### [100%]
+    1:aalib                  ########################################### [ 17%]
+    2:lame                   ########################################### [ 33%]
+    3:libquicktime           ########################################### [ 50%]
+    4:lirc                   ########################################### [ 67%]
+    5:zvbi                   ########################################### [ 83%]
+    6:xawtv                  ########################################### [100%]
+ Done.
+
+ # apt-get install kernel
+ Reading Package Lists... Done
+ Building Dependency Tree... Done
+ Package kernel is a virtual package provided by:
+   kernel-smp#2.6.9-5.0.5.106.unsupported 2.6.9-5.0.5.106.unsupported
+   kernel-smp#2.6.9-11.106.unsupported 2.6.9-11.106.unsupported
+   kernel-hugemem#2.6.9-5.0.5.106.unsupported 2.6.9-5.0.5.106.unsupported
+   kernel-hugemem#2.6.9-11.106.unsupported 2.6.9-11.106.unsupported
+   kernel#2.6.9-5.0.5.106.unsupported 2.6.9-5.0.5.106.unsupported
+   kernel#2.6.9-11.106.unsupported 2.6.9-11.106.unsupported
+   kernel-smp#2.6.9-11.EL 2.6.9-11.EL
+   kernel-hugemem#2.6.9-11.EL 2.6.9-11.EL
+   kernel#2.6.9-11.EL 2.6.9-11.EL [Installed]
+ You should explicitly select one to install.
+ E: Package kernel is a virtual package with multiple good providers.
+ 
+ # apt-get install kernel#2.6.9-11.106.unsupported
+ Reading Package Lists... Done
+ Building Dependency Tree... Done
+ The following NEW packages will be installed:
+   kernel#2.6.9-11.106.unsupported
+ 0 upgraded, 1 newly installed, 0 removed and 8 not upgraded.
+ Need to get 12.8MB of archives.
+ After unpacking 32.3MB of additional disk space will be used.
+ Get:1 http://ftp.nara.wide.ad.jp /pub/Linux/centos/4/apt/i386/centosplus
+ kernel#2.6.9-11.106.unsupported 2.6.9-11.106.unsupported [12.8MB]
+ Fetched 12.8MB in 48s (265kB/s)
+ Committing changes...
+ Preparing...                ########################################### [100%]
+    1:kernel                 ########################################### [100%]
+ Done.
+</pre>
+
+        <h3 id="content_1_19"><a name="mozTocId906640" class="mozTocH3"></a>Adobe Flash Player (フラッシュ・プレーヤー)</h3>
         <div class="jumpmenu">
           <h4><a name="mozTocId5904" class="mozTocH4"></a>Flash Player
             は不要になったんですか？（2018年9月17日追記）<font color="#ff0000">《重要》</font></h4>
@@ -927,8 +1368,7 @@ root@debian:/home/hoge# apt install sweep<br>
           https://developer.mozilla.org/ja/docs/Plugins/Roadmap<br>
           <br>
           <a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_20"><a name="mozTocId945649" class="mozTocH4"></a>イ
-          ンストールの仕方</h4>
+        <h4 id="content_1_20"><a name="mozTocId945649" class="mozTocH4"></a>インストールの仕方</h4>
         <p>Firefox バージョン2.0
           以降のウェブブラウザーを利用している場合には、「プラグイン検索サービス」によって簡単にインストール可能となりました。従来の方法で個別に
           インストールした いときは、以下参照してください。</p>
@@ -1031,8 +1471,7 @@ http://fpdownload.macromedia.com/get/flashplayer/pdc/11.1.102.63/install_flash_p
           形式のバイナリーパッケージをインストールしている場合は、その管理ツールの通常の方法で削除するだけで済みます。<br>
         </p>
         <p><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></p>
-        <h4><a name="mozTocId759769" class="mozTocH4"></a>NHK
-          など一部のサイトで動画再生や音声が出ないのですが？</h4>
+        <h4><a name="mozTocId759769" class="mozTocH4"></a>NHK など一部のサイトで動画再生や音声が出ないのですが？</h4>
         <p>再生に必要となる Flash Player
           や動画関連のライブラリーが最新版に対応していないことが主な原因と考えられます。数年前は問題なく再生されたのに、ある日以降から急に利用できなくなっ
           た場合は、恐らくこれが原因でしょう。「メディアエラー
@@ -1054,8 +1493,7 @@ http://fpdownload.macromedia.com/get/flashplayer/pdc/11.1.102.63/install_flash_p
               で「○秒後にスキップして動画へ進めます」という日本語が□□みたいに文字化けする時は？</a></h4>
           <a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a><br>
         </div>
-        <h4 id="content_1_23"><a name="mozTocId821233" class="mozTocH4"></a>Flash
-          7 以前について（旧情報）</h4>
+        <h4 id="content_1_23"><a name="mozTocId821233" class="mozTocH4"></a>Flash 7 以前について（旧情報）</h4>
         <p>Linux用の Flash 7 の最新バージョン（かつ最終バージョン）は、7,0,68,0
           です。これより古いバージョンの利用は推奨できません。Mozilla, Netscape での動作が確認されています。</p>
         <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
@@ -1065,8 +1503,7 @@ http://fpdownload.macromedia.com/get/flashplayer/pdc/11.1.102.63/install_flash_p
         <br>
         <h3 id="content_1_12"><a name="mozTocId647086" class="mozTocH3"></a>Java
           (Java Runtime Environment) 実行環境の導入</h3>
-        <h4><a name="mozTocId255701" class="mozTocH4"></a> Java について<br>
-        </h4>
+        <h4><a name="mozTocId255701" class="mozTocH4"></a> Java について</h4>
         Java 実行環境(JRE: Java Runtime
         Environment)は、Javaアプリケーションを動作させるために必要です。Linux
         では、通常、フリーかつオープンソースの実装である OpenJDK
@@ -1075,8 +1512,7 @@ http://fpdownload.macromedia.com/get/flashplayer/pdc/11.1.102.63/install_flash_p
 参考: 「そもそもJavaって何なのですか？」[lifehacker 日本語版] https://www.lifehacker.jp/2013/03/130316jav_uni.html<br><br>
         Java 実行環境のインストールは、以下の手順で行えます。<br>
         <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a><br>
-          <h4><a name="mozTocId939047" class="mozTocH4"></a>インストールとアンインス
-            トール (Debian 10)</h4>
+          <h4><a name="mozTocId939047" class="mozTocH4"></a>インストールとアンインストール (Debian 10)</h4>
           デフォルトのパッケージをインストールするとき<br>
           # apt install default-jre<br>
           参照: <a href="https://wiki.debian.org/Java/">https://wiki.debian.org/Java/</a>
@@ -1100,8 +1536,7 @@ http://fpdownload.macromedia.com/get/flashplayer/pdc/11.1.102.63/install_flash_p
               /usr/lib/firefox-1.0.8/plugins/</li>
           </ul>
         </div>
-        <h4 id="content_1_14"><a name="mozTocId238522" class="mozTocH4"></a>Debian
-          4.0 (Etch）の場合</h4>
+        <h4 id="content_1_14"><a name="mozTocId238522" class="mozTocH4"></a>Debian 4.0 (Etch）の場合</h4>
         Debian 4.0 (Etch) の場合<br>
         <br>
         新しいインストール方法<br>
@@ -1193,8 +1628,7 @@ http://fpdownload.macromedia.com/get/flashplayer/pdc/11.1.102.63/install_flash_p
         </ol>
         以上でインストールが完了です。<br>
         <a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a>
-        <h4 id="content_1_15"><a name="mozTocId886619" class="mozTocH4"></a>Debian
-          3.1 (Sarge) の場合</h4>
+        <h4 id="content_1_15"><a name="mozTocId886619" class="mozTocH4"></a>Debian 3.1 (Sarge) の場合</h4>
         <p>Debian 3.1 (Sarge) の場合 - 2006.04 動作確認</p>
         <ol class="list1" style="padding-left: 16px; margin-left: 16px;">
           <li>jre-1_5_0_06-linux-i586.bin (ファイルサイズ：15.99 MB)の入手。 -
@@ -1297,8 +1731,7 @@ http://fpdownload.macromedia.com/get/flashplayer/pdc/11.1.102.63/install_flash_p
           Installed: jre 1.5.0_06-7hs.i386<br>
           Transaction(s) Complete</p>
         <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_18"><a name="mozTocId541167" class="mozTocH4"></a>日
-          本語が文字化けして（豆腐状態になって）表示されない時は？</h4>
+        <h4 id="content_1_18"><a name="mozTocId541167" class="mozTocH4"></a>日本語が文字化けして（豆腐状態になって）表示されない時は？</h4>
         <p>これは Sun java のデフォルトのフォント設定に原因があるようです。例えば、Debian 4.0
           の場合、次の手順で対処できます。</p>
         <ol class="list1" style="padding-left: 16px; margin-left: 16px;">
@@ -1306,8 +1739,7 @@ http://fpdownload.macromedia.com/get/flashplayer/pdc/11.1.102.63/install_flash_p
           <li>一度ログオフし、再度ユーザー・ログインします。</li>
         </ol>
         <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-          <li>[参照先] <a href="http://debian.fam.cx/index.php?Japanese#content_1_14">Sun
-              JVM (JRE, JDK) で文字化けする</a></li>
+          <li>[参照先] <a href="http://debian.fam.cx/index.php?Japanese#content_1_14">Sun JVM (JRE, JDK) で文字化けする</a></li>
         </ul>
         <br>
         <h4><a name="mozTocId519227" class="mozTocH4"></a>Firefox ブラウザへのサポート終了について</h4>
@@ -1323,52 +1755,43 @@ http://fpdownload.macromedia.com/get/flashplayer/pdc/11.1.102.63/install_flash_p
         &nbsp;参照3: <a href="https://www.fxsitecompat.dev/ja/docs/2016/plug-in-support-has-been-dropped-other-than-flash/">https://www.fxsitecompat.dev/ja/docs/2016/plug-in-support-has-been-dropped-other-than-flash/</a><br>
         <br>
       </div>
-      <h3 id="content_1_35"><a name="mozTocId429391" class="mozTocH3"></a>Tips
-        - 外部リンク<br>
-      </h3>
+      <h3 id="content_1_35"><a name="mozTocId429391" class="mozTocH3"></a>Tips - 外部リンク</h3>
       <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h4 id="content_1_36"><a name="mozTocId843814" class="mozTocH4"></a>Linux
-        ムービー・動画環境: MPEG ビデオファイルの作り方</h4>
+      <h4 id="content_1_36"><a name="mozTocId843814" class="mozTocH4"></a>Linux ムービー・動画環境: MPEG ビデオファイルの作り方</h4>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li><a href="http://real-baishi.net/linux/video/mjpegtools.html">http://real-baishi.net/linux/video/mjpegtools.html</a></li>
       </ul>
       <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h4 id="content_1_37"><a name="mozTocId104347" class="mozTocH4"></a>＠IT：MPEG2
-        形式の動画を作成するには</h4>
+      <h4 id="content_1_37"><a name="mozTocId104347" class="mozTocH4"></a>＠IT：MPEG2 形式の動画を作成するには</h4>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li><a href="http://www.atmarkit.co.jp/flinux/rensai/linuxtips/578makempeg2.html">http://www.atmarkit.co.jp/flinux/rensai/linuxtips/578makempeg2.html</a></li>
       </ul>
       <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h4 id="content_1_38"><a name="mozTocId238284" class="mozTocH4"></a>＠IT：DV
-        ビデオをキャプチャするには（GUI編）</h4>
+      <h4 id="content_1_38"><a name="mozTocId238284" class="mozTocH4"></a>＠IT：DV ビデオをキャプチャするには（GUI編）</h4>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li><a href="http://www.atmarkit.co.jp/flinux/rensai/linuxtips/580capdvgui.html">http://www.atmarkit.co.jp/flinux/rensai/linuxtips/580capdvgui.html</a></li>
       </ul>
       <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h4 id="content_1_39"><a name="mozTocId151097" class="mozTocH4"></a>Linux
-        ムービー・動画環境: Video CD の作り方</h4>
+      <h4 id="content_1_39"><a name="mozTocId151097" class="mozTocH4"></a>Linux ムービー・動画環境: Video CD の作り方</h4>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li><a href="http://real-baishi.net/linux/video/vcd.html">http://real-baishi.net/linux/video/vcd.html</a></li>
       </ul>
       <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h4 id="content_1_40"><a name="mozTocId153760" class="mozTocH4"></a>FAQ
-        MPEG出力時の各設定項目について</h4>
+      <h4 id="content_1_40"><a name="mozTocId153760" class="mozTocH4"></a>FAQ MPEG出力時の各設定項目について</h4>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li><a href="http://www.canopus.co.jp/tech/faqid/faq000360.htm">http://www.canopus.co.jp/tech/faqid/faq000360.htm</a></li>
       </ul>
       <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h4 id="content_1_41"><a name="mozTocId330479" class="mozTocH4"></a>MPEG
-        ビデオのCD配布</h4>
+      <h4 id="content_1_41"><a name="mozTocId330479" class="mozTocH4"></a>MPEG ビデオのCD配布</h4>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li><a href="http://shino.pos.to/mpeg/vcd.html">http://shino.pos.to/mpeg/vcd.html</a></li>
       </ul>
       <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h4 id="content_1_42"><a name="mozTocId877756" class="mozTocH4"></a>M.P.E.G
-        -How to</h4>
+      <h4 id="content_1_42"><a name="mozTocId877756" class="mozTocH4"></a>M.P.E.G -How to</h4>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li><a href="http://www.koubou.org/hmp/mpeg_how.html">http://www.koubou.org/hmp/mpeg_how.html</a></li>
       </ul>
       <hr width="100%" size="+"><a href="../../index.html">HOME</a><br>
     </div>
-  
-</body></html>
+ </body>
+</html>
