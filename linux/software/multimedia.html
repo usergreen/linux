@@ -10,7 +10,7 @@
       <tbody>
         <tr>
           <td valign="top"><a href="../../index.html">HOME</a> / <a href="index.html">Software</a></td>
-          <td valign="middle" align="right">Last updated: 2022-04-10 10:28 JST</td>
+          <td valign="middle" align="right">Last updated: 2022-04-10 21:38 JST</td>
         </tr>
       </tbody>
 </table>
@@ -76,7 +76,8 @@
     <li><a href="#mozTocId311725">Audacious オーディオプレーヤ</a>
      <ol>
       <li><a href="#mozTocId483097">インストール方法 (Debian 10)</a></li>
-      <li><a href="#audacious">演奏の順番を変えるには</a></li></ol></li>
+      <li><a href="#audacious">演奏の順番を変えるには</a></li>
+      <li><a href="#audacious">Audtool でもっと便利に使う</a></li></ol></li>
     <li><a href="#mozTocId127988">Audacity オーディオエディタ（音声編集ソフト）</a>
      <ol>
       <li><a href="#audacity">Audacity とは何ですか - 関連情報</a></li>
@@ -834,6 +835,13 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
         複数の音声ファイルが同じフォルダに収録・保存されている場合、通常は保存順に演奏されますが、
         「プレイリスト」を使うことで任意の順番に演奏順を変更できます。たとえば、ソート機能の中のトラックナンバーやアルバムを使うと
         元のアルバムに収録された順番に並べ替えて演奏することが可能になります。
+        <h4><a name="audacious2"></a>Audtool でもっと便利に使う</h4>
+Audtool というパワフルな管理ツールが付属しています。たとえば次のコマンドで曲名やアーティスト名を取得できます。<br>
+<pre>
+  $ audtool current-song
+  $ audtool current-song-tuple-data artist
+</pre>
+出典: さらに詳しい解説は <a href="https://wiki.archlinux.jp/index.php/Audacious">https://wiki.archlinux.jp/index.php/Audacious</a> をご覧ください。
         <h3><a name="mozTocId127988" class="mozTocH3"></a>Audacity オーディオエディタ（音声編集ソフト）</h3>
 <h4><a name="audacity"></a>Audacity とは何ですか - 関連情報</h4>
         マルチトラック対応のオーディオ・エディタ（音声編集ソフト）です。デジタル音楽ファイルが簡単に録音、再生、編集できるように設計されています。デジタル
