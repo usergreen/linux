@@ -5,21 +5,18 @@
  </head>
  <body>
     <div id="navigator">
-
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
       <tbody>
         <tr>
           <td valign="top"><a href="../../index.html">HOME</a> / <a href="index.html">Software</a></td>
-          <td valign="middle" align="right">Last updated: 2022-04-10 21:45 JST</td>
+          <td valign="middle" align="right">Last updated: 2022-04-12 18:17 JST</td>
         </tr>
       </tbody>
 </table>
       <hr width="100%" size="+">
-
       <h2><a name="mozTocId200449" class="mozTocH2"></a><font size="+2">
           <b>マルチメディア関連のアプリケーション</b></font> </h2>
       マルチメディア関連ソフト (application programs) についてのインストール方法や Tips など。<br>
-
 <ul id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
   <li>
    <ol>
@@ -68,16 +65,22 @@
      <ol>
       <li><a href="#mozTocId334344">Debian 10</a></li>
       <li><a href="#mozTocId963664">CETUC - Network Simulation Laboratory</a></li></ol></li>
-    <li><a href="#mozTocId649611"> Sound Recorder (GNOME サウンドレコーダ)</a>
+    <li><a href="#asunder">Asunder（オーディオCD リッパー）</a></li>
+      <ol>
+       <li><a href="#asunder1">Asunder とは？</a></li>
+       <li><a href="#asunder2">インストール方法 (Debian 10)</a></li>
+       <li><a href="#asunder3">使い方について</a></li></ol></li>
+    <li><a href="#mozTocId649611">Sound Recorder (GNOME サウンドレコーダ)</a>
      <ol>
       <li><a href="#mozTocId295960">インストール方法 (debian 10)</a></li>
       <li><a href="#mozTocId650545">録音の仕方について</a></li>
       <li><a href="#mozTocId780750">「PulseAudio を使って録音する」-2016.01.13（古い記事、一部非現行）</a></li></ol></li>
     <li><a href="#mozTocId311725">Audacious オーディオプレーヤ</a>
      <ol>
-      <li><a href="#mozTocId483097">インストール方法 (Debian 10)</a></li>
-      <li><a href="#audacious">演奏の順番を変えるには</a></li>
-      <li><a href="#audacious2">Audtool でもっと便利に使う</a></li></ol></li>
+      <li><a href="#audacious1">インストール方法 (Debian 10)</a></li>
+      <li><a href="#audacious2">演奏の順番を変えるには</a></li>
+      <li><a href="#audacious3">音質を調整するには</a></li>
+      <li><a href="#audacious4">Audtool でもっと便利に使う</a></li></ol></li>
     <li><a href="#mozTocId127988">Audacity オーディオエディタ（音声編集ソフト）</a>
      <ol>
       <li><a href="#audacity">Audacity とは何ですか - 関連情報</a></li>
@@ -133,11 +136,10 @@
       <li><a href="#mozTocId877756">M.P.E.G -How to</a></li></ol></li>
 </ol></li></ul>
       <a href="#navigator">↑</a><br>
-
-      <h3><a name="mozTocId185956" class="mozTocH3"></a>Bracero CD/DVD 作成ツール</h3>
-      GNOME デスクトップ向けに開発された、グラフィカルな CD/DVD
-      作成ソフトウェア。一連のソフトウェアをインストールすれば、GNOME 以外のデスクトップでも利用できます。<br>
-      <h4><a name="mozTocId614902" class="mozTocH4"></a>インストール方法 (Debian 9 -stretch)</h4>
+<h3><a name="mozTocId185956" class="mozTocH3"></a>Bracero CD/DVD 作成ツール</h3>
+ GNOME デスクトップ向けに開発された、グラフィカルな CD/DVD
+ 作成ソフトウェア。一連のソフトウェアをインストールすれば、GNOME 以外のデスクトップでも利用できます。<br>
+<h4><a name="mozTocId614902" class="mozTocH4"></a>インストール方法 (Debian 9 -stretch)</h4>
       # apt install brasero<br>
       パッケージリストを読み込んでいます... 完了<br>
       依存関係ツリーを作成していま す&nbsp; <br>
@@ -180,8 +182,8 @@
       8,812 kB のアーカイブを取得する必要があります。<br>
       この操作後に追加で 28.5 MB のディスク容量が消費されます。<br>
       続行しますか? [Y/n] <br>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h3 id="content_1_5"><a name="mozTocId589668" class="mozTocH3"></a><span class="noexists">GnomeBaker</span> (CD/DVD作成ツール)</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_5"><a name="mozTocId589668" class="mozTocH3"></a><span class="noexists">GnomeBaker</span> (CD/DVD作成ツール)</h3>
       <p><span class="noexists">GnomeBaker</span> は GNOME デスクトップ環境用の
         CDライターです。GNOME 2.14 以降標準となったので、X-CD-Roast より置き換えられました。</p>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
@@ -198,8 +200,8 @@
           After unpacking 3333kB of additional disk space will be used.<br>
           Do you want to continue? [Y/n] y</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h3 id="content_1_6"><a name="mozTocId464372" class="mozTocH3"></a>K3b (CD/DVD作成ツール)</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_6"><a name="mozTocId464372" class="mozTocH3"></a>K3b (CD/DVD作成ツール)</h3>
       <p>K3b は KDE デスクトップ環境用の CD ライターです。KDE環境のライブラリを追加すれば、GNOME環境でも利用できます。</p>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li>CD ライティング・ツールのインストールについて。以下は CentOS 4 の例です。</li>
@@ -360,19 +362,18 @@
     5:xvidcore               ########################################### [ 83%]
     6:ffmpeg                 ########################################### [100%]
  Done.</pre>
-
-        <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_4"><a name="mozTocId302755" class="mozTocH4"></a>「フレームレート」とは？</h4>
+<div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
+<h4 id="content_1_4"><a name="mozTocId302755" class="mozTocH4"></a>「フレームレート」とは？</h4>
         「動画では、連続する画像の１枚を「フレーム」と呼びます。１秒あたりのフレーム数を表す、サンプリングレートを「フレームレート」と
         いい、単位 は、fps (: Frames per second)で表します。つまり、このフレームレートが大きければ大きいほど、動画像の動きは滑らかになる訳です。
         しかし、人間の分解能は、動きに対し てあまり高くはありません。」 - <a href="http://www.nime.ac.jp/%7Einaba/LR/MOV/1-1.html">http://www.nime.ac.jp/~inaba/LR/MOV/1-1.html</a>
         より一部引用。<br>
-        <br>
-        <h3><a name="mozTocId441889" class="mozTocH3"></a>Kazam スクリーンキャスタ（録画ソフト）</h3>
+<br>
+<h3><a name="mozTocId441889" class="mozTocH3"></a>Kazam スクリーンキャスタ（録画ソフト）</h3>
         スクリーンキャスタとは、動画（ビデオ）を録るためのツール（ソフトウェア）です。<br>
         紹介記事「Linuxでスクリーンキャストを撮るKazamの使い方」<a href="https://news.mynavi.jp/article/20180924-696076/">https://news.mynavi.jp/article/20180924-696076/</a><br>
-        <br>
-        <a name="mozTocId852270" class="mozTocH4"></a> Debian 10 (buster)<br>
+<br>
+<a name="mozTocId852270" class="mozTocH4"></a> Debian 10 (buster)<br>
         # apt install kazam<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -404,8 +405,8 @@
         you to try other Linux video editors such as Shotcut, Kdenlive,
         Flowblade, OpenShot, PiTiVi, LiVES, and LightWorks." 出典 <a href="https://web.archive.org/web/20140214045913/http://kinodv.org/">https://web.archive.org/web/20140214045913/http://kinodv.org/</a><br>
         なお、2020年1月現在、公式サイトから古いバージョンの配布は引き続き行われていますが、この利用は推奨されていません。<br>
-        <br>
-        <h4><a name="mozTocId933218" class="mozTocH4"></a>インストール方法 (Debian 10)</h4>
+<br>
+<h4><a name="mozTocId933218" class="mozTocH4"></a>インストール方法 (Debian 10)</h4>
         Debian で独自に保守されている Kino パッケージがあります。公式版に色々な修正を加えたうえで利用可能にしています。<br>
         <br>
         # apt install kino<br>
@@ -422,8 +423,8 @@
         4,834 kB のアーカイブを取得する必要があります。<br>
         この操作後に追加で 9,879 kB のディスク容量が消費されます。<br>
         続行しますか? [Y/n]<br>
-        <br>
-        <h4><a name="mozTocId276032" class="mozTocH4"></a>インストール方法 (Fedora Core 3)</h4>
+<br>
+<h4><a name="mozTocId276032" class="mozTocH4"></a>インストール方法 (Fedora Core 3)</h4>
         # yum install kino<br>
         Repository updates-released already added, not adding again<br>
         Repository base already added, not adding again<br>
@@ -512,8 +513,8 @@
         libsndfile.i386 0:1.0.11-1.1.fc3.rf<br>
         Complete!<br>
         <br>
-        <a href="#navigator">↑</a><br>
-        <h3><a name="mozTocId292533" class="mozTocH3"></a>MPlayer (エムプレーヤ)</h3>
+<a href="#navigator">↑</a><br>
+<h3><a name="mozTocId292533" class="mozTocH3"></a>MPlayer (エムプレーヤ)</h3>
         MPlayer - The Movie Player<br>
         <br>
         <a name="mozTocId360330" class="mozTocH4"></a>Debian 10 (buster)<br>
@@ -560,7 +561,7 @@
         MPlayer を元にして、多くの新機能が追加されています。簡単なグラフィカル・インターフェイスも備えますが、mpv
         単独で使用するときは基本的にコマンドラインから操作します。<br>
         <br>
-        <h4><a name="mozTocId720588" class="mozTocH4"></a>インストール (Debian10)</h4>
+<h4><a name="mozTocId720588" class="mozTocH4"></a>インストール (Debian10)</h4>
         # apt install mpv<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -586,17 +587,16 @@
         続行しますか? [Y/n]<br>
       </div>
       <br>
-      <div class="jumpmenu"><a href="#navigator">↑</a><br>
-        <h3><a name="mozTocId64228" class="mozTocH3"></a>SMPlayer</h3>
-        <h4><a name="mozTocId483605" class="mozTocH4"></a>SMPlayer とは</h4>
+<div class="jumpmenu"><a href="#navigator">↑</a><br>
+<h3><a name="mozTocId64228" class="mozTocH3"></a>SMPlayer</h3>
+ <h4><a name="mozTocId483605" class="mozTocH4"></a>SMPlayer とは</h4>
         メディアプレーヤーのグラフィカルなフロントエンドです。したがって、バックエンドとして機能する　MPlayer または mpv
         と組み合わせて使用する必要がありますインターフェースやマニュアル、ヘルプは完全に日本語に対応済みです。SMPlayer
         には便利なレジューム機能があって、動画の再生が前回停止（中断）した続きから再開されます。<br>
         <br>
         SMPlayer 公式サイト: <a href="https://www.smplayer.info/ja/info">https://www.smplayer.info/ja/info</a><br>
         ファーストステップ・ガイド: <a href="https://www.smplayer.info/first-steps.php?">https://www.smplayer.info/first-steps.php?</a><br>
-        <br>
-        <h4><a name="mozTocId172960" class="mozTocH4"></a> インストール (Debian 10)</h4>
+ <h4><a name="mozTocId172960" class="mozTocH4"></a> インストール (Debian 10)</h4>
         # apt install smplayer<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -635,10 +635,10 @@
         <li>接続しているディスプレイのハード側の設定も適切かどうか確認した方が良いでしょう。</li>
       </ul>
       <div class="jumpmenu"><a href="#navigator">↑</a><br>
-        <h3><a name="mozTocId318880" class="mozTocH3"></a>VLC (VLC メディアプレーヤ)</h3>
+<h3><a name="mozTocId318880" class="mozTocH3"></a>VLC (VLC メディアプレーヤ)</h3>
         非常に多くのコーデックが内蔵されているので、多数のメディア・ファイルに対応します。同類のプレーヤーのうちで、VLC
         メディアプレーヤーは開発が活発な方なので頻繁にリリースが行われています。<br>
-        <h4><a name="mozTocId418470" class="mozTocH4"></a>インストール -- Debian 10 (buster)</h4>
+ <h4><a name="mozTocId418470" class="mozTocH4"></a>インストール -- Debian 10 (buster)</h4>
         # apt install vlc<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -683,7 +683,7 @@
         19.3 MB のアーカイブを取得する必要があります。<br>
         この操作後に追加で 81.4 MB のディスク容量が消費されます。<br>
         続行しますか? [Y/n] <br>
-<h4><a name="mozTocId154108" class="mozTocH4"></a>簡単に PC の画面を録画する方法は？</h4>
+ <h4><a name="mozTocId154108" class="mozTocH4"></a>簡単に PC の画面を録画する方法は？</h4>
 無料でオープンソースのメディアプレイヤー「VLC」で簡単にPCの画面を録画する方法<br>
 <a href="https://gigazine.net/news/20210717-record-screen-with-vlc/">https://gigazine.net/news/20210717-record-screen-with-vlc/</a> (GIGAZINE)<br>
 <br>
@@ -698,14 +698,12 @@
 (参照元)<br>
 How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/record-screen-using-vlc/">https://www.makeuseof.com/tag/record-screen-using-vlc/</a> <br>
 <br>
-        <a href="#navigator">↑</a>
-        <h3 id="content_1_32"><a name="mozTocId656285" class="mozTocH3"></a>xine
-          ビデオプレーヤ<br>
-        </h3>
-        <a href="#navigator">↑</a><br>
+<a href="#navigator">↑</a>
+<h3 id="content_1_32"><a name="mozTocId656285" class="mozTocH3"></a>xine ビデオプレーヤ</h3>
+<a href="#navigator">↑</a><br>
         Linux ではわりと古くから知られている有名な DVD プレーヤーです。グラフィカルなフロントエンドとして、xine-ui や
         gxine があります。<br>
-        <h4><a name="mozTocId334344" class="mozTocH4"></a>Debian 10</h4>
+ <h4><a name="mozTocId334344" class="mozTocH4"></a>Debian 10</h4>
         Debian 10 では以下のコマンドでインストール可能です。<br>
         <br>
         # apt install xine-ui<br>
@@ -736,7 +734,7 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
         インすると反映されるようです。<br>
         <br>
         <div class="jumpmenu"><a href="#navigator">↑</a></div>
-        <h4 id="content_1_33"><a name="mozTocId963664" class="mozTocH4"></a>CETUC - Network Simulation Laboratory</h4>
+ <h4 id="content_1_33"><a name="mozTocId963664" class="mozTocH4"></a>CETUC - Network Simulation Laboratory</h4>
         <p>These rpms are build in a <span class="noexists">RedHat<a href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=RedHat&amp;refer=SoftWares%2FMultimedia">?</a></span>
           Linux 7.3 server. Some care is taken to keep them portable
           across different distros, so they should also work on RH 7.x,
@@ -764,13 +762,44 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
               - Network Simulation Laboratory</a> &gt; <a href="http://cambuca.ldhs.cetuc.puc-rio.br/xine">Daily
               xine builds with CSS support</a></li>
         </ul>
-        <h3><a name="mozTocId649611" class="mozTocH3"></a> Sound Recorder (GNOME サウンドレコーダ)</h3>
+<h3><a name="asunder"></a>Asunder（オーディオCD リッパー）</h3>
+ <h4><a name="asunder1">Asunder とは？</h4>
+Asunder は Linux 用のグラフィカルなオーディオCD リッパーおよびエンコーダーです。オーディオ CD のトラックを WAV、MP3、OGG、FLAC、Opus、WavPack、Musepack、AAC、Monkey's Audio のいずれかのファイルとして保存するのに利用できます。
+<blockquote>
+<p>Asunder is a graphical Audio CD ripper and encoder for Linux. You can use it to save tracks from an Audio CD as any of WAV, MP3, OGG, FLAC, Opus, WavPack, Musepack, AAC, and Monkey's Audio files.</p>
+<p>
+The Name is from the Oxford Advanced Learner's Dictionary:<br>
+asunder
+<ul><li>adv literary [Language: Old English] to be torn violently apart</li></ul>
+</p>
+Asunder 公式サイト <a href="http://littlesvr.ca/asunder"/>http://littlesvr.ca/asunder/</a> より。
+</blockquote>
+ <h4><a name="asunder2"></a>インストール方法 (Debian 10)</h4>
+  <pre>
+  root@debian:/home/user# apt install asunder
+  パッケージリストを読み込んでいます... 完了
+  依存関係ツリーを作成しています                
+  状態情報を読み取っています... 完了
+  以下の追加パッケージがインストールされます:
+    cdparanoia flac vorbis-tools
+  提案パッケージ:
+    lame
+  以下のパッケージが新たにインストールされます:
+    asunder cdparanoia flac vorbis-tools
+  アップグレード: 0 個、新規インストール: 4 個、削除: 0 個、保留: 0 個。
+  526 kB のアーカイブを取得する必要があります。
+  この操作後に追加で 2,247 kB のディスク容量が消費されます。
+  続行しますか? [Y/n] 
+  </pre>
+ <h4><a name="asunder3"></a>使い方について</h4>
+ 次の日本語サイトが参考になります。
+ <a href="https://cloud-work.net/linuxmint/asunder/">https://cloud-work.net/linuxmint/asunder/</a>
+<h3><a name="mozTocId649611" class="mozTocH3"></a> Sound Recorder (GNOME サウンドレコーダ)</h3>
         デスクトップ用のシンプルで洗練されたサウンドレコーダです。もともと、GNOME デスクトップ用として開発されましたが、MATE
         デスクトップでも動作します。音声の録音が簡単にできるユーティリティ・ソフトウェアです。再生機能もあります。OGG, MP3,
         FLAC などのフォーマットをサポートします。<br>
-        Sound Recorder 公式サイト <a href="https://wiki.gnome.org/Design/Apps/SoundRecorder">https://wiki.gnome.org/Design/Apps/SoundRecorder<br>
-        </a><br>
-        <h4><a name="mozTocId295960" class="mozTocH4"></a>インストール方法 (debian 10)</h4>
+        Sound Recorder 公式サイト <a href="https://wiki.gnome.org/Design/Apps/SoundRecorder">https://wiki.gnome.org/Design/Apps/SoundRecorder</a><br>
+ <h4><a name="mozTocId295960" class="mozTocH4"></a>インストール方法 (debian 10)</h4>
         # apt install gnome-sound-recorder<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -783,7 +812,7 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
         3,241 kB のアーカイブを取得する必要があります。<br>
         この操作後に追加で 11.6 MB のディスク容量が消費されます。<br>
         続行しますか? [Y/n]<br>
-        <h4><a name="mozTocId650545" class="mozTocH4"></a>録音の仕方について</h4>
+ <h4><a name="mozTocId650545" class="mozTocH4"></a>録音の仕方について</h4>
         Sound Recorder がバージョン 3.21
         にアップグレードされて、操作がより簡潔に行えます。ただし、最低限の設定項目しかないので、編集はできません。アプリケーション・メニューより起動後、
         左上端にあるマイクのアイコンから、フォーマットやモードを設定します。録音ボタンで開始し、完了ボタンで終了します。入力レベルはコン
@@ -793,11 +822,10 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
         なお、これで録音したオーディオ・ファイルは、ユーサーのディレクトリ直下に自動的に作成される Recordings
         という名前のディレクトリへ保存されます。ファイル名が勝手に Clip123
         のようになるので、好きな名前へ変更すると良いでしょう。<br>
-        <h4><a name="mozTocId780750" class="mozTocH4"></a><a href="recording_sound.html">「PulseAudio を使って録音する」-2016.01.13</a>（古い記事、一部非現行）</h4>
+ <h4><a name="mozTocId780750" class="mozTocH4"></a><a href="recording_sound.html">「PulseAudio を使って録音する」-2016.01.13</a>（古い記事、一部非現行）</h4>
         Palse Audio Volume Control (pavucontrol)
         と連携させてサウンドを録る方法について書いています。<br>
-        <br>
-        <h3><a name="mozTocId311725" class="mozTocH3"></a>Audacious オーディオプレーヤ</h3>
+<h3><a name="mozTocId311725" class="mozTocH3"></a>Audacious オーディオプレーヤ</h3>
         Audacious は Winamp に似た外観をもったオーディオ・プレーヤーです。Xmms と似る
         beep-media-player
         があって、これをさらにフォークして開発されました。このプレーヤーの特徴は、より多くのコーディックに対応可能なことです。以下のコーディックに対応し
@@ -811,8 +839,7 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
         &nbsp;* Windows Media (WMA)<br>
         &nbsp;* WAVE<br>
         公式ウェブサイト <a href="https://www.audacious-media-player.org/">https://www.audacious-media-player.org/</a><br>
-        <br>
-        <h4><a name="mozTocId483097" class="mozTocH4"></a>インストール方法 (Debian 10)</h4>
+ <h4><a name="audacious1"></a>インストール方法 (Debian 10)</h4>
         # apt install audacious<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -831,18 +858,22 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
         1,920 kB のアーカイブを取得する必要があります。<br>
         この操作後に追加で 8,958 kB のディスク容量が消費されます。<br>
         続行しますか? [Y/n]<br>
-        <h4><a name="audacious"></a>演奏の順番を変えるには</h4>
+ <h4><a name="audacious2"></a>演奏の順番を変えるには</h4>
         複数の音声ファイルが同じフォルダに収録・保存されている場合、通常は保存順に演奏されますが、
         「プレイリスト」を使うことで任意の順番に演奏順を変更できます。たとえば、ソート機能の中のトラックナンバーやアルバムを使うと
         元のアルバムに収録された順番に並べ替えて演奏することが可能になります。
-        <h4><a name="audacious2"></a>Audtool でもっと便利に使う</h4>
+ <h4><a name="audacious3"></a>音質を調整するには</h4>
+再生音の高音部や低音部の調整を行うには、イコライザーという機能を利用します。
+メニューより > 出力 > イコライザー を選択し、開いた画面にある「有効」にチェックを入れます。操作はスライダを使って視覚的に行えます。
+ 参考サイト: <a href="https://cloud-work.net/linuxmint/rythmbox_audacious/">https://cloud-work.net/linuxmint/rythmbox_audacious/</a>
+ <h4><a name="audacious4"></a>Audtool でもっと便利に使う</h4>
 Audtool というパワフルな管理ツールが付属しています。たとえば次のコマンドで曲名やアーティスト名を取得できます。<br>
-<pre>
+ <pre>
   $ audtool current-song
   $ audtool current-song-tuple-data artist
-</pre>
+ </pre>
 出典: さらに詳しい解説は <a href="https://wiki.archlinux.jp/index.php/Audacious">https://wiki.archlinux.jp/index.php/Audacious</a> をご覧ください。
-        <h3><a name="mozTocId127988" class="mozTocH3"></a>Audacity オーディオエディタ（音声編集ソフト）</h3>
+<h3><a name="mozTocId127988" class="mozTocH3"></a>Audacity オーディオエディタ（音声編集ソフト）</h3>
 <h4><a name="audacity"></a>Audacity とは何ですか - 関連情報</h4>
         マルチトラック対応のオーディオ・エディタ（音声編集ソフト）です。デジタル音楽ファイルが簡単に録音、再生、編集できるように設計されています。デジタル
         効果やスペクトル分析ツールの機能も備えています。<br>
@@ -889,24 +920,24 @@ Unix/Linux 向けに作られています。バイナリパッケージが用意
 最新リリース版 (GTK+ 2): v1.0.2.1 (16-Jun-2021) <br>
 <br>
 <h3><a name="mozTocId233196" class="mozTocH3"></a>Sweep オーディオエディタ</h3>
-<h4><a name="mozTocId612973" class="mozTocH4"></a>インストール（Debian 10 の場合）</h4>
-root@debian:/home/hoge# apt install sweep<br>
-パッケージリストを読み込んでいます... 完了<br>
-依存関係ツリーを作成しています&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
-状態情報を読み取っています... 完了<br>
-以下の追加パッケージがインストールされます:<br>
-&nbsp; cmt fil-plugins guitarix-ladspa libzita-convolver3 libzita-resampler1<br>
-&nbsp; mcp-plugins swh-plugins tap-plugins<br>
-提案パッケージ:<br>
-&nbsp; ams<br>
-以下のパッケージが新たにインストールされます:<br>
-&nbsp; cmt fil-plugins guitarix-ladspa libzita-convolver3 libzita-resampler1<br>
-&nbsp; mcp-plugins sweep swh-plugins tap-plugins<br>
-アップグレード: 0 個、新規インストール: 9 個、削除: 0 個、保留: 0 個。<br>
-1,682 kB のアーカイブを取得する必要があります。<br>
-この操作後に追加で 8,145 kB のディスク容量が消費されます。<br>
-続行しますか? [Y/n] <br>
-<h4><a name="sweep"></a>オーディオファイルが再生できません</h4>
+ <h4><a name="mozTocId612973" class="mozTocH4"></a>インストール（Debian 10 の場合）</h4>
+ root@debian:/home/hoge# apt install sweep<br>
+ パッケージリストを読み込んでいます... 完了<br>
+ 依存関係ツリーを作成しています&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+ 状態情報を読み取っています... 完了<br>
+ 以下の追加パッケージがインストールされます:<br>
+ &nbsp; cmt fil-plugins guitarix-ladspa libzita-convolver3 libzita-resampler1<br>
+ &nbsp; mcp-plugins swh-plugins tap-plugins<br>
+ 提案パッケージ:<br>
+ &nbsp; ams<br>
+ 以下のパッケージが新たにインストールされます:<br>
+ &nbsp; cmt fil-plugins guitarix-ladspa libzita-convolver3 libzita-resampler1<br>
+ &nbsp; mcp-plugins sweep swh-plugins tap-plugins<br>
+ アップグレード: 0 個、新規インストール: 9 個、削除: 0 個、保留: 0 個。<br>
+ 1,682 kB のアーカイブを取得する必要があります。<br>
+ この操作後に追加で 8,145 kB のディスク容量が消費されます。<br>
+ 続行しますか? [Y/n] <br>
+ <h4><a name="sweep"></a>オーディオファイルが再生できません</h4>
 録音済みのファイルを再生する場合、ファイル名に拡張子が必要です。
 例えば MP3形式のファイルを再生するには、sample.mp3 というように命名されている必要があります。
 したがって sample というファイル名ではオーディオファイルとして認識されないので、sample.mp3 へ変更してください。
@@ -948,7 +979,7 @@ root@debian:/home/hoge# apt install sweep<br>
         続行しますか? [Y/n]<br>
       </div>
       <div class="jumpmenu"><a href="#navigator">↑</a><br>
-        <h3 id="content_1_10"><a name="mozTocId964901" class="mozTocH3"></a>MythTV - a homebrew PVR project. (Fedora Core 3 w/ATrpm)</h3>
+<h3 id="content_1_10"><a name="mozTocId964901" class="mozTocH3"></a>MythTV - a homebrew PVR project. (Fedora Core 3 w/ATrpm)</h3>
         <p>自家製 Personal Video Recorder の構築。<br>
           MythTV を利用するための関連パッケージ一式をインストール。</p>
 
@@ -1218,16 +1249,14 @@ root@debian:/home/hoge# apt install sweep<br>
  libmpeg2convert0                        0.4.0b         1.rhfc3.at
  perl-MIME-Lite                          3.01           2.rhfc3.at
 </pre>
-
-        <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_11"><a name="mozTocId759375" class="mozTocH4"></a>MythTV のインストール後の設定について</h4>
+<div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
+ <h4 id="content_1_11"><a name="mozTocId759375" class="mozTocH4"></a>MythTV のインストール後の設定について</h4>
         <p>MythTVでTV録画 <a href="http://www.d3.dion.ne.jp/%7Ekoetaka/mythtv.html">http://www.d3.dion.ne.jp/~koetaka/mythtv.html</a>
           というページが参考になります。<br>
         </p>
         <p><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></p>
-
-        <h3 id="content_1_24"><a name="mozTocId99290" class="mozTocH3"></a>Xawtv - X Application for Watching TV</h3>
-        <h4 id="content_1_25"><a name="mozTocId649698" class="mozTocH4"></a>For Debian Etch (2007-02-09)</h4>
+<h3 id="content_1_24"><a name="mozTocId99290" class="mozTocH3"></a>Xawtv - X Application for Watching TV</h3>
+ <h4 id="content_1_25"><a name="mozTocId649698" class="mozTocH4"></a>For Debian Etch (2007-02-09)</h4>
         <p># apt-get install xawtv<br>
           パッケージリストを読み込んでいます... 完了<br>
           依存関係ツリーを作成しています... 完了<br>
@@ -1268,10 +1297,10 @@ root@debian:/home/hoge# apt install sweep<br>
           directory<br>
           warning: /usr/lib/X11/fonts/misc does not exist or is not a
           directory</p>
-        <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_26"><a name="mozTocId507597" class="mozTocH4"></a>For Debian 3.1 - Sarge</h4>
-
-        <pre> # apt-get install xawtv
+<div class="jumpmenu">#navigator">↑</a></div>
+<h4 id="content_1_26"><a name="mozTocId507597" class="mozTocH4"></a>For Debian 3.1 - Sarge</h4>
+<pre>
+ # apt-get install xawtv
  パッケージリストを読みこんでいます... 完了
  依存関係ツリーを作成しています... 完了
  以下の特別パッケージがインストールされます:
@@ -1357,10 +1386,9 @@ root@debian:/home/hoge# apt install sweep<br>
     1:kernel                 ########################################### [100%]
  Done.
 </pre>
-
-        <h3 id="content_1_19"><a name="mozTocId906640" class="mozTocH3"></a>Adobe Flash Player (フラッシュ・プレーヤー)</h3>
-        <div class="jumpmenu">
-          <h4><a name="mozTocId5904" class="mozTocH4"></a>Flash Player
+<h3 id="content_1_19"><a name="mozTocId906640" class="mozTocH3"></a>Adobe Flash Player (フラッシュ・プレーヤー)</h3>
+<div class="jumpmenu">
+ <h4><a name="mozTocId5904" class="mozTocH4"></a>Flash Player
             は不要になったんですか？（2018年9月17日追記）<font color="#ff0000">《重要》</font></h4>
           Firefox は Firefox 52 延長サポート版 (ESR) を除き、プラグイン対応が 2018年
           8月で廃止されました。従来、NPAPI
@@ -1377,7 +1405,7 @@ root@debian:/home/hoge# apt install sweep<br>
           https://developer.mozilla.org/ja/docs/Plugins/Roadmap<br>
           <br>
           <a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_20"><a name="mozTocId945649" class="mozTocH4"></a>インストールの仕方</h4>
+ <h4 id="content_1_20"><a name="mozTocId945649" class="mozTocH4"></a>インストールの仕方</h4>
         <p>Firefox バージョン2.0
           以降のウェブブラウザーを利用している場合には、「プラグイン検索サービス」によって簡単にインストール可能となりました。従来の方法で個別に
           インストールした いときは、以下参照してください。</p>
@@ -1402,8 +1430,8 @@ root@debian:/home/hoge# apt install sweep<br>
           というファイルを置きます（コピーします）。plugins というディレクトリが無ければ作成します。<br>
           &nbsp;./.mozilla/plugins/<br>
         </p>
-        <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_21"><a name="mozTocId149639" class="mozTocH4"></a>Debian
+<div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
+ <h4 id="content_1_21"><a name="mozTocId149639" class="mozTocH4"></a>Debian
           専用パッケージをインストールしたい場合</h4>
         Debian の contrib セクションに flashplugin-nonfree
         というパッケージが用意されているので、これをインストールします。<br>
@@ -1497,8 +1525,8 @@ http://fpdownload.macromedia.com/get/flashplayer/pdc/11.1.102.63/install_flash_p
           の最新版が必要とされています。（出典：http://www.adobe.com/products/flashplayer/tech-
           specs.html ）<br>
         </p>
-        <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a><br>
-          <h4><a name="mozTocId679751" class="mozTocH4"></a><a href="file:///home/user/webpage/linux/software/adobe_flash/garbling">YouTube
+<div class="jumpmenu">
+ <h4><a name="mozTocId679751" class="mozTocH4"></a><a href="file:///home/user/webpage/linux/software/adobe_flash/garbling">YouTube
               で「○秒後にスキップして動画へ進めます」という日本語が□□みたいに文字化けする時は？</a></h4>
           <a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a><br>
         </div>
