@@ -9,7 +9,7 @@
       <tbody>
         <tr>
           <td valign="top"><a href="../../index.html">HOME</a> / <a href="index.html">Software</a></td>
-          <td valign="middle" align="right">Last updated: 2022-04-12 18:17 JST</td>
+          <td valign="middle" align="right">Last updated: 2022-04-12 21:28 JST</td>
         </tr>
       </tbody>
 </table>
@@ -36,6 +36,9 @@
       <li><a href="#mozTocId302755">「フレームレート」とは？</a></li>
      </ol></li>
     <li><a href="#mozTocId441889">Kazam スクリーンキャスタ（録画ソフト）</a></li>
+     <ol>
+      <li><a href="#kazam1">Kazam とは？</a></li>
+      <li><a href="#kazam2">Kazam インストール（Debian 10 - buster）</a></li></ol>
     <li><a href="#mozTocId973924">Kino ビデオエディタ</a>
      <ol>
       <li><a href="#mozTocId905674"> Kino プロジェクトについて</a></li>
@@ -135,11 +138,12 @@
       <li><a href="#mozTocId330479">MPEG ビデオのCD配布</a></li>
       <li><a href="#mozTocId877756">M.P.E.G -How to</a></li></ol></li>
 </ol></li></ul>
-      <a href="#navigator">↑</a><br>
+<a href="#navigator">↑</a><br>
 <h3><a name="mozTocId185956" class="mozTocH3"></a>Bracero CD/DVD 作成ツール</h3>
  GNOME デスクトップ向けに開発された、グラフィカルな CD/DVD
  作成ソフトウェア。一連のソフトウェアをインストールすれば、GNOME 以外のデスクトップでも利用できます。<br>
 <h4><a name="mozTocId614902" class="mozTocH4"></a>インストール方法 (Debian 9 -stretch)</h4>
+ <blockquote>
       # apt install brasero<br>
       パッケージリストを読み込んでいます... 完了<br>
       依存関係ツリーを作成していま す&nbsp; <br>
@@ -181,7 +185,8 @@
       アップグレード: 0 個、新規インストール: 37 個、削除: 0 個、保留: 0 個。<br>
       8,812 kB のアーカイブを取得する必要があります。<br>
       この操作後に追加で 28.5 MB のディスク容量が消費されます。<br>
-      続行しますか? [Y/n] <br>
+      続行しますか? [Y/n] 
+ </blockquote>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
 <h3 id="content_1_5"><a name="mozTocId589668" class="mozTocH3"></a><span class="noexists">GnomeBaker</span> (CD/DVD作成ツール)</h3>
       <p><span class="noexists">GnomeBaker</span> は GNOME デスクトップ環境用の
@@ -206,7 +211,8 @@
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li>CD ライティング・ツールのインストールについて。以下は CentOS 4 の例です。</li>
       </ul>
-      <pre> [root@localhost user]# up2date -i k3b
+ <blockquote><pre>
+ [root@localhost user]# up2date -i k3b
 
  Fetching Obsoletes list for channel: centos4-Base... 
  Fetching Obsoletes list for channel: centos4-Updates... 
@@ -236,8 +242,8 @@
 
  Name                                    Version        Release
  --------------------------------------------------------------
- kdelibs                                 3.3.1          3.3</pre>
-
+ kdelibs                                 3.3.1          3.3
+ </pre></blockquote>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li>CD ライティング・ツールのインストールについて。以下は Debian Sarge の例です。<br>
           # apt-get install k3b<br>
@@ -265,16 +271,17 @@
       </ul>
       <p>以下のパッケージを追加すると便利です。</p>
       <pre> # apt-get install cdrdao k3b-18n</pre>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h3 id="content_1_7"><a name="mozTocId743412" class="mozTocH3"></a>X-CD-Roast (CD/DVD作成ツール)</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_7"><a name="mozTocId743412" class="mozTocH3"></a>X-CD-Roast (CD/DVD作成ツール)</h3>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li><a href="xcdroast.html" title="SoftWares/Xcdroast (1638d)">X-CD-Roast</a> のページを見てください。</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <div class="jumpmenu"> <br>
-        <h3 id="content_1_1"><a name="mozTocId233131" class="mozTocH3"></a>ffmpeg (エフエフエムペッグ)</h3>
-        <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_2"><a name="mozTocId540944" class="mozTocH4"></a>For Fedora Core 3</h4>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<div class="jumpmenu">
+<h3 id="content_1_1"><a name="mozTocId233131" class="mozTocH3"></a>ffmpeg (エフエフエムペッグ)</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+ <h4 id="content_1_2"><a name="mozTocId540944" class="mozTocH4"></a>For Fedora Core 3</h4>
+  <blockquote>
         <pre> # up2date -i ffmpeg<br>
  Fetching Obsoletes list for channel: atrpms-stable...<br>
  Fetching obsoletes list for http://dl.atrpms.net/fc3-i386/atrpms...
@@ -323,18 +330,23 @@
  libdc1394_control13                     1.1.0          4.rhfc3.at
  libraw1394_8                            1.2.0          1_6.rhfc3.at
  libxvidcore4                            1.0.3          7.rhfc3.at</pre>
-        <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-        <h4 id="content_1_3"><a name="mozTocId591891" class="mozTocH4"></a>For Mandriva 2006 .1 Cooker</h4>
+  </blockquote>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+ <h4 id="content_1_3"><a name="mozTocId591891" class="mozTocH4"></a>For Mandriva 2006 .1 Cooker</h4>
+  <blockquote>
         <pre> # urpmi ffmpeg
  依存を満たすために以下の 5 個のパッケージをインストールします(3 MB):
  ffmpeg-0.4.9-0.pre1.5mdk.i586
  libffmpeg0-0.4.9-0.pre1.5mdk.i586
  libimlib2_1-1.2.1-1mdk.i586
  libimlib2_1-filters-1.2.1-1mdk.i586
- libimlib2_1-loaders-1.2.1-1mdk.i586</pre>
-        よろしいですか？ (Y/n)[デフォルトはY]<br>
-        <a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a>
-        <h4><a name="mozTocId2417" class="mozTocH4"></a>DAG Repository for CentOS 4.1</h4>
+ libimlib2_1-loaders-1.2.1-1mdk.i586
+
+ よろしいですか？ (Y/n)[デフォルトはY]</pre>
+ </blockquote>
+<a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a>
+ <h4><a name="mozTocId2417" class="mozTocH4"></a>DAG Repository for CentOS 4.1</h4>
+  <blockquote>
         # apt-get install ffmpeg<br>
 
         <pre> Reading Package Lists... Done
@@ -361,19 +373,20 @@
     4:libpostproc            ########################################### [ 67%]
     5:xvidcore               ########################################### [ 83%]
     6:ffmpeg                 ########################################### [100%]
- Done.</pre>
+ Done.</pre></blockquote>
 <div class="jumpmenu"><a href="file:///home/user/webpage/linux/software/multimedia.html#navigator">↑</a></div>
-<h4 id="content_1_4"><a name="mozTocId302755" class="mozTocH4"></a>「フレームレート」とは？</h4>
+ <h4 id="content_1_4"><a name="mozTocId302755" class="mozTocH4"></a>「フレームレート」とは？</h4>
         「動画では、連続する画像の１枚を「フレーム」と呼びます。１秒あたりのフレーム数を表す、サンプリングレートを「フレームレート」と
         いい、単位 は、fps (: Frames per second)で表します。つまり、このフレームレートが大きければ大きいほど、動画像の動きは滑らかになる訳です。
         しかし、人間の分解能は、動きに対し てあまり高くはありません。」 - <a href="http://www.nime.ac.jp/%7Einaba/LR/MOV/1-1.html">http://www.nime.ac.jp/~inaba/LR/MOV/1-1.html</a>
         より一部引用。<br>
 <br>
 <h3><a name="mozTocId441889" class="mozTocH3"></a>Kazam スクリーンキャスタ（録画ソフト）</h3>
+ <h4><a name="kazam1"></a>Kazam とは？</h4>
         スクリーンキャスタとは、動画（ビデオ）を録るためのツール（ソフトウェア）です。<br>
-        紹介記事「Linuxでスクリーンキャストを撮るKazamの使い方」<a href="https://news.mynavi.jp/article/20180924-696076/">https://news.mynavi.jp/article/20180924-696076/</a><br>
-<br>
-<a name="mozTocId852270" class="mozTocH4"></a> Debian 10 (buster)<br>
+        紹介記事「Linuxでスクリーンキャストを撮るKazamの使い方」<a href="https://news.mynavi.jp/article/20180924-696076/">https://news.mynavi.jp/article/20180924-696076/</a>
+ <h4><a name="kazam2"></a>インストール (Debian 10 - buster)</h4>
+  <blockquote>
         # apt install kazam<br>
         パッケージリストを読み込んでいます... 完了<br>
         依存関係ツリーを作成していま す&nbsp; <br>
@@ -396,17 +409,16 @@
         1,742 kB のアーカイブを取得する必要があります。<br>
         この操作後に追加で 3,612 kB のディスク容量が消費されます。<br>
         続行しますか? [Y/n]<br>
-        <br>
-        <h3 id="content_1_9"><a name="mozTocId973924" class="mozTocH3"></a>Kino ビデオエディタ</h3>
-        <h4><a name="mozTocId905674" class="mozTocH4"></a> Kino プロジェクトについて</h4>
+  </blockquote>
+<h3 id="content_1_9"><a name="mozTocId973924" class="mozTocH3"></a>Kino ビデオエディタ</h3>
+ <h4><a name="mozTocId905674" class="mozTocH4"></a> Kino プロジェクトについて</h4>
         ビデオカメラなどで録画された動画を記録、作成、編集、再生するためのソフトウェアです。Kino開発チームは、2013年8月5日、こ
         の開発中止を公表しました。<br>
         "Kino has not been actively maintained since 2009. We encourage
         you to try other Linux video editors such as Shotcut, Kdenlive,
         Flowblade, OpenShot, PiTiVi, LiVES, and LightWorks." 出典 <a href="https://web.archive.org/web/20140214045913/http://kinodv.org/">https://web.archive.org/web/20140214045913/http://kinodv.org/</a><br>
         なお、2020年1月現在、公式サイトから古いバージョンの配布は引き続き行われていますが、この利用は推奨されていません。<br>
-<br>
-<h4><a name="mozTocId933218" class="mozTocH4"></a>インストール方法 (Debian 10)</h4>
+ <h4><a name="mozTocId933218" class="mozTocH4"></a>インストール方法 (Debian 10)</h4>
         Debian で独自に保守されている Kino パッケージがあります。公式版に色々な修正を加えたうえで利用可能にしています。<br>
         <br>
         # apt install kino<br>
@@ -763,18 +775,19 @@ How to Record Your Screen Using VLC -- <a href="https://www.makeuseof.com/tag/re
               xine builds with CSS support</a></li>
         </ul>
 <h3><a name="asunder"></a>Asunder（オーディオCD リッパー）</h3>
- <h4><a name="asunder1">Asunder とは？</h4>
+ <h4><a name="asunder1"></a>Asunder とは？</h4>
 Asunder は Linux 用のグラフィカルなオーディオCD リッパーおよびエンコーダーです。オーディオ CD のトラックを WAV、MP3、OGG、FLAC、Opus、WavPack、Musepack、AAC、Monkey's Audio のいずれかのファイルとして保存するのに利用できます。
 <blockquote>
 <p>Asunder is a graphical Audio CD ripper and encoder for Linux. You can use it to save tracks from an Audio CD as any of WAV, MP3, OGG, FLAC, Opus, WavPack, Musepack, AAC, and Monkey's Audio files.</p>
 <p>
 The Name is from the Oxford Advanced Learner's Dictionary:<br>
 asunder
-<ul><li>adv literary [Language: Old English] to be torn violently apart</li></ul>
 </p>
-Asunder 公式サイト <a href="http://littlesvr.ca/asunder"/>http://littlesvr.ca/asunder/</a> より。
+<ul><li>adv literary [Language: Old English] to be torn violently apart</li></ul>
+Asunder 公式サイト <a href="http://littlesvr.ca/asunder/">http://littlesvr.ca/asunder/</a> より。
 </blockquote>
  <h4><a name="asunder2"></a>インストール方法 (Debian 10)</h4>
+  <blockquote>
   <pre>
   root@debian:/home/user# apt install asunder
   パッケージリストを読み込んでいます... 完了
@@ -791,6 +804,7 @@ Asunder 公式サイト <a href="http://littlesvr.ca/asunder"/>http://littlesvr.
   この操作後に追加で 2,247 kB のディスク容量が消費されます。
   続行しますか? [Y/n] 
   </pre>
+  </blockquote>
  <h4><a name="asunder3"></a>使い方について</h4>
  次の日本語サイトが参考になります。
  <a href="https://cloud-work.net/linuxmint/asunder/">https://cloud-work.net/linuxmint/asunder/</a>
