@@ -4,7 +4,7 @@ Character set encoding: UTF-8
 
 RECREATIONS
 
-ちょっとした楽しみのためのページを作ってみました。（初公開日：September 4, 2020）-- Last updated: 2022-04-17 23:21 JST
+ちょっとした楽しみのためのページを作ってみました。（初公開日：September 4, 2020）-- Last updated: 2022-04-17 23:52 JST
 
 Linux とは直接関係ありませんが、Linux と同じような自由な考え方のもとで、ウェブ上で自由かつ無料で再配布されている著作物が多数あります。 小説や短編小説、エッセイなども取り上げて紹介しま す。著作権が無いパブリック・ドメインとなった作品がおもですが、 古今東西の有名な古典を読むことができます。なお、部分的に翻訳を施した文献もあります。この分野では、Project Gutenburg の取り組みが世界で先駆けとなりました。その後も収録される書籍は着実に増加しており、今日においてもその種の電子図書館では最も有名です。 日本の青空文庫も これと似た取り組みであると言えます。電子書籍は後述のとおり Linux 用のアプリが対応しています。 （このページは試験的にハイパーリンクを排除したので、外部サイトへアクセスしたい場合は掲載のアドレスをコピー＆ペーストして利用してください。このページの HTML 版は同じディレクトリに https://usergreen.github.io/recreations/index.html というページ名で用意しています。）
 
@@ -12,9 +12,8 @@ Linux とは直接関係ありませんが、Linux と同じような自由な�
 目次 (Contents)
 
 VOA Special English programs
-* American stories
-** Rappaccini’s Daughter by Nathaniel Hawthorne
-   https://usergreen.github.io/recreations/Rappaccini’s_Daughter.txt
+* America's National Parks
+* American Stories
 
 長編小説
 * Dracula
@@ -50,8 +49,10 @@ https://learningenglish.voanews.com/p/5849.html
 　National Park in New Orleans Celebrates Jazz
 　https://learningenglish.voanews.com/a/americas-national-parks-new-orleans-jazz-national-historical-park/3308628.html
 
-## American short stories - アメリカの短編小説
+## American Stories - アメリカの物語（短篇小説）
 https://learningenglish.voanews.com/z/1581
+  Rappaccini’s Daughter by Nathaniel Hawthorne
+  https://usergreen.github.io/recreations/American_Stories/rappaccinis-daughter.txt
 
 ## People In America - 著名人の伝記
 https://learningenglish.voanews.com/z/4852
