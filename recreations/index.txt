@@ -4,9 +4,10 @@ Character set encoding: UTF-8
 
 RECREATIONS
 
-ちょっとした楽しみのためのページを作ってみました。（初公開日：September 4, 2020）-- Last updated: 2022-04-17 23:52 JST
+ちょっとした楽しみのためのページを作ってみました。（初公開日：September 4, 2020）-- Last updated: 2022-04-18 10:48 JST
 
-Linux とは直接関係ありませんが、Linux と同じような自由な考え方のもとで、ウェブ上で自由かつ無料で再配布されている著作物が多数あります。 小説や短編小説、エッセイなども取り上げて紹介しま す。著作権が無いパブリック・ドメインとなった作品がおもですが、 古今東西の有名な古典を読むことができます。なお、部分的に翻訳を施した文献もあります。この分野では、Project Gutenburg の取り組みが世界で先駆けとなりました。その後も収録される書籍は着実に増加しており、今日においてもその種の電子図書館では最も有名です。 日本の青空文庫も これと似た取り組みであると言えます。電子書籍は後述のとおり Linux 用のアプリが対応しています。 （このページは試験的にハイパーリンクを排除したので、外部サイトへアクセスしたい場合は掲載のアドレスをコピー＆ペーストして利用してください。このページの HTML 版は同じディレクトリに https://usergreen.github.io/recreations/index.html というページ名で用意しています。）
+Linux とは直接関係ありませんが、Linux と同じような自由な考え方のもとで、ウェブ上で自由かつ無料で再配布されている著作物が多数あります。小説や短編小説、エッセイなども取り上げて紹介します。著作権が無いパブリック・ドメインとなった作品がおもですが、古今東西の有名な古典を読むことができます。なお、部分的に翻訳を施した文献もあります。この分野では、Project Gutenburg の取り組みが世界で先駆けとなりました。その後も収録される書籍は着実に増加しており、今日においてもその種の電子図書館では最も有名です。日本の青空文庫も これと似た取り組みであると言えます。電子書籍は後述のとおり Linux 用のアプリが対応しています。（このページは試験的にハイパーリンクを排除したので、外部サイトへアクセスしたい場合は掲載のアドレスをコピー＆貼り付けして開いてください。このページの HTML 版はテキスト版と同じディレクトリに次のアドレスで用意しています:
+ https://usergreen.github.io/recreations/index.html
 
 --------------------------------------------------------------------------------
 目次 (Contents)
@@ -14,6 +15,9 @@ Linux とは直接関係ありませんが、Linux と同じような自由な�
 VOA Special English programs
 * America's National Parks
 * American Stories
+* People In America
+* Words and Their Stories
+* English in a Minute
 
 長編小説
 * Dracula
@@ -31,7 +35,7 @@ VOA Special English programs
 
 # VOA Special English programs
 
-Voice of America が放送用に作成した様々なコンテンツがパブリック・ドメインで公開されています。 コンテンツによってはオーディオとビデオを含みます。 英語を第二や第三の言語として学習する場合に役立つよう配慮された内容です。もちろん、語学学習のためでなく、 単に知識や教養を得る目的でも十分楽しめるように構成されています。内容のごく一部を紹介します。
+Voice of America が放送用に作成した様々なコンテンツがパブリック・ドメインで公開されています。コンテンツによってはオーディオとビデオを含みます。英語を第二や第三の言語として学習する場合に役立つよう配慮された内容です。もちろん、語学学習のためでなく、単に知識や教養を得る目的でも十分楽しめるように構成されています。内容のごく一部を紹介します。
 
 なお、VOA が独自に製作したコンテンツはパブリックドメインとして公開されているので、出典を明記すれば自由に利用可能です。
 Copyright Statement: All text, audio and video material produced exclusively by the Voice of America is in the public domain. Credit for any use of VOA material should be given to voanews.com, Voice of America, or VOA.
@@ -69,13 +73,19 @@ https://learningenglish.voanews.com/z/4852
 ## Words and Their Stories - 言葉の起源とその物語
   https://learningenglish.voanews.com/z/987
         'When the Cat's Away, the Mice Will Play!'
-        https://learningenglish.voanews.com/a/when-the-cat-s-away-the-mice-will-play-/5336433.html 
+        https://learningenglish.voanews.com/a/when-the-cat-s-away-the-mice-will-play-/5336433.html
+
+## English in a Minute
+A short video explaining an expression used in American English
+ https://learningenglish.voanews.com/z/3619
+ https://www.youtube.com/playlist?list=PLd9hCvj34W5hJZwjdghwQQi3XhpSZO9sx
+
 
 # 長編小説
 
 ## Dracula
 
-Count Dracula had directed me to go to the Golden Krone Hotel, which I found, to my delight, to be thoroughly old-fashioned, for of course I wanted to see all I could of the ways of the country. I was evidently expected, for when I got near the door I faced a [Pg 4]cheery-looking elderly woman in the usual peasant dress—white undergarment with long double apron, front and back, of coloured stuff fitting almost too tight for modesty. When I came close she bowed, and said: “The Herr Englishman?” “Yes,” I said, “Jonathan Harker.” She smiled, and gave some message to an elderly man in white shirt-sleeves, who had followed her to the door. He went, but immediately returned with a letter:—
+Count Dracula had directed me to go to the Golden Krone Hotel, which I found, to my delight, to be thoroughly old-fashioned, for of course I wanted to see all I could of the ways of the country. I was evidently expected, for when I got near the door I faced a cheery-looking elderly woman in the usual peasant dress—white undergarment with long double apron, front and back, of coloured stuff fitting almost too tight for modesty. When I came close she bowed, and said: “The Herr Englishman?” “Yes,” I said, “Jonathan Harker.” She smiled, and gave some message to an elderly man in white shirt-sleeves, who had followed her to the door. He went, but immediately returned with a letter:—
 
 ドラキュラ伯爵は、私にゴールデン・クローネ・ホテルに行くように指示していました。私が喜んで見つけたのは、完全に昔ながらのホテルでし た。も ちろん、私はこの国のやり方をすべて見たかったのです。 ドアに近づいたとき、私はいつもの農民の服を着た、つまり、白の下着と長い二重のエプロン、前と後ろの長いエプロンを着た、陽気な年配の女性 に出会ったので、間違いなく私の訪問を期待していたことが分かりました。私が近づいたとき、彼女はお辞儀をして言った：「イギリス人のお方ですか？」 「はい」と私は言い、続けて「ジョナサン・ハーカーです」と言った。彼女はにっこり笑って、ドアまで付き添ってきた白いシャツを着た年配の男 性にいくつか のメッセージを手渡しました。 彼は行きかけましたが、すぐに次のような内容の手紙を持って戻ってきました：—
 -------------------------------------------------
