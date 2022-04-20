@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head>    
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<title>System Tools - Linux on the Desktop</title>
+</head>
+<body>    
+ <div id="navigator">
+ <table width="100%" cellspacing="0" cellpadding="0" border="0">
+   <tbody>
+     <tr>
+       <td valign="top"><a href="../../index.html"><big>HOME</big></a> / <a href="index.html">Software</a></td>
+       <td valign="middle" align="right">Last updated: 2022/04/20 23:02 JST</td>
+     </tr>
+   </tbody>
+ </table>
+<hr width="100%">
+<h2 id="content_1_0"><a name="mozTocId473610" class="mozTocH2"></a>システムツール</h2>
+ <ul id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
+  <li><ol>
+   <li><a href="#mozTocId820287">ターミナル・エミュレータ (terminal emulator)</a></li>
+    <ol><li><a href="#mozTocId481315">GNOME 端末 (Gnome-terminal) の概要について</a></li>
+     <li><a href="#mozTocId879363">GNOME 端末の便利な使用法　-履歴機能</a></li>
+     <li><a href="#mozTocId595198">Xterm の概要について</a></li>
+     <li><a href="#mozTocId427933">「そのようなファイルやディレクトリはありません」と出る。</a></li></ol></li>
+   <li><a href="#mozTocId666176">Point-and-Klik (KNOPPIX 3.7)</a></li>
+   <li><a href="#mozTocId182021">Up2Date Network (アップ2デート)</a></li>
+   <li><a href="#mozTocId250617">YUM コマンドの便利な使い方 (--enablerepo= オプション)</a></li>
+   <li><a href="#mozTocId23881">アップロード / ダウンロードソフト（転送ソフト）</a><ol>
+    <li><a href="#mozTocId623140">gFTP を再インストールするには？</a></li></ol></li>
+   <li><a href="#mozTocId353020">ダウンロードソフト（転送ソフト）/ 自動巡回ツール</a><ol>
+    <li><a href="#mozTocId505334">Aria - yet another download tool</a></li>
+    <li><a href="#mozTocId582547">Wget</a></li>
+    <li><a href="#mozTocId242710">Gwget</a></li></ol></li>
+   <li><a href="#mozTocId780265">圧縮ファイル解凍ツール LHA</a></li>
+   <li><a href="#mozTocId989054">Grsync（rsync 用 GTK+ フロントエンド）</a><ol>
+    <li><a href="#mozTocId747746">インストール方法</a></li>
+    <li><a href="#mozTocId176067">起動方法</a></li>
+    <li><a href="#mozTocId164038"> rsync について</a></li>
+    <li><a href="#1">シミュレートが行えます</a></li>
+    <li><a href="#mozTocId827437"> Grsync の実際の処理と結果について</a></li></ol></li>
+   <li><a href="#mozTocId832015">(GRUB / Lilo) 起動する順番を変更したいとき</a></li></ol></li></ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_2"><a name="mozTocId820287" class="mozTocH3"></a>ターミナル・エミュレータ (terminal emulator)</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+ <h4 id="content_1_3"><a name="mozTocId481315" class="mozTocH4"></a>GNOME 端末 (Gnome-terminal) の概要について</h4>
+  <p>GNOME 端末のヘルプに収録のマニュアル V2.3 日本語版より引用</p>
+  <p>[概要]<br>
+  GNOME 端末 は、次のアクションに使用できる端末エミュレーションアプリケーションです。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>GNOME 環境で UNIX シェルにアクセスする<br>
+          シェルは、コマンドラインプロンプトに入力されたコマンドを解釈して実行するプログラムです。 GNOME 端末
+          を起動すると、システムアカウントで指定されたデフォルトのシェルが起動します。いつでも別のシェルに切り替えられます。</li>
+      </ul>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>VT102、VT220、および xterm 端末用の任意のアプリケーションを実行する<br>
+          GNOME 端末 は、X Consortium が開発した xterm プログラムをエミュレートします。xterm
+          プログラムは DEC VT102 端末をエミュレートし、さらに DEC VT220
+          のエスケープシーケンスをサポートします。エスケープシーケンスは、Esc 文字から始まる一連の文字です。 GNOME
+          端末は、VT102 および VT220
+          端末がカーソルの位置づけ、画面消去などの機能に使用するすべてのエスケープシーケンスを受け付けます。</li>
+      </ul>
+      <p>Description: The GNOME 2 terminal emulator application</p>
+      <blockquote>
+        <p class="quotation">GNOME Terminal is a terminal emulation
+          application that you can use to perform the following actions:<br>
+          .<br>
+          To access a UNIX shell in the GNOME environment.<br>
+          .<br>
+          To run any application that is designed to run on VT102,
+          VT220, and xterm terminals.</p>
+      </blockquote>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_4"><a name="mozTocId879363" class="mozTocH4"></a>GNOME 端末の便利な使用法　-履歴機能</h4>
+      <p>GNOME
+        端末で最近実行したコマンドは、履歴として記憶されています。このため、長い文字列のコマンドを再実行したり、その一部を変更／訂正した
+        いときに活用すると便利です。</p>
+      <p>履歴表示は、矢印キー　↑　を押下します。複数回押下すれば、より古い履歴が表示できます。元に戻るには　↓　キーを押します。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_5"><a name="mozTocId595198" class="mozTocH4"></a>Xterm の概要について</h4>
+      <p>Description: X terminal emulator</p>
+      <blockquote>
+        <p class="quotation">(from apt-cache show xterm in Debian 3.1)<br>
+          xterm is a terminal emulator for the X Window System. It
+          provides DEC VT102 and Tektronix 4014 compatible terminals for
+          programs that cannot use the window system directly. This
+          version implements ISO/ANSI colors and most of the control
+          sequences used by DEC VT220 terminals.<br>
+          .<br>
+          This package provides four commands: xterm, which is the
+          traditional terminal emulator; uxterm, which is a wrapper
+          around xterm that is intelligent about locale settings
+          (especially those which use the UTF-8 character encoding), but
+          which requires the luit program from the xutils package;
+          koi8rxterm, a wrapper similar to uxterm for locales that use
+          the KOI8-R character set; and lxterm, a simple wrapper that
+          chooses which of the previous commands to execute based on the
+          user's locale settings.<br>
+          .<br>
+          A complete list of control sequences supported by the X
+          terminal emulator is provided in /usr/share/doc/xterm.<br>
+          .<br>
+          The xterm program uses bitmap images provided by the
+          xlibs-data package.<br>
+          .<br>
+          Those interested in using koi8rxterm will likely want to
+          install the xfonts-cyrillic package as well.</p>
+      </blockquote>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_6"><a name="mozTocId427933" class="mozTocH4"></a>「そのようなファイルやディレクトリはありません」と出る。</h4>
+      <p>フォルダ名が不適切だと、コマンドラインから操作した時そのメッセージが表示されます。特に、文字列の途中に空白（スペース）を設
+        けてはいけません （下例）。</p>
+      <pre> $ cd hoge 123<br> bash: cd: hoge: そのようなファイルやディレクトリはありません</pre>
+      <p>この場合、途中の空白を削除します。</p>
+      <pre> hoge123</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_7"><a name="mozTocId666176" class="mozTocH3"></a>Point-and-Klik (KNOPPIX 3.7)</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Point-and-Klik については、<a href="pointklik.html" title="SoftWares/PointKlik (2359d)">SoftWares/PointKlik</a>
+          を見てください。</li>
+      </ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_8"><a name="mozTocId182021" class="mozTocH3"></a>Up2Date Network (アップ2デート)</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>アップ2デート (Up2Date Network) の作業手順については、<a href="http://f40.aaa.livedoor.jp/%7Egreen/?Up2DateNetwork" title="Up2DateNetwork (2071d)">Up2DateNetwork</a> を見てください。</li></ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_9"><a name="mozTocId250617" class="mozTocH3"></a>YUM コマンドの便利な使い方 (--enablerepo= オプション)</h3>
+      <p>このコマンド・オプションは、設定ファイルで通常、無効(コメントアウト)にしてあるリポジトリをその時に限り利用可能とするオプ
+        ションです。<br>
+        CentOS の場合では、centosplus がデフォルトで無効であるため、次のように利用します。ただし、yum 2.2.2
+        では --enablerepo= オプションは使えません。<a id="notetext_1" href="#notefoot_1" class="note_super">*1</a> yum 2.4.2
+        以上で利用可能です。</p>
+      <pre> # yum --enablerepo=centosplus install kernel</pre>
+      <p>このオプションで、V4Lサポートの kernel.i686 0:2.6.9-22.0.1.106.unsupported
+        がインストールできます。</p>
+      <p>Fedora Extras
+        を利用したいときにも、通常、無効として設定(enabled=0)しておく方が実際には便利です。追加パッケージをインストールしたい
+        時だけ、 --enablerepo= オプションで Fedora Extras を有効にすることができます（下例参考）。</p>
+      <blockquote>
+        <p class="quotation">[fedora-extras]<br>
+          name=Fedora Extras - $releasever - $basearch<br>
+          baseurl=<a href="http://MIRROR-Server/fedora/linux/extras/3/$basearch/">http://MIRROR-Server/fedora/linux/extras/3/$basearch/</a><br>
+          enabled=0<br>
+          gpgcheck=1<br>
+          gpgkey=<a href="http://MIRROR-Server/fedora/linux/extras/RPM-GPG-KEY-Fedora-Extras">http://MIRROR-Server/fedora/linux/extras/RPM-GPG-KEY-Fedora-Extras</a></p>
+      </blockquote>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_30"><a name="mozTocId23881" class="mozTocH3"></a>アップロード / ダウンロードソフト（転送ソフト）</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_31"><a name="mozTocId623140" class="mozTocH4"></a>gFTP を再インストールするには？</h4>
+      <p>何らかの事情で再インストールする場合には、パッケージ管理ツールで gftp
+        を削除するだけでは不十分です。ユーザーディレクトリに存在する .gftp
+        フォルダを手動で削除する必要があります。このフォルダには、以下のファイルが含まれます。</p>
+      <pre> bookmarks<br> gftp.log<br> gftprc</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_32"><a name="mozTocId353020" class="mozTocH3"></a>ダウンロードソフト（転送ソフト）/ 自動巡回ツール</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_33"><a name="mozTocId505334" class="mozTocH4"></a>Aria - yet another download tool</h4>
+      <p>グラフィカルなダウンロードツール。HTTPと ftpをサポート。<br>
+        <a href="http://aria.rednoah.com/linux_j.shtml">http://aria.rednoah.com/linux_j.shtml</a><br>
+        Debian の場合、公式パッケージに含まれるのでインストールは簡単です。</p>
+      <pre> # apt-get install aria</pre>
+      <blockquote>
+        <p class="quotation">パッケージリストを読みこんでいます... 完了<br>
+          依存関係ツリーを作成しています... 完了<br>
+          以下のパッケージが新たにインストールされます:<br>
+          　　aria<br>
+          アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 0 個。<br>
+          681kB のアーカイブを取得する必要があります。<br>
+          展開後に追加で 2056kB のディスク容量が消費されます。<br>
+          取得:1 <a href="http://ftp.jp.debian.org">http://ftp.jp.debian.org</a>
+          stable/main aria 1.0.0-9.0.1 [681kB]<br>
+          681kB を 1s で取得しました (345kB/s)<br>
+          未選択パッケージ aria を選択しています。<br>
+          (データベースを読み込んでいます... 現在 113104 個のファイルとディレクトリがイン ストールされています。)<br>
+          (.../aria_1.0.0-9.0.1_i386.deb から) aria を展開しています...<br>
+          aria (1.0.0-9.0.1) を設定しています ...</p>
+      </blockquote>
+      <pre> $ aria</pre>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_34"><a name="mozTocId582547" class="mozTocH4"></a>Wget</h4>
+      <p>Webサーバ・FTPサーバから指定ファイルをダウンロードするテキストベースツール</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Wgetを使おう的ページ<br>
+          <a href="http://www.geocities.jp/horiuchimasaru/wget.html">http://www.geocities.jp/horiuchimasaru/wget.html</a><br>
+          GNU Wgetの使い方が日本語でやさしく書かかれています。<br>
+          使い方の詳細（オプション）は次で確認できます。
+          <pre> $ wget -h</pre>
+        </li>
+        <li>再帰ダウンロードについて<br>
+          実行コマンドの例：
+          <pre> $ wget -r -l 1 -np -nc [URL]</pre>
+          再帰ダウンロードの詳細と注意事項については、<a href="http://f40.aaa.livedoor.jp/%7Egreen/?Wget%2FRecursion" title="Wget/Recursion (1952d)">こちら</a>を参照してください。</li>
+      </ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_35"><a name="mozTocId242710" class="mozTocH4"></a>Gwget</h4>
+      <p>上記項目で紹介した、ファイル・ダウンロード・ソフト wget の GUIフロントエンド。<br>
+        Gwget（Download Manager for GNOME）</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>Fedora Core<br>
+          # yum install gwget</li>
+        <li>Debian Linux<br>
+          # apt-get install gwget</li>
+      </ul>
+      <p>使い方は、<a href="http://www.atmarkit.co.jp/flinux/rensai/linuxtips/a019gwget.html">wget
+          コマンドをGUIで使うには</a>が参考になります。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_36"><a name="mozTocId780265" class="mozTocH3"></a>圧縮ファイル解凍ツール LHA</h3>
+      <p>圧縮ファイル解凍ツール LHA を Debian に導入する場合は、<a href="http://f40.aaa.livedoor.jp/%7Egreen/?DebianLinux-FAQ%2FLha" title="DebianLinux-FAQ/Lha (2057d)">DebianLinux-FAQ/Lha</a> 参照。</p>
+<h3><a name="mozTocId989054" class="mozTocH3"></a>Grsync（rsync 用 GTK+ フロントエンド）</h3>
+<h4><a name="mozTocId747746" class="mozTocH4"></a>インストール方法</h4>
+      <p>Debian 10 の例：パッケージ: grsync (1.2.6-2)をインストールします。<img src="Screenshot-Grsync-default.png" alt="Screenshot-Grsync-default.png" width="480" hspace="10" height="429" align="right"><br>
+        # apt install grsync<br>
+        パッケージリストを読み込んでいます... 完了<br>
+        依存関係ツリーを作成していま
+        す&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        状態情報を読み取っています... 完了<br>
+        以下の追加パッケージがインストールされます:<br>
+        &nbsp; ssh-askpass<br>
+        以下のパッケージが新たにインストールされます:<br>
+        &nbsp; grsync ssh-askpass<br>
+        アップグレード: 0 個、新規インストール: 2 個、削除: 0 個、保留: 0 個。<br>
+        175 kB のアーカイブを取得する必要があります。<br>
+        この操作後に追加で 720 kB のディスク容量が消費されます。<br>
+        続行しますか? [Y/n] <br>
+        <br>
+        Grsync は rsync コマンドラインプログラムへの GTK2 を使ったシンプルな GUI です。現在 rsync
+        の最も重要な機能セットのみしかサポートしていませんが、 ローカルディレクトリの効率的な同期の実行に利用できます。 - <a href="https://packages.debian.org/ja/buster/grsync">https://packages.debian.org/ja/buster/grsync</a>
+        <br>
+      </p>
+<h4><a name="mozTocId176067" class="mozTocH4"></a>起動方法</h4>
+      <p>インストール後、デスクトップのメニューへ自動的に登録されるので、メニュー &gt; アプリケーション &gt; システムツール
+        &gt; Grsync より起動します。
+      </p>
+      <ul>
+        <li>smbmountとgrsyncを使った簡単バックアップ https://mag.osdn.jp/07/08/06/0135239</li>
+        <li>Grsyncでバックアップ https://ameblo.jp/miyou55mane/entry-12219419408.html</li>
+      </ul>
+<h4><a name="mozTocId164038" class="mozTocH4"></a> rsync について</h4>
+      「rsync」は、リモート環境とファイルやディレクトリを「同期（sync）する」というコマンドです。ローカル環境のみでも使用でき ま
+      す。「変更があった分だけ更新する」という機能があるので、ディレクトリ単位のバックアップで特に便利に使えます。[引用元]- <a href="https://www.atmarkit.co.jp/ait/articles/1702/02/news031.html">https://www.atmarkit.co.jp/ait/articles/1702/02/news031.html</a><br>
+      rsync をコマンドラインで実行する場合、次のような書式に従います。この例は PC 本体内のデータを接続先の
+      USBメモリへ転送する場合です。 ファイルあるいはディレクトリ名や引数は各々スペースで区切ります。<br>
+      $ rsync -av 同期元 同期先<br>
+      したがって具体的には次例のような入力となります：<br>
+      $ rsync -av /home/johndoe/my-data /media/johndoe/abc123<br>
+<h4><a name="1"></a>シミュレートが行えます</h4>
+Grsync にはシミュレーション・モードがあります。File &gt; Simulatation 
+または操作画面の右から２つ目にある電球のアイコンを選択すれば実行できます。この操作を実行すると、実際に同期が行った際の振る舞いを前もって確認する
+ことが可能です。この機能は dry-run と呼ばれていて、デフォルトでは次のコマンドを実行するのと同じ動作です。<br>
+<br>
+$ rsync -r -n -t -v --progress -s<br>
+<br>
+      <h4><a name="mozTocId827437" class="mozTocH4"></a> Grsync
+        の実際の処理と結果について</h4>
+      <img alt="Screenshot-Grsync-default-stopped.png" src="Screenshot-Grsync-default-stopped.png" width="400" vspace="10" hspace="10" height="230" align="right">grsync
+      のデフォルトの作動は上記の
+      rsyncコマンドを実行することとほぼ同じような結果になるそうですが、実際に確認したところ、default
+      では次のコマンドを実行したと画面に表示されました。正常に処理が完了した場合は、右の画面が表示されて自動的に終了します。<br>
+      ** Launching RSYNC command:<br>
+      $ rsync -r -t -v --progress -s /home/johndoe/my-data
+      /media/johndoe/abc123<br>
+      <br>
+      また、名前の途中に OS によっては許可されない文字を含んでいると、そのデータの転送をスキップします。/ : * ? " |
+      などがその一例です。 途中に空白があっても rsync
+      では支障がないようですが、他の様々な環境でも扱うことを想定するなら空白も使用しない方が無難です。
+      なお、転送されなかった分は次のようなエラーを表示します：<br>
+      <br>
+      *** Skipping any contents from this failed directory ***<br>
+      rsync: recv_generator: mkdir
+      "/media/johndoe/abc123/Debian/debian10_buster/Debian User Forums •
+      View topic - Where is the "Trash"?_files" failed: Invalid argument
+      (22)<br>
+      <br>
+      *** Skipping any contents from this failed directory ***<br>
+      The Project Gutenberg eBook of A Primary Reader: Old-time Stories,
+      Fairy Tales and Myths Retold by Children, by E. Louise
+      Smythe.htm.GdUmVY" failed: Invalid argument (22)<br>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_40"><a name="mozTocId832015" class="mozTocH3"></a>(GRUB / Lilo) 起動する順番を変更したいとき</h3>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>複数の OS を導入した場合の運用のコツやトラブル対処<br>
+          ブート・ローダーに Grub を利用している場合には、/boot/grub/grub.conf
+          の設定ファイルを書き換えます。設定ファイルを書き換えることで、電源投入時の自動起動の仕方を任意に設定できます。<br>
+          <br>
+          次の grub.conf ファイルの内容は、Fedora Linux と Windows が併存している場合の一例です。
+          <blockquote>
+            <p class="quotation"># grub.conf generated by anaconda<br>
+              #<br>
+              # Note that you do not have to rerun grub after making
+              changes to this file<br>
+              # NOTICE: You have a /boot partition. This means that<br>
+              # all kernel and initrd paths are relative to /boot/, eg.<br>
+              # root (hd0,1)<br>
+              # kernel /vmlinuz-version ro root=/dev/hda3<br>
+              # initrd /initrd-version.img<br>
+              #boot=/dev/hda<br>
+              default=0<br>
+              timeout=10<br>
+              splashimage=(hd0,1)/grub/splash.xpm.gz<br>
+              title Windows<br>
+              　 rootnoverify (hd0,0)<br>
+              　 chainloader +1<br>
+              title Fedora Core (2.4.22-1.2188.nptl)<br>
+              　 root (hd0,1)<br>
+              　 kernel /vmlinuz-2.4.22-1.2188.nptl ro root=LABEL=/
+              hdb=ide-scsi rhgb<br>
+              　 initrd /initrd-2.4.22-1.2188.nptl.img<br>
+              title Fedora Core (2.4.22-1.2115.nptl)<br>
+              　 root (hd0,1)<br>
+              　 kernel /vmlinuz-2.4.22-1.2115.nptl ro root=LABEL=/
+              hdb=ide-scsi rhgb<br>
+              　 initrd /initrd-2.4.22-1.2115.nptl.img</p>
+          </blockquote>
+        </li>
+      </ul>
+      <p>具体的には、Gedit などのテキスト・エディターを使って編集します。</p>
+      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <li>default=0 で、0 の数字を 1 に変更すれば、自動起動する OS を変更できます。</li>
+        <li>timeout=10 で、10 の数字を変更すれば、OS 選択画面の表示時間を自由に変更できます。(※数字の単位は「秒」となっています。)</li>
+        <li>title Windows, title Fedora Core とあるタイトル行を好きな文字列に書き換えることが可能です。
+また、タイトル行の順番を入れ換えることで、default=0 の数字を変更したことと同様の結果になります。</li>
+        <li>ブート・ローダーに Lilo (=Linux Loader) を利用している場合には、lilo.conf
+          というファイルが同様に存在するので、その中の記述を書き換えてください。</li>
+      </ul>
+ <hr width="100%"><a href="../../index.html">HOME</a><br>
+ </div>
+</body>
+</html>
