@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja"><head>    
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-<title>Other applications - Linux on the Desktop</title>
+<title>Applications for internet - Linux on the Desktop</title>
 </head>
 <body>    
  <div id="navigator">
@@ -9,7 +9,7 @@
    <tbody>
      <tr>
        <td valign="top"><a href="../../index.html"><big>HOME</big></a> / <a href="index.html">Software</a></td>
-       <td valign="middle" align="right">Last updated: 2022/04/21 12:58 JST</td>
+       <td valign="middle" align="right">Last updated: 2022/04/21 13:49 JST</td>
      </tr>
    </tbody>
  </table>
@@ -56,23 +56,13 @@
    <li><a href="#mozTocId175332">スペリングのチェックを行なう (2020.10.4 追加)</a></li></ol></li>
   <li><a href="#mozTocId556616">Claws Mail (Sylpheed-Claws) - 2020.10.4 追加</a></li>
   <li><a href="#mozTocId81432">2ch ブラウザー おちゅ〜しゃ</a></li>
-  <li><a href="#mozTocId23881">アップロード / ダウンロードソフト（転送ソフト）</a><ol>
+  <li><a href="#mozTocId23881">gFTP アップロード / ダウンロードソフト（転送ソフト）</a><ol>
    <li><a href="#mozTocId623140">gFTP を再インストールするには？</a></li></ol></li>
   <li><a href="#mozTocId353020">ダウンロードソフト（転送ソフト）/ 自動巡回ツール</a><ol>
    <li><a href="#mozTocId505334">Aria - yet another download tool</a></li>
    <li><a href="#mozTocId582547">Wget</a></li>
    <li><a href="#mozTocId242710">Gwget</a></li></ol></li>
-  <li><a href="#mozTocId780265">圧縮ファイル解凍ツール LHA</a></li>
-  <li><a href="#mozTocId989054">Grsync（rsync 用 GTK+ フロントエンド）</a><ol>
-   <li><a href="#mozTocId747746">インストール方法</a></li>
-   <li><a href="#mozTocId176067">起動方法</a></li>
-   <li><a href="#mozTocId164038"> rsync について</a></li>
-   <li><a href="#1">シミュレートが行えます</a></li>
-   <li><a href="#mozTocId827437"> Grsync の実際の処理と結果について</a></li></ol></li>
-  <li><a href="#mozTocId582296">将棋ソフト「デーモン将棋」(Daemonshogi)</a><ol>
-   <li><a href="#mozTocId776905">デーモン将棋のインストール</a></li>
-   <li><a href="#mozTocId817924">メニューが文字化けして読めないとき (UTF-8 環境) †</a></li></ol></li>
-  <li><a href="#mozTocId832015">(GRUB / Lilo) 起動する順番を変更したいとき</a></li></ol></li></ul>
+</ol></li></ul>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
 <h3 id="content_1_2"><a name="mozTocId820287" class="mozTocH3"></a>ターミナル・エミュレータ (terminal emulator)</h3>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
@@ -626,8 +616,7 @@ SeaMonkey options
         <li><a href="http://ecololi.plala.jp/linux/mandrake/">http://ecololi.plala.jp/linux/mandrake/</a></li>
       </ul>
       <div class="jumpmenu"><a href="#navigator">↑</a></div>
-      <h3 id="content_1_30"><a name="mozTocId23881" class="mozTocH3"></a>アッ
-        プロード / ダウンロードソフト（転送ソフト）</h3>
+      <h3 id="content_1_30"><a name="mozTocId23881" class="mozTocH3"></a>gFTP アップロード / ダウンロードソフト（転送ソフト）</h3>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
 <h4 id="content_1_31"><a name="mozTocId623140" class="mozTocH4"></a>gFTP を再インストールするには？</h4>
       <p>何らかの事情で再インストールする場合には、パッケージ管理ツールで gftp
@@ -687,81 +676,6 @@ SeaMonkey options
       <p>使い方は、<a href="http://www.atmarkit.co.jp/flinux/rensai/linuxtips/a019gwget.html">wget
           コマンドをGUIで使うには</a>が参考になります。</p>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h3 id="content_1_36"><a name="mozTocId780265" class="mozTocH3"></a>圧縮ファイル解凍ツール LHA</h3>
-      <p>圧縮ファイル解凍ツール LHA を Debian に導入する場合は、<a href="http://f40.aaa.livedoor.jp/%7Egreen/?DebianLinux-FAQ%2FLha" title="DebianLinux-FAQ/Lha (2057d)">DebianLinux-FAQ/Lha</a> 参照。</p>
-<h3><a name="mozTocId989054" class="mozTocH3"></a>Grsync（rsync 用 GTK+ フロントエンド）</h3>
-<h4><a name="mozTocId747746" class="mozTocH4"></a>インストール方法</h4>
-      <p>Debian 10 の例：パッケージ: grsync (1.2.6-2)をインストールします。<img src="Screenshot-Grsync-default.png" alt="Screenshot-Grsync-default.png" width="480" hspace="10" height="429" align="right"><br>
-        # apt install grsync<br>
-        パッケージリストを読み込んでいます... 完了<br>
-        依存関係ツリーを作成していま
-        す&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <br>
-        状態情報を読み取っています... 完了<br>
-        以下の追加パッケージがインストールされます:<br>
-        &nbsp; ssh-askpass<br>
-        以下のパッケージが新たにインストールされます:<br>
-        &nbsp; grsync ssh-askpass<br>
-        アップグレード: 0 個、新規インストール: 2 個、削除: 0 個、保留: 0 個。<br>
-        175 kB のアーカイブを取得する必要があります。<br>
-        この操作後に追加で 720 kB のディスク容量が消費されます。<br>
-        続行しますか? [Y/n] <br>
-        <br>
-        Grsync は rsync コマンドラインプログラムへの GTK2 を使ったシンプルな GUI です。現在 rsync
-        の最も重要な機能セットのみしかサポートしていませんが、 ローカルディレクトリの効率的な同期の実行に利用できます。 - <a href="https://packages.debian.org/ja/buster/grsync">https://packages.debian.org/ja/buster/grsync</a>
-        <br>
-      </p>
-<h4><a name="mozTocId176067" class="mozTocH4"></a>起動方法</h4>
-      <p>インストール後、デスクトップのメニューへ自動的に登録されるので、メニュー &gt; アプリケーション &gt; システムツール
-        &gt; Grsync より起動します。
-      </p>
-      <ul>
-        <li>smbmountとgrsyncを使った簡単バックアップ https://mag.osdn.jp/07/08/06/0135239</li>
-        <li>Grsyncでバックアップ https://ameblo.jp/miyou55mane/entry-12219419408.html</li>
-      </ul>
-<h4><a name="mozTocId164038" class="mozTocH4"></a> rsync について</h4>
-      「rsync」は、リモート環境とファイルやディレクトリを「同期（sync）する」というコマンドです。ローカル環境のみでも使用でき ま
-      す。「変更があった分だけ更新する」という機能があるので、ディレクトリ単位のバックアップで特に便利に使えます。[引用元]- <a href="https://www.atmarkit.co.jp/ait/articles/1702/02/news031.html">https://www.atmarkit.co.jp/ait/articles/1702/02/news031.html</a><br>
-      rsync をコマンドラインで実行する場合、次のような書式に従います。この例は PC 本体内のデータを接続先の
-      USBメモリへ転送する場合です。 ファイルあるいはディレクトリ名や引数は各々スペースで区切ります。<br>
-      $ rsync -av 同期元 同期先<br>
-      したがって具体的には次例のような入力となります：<br>
-      $ rsync -av /home/johndoe/my-data /media/johndoe/abc123<br>
-<h4><a name="1"></a>シミュレートが行えます</h4>
-Grsync にはシミュレーション・モードがあります。File &gt; Simulatation 
-または操作画面の右から２つ目にある電球のアイコンを選択すれば実行できます。この操作を実行すると、実際に同期が行った際の振る舞いを前もって確認する
-ことが可能です。この機能は dry-run と呼ばれていて、デフォルトでは次のコマンドを実行するのと同じ動作です。<br>
-<br>
-$ rsync -r -n -t -v --progress -s<br>
-<br>
-      <h4><a name="mozTocId827437" class="mozTocH4"></a> Grsync
-        の実際の処理と結果について</h4>
-      <img alt="Screenshot-Grsync-default-stopped.png" src="Screenshot-Grsync-default-stopped.png" width="400" vspace="10" hspace="10" height="230" align="right">grsync
-      のデフォルトの作動は上記の
-      rsyncコマンドを実行することとほぼ同じような結果になるそうですが、実際に確認したところ、default
-      では次のコマンドを実行したと画面に表示されました。正常に処理が完了した場合は、右の画面が表示されて自動的に終了します。<br>
-      ** Launching RSYNC command:<br>
-      $ rsync -r -t -v --progress -s /home/johndoe/my-data
-      /media/johndoe/abc123<br>
-      <br>
-      また、名前の途中に OS によっては許可されない文字を含んでいると、そのデータの転送をスキップします。/ : * ? " |
-      などがその一例です。 途中に空白があっても rsync
-      では支障がないようですが、他の様々な環境でも扱うことを想定するなら空白も使用しない方が無難です。
-      なお、転送されなかった分は次のようなエラーを表示します：<br>
-      <br>
-      *** Skipping any contents from this failed directory ***<br>
-      rsync: recv_generator: mkdir
-      "/media/johndoe/abc123/Debian/debian10_buster/Debian User Forums •
-      View topic - Where is the "Trash"?_files" failed: Invalid argument
-      (22)<br>
-      <br>
-      *** Skipping any contents from this failed directory ***<br>
-      The Project Gutenberg eBook of A Primary Reader: Old-time Stories,
-      Fairy Tales and Myths Retold by Children, by E. Louise
-      Smythe.htm.GdUmVY" failed: Invalid argument (22)<br>
-
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-
       <hr width="100%"><a href="../../index.html">HOME</a><br>
  </div>
 </body>
