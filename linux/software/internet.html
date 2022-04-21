@@ -9,7 +9,7 @@
    <tbody>
      <tr>
        <td valign="top"><a href="../../index.html"><big>HOME</big></a> / <a href="index.html">Software</a></td>
-       <td valign="middle" align="right">Last updated: 2022/04/21 13:49 JST</td>
+       <td valign="middle" align="right">Last updated: 2022/04/21 14:03 JST</td>
      </tr>
    </tbody>
  </table>
@@ -17,14 +17,6 @@
 <h2 id="content_1_0"><a name="mozTocId473610" class="mozTocH2"></a>ブラウザ、メーラー、HTMLエディタ など</h2>
  <ul id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
   <li><ol>
-   <li><a href="#mozTocId820287">ターミナル・エミュレータ (terminal emulator)</a>
-    <ol><li><a href="#mozTocId481315">GNOME 端末 (Gnome-terminal) の概要について</a></li>
-     <li><a href="#mozTocId879363">GNOME 端末の便利な使用法　-履歴機能</a></li>
-     <li><a href="#mozTocId595198">Xterm の概要について</a></li>
-     <li><a href="#mozTocId427933">「そのようなファイルやディレクトリはありません」と出る。</a></li></ol></li>
-   <li><a href="#mozTocId666176">Point-and-Klik (KNOPPIX 3.7)</a></li>
-   <li><a href="#mozTocId182021">Up2Date Network (アップ2デート)</a></li>
-   <li><a href="#mozTocId250617">YUM コマンドの便利な使い方 (--enablerepo= オプション)</a></li>
    <li><a href="#mozTocId905603">Google Chrome (ブラウザ)</a></li>
    <li><a href="#mozTocId60314">Mozilla Firefox (ブラウザ)</a><ol>
     <li><a href="#mozTocId876679">Firefox のインストールについて</a></li>
@@ -63,114 +55,6 @@
    <li><a href="#mozTocId582547">Wget</a></li>
    <li><a href="#mozTocId242710">Gwget</a></li></ol></li>
 </ol></li></ul>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h3 id="content_1_2"><a name="mozTocId820287" class="mozTocH3"></a>ターミナル・エミュレータ (terminal emulator)</h3>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
- <h4 id="content_1_3"><a name="mozTocId481315" class="mozTocH4"></a>GNOME 端末 (Gnome-terminal) の概要について</h4>
-  <p>GNOME 端末のヘルプに収録のマニュアル V2.3 日本語版より引用</p>
-  <p>[概要]<br>
-  GNOME 端末 は、次のアクションに使用できる端末エミュレーションアプリケーションです。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>GNOME 環境で UNIX シェルにアクセスする<br>
-          シェルは、コマンドラインプロンプトに入力されたコマンドを解釈して実行するプログラムです。 GNOME 端末
-          を起動すると、システムアカウントで指定されたデフォルトのシェルが起動します。いつでも別のシェルに切り替えられます。</li>
-      </ul>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>VT102、VT220、および xterm 端末用の任意のアプリケーションを実行する<br>
-          GNOME 端末 は、X Consortium が開発した xterm プログラムをエミュレートします。xterm
-          プログラムは DEC VT102 端末をエミュレートし、さらに DEC VT220
-          のエスケープシーケンスをサポートします。エスケープシーケンスは、Esc 文字から始まる一連の文字です。 GNOME
-          端末は、VT102 および VT220
-          端末がカーソルの位置づけ、画面消去などの機能に使用するすべてのエスケープシーケンスを受け付けます。</li>
-      </ul>
-      <p>Description: The GNOME 2 terminal emulator application</p>
-      <blockquote>
-        <p class="quotation">GNOME Terminal is a terminal emulation
-          application that you can use to perform the following actions:<br>
-          .<br>
-          To access a UNIX shell in the GNOME environment.<br>
-          .<br>
-          To run any application that is designed to run on VT102,
-          VT220, and xterm terminals.</p>
-      </blockquote>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h4 id="content_1_4"><a name="mozTocId879363" class="mozTocH4"></a>GNOME 端末の便利な使用法　-履歴機能</h4>
-      <p>GNOME
-        端末で最近実行したコマンドは、履歴として記憶されています。このため、長い文字列のコマンドを再実行したり、その一部を変更／訂正した
-        いときに活用すると便利です。</p>
-      <p>履歴表示は、矢印キー　↑　を押下します。複数回押下すれば、より古い履歴が表示できます。元に戻るには　↓　キーを押します。</p>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h4 id="content_1_5"><a name="mozTocId595198" class="mozTocH4"></a>Xterm の概要について</h4>
-      <p>Description: X terminal emulator</p>
-      <blockquote>
-        <p class="quotation">(from apt-cache show xterm in Debian 3.1)<br>
-          xterm is a terminal emulator for the X Window System. It
-          provides DEC VT102 and Tektronix 4014 compatible terminals for
-          programs that cannot use the window system directly. This
-          version implements ISO/ANSI colors and most of the control
-          sequences used by DEC VT220 terminals.<br>
-          .<br>
-          This package provides four commands: xterm, which is the
-          traditional terminal emulator; uxterm, which is a wrapper
-          around xterm that is intelligent about locale settings
-          (especially those which use the UTF-8 character encoding), but
-          which requires the luit program from the xutils package;
-          koi8rxterm, a wrapper similar to uxterm for locales that use
-          the KOI8-R character set; and lxterm, a simple wrapper that
-          chooses which of the previous commands to execute based on the
-          user's locale settings.<br>
-          .<br>
-          A complete list of control sequences supported by the X
-          terminal emulator is provided in /usr/share/doc/xterm.<br>
-          .<br>
-          The xterm program uses bitmap images provided by the
-          xlibs-data package.<br>
-          .<br>
-          Those interested in using koi8rxterm will likely want to
-          install the xfonts-cyrillic package as well.</p>
-      </blockquote>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h4 id="content_1_6"><a name="mozTocId427933" class="mozTocH4"></a>「そ
-        のようなファイルやディレクトリはありません」と出る。</h4>
-      <p>フォルダ名が不適切だと、コマンドラインから操作した時そのメッセージが表示されます。特に、文字列の途中に空白（スペース）を設
-        けてはいけません （下例）。</p>
-      <pre> $ cd hoge 123<br> bash: cd: hoge: そのようなファイルやディレクトリはありません</pre>
-      <p>この場合、途中の空白を削除します。</p>
-      <pre> hoge123</pre>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h3 id="content_1_7"><a name="mozTocId666176" class="mozTocH3"></a>Point-and-Klik
-        (KNOPPIX 3.7)</h3>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>Point-and-Klik については、<a href="pointklik.html" title="SoftWares/PointKlik (2359d)">SoftWares/PointKlik</a>
-          を見てください。</li>
-      </ul>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h3 id="content_1_8"><a name="mozTocId182021" class="mozTocH3"></a>Up2Date Network (アップ2デート)</h3>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>アップ2デート (Up2Date Network) の作業手順については、<a href="http://f40.aaa.livedoor.jp/%7Egreen/?Up2DateNetwork" title="Up2DateNetwork (2071d)">Up2DateNetwork</a> を見てください。</li>
-      </ul>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h3 id="content_1_9"><a name="mozTocId250617" class="mozTocH3"></a>YUM
-        コマンドの便利な使い方 (--enablerepo= オプション)</h3>
-      <p>このコマンド・オプションは、設定ファイルで通常、無効(コメントアウト)にしてあるリポジトリをその時に限り利用可能とするオプ
-        ショ ンです。<br>
-        CentOS の場合では、centosplus がデフォルトで無効であるため、次のように利用します。ただし、yum 2.2.2
-        では --enablerepo= オプションは使えません。<a id="notetext_1" href="#notefoot_1" class="note_super">*1</a> yum 2.4.2
-        以上で利用可能です。</p>
-      <pre> # yum --enablerepo=centosplus install kernel</pre>
-      <p>このオプションで、V4Lサポートの kernel.i686 0:2.6.9-22.0.1.106.unsupported
-        がインストールできます。</p>
-      <p>Fedora Extras
-        を利用したいときにも、通常、無効として設定(enabled=0)しておく方が実際には便利です。追加パッケージをインストールしたい
-        時だけ、 --enablerepo= オプションで Fedora Extras を有効にすることができます（下例参考）。</p>
-      <blockquote>
-        <p class="quotation">[fedora-extras]<br>
-          name=Fedora Extras - $releasever - $basearch<br>
-          baseurl=<a href="http://MIRROR-Server/fedora/linux/extras/3/$basearch/">http://MIRROR-Server/fedora/linux/extras/3/$basearch/</a><br>
-          enabled=0<br>
-          gpgcheck=1<br>
-          gpgkey=<a href="http://MIRROR-Server/fedora/linux/extras/RPM-GPG-KEY-Fedora-Extras">http://MIRROR-Server/fedora/linux/extras/RPM-GPG-KEY-Fedora-Extras</a></p>
-      </blockquote>
 <div class="jumpmenu"><a href="#navigator">↑</a><br>
 <h3><a name="mozTocId905603" class="mozTocH3"></a>Google Chrome (ブラウザ)</h3>
 Chrome は Google から無料で配布されているプロプライエタリなブラウザです。ソースコードを公開していないので、各ディストリビューションは自由に再配布できません。インストールの実際や Tips などで記事が増えたので<a href="chrome/index.html">別ページ</a>を作成しました。</div>
