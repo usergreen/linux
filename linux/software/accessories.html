@@ -9,7 +9,7 @@
    <tbody>
      <tr>
        <td valign="top"><a href="../../index.html"><big>HOME</big></a> / <a href="index.html">Software</a></td>
-       <td valign="middle" align="right">Last updated: 2022/04/21 11:49 JST</td>
+       <td valign="middle" align="right">Last updated: 2022/04/21 17:00 JST</td>
      </tr>
    </tbody>
  </table>
@@ -20,7 +20,10 @@
    <li><a href="#format-usb">Format USB (USB メモリ初期化ソフト)</a></li>
    <li><a href="#mozTocId780265">圧縮ファイル解凍ツール LHA</a></li>
    <li><a href="#mozTocId666176">Point-and-Klik (KNOPPIX 3.7)</a></li>
-   <li><a href="#mozTocId832015">(GRUB / Lilo) 起動する順番を変更したいとき</a></li></ol></li></ul>
+   <li><a href="#mozTocId791578">ScreenRuler（スクリーン定規）</a><ol>
+    <li><a href="#screenruler">ScreenRuler とは何ですか？</a></li>
+    <li><a href="#screenruler2">インストール (debian 9, etc.)</a></li></ol></li>
+   <li><a href="#mozTocId832015">GRUB/ Lilo - 起動する順番を変更したいとき</a></li></ol></li></ul>
 
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
 <h3><a name="format-usb"></a>Format USB (USB メモリ初期化ソフト)</h3>
@@ -111,7 +114,51 @@ lha (1.14i-10) を設定しています ...
           を見てください。</li>
       </ul>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h3 id="content_1_40"><a name="mozTocId832015" class="mozTocH3"></a>(GRUB / Lilo) 起動する順番を変更したいとき</h3>
+<h3 id="content_1_16"><a name="mozTocId791578"></a>ScreenRuler（スクリーン定規）</h3>
+<h4 id="screenruler">ScreenRuler とは何ですか？</h4>
+<p>GNOME、MATE など複数のデスクトップ環境で利用できる便利な仮想定規です。<br>
+Debian 10 (buster) で一時配布が中断しましたが、Debian 11 (bullseys) 以降配布が再開されています。
+<blockquote><pre>
+画面上のオブジェクトを豊富な単位で計測
+
+ScreenRuler は画面上に定規を表示し、そこにある他のオブジェクトを測定できます。以下の機能があります:
+
+ * 水平および垂直方向に 6 つの異なる単位で計測:
+   ピクセル、センチメートル、インチ、パイカ、ポイント、および定規の長さの
+   パーセンテージとして
+ * カスタマイズできる色・フォント。
+ * キーボードで正確に位置を制御。
+ * 定規を常に他のウィンドウより前に表示するオプション。
+
+※引用元: <a href="https://packages.debian.org/ja/bullseye/screenruler">https://packages.debian.org/ja/bullseye/screenruler</a>
+</pre></blockquote>
+<h4 id="screenruler2">Debian 9 (stretch) へのインストール</h4>
+<blockquote><pre>
+# apt install screenruler
+パッケージリストを読み込んでいます... 完了
+依存関係ツリーを作成しています                
+状態情報を読み取っています... 完了
+以下の追加パッケージがインストールされます:
+  fonts-lato javascript-common libjs-jquery libruby2.3 rake ruby ruby-atk
+  ruby-cairo ruby-cairo-gobject ruby-did-you-mean ruby-gdk-pixbuf2
+  ruby-gettext ruby-gio2 ruby-glib2 ruby-gobject-introspection ruby-gtk2
+  ruby-locale ruby-minitest ruby-net-telnet ruby-pango ruby-power-assert
+  ruby-test-unit ruby-text ruby2.3 rubygems-integration
+提案パッケージ:
+  apache2 | lighttpd | httpd ri ruby-dev bundler
+以下のパッケージが新たにインストールされます:
+  fonts-lato javascript-common libjs-jquery libruby2.3 rake ruby ruby-atk
+  ruby-cairo ruby-cairo-gobject ruby-did-you-mean ruby-gdk-pixbuf2
+  ruby-gettext ruby-gio2 ruby-glib2 ruby-gobject-introspection ruby-gtk2
+  ruby-locale ruby-minitest ruby-net-telnet ruby-pango ruby-power-assert
+  ruby-test-unit ruby-text ruby2.3 rubygems-integration screenruler
+アップグレード: 0 個、新規インストール: 26 個、削除: 0 個、保留: 0 個。
+7,494 kB のアーカイブを取得する必要があります。
+この操作後に追加で 33.0 MB のディスク容量が消費されます。
+続行しますか? [Y/n]
+</pre></blockquote>
+さらに、Debian 5 (lenny) へのインストールは <a href="screenruler_debian_lenny.html">ScreenRuler/DebianLenny</a> 参照。
+<h3 id="content_1_40"><a name="mozTocId832015" class="mozTocH3"></a>GRUB/ Lilo - 起動する順番を変更したいとき</h3>
       <ul>
         <li>複数の OS を導入した場合の運用のコツやトラブル対処<br>
           ブート・ローダーに Grub を利用している場合には、/boot/grub/grub.conf
