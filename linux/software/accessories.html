@@ -4,29 +4,28 @@
 <title>Accessories, etc. - Linux on the Desktop</title>
 </head>
 <body>    
- <div id="navigator">
  <table width="100%" cellspacing="0" cellpadding="0" border="0">
    <tbody>
      <tr>
        <td valign="top"><a href="../../index.html"><big>HOME</big></a> / <a href="index.html">Software</a></td>
-       <td valign="middle" align="right">Last updated: 2022/04/21 17:00 JST</td>
+       <td valign="middle" align="right">Last updated: 2022/04/22 15:21 JST</td>
      </tr>
    </tbody>
  </table>
 <hr width="100%">
-<h2 id="content_1_0"><a name="mozTocId473610" class="mozTocH2"></a>アクセサリ</h2>
- <ul id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
+<h2>アクセサリ</h2>
+ <ul>
   <li><ol>
    <li><a href="#format-usb">Format USB (USB メモリ初期化ソフト)</a></li>
-   <li><a href="#mozTocId780265">圧縮ファイル解凍ツール LHA</a></li>
+   <li><a href="#gtkhash">GtkHash - ハッシュ値の計算</a></li>
+   <li><a href="#mozTocId780265">LHA - 圧縮ファイル解凍ツール</a></li>
    <li><a href="#mozTocId666176">Point-and-Klik (KNOPPIX 3.7)</a></li>
    <li><a href="#mozTocId791578">ScreenRuler（スクリーン定規）</a><ol>
     <li><a href="#screenruler">ScreenRuler とは何ですか？</a></li>
     <li><a href="#screenruler2">インストール (debian 9, etc.)</a></li></ol></li>
-   <li><a href="#mozTocId832015">GRUB/ Lilo - 起動する順番を変更したいとき</a></li></ol></li></ul>
-
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h3><a name="format-usb"></a>Format USB (USB メモリ初期化ソフト)</h3>
+   <li><a href="#mozTocId832015">GRUB/Lilo で起動する順番を変更したいとき</a></li></ol></li>
+ </ul>
+<h3 id="format-usb">Format USB (USB メモリ初期化ソフト)</h3>
 このソフトウェアは MX Linux に付属している非常に強力な USB フラッシュメモリフォーマット（初期化）用ツールです。<br>
 USB メモリのフォーマットは GParted をはじめとするグラフィカルなツールがいくつか存在しますが、そういったツールで初期化に失敗した場合には、この Format USB を一度試してみる価値があると思います。当方では時々このツールのお世話になっています。<br>
 参考までに、最近 (2022.4.20) 利用したときの出力ログを以下掲載しておきます。
@@ -67,8 +66,18 @@ Setting Partition Type OK
 refresh partition info OK
 make disk visible to udev OK
 </pre></blockquote>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h3 id="content_1_36"><a name="mozTocId780265" class="mozTocH3"></a>圧縮ファイル解凍ツール LHA</h3>
+<h3 id="gtkhash">GtkHash - ハッシュ値の計算</h3>
+GtkHash は小さな GTK+ ユーティリティで、ユーザーは mhash ライブラリを使用してメッセージダイジェストやチェックサムを計算することができます。現在サポートされているハッシュ関数は MD5、MD6、SHA1、SHA256、SHA512、RIPEMD、TIGER および WHIRLPOOL です。<br>
+ 出典 <a href="https://packages.debian.org/ja/bullseye/gtkhash">https://packages.debian.org/ja/bullseye/gtkhash</a>
+<p>
+インストール方法<br>
+# apt install gtkhash
+</p><p>
+端末からの起動方法<br>
+$ gtkhash</P>
+なお MATE デスクトップ環境では、GtkHash と同様な機能を備えた caja-gtkhash という拡張機能 (extension) が組み込まれています。caja-gtkhash の操作画面は、ファイルのアイコンを右クリック > [プロパティ] > [ダイジェスト] より開くことができます（下図参照）。
+<p><img style="left" src="../../images/misc/Screenshot-caja-gtkhash.png" alt="Screenshot-caja-gtkhash.png" title="A screenshot of caja-gtkhash" width="480px"></p>
+<h3 id="mozTocId780265">LHA 圧縮ファイル解凍ツール</h3>
 このソフトウェアは、Windows でよく使われる .lzh形式のファイルを展開することができます。以下、Debian 3.1 Sarge へインストールする場合の参考です。
 <blockquote><pre>
  # apt-cache show lha
@@ -77,7 +86,7 @@ Package: lha
 Priority: optional
 Section: non-free/utils
 Installed-Size: 168
-Maintainer: GOTO Masanori <gotom@debian.org>
+Maintainer: GOTO Masanori - gotom_at_debian.org
 Architecture: i386
 Version: 1.14i-10
 Depends: libc6 (>= 2.3.2.ds1-4)
@@ -107,14 +116,12 @@ Description: lzh archiver
 (.../archives/lha_1.14i-10_i386.deb から) lha を展開しています...
 lha (1.14i-10) を設定しています ...
 </pre></blockquote>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h3 id="content_1_7"><a name="mozTocId666176" class="mozTocH3"></a>Point-and-Klik (KNOPPIX 3.7)</h3>
+<h3 id="mozTocId666176">Point-and-Klik (KNOPPIX 3.7)</h3>
       <ul>
-        <li>Point-and-Klik については、<a href="pointklik.html" title="SoftWares/PointKlik (2359d)">Software/PointKlik</a>
+        <li>Point-and-Klik については、<a href="pointklik.html" title="Software/PointKlik">Software/PointKlik</a>
           を見てください。</li>
       </ul>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-<h3 id="content_1_16"><a name="mozTocId791578"></a>ScreenRuler（スクリーン定規）</h3>
+<h3 id="mozTocId791578">ScreenRuler（スクリーン定規）</h3>
 <h4 id="screenruler">ScreenRuler とは何ですか？</h4>
 <p>GNOME、MATE など複数のデスクトップ環境で利用できる便利な仮想定規です。<br>
 Debian 10 (buster) で一時配布が中断しましたが、Debian 11 (bullseys) 以降配布が再開されています。
@@ -158,7 +165,7 @@ ScreenRuler は画面上に定規を表示し、そこにある他のオブジ�
 続行しますか? [Y/n]
 </pre></blockquote>
 さらに、Debian 5 (lenny) へのインストールは <a href="screenruler_debian_lenny.html">ScreenRuler/DebianLenny</a> 参照。
-<h3 id="content_1_40"><a name="mozTocId832015" class="mozTocH3"></a>GRUB/ Lilo - 起動する順番を変更したいとき</h3>
+<h3 id="mozTocId832015">GRUB/Lilo で起動する順番を変更したいとき</h3>
       <ul>
         <li>複数の OS を導入した場合の運用のコツやトラブル対処<br>
           ブート・ローダーに Grub を利用している場合には、/boot/grub/grub.conf
@@ -205,6 +212,5 @@ ScreenRuler は画面上に定規を表示し、そこにある他のオブジ�
           というファイルが同様に存在するので、その中の記述を書き換えてください。</li>
       </ul>
  <hr width="100%"><a href="../../index.html">HOME</a><br>
- </div>
 </body>
 </html>
