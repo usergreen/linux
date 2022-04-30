@@ -1,71 +1,69 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
 <head>
-  <meta content="text/html; charset=Shift_JIS" http-equiv="Content-Type">
-  <title>4</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>Debian etch part4 - Linux o the Desktop</title>
 </head>
 <body>
 <div id="navigator">
-<div><a href="../../../../index.html" title="FrontPage (2d)">HOME</a> /
-<a href="../index.html">Debian</a>
-/ <a href="index.html">Etch</a>
-/ 4 <br>
+<div><a href="../../../../index.html" title="FrontPage (2d)">HOME</a> / <a href="../index.html">Debian</a>
+/ <a href="index.html">Etch</a> / 4 <br>
 <hr size="2" width="100%"></div>
 <div class="contents">
 <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
-  <li><a href="#content_1_0">APT �� sources.list �ݒ�ɂ���</a>
+  <li><a href="#content_1_0">APT の sources.list 設定について</a>
     <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
-      <li><a href="#content_1_1">4.0 Etch �̕W���i�f�t�H���g�j�� sources.list</a></li>
-      <li><a href="#content_1_2">sources.list �̃J�X�^�}�C�Y�i�C���ƒǉ��j</a></li>
+      <li><a href="#content_1_1">4.0 Etch の標準（デフォルト）の sources.list</a></li>
+      <li><a href="#content_1_2">sources.list のカスタマイズ（修正と追加）</a></li>
     </ul>
   </li>
-  <li><a href="#content_1_3">Etch �̃p�b�P�[�W�Ǘ��iAPT�j�ɂ���</a>
+  <li><a href="#content_1_3">Etch のパッケージ管理（APT）について</a>
     <ul class="list3" style="padding-left: 16px; margin-left: 16px;">
       <li><a href="#content_1_4">APT Update Watcher</a></li>
       <li><a href="#content_1_5">update-manager</a></li>
       <li><a href="#content_1_6">Update Notifier</a></li>
-      <li><a href="#content_1_7">secure apt �ɂ��āi�ύX�_�j</a></li>
-      <li><a href="#content_1_8">secure apt ��L���ɂ���ɂ́H</a></li>
-      <li><a href="#content_1_9">secure apt �𗘗p���Ȃ��Ƃ�</a></li>
-      <li><a href="#content_1_10">Recommends �p�b�P�[�W�̈����i�ύX�_ -2007-10-01�j</a></li>
+      <li><a href="#content_1_7">secure apt について（変更点）</a></li>
+      <li><a href="#content_1_8">secure apt を有効にするには？</a></li>
+      <li><a href="#content_1_9">secure apt を利用しないとき</a></li>
+      <li><a href="#content_1_10">Recommends パッケージの扱い（変更点 -2007-10-01）</a></li>
     </ul>
   </li>
 </ul>
 </div>
-<h3 id="content_1_0">APT �� sources.list �ݒ�ɂ���</h3>
-<div class="jumpmenu"><a href="#navigator">��</a></div>
-<h4 id="content_1_1">4.0 Etch �̕W���i�f�t�H���g�j�� sources.list</h4>
-<p>�l�b�g���[�N�C���X�g�[������� etc/apt/sources.list �̏����ݒ�́A���̂Ƃ���ł��B(2007-04-15 ����)</p>
+<h3 id="content_1_0">APT の sources.list 設定について</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_1">4.0 Etch の標準（デフォルト）の sources.list</h4>
+<p>ネットワークインストール直後の etc/apt/sources.list の初期設定は、次のとおりです。(2007-04-15 現在)</p>
 <blockquote>
   <p class="quotation">#<br>
 # deb cdrom:[Debian GNU/Linux 4.0 r0 _Etch_ - Official i386 NETINST
 Binary-1 20070407-11:29]/ etch contrib main<br>
-�@<br>
+　<br>
 deb cdrom:[Debian GNU/Linux 4.0 r0 _Etch_ - Official i386 NETINST
 Binary-1 20070407-11:29]/ etch contrib main<br>
-�@<br>
+　<br>
 deb <a href="http://ftp.jp.debian.org/debian/">http://ftp.jp.debian.org/debian/</a>
 etch main<br>
 deb-src <a href="http://ftp.jp.debian.org/debian/">http://ftp.jp.debian.org/debian/</a>
 etch main<br>
-�@<br>
+　<br>
 deb <a href="http://security.debian.org/">http://security.debian.org/</a>
 etch/updates main contrib<br>
 deb-src <a href="http://security.debian.org/">http://security.debian.org/</a>
 etch/updates main contrib</p>
 </blockquote>
-<div class="jumpmenu"><a href="#navigator">��</a></div>
-<h4 id="content_1_2">sources.list �̃J�X�^�}�C�Y�i�C���ƒǉ��j</h4>
-<p>���� CD-ROM ���Q�Ƃ��Ȃ��悤�ɂ��܂��B�܂��Acontrib �� non-free �Z�N�V������ǉ����܂��B</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_2">sources.list のカスタマイズ（修正と追加）</h4>
+<p>毎回 CD-ROM を参照しないようにします。また、contrib と non-free セクションを追加します。</p>
 <blockquote>
   <p class="quotation"># deb cdrom:[Debian GNU/Linux 4.0 r0 _Etch_ -
 Official i386 NETINST Binary-1 20070407-11:29]/ etch contrib main<br>
-�@<br>
+　<br>
 deb <a href="http://ftp.jp.debian.org/debian/">http://ftp.jp.debian.org/debian/</a>
 etch main contrib non-free<br>
 deb-src <a href="http://ftp.jp.debian.org/debian/">http://ftp.jp.debian.org/debian/</a>
 etch main contrib non-free<br>
-�@<br>
+　<br>
 deb <a href="http://security.debian.org/">http://security.debian.org/</a>
 etch/updates main contrib non-free<br>
 deb-src <a href="http://security.debian.org/">http://security.debian.org/</a>
@@ -74,17 +72,17 @@ etch/updates main contrib non-free</p>
 <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
   <li><a href="http://www.debian.or.jp/community/push-mirror.html">Debian
 JP
-Project - CDN �Ή��~���[�̐ݒ�</a>�ɂ���<br>
-������ Debian �~���[�T�[�o�����z�I�ɏW�񂵂đϏ�Q������������ CDN (Contents Delivery Network)
-�����i�߂��Ă��܂��B</li>
+Project - CDN 対応ミラーの設定</a>について<br>
+複数の Debian ミラーサーバを仮想的に集約して耐障害性を持たせる CDN (Contents Delivery Network)
+化が進められています。</li>
 </ul>
-<div class="jumpmenu"><a href="#navigator">��</a></div>
-<h3 id="content_1_3">Etch �̃p�b�P�[�W�Ǘ��iAPT�j�ɂ���</h3>
-<div class="jumpmenu"><a href="#navigator">��</a></div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h3 id="content_1_3">Etch のパッケージ管理（APT）について</h3>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
 <h4 id="content_1_4">APT Update Watcher</h4>
-<p>�A�v�g�|�E�I�b�`�́A�l�b�g���[�N�ɐڑ����A�A�b�v�f�[�^���펞�Ď�����A�v���b�g�ł��B���̃A�v���b�g�́A�A�b�v�f�[�^�����p�\�ł���ꍇ�A�N
-���C�A���g�Ɏ����ʒm���܂��BWindows Updates �� Red Hat network �Ɠ��l�ȋ@�\�������܂��B</p>
-<p>"apt-watch" �̉p���T�����|�󂵏�L�̈��p���s���܂����B<br>
+<p>アプト−ウオッチは、ネットワークに接続し、アップデータを常時監視するアプレットです。このアプレットは、アップデータが利用可能である場合、ク
+ライアントに自動通知します。Windows Updates や Red Hat network と同様な機能を持ちます。</p>
+<p>"apt-watch" の英文概説より翻訳し上記の引用を行いました。<br>
 <a href="http://packages.debian.org/testing/admin/apt-watch">http://packages.debian.org/testing/admin/apt-watch</a><br>
 "apt-watch is an applet that will inform you when upgrades are
 available for your computer. It is similar to Windows Update or the Red
@@ -100,52 +98,52 @@ This package contains the GNOME applet graphical interface.</p>
 </blockquote>
 <hr class="full_hr">
 <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-  <li>�ߋ��̏��<br>
-apt-watch �Ƃ́A2002�N12��24���� Debian
-�E�B�[�N���[�j���[�X�ł��łɔ��\����A���炭�J������Ă����f�X�N�g�b�v�E�A�v���b�g�ł��B</li>
+  <li>過去の情報<br>
+apt-watch とは、2002年12月24日の Debian
+ウィークリーニュースですでに発表され、長らく開発されてきたデスクトップ・アプレットです。</li>
 </ul>
 <p>Announcing apt-watch: a Gnome 2 panel applet to check for upgrades<br>
 <a href="http://lists.debian.org/debian-devel/2002/12/msg01150.html">http://lists.debian.org/debian-devel/2002/12/msg01150.html</a></p>
 <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
   <li><a href="http://www.jp.debian.org/News/weekly/2002/50/">Debian
-�E�B�[�N���[�j���[�X - 2002 �N 12 �� 24 ��</a><br>
-�uGNOME �p�l���� Debian ���Ď�����B Daniel Burrows ����́A�A�b�v�O���[�h���Ȃ����ǂ����`�F�b�N���� GNOME
-2 �p�̃p�l���A�v���b�g�Aapt-watch
-�̃v���r���[�ł𔭕\���܂����B�ނ͂��΂炭�̊ԍ�Ƃ𑱂����Ȃ��̂ŁA�������̕����̃��X�g�Œ��߂�����܂����BEmile van Bergen
-����́A���܂�ɂ������̕��ׂ��������ăV�X�e�����A�b�v�f�[�g������A��Ƃł��Ȃ��Ȃ��Ȃ�̂ŁA�A�C�R����_�ł�����ׂ��ł͂Ȃ��ƕt�������܂����B
-�������A����͈���� (stable) �ŉ^�p���Ă���V�X�e���ɂ͂悢�A�C�f�A�����m��܂���B�v</li>
+ウィークリーニュース - 2002 年 12 月 24 日</a><br>
+「GNOME パネルで Debian を監視する。 Daniel Burrows さんは、アップグレードがないかどうかチェックする GNOME
+2 用のパネルアプレット、apt-watch
+のプレビュー版を発表しました。彼はしばらくの間作業を続けられないので、未完成の部分のリストで締めくくりました。Emile van Bergen
+さんは、あまりにも多くの負荷がかかってシステムをアップデートしたり、作業できなくなくなるので、アイコンを点滅させるべきではないと付け加えました。
+しかし、それは安定版 (stable) で運用しているシステムにはよいアイデアかも知れません。」</li>
 </ul>
 <hr class="full_hr">
-<p>���̃A�v���b�g���C���X�g�[������ɂ́A���̃R�}���h�����s���܂��B</p>
+<p>このアプレットをインストールするには、次のコマンドを実行します。</p>
 <pre> # apt-get install apt-watch</pre>
-<p>���邢�́A���̃R�}���h�ł��C���X�g�[������܂��B</p>
+<p>あるいは、次のコマンドでもインストールされます。</p>
 <pre> # apt-get install apt-watch-gnome</pre>
 <blockquote>
-  <p class="quotation">�p�b�P�[�W���X�g��ǂݍ���ł��܂�... ����<br>
-�ˑ��֌W�c���[���쐬���Ă��܂�... ����<br>
-�ȉ��̓��ʃp�b�P�[�W���C���X�g�[������܂�:<br>
+  <p class="quotation">パッケージリストを読み込んでいます... 完了<br>
+依存関係ツリーを作成しています... 完了<br>
+以下の特別パッケージがインストールされます:<br>
 apt-watch-backend<br>
-�����p�b�P�[�W:<br>
+推奨パッケージ:<br>
 synaptic<br>
-�ȉ��̃p�b�P�[�W���V���ɃC���X�g�[������܂�:<br>
+以下のパッケージが新たにインストールされます:<br>
 apt-watch-backend apt-watch-gnome<br>
-�A�b�v�O���[�h: 0 �A�V�K�C���X�g�[��: 2 �A�폜: 0 �A�ۗ�: 249 �B<br>
-82.5kB �̃A�[�J�C�u���擾����K�v������܂��B<br>
-�W�J��ɒǉ��� 393kB �̃f�B�X�N�e�ʂ������܂��B<br>
-���s���܂��� [Y/n]?</p>
+アップグレード: 0 個、新規インストール: 2 個、削除: 0 個、保留: 249 個。<br>
+82.5kB のアーカイブを取得する必要があります。<br>
+展開後に追加で 393kB のディスク容量が消費されます。<br>
+続行しますか [Y/n]?</p>
 </blockquote>
-<div class="jumpmenu"><a href="#navigator">��</a></div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
 <h4 id="content_1_5">update-manager</h4>
-<p>Synaptic ���x�[�X�ɊJ������A�ȈՂȋ@�\��񋟂��܂����ASynaptic �ɂ͊܂܂�Ȃ��ǉ��@�\�������Ă��܂��BEtch
-�̐V�K�C���X�g�[���iGNOME�f�X�N�g�b�v�j�ł͕W���Ŋ܂܂�܂��B�����ǉ��C���X�g�[�����������́A���̃R�}���h��p���܂��B</p>
+<p>Synaptic をベースに開発され、簡易な機能を提供しますが、Synaptic には含まれない追加機能も備えています。Etch
+の新規インストール（GNOMEデスクトップ）では標準で含まれます。これを追加インストールしたい時は、次のコマンドを用います。</p>
 <pre> # apt-get install update-manager</pre>
-<div class="jumpmenu"><a href="#navigator">��</a></div>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
 <h4 id="content_1_6">Update Notifier</h4>
-<p>�A�b�v�f�[�g���f�X�N�g�b�v�̃p�l���ʒm�̈�Ɏ����ʒm���Ă����A�v���b�g�ł��Bapt-watch
-�Ɠ��l�ȋ@�\��񋟂��܂��B����́ADebian 4.0 Etch
-�ȍ~�̐V�@�\�ł��B1��1��̕p�x�Ń`�F�b�N���s���܂��BGNOME�����łȂ��AKDE�AXfce
-�Ȃǂ̊��ł��@�\���܂��B�I�v�V�����Ŏ����X�V(automatic updates)��ݒ肷�邱�Ƃ��\�ƂȂ��Ă��܂��B</p>
-<p>�C���X�g�[�����@</p>
+<p>アップデートをデスクトップのパネル通知領域に自動通知してくれるアプレットです。apt-watch
+と同様な機能を提供します。これは、Debian 4.0 Etch
+以降の新機能です。1日1回の頻度でチェックが行われます。GNOMEだけでなく、KDE、Xfce
+などの環境でも機能します。オプションで自動更新(automatic updates)を設定することも可能となっています。</p>
+<p>インストール方法</p>
 <pre> # apt-get install update-notifier</pre>
 <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
   <li><a href="http://packages.debian.org/stable/gnome/update-notifier">Daemon
@@ -165,20 +163,20 @@ notification area specification, like GNOME, KDE and XFCE."</p>
 </ul>
 <hr class="full_hr">
 <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-  <li>Debian �E�B�[�N���[�j���[�X - 2006 �N 08 �� 22 ��<br>
-�u�f�X�N�g�b�v�̐V�@�\�B Gustavo Noronha Silva ����́Aupdate-notifier
-�̐V�o�[�W�������A�b�v���[�h�����Ɣ��\���܂����B���̃c�[���� Ubuntu
-���ŏ��ɍ�������̂ŁA�ʒm�p�̗̈�ɒʒm�p�̃A�C�R����\�����āA���p�\�ɂȂ����X�V�ɂ��ă��[�U�ɒʒm���܂��BDebian
-�p�b�P�[�W�̃o�[�W�����́A�d��ȃp�b�P�[�W�݂̂ɂ��āA�X�V�ɂ���čċN�����K�{�ƂȂ������Ƃ�ʒm���܂��B�܂��A�h���C�u�ɓ����ꂽ
-Debian �� CD �� DVD �ɂ��Ă��ʒm���܂��B���̂悤�ȋ@�\�́ADebian
-���f�X�N�g�b�v�f�B�X�g���r���[�V�����Ƃ��Ă��f���炵�����̂ɂ���̂Ɉ�𔃂��͂��ł��B�v- <a
+  <li>Debian ウィークリーニュース - 2006 年 08 月 22 日<br>
+「デスクトップの新機能。 Gustavo Noronha Silva さんは、update-notifier
+の新バージョンをアップロードしたと発表しました。このツールは Ubuntu
+が最初に作ったもので、通知用の領域に通知用のアイコンを表示して、利用可能になった更新についてユーザに通知します。Debian
+パッケージのバージョンは、重大なパッケージのみについて、更新によって再起動が必須となったことを通知します。また、ドライブに入れられた
+Debian の CD や DVD についても通知します。このような機能は、Debian
+をデスクトップディストリビューションとしてより素晴らしいものにするのに一役買うはずです。」- <a
  href="http://www.jp.debian.org/News/weekly/2006/34/">http://www.jp.debian.org/News/weekly/2006/34/</a></li>
   <li><a
  href="http://lists.debian.org/debian-devel/2006/08/msg00629.html">New
 desktop features provided by new version of update-notifier</a></li>
 </ul>
-<div class="jumpmenu"><a href="#navigator">��</a></div>
-<h4 id="content_1_7">secure apt �ɂ��āi�ύX�_�j</h4>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_7">secure apt について（変更点）</h4>
 <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
   <li>secure apt - KeN's GNU/Linux Diary (2006-01-07)<br>
     <a href="http://kmuto.jp/d/index.cgi/debian/apt-secure.htm">http://kmuto.jp/d/index.cgi/debian/apt-secure.htm</a></li>
@@ -187,75 +185,75 @@ desktop features provided by new version of update-notifier</a></li>
 signing
 in Debian (from Securing Debian Manual)</a></li>
 </ul>
-<p>Etch/Sid �Ƀp�b�P�[�W���؂̂��߂́u���J���v�������I�ɍ̗p����Ă��܂��B��̓I�ɂ́A<a
+<p>Etch/Sid にパッケージ検証のための「公開鍵」が部分的に採用されています。具体的には、<a
  href="http://secure-testing-master.debian.net/">Debian testing
-security advisories</a> ��萏�������[�X�����A�b�v�f�[�^�ɂ��̎d�g�݂��̂������Ă��܂��B</p>
-<p>���J���𗘗p���Ȃ��Ƃ��́A# apt-get update �R�}���h���s���A���̃��b�Z�[�W���\������܂��F</p>
+security advisories</a> より随時リリースされるアップデータにこの仕組みが採り入れられています。</p>
+<p>公開鍵を利用しないときは、# apt-get update コマンド実行時、次のメッセージが表示されます：</p>
 <blockquote>
-  <p class="quotation">�uW: GPG error: <a
+  <p class="quotation">「W: GPG error: <a
  href="http://secure-testing.debian.net">http://secure-testing.debian.net</a>
-etch/security-updates Release: ���J���𗘗p�ł��Ȃ����߁A�ȉ��̏����͌��؂ł��܂���ł���: NO_PUBKEY
+etch/security-updates Release: 公開鍵を利用できないため、以下の署名は検証できませんでした: NO_PUBKEY
 946AA6E18722E71E<br>
-W: �����̖����������邽�߂ɂ� apt-get update �����s����K�v�����邩������܂���v</p>
+W: これらの問題を解決するためには apt-get update を実行する必要があるかもしれません」</p>
 </blockquote>
-<div class="jumpmenu"><a href="#navigator">��</a></div>
-<h4 id="content_1_8">secure apt ��L���ɂ���ɂ́H</h4>
-<p>���̎菇�ŁA�p�b�P�[�W�ƌ��J�����C���X�g�[�����܂��B</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_8">secure apt を有効にするには？</h4>
+<p>次の手順で、パッケージと公開鍵をインストールします。</p>
 <ol class="list1" style="padding-left: 16px; margin-left: 16px;">
-  <li>debian-keyring �Ƃ����p�b�P�[�W���C���X�g�[���B
+  <li>debian-keyring というパッケージをインストール。
     <pre> # apt-get install debian-keyring</pre>
     <blockquote>
-      <p class="quotation">�p�b�P�[�W���X�g��ǂݍ���ł��܂�... ����<br>
-�ˑ��֌W�c���[���쐬���Ă��܂�... ����<br>
-�ȉ��̃p�b�P�[�W���V���ɃC���X�g�[������܂�:<br>
-�@debian-keyring<br>
-�A�b�v�O���[�h: 0 �A�V�K�C���X�g�[��: 1 �A�폜: 0 �A�ۗ�: 0 �B<br>
-11.5MB �̃A�[�J�C�u���擾����K�v������܂��B<br>
-�W�J��ɒǉ��� 14.9MB �̃f�B�X�N�e�ʂ������܂��B<br>
-�x��: �ȉ��̃p�b�P�[�W�͔F�؂���Ă��܂���!<br>
-�@debian-keyring<br>
-���؂Ȃ��ɂ����̃p�b�P�[�W���C���X�g�[�����܂��� [y/N]? y</p>
+      <p class="quotation">パッケージリストを読み込んでいます... 完了<br>
+依存関係ツリーを作成しています... 完了<br>
+以下のパッケージが新たにインストールされます:<br>
+　debian-keyring<br>
+アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 0 個。<br>
+11.5MB のアーカイブを取得する必要があります。<br>
+展開後に追加で 14.9MB のディスク容量が消費されます。<br>
+警告: 以下のパッケージは認証されていません!<br>
+　debian-keyring<br>
+検証なしにこれらのパッケージをインストールしますか [y/N]? y</p>
     </blockquote>
   </li>
 </ol>
-<p>�ꍇ�ɂ���ẮA�ȉ��̒ǉ���Ƃ��K�v�ƂȂ�܂��B</p>
+<p>場合によっては、以下の追加作業も必要となります。</p>
 <ol class="list1" style="padding-left: 16px; margin-left: 16px;">
-  <li>�C���|�[�g���������J���i��Fhoge-200x-x.asc�j���_�E�����[�h�B</li>
-  <li>apt-key ��ǉ��B
-    <pre> # apt-key add hoge-200x-x.asc<br> gpg: ��ΓI�ɐM�p���錮��������܂���<br> OK</pre>
+  <li>インポートしたい公開鍵（例：hoge-200x-x.asc）をダウンロード。</li>
+  <li>apt-key を追加。
+    <pre> # apt-key add hoge-200x-x.asc<br> gpg: 絶対的に信用する鍵が見つかりません<br> OK</pre>
   </li>
-  <li>��L��Ƃ̊m�F�́A���̃R�}���h�ōs���܂��B
+  <li>上記作業の確認は、次のコマンドで行えます。
     <pre> # apt-key list</pre>
   </li>
 </ol>
-<div class="jumpmenu"><a href="#navigator">��</a></div>
-<h4 id="content_1_9">secure apt �𗘗p���Ȃ��Ƃ�</h4>
-<p>���̃R�}���h�����s����ƃG���[���b�Z�[�W���o�܂��B</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_9">secure apt を利用しないとき</h4>
+<p>次のコマンドを実行するとエラーメッセージが出ます。</p>
 <p># apt-get update</p>
 <blockquote>
   <p class="quotation">W: GPG error: <a
  href="http://secure-testing.debian.net">http://secure-testing.debian.net</a>
 etch/security-updates Release:<br>
-���J���𗘗p�ł��Ȃ����߁A�ȉ��̏����͌��؂ł��܂���ł���: NO_PUBKEY 946AA6E18722E71E<br>
-W: �����̖����������邽�߂ɂ� apt-get update �����s����K�v�����邩������܂���</p>
+公開鍵を利用できないため、以下の署名は検証できませんでした: NO_PUBKEY 946AA6E18722E71E<br>
+W: これらの問題を解決するためには apt-get update を実行する必要があるかもしれません</p>
 </blockquote>
 <p># apt-get install hoge</p>
 <blockquote>
-  <p class="quotation">�p�b�P�[�W���X�g��ǂݍ���ł��܂�... ����<br>
-�ˑ��֌W�c���[���쐬���Ă��܂�... ����<br>
-�ȉ��̃p�b�P�[�W���C���X�g�[������܂�:<br>
-�@...<br>
-�x��: �ȉ��̃p�b�P�[�W�͔F�؂���Ă��܂���!<br>
-�@...<br>
-���؂Ȃ��ɂ����̃p�b�P�[�W���C���X�g�[�����܂��� [y/N]?</p>
+  <p class="quotation">パッケージリストを読み込んでいます... 完了<br>
+依存関係ツリーを作成しています... 完了<br>
+以下のパッケージがインストールされます:<br>
+　...<br>
+警告: 以下のパッケージは認証されていません!<br>
+　...<br>
+検証なしにこれらのパッケージをインストールしますか [y/N]?</p>
 </blockquote>
-<p>�G���[���b�Z�[�W�͒��ӂ𑣂��ړI�ŕ\������܂����A���ۂ̃A�b�v�O���[�h��C���X�g�[����W���邱�Ƃ͂���܂���B���̏󋵂̂��Ƃł��A#
-apt-get upgrade �����s���邱�Ƃ��ł��܂��B</p>
-<div class="jumpmenu"><a href="#navigator">��</a></div>
-<h4 id="content_1_10">Recommends �p�b�P�[�W�̈����i�ύX�_ -2007-10-01�j</h4>
-<p>2007-10-01 ���AAPT�̋������ύX�����\��ł��BRecommends �p�b�P�[�W���f�t�H���g�ŃC���X�g�[������܂��B</p>
+<p>エラーメッセージは注意を促す目的で表示されますが、実際のアップグレードやインストールを妨げることはありません。この状況のもとでも、#
+apt-get upgrade を実行することができます。</p>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+<h4 id="content_1_10">Recommends パッケージの扱い（変更点 -2007-10-01）</h4>
+<p>2007-10-01 より、APTの挙動が変更される予定です。Recommends パッケージもデフォルトでインストールされます。</p>
 <p>Subject: Installation of Recommends by default on October 1st<br>
-debian-devel-announce���B<br>
+debian-devel-announceより。<br>
 <a href="http://kmuto.jp/d/index.cgi/2007/08/02/">http://kmuto.jp/d/index.cgi/2007/08/02/</a><br>
 <a
  href="http://lists.debian.org/debian-devel-announce/2007/08/msg00000.html">http://lists.debian.org/debian-devel-announce/2007/08/msg00000.html</a></p>
