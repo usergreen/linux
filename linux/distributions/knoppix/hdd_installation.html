@@ -1,301 +1,280 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
   <head>
-    <meta content="text/html; charset=Shift_JIS"
-      http-equiv="Content-Type">
-    <title>HddInstallation</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>KNOPPIX / HddInstallation - Linux on the Desktop</title>
   </head>
   <body>
     <div id="navigator">
       <p><a href="../../../index.html" title="FrontPage (2d)">HOME</a> /
-        <a href="../index.html">Distributions</a> / <a
-          href="index.html">KNOPPIX</a>
-        / Hdd
-        Installation</p>
+        <a href="../index.html">Distributions</a> / <a href="index.html">KNOPPIX</a> / Hdd Installation</p>
       <hr size="2" width="100%">
-      <h2 id="content_1_0">ƒn[ƒhƒfƒBƒXƒN‚ÉƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä‚Ìg—p</h2>
+      <h2 id="content_1_0">ãƒãƒ¼ãƒ‰ãƒ‡ã‚£ã‚¹ã‚¯ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ã®ä½¿ç”¨</h2>
       <div class="contents">
-        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-          <li><a href="#content_1_0">ƒn[
-              ƒhƒfƒBƒXƒN‚ÉƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä‚Ìg—p </a>
-            <ul class="list2" style="padding-left: 16px; margin-left:
-              16px;">
-              <li><a href="#content_1_1">ƒn[
-                  ƒhƒfƒBƒXƒNiHDD)‚ÉƒCƒ“ƒXƒg[ƒ‹‚µ‚Äg‚¦‚Ü‚·‚©B </a></li>
-              <li><a href="#content_1_2">KNOPPIX
-                  ‚ğ HDD ‚ÉƒCƒ“ƒXƒg[ƒ‹‚·‚éè‡‚É‚Â‚¢‚Ä </a></li>
-              <li><a href="#content_1_3">HDD
-                  ƒCƒ“ƒXƒg[ƒ‹‚Ì DebianŒ`®ƒVƒXƒeƒ€‚Æ Knoppix-System ‚Æ‚Ìˆá‚¢‚Í‰½‚Å‚·‚©B </a></li>
-              <li><a href="#content_1_4">Debian
-                  GNU/Linux
-                  ‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚éŠÈˆÕ‚È•û–@‚Æ‚µ‚ÄŠˆ—p‚Å‚«‚Ü‚·‚©B </a></li>
-              <li><a href="#content_1_5">‹N
-                  “®AƒƒOƒCƒ“‰æ–Ê‚ª•\¦‚³‚ê‚¸AƒfƒXƒNƒgƒbƒv‚©‚ç‚»‚Ìİ’è‚à‚Å‚«‚Ü‚¹‚ñB </a></li>
-              <li><a href="#content_1_6">HDD
-                  ƒCƒ“ƒXƒg[ƒ‹‚µ‚½‚çAƒpƒbƒP[ƒWŠÇ—ƒc[ƒ‹ APT ‚Íg‚¦‚Ü‚·‚©B </a></li>
-              <li><a href="#content_1_7">HDD
-                  ƒCƒ“ƒXƒg[ƒ‹‚µ‚½‚çAƒ[ƒ‹ƒ\ƒtƒg Sylpheed ‚Ì–{•¶‚ª•¶š‰»‚¯‚µ‚Ä“Ç‚ß‚Ü‚¹‚ñB </a></li>
-              <li><a href="#content_1_8">V
-                  ‹@”\ install2win [KNOPPIX2WIN] ‚Æ‚Í‰½‚Å‚·‚©B </a>
-                <ul class="list3" style="padding-left: 16px;
-                  margin-left: 16px;">
-                  <li><a href="#content_1_9">‹N
-                      “®‚Å‚«‚È‚­‚È‚é–â‘è‚Æ‚»‚Ì‘Îˆ•û–@ </a></li>
+        <ul>
+          <li><a href="#content_1_0">ãƒãƒ¼ãƒ‰ãƒ‡ã‚£ã‚¹ã‚¯ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ã®ä½¿ç”¨ </a>
+            <ul>
+              <li><a href="#content_1_1">ãƒãƒ¼ãƒ‰ãƒ‡ã‚£ã‚¹ã‚¯ï¼ˆHDD)ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ä½¿ãˆã¾ã™ã‹ã€‚ </a></li>
+              <li><a href="#content_1_2">KNOPPIX ã‚’ HDD ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹æ‰‹é †ã«ã¤ã„ã¦ </a></li>
+              <li><a href="#content_1_3">HDD ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ™‚ã® Debianå½¢å¼ã‚·ã‚¹ãƒ†ãƒ ã¨ Knoppix-System ã¨ã®é•ã„ã¯ä½•ã§ã™ã‹ã€‚ </a></li>
+              <li><a href="#content_1_4">Debian GNU/Linux ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ç°¡æ˜“ãªæ–¹æ³•ã¨ã—ã¦æ´»ç”¨ã§ãã¾ã™ã‹ã€‚ </a></li>
+              <li><a href="#content_1_5">èµ·å‹•æ™‚ã€ãƒ­ã‚°ã‚¤ãƒ³ç”»é¢ãŒè¡¨ç¤ºã•ã‚Œãšã€ãƒ‡ã‚¹ã‚¯ãƒˆãƒƒãƒ—ã‹ã‚‰ãã®è¨­å®šã‚‚ã§ãã¾ã›ã‚“ã€‚ </a></li>
+              <li><a href="#content_1_6">HDD ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸã‚‰ã€ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ç®¡ç†ãƒ„ãƒ¼ãƒ« APT ã¯ä½¿ãˆã¾ã™ã‹ã€‚ </a></li>
+              <li><a href="#content_1_7">HDD ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸã‚‰ã€ãƒ¡ãƒ¼ãƒ«ã‚½ãƒ•ãƒˆ Sylpheed ã®æœ¬æ–‡ãŒæ–‡å­—åŒ–ã‘ã—ã¦èª­ã‚ã¾ã›ã‚“ã€‚ </a></li>
+              <li><a href="#content_1_8">æ–°æ©Ÿèƒ½ install2win [KNOPPIX2WIN] ã¨ã¯ä½•ã§ã™ã‹ã€‚ </a>
+                <ul>
+                  <li><a href="#content_1_9">èµ·å‹•ã§ããªããªã‚‹å•é¡Œã¨ãã®å¯¾å‡¦æ–¹æ³• </a></li>
                 </ul>
               </li>
-              <li><a href="#content_1_10">install2win
-                  ‚Æ]—ˆ‚ÌHDDƒCƒ“ƒXƒg[ƒ‹‚Ìˆá‚¢‚Í‰½‚Å‚·‚©B </a></li>
-              <li><a href="#content_1_11">GNOME
-                  2.2
-                  ‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚é‚É‚Í? </a></li>
+              <li><a href="#content_1_10">install2win ã¨å¾“æ¥ã®HDDã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã®é•ã„ã¯ä½•ã§ã™ã‹ã€‚ </a></li>
+              <li><a href="#content_1_11">GNOME 2.2 ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã«ã¯? </a></li>
             </ul>
           </li>
         </ul>
       </div>
-      <div class="jumpmenu"><a href="#navigator">ª</a></div>
-      <h3 id="content_1_1">ƒn[ƒhƒfƒBƒXƒNiHDD)‚ÉƒCƒ“ƒXƒg[ƒ‹‚µ‚Äg‚¦‚Ü‚·‚©B</h3>
-      <p>KNOPPIX ‚Í CD
-        ‚©‚ç‹N“®‚·‚éLinux‚È‚Ì‚ÅƒCƒ“ƒXƒg[ƒ‹ì‹Æ‚Í•K—v‚ ‚è‚Ü‚¹‚ñ‚ªAƒn[ƒhƒfƒBƒXƒN‚ÉƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä—˜—p‚·‚é‚±‚Æ‚à‰Â”\‚Å‚·B‚»‚Ìê‡
-        ‚ÍAŸ‚Ìà–¾‚ğQ
-        l‚É‚µ‚Ä‚­‚¾‚³‚¢BƒOƒ‰ƒtƒBƒJƒ‹‚È‰æ–Êã‚©‚çA“ú–{Œê‚Ì‘€ìè‡‚É]‚Á‚Äì‹Æ‚ğs‚¦‚Ü‚·B</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>ÅV”Å
-          ‚ÌKnoppix V3.4“ú–{Œê”Å‚Å‚Í knoppix-installer ‚ª“±“ü‚³‚ê‚Ä‚¢‚ÄA]—ˆ‚Ì
+      <div class="jumpmenu"><a href="#navigator">â†‘</a></div>
+      <h3 id="content_1_1">ãƒãƒ¼ãƒ‰ãƒ‡ã‚£ã‚¹ã‚¯ï¼ˆHDD)ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ä½¿ãˆã¾ã™ã‹ã€‚</h3>
+      <p>KNOPPIX ã¯ CD
+        ã‹ã‚‰èµ·å‹•ã™ã‚‹Linuxãªã®ã§ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ä½œæ¥­ã¯å¿…è¦ã‚ã‚Šã¾ã›ã‚“ãŒã€ãƒãƒ¼ãƒ‰ãƒ‡ã‚£ã‚¹ã‚¯ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦åˆ©ç”¨ã™ã‚‹ã“ã¨ã‚‚å¯èƒ½ã§ã™ã€‚ãã®å ´åˆ
+        ã¯ã€æ¬¡ã®èª¬æ˜ã‚’å‚
+        è€ƒã«ã—ã¦ãã ã•ã„ã€‚ã‚°ãƒ©ãƒ•ã‚£ã‚«ãƒ«ãªç”»é¢ä¸Šã‹ã‚‰ã€æ—¥æœ¬èªã®æ“ä½œæ‰‹é †ã«å¾“ã£ã¦ä½œæ¥­ã‚’è¡Œãˆã¾ã™ã€‚</p>
+      <ul>
+        <li>æœ€æ–°ç‰ˆ
+          ã®Knoppix V3.4æ—¥æœ¬èªç‰ˆã§ã¯ knoppix-installer ãŒå°å…¥ã•ã‚Œã¦ã„ã¦ã€å¾“æ¥ã®
           knx-hdinstall
-          ‚Æ•Ê•¨‚Å‚·B‚±‚ê‚ÍAY‘Œ¤‚Ìƒy[ƒW‚Å‰ğà‚³‚ê‚Ä‚¢‚Ü‚·BÅV”Å‚ÌKnoppix V3.4“ú–{Œê”Å‚Å‚ÍA]—ˆ‚Ì
+          ã¨åˆ¥ç‰©ã§ã™ã€‚ã“ã‚Œã¯ã€ç”£ç·ç ”ã®ãƒšãƒ¼ã‚¸ã§è§£èª¬ã•ã‚Œã¦ã„ã¾ã™ã€‚æœ€æ–°ç‰ˆã®Knoppix V3.4æ—¥æœ¬èªç‰ˆã§ã¯ã€å¾“æ¥ã®
           knx-hdinstall.ja
-          ‚ğg‚¤‚±‚Æ‚Í‚Å‚«‚È‚­‚È‚è‚Ü‚µ‚½B
-          <p>ƒRƒ“ƒ\[ƒ‹‚Å knoppix-installer
-            ‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢BÅV”Å‚Å‚Í‚±‚¿‚ç‚ªƒƒCƒ“‚É‚È‚é‚»‚¤‚Å‚·‚ªAY‘Œ¤‚É‚æ‚é‚Æ
+          ã‚’ä½¿ã†ã“ã¨ã¯ã§ããªããªã‚Šã¾ã—ãŸã€‚
+          <p>ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã§ knoppix-installer
+            ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚æœ€æ–°ç‰ˆã§ã¯ã“ã¡ã‚‰ãŒãƒ¡ã‚¤ãƒ³ã«ãªã‚‹ãã†ã§ã™ãŒã€ç”£ç·ç ”ã«ã‚ˆã‚‹ã¨
             knoppix-installer
-            ‚Í‚Ü‚¾“®ì‚ªŠm”F‚³‚ê‚Ä‚¢‚È‚¢‚Æ‚¢‚¤‚±‚Æ‚Å‚·BƒCƒ“ƒXƒg[ƒ‹‚·‚éÛ‚É‚Í‹C‚ğ‚Â‚¯‚Ä‚­‚¾‚³‚¢B</p>
+            ã¯ã¾ã å‹•ä½œãŒç¢ºèªã•ã‚Œã¦ã„ãªã„ã¨ã„ã†ã“ã¨ã§ã™ã€‚ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹éš›ã«ã¯æ°—ã‚’ã¤ã‘ã¦ãã ã•ã„ã€‚</p>
         </li>
       </ul>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>KNOPPIX
-          3.3 ‚Å‚ÍAknx-hdinstall.ja ‚Å HD
-          ƒCƒ“ƒXƒg[ƒ‹‚·‚é‚Æ“ú–{Œê‚ª“ü—Í‚Å‚«‚È‚¢‚Æ‚¢‚¤•s‹ï‡‚ªŒ©‚ç‚ê‚é‚æ‚¤‚Å‚·B‚»‚ÌÛ‚É‚ÍA/etc/X11/Xsession.d
+          3.3 ã§ã¯ã€knx-hdinstall.ja ã§ HD
+          ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã¨æ—¥æœ¬èªãŒå…¥åŠ›ã§ããªã„ã¨ã„ã†ä¸å…·åˆãŒè¦‹ã‚‰ã‚Œã‚‹ã‚ˆã†ã§ã™ã€‚ãã®éš›ã«ã¯ã€/etc/X11/Xsession.d
           /31xinput
-          ƒtƒ@ƒCƒ‹‚Ì–`“ª–”‚Í2s–Ú‚ÉŸ‚Ì‹Lq‚ğ’Ç‰Á‚µ‚Ä‚­‚¾‚³‚¢B
+          ãƒ•ã‚¡ã‚¤ãƒ«ã®å†’é ­åˆã¯2è¡Œç›®ã«æ¬¡ã®è¨˜è¿°ã‚’è¿½åŠ ã—ã¦ãã ã•ã„ã€‚
           <pre> export LANG="ja_JP.eucJP"<br> export LC_ALL="ja_JP.eucJP"</pre>
-          ƒƒOƒCƒ“‚µ’¼‚·‚ÆA“ú–{Œê“ü—Í‚ª‰Â”\‚Æ‚È‚è‚Ü‚·B</li>
+          ãƒ­ã‚°ã‚¤ãƒ³ã—ç›´ã™ã¨ã€æ—¥æœ¬èªå…¥åŠ›ãŒå¯èƒ½ã¨ãªã‚Šã¾ã™ã€‚</li>
       </ul>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>Knoppix3.2 ˆÈ‘O‚Ì“ú–{Œê”Å‚Ìê‡AƒXƒ^[ƒg‚©‚ç-Root ShelliƒRƒ“ƒ\[ƒ‹j‚ğŠJ‚«AƒL[ƒ{[ƒh‚©‚ç
-          knx-hdinstall.ja ‚Æ“ü—Í‚·‚ê‚ÎAƒCƒ“ƒXƒg[ƒ‰[‚ª—§‚¿ã‚ª‚è‚Ü‚·B
-          <ul class="list2" style="padding-left: 16px; margin-left:
-            16px;">
-            <li>knx-hdinstall ‚Æ“ü—Í‚·‚é‚Æ‰pŒê‚ÌƒƒbƒZ[ƒW‚ª•\¦‚³‚ê‚Ä‚µ‚Ü‚¤‚Ì‚ÅA’ˆÓ‚µ‚Ü‚·B</li>
+      <ul>
+        <li>Knoppix3.2 ä»¥å‰ã®æ—¥æœ¬èªç‰ˆã®å ´åˆã€ã‚¹ã‚¿ãƒ¼ãƒˆã‹ã‚‰-Root Shellï¼ˆã‚³ãƒ³ã‚½ãƒ¼ãƒ«ï¼‰ã‚’é–‹ãã€ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‹ã‚‰
+          knx-hdinstall.ja ã¨å…¥åŠ›ã™ã‚Œã°ã€ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ©ãƒ¼ãŒç«‹ã¡ä¸ŠãŒã‚Šã¾ã™ã€‚
+          <ul>
+            <li>knx-hdinstall ã¨å…¥åŠ›ã™ã‚‹ã¨è‹±èªã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒè¡¨ç¤ºã•ã‚Œã¦ã—ã¾ã†ã®ã§ã€æ³¨æ„ã—ã¾ã™ã€‚</li>
           </ul>
         </li>
       </ul>
       <blockquote>
-        <p class="quotation">ƒOƒ‰ƒtƒBƒJƒ‹‚È‰æ–Êã‚ÅA‘Î˜bŒ`®‚Åì‹Æ‚ği‚ß‚é‚Ì‚ÅAWindows‚ğƒCƒ“ƒXƒg[
-          ƒ‹‚µ‚½ŒoŒ±‚ª‚ ‚ê‚ÎAƒn[ƒhƒ‹‚Í‚‚­‚ ‚è‚Ü‚¹‚ñB‚æ‚èÚ×‚Èè‡‚ÍAG˜aƒVƒXƒeƒ€‚æ‚è”­s‚³‚ê‚½ƒŠƒiƒbƒNƒX“ü–å‘uKnoppix‚Å
-          ‚Í‚¶‚ß‚éLinux“ü
-          –åv‚ÌŠª––‚ÉÚ‚¹‚ç‚ê‚Ä‚¢‚é‚Ì‚ÅAQl‚É‚µ‚Ä‚­‚¾‚³‚¢B</p>
+        <p class="quotation">ã‚°ãƒ©ãƒ•ã‚£ã‚«ãƒ«ãªç”»é¢ä¸Šã§ã€å¯¾è©±å½¢å¼ã§ä½œæ¥­ã‚’é€²ã‚ã‚‹ã®ã§ã€Windowsã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼
+          ãƒ«ã—ãŸçµŒé¨“ãŒã‚ã‚Œã°ã€ãƒãƒ¼ãƒ‰ãƒ«ã¯é«˜ãã‚ã‚Šã¾ã›ã‚“ã€‚ã‚ˆã‚Šè©³ç´°ãªæ‰‹é †ã¯ã€ç§€å’Œã‚·ã‚¹ãƒ†ãƒ ã‚ˆã‚Šç™ºè¡Œã•ã‚ŒãŸãƒªãƒŠãƒƒã‚¯ã‚¹å…¥é–€æ›¸ã€ŒKnoppixã§
+          ã¯ã˜ã‚ã‚‹Linuxå…¥
+          é–€ã€ã®å·»æœ«ã«è¼‰ã›ã‚‰ã‚Œã¦ã„ã‚‹ã®ã§ã€å‚è€ƒã«ã—ã¦ãã ã•ã„ã€‚</p>
       </blockquote>
       <blockquote>
-        <p class="quotation">KNOPPIX•—‚É–¡•t‚¯‚³‚ê‚½Debian
-          GNU/Linux‚ªŠy‚µ‚ß‚Ü‚·B‚à‚¿‚ë‚ñA‹@”\‚âİ’è‚Í CD ƒu[ƒg‚Ì‚à‚Ì‚ğˆø‚«Œp‚®‚Ì‚ÅAg‚¢Ÿè‚ª—ò‚é‚±‚Æ‚Í‚ ‚è‚Ü‚¹‚ñB</p>
+        <p class="quotation">KNOPPIXé¢¨ã«å‘³ä»˜ã‘ã•ã‚ŒãŸDebian
+          GNU/LinuxãŒæ¥½ã—ã‚ã¾ã™ã€‚ã‚‚ã¡ã‚ã‚“ã€æ©Ÿèƒ½ã‚„è¨­å®šã¯ CD ãƒ–ãƒ¼ãƒˆæ™‚ã®ã‚‚ã®ã‚’å¼•ãç¶™ãã®ã§ã€ä½¿ã„å‹æ‰‹ãŒåŠ£ã‚‹ã“ã¨ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚</p>
       </blockquote>
-      <div class="jumpmenu"><a href="#navigator">ª</a></div>
-      <h3 id="content_1_2">KNOPPIX ‚ğ HDD ‚ÉƒCƒ“ƒXƒg[ƒ‹‚·‚éè‡‚É‚Â‚¢‚Ä</h3>
-      <p>ŠÈ’P‚Èè‡‚ğì¬‚µ‚Ü‚µ‚½B</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>KNOPPIX 3.4(20040629) “ú–{Œê”ÅˆÈ~‚ÌƒŠƒŠ[ƒX‚ğ‘ÎÛ‚Æ‚·‚éÅV‚ÌƒCƒ“ƒXƒg[ƒ‹•û–@‚ÍA<a
+      <div class="jumpmenu"><a href="#navigator">â†‘</a></div>
+      <h3 id="content_1_2">KNOPPIX ã‚’ HDD ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹æ‰‹é †ã«ã¤ã„ã¦</h3>
+      <p>ç°¡å˜ãªæ‰‹é †ã‚’ä½œæˆã—ã¾ã—ãŸã€‚</p>
+      <ul>
+        <li>KNOPPIX 3.4(20040629) æ—¥æœ¬èªç‰ˆä»¥é™ã®ãƒªãƒªãƒ¼ã‚¹ã‚’å¯¾è±¡ã¨ã™ã‚‹æœ€æ–°ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ–¹æ³•ã¯ã€<a
             href="http://f40.aaa.livedoor.jp/%7Egreen/?KNOPPIX-FAQ%2F3.4HddInstall"
-            title="KNOPPIX-FAQ/3.4HddInstall (2099d)">3.4 “ú–{Œê”Å‚ÌƒCƒ“ƒXƒg[ƒ‹è‡</a>‚ğ
-          Œ©‚Ä‚­‚¾‚³‚¢B
-          ‚³‚ç‚ÉŠÈ—ª‰»‚³‚ê‚½ƒCƒ“ƒXƒg[ƒ‹‚ğÀŒ»‚µ‚Ä‚¢‚Ü‚·B</li>
+            title="KNOPPIX-FAQ/3.4HddInstall (2099d)">3.4 æ—¥æœ¬èªç‰ˆã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ‰‹é †</a>ã‚’
+          è¦‹ã¦ãã ã•ã„ã€‚
+          ã•ã‚‰ã«ç°¡ç•¥åŒ–ã•ã‚ŒãŸã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã‚’å®Ÿç¾ã—ã¦ã„ã¾ã™ã€‚</li>
       </ul>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>KNOPPIX 3.3 “ú–{Œê”ÅˆÈ~‚ğ‘ÎÛ‚Æ‚µ‚½V‚µ‚¢ƒCƒ“ƒXƒg[ƒ‹•û–@‚ÍA<a
+      <ul>
+        <li>KNOPPIX 3.3 æ—¥æœ¬èªç‰ˆä»¥é™ã‚’å¯¾è±¡ã¨ã—ãŸæ–°ã—ã„ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ–¹æ³•ã¯ã€<a
             href="http://f40.aaa.livedoor.jp/%7Egreen/?KNOPPIX-FAQ%2F3.3HddInstall"
-            title="KNOPPIX-FAQ/3.3HddInstall (2099d)">3.3 “ú–{Œê”Å‚ÌƒCƒ“ƒXƒg[ƒ‹è‡</a>‚ğ
-          Œ©‚Ä‚­‚¾‚³‚¢B</li>
+            title="KNOPPIX-FAQ/3.3HddInstall (2099d)">3.3 æ—¥æœ¬èªç‰ˆã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ‰‹é †</a>ã‚’
+          è¦‹ã¦ãã ã•ã„ã€‚</li>
       </ul>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>å‚Æ‚µ‚ÄAKNOPPIX 3.2 “ú–{Œê”ÅˆÈ‘O‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚éê‡‚É‚ÍA<a
+      <ul>
+        <li>ä¸»ã¨ã—ã¦ã€KNOPPIX 3.2 æ—¥æœ¬èªç‰ˆä»¥å‰ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹å ´åˆã«ã¯ã€<a
             href="http://f40.aaa.livedoor.jp/%7Egreen/?KNOPPIX-FAQ%2F3.2HddInstall"
-            title="KNOPPIX-FAQ/3.2HddInstall (2099d)">3.2 “ú–{Œê”Å‚ÌƒCƒ“ƒXƒg[ƒ‹è‡</a>‚ğ
-          Œ©‚Ä‚­‚¾‚³‚¢B</li>
+            title="KNOPPIX-FAQ/3.2HddInstall (2099d)">3.2 æ—¥æœ¬èªç‰ˆã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ‰‹é †</a>ã‚’
+          è¦‹ã¦ãã ã•ã„ã€‚</li>
       </ul>
-      <p>‚È‚¨AŠe‘Œê‚É–|–ó‚³‚ê‚½ƒCƒ“ƒXƒg[ƒ‹•û–@‚ğûW‚µ‚Ä‚¢‚é <a
+      <p>ãªãŠã€å„å›½èªã«ç¿»è¨³ã•ã‚ŒãŸã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ–¹æ³•ã‚’åé›†ã—ã¦ã„ã‚‹ <a
           href="http://www.freenet.org.nz/misc/knoppix-install.html">Knoppix
 Hard
-          Disk Installation HOWTO</a> ‚Æ‚¢‚¤ƒTƒCƒg‚ª‚ ‚è‚Ü‚·B</p>
-      <div class="jumpmenu"><a href="#navigator">ª</a></div>
-      <h3 id="content_1_3">HDD ƒCƒ“ƒXƒg[ƒ‹‚Ì DebianŒ`®ƒVƒXƒeƒ€‚Æ Knoppix-System
-        ‚Æ‚Ìˆá‚¢‚Í‰½‚Å‚·‚©B</h3>
-      <p>‚Ü‚¸ADebianŒ`®‚Í‚ ‚­‚Ü‚ÅŒ`®‚Å‚ ‚Á‚ÄADebianŒ`®‚ğ‘I‚ñ‚Å‚à<strong>Debian
-          GNU/Linux‚É‚Í‚È‚è‚Ü‚¹‚ñB</strong>(—
-        —R‚Íw<a href="#k594af02">Debian
+          Disk Installation HOWTO</a> ã¨ã„ã†ã‚µã‚¤ãƒˆãŒã‚ã‚Šã¾ã™ã€‚</p>
+      <div class="jumpmenu"><a href="#navigator">â†‘</a></div>
+      <h3 id="content_1_3">HDD ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ™‚ã® Debianå½¢å¼ã‚·ã‚¹ãƒ†ãƒ ã¨ Knoppix-System
+        ã¨ã®é•ã„ã¯ä½•ã§ã™ã‹ã€‚</h3>
+      <p>ã¾ãšã€Debianå½¢å¼ã¯ã‚ãã¾ã§å½¢å¼ã§ã‚ã£ã¦ã€Debianå½¢å¼ã‚’é¸ã‚“ã§ã‚‚<strong>Debian
+          GNU/Linuxã«ã¯ãªã‚Šã¾ã›ã‚“ã€‚</strong>(ç†
+        ç”±ã¯ã€<a href="#k594af02">Debian
           GNU/Linux
-          ‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚éŠÈˆÕ‚È•û–@‚Æ‚µ‚ÄŠˆ—p‚Å‚«‚Ü‚·‚©B</a>x‚ğQÆ)<br>
-        ‚»‚ê‚ğ“¥‚Ü‚¦‚ÄˆÈ‰º‚ğ“Ç‚ñ‚Å‚­‚¾‚³‚¢B</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>uDebianŒ`®‚ÌƒVƒXƒeƒ€‚ÅƒCƒ“ƒXƒg[ƒ‹‚µ‚½ê‡Anetwork‚Ìİ’è‚Íó‚¯Œp‚ª‚ê‚Ü‚¹‚ñBnetcardconfig‚È
-          ‚Ç‚Å‚ÌÄİ’è
-          ‚ª•K—v‚Å‚·B‚Ü‚½Auser–¼‚ğ knoppixˆÈŠO‚É‚µ‚½ê‡‚ÍAmozilla‚ÌÄİ’è‚à•K—v‚É‚È‚è‚Ü‚·Bv</li>
-        <li>uKnoppix-System‚Å‚ÌƒCƒ“ƒXƒg[ƒ‹‚Ìê‡Auser–¼‚Íknoppix‚ÅŒÅ’è‚³‚ê‚Ä‚¢‚é‚½‚ß–â‘è‚Í‚ ‚è‚Ü‚¹‚ñB‚½
-          ‚¾‚µACD”Å
-          ‚Å‚Ìƒ†[ƒUŠÂ‹«‚È‚Ç‚Íˆø‚«Œp‚ª‚ê‚È‚­AƒCƒ“ƒXƒg[ƒ‹‚Éİ’è‚µ‚½ƒpƒXƒ[ƒh‚à—˜—p‚³‚ê‚Ü‚¹‚ñBv</li>
+          ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ç°¡æ˜“ãªæ–¹æ³•ã¨ã—ã¦æ´»ç”¨ã§ãã¾ã™ã‹ã€‚</a>ã€ã‚’å‚ç…§)<br>
+        ãã‚Œã‚’è¸ã¾ãˆã¦ä»¥ä¸‹ã‚’èª­ã‚“ã§ãã ã•ã„ã€‚</p>
+      <ul>
+        <li>ã€ŒDebianå½¢å¼ã®ã‚·ã‚¹ãƒ†ãƒ ã§ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸå ´åˆã€networkã®è¨­å®šã¯å—ã‘ç¶™ãŒã‚Œã¾ã›ã‚“ã€‚netcardconfigãª
+          ã©ã§ã®å†è¨­å®š
+          ãŒå¿…è¦ã§ã™ã€‚ã¾ãŸã€useråã‚’ knoppixä»¥å¤–ã«ã—ãŸå ´åˆã¯ã€mozillaã®å†è¨­å®šã‚‚å¿…è¦ã«ãªã‚Šã¾ã™ã€‚ã€</li>
+        <li>ã€ŒKnoppix-Systemã§ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã®å ´åˆã€useråã¯knoppixã§å›ºå®šã•ã‚Œã¦ã„ã‚‹ãŸã‚å•é¡Œã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ãŸ
+          ã ã—ã€CDç‰ˆ
+          ã§ã®ãƒ¦ãƒ¼ã‚¶ç’°å¢ƒãªã©ã¯å¼•ãç¶™ãŒã‚Œãªãã€ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ™‚ã«è¨­å®šã—ãŸãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚‚åˆ©ç”¨ã•ã‚Œã¾ã›ã‚“ã€‚ã€</li>
       </ul>
       <blockquote>
-        <p class="quotation">Aist ‚Ì<a
+        <p class="quotation">Aist ã®<a
             href="http://unit.aist.go.jp/itri/knoppix/news/news031124.html">2003/11
             /24
-            ƒjƒ…[ƒX</a>‚Å‚ÍA‚±‚Ì‚æ‚¤‚ÉG‚ê‚ç‚ê‚Ä‚¢‚é‰ÓŠ‚ª‚ ‚è‚Ü‚·B</p>
+            ãƒ‹ãƒ¥ãƒ¼ã‚¹</a>ã§ã¯ã€ã“ã®ã‚ˆã†ã«è§¦ã‚Œã‚‰ã‚Œã¦ã„ã‚‹ç®‡æ‰€ãŒã‚ã‚Šã¾ã™ã€‚</p>
       </blockquote>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>HDD ƒCƒ“ƒXƒg[ƒ‹‚µ‚½‚çA“ú–{Œê“ü—Í‚ª‚Å‚«‚È‚­‚È‚è‚Ü‚µ‚½B
+      <ul>
+        <li>HDD ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸã‚‰ã€æ—¥æœ¬èªå…¥åŠ›ãŒã§ããªããªã‚Šã¾ã—ãŸã€‚
           <blockquote>
-            <p class="quotation">KNOPPIX 3.3 ‚Å‚ÍAHDD
-              ƒCƒ“ƒXƒg[ƒ‹‚·‚é‚Æ“ú–{Œê‚ª“ü—Í‚Å‚«‚È‚¢‚Æ‚¢‚¤•s‹ï‡‚ªŒ©‚ç‚ê‚é‚©‚à’m‚ê‚Ü‚¹‚ñB/etc/X11/Xsession.d
+            <p class="quotation">KNOPPIX 3.3 ã§ã¯ã€HDD
+              ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã¨æ—¥æœ¬èªãŒå…¥åŠ›ã§ããªã„ã¨ã„ã†ä¸å…·åˆãŒè¦‹ã‚‰ã‚Œã‚‹ã‹ã‚‚çŸ¥ã‚Œã¾ã›ã‚“ã€‚/etc/X11/Xsession.d
               /31xinput
-              ƒtƒ@ƒCƒ‹‚Ì–`“ª–”‚Í2s–Ú‚ÉŸ‚Ì‹Lq‚ğ’Ç‰Á‚µ‚½‚ ‚ÆAƒƒOƒCƒ“‚µ’¼‚µ‚Ä‚İ‚Ä‚­‚¾‚³‚¢B</p>
+              ãƒ•ã‚¡ã‚¤ãƒ«ã®å†’é ­åˆã¯2è¡Œç›®ã«æ¬¡ã®è¨˜è¿°ã‚’è¿½åŠ ã—ãŸã‚ã¨ã€ãƒ­ã‚°ã‚¤ãƒ³ã—ç›´ã—ã¦ã¿ã¦ãã ã•ã„ã€‚</p>
             <pre> export LANG="ja_JP.eucJP"<br> export LC_ALL="ja_JP.eucJP"</pre>
           </blockquote>
         </li>
       </ul>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>[Shift]+[Space]‚Å“ú–{Œê“ü—Íƒ‚[ƒh‚É‚µ‚½ŒãAŒ³‚Ì‰p•¶“ü—Íƒ‚[ƒh‚É–ß‚ç‚È‚­‚È‚è‚Ü‚µ‚½B
+      <ul>
+        <li>[Shift]+[Space]ã§æ—¥æœ¬èªå…¥åŠ›ãƒ¢ãƒ¼ãƒ‰ã«ã—ãŸå¾Œã€å…ƒã®è‹±æ–‡å…¥åŠ›ãƒ¢ãƒ¼ãƒ‰ã«æˆ»ã‚‰ãªããªã‚Šã¾ã—ãŸã€‚
           <blockquote>
-            <p class="quotation">[Ctrl] + ? ‚ğ‚µ‚Ä‚İ‚½‚ç’¼‚é‚æ‚¤‚Å‚·B</p>
+            <p class="quotation">[Ctrl] + ? ã‚’è©¦ã—ã¦ã¿ãŸã‚‰ç›´ã‚‹ã‚ˆã†ã§ã™ã€‚</p>
           </blockquote>
         </li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">ª</a></div>
-      <h3 id="content_1_4">Debian GNU/Linux ‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚éŠÈˆÕ‚È•û–@‚Æ‚µ‚ÄŠˆ—p‚Å‚«‚Ü‚·‚©B</h3>
-      <p>‚Å‚«‚Ü‚¹‚ñB<br>
-        KNOPPIX“Æ©ƒpƒbƒP[ƒW‚ÌˆË‘¶«‚É‚æ‚Á‚ÄADebian
-        GNU/Linux‚É•K—v‚ÈƒVƒXƒeƒ€‚ÌƒpƒbƒP[ƒW‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚é‚±‚Æ‚ª‚Å‚«‚È‚¢‚Ì‚ÅŠ®‘S‚ÈDebian
-        GNU/Linux‚É‚Í‚È‚è‚Ü‚¹‚ñB</p>
-      <p>Debian GNU/Linux‚ğƒCƒ“ƒXƒg[ƒ‹‚µ‚½‚¢‚È‚ç <a
-          href="http://www.jp.debian.org/devel/debian-installer/index.ja.html">Œö
-          ®
-          ƒCƒ“ƒXƒg[ƒ‰ (Debian-Installer)</a>A‚à‚µ‚­‚ÍƒCƒ“ƒXƒg[ƒ‰‚É Anaconda for Debian
-        ‚ğ—˜—p‚µ‚½ <a href="http://componentizedlinux.org/progeny/">Progeny
+      <div class="jumpmenu"><a href="#navigator">â†‘</a></div>
+      <h3 id="content_1_4">Debian GNU/Linux ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ç°¡æ˜“ãªæ–¹æ³•ã¨ã—ã¦æ´»ç”¨ã§ãã¾ã™ã‹ã€‚</h3>
+      <p>ã§ãã¾ã›ã‚“ã€‚<br>
+        KNOPPIXç‹¬è‡ªãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã®ä¾å­˜æ€§ã«ã‚ˆã£ã¦ã€Debian
+        GNU/Linuxã«å¿…è¦ãªã‚·ã‚¹ãƒ†ãƒ ã®ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã“ã¨ãŒã§ããªã„ã®ã§å®Œå…¨ãªDebian
+        GNU/Linuxã«ã¯ãªã‚Šã¾ã›ã‚“ã€‚</p>
+      <p>Debian GNU/Linuxã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸã„ãªã‚‰ <a
+          href="http://www.jp.debian.org/devel/debian-installer/index.ja.html">å…¬
+          å¼
+          ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ© (Debian-Installer)</a>ã€ã‚‚ã—ãã¯ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ©ã« Anaconda for Debian
+        ã‚’åˆ©ç”¨ã—ãŸ <a href="http://componentizedlinux.org/progeny/">Progeny
           Debian</a>
-        ‚ğg‚Á‚ÄƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä‚­‚¾‚³‚¢B(<span class="noexists">Progeny Debian “ú–{ŒêFAQ<a
+        ã‚’ä½¿ã£ã¦ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ãã ã•ã„ã€‚(<span class="noexists">Progeny Debian æ—¥æœ¬èªFAQ<a
 href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=FAQ%2FDistribution%2FProgeny&amp;refer=KNOPPIX-FAQ%2FHarddiskInstallation">?</a></span>
-        ‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢B)</p>
-      <div class="jumpmenu"><a href="#navigator">ª</a></div>
-      <h3 id="content_1_5">‹N“®AƒƒOƒCƒ“‰æ–Ê‚ª•\¦‚³‚ê‚¸AƒfƒXƒNƒgƒbƒv‚©‚ç‚»‚Ìİ’è‚à‚Å‚«‚Ü‚¹‚ñB</h3>
-      <p>knoppix-installer ‚ğg‚Á‚ÄKNOPPIX3.3 20040220
-        ”Å‚ğƒn[ƒhƒfƒBƒXƒN‚ÉƒCƒ“ƒXƒg[ƒ‹‚µ‚½ê‡‚É‚±‚Ìó‹µ‚É‚È‚é‚æ‚¤‚Å‚·B</p>
-      <p>‚±‚ê‚ÍAƒCƒ“ƒXƒg[ƒ‹‚·‚éè‡‚Ì“r’†‚ÅAƒVƒXƒeƒ€ƒ^ƒCƒv‚É Knoppix-system ‚ğ‘I‘ğ‚µ‚½‚©‚ç‚Å‚·B</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>•ÏX‚·‚é‚É‚ÍAÄƒCƒ“ƒXƒg[ƒ‹‚ğÀs‚µAdebian
-          Œ`®‚ÌƒVƒXƒeƒ€iˆÈ‘O‚ÌƒCƒ“ƒXƒg[ƒ‰‚Ì—l‚Éj‚ğİ’è‚·‚éˆÈŠOA¡‚Ì‚Æ‚±‚ë‘Îˆ•û–@‚ª‘¼‚ÉŒ©‚Â‚©‚è‚Ü‚¹‚ñB</li>
+        ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚)</p>
+      <div class="jumpmenu"><a href="#navigator">â†‘</a></div>
+      <h3 id="content_1_5">èµ·å‹•æ™‚ã€ãƒ­ã‚°ã‚¤ãƒ³ç”»é¢ãŒè¡¨ç¤ºã•ã‚Œãšã€ãƒ‡ã‚¹ã‚¯ãƒˆãƒƒãƒ—ã‹ã‚‰ãã®è¨­å®šã‚‚ã§ãã¾ã›ã‚“ã€‚</h3>
+      <p>knoppix-installer ã‚’ä½¿ã£ã¦KNOPPIX3.3 20040220
+        ç‰ˆã‚’ãƒãƒ¼ãƒ‰ãƒ‡ã‚£ã‚¹ã‚¯ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸå ´åˆã«ã“ã®çŠ¶æ³ã«ãªã‚‹ã‚ˆã†ã§ã™ã€‚</p>
+      <p>ã“ã‚Œã¯ã€ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹æ‰‹é †ã®é€”ä¸­ã§ã€ã‚·ã‚¹ãƒ†ãƒ ã‚¿ã‚¤ãƒ—ã« Knoppix-system ã‚’é¸æŠã—ãŸã‹ã‚‰ã§ã™ã€‚</p>
+      <ul>
+        <li>å¤‰æ›´ã™ã‚‹ã«ã¯ã€å†ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã‚’å®Ÿè¡Œã—ã€debian
+          å½¢å¼ã®ã‚·ã‚¹ãƒ†ãƒ ï¼ˆä»¥å‰ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ©ã®æ§˜ã«ï¼‰ã‚’è¨­å®šã™ã‚‹ä»¥å¤–ã€ä»Šã®ã¨ã“ã‚å¯¾å‡¦æ–¹æ³•ãŒä»–ã«è¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚</li>
       </ul>
-      <p>‚È‚¨Aknx-hdinstall.jp
-        ‚Åƒn[ƒhƒfƒBƒXƒN‚ÖƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä‚¢‚éê‡‚Å‚ÍA‹N“®‚ÉƒƒOƒCƒ“‰æ–Ê‚ª³‚µ‚­—§‚¿ã‚ª‚èAroot
-        ƒ†[ƒU[‚Æˆê”Êƒ†[ƒU[‚Ìg‚¢•ª‚¯‚ª‚Å‚«‚é‚æ‚¤‚Å‚·B</p>
-      <div class="jumpmenu"><a href="#navigator">ª</a></div>
-      <h3 id="content_1_6">HDD ƒCƒ“ƒXƒg[ƒ‹‚µ‚½‚çAƒpƒbƒP[ƒWŠÇ—ƒc[ƒ‹ APT ‚Íg‚¦‚Ü‚·‚©B</h3>
-      <p>‚Í‚¢Bg‚¦‚Ü‚·B</p>
-      <p>‚½‚¾‚µƒCƒ“ƒXƒg[ƒ‹’¼Œã‚Ìİ’è‚Ì‚Ü‚Ü‚Å‚ÍA–c‘å‚È”‚ÌƒpƒbƒP[ƒW‚ªXV^V‹KƒCƒ“ƒXƒg[ƒ‹‚Ì‘ÎÛ‚Æ‚È‚Á‚Ä‚µ‚Ü‚¤‚Ì‚ÆA‚»‚ê‚ç‚ÌƒpƒbƒP[
-        ƒW‚ğƒlƒbƒg
-        ƒ[ƒN“I‚É‰“‚¢êŠ‚©‚çƒ_ƒEƒ“ƒ[ƒh‚µ‚æ‚¤‚Æ‚·‚é‚Ì‚ÅA‚¨g‚¢‚ÌŠÂ‹«‚É‰‚¶‚Ä /etc/apt/sources.list ƒtƒ@ƒCƒ‹‚ğ
+      <p>ãªãŠã€knx-hdinstall.jp
+        ã§ãƒãƒ¼ãƒ‰ãƒ‡ã‚£ã‚¹ã‚¯ã¸ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ã„ã‚‹å ´åˆã§ã¯ã€èµ·å‹•æ™‚ã«ãƒ­ã‚°ã‚¤ãƒ³ç”»é¢ãŒæ­£ã—ãç«‹ã¡ä¸ŠãŒã‚Šã€root
+        ãƒ¦ãƒ¼ã‚¶ãƒ¼ã¨ä¸€èˆ¬ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®ä½¿ã„åˆ†ã‘ãŒã§ãã‚‹ã‚ˆã†ã§ã™ã€‚</p>
+      <div class="jumpmenu"><a href="#navigator">â†‘</a></div>
+      <h3 id="content_1_6">HDD ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸã‚‰ã€ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ç®¡ç†ãƒ„ãƒ¼ãƒ« APT ã¯ä½¿ãˆã¾ã™ã‹ã€‚</h3>
+      <p>ã¯ã„ã€‚ä½¿ãˆã¾ã™ã€‚</p>
+      <p>ãŸã ã—ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ç›´å¾Œã®è¨­å®šã®ã¾ã¾ã§ã¯ã€è†¨å¤§ãªæ•°ã®ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ãŒæ›´æ–°ï¼æ–°è¦ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã®å¯¾è±¡ã¨ãªã£ã¦ã—ã¾ã†ã®ã¨ã€ãã‚Œã‚‰ã®ãƒ‘ãƒƒã‚±ãƒ¼
+        ã‚¸ã‚’ãƒãƒƒãƒˆ
+        ãƒ¯ãƒ¼ã‚¯çš„ã«é ã„å ´æ‰€ã‹ã‚‰ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ã‚ˆã†ã¨ã™ã‚‹ã®ã§ã€ãŠä½¿ã„ã®ç’°å¢ƒã«å¿œã˜ã¦ /etc/apt/sources.list ãƒ•ã‚¡ã‚¤ãƒ«ã‚’
         Kwrite
-        ‚È‚Ç‚ÌƒGƒfƒBƒ^[‚Å•ÒW‚·‚é‚©Aapt-setup
-        ‚ğg‚Á‚Ä‹ß‚¢êŠ‚ğ’Ç‰Á‚µ‚Ä‚¨‚­‚Æ—Ç‚¢‚Å‚µ‚å‚¤B(apt-setup‚ğg‚¤‚ÆAsources.list ‚Ì––”ö‚É apt-line
-        ‚ª’Ç‰Á‚³‚ê‚Ü‚·B)</p>
-      <p>Ú‚µ‚­‚Í<a href="http://debian.fam.cx/index.php?AptGet">Debian
+        ãªã©ã®ã‚¨ãƒ‡ã‚£ã‚¿ãƒ¼ã§ç·¨é›†ã™ã‚‹ã‹ã€apt-setup
+        ã‚’ä½¿ã£ã¦è¿‘ã„å ´æ‰€ã‚’è¿½åŠ ã—ã¦ãŠãã¨è‰¯ã„ã§ã—ã‚‡ã†ã€‚(apt-setupã‚’ä½¿ã†ã¨ã€sources.list ã®æœ«å°¾ã« apt-line
+        ãŒè¿½åŠ ã•ã‚Œã¾ã™ã€‚)</p>
+      <p>è©³ã—ãã¯<a href="http://debian.fam.cx/index.php?AptGet">Debian
           GNU/Linux
-          ƒXƒŒƒbƒhƒeƒ“ƒvƒŒ apt‚Æ‚»‚Ìü•Ó</a>‚ğ‚Ç‚¤‚¼B</p>
-      <p>’Ç‰Á‚·‚éê‡AƒNƒ‰ƒCƒAƒ“ƒg—p‚É‚ÍˆÀ’è”Å (Stable) ‚ğg—p‚·‚é‚Ì‚Å‚Í‚È‚­AƒeƒXƒg”Å (Testing)
-        ‚ğ—˜—p‚·‚éİ’è‚É‚·‚é‚Æ”äŠr“IÅ‹ß‚ÌƒpƒbƒP[ƒW‚ª“üè‚Å‚«‚Ü‚·B<br>
+          ã‚¹ãƒ¬ãƒƒãƒ‰ãƒ†ãƒ³ãƒ—ãƒ¬ aptã¨ãã®å‘¨è¾º</a>ã‚’ã©ã†ãã€‚</p>
+      <p>è¿½åŠ ã™ã‚‹å ´åˆã€ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆç”¨ã«ã¯å®‰å®šç‰ˆ (Stable) ã‚’ä½¿ç”¨ã™ã‚‹ã®ã§ã¯ãªãã€ãƒ†ã‚¹ãƒˆç‰ˆ (Testing)
+        ã‚’åˆ©ç”¨ã™ã‚‹è¨­å®šã«ã™ã‚‹ã¨æ¯”è¼ƒçš„æœ€è¿‘ã®ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ãŒå…¥æ‰‹ã§ãã¾ã™ã€‚<br>
         <br>
-        •sˆÀ’è”Å (Unstable) ‚âÀŒ±”Å (Experimental) ‚Íå‚ÉŠJ”­ÒŒü‚¯‚È‚Ì‚ÅAapt-line
-        ‚ğƒRƒƒ“ƒgƒAƒEƒg(s“ª‚É #
-        ‚ğ‘‚«‚ñ‚Å–³Œø‚É‚·‚é‚±‚Æ)‚µ‚Ä‚¨‚­‚©A/etc/apt/apt.conf.d/99target ƒtƒ@ƒCƒ‹‚É</p>
+        ä¸å®‰å®šç‰ˆ (Unstable) ã‚„å®Ÿé¨“ç‰ˆ (Experimental) ã¯ä¸»ã«é–‹ç™ºè€…å‘ã‘ãªã®ã§ã€apt-line
+        ã‚’ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆ(è¡Œé ­ã« #
+        ã‚’æ›¸ãè¾¼ã‚“ã§ç„¡åŠ¹ã«ã™ã‚‹ã“ã¨)ã—ã¦ãŠãã‹ã€/etc/apt/apt.conf.d/99target ãƒ•ã‚¡ã‚¤ãƒ«ã«</p>
       <pre> APT::Default-Release "testing";</pre>
-      <p>‚Æ‘‚¢‚Ä testing ˆÈã‚É‚ÍƒAƒbƒvƒOƒŒ[ƒh‚³‚ê‚È‚¢‚æ‚¤‚É‚µ‚Ä‚¨‚¢‚½‚Ù‚¤‚ª–³“ï‚Å‚·B</p>
-      <p>‚Ü‚½AŸ‚Ì•”•ª‚ÍƒZƒLƒ…ƒŠƒeƒBŠÖ˜A—pƒAƒbƒvƒf[ƒg‚É•K—v‚È‚Ì‚ÅAƒRƒƒ“ƒgƒAƒEƒg‚µ‚È‚¢‚±‚Æ‚ğ‚¨‚·‚·‚ß‚µ‚Ü‚·B</p>
+      <p>ã¨æ›¸ã„ã¦ testing ä»¥ä¸Šã«ã¯ã‚¢ãƒƒãƒ—ã‚°ãƒ¬ãƒ¼ãƒ‰ã•ã‚Œãªã„ã‚ˆã†ã«ã—ã¦ãŠã„ãŸã»ã†ãŒç„¡é›£ã§ã™ã€‚</p>
+      <p>ã¾ãŸã€æ¬¡ã®éƒ¨åˆ†ã¯ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£é–¢é€£ç”¨ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã«å¿…è¦ãªã®ã§ã€ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã—ãªã„ã“ã¨ã‚’ãŠã™ã™ã‚ã—ã¾ã™ã€‚</p>
       <pre> # Security updates for "stable"<br> deb http://security.debian.org stable/updates main contrib non-free<br> deb http://security.debian.org testing/updates main contrib non-free</pre>
-      <p>ƒOƒ‰ƒtƒBƒJƒ‹‚È‰æ–Êã‚Å‚³‚ç‚É•ª‚©‚èˆÕ‚¢ì‹Æ‚ğŠó–]‚·‚éê‡‚É‚ÍAuSynapticviTesting
-        ”Åj‚ğ’Ç‰ÁƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä‚­‚¾‚³‚¢BRed Hat Linux ‚â Fedora Core 1 ‚È‚Ç RPM Œn
-        ‚ÌƒfƒBƒXƒgƒŠƒrƒ…[ƒVƒ‡ƒ“‚Å‚à‚·‚Å‚ÉÌ—p‚³‚ê‚Ä‚¢‚é GUI ƒtƒƒ“ƒgƒGƒ“ƒh‚Å‚·BƒCƒ“ƒXƒg[ƒ‹‚·‚é‚É‚Í apt-get
+      <p>ã‚°ãƒ©ãƒ•ã‚£ã‚«ãƒ«ãªç”»é¢ä¸Šã§ã•ã‚‰ã«åˆ†ã‹ã‚Šæ˜“ã„ä½œæ¥­ã‚’å¸Œæœ›ã™ã‚‹å ´åˆã«ã¯ã€ã€ŒSynapticã€ï¼ˆTesting
+        ç‰ˆï¼‰ã‚’è¿½åŠ ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ãã ã•ã„ã€‚Red Hat Linux ã‚„ Fedora Core 1 ãªã© RPM ç³»
+        ã®ãƒ‡ã‚£ã‚¹ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚·ãƒ§ãƒ³ã§ã‚‚ã™ã§ã«æ¡ç”¨ã•ã‚Œã¦ã„ã‚‹ GUI ãƒ•ãƒ­ãƒ³ãƒˆã‚¨ãƒ³ãƒ‰ã§ã™ã€‚ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã«ã¯ apt-get
         install
-        synaptic ‚ğÀs‚µ‚Ü‚·B</p>
-      <p>İ’è—á‚ğã‚°‚Ä‚¨‚«‚Ü‚·F</p>
-      <pre> # See sources.list(5) for more information, especialy<br> # Remember that you can only use http, ftp or file URIs<br> # CDROMs are managed through the apt-cdrom tool.<br> <br> # Security updates for "stable"<br> deb http://security.debian.org/ stable/updates main contrib non-free   <br> deb http://security.debian.org/ testing/updates main contrib non-free  <br> <br> # Stable<br> deb ftp://ftp.jp.debian.org/debian/ stable main contrib  <br> # deb-src ftp://ftp.jp.debian.org/debian/ stable main contrib <br> <br> # Stable original<br> # deb http://ftp2.de.debian.org/pub/debian/ stable main contrib non-free <br> # deb http://ftp2.de.debian.org/pub/debian-non-US/ stable/non-US main contrib non-free <br> <br> # Sources original<br> # deb-src http://ftp2.de.debian.org/pub/debian/ stable main contrib non-free <br> # deb-src http://ftp2.de.debian.org/pub/debian-non-US/ stable/non-US main contrib non-free <br> <br> # Testing<br> deb ftp://ftp.jp.debian.org/debian/ testing main contrib <br> # deb-src ftp://ftp.jp.debian.org/debian/ testing main contrib <br> <br> # Testing original<br> # deb http://ftp2.de.debian.org/pub/debian/ testing main contrib non-free <br> # deb http://ftp2.de.debian.org/pub/debian-non-US/ testing/non-US main contrib non-free <br> <br> # Sources original<br> # deb-src http://ftp2.de.debian.org/pub/debian/ testing main contrib non-free <br> # deb-src http://ftp2.de.debian.org/pub/debian-non-US/ testing/non-US main contrib non-free <br> <br> # Unstable<br> # deb ftp://ftp.jp.debian.org/debian/ unstable main contrib <br> # deb-src ftp://ftp.jp.debian.org/debian/ unstable main contrib <br> <br> # Unstable original<br> # deb http://ftp2.de.debian.org/debian/ unstable main contrib non-free <br> # deb http://ftp2.de.debian.org/debian-non-US/ unstable/non-US main contrib non-free <br> <br> # Sources original<br> # deb-src http://ftp2.de.debian.org/debian/ unstable main contrib non-free <br> # deb-src http://ftp2.de.debian.org/debian-non-US/ unstable/non-US main contrib non-free <br> <br> # Experimental<br> # deb http://ftp2.de.debian.org/debian/ ../project/experimental main contrib non-free <br> # deb-src http://ftp2.de.debian.org/debian/ ../project/experimental main contrib non-free <br> <br> # Mozilla<br> # deb http://non-us.debian.org/~kitame/mozilla/ ./ <br> # deb-src http://non-us.debian.org/~kitame/mozilla/ ./ <br> <br> # GNOME 2.0<br> # deb http://www.gnome.de/debian/ ./ <br> <br> # KDE 3<br> # deb http://ktown.kde.org/~nolden/kde/ stable main <br> # deb-src http://ktown.kde.org/~nolden/kde/ stable main <br> # We get packages from testing/unstable for now<br> <br> # cdbakeoven<br> # deb http://coyote.asoc.euitt.upm.es/mud/debian/ ./ <br> <br> # XFree 4.2/4.3<br> # deb http://people.debian.org/~branden/packages/ sid/i386/ <br> # deb-src http://people.debian.org/~branden/packages/ sid/source/ <br> # deb http://www.penguinppc.org/~daniels/sid/i386/ ./ <br> # deb-src http://www.penguinppc.org/~daniels/sid/source/ ./ <br> <br> # Java<br> # deb ftp://ftp.gwdg.de/pub/languages/java/linux/debian/ woody main non-free <br> # deb-src ftp://ftp.gwdg.de/pub/languages/java/linux/debian/ woody main non-free <br> # deb ftp://ftp.gwdg.de/pub/languages/java/linux/debian/ unstable main non-free <br> # deb-src ftp://ftp.gwdg.de/pub/languages/java/linux/debian/ unstable main non-free <br> # deb http://people.debian.org/~sgybas/jdk13<br> <br> # LyX &amp; others (now in debian/unstable)<br> # deb ftp://ntama.uni-mainz.de/pub/debian/ unofficial/  <br> # deb-src ftp://ntama.uni-mainz.de/pub/debian/ unofficial/ <br> <br> # Evolution<br> # deb ftp://ftp.ximian.com/pub/debian/ stable main <br> # deb-src ftp://ftp.ximian.com/pub/debian/ stable main <br> <br> # Blades Repository (pppoeconf &amp; co)<br> # deb http://people.debian.org/~blade/testing/ ./ <br> # deb-src http://people.debian.org/~blade/testing/ ./ <br> <br> # Wine CVS snapshot<br> # deb http://people.debian.org/~andreas/debian/ wine main <br> # deb-src http://people.debian.org/~andreas/debian/ wine main <br> <br> <br> deb ftp://ftp.jp.debian.org/debian-jp/ stable-jp main contrib <br> # deb-src ftp://ftp.jp.debian.org/debian-jp/ stable-jp main contrib <br> deb ftp://ftp.jp.debian.org/debian-jp/ testing-jp main contrib <br> # deb-src ftp://ftp.jp.debian.org/debian-jp/ testing-jp main contrib <br> # deb ftp://ftp.jp.debian.org/debian-jp/ unstable-jp main contrib  <br> # deb-src ftp://ftp.jp.debian.org/debian-jp/ unstable-jp main contrib <br> <br> #OpenOffice.org<br> # deb http://www.phy.olemiss.edu/openoffice/ woody main contrib <br> # deb-src http://www.phy.olemiss.edu/openoffice/ woody main contrib <br> <br> # Anthy for Debian sid<br> # deb http://anthy.sourceforge.jp/debian/ sid main <br> # deb-src http://anthy.sourceforge.jp/debian/ sid main <br> <br> # PRIME<br> # deb http://prime.sourceforge.jp/debian/ ./ <br> # deb http://taiyaki.org/debian/ ./ <br> # deb-src http://prime.sourceforge.jp/debian/ ./ </pre>
-      <div class="jumpmenu"><a href="#navigator">ª</a></div>
-      <h3 id="content_1_7">HDD ƒCƒ“ƒXƒg[ƒ‹‚µ‚½‚çAƒ[ƒ‹ƒ\ƒtƒg Sylpheed
-        ‚Ì–{•¶‚ª•¶š‰»‚¯‚µ‚Ä“Ç‚ß‚Ü‚¹‚ñB</h3>
-      <p>V3.3 (20040220) ‚ğ knoppix-installer ‚ÅƒCƒ“ƒXƒg[ƒ‹‚µ‚½ê‡‚ÉŒ©‚ç‚ê‚é•s‹ï‡‚Ì‚æ‚¤‚Å‚·B</p>
-      <p>set-language-env ‚Æ‚¢‚¤ƒRƒ}ƒ“ƒh‚ğg‚Á‚Ä“ú–{Œê‚Ìİ’è‚ÌŒ©’¼‚µ‚ğs‚È‚Á‚Ä‚İ‚é‚Ì‚à‰ğŒˆ‚É‚Â‚È‚ª‚é‚©‚à‚µ‚ê‚Ü‚¹‚ñB</p>
-      <p>knx-hdinstall.ja ‚ÅÄƒCƒ“ƒXƒg[ƒ‹‚·‚ê‚ÎA‚Æ‚è‚ ‚¦‚¸ Sylpheed ‚Å“ú–{Œê‚ªˆµ‚¦‚Ü‚·B</p>
-      <p>Sylpheed ‚Ì‘Ö‚í‚è‚ÉA•t‘®‚µ‚Ä‚¢‚é Mozilla Mail ‚ğ—˜—p‚·‚ê‚ÎA“ú–{Œê‚ª³í‚É—˜—p‚Å‚«‚é‰Â”\«‚ª‚ ‚è‚Ü‚·B</p>
-      <div class="jumpmenu"><a href="#navigator">ª</a></div>
-      <h3 id="content_1_8">V‹@”\ install2win [KNOPPIX2WIN] ‚Æ‚Í‰½‚Å‚·‚©B</h3>
-      <p>‚±‚ê‚ÍA KNOPPIX ‚ğ Winodows 2000, XP
-        ‚Ìƒtƒ@ƒCƒ‹ƒVƒXƒeƒ€‚É©“®“I‚ÉƒCƒ“ƒXƒg[ƒ‹‚·‚é‚±‚Æ‚ª‚Å‚«‚éƒvƒƒOƒ‰ƒ€‚Å‚·BKNOPPIX V3.4
+        synaptic ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚</p>
+      <p>è¨­å®šä¾‹ã‚’ä¸Šã’ã¦ãŠãã¾ã™ï¼š</p>
+      <pre> # See sources.list(5) for more information, especialy<br> # Remember that you can only use http, ftp or file URIs<br> # CDROMs are managed through the apt-cdrom tool.<br> <br> # Security updates for "stable"<br> deb http://security.debian.org/ stable/updates main contrib non-free   <br> deb http://security.debian.org/ testing/updates main contrib non-free  <br> <br> # Stable<br> deb ftp://ftp.jp.debian.org/debian/ stable main contrib  <br> # deb-src ftp://ftp.jp.debian.org/debian/ stable main contrib <br> <br> # Stable original<br> # deb http://ftp2.de.debian.org/pub/debian/ stable main contrib non-free <br> # deb http://ftp2.de.debian.org/pub/debian-non-US/ stable/non-US main contrib non-free <br> <br> # Sources original<br> # deb-src http://ftp2.de.debian.org/pub/debian/ stable main contrib non-free <br> # deb-src http://ftp2.de.debian.org/pub/debian-non-US/ stable/non-US main contrib non-free <br> <br> # Testing<br> deb ftp://ftp.jp.debian.org/debian/ testing main contrib <br> # deb-src ftp://ftp.jp.debian.org/debian/ testing main contrib <br> <br> # Testing original<br> # deb http://ftp2.de.debian.org/pub/debian/ testing main contrib non-free <br> # deb http://ftp2.de.debian.org/pub/debian-non-US/ testing/non-US main contrib non-free <br> <br> # Sources original<br> # deb-src http://ftp2.de.debian.org/pub/debian/ testing main contrib non-free <br> # deb-src http://ftp2.de.debian.org/pub/debian-non-US/ testing/non-US main contrib non-free <br> <br> # Unstable<br> # deb ftp://ftp.jp.debian.org/debian/ unstable main contrib <br> # deb-src ftp://ftp.jp.debian.org/debian/ unstable main contrib <br> <br> # Unstable original<br> # deb http://ftp2.de.debian.org/debian/ unstable main contrib non-free <br> # deb http://ftp2.de.debian.org/debian-non-US/ unstable/non-US main contrib non-free <br> <br> # Sources original<br> # deb-src http://ftp2.de.debian.org/debian/ unstable main contrib non-free <br> # deb-src http://ftp2.de.debian.org/debian-non-US/ unstable/non-US main contrib non-free <br> <br> # Experimental<br> # deb http://ftp2.de.debian.org/debian/ ../project/experimental main contrib non-free <br> # deb-src http://ftp2.de.debian.org/debian/ ../project/experimental main contrib non-free <br> <br> # Mozilla<br> # deb http://non-us.debian.org/â€¾kitame/mozilla/ ./ <br> # deb-src http://non-us.debian.org/â€¾kitame/mozilla/ ./ <br> <br> # GNOME 2.0<br> # deb http://www.gnome.de/debian/ ./ <br> <br> # KDE 3<br> # deb http://ktown.kde.org/â€¾nolden/kde/ stable main <br> # deb-src http://ktown.kde.org/â€¾nolden/kde/ stable main <br> # We get packages from testing/unstable for now<br> <br> # cdbakeoven<br> # deb http://coyote.asoc.euitt.upm.es/mud/debian/ ./ <br> <br> # XFree 4.2/4.3<br> # deb http://people.debian.org/â€¾branden/packages/ sid/i386/ <br> # deb-src http://people.debian.org/â€¾branden/packages/ sid/source/ <br> # deb http://www.penguinppc.org/â€¾daniels/sid/i386/ ./ <br> # deb-src http://www.penguinppc.org/â€¾daniels/sid/source/ ./ <br> <br> # Java<br> # deb ftp://ftp.gwdg.de/pub/languages/java/linux/debian/ woody main non-free <br> # deb-src ftp://ftp.gwdg.de/pub/languages/java/linux/debian/ woody main non-free <br> # deb ftp://ftp.gwdg.de/pub/languages/java/linux/debian/ unstable main non-free <br> # deb-src ftp://ftp.gwdg.de/pub/languages/java/linux/debian/ unstable main non-free <br> # deb http://people.debian.org/â€¾sgybas/jdk13<br> <br> # LyX &amp; others (now in debian/unstable)<br> # deb ftp://ntama.uni-mainz.de/pub/debian/ unofficial/  <br> # deb-src ftp://ntama.uni-mainz.de/pub/debian/ unofficial/ <br> <br> # Evolution<br> # deb ftp://ftp.ximian.com/pub/debian/ stable main <br> # deb-src ftp://ftp.ximian.com/pub/debian/ stable main <br> <br> # Blades Repository (pppoeconf &amp; co)<br> # deb http://people.debian.org/â€¾blade/testing/ ./ <br> # deb-src http://people.debian.org/â€¾blade/testing/ ./ <br> <br> # Wine CVS snapshot<br> # deb http://people.debian.org/â€¾andreas/debian/ wine main <br> # deb-src http://people.debian.org/â€¾andreas/debian/ wine main <br> <br> <br> deb ftp://ftp.jp.debian.org/debian-jp/ stable-jp main contrib <br> # deb-src ftp://ftp.jp.debian.org/debian-jp/ stable-jp main contrib <br> deb ftp://ftp.jp.debian.org/debian-jp/ testing-jp main contrib <br> # deb-src ftp://ftp.jp.debian.org/debian-jp/ testing-jp main contrib <br> # deb ftp://ftp.jp.debian.org/debian-jp/ unstable-jp main contrib  <br> # deb-src ftp://ftp.jp.debian.org/debian-jp/ unstable-jp main contrib <br> <br> #OpenOffice.org<br> # deb http://www.phy.olemiss.edu/openoffice/ woody main contrib <br> # deb-src http://www.phy.olemiss.edu/openoffice/ woody main contrib <br> <br> # Anthy for Debian sid<br> # deb http://anthy.sourceforge.jp/debian/ sid main <br> # deb-src http://anthy.sourceforge.jp/debian/ sid main <br> <br> # PRIME<br> # deb http://prime.sourceforge.jp/debian/ ./ <br> # deb http://taiyaki.org/debian/ ./ <br> # deb-src http://prime.sourceforge.jp/debian/ ./ </pre>
+      <div class="jumpmenu"><a href="#navigator">â†‘</a></div>
+      <h3 id="content_1_7">HDD ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸã‚‰ã€ãƒ¡ãƒ¼ãƒ«ã‚½ãƒ•ãƒˆ Sylpheed
+        ã®æœ¬æ–‡ãŒæ–‡å­—åŒ–ã‘ã—ã¦èª­ã‚ã¾ã›ã‚“ã€‚</h3>
+      <p>V3.3 (20040220) ã‚’ knoppix-installer ã§ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸå ´åˆã«è¦‹ã‚‰ã‚Œã‚‹ä¸å…·åˆã®ã‚ˆã†ã§ã™ã€‚</p>
+      <p>set-language-env ã¨ã„ã†ã‚³ãƒãƒ³ãƒ‰ã‚’ä½¿ã£ã¦æ—¥æœ¬èªã®è¨­å®šã®è¦‹ç›´ã—ã‚’è¡Œãªã£ã¦ã¿ã‚‹ã®ã‚‚è§£æ±ºã«ã¤ãªãŒã‚‹ã‹ã‚‚ã—ã‚Œã¾ã›ã‚“ã€‚</p>
+      <p>knx-hdinstall.ja ã§å†ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚Œã°ã€ã¨ã‚Šã‚ãˆãš Sylpheed ã§æ—¥æœ¬èªãŒæ‰±ãˆã¾ã™ã€‚</p>
+      <p>Sylpheed ã®æ›¿ã‚ã‚Šã«ã€ä»˜å±ã—ã¦ã„ã‚‹ Mozilla Mail ã‚’åˆ©ç”¨ã™ã‚Œã°ã€æ—¥æœ¬èªãŒæ­£å¸¸ã«åˆ©ç”¨ã§ãã‚‹å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™ã€‚</p>
+      <div class="jumpmenu"><a href="#navigator">â†‘</a></div>
+      <h3 id="content_1_8">æ–°æ©Ÿèƒ½ install2win [KNOPPIX2WIN] ã¨ã¯ä½•ã§ã™ã‹ã€‚</h3>
+      <p>ã“ã‚Œã¯ã€ KNOPPIX ã‚’ Winodows 2000, XP
+        ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚·ã‚¹ãƒ†ãƒ ã«è‡ªå‹•çš„ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã“ã¨ãŒã§ãã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã§ã™ã€‚KNOPPIX V3.4
         (20040517-20040629)
-        ‚É’Ç‰Á‚³‚ê‚Ü‚µ‚½B</p>
-      <p>ƒCƒ“ƒXƒg[ƒ‹‚Ìd•û‚Í Windows ‚Å install2win.bat ‚ğƒ_ƒuƒ‹ƒNƒŠƒbƒN‚·‚é‚¾‚¯‚Å‚·B
-        ƒCƒ“ƒXƒg[ƒ‹‚ÉÛ‚µ‚ÄA
-        Cƒhƒ‰ƒCƒu‚É700M ’ö“x‚Ì‹ó‚«—e—Ê‚ª•K—v‚Æ‚È‚è‚Ü‚·BƒCƒ“ƒXƒg[ƒ‹ì‹Æ‚ÍA Administorator
-        Œ ŒÀ‚Ås‚¢‚Ü‚·BÚ‚µ‚¢è‡‚É‚Â‚¢‚Ä‚ÍACD ‚Éû˜^‚³‚ê‚Ä‚¢‚é README.ja ‚ğŒ©‚Ä‚­‚¾‚³‚¢B</p>
-      <p>‚È‚¨A‚±‚Ìì‹Æ‚Í Windows
-        ‚ÌŠî–{•”•ª‚ğ•ÏX‚·‚é‚Ì‚ÅA©•ª‚ÌÓ”C‚Åì‹Æ‚ğs‚È‚Á‚Ä‰º‚³‚¢B–œˆêƒgƒ‰ƒuƒ‹‚ª”­¶‚µ‚Ä‚à‘åä•v‚È‚æ‚¤‚ÉA€”õ‚ğ®‚¦‚Ä‚©‚çì‹Æ‚ğŠJn‚·
-        ‚é‚æ‚¤‚¨Š©‚ß‚µ‚Ü
-        ‚·B</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>ƒCƒ“ƒXƒg[ƒ‹(³Šm‚É‚ÍƒRƒs[)‚É—v‚·‚éŠÔ‚ÍA‚¨‚æ‚»5`10•ª’ö“x‚Å‚·BƒJ[ƒlƒ‹‚ÍALinux Kernel 2.6.6
-          ‚ğg—p‚µ‚Ü‚·B<br>
-          ³í‚ÉƒCƒ“ƒXƒg[ƒ‹‚ªÏ‚ß‚ÎAƒvƒƒ“ƒvƒg‰æ–Ê‚ª©“®“I‚ÉI—¹‚·‚é‚Ì‚ÅAKNOPPIX CD ‚ğæ‚èo‚µ‚Ä‚©‚çÄ‹N“®‚µ‚Ä‚­‚¾‚³‚¢B</li>
+        ã«è¿½åŠ ã•ã‚Œã¾ã—ãŸã€‚</p>
+      <p>ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã®ä»•æ–¹ã¯ Windows ã§ install2win.bat ã‚’ãƒ€ãƒ–ãƒ«ã‚¯ãƒªãƒƒã‚¯ã™ã‚‹ã ã‘ã§ã™ã€‚
+        ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã«éš›ã—ã¦ã€
+        Cãƒ‰ãƒ©ã‚¤ãƒ–ã«700M ç¨‹åº¦ã®ç©ºãå®¹é‡ãŒå¿…è¦ã¨ãªã‚Šã¾ã™ã€‚ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ä½œæ¥­ã¯ã€ Administorator
+        æ¨©é™ã§è¡Œã„ã¾ã™ã€‚è©³ã—ã„æ‰‹é †ã«ã¤ã„ã¦ã¯ã€CD ã«åéŒ²ã•ã‚Œã¦ã„ã‚‹ README.ja ã‚’è¦‹ã¦ãã ã•ã„ã€‚</p>
+      <p>ãªãŠã€ã“ã®ä½œæ¥­ã¯ Windows
+        ã®åŸºæœ¬éƒ¨åˆ†ã‚’å¤‰æ›´ã™ã‚‹ã®ã§ã€è‡ªåˆ†ã®è²¬ä»»ã§ä½œæ¥­ã‚’è¡Œãªã£ã¦ä¸‹ã•ã„ã€‚ä¸‡ä¸€ãƒˆãƒ©ãƒ–ãƒ«ãŒç™ºç”Ÿã—ã¦ã‚‚å¤§ä¸ˆå¤«ãªã‚ˆã†ã«ã€æº–å‚™ã‚’æ•´ãˆã¦ã‹ã‚‰ä½œæ¥­ã‚’é–‹å§‹ã™
+        ã‚‹ã‚ˆã†ãŠå‹§ã‚ã—ã¾
+        ã™ã€‚</p>
+      <ul>
+        <li>ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«(æ­£ç¢ºã«ã¯ã‚³ãƒ”ãƒ¼)ã«è¦ã™ã‚‹æ™‚é–“ã¯ã€ãŠã‚ˆã5ã€œ10åˆ†ç¨‹åº¦ã§ã™ã€‚ã‚«ãƒ¼ãƒãƒ«ã¯ã€Linux Kernel 2.6.6
+          ã‚’ä½¿ç”¨ã—ã¾ã™ã€‚<br>
+          æ­£å¸¸ã«ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãŒæ¸ˆã‚ã°ã€ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆç”»é¢ãŒè‡ªå‹•çš„ã«çµ‚äº†ã™ã‚‹ã®ã§ã€KNOPPIX CD ã‚’å–ã‚Šå‡ºã—ã¦ã‹ã‚‰å†èµ·å‹•ã—ã¦ãã ã•ã„ã€‚</li>
       </ul>
-      <p>‹N“®‚É‚ÍAŸ‚Ì‚æ‚¤‚È‘I‘ğ‰æ–Ê‚ª•\¦‚³‚ê‚Ü‚·B</p>
-      <pre> ƒIƒyƒŒ[ƒeƒBƒ“ƒO ƒVƒXƒeƒ€‚Ì‘I‘ğ<br> <br> @Microsoft Windows XP Home Edition<br> @GNU GRUB for KNOPPIX<br> <br> @ã–îˆóƒL[‚Æ‰º–îˆóƒL[‚ğg‚Á‚Ä€–Ú‚ğ‘I‘ğ‚µAEnter ƒL[‚ğ‰Ÿ‚µ‚Ä‚­‚¾‚³‚¢B</pre>
-      <p>[LILO ‚â GRUB ‚ğg‚Á‚ÄŠù‚Éƒfƒ…ƒAƒ‹ƒu[ƒg‚ğ\’z‚µ‚Ä‚¢‚éê‡]</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>‚±‚Ìê‡‚É‚ÍAã‚Ì‘I‘ğ‰æ–Ê‚ªÅ‰‚É•\¦‚³‚ê‚é‚±‚Æ‚Í‚ ‚è‚Ü‚¹‚ñBLILO ‚â GRUB ‚Ì‹N“®‰æ–Ê‚©‚çA‚Ü‚¸
+      <p>èµ·å‹•æ™‚ã«ã¯ã€æ¬¡ã®ã‚ˆã†ãªé¸æŠç”»é¢ãŒè¡¨ç¤ºã•ã‚Œã¾ã™ã€‚</p>
+      <pre> ã‚ªãƒšãƒ¬ãƒ¼ãƒ†ã‚£ãƒ³ã‚° ã‚·ã‚¹ãƒ†ãƒ ã®é¸æŠ<br> <br> ã€€Microsoft Windows XP Home Edition<br> ã€€GNU GRUB for KNOPPIX<br> <br> ã€€ä¸ŠçŸ¢å°ã‚­ãƒ¼ã¨ä¸‹çŸ¢å°ã‚­ãƒ¼ã‚’ä½¿ã£ã¦é …ç›®ã‚’é¸æŠã—ã€Enter ã‚­ãƒ¼ã‚’æŠ¼ã—ã¦ãã ã•ã„ã€‚</pre>
+      <p>[LILO ã‚„ GRUB ã‚’ä½¿ã£ã¦æ—¢ã«ãƒ‡ãƒ¥ã‚¢ãƒ«ãƒ–ãƒ¼ãƒˆã‚’æ§‹ç¯‰ã—ã¦ã„ã‚‹å ´åˆ]</p>
+      <ul>
+        <li>ã“ã®å ´åˆã«ã¯ã€ä¸Šã®é¸æŠç”»é¢ãŒæœ€åˆã«è¡¨ç¤ºã•ã‚Œã‚‹ã“ã¨ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚LILO ã‚„ GRUB ã®èµ·å‹•ç”»é¢ã‹ã‚‰ã€ã¾ãš
           Windows
-          ‚Ìƒ‰ƒxƒ‹‚ğ‘I‘ğ‚·‚é‚Æã‚Ì‰æ–Ê‚ÉØ‚è‘Ö‚í‚è‚Ü‚·B‹N“®‚Ìè‡‚É’ˆÓ‚µ‚Ä‚­‚¾‚³‚¢B</li>
+          ã®ãƒ©ãƒ™ãƒ«ã‚’é¸æŠã™ã‚‹ã¨ä¸Šã®ç”»é¢ã«åˆ‡ã‚Šæ›¿ã‚ã‚Šã¾ã™ã€‚èµ·å‹•æ™‚ã®æ‰‹é †ã«æ³¨æ„ã—ã¦ãã ã•ã„ã€‚</li>
       </ul>
-      <p>[íœ‚·‚éê‡‚Ì’ˆÓ“_]</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>‚¢‚«‚È‚è c:?boot ‚Æ c:?KNOPPIX
-          ƒtƒHƒ‹ƒ_‚ğíœ‚µ‚Ä‚Í‚¢‚¯‚Ü‚¹‚ñB‹N“®‚Ì‘I‘ğ‰æ–Ê‚ğíœ‚·‚é‚±‚Æ‚ª‚Å‚«‚È‚­‚È‚è‚Ü‚·B</li>
-        <li>ƒƒCƒ“ƒƒjƒ…[ „ uƒtƒ@ƒCƒ‹–¼‚ğw’è‚µ‚ÄÀsv‚Åƒtƒ@ƒCƒ‹–¼ c:?boot.ini ‚ğ“ü—Í‚µAƒƒ‚’ ‚Å
+      <p>[å‰Šé™¤ã™ã‚‹å ´åˆã®æ³¨æ„ç‚¹]</p>
+      <ul>
+        <li>ã„ããªã‚Š c:?boot ã¨ c:?KNOPPIX
+          ãƒ•ã‚©ãƒ«ãƒ€ã‚’å‰Šé™¤ã—ã¦ã¯ã„ã‘ã¾ã›ã‚“ã€‚èµ·å‹•æ™‚ã®é¸æŠç”»é¢ã‚’å‰Šé™¤ã™ã‚‹ã“ã¨ãŒã§ããªããªã‚Šã¾ã™ã€‚</li>
+        <li>ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ ï¼ ã€Œãƒ•ã‚¡ã‚¤ãƒ«åã‚’æŒ‡å®šã—ã¦å®Ÿè¡Œã€ã§ãƒ•ã‚¡ã‚¤ãƒ«å c:?boot.ini ã‚’å…¥åŠ›ã—ã€ãƒ¡ãƒ¢å¸³ã§
           c:?boot?grub?stage1="GNU GRUB for KNOPPIX
-          ‚Æ‚¢‚¤‹Lqs‚ğíœ‚µã‘‚«•Û‘¶‚µ‚Ü‚·B‚½‚¾‚µAWindows
-          ‚Ì‰Šúİ’è‚Å‚ÍƒVƒXƒeƒ€ƒtƒ@ƒCƒ‹‚ª•ÛŒì‚³‚ê‚éİ’è‚ÉŒÅ’è‚³‚ê‚Ä‚¢‚é‚Ì‚ÅAu“Ç‚İæ‚èv‘®«‚ğ‰ğœ‚µ‚È‚¢‚Æã‘‚«•Û‘¶‚Å‚«‚È‚¢‚Æv‚í‚ê
-          ‚Ü‚·B‚±‚Ì‘®«‚ÍA
-          ƒtƒ@ƒCƒ‹‚ğ‰EƒNƒŠƒbƒN‚µƒvƒƒpƒeƒB‚©‚ç•ÏC”C?Ÿ¢@KNOPPIX ‚ğ‘S‚Äíœ‚µ‚½‚¢ê‡‚É‚ÍA‚±‚Ìì‹Æ‚ğÏ‚Ü‚¹‚½Œã‚Å
+          ã¨ã„ã†è¨˜è¿°è¡Œã‚’å‰Šé™¤ã—ä¸Šæ›¸ãä¿å­˜ã—ã¾ã™ã€‚ãŸã ã—ã€Windows
+          ã®åˆæœŸè¨­å®šã§ã¯ã‚·ã‚¹ãƒ†ãƒ ãƒ•ã‚¡ã‚¤ãƒ«ãŒä¿è­·ã•ã‚Œã‚‹è¨­å®šã«å›ºå®šã•ã‚Œã¦ã„ã‚‹ã®ã§ã€ã€Œèª­ã¿å–ã‚Šã€å±æ€§ã‚’è§£é™¤ã—ãªã„ã¨ä¸Šæ›¸ãä¿å­˜ã§ããªã„ã¨æ€ã‚ã‚Œ
+          ã¾ã™ã€‚ã“ã®å±æ€§ã¯ã€
+          ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å³ã‚¯ãƒªãƒƒã‚¯ã—ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã‹ã‚‰å¤‰å¢ä»»?æ³™åKNOPPIX ã‚’å…¨ã¦å‰Šé™¤ã—ãŸã„å ´åˆã«ã¯ã€ã“ã®ä½œæ¥­ã‚’æ¸ˆã¾ã›ãŸå¾Œã§
           c:?KNOPPIX
-          ‚ğƒtƒHƒ‹ƒ_‚²‚Æíœ‚·‚é‚æ‚¤‚É‚µ‚Ü‚·B</li>
-        <li>è‡‚ğŒë‚Á‚Ä c:?boot ƒtƒHƒ‹ƒ_‚ğæ‚ÉÁ‚µ‚Ä‚µ‚Ü‚Á‚½ê‡‚ÍA‚à‚¤ˆê“x "install2win"
-          ‚ğÀs‚µA³‚µ‚¢è‡‚ğÀs‚µ‚Ü‚·B</li>
+          ã‚’ãƒ•ã‚©ãƒ«ãƒ€ã”ã¨å‰Šé™¤ã™ã‚‹ã‚ˆã†ã«ã—ã¾ã™ã€‚</li>
+        <li>æ‰‹é †ã‚’èª¤ã£ã¦ c:?boot ãƒ•ã‚©ãƒ«ãƒ€ã‚’å…ˆã«æ¶ˆã—ã¦ã—ã¾ã£ãŸå ´åˆã¯ã€ã‚‚ã†ä¸€åº¦ "install2win"
+          ã‚’å®Ÿè¡Œã—ã€æ­£ã—ã„æ‰‹é †ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">ª</a></div>
-      <h4 id="content_1_9">‹N“®‚Å‚«‚È‚­‚È‚é–â‘è‚Æ‚»‚Ì‘Îˆ•û–@</h4>
-      <p>‹N“®‚Éƒu[ƒgƒ[ƒ_[ GRUB ‚Ì•\¦‚Å~‚Ü‚Á‚Ä‚µ‚Ü‚¤‚È‚ÇA‹N“®‚Å‚«‚È‚­‚È‚é‚±‚Æ‚ª‚ ‚è‚Ü‚·B‚±‚ê‚Í Windows
-        ‚ª©“®“I‚ÉÀs‚·‚éƒfƒtƒ‰ƒO‚Ì‚½‚ß‚É GRUB ‚ªg‚¤ƒtƒ@ƒCƒ‹‚ªˆÚ“®‚³‚ê‚Ä‚µ‚Ü‚Á‚½‚½‚ß‚É‹N‚±‚è‚Ü‚·B</p>
-      <p>‚±‚Ì‘Îˆ‚ÍAWindows‚ğ—§‚¿ã‚°‚Ä c:?boot?grub?setup.exe
-        ‚ğÄÀs‚·‚é‚¾‚¯‚Å‚·Ï‚Ş‚æ‚¤‚Å‚·BÚ‚µ‚¢à–¾‚ÍŸ‚ÌURL‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢F <a
+      <div class="jumpmenu"><a href="#navigator">â†‘</a></div>
+      <h4 id="content_1_9">èµ·å‹•ã§ããªããªã‚‹å•é¡Œã¨ãã®å¯¾å‡¦æ–¹æ³•</h4>
+      <p>èµ·å‹•æ™‚ã«ãƒ–ãƒ¼ãƒˆãƒ­ãƒ¼ãƒ€ãƒ¼ GRUB ã®è¡¨ç¤ºã§æ­¢ã¾ã£ã¦ã—ã¾ã†ãªã©ã€èµ·å‹•ã§ããªããªã‚‹ã“ã¨ãŒã‚ã‚Šã¾ã™ã€‚ã“ã‚Œã¯ Windows
+        ãŒè‡ªå‹•çš„ã«å®Ÿè¡Œã™ã‚‹ãƒ‡ãƒ•ãƒ©ã‚°ã®ãŸã‚ã« GRUB ãŒä½¿ã†ãƒ•ã‚¡ã‚¤ãƒ«ãŒç§»å‹•ã•ã‚Œã¦ã—ã¾ã£ãŸãŸã‚ã«èµ·ã“ã‚Šã¾ã™ã€‚</p>
+      <p>ã“ã®å¯¾å‡¦ã¯ã€Windowsã‚’ç«‹ã¡ä¸Šã’ã¦ c:?boot?grub?setup.exe
+        ã‚’å†å®Ÿè¡Œã™ã‚‹ã ã‘ã§ã™æ¸ˆã‚€ã‚ˆã†ã§ã™ã€‚è©³ã—ã„èª¬æ˜ã¯æ¬¡ã®URLã‚’å‚ç…§ã—ã¦ãã ã•ã„ï¼š <a
           href="http://unit.aist.go.jp/itri/knoppix/win/#mondai">http://unit.aist.go.jp/itri/knoppix/win/#mondai</a></p>
-      <div class="jumpmenu"><a href="#navigator">ª</a></div>
-      <h3 id="content_1_10">install2win ‚Æ]—ˆ‚ÌHDDƒCƒ“ƒXƒg[ƒ‹‚Ìˆá‚¢‚Í‰½‚Å‚·‚©B</h3>
-      <p>‚±‚Ì install2win ‚ÍA]—ˆ‚ÌHDDƒCƒ“ƒXƒg[ƒ‹‚ğWindowsã‚Ås‚È‚¤‚à‚Ì‚Å‚Í‚ ‚è‚Ü‚¹‚ñBƒCƒ[ƒW‚ğ
+      <div class="jumpmenu"><a href="#navigator">â†‘</a></div>
+      <h3 id="content_1_10">install2win ã¨å¾“æ¥ã®HDDã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã®é•ã„ã¯ä½•ã§ã™ã‹ã€‚</h3>
+      <p>ã“ã® install2win ã¯ã€å¾“æ¥ã®HDDã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã‚’Windowsä¸Šã§è¡Œãªã†ã‚‚ã®ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚¤ãƒ¡ãƒ¼ã‚¸ã‚’
         Windows
-        “à‚Ìƒp[ƒeƒBƒVƒ‡ƒ“‚É’u‚¢‚ÄAGRUB ‚©‚ç‹N“®‚·‚é‚à‚Ì‚Å‚·B</p>
-      <p>‚µ‚½‚ª‚Á‚Ä install2win ‚ÍAƒCƒ“ƒXƒg[ƒ‹‚·‚éÛ ISO ƒCƒ[ƒW‚ğ CD-R
-        ‚ÉÄ‚©‚È‚­‚Ä‚à‚¢‚¢‚Æ‚©Aƒp[ƒeƒBƒVƒ‡ƒ“‚ğØ‚ç‚È‚­‚Ä‚à‚¢‚¢‚Æ‚©‚¢‚¤ƒƒŠƒbƒg‚Í‚ ‚è‚Ü‚·‚ªAŠî–{“I‚É‚ÍCDƒu[ƒg“¯—lA]—ˆ‚ÌHDDƒCƒ“
-        ƒXƒg[ƒ‹‚µ‚½‚Æ‚«
-        ‚Ì‚æ‚¤‚É /usr ‚â /lib ƒtƒHƒ‹ƒ_‚É‘‚«‚ß‚é‚í‚¯‚Å‚Í‚ ‚è‚Ü‚¹‚ñB‹N“®•û–@‚àACDƒu[ƒg‚»‚Ì‚à‚Ì‚Å‚·B</p>
-      <div class="jumpmenu"><a href="#navigator">ª</a></div>
-      <h3 id="content_1_11">GNOME 2.2 ‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚é‚É‚Í?</h3>
-      <p>APT ‚ğ—˜—p‚µ‚ÄAˆÈ‰º‚Ìì‹Æ‚ğs‚¢‚Ü‚·BGNOME 2.2 ˆê®‚ªƒCƒ“ƒXƒg[ƒ‹‚Å‚«‚Ü‚·B</p>
-      <p>ƒGƒfƒBƒ^[‚Å /etc/apt/sources.list ƒtƒ@ƒCƒ‹‚ğŠJ‚«AŸ‚Ì apt-line ‚ğ’Ç‰Á‚µ‚Ü‚·B</p>
+        å†…ã®ãƒ‘ãƒ¼ãƒ†ã‚£ã‚·ãƒ§ãƒ³ã«ç½®ã„ã¦ã€GRUB ã‹ã‚‰èµ·å‹•ã™ã‚‹ã‚‚ã®ã§ã™ã€‚</p>
+      <p>ã—ãŸãŒã£ã¦ install2win ã¯ã€ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹éš› ISO ã‚¤ãƒ¡ãƒ¼ã‚¸ã‚’ CD-R
+        ã«ç„¼ã‹ãªãã¦ã‚‚ã„ã„ã¨ã‹ã€ãƒ‘ãƒ¼ãƒ†ã‚£ã‚·ãƒ§ãƒ³ã‚’åˆ‡ã‚‰ãªãã¦ã‚‚ã„ã„ã¨ã‹ã„ã†ãƒ¡ãƒªãƒƒãƒˆã¯ã‚ã‚Šã¾ã™ãŒã€åŸºæœ¬çš„ã«ã¯CDãƒ–ãƒ¼ãƒˆåŒæ§˜ã€å¾“æ¥ã®HDDã‚¤ãƒ³
+        ã‚¹ãƒˆãƒ¼ãƒ«ã—ãŸã¨ã
+        ã®ã‚ˆã†ã« /usr ã‚„ /lib ãƒ•ã‚©ãƒ«ãƒ€ã«æ›¸ãè¾¼ã‚ã‚‹ã‚ã‘ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚èµ·å‹•æ–¹æ³•ã‚‚ã€CDãƒ–ãƒ¼ãƒˆãã®ã‚‚ã®ã§ã™ã€‚</p>
+      <div class="jumpmenu"><a href="#navigator">â†‘</a></div>
+      <h3 id="content_1_11">GNOME 2.2 ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã«ã¯?</h3>
+      <p>APT ã‚’åˆ©ç”¨ã—ã¦ã€ä»¥ä¸‹ã®ä½œæ¥­ã‚’è¡Œã„ã¾ã™ã€‚GNOME 2.2 ä¸€å¼ãŒã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã§ãã¾ã™ã€‚</p>
+      <p>ã‚¨ãƒ‡ã‚£ã‚¿ãƒ¼ã§ /etc/apt/sources.list ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ãã€æ¬¡ã® apt-line ã‚’è¿½åŠ ã—ã¾ã™ã€‚</p>
       <pre> deb http://ftp.acc.umu.se/mirror/mirrors.evilgeniuses.org.uk/debian/backports/woody gnome2.2/</pre>
-      <p>‚»‚µ‚ÄAƒRƒ“ƒ\[ƒ‹(ƒ^[ƒ~ƒiƒ‹)‚©‚ç apt-get update &amp;&amp; apt-get install
-        x-window-system gnome fontconfig ‚Æ“ü—Í‚µ‚Ü‚·B</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <p>ãã—ã¦ã€ã‚³ãƒ³ã‚½ãƒ¼ãƒ«(ã‚¿ãƒ¼ãƒŸãƒŠãƒ«)ã‹ã‚‰ apt-get update &amp;&amp; apt-get install
+        x-window-system gnome fontconfig ã¨å…¥åŠ›ã—ã¾ã™ã€‚</p>
+      <ul>
         <li><a href="http://people.debian.org/%7Ewalters/gnome2.html">GNOME
             2
             on Debian</a></li>
