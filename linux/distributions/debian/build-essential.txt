@@ -1,0 +1,32 @@
+作成日: 2022年03月31日 13時08分58秒
+更新日: 2022年05月03日 20時10分
+
+Install log of build-essential on Debian 10 (buster)
+
+root@debian:/home/user# apt install build-essential
+パッケージリストを読み込んでいます... 完了
+依存関係ツリーを作成しています                
+状態情報を読み取っています... 完了
+以下の追加パッケージがインストールされます:
+  dpkg-dev fakeroot g++ g++-8 gcc gcc-8 libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libc-dev-bin
+  libc6-dev libcc1-0 libdpkg-perl libfakeroot libfile-fcntllock-perl
+  libgcc-8-dev libitm1 liblsan0 libmpx2 libstdc++-8-dev libtsan0 libubsan1
+  linux-libc-dev make manpages-dev
+提案パッケージ:
+  debian-keyring g++-multilib g++-8-multilib gcc-8-doc libstdc++6-8-dbg
+  gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-8-multilib
+  gcc-8-locales libgcc1-dbg libgomp1-dbg libitm1-dbg libatomic1-dbg
+  libasan5-dbg liblsan0-dbg libtsan0-dbg libubsan1-dbg libmpx2-dbg
+  libquadmath0-dbg glibc-doc bzr libstdc++-8-doc make-doc
+以下のパッケージが新たにインストールされます:
+  build-essential dpkg-dev fakeroot g++ g++-8 gcc gcc-8 libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libc-dev-bin
+  libc6-dev libcc1-0 libdpkg-perl libfakeroot libfile-fcntllock-perl
+  libgcc-8-dev libitm1 liblsan0 libmpx2 libstdc++-8-dev libtsan0 libubsan1
+  linux-libc-dev make manpages-dev
+アップグレード: 0 個、新規インストール: 27 個、削除: 0 個、保留: 0 個。
+34.5 MB のアーカイブを取得する必要があります。
+この操作後に追加で 127 MB のディスク容量が消費されます。
+続行しますか? [Y/n] 
+
