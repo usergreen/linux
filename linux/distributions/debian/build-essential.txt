@@ -1,7 +1,7 @@
 作成日: 2022年03月31日 13時08分58秒
-更新日: 2022年05月03日 20時10分
+更新日: 2022年05月03日 23時25分
 
-Install log of build-essential on Debian 10 (buster)
+The installation log of build-essential on Debian 10 (buster)
 
 root@debian:/home/user# apt install build-essential
 パッケージリストを読み込んでいます... 完了
