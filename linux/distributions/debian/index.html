@@ -4,16 +4,11 @@
     <title>Debian GNU/Linux - Linux on the Desktop</title>
   </head>
   <body>
-<table width="100%" cellspacing="0" cellpadding="0" border="0">
-      <tbody>
-        <tr>
-          <td valign="top"><a href="../../../index.html">HOME</a> / <a href="../index.html">Distributions</a> / Debian</td>
-          <td valign="middle" align="right">Last updated: 2021-11-25 21:06 JST</td>
-        </tr>
-      </tbody>
-</table>
-      <hr size="1" width="100%">
-      <h2 id="content_1_0"><a name="mozTocId574577" class="mozTocH2"></a>Debian on the Desktop</h2>
+<div><div style="text-align: right; float:right;">Last updated: 2022/05/03 20:23 JST</div>
+<a href="../../../index.html">HOME</a> / <a href="../index.html">Distributions</a> / Debian</div>
+<hr size="1" width="100%">
+
+<h2 id="content_1_0"><a name="mozTocId574577" class="mozTocH2"></a>Debian on the Desktop</h2>
       <p>Debian GNU/Linux デスクトップ全般に共通するような FAQ & Tips を集めました。
 </p>  
 <p>■Debian LTS版（長期サポート版）に関することは、<a href="LTS/index.html">Debian-LTS</a>
@@ -583,9 +578,11 @@
         <li><a href="http://packages.debian.org/stable/admin/alien">alien
             (8.52)</a> -"install non-native packages with dpkg"</li>
       </ul>
+
       <h3 id="content_1_41"><a name="mozTocId8990" class="mozTocH3"></a>開発環境をインストールするには？</h3>
-      <p>上記で紹介したインストール手順では、開発環境を含んでいません。したがって、ソースからビルド（＝コンパイル）することができませ
-        ん。開発環境を 追加してください。hoge という名前のものをインストールするには、次のコマンドで開発環境を追加します。</p>
+      <p>上記で紹介した通常のインストール手順では、開発環境を含んでいません。したがって、ソースからビルド（＝コンパイル）することができませ
+        ん。開発環境を追加してください。基本的な開発環境は、<a href="build-essential.txt">こちら</a>を参考に build-essential をインストールすれば整います。
+なお、hoge という名前のものをインストールするには、次のコマンドで以下のように関連するもの一式を追加します。</p>
       <pre> # apt-get install build-essential devscripts<br> # apt-get build-dep hoge</pre>
       <p>なお、auto-apt というパッケージを利用して、開発環境を自動的に追加することもできます。</p>
       <pre> # apt-get install auto-apt</pre>
