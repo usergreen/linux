@@ -4,7 +4,7 @@
     <title>Debian GNU/Linux - Linux on the Desktop</title>
   </head>
   <body>
-<div><div style="text-align: right; float:right;">Last updated: 2022/05/05 19:17 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022/05/05 20:38 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Distributions</a> / Debian</div>
 <hr size="1" width="100%">
 
@@ -83,6 +83,7 @@
                   <li><a href="#mozTocId8990">開発環境をインストールするには？</a></li>
                   <li><a href="#mozTocId332894">ソースから Debパッケージを自動作成するには？(1) (CheckInstall?)</a></li>
                   <li><a href="#mozTocId712498">ソースから Debパッケージを自動作成するには？(2) (Debuild)</a></li>
+                  <li><a href="#make-install">ソースコードから直接インストールする</a>
                   <li><a href="#stow">Strow でソースパッケージを管理する</a>
                   <li><a href="#mozTocId374388">テスト版(Testing)とは何ですか？</a>
                     <ol>
@@ -596,6 +597,18 @@ apt には補完機能があって apt-get も引き続き使用できるよう�
         <li><a href="http://www.ep.sci.hokudai.ac.jp/%7Eepnetfan/zagaku/2000/1006/deb-make.html">Debian パッケージの作り方</a></li>
         <li><a href="http://d.hatena.ne.jp/gunshot/20051010">間違いだらけの備忘録 [debian]debuildとdpkg-buildpackageの違い</a></li>
       </ul>
+
+<h3 id="make-install">ソースコードから直接インストールする</h3>
+tar.gz形式でアーカイブされたソースから直接インストールする場合は、開発環境のもとで以下の手順にしたがってインストールを実行します。ただし、APT や Synaptic というシステム管理ツールに対応しないので、慎重に判断する必要があります。
+<pre>
+ $ tar zxfv hoge123.tar.gz
+ $ cd hoge123
+ $ ./configure
+ $ make
+ # make install
+</pre>
+[参照] ./configure;make;make installにはどんな意味がある？
+<a href="https://www.itmedia.co.jp/help/tips/linux/l0302.html">https://www.itmedia.co.jp/help/tips/linux/l0302.html</a>
 
 <h3 id="stow">Strow でソースパッケージを管理する</h3>
 ソースコードからインストールし管理する方法として、先に紹介した「make install」や「CheckInstall」など以外に Strow という汎用的なツールもあります。次のコマンドでインストールできます。
