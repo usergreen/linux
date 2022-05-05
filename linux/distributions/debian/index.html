@@ -4,7 +4,7 @@
     <title>Debian GNU/Linux - Linux on the Desktop</title>
   </head>
   <body>
-<div><div style="text-align: right; float:right;">Last updated: 2022/05/04 23:12 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022/05/05 11:29 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Distributions</a> / Debian</div>
 <hr size="1" width="100%">
 
@@ -13,21 +13,21 @@
 </p>  
 <p>■Debian LTS版（長期サポート版）に関することは、<a href="LTS/index.html">Debian-LTS</a>
         のページへ。<br>
-        ■Debian Live (Live CD)に関することは、<a href="live/index.html" title="DebianLinux-FAQ/DebianLive (790d)">DebianLive-FAQ</a>
+        ■Debian Live (Live CD)に関することは、<a href="live/index.html" title="DebianLinux-FAQ/DebianLive">DebianLive-FAQ</a>
         のページへ。<br>
 ■Debian 11 (bullseye) （stable = 最新安定版）に関することは、<a href="bullseye/index.html">Debian-bullseye</a> のページへ。<br>
 ■Debian 10 (buster) （oldstable = 旧安定版）に関することは、<a href="buster/index.html">Debian-Buster</a> のページへ。<br>
         ■Debian 9 (stretch) （oldoldstable = 旧旧安定版）に関することは、<a href="stretch/index.html">Debian-Stretch</a> のページへ。<br>
         ■Debian 8 (jessie) （obsolete = 廃止）に関することは、<a href="jessie/index.html">Debian-Jessie</a> のページへ。<br>
-        ■Debian 7.0 (wheezy) （廃止）に関することは、<a href="wheezy/index.html" title="DebianLinux-FAQ/Squeeze (134d)">DebianWheezy-FAQ/tips</a>
+        ■Debian 7.0 (wheezy) （廃止）に関することは、<a href="wheezy/index.html" title="DebianLinux-FAQ/Squeeze">DebianWheezy-FAQ/tips</a>
         参照。<br>
-        ■Debian 6.0 (squeeze) （廃止）に関することは、<a href="squeeze/index.html" title="DebianLinux-FAQ/Squeeze (134d)">DebianSqueeze-FAQ</a>
+        ■Debian 6.0 (squeeze) （廃止）に関することは、<a href="squeeze/index.html" title="DebianLinux-FAQ/Squeeze">DebianSqueeze-FAQ</a>
         参照。<br>
-        ■Debian 5.0 (lenny) （廃止）に関することは、<a href="lenny/index.html" title="DebianLinux-FAQ/Lenny (208d)">DebianLenny-FAQ</a> 参照。<br>
-        ■Debian 4.0 (etch) (廃止)に関することは、<a href="etch/index.html" title="DebianLinux-FAQ/Etch (1610d)">DebianEtch-FAQ</a> 参照。<br>
-        ■Debian 3.1 (sarge) (廃止)に関することは、<a href="sarge/index.html" title="DebianLinux-FAQ/3.1-Sarge (997d)">DebianSarge-FAQ</a>
+        ■Debian 5.0 (lenny) （廃止）に関することは、<a href="lenny/index.html" title="DebianLinux-FAQ/Lenny">DebianLenny-FAQ</a> 参照。<br>
+        ■Debian 4.0 (etch) (廃止)に関することは、<a href="etch/index.html" title="DebianLinux-FAQ/Etch">DebianEtch-FAQ</a> 参照。<br>
+        ■Debian 3.1 (sarge) (廃止)に関することは、<a href="sarge/index.html" title="DebianLinux-FAQ/3.1-Sarge">DebianSarge-FAQ</a>
         参照。<br>
-        ■Debian 3.0 (woody) (廃止)に関することは、<a href="woody/index.html" title="DebianLinux-FAQ/3.0-Woody (997d)">DebianWoody-FAQ</a>
+        ■Debian 3.0 (woody) (廃止)に関することは、<a href="woody/index.html" title="DebianLinux-FAQ/3.0-Woody">DebianWoody-FAQ</a>
         参照。
 </p>
       <div class="contents"> <br>
@@ -90,6 +90,7 @@
                   <li><a href="#mozTocId8990">開発環境をインストールするには？</a></li>
                   <li><a href="#mozTocId332894">ソースから Debパッケージを自動作成するには？(1) (CheckInstall?)</a></li>
                   <li><a href="#mozTocId712498">ソースから Debパッケージを自動作成するには？(2) (Debuild)</a></li>
+                  <li><a href="#stow">Strow でソースパッケージを管理する</a>
                   <li><a href="#mozTocId374388">テスト版(Testing)とは何ですか？</a>
                     <ol>
                       <li><a href="#mozTocId897974">リリース-クリティカル・バグについて</a></li>
@@ -131,7 +132,7 @@
         ションとは、無償 で入手でき、かつ再配布も自由なことをいいます。それが可能なのは、そうした行為を許可する GPL
         というライセンスに基づいて広く公開されているからです。</p>
       <h3 id="content_1_2"><a name="mozTocId151340" class="mozTocH3"></a>公式ミラー/ダウンロードサイト (Downloading/Mirrors)</h3>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>HTTP/FTP を使った Debian CD/DVD イメージのダウンロード<br>
           <a href="http://www.debian.org/CD/http-ftp/">http://www.debian.org/CD/http-ftp/</a></li>
         <li>「debian-cd」アーカイブの公認ミラー<br>
@@ -145,7 +146,7 @@
       <h3 id="content_1_3"><a name="mozTocId140623" class="mozTocH3"></a>インストール用 DVD は入手可能ですか？</h3>
       <p>インターネットに接続し、デビアン・インストーラー (DI)
         で作業を行うことが一般的ですが、この環境を用意するのが難しい場合には、インストール用 DVD が入手可能です。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li><a href="http://book.mycom.co.jp/linuxfan/68397-06-06.shtml">Linux 
             Fan 「Debian インストールと完全設定ガイド」</a> (2006年02月24日発行)<br>
           最新アップデート版 3.1r1（Sarge）DVD-ROM を収録し、詳細な解説記事もあります。</li>
@@ -159,9 +160,9 @@
       <pre> # apt-get update …システムのデータベースを最新版へ更新<br> # apt-get upgrade …実際にアップデートを実行<br> # apt-get dist-upgrade …全パッケージのアップデートを実行<br><br>なお、Debian 8 (Jessie) 以降、apt-get は apt へ置き換えられました。下記のようにコマンドが変更となりますが、apt には補完機能があって apt-get も引き続き使用<br>できるように配慮されています。<br> # apt update (← apt-get update)<br> # apt upgrade (← apt-get upgrade)<br> # apt full-upgrade (← apt-get dist-upgrade)<br></pre>
       <p>インストール作業が完了したら、できるだけ早い機会にアップデートすることが大切です。アップデートの作業を随時行うことで、システム
         を最新の状態 に管理できます。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>インタラクティブなテキストベース・ツール Aptitude も利用できます。<br>
-          Aptitude コマンドの詳細については、<a href="aptitude.html" title="DebianLinux-FAQ/Aptitude (2048d)">DebianLinux-FAQ/Aptitude</a>
+          Aptitude コマンドの詳細については、<a href="aptitude.html" title="DebianLinux-FAQ/Aptitude">DebianLinux-FAQ/Aptitude</a>
           参照。</li>
       </ul>
       <h4 id="content_1_6"><a name="mozTocId138662" class="mozTocH4"></a>グラフィカルな自動アップデート（APT Update Watcher）[2020-01 現在廃止]</h4>
@@ -173,7 +174,7 @@
         インストール後、このアプレットをパネルに追加してください。</p>
       <h4 id="content_1_7"><a name="mozTocId405148" class="mozTocH4"></a>グラフィカルなパッケージ・インストーラー（GDebi）</h4>
       <p>グラフィカルな操作で、Debianパッケージを個別にインストールします。ローカルに保存した
-        debパッケージが適切にインストールできます。詳細は<a href="gdebi.html" title="DebianLinux-FAQ/Gdebi (1460d)">こちらのメモ</a>を参照。</p>
+        debパッケージが適切にインストールできます。詳細は<a href="gdebi.html" title="DebianLinux-FAQ/Gdebi">こちらのメモ</a>を参照。</p>
         <h4><a name="mozTocId913238" class="mozTocH4"></a>APT でローカルに保存したファイルをインストールする</h4>
         ユーザーのカレント・ディレクトリ（ローカルフォルダ）へダウンロードしたDebパッケージを直接インストールすることが可能です。別の
         方法として、dpkg というコマンドに -i というオプションを付けてインストール可能ですが、dpkg
@@ -205,7 +206,7 @@
         <a href="https://www.debian.org/distrib/packages#view">「パッケー ジ」</a>
         という日本語検索ページが用意されています。パッケージ名より直接検索が行え、ダウンロードができます。ここで扱う全てのパッケージは、
         次の区分に従いま す。<br>
-        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <ul>
           <li>Main<br>
             パッケージとそのソースコードの自由な利用および再配布が保証されているものです。</li>
           <li>Contrib<br>
@@ -215,7 +216,7 @@
             このディレクトリにあるパッケージは、 そのソフトウェアの利用や再配布になんらかの煩わしい制限があるものです。</li>
         </ul>
         <h4 id="content_1_39"><a name="mozTocId741561" class="mozTocH3"></a>公式サイト以外から、利用可能なパッケージを検索／入手する</h4>
-        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <ul>
           <li><a href="https://wiki.debian.org/ja/unofficial-repositories">Unofficial
               APT repositories</a> では、パッケージ名から検索してダウンロードできます。 色々な事情から
             Debian には入っていないけど有用なソフトの Repository<br>
@@ -223,10 +224,10 @@
             apt-get.org はなくなりました。)<br>
           </li>
         </ul>
-        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <ul>
           <li><a href="https://www.deb-multimedia.org/">deb-multimedia.org</a>
             では、マルチメディア関連のアドオン・パッケージが見つかります。
-            <ul class="list2" style="padding-left: 16px; margin-left: 16px;">
+            <ul>
               <li>For buster (stable)
                 <pre> deb http://www.debian-multimedia.org buster main</pre>
               </li>
@@ -236,7 +237,7 @@
             </ul>
           </li>
         </ul>
-        <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+        <ul>
           <li><a href="http://backports-master.debian.org/">Debian
               Backports (Backports.org)</a><br>
             Backports.org の詳しい日本語解説とその利用方法が、<a href="http://opentechpress.jp/developer/07/01/25/019207.shtml">バッ
@@ -295,7 +296,7 @@
           CD-ROM をアンマウントしています ...あなたの持っている CD セットの残り全部に、こ の手順を繰り返してください。</p>
       </blockquote>
       <h4 id="content_1_10"><a name="mozTocId910611" class="mozTocH4"></a>ローカルに保存したファイルを APT-line に追加するには？</h4>
-      <ol class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ol>
         <li>Debian パッケージ用の書庫（フォルダ）を任意の場所に任意の名前で作成<br>
           例： /tem/deb あるいは /home/hoge/deb など。</li>
         <li>Debian パッケージをそのフォルダにコピーまたは移動。</li>
@@ -311,7 +312,7 @@
       </ol>
       <p>これで、今後このフォルダにあるパッケージをインストールする場合、たとえ依存関係で不足するパッケージがあっても他のリポジトリを参
         照し自動的に インストールしてくれるようになります。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>参照サイト：<br>
           <a href="http://lagendra.s.kanazawa-u.ac.jp/ogurisu/manuals/linux/debian-tips.html#mypackage">自
             前のpackageをaptでinstall</a><br>
@@ -358,7 +359,7 @@
       <p>テキストベースのインターフェース aptitude でも、Tasksel
         と同じように、それぞれの関連パッケージを一括インストールする機能があります。</p>
       <pre> # aptitude</pre>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li><a href="http://dolphin.c.u-tokyo.ac.jp/%7Enori1/aptitude-ja/">aptitude ユーザマニュアル</a></li>
       </ul>
       <h3 id="content_1_14"><a name="mozTocId769429" class="mozTocH3"></a>言語設定（ロケール）を追加・変更するには？</h3>
@@ -412,7 +413,7 @@
       <pre> # dpkg-reconfigure xdm</pre>
       <p><img src="../../../images/debian/Screenshot-xdm_configure.jpg" alt="Screenshot-xdm_configure.jpg" title="Screenshot-xdm_configure.jpg" width="480" height="334" border="0"></p>
       <p><img src="../../../images/debian/Screenshot-xdm_configure-1.jpg" alt="Screenshot-xdm_configure-1.jpg" title="Screenshot-xdm_configure-1.jpg" width="480" height="305" border="0"></p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>単に xdm を削除しシステムを再起動させても、元の gdm に戻すことができます。
           <pre> # apt-get remove xdm</pre>
         </li>
@@ -428,9 +429,8 @@
       <p>標準の言語で「なし」を選択すると、システムレベルの言語が英語となってしまい、ログイン画面も英語で表示されます。したがって、ログ
         イン画面を日本語で表示させるためには、次のコマンドで言語の再設定を実行し、日本語（Ja_JP.UTF-8）を選択する必要があります。</p>
       <pre> # dpkg-reconfigure locales</pre>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>3.1 Sarge
-          の場合は言語設定の挙動が異なり、標準の言語で「なし」を選択していてもログイン画面は、通常日本語で表示されます。</li>
+      <ul>
+        <li>3.1 Sarge の場合は言語設定の挙動が異なり、標準の言語で「なし」を選択していてもログイン画面は、通常日本語で表示されます。</li>
       </ul>
       <h3 id="content_1_24"><a name="mozTocId600300" class="mozTocH3"></a>GNOME の日本語ユーザーガイドはありませんか?</h3>
       <p><a href="http://www.gnome.gr.jp/docs/gnome-users-guide/index.html">GNOME 1.4 ユーザガイド(日本語訳)</a> が日本 GNOME
@@ -467,7 +467,7 @@
         ブラウザーのメニューが日本語化されていないときは？</h3>
       <p>コマンドライン（端末）から、mozilla-locale-ja を追加インストールします。</p>
       <pre> # apt-get install mozilla-locale-ja<br> 以下のパッケージが新たにインストールされます:<br>  mozilla-locale-ja</pre>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>上の作 業だけでは日本語化作業が終っていません。インストール後 Mozilla を起動させて、Menu &gt;
           Edit &gt; Preferences &gt; Appearance &gt; Languages/Content
           から Japanese(Japan) を選択します。ブラウザーを再起動させれば、日本語表示に切り替わります。</li>
@@ -575,7 +575,7 @@
         パッケージを Debian パッケージに変換し、dpkg
         を使ってインストールできるようにしてくれます。このツールは、バイナリパッケージにのみ対応しています。公式サイトにその詳しい解説が
         あります。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li><a href="http://packages.debian.org/stable/admin/alien">alien
             (8.52)</a> -"install non-native packages with dpkg"</li>
       </ul>
@@ -593,27 +593,36 @@
         は、その環境内で起動中のプログラムのファイルアクセスを監視し、プログラムが、インストールしていないパッケージに属することが知られ
         ているファイルに アクセスしようとしている場合、auto-apt はそのパッケージを apt-get
         によりインストールします。」- <a href="http://packages.debian.org/etch/auto-apt">http://packages.debian.org/etch/auto-apt</a></p>
-      <h3 id="content_1_42"><a name="mozTocId332894" class="mozTocH3"></a>ソー
-        スから Debパッケージを自動作成するには？(1) (<span class="noexists">CheckInstall<a href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=CheckInstall&amp;refer=DebianLinux-FAQ">?</a></span>)</h3>
+      <h3 id="content_1_42"><a name="mozTocId332894" class="mozTocH3"></a>ソースから Debパッケージを自動作成するには？(1) (CheckInstall)</h3>
       <p>以下は、hoge-1.2.3.tar.gz というソース・パッケージから
         .deb形式のバイナリー・パッケージを作成する手順です。</p>
       <pre> # apt-get install checkinstall<br> $ tar xvfz hoge-1.2.3.tar.gz<br> $ cd hoge-1.2.3<br> $ ./configure<br> $ make<br> # checkinstall</pre>
       <h3 id="content_1_43"><a name="mozTocId712498" class="mozTocH3"></a>ソースから Debパッケージを自動作成するには？(2) (Debuild)</h3>
       <p>以下は、hoge-1.2.3.tar.gz というソース・パッケージから
-        .deb形式のバイナリー・パッケージを作成するための最小限の手順です。<span class="noexists">CheckInstall<a href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=CheckInstall&amp;refer=DebianLinux-FAQ">?</a></span>
-        という簡易な方法とは異なり、正式にパッケージを作成します。</p>
+        .deb形式のバイナリー・パッケージを作成するための最小限の手順です。CheckInstall という簡易な方法とは異なり、正式にパッケージを作成します。</p>
       <pre> # apt-get install build-essential devscripts dh-make linda fakeroot<br> $ tar xvfz hoge-1.2.3.tar.gz<br> $ cd hoge-1.2.3<br> $ dh_make<br> $ debuild</pre>
       <p>[参照先]</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li><a href="http://debian.fam.cx/index.php?AptGet#content_1_70">Debian
-            GNU/Linux スレッドテンプレ &gt; 自作パッケージを作りたい</a></li>
-        <li><a href="http://opentechpress.jp/developer/print.pl?sid=07/02/27/0117240">Debian
-            ベースのシステムでパッケージを自作する (Open Tech Press)</a></li>
-        <li><a href="http://www.ep.sci.hokudai.ac.jp/%7Eepnetfan/zagaku/2000/1006/deb-make.html">Debian
-            パッケージの作り方</a></li>
-        <li><a href="http://d.hatena.ne.jp/gunshot/20051010">間違いだらけの備忘録
-            [debian]debuildとdpkg-buildpackageの違い</a></li>
+      <ul>
+        <li><a href="http://debian.fam.cx/index.php?AptGet#content_1_70">Debian GNU/Linux スレッドテンプレ &gt; 自作パッケージを作りたい</a></li>
+        <li><a href="http://opentechpress.jp/developer/print.pl?sid=07/02/27/0117240">Debian ベースのシステムでパッケージを自作する (Open Tech Press)</a></li>
+        <li><a href="http://www.ep.sci.hokudai.ac.jp/%7Eepnetfan/zagaku/2000/1006/deb-make.html">Debian パッケージの作り方</a></li>
+        <li><a href="http://d.hatena.ne.jp/gunshot/20051010">間違いだらけの備忘録 [debian]debuildとdpkg-buildpackageの違い</a></li>
       </ul>
+
+<h3 id="stow">Strow でソースパッケージを管理する</h3>
+ソースコードからインストールし管理する方法として、先に紹介した「make install」や「CheckInstall」など以外に Strow という汎用的なツールもあります。次のコマンドでインストールできます。
+<p>
+ # apt install stow
+</p>
+インストール後、詳しい使い方については以下の外部リンクの記事をご参照ください。
+<ul>
+<li>GNU Stowによるローカルパッケージ管理 <a href="https://senooken.jp/post/2018/03/28/">href="https://senooken.jp/post/2018/03/28/</a></li>
+<li>stowでmake installしたパッケージを管理 <a href="https://rcmdnk.com/blog/2013/08/11/computer-linux-windows-cygwin/">href=https://rcmdnk.com/blog/2013/08/11/computer-linux-windows-cygwin/</a></li>
+<li>GNU Stow で 環境を汚さずに tarballのmake installでインストール・アンインストールする <a href="https://qiita.com/katoken-0215/items/dd4b309ecfc76cae0a76">href="https://qiita.com/katoken-0215/items/dd4b309ecfc76cae0a76</a></li>
+<li>不要なパッケージを完全に削除できるインストーラー <a href="GNU Stow https://mag.osdn.jp/08/03/14/0055213">href="GNU Stow https://mag.osdn.jp/08/03/14/0055213</a></li>
+<li>不要なパッケージを完全に削除できるインストーラー <a href="GNU Stow https://www.itmedia.co.jp/enterprise/articles/0803/19/news012.html">https://www.itmedia.co.jp/enterprise/articles/0803/19/news012.html</a></li>
+</ul>
+
       <h3 id="content_1_44"><a name="mozTocId374388" class="mozTocH3"></a>テスト版(Testing)とは何ですか？</h3>
       <p>次期リリース候補としてテスト中の段階にある Debian
         ディストリビューションは、一般にテスト版(Testing)と呼ばれています。このテスト版は、安定版ほど十分な検証が行われていませ
@@ -623,13 +632,12 @@
         アップグレードが頻繁にリリースされる関係で、ある日突然不具合が生じソフトウェアが正常に起動しなくなるということも珍しくありませ
         ん。</p>
       <p>セキュリティ・アップデートについては、安定版のような迅速な対応を受けることができない点にも注意してください。</p>
-      <h4 id="content_1_45"><a name="mozTocId897974" class="mozTocH4"></a>リ
-        リース-クリティカル・バグについて</h4>
+      <h4 id="content_1_45"><a name="mozTocId897974" class="mozTocH4"></a>リリース-クリティカル・バグについて</h4>
       <p>リリース-クリティカル・バグ (Release-Critical bugs)
         とは、運用上重大な支障を与えるような不具合を指しています。どの Debian
         パッケージにどんな不具合が含まれているのかは、バグ追跡システム (bug tracking system: BTS)
         で集計し管理されています。検索すれば、その詳細を知ることが可能です。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li><a href="http://www.jp.debian.org/Bugs/">http://www.jp.debian.org/Bugs/</a></li>
         <li><a href="http://bugs.debian.org/release-critical/">http://bugs.debian.org/release-critical/</a></li>
         <li><a href="http://bts.turmzimmer.net/">http://bts.turmzimmer.net/</a></li>
@@ -638,13 +646,13 @@
       <p>次のウェブサイトから、購読の申し込みができます：<br>
         <a href="http://www.debian.org/MailingLists/subscribe">http://www.debian.org/MailingLists/subscribe</a></p>
       <p>ユーザーに広く利用されているリストです。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li><a href="http://lists.debian.org/debian-announce/">http://lists.debian.org/debian-announce/</a></li>
         <li><a href="http://lists.debian.org/debian-news/">http://lists.debian.org/debian-news/</a></li>
         <li><a href="http://lists.debian.org/debian-security-announce/">http://lists.debian.org/debian-security-announce/</a></li>
       </ul>
       <p>日本語一般に関するリストもあります。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li><a href="http://lists.debian.org/debian-japanese/">http://lists.debian.org/debian-japanese/</a></li>
       </ul>
       <h3 id="content_1_47"><a name="mozTocId98876" class="mozTocH3"></a>Debian ドキュメント</h3>
@@ -684,10 +692,8 @@
         <li>Gustavo Noronha Silva &lt;<a href="mailto:kov@debian.org">kov@debian.org</a>&gt;,
           Wed Jul 2 18:39:10 2003</li>
       </ul>
-      <h4 id="content_1_50"><a name="mozTocId23909" class="mozTocH4"></a>APT
-        and Dpkg Quick Reference Sheet</h4>
-      <p><a href="http://f40.aaa.livedoor.jp/%7Egreen/?APTandDpkgQuickReferenceSheet" title="APTandDpkgQuickReferenceSheet (2058d)">APT
-          コマンドの重要箇所をまとめた簡略版（英語）</a></p>
+      <h4 id="content_1_50"><a name="mozTocId23909" class="mozTocH4"></a>APT and Dpkg Quick Reference Sheet</h4>
+      <p>APT コマンドの重要箇所をまとめた簡略版（英語）</p>
       <pre> # apt-get install apt-dpkg-ref</pre>
       <p>インストール後、file:///usr/share/doc/apt-dpkg-ref/apt-dpkg-ref.html
         をブラウザで開く。</p>
@@ -698,19 +704,17 @@
         より LinuxプリインストールPCが販売されています。<br>
         詳しくは <a href="http://desktop.good-day.net/news/shop/start.html">http://desktop.good-day.net/news/shop/start.html</a>
         を見てください。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>ニュースは、<a href="http://japan.internet.com/linuxtoday/20040922/4.html">グッ
-            デイ、オープンソー スのデスクトップサイトを開設</a> (<span class="noexists">LinuxToday<a href="http://f40.aaa.livedoor.jp/%7Egreen/?cmd=edit&amp;page=LinuxToday&amp;refer=DebianLinux-FAQ">?</a></span>
-          2004年9月22日)</li>
+            デイ、オープンソー スのデスクトップサイトを開設</a> (LinuxToday 2004年9月22日)</li>
       </ul>
       <h4 id="content_1_53"><a name="mozTocId8085" class="mozTocH4"></a>Debian GNU/Hurd に関すること</h4>
       <p>debian プロジェクトでは現在、「Debian Hurd」の実現に向けて取組みが行われています。今の Linux
         kernel に基づくシステムは、近い将来 Debian GNU/Hurd
         に置き換えられることになります。予備知識として知っておいても良いでしょう。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li><a href="http://www.debian.org/ports/hurd/index.ja.html">Debian GNU/Hurd</a></li>
-        <li><a href="http://www.sutv.zaq.ne.jp/joe/hurd/basic_guide.html">Basic
-            Guides Debian GNU/Hurd</a></li>
+        <li><a href="http://www.sutv.zaq.ne.jp/joe/hurd/basic_guide.html">Basic Guides Debian GNU/Hurd</a></li>
       </ul>
       <p>「GNU/HurdとはGNU/Linuxと置き換えるために設計された新しいコンピュータオペレー
         ティングシステムのことです。GNU/Hurdは The Free Software Foundation (GNU)と
@@ -720,7 +724,7 @@
         ングシステムは GNU/Linuxを構成しているGNU toolを利用することができるでしょう。」(上記サイトより一部引用)</p>
       <h3 id="content_1_54"><a name="mozTocId640097" class="mozTocH3"></a>外部リンク（Debian 関係日本語情報）</h3>
       <h4 id="content_1_55"><a name="mozTocId598780" class="mozTocH4"></a>Debian 公式ウェブサイト</h4>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li><a href="http://www.debian.org/">http://www.debian.org/</a></li>
         <li><a href="http://wiki.debian.org/">http://wiki.debian.org/</a>
           (Wiki)</li>
