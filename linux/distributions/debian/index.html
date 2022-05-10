@@ -4,7 +4,7 @@
     <title>Debian GNU/Linux - Linux on the Desktop</title>
   </head>
   <body>
-<div><div style="text-align: right; float:right;">Last updated: 2022/05/05 20:47 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022/05/10 21:17 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Distributions</a> / Debian</div>
 <hr size="1" width="100%">
 
@@ -81,7 +81,7 @@
                   <li><a href="#mozTocId614108">インクジェット・プリンター等を使って印刷する</a></li>
                   <li><a href="#mozTocId881061">RPM 形式のパッケージとの互換性がありますか。</a></li>
                   <li><a href="#mozTocId8990">開発環境をインストールするには？</a></li>
-                  <li><a href="#mozTocId332894">ソースから Debパッケージを自動作成するには？(1) (CheckInstall?)</a></li>
+                  <li><a href="#mozTocId332894">ソースから Debパッケージを自動作成するには？(1) (CheckInstall)</a></li>
                   <li><a href="#mozTocId712498">ソースから Debパッケージを自動作成するには？(2) (Debuild)</a></li>
                   <li><a href="#make-install">ソースコードから直接インストールする</a>
                   <li><a href="#stow">Stow でソースパッケージを管理する</a>
@@ -582,10 +582,12 @@ apt には補完機能があって apt-get も引き続き使用できるよう�
         は、その環境内で起動中のプログラムのファイルアクセスを監視し、プログラムが、インストールしていないパッケージに属することが知られ
         ているファイルに アクセスしようとしている場合、auto-apt はそのパッケージを apt-get
         によりインストールします。」- <a href="http://packages.debian.org/etch/auto-apt">http://packages.debian.org/etch/auto-apt</a></p>
+
       <h3 id="content_1_42"><a name="mozTocId332894" class="mozTocH3"></a>ソースから Debパッケージを自動作成するには？(1) (CheckInstall)</h3>
       <p>以下は、hoge-1.2.3.tar.gz というソース・パッケージから
         .deb形式のバイナリー・パッケージを作成する手順です。</p>
       <pre> # apt-get install checkinstall<br> $ tar xvfz hoge-1.2.3.tar.gz<br> $ cd hoge-1.2.3<br> $ ./configure<br> $ make<br> # checkinstall</pre>
+
       <h3 id="content_1_43"><a name="mozTocId712498" class="mozTocH3"></a>ソースから Debパッケージを自動作成するには？(2) (Debuild)</h3>
       <p>以下は、hoge-1.2.3.tar.gz というソース・パッケージから
         .deb形式のバイナリー・パッケージを作成するための最小限の手順です。CheckInstall という簡易な方法とは異なり、正式にパッケージを作成します。</p>
@@ -614,8 +616,17 @@ tar.gz形式でアーカイブされたソースから直接インストール�
 ソースコードからインストールし管理する方法として、先に紹介した「make install」や「CheckInstall」など以外に Stow という汎用的なツールもあります。次のコマンドでインストールできます。
 <p>
  # apt install stow
-</p>
-インストール後、詳しい使い方については以下の外部リンクの記事をご参照ください。
+</p><p>
+stow は CheckInstall の代替として使え、ソースからコンパイルしたソフトウェアを管理するものです。しかし、依存関係などを追跡してくれるのという点では、checkinstall の方がお推めできます。
+</P><p>
+一方、checkinstall を使用すると、自作のパッケージソフトウェアが公式パッケージに影響を与えるため、システムのアップグレードなどが（おそらく）出来なくなります。stow は /usr/local/ を直接管理するので、このような問題は発生しません。<p>
+<blockquote><p>
+stow is an alternative to CheckInstall, in that it manages software compiled from source. However checkinstall is probably preferable since it keeps track of dependencies etc.
+</p><p>
+On the other hand, using checkinstall could (possibly) prevent your system from upgrading etc., since the self-packaged software will affect stock packages. Since stow manages /usr/local/ directly it does not have this potential issue.<br>
+<a href="https://wiki.debian.org/DontBreakDebian/Discussion">https://wiki.debian.org/DontBreakDebian/Discussion</a>
+</p></blockquote>
+インストール後の詳しい使い方については、以下の外部リンクの記事をご参照ください。
 <ul>
 <li>GNU Stowによるローカルパッケージ管理 <a href="https://senooken.jp/post/2018/03/28/">https://senooken.jp/post/2018/03/28/</a></li>
 <li>stowでmake installしたパッケージを管理 <a href="https://rcmdnk.com/blog/2013/08/11/computer-linux-windows-cygwin/">https://rcmdnk.com/blog/2013/08/11/computer-linux-windows-cygwin/</a></li>
