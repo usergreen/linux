@@ -8,24 +8,23 @@
    <tbody>
      <tr>
        <td valign="top"><a href="../../index.html">HOME</a> / <a href="index.html">Software</a></td>
-       <td valign="middle" align="right">Last updated: 2022/04/22 19:29 JST</td>
+       <td valign="middle" align="right">Last updated: 2022/05/12 15:40 JST</td>
      </tr>
    </tbody>
  </table>
 <hr width="100%">
 
 <h2>アクセサリ</h2>
- <ul>
-  <li><ol>
+  <ol>
    <li><a href="#format-usb">Format USB (USB フォーマッタ)</a></li>
    <li><a href="#gtkhash">GtkHash - ハッシュ値の計算</a></li>
    <li><a href="#mozTocId780265">LHA - 圧縮ファイル解凍ツール</a></li>
    <li><a href="#mozTocId666176">Point-and-Klik (KNOPPIX 3.7)</a></li>
    <li><a href="#mozTocId791578">ScreenRuler（スクリーン定規）</a><ol>
     <li><a href="#screenruler">ScreenRuler とは何ですか？</a></li>
-    <li><a href="#screenruler2">インストール (debian 9, etc.)</a></li></ol></li></ol></li>
- </ul>
-
+    <li><a href="#screenruler2">インストール (debian 9, etc.)</a></li></ol></li>
+   <li><a href="#stopwatch">Stopwatch - ストップウォッチ（タイマー）</a></li>
+  </ol>
 <h3 id="format-usb">Format USB (USB フォーマッタ)</h3>
 このソフトウェアは MX Linux に付属している非常に強力な USB フラッシュメモリフォーマット（初期化）用ツールです。<br>
 USB メモリのフォーマットは GParted をはじめとするグラフィカルなツールがいくつか存在しますが、そういったツールで初期化に失敗した場合には、この Format USB を一度試してみる価値があると思います。当方では時々このツールのお世話になっています。<br>
@@ -76,7 +75,7 @@ GtkHash は小さな GTK+ ユーティリティで、ユーザーは mhash ラ�
 # apt install gtkhash
 </p><p>
 端末からの起動方法<br>
-$ gtkhash</P>
+$ gtkhash</p>
 <p>
 <img src="../../images/misc/Screenshot-caja-gtkhash.png" alt="Screenshot-caja-gtkhash.png" title="a screenshot of caja-gtkhash" width="480" style="float:right;">なお MATE デスクトップ環境には、GtkHash と同様な機能を備えた caja-gtkhash という拡張機能 (extension) が組み込まれています。<br>
 caja-gtkhash の操作画面は、ファイルのアイコンを右クリック > [プロパティ] > [ダイジェスト] より開くことができます（左図参照）。
@@ -147,6 +146,7 @@ ScreenRuler は画面上に定規を表示し、そこにある他のオブジ�
 
 ※引用元: <a href="https://packages.debian.org/ja/bullseye/screenruler">https://packages.debian.org/ja/bullseye/screenruler</a>
 </pre></blockquote>
+
 <h4 id="screenruler2">Debian 9 (stretch) へのインストール</h4>
 <blockquote><pre>
 # apt install screenruler
@@ -174,6 +174,18 @@ ScreenRuler は画面上に定規を表示し、そこにある他のオブジ�
 </pre></blockquote>
 さらに、Debian 5 (lenny) へのインストールは <a href="screenruler_debian_lenny.html">ScreenRuler/DebianLenny</a> 参照。
 
+<h4 id="stopwatch">Stopwatch - ストップウォッチ（タイマー）</h4>
+<p>
+<img src="../../images/misc/stopwatch.png" alt="stopwatch.png" title="a screenshot of Stopwatch" align="right">
+</P>
+名前のとおりタイマーとして使える簡単なアプレットです。<br>
+これはアメリカ政府機関 National Institute of Standards and Technology によって開発されたフリーなソフトウェアです。
+Stopwatch 公式サイトからはソースコード一式が配布されています。Debian Linux には専用のバイナリパッケージもあります。
+The Stopwatch Home Page - http://expect.sourceforge.net/stopwatch/
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <hr width="100%"><a href="../../index.html">HOME</a><br>
 </body>
 </html>
