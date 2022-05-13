@@ -1,33 +1,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja"><head>    
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-<title>Accessories, etc. - Linux on the Desktop</title>
+<title>Applications/accessories, etc. - Linux on the Desktop</title>
 </head>
 <body>    
- <table width="100%" cellspacing="0" cellpadding="0" border="0">
-   <tbody>
-     <tr>
-       <td valign="top"><a href="../../index.html">HOME</a> / <a href="index.html">Software</a></td>
-       <td valign="middle" align="right">Last updated: 2022/05/13 00:28 JST</td>
-     </tr>
-   </tbody>
- </table>
-<hr width="100%">
+<div><div style="text-align: right; float:right;">Last updated: 2022-05-13 12:13 JST</div>
+<a href="../../index.html">HOME</a> / <a href="index.html">Software</a></div>
+<hr width="100%" size="+">
 
 <h2>アクセサリ</h2>
   <ol>
    <li><a href="#format-usb">Format USB (USB フォーマッタ)</a></li>
    <li><a href="#gtkhash">GtkHash - ハッシュ値の計算</a></li>
    <li><a href="#mozTocId780265">LHA - 圧縮ファイル解凍ツール</a></li>
+   <li><a href="#mx-snapshot">MX スナップショット - Live USB/DVD の作成</a></li>
    <li><a href="#mozTocId666176">Point-and-Klik (KNOPPIX 3.7)</a></li>
    <li><a href="#mozTocId791578">ScreenRuler（スクリーン定規）</a><ol>
     <li><a href="#screenruler">ScreenRuler とは何ですか？</a></li>
     <li><a href="#screenruler2">インストール (debian 9, etc.)</a></li></ol></li>
    <li><a href="#stopwatch">Stopwatch - ストップウォッチ（タイマー）</a></li>
   </ol>
+
 <h3 id="format-usb">Format USB (USB フォーマッタ)</h3>
-このソフトウェアは MX Linux に付属している非常に強力な USB フラッシュメモリフォーマット（初期化）用ツールです。<br>
-USB メモリのフォーマットは GParted をはじめとするグラフィカルなツールがいくつか存在しますが、そういったツールで初期化に失敗した場合には、この Format USB を一度試してみる価値があると思います。当方では時々このツールのお世話になっています。
+このソフトウェアは MX Linux に付属している非常に強力な USB フラッシュメモリのフォーマット（初期化）用ツールです。<br>
+USB メモリのフォーマットは GParted をはじめとするグラフィカルなツールがいくつか存在しますが、そういったツールで初期化に失敗した場合には、この Format USB を一度試してみる価値があると思います。当方でもこのツールが役に立っています。
 <p>
 <img src="../../images/mx-linux/format-usb-about-ja.png" alt="format-usb-about-ja.png" style="float: right;">
 </p><p>
@@ -135,6 +131,23 @@ lha (1.14i-10) を設定しています ...
         <li>Point-and-Klik については、<a href="pointklik.html" title="Software/PointKlik">Software/PointKlik</a>
           を見てください。</li>
       </ul>
+
+<h3 id="mx-snapshot">MX スナップショット (Snapshot) - Live USB/DVD の作成</h3>
+<p>
+MX スナップショットは Live USB/DVD を作成するためのツールです。MX Linux に付属する独自のアプリです。
+MX Linux が起動した状態（ライブ起動時も含む）で利用できます。このツールでユーザーの個人設定を保存した
+独自の Live USB/DVD を作成することが可能となります。各種設定として、アカウント設定、ネットワーク設定、
+ウェブブラウザやメーラーの個人設定などあらゆる設定を維持することができます<br>
+また、ユーザーのデータを含むシステムの完全なバックアップを残したり、別のメディアに保存するという目的でも使えます。<br>
+使い方は簡単で、下記の画面の説明に従って操作するだけです。
+</p>
+<img src="../../images/mx-linux/mx-snapshot-about-ja.png" alt="mx-snapshot-about-ja.png">
+<p>&ensp;</p>
+<img src="../../images/mx-linux/mx-snapshot-ja.png" alt="mx-snapshot-ja.png">
+<p>&ensp;</p>
+<img src="../../images/mx-linux/mx-snapshot-2-ja.png" alt="mx-snapshot-2-ja.png">
+<p>上記の手順で作成したライブイメージは screenshot-date.iso という名前になります。
+このISO イメージを利用するには、これを他の USB メモリにコピーし直すか、MX Live USB Maker で同じことを行ってください。</p>
 
 <h3 id="mozTocId791578">ScreenRuler（スクリーン定規）</h3>
 <h4 id="screenruler">ScreenRuler とは何ですか？</h4>
