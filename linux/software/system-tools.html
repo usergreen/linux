@@ -5,18 +5,12 @@
 </head>
 <body>    
  <div id="navigator">
- <table width="100%" cellspacing="0" cellpadding="0" border="0">
-   <tbody>
-     <tr>
-       <td valign="top"><a href="../../index.html"><big>HOME</big></a> / <a href="index.html">Software</a></td>
-       <td valign="middle" align="right">Last updated: 2022/04/21 11:58 JST</td>
-     </tr>
-   </tbody>
- </table>
+<div><div style="text-align: right; float:right;">Last updated: 2022-05-14 09:52 JST</div>
+<a href="../../index.html">HOME</a> / <a href="index.html">Software</a></div>
 <hr width="100%">
+
 <h2 id="content_1_0"><a name="mozTocId473610" class="mozTocH2"></a>システムツール</h2>
- <ul id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
-  <li><ol>
+ <ol id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
    <li><a href="#mozTocId820287">ターミナル・エミュレータ (terminal emulator)</a></li>
     <ol><li><a href="#mozTocId481315">GNOME 端末 (Gnome-terminal) の概要について</a></li>
      <li><a href="#mozTocId879363">GNOME 端末の便利な使用法　-履歴機能</a></li>
@@ -37,10 +31,10 @@
     <li><a href="#mozTocId164038"> rsync について</a></li>
     <li><a href="#1">シミュレートが行えます</a></li>
     <li><a href="#mozTocId827437"> Grsync の実際の処理と結果について</a></li></ol></li>
-   <li><a href="#mozTocId832015">(GRUB / Lilo) 起動する順番を変更したいとき</a></li></ol></li></ul>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
+   <li><a href="#timeshift">Timeshift - システム回復ツール</a></li>
+   <li><a href="#mozTocId832015">(GRUB / Lilo) 起動する順番を変更したいとき</a></li></ol>
+
 <h3 id="content_1_2"><a name="mozTocId820287" class="mozTocH3"></a>ターミナル・エミュレータ (terminal emulator)</h3>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
  <h4 id="content_1_3"><a name="mozTocId481315" class="mozTocH4"></a>GNOME 端末 (Gnome-terminal) の概要について</h4>
   <p>GNOME 端末のヘルプに収録のマニュアル V2.3 日本語版より引用</p>
   <p>[概要]<br>
@@ -274,6 +268,26 @@ $ rsync -r -n -t -v --progress -s<br>
       Fairy Tales and Myths Retold by Children, by E. Louise
       Smythe.htm.GdUmVY" failed: Invalid argument (22)<br>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
+
+<h3 id="timeshift">Timeshift - システム回復ツール</h3>
+Timeshiftは、システムの復元を行うユーティリティです。これは一定時間ごとに、システムのスナップショットを取得します。これらのスナップショットは、システム変更を後日元に戻す目的で、システムに保存されます。rsync を使って差分スナップショットを作成したり、BTRFS ツールを使って BTRFS スナップショットを作成できます。
+<blockquote>
+Timeshift is a system restore utility which takes snapshots of the system at regular intervals. These snapshots can be restored at a later date to undo system changes. Creates incremental snapshots using rsync or BTRFS snapshots using BTRFS tools.
+https://packages.debian.org/ja/bullseye/timeshift
+</blockquote>
+もし、メインシステムが起動できない場合、USBメモリからライブシステムを使使って起動し、そこにtimeshiftをインストールすることで、システムを復元するという使い方も可能です。
+<p>
+Debian Wiki による簡単な解説や操作方法の記事<br>
+<a href="https://wiki.debian.org/timeshift">https://wiki.debian.org/timeshift</a>
+</p>
+各 Linux ディストリビューション向けに配布されています。Debian でインストールする場合は次のコマンドを実行します。<br>
+<p>
+ # apt-get install timeshift
+</p>
+Timeshift 開発元公式サイト<br>
+<a href="https://teejeetech.in/timeshift/">https://teejeetech.in/timeshift/</a>
+<p>なお、アクセサリーの項目にある「<a href="accessories.html#mx-snapshot">MX スナップショット</a>」も同様の目的で利用できます。</p>
+
 <h3 id="content_1_40"><a name="mozTocId832015" class="mozTocH3"></a>(GRUB / Lilo) 起動する順番を変更したいとき</h3>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
         <li>複数の OS を導入した場合の運用のコツやトラブル対処<br>
