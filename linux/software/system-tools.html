@@ -5,33 +5,44 @@
 </head>
 <body>    
  <div id="navigator">
-<div><div style="text-align: right; float:right;">Last updated: 2022-05-14 09:52 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022-05-14 14:29 JST</div>
 <a href="../../index.html">HOME</a> / <a href="index.html">Software</a></div>
 <hr width="100%">
 
 <h2 id="content_1_0"><a name="mozTocId473610" class="mozTocH2"></a>システムツール</h2>
  <ol id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
-   <li><a href="#mozTocId820287">ターミナル・エミュレータ (terminal emulator)</a></li>
+   <li><a href="#mozTocId820287">ターミナル・エミュレータ (terminal emulator)</a>
     <ol><li><a href="#mozTocId481315">GNOME 端末 (Gnome-terminal) の概要について</a></li>
      <li><a href="#mozTocId879363">GNOME 端末の便利な使用法　-履歴機能</a></li>
      <li><a href="#mozTocId595198">Xterm の概要について</a></li>
-     <li><a href="#mozTocId427933">「そのようなファイルやディレクトリはありません」と出る。</a></li></ol></li>
+     <li><a href="#mozTocId427933">「そのようなファイルやディレクトリはありません」と出る。</a></li>
+    </ol></li>
    <li><a href="#mozTocId666176">Point-and-Klik (KNOPPIX 3.7)</a></li>
    <li><a href="#mozTocId182021">Up2Date Network (アップ2デート)</a></li>
    <li><a href="#mozTocId250617">YUM コマンドの便利な使い方 (--enablerepo= オプション)</a></li>
-   <li><a href="#mozTocId23881">アップロード / ダウンロードソフト（転送ソフト）</a><ol>
-    <li><a href="#mozTocId623140">gFTP を再インストールするには？</a></li></ol></li>
-   <li><a href="#mozTocId353020">ダウンロードソフト（転送ソフト）/ 自動巡回ツール</a><ol>
-    <li><a href="#mozTocId505334">Aria - yet another download tool</a></li>
-    <li><a href="#mozTocId582547">Wget</a></li>
-    <li><a href="#mozTocId242710">Gwget</a></li></ol></li>
-   <li><a href="#mozTocId989054">Grsync（rsync 用 GTK+ フロントエンド）</a><ol>
-    <li><a href="#mozTocId747746">インストール方法</a></li>
-    <li><a href="#mozTocId176067">起動方法</a></li>
-    <li><a href="#mozTocId164038"> rsync について</a></li>
-    <li><a href="#1">シミュレートが行えます</a></li>
-    <li><a href="#mozTocId827437"> Grsync の実際の処理と結果について</a></li></ol></li>
-   <li><a href="#timeshift">Timeshift - システム回復ツール</a></li>
+   <li><a href="#mozTocId23881">アップロード / ダウンロードソフト（転送ソフト）</a>
+    <ol>
+     <li><a href="#mozTocId623140">gFTP を再インストールするには？</a></li>
+    </ol></li>
+   <li><a href="#mozTocId353020">ダウンロードソフト（転送ソフト）/ 自動巡回ツール</a>
+    <ol>
+     <li><a href="#mozTocId505334">Aria - yet another download tool</a></li>
+     <li><a href="#mozTocId582547">Wget</a></li>
+     <li><a href="#mozTocId242710">Gwget</a></li>
+    </ol></li>
+   <li><a href="#mozTocId989054">Grsync（rsync 用 GTK+ フロントエンド）</a>
+    <ol>
+     <li><a href="#mozTocId747746">インストール方法</a></li>
+     <li><a href="#mozTocId176067">起動方法</a></li>
+     <li><a href="#mozTocId164038"> rsync について</a></li>
+     <li><a href="#1">シミュレートが行えます</a></li>
+     <li><a href="#mozTocId827437"> Grsync の実際の処理と結果について</a></li>
+    </ol></li>
+   <li><a href="#timeshift">Timeshift - システム回復ツール</a>
+    <ol>
+     <li><a href="#timeshift">Timeshift の機能のあらまし</a></li>
+     <li><a href="#timeshift">アンインストール時の注意点</a></li>
+    </ol></li>
    <li><a href="#mozTocId832015">(GRUB / Lilo) 起動する順番を変更したいとき</a></li></ol>
 
 <h3 id="content_1_2"><a name="mozTocId820287" class="mozTocH3"></a>ターミナル・エミュレータ (terminal emulator)</h3>
@@ -39,12 +50,12 @@
   <p>GNOME 端末のヘルプに収録のマニュアル V2.3 日本語版より引用</p>
   <p>[概要]<br>
   GNOME 端末 は、次のアクションに使用できる端末エミュレーションアプリケーションです。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>GNOME 環境で UNIX シェルにアクセスする<br>
           シェルは、コマンドラインプロンプトに入力されたコマンドを解釈して実行するプログラムです。 GNOME 端末
           を起動すると、システムアカウントで指定されたデフォルトのシェルが起動します。いつでも別のシェルに切り替えられます。</li>
       </ul>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>VT102、VT220、および xterm 端末用の任意のアプリケーションを実行する<br>
           GNOME 端末 は、X Consortium が開発した xterm プログラムをエミュレートします。xterm
           プログラムは DEC VT102 端末をエミュレートし、さらに DEC VT220
@@ -62,13 +73,13 @@
           To run any application that is designed to run on VT102,
           VT220, and xterm terminals.</p>
       </blockquote>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
+
 <h4 id="content_1_4"><a name="mozTocId879363" class="mozTocH4"></a>GNOME 端末の便利な使用法　-履歴機能</h4>
       <p>GNOME
         端末で最近実行したコマンドは、履歴として記憶されています。このため、長い文字列のコマンドを再実行したり、その一部を変更／訂正した
         いときに活用すると便利です。</p>
       <p>履歴表示は、矢印キー　↑　を押下します。複数回押下すれば、より古い履歴が表示できます。元に戻るには　↓　キーを押します。</p>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
+
 <h4 id="content_1_5"><a name="mozTocId595198" class="mozTocH4"></a>Xterm の概要について</h4>
       <p>Description: X terminal emulator</p>
       <blockquote>
@@ -98,7 +109,7 @@
           Those interested in using koi8rxterm will likely want to
           install the xfonts-cyrillic package as well.</p>
       </blockquote>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
+
 <h4 id="content_1_6"><a name="mozTocId427933" class="mozTocH4"></a>「そのようなファイルやディレクトリはありません」と出る。</h4>
       <p>フォルダ名が不適切だと、コマンドラインから操作した時そのメッセージが表示されます。特に、文字列の途中に空白（スペース）を設
         けてはいけません （下例）。</p>
@@ -106,16 +117,18 @@
       <p>この場合、途中の空白を削除します。</p>
       <pre> hoge123</pre>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
+
 <h3 id="content_1_7"><a name="mozTocId666176" class="mozTocH3"></a>Point-and-Klik (KNOPPIX 3.7)</h3>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>Point-and-Klik については、<a href="pointklik.html" title="SoftWares/PointKlik (2359d)">SoftWares/PointKlik</a>
-          を見てください。</li>
+      <ul>
+        <li>Point-and-Klik については、<a href="pointklik.html">SoftWares/PointKlik</a> を見てください。</li>
       </ul>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
+
 <h3 id="content_1_8"><a name="mozTocId182021" class="mozTocH3"></a>Up2Date Network (アップ2デート)</h3>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>アップ2デート (Up2Date Network) の作業手順については、<a href="http://f40.aaa.livedoor.jp/%7Egreen/?Up2DateNetwork" title="Up2DateNetwork (2071d)">Up2DateNetwork</a> を見てください。</li></ul>
+      <ul>
+        <li>アップ2デート (Up2Date Network) の作業手順については、<a href="up2date_network.html">Up2DateNetwork</a> を見てください。</li></ul>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
+
 <h3 id="content_1_9"><a name="mozTocId250617" class="mozTocH3"></a>YUM コマンドの便利な使い方 (--enablerepo= オプション)</h3>
       <p>このコマンド・オプションは、設定ファイルで通常、無効(コメントアウト)にしてあるリポジトリをその時に限り利用可能とするオプ
         ションです。<br>
@@ -137,16 +150,16 @@
           gpgkey=<a href="http://MIRROR-Server/fedora/linux/extras/RPM-GPG-KEY-Fedora-Extras">http://MIRROR-Server/fedora/linux/extras/RPM-GPG-KEY-Fedora-Extras</a></p>
       </blockquote>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
+
 <h3 id="content_1_30"><a name="mozTocId23881" class="mozTocH3"></a>アップロード / ダウンロードソフト（転送ソフト）</h3>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
 <h4 id="content_1_31"><a name="mozTocId623140" class="mozTocH4"></a>gFTP を再インストールするには？</h4>
       <p>何らかの事情で再インストールする場合には、パッケージ管理ツールで gftp
         を削除するだけでは不十分です。ユーザーディレクトリに存在する .gftp
         フォルダを手動で削除する必要があります。このフォルダには、以下のファイルが含まれます。</p>
       <pre> bookmarks<br> gftp.log<br> gftprc</pre>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
+
 <h3 id="content_1_32"><a name="mozTocId353020" class="mozTocH3"></a>ダウンロードソフト（転送ソフト）/ 自動巡回ツール</h3>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
 <h4 id="content_1_33"><a name="mozTocId505334" class="mozTocH4"></a>Aria - yet another download tool</h4>
       <p>グラフィカルなダウンロードツール。HTTPと ftpをサポート。<br>
         <a href="http://aria.rednoah.com/linux_j.shtml">http://aria.rednoah.com/linux_j.shtml</a><br>
@@ -169,10 +182,10 @@
           aria (1.0.0-9.0.1) を設定しています ...</p>
       </blockquote>
       <pre> $ aria</pre>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
+
 <h4 id="content_1_34"><a name="mozTocId582547" class="mozTocH4"></a>Wget</h4>
       <p>Webサーバ・FTPサーバから指定ファイルをダウンロードするテキストベースツール</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>Wgetを使おう的ページ<br>
           <a href="http://www.geocities.jp/horiuchimasaru/wget.html">http://www.geocities.jp/horiuchimasaru/wget.html</a><br>
           GNU Wgetの使い方が日本語でやさしく書かかれています。<br>
@@ -184,11 +197,11 @@
           <pre> $ wget -r -l 1 -np -nc [URL]</pre>
           再帰ダウンロードの詳細と注意事項については、<a href="http://f40.aaa.livedoor.jp/%7Egreen/?Wget%2FRecursion" title="Wget/Recursion (1952d)">こちら</a>を参照してください。</li>
       </ul>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
+
 <h4 id="content_1_35"><a name="mozTocId242710" class="mozTocH4"></a>Gwget</h4>
       <p>上記項目で紹介した、ファイル・ダウンロード・ソフト wget の GUIフロントエンド。<br>
         Gwget（Download Manager for GNOME）</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>Fedora Core<br>
           # yum install gwget</li>
         <li>Debian Linux<br>
@@ -197,6 +210,7 @@
       <p>使い方は、<a href="http://www.atmarkit.co.jp/flinux/rensai/linuxtips/a019gwget.html">wget
           コマンドをGUIで使うには</a>が参考になります。</p>
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
+
 <h3><a name="mozTocId989054" class="mozTocH3"></a>Grsync（rsync 用 GTK+ フロントエンド）</h3>
 <h4><a name="mozTocId747746" class="mozTocH4"></a>インストール方法</h4>
       <p>Debian 10 の例：パッケージ: grsync (1.2.6-2)をインストールします。<img src="Screenshot-Grsync-default.png" alt="Screenshot-Grsync-default.png" width="480" hspace="10" height="429" align="right"><br>
@@ -242,8 +256,7 @@ Grsync にはシミュレーション・モードがあります。File &gt; Sim
 <br>
 $ rsync -r -n -t -v --progress -s<br>
 <br>
-      <h4><a name="mozTocId827437" class="mozTocH4"></a> Grsync
-        の実際の処理と結果について</h4>
+ <h4><a name="mozTocId827437" class="mozTocH4"></a> Grsync の実際の処理と結果について</h4>
       <img alt="Screenshot-Grsync-default-stopped.png" src="Screenshot-Grsync-default-stopped.png" width="400" vspace="10" hspace="10" height="230" align="right">grsync
       のデフォルトの作動は上記の
       rsyncコマンドを実行することとほぼ同じような結果になるそうですが、実際に確認したところ、default
@@ -272,8 +285,8 @@ $ rsync -r -n -t -v --progress -s<br>
 <h3 id="timeshift">Timeshift - システム回復ツール</h3>
 Timeshiftは、システムの復元を行うユーティリティです。これは一定時間ごとに、システムのスナップショットを取得します。これらのスナップショットは、システム変更を後日元に戻す目的で、システムに保存されます。rsync を使って差分スナップショットを作成したり、BTRFS ツールを使って BTRFS スナップショットを作成できます。
 <blockquote>
-Timeshift is a system restore utility which takes snapshots of the system at regular intervals. These snapshots can be restored at a later date to undo system changes. Creates incremental snapshots using rsync or BTRFS snapshots using BTRFS tools.
-https://packages.debian.org/ja/bullseye/timeshift
+Timeshift is a system restore utility which takes snapshots of the system at regular intervals. These snapshots can be restored at a later date to undo system changes. Creates incremental snapshots using rsync or BTRFS snapshots using BTRFS tools.<br>
+<a href="https://packages.debian.org/ja/bullseye/timeshift">https://packages.debian.org/ja/bullseye/timeshift</a>
 </blockquote>
 もし、メインシステムが起動できない場合、USBメモリからライブシステムを使使って起動し、そこにtimeshiftをインストールすることで、システムを復元するという使い方も可能です。
 <p>
@@ -282,14 +295,21 @@ Debian Wiki による簡単な解説や操作方法の記事<br>
 </p>
 各 Linux ディストリビューション向けに配布されています。Debian でインストールする場合は次のコマンドを実行します。<br>
 <p>
- # apt-get install timeshift
+ # apt install timeshift
 </p>
-Timeshift 開発元公式サイト<br>
-<a href="https://teejeetech.in/timeshift/">https://teejeetech.in/timeshift/</a>
+アンインストール時の注意事項
+<p>
+アンインストールする前に、すべてのスナップショットを削除することを忘れてはいけません。スナップショットを削除しない限り、システム上のスペースを占有し続けます。すべてのスナップショットを削除するには、アプリケーションを実行し、リストからすべてのスナップショットを選択して、ツールバーの[削除] ボタンをクリックします。この操作によって、ルートディレクトリの /timeshift フォルダーが削除されます。<br>
+そのあとで次のコマンドを実行します。</p>
+ # apt-get remove timeshift
+<blockquote>
+Remember to delete all snapshots before uninstalling. Otherwise, the snapshots continue to occupy space on your system. To delete all snapshots, run the application, select all snapshots from the list (CTRL+A) and click the Delete button on the toolbar. This will delete all snapshots and remove the /timeshift folder in the root directory.<br>
+Timeshift 開発元公式サイトより - <a href="https://teejeetech.in/timeshift/">https://teejeetech.in/timeshift/</a>
+</blockquote>
 <p>なお、アクセサリーの項目にある「<a href="accessories.html#mx-snapshot">MX スナップショット</a>」も同様の目的で利用できます。</p>
 
 <h3 id="content_1_40"><a name="mozTocId832015" class="mozTocH3"></a>(GRUB / Lilo) 起動する順番を変更したいとき</h3>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>複数の OS を導入した場合の運用のコツやトラブル対処<br>
           ブート・ローダーに Grub を利用している場合には、/boot/grub/grub.conf
           の設定ファイルを書き換えます。設定ファイルを書き換えることで、電源投入時の自動起動の仕方を任意に設定できます。<br>
@@ -326,7 +346,7 @@ Timeshift 開発元公式サイト<br>
         </li>
       </ul>
       <p>具体的には、Gedit などのテキスト・エディターを使って編集します。</p>
-      <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
+      <ul>
         <li>default=0 で、0 の数字を 1 に変更すれば、自動起動する OS を変更できます。</li>
         <li>timeout=10 で、10 の数字を変更すれば、OS 選択画面の表示時間を自由に変更できます。(※数字の単位は「秒」となっています。)</li>
         <li>title Windows, title Fedora Core とあるタイトル行を好きな文字列に書き換えることが可能です。
