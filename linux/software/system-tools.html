@@ -5,22 +5,30 @@
 </head>
 <body>    
  <div id="navigator">
-<div><div style="text-align: right; float:right;">Last updated: 2022-05-14 14:29 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022-05-14 19:32 JST</div>
 <a href="../../index.html">HOME</a> / <a href="index.html">Software</a></div>
 <hr width="100%">
 
 <h2 id="content_1_0"><a name="mozTocId473610" class="mozTocH2"></a>システムツール</h2>
  <ol id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
-   <li><a href="#mozTocId820287">ターミナル・エミュレータ (terminal emulator)</a>
-    <ol><li><a href="#mozTocId481315">GNOME 端末 (Gnome-terminal) の概要について</a></li>
+   <li><a href="#apt">APT</a></li>
+   <li><a href="#synaptic">Synaptic</a></li>
+   <li><a href="#yum">YUM</a>
+     <ul>
+      <li><a href="#mozTocId250616">YUM について</a></li>
+      <li><a href="#mozTocId250617">YUM コマンドの便利な使い方 (--enablerepo= オプション)</a></li>
+     </ul>
+   <li><a href="#dnf">DNF</a>
+   <li><a href="#mozTocId666176">Point-and-Klik (KNOPPIX 3.7)</a></li>
+   <li><a href="#mozTocId182021">Up2Date Network (アップ2デート)</a></li>
+   <li><a href="#mozTocId820287">端末 (terminal emulator)</a>
+    <ol><li><a href="#mozTocId481314">各種端末について</a></li>
+     <li><a href="#mozTocId481315">GNOME 端末 (Gnome-terminal) の概要</a></li>
      <li><a href="#mozTocId879363">GNOME 端末の便利な使用法　-履歴機能</a></li>
      <li><a href="#mozTocId595198">Xterm の概要について</a></li>
      <li><a href="#mozTocId427933">「そのようなファイルやディレクトリはありません」と出る。</a></li>
     </ol></li>
-   <li><a href="#mozTocId666176">Point-and-Klik (KNOPPIX 3.7)</a></li>
-   <li><a href="#mozTocId182021">Up2Date Network (アップ2デート)</a></li>
-   <li><a href="#mozTocId250617">YUM コマンドの便利な使い方 (--enablerepo= オプション)</a></li>
-   <li><a href="#mozTocId23881">アップロード / ダウンロードソフト（転送ソフト）</a>
+   <li><a href="#mozTocId23881">gFTP - アップローダ/ダウンローダ（転送ソフト）</a>
     <ol>
      <li><a href="#mozTocId623140">gFTP を再インストールするには？</a></li>
     </ol></li>
@@ -45,8 +53,75 @@
     </ol></li>
    <li><a href="#mozTocId832015">(GRUB / Lilo) 起動する順番を変更したいとき</a></li></ol>
 
-<h3 id="content_1_2"><a name="mozTocId820287" class="mozTocH3"></a>ターミナル・エミュレータ (terminal emulator)</h3>
- <h4 id="content_1_3"><a name="mozTocId481315" class="mozTocH4"></a>GNOME 端末 (Gnome-terminal) の概要について</h4>
+<h3 id="apt">ATP</h3>
+Debian とその派生ディストリビューションで採用する、標準的なシステム管理ツールです。<br>
+詳しくは <a href="../distributions/debian/index.html">Debian Linux</a> のページを見てください。
+
+<h3 id="synaptic">Synaptic</h3>
+APT のグラフィカルなフロントエンドです。これを使うとマウスで直感的な操作が行えます。<br>
+これは Debian Linux に付属しているグラフィカルなシステム管理ツールです。バックエンドでは APT を機能するので 
+APT コマンドを実行するのと同じ働きを行います。
+
+<h3 id="yum">YUM</h3>
+<h4 id="content_1_9"><a name="mozTocId250616"></a>YUM について</h4>
+Fedora とその派生ディストリビューションで採用する、標準的なシステム管理ツールです。<br>
+詳しくは <a href="../distributions/fedora/index.html">Fedora Core</a> のページを見てください。
+
+<h4 id="content_1_9"><a name="mozTocId250617"></a>YUM コマンドの便利な使い方 (--enablerepo= オプション)</h4>
+      <p>このコマンド・オプションは、設定ファイルで通常、無効(コメントアウト)にしてあるリポジトリをその時に限り利用可能とするオプ
+        ションです。<br>
+        CentOS の場合では、centosplus がデフォルトで無効であるため、次のように利用します。ただし、yum 2.2.2
+        では --enablerepo= オプションは使えません。<a id="notetext_1" href="#notefoot_1" class="note_super">*1</a> yum 2.4.2
+        以上で利用可能です。</p>
+      <pre> # yum --enablerepo=centosplus install kernel</pre>
+      <p>このオプションで、V4Lサポートの kernel.i686 0:2.6.9-22.0.1.106.unsupported
+        がインストールできます。</p>
+      <p>Fedora Extras
+        を利用したいときにも、通常、無効として設定(enabled=0)しておく方が実際には便利です。追加パッケージをインストールしたい
+        時だけ、 --enablerepo= オプションで Fedora Extras を有効にすることができます（下例参考）。</p>
+      <blockquote>
+        <p class="quotation">[fedora-extras]<br>
+          name=Fedora Extras - $releasever - $basearch<br>
+          baseurl=<a href="http://MIRROR-Server/fedora/linux/extras/3/$basearch/">http://MIRROR-Server/fedora/linux/extras/3/$basearch/</a><br>
+          enabled=0<br>
+          gpgcheck=1<br>
+          gpgkey=<a href="http://MIRROR-Server/fedora/linux/extras/RPM-GPG-KEY-Fedora-Extras">http://MIRROR-Server/fedora/linux/extras/RPM-GPG-KEY-Fedora-Extras</a></p>
+      </blockquote>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+
+<h3 id="dnf">DNF (DaNdiFied yum)</h3>
+保守に手間がかかることや動作が遅いことなどから DNF へ置き換わりました。<br>
+Fedora Linux ではバージョン22以降、標準のパッケージ管理システムとして採用されています。<br>
+詳しくは <a href="../distributions/fedora/system.html#content_1_11">YUM</a> のページを見てください。
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+
+<h3 id="content_1_7"><a name="mozTocId666176" class="mozTocH3"></a>Point-and-Klik (KNOPPIX 3.7)</h3>
+      <ul>
+        <li>Point-and-Klik については、<a href="pointklik.html">SoftWares/PointKlik</a> を見てください。</li>
+      </ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+
+<h3 id="content_1_8"><a name="mozTocId182021" class="mozTocH3"></a>Up2Date Network (アップ2デート)</h3>
+      <ul>
+        <li>アップ2デート (Up2Date Network) の作業手順については、<a href="up2date_network.html">Up2DateNetwork</a> を見てください。</li></ul>
+<div class="jumpmenu"><a href="#navigator">↑</a></div>
+
+<h3 id="content_1_2"><a name="mozTocId820287" class="mozTocH3"></a>端末 (terminal emulator)</h3>
+ <h4 id="mozTocId481314">各種端末について</h4>
+システムのあらゆる操作は端末を使って行うことができます。端末はコマンドライン（時には GUI）から実行するためのシステムツールで、terminal emulator の訳語です。
+単にターミナルあるいはコンソール (console) とも呼ばれています。コンピュータの端末・制御盤を指す用語です。各 Linux ディストリビューション毎に独自に
+カスタマイズされた端末が内蔵されていますが、基本的な操作は変わりません。
+バイナリパッケージとして公式に配布されていれば、そのディストリ標準以外の端末であっても使用可能です。<br>
+各デスクトップ環境で標準の端末は、以下のようになっています。
+<p>
+&ensp;&ensp;GNOME 環境: GNOME 端末 (Gnome-terminal)<br>
+&ensp;&ensp;KDE 環境: Konsol<br>
+&ensp;&ensp;MATE 環境: Mate-terminal<br>
+&ensp;&ensp;Xfce 環境: Xfce4-terminal<br>
+&ensp;&ensp;X 標準の端末: xterm
+<p>参考記事 Linuxのターミナル7選 - 最も人気があるのは? - <a href="https://news.mynavi.jp/techplus/article/20171023-a025/">https://news.mynavi.jp/techplus/article/20171023-a025/</a>
+
+ <h4 id="content_1_3"><a name="mozTocId481315" class="mozTocH4"></a>GNOME 端末 (Gnome-terminal) の概要</h4>
   <p>GNOME 端末のヘルプに収録のマニュアル V2.3 日本語版より引用</p>
   <p>[概要]<br>
   GNOME 端末 は、次のアクションに使用できる端末エミュレーションアプリケーションです。</p>
@@ -116,42 +191,8 @@
       <pre> $ cd hoge 123<br> bash: cd: hoge: そのようなファイルやディレクトリはありません</pre>
       <p>この場合、途中の空白を削除します。</p>
       <pre> hoge123</pre>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
 
-<h3 id="content_1_7"><a name="mozTocId666176" class="mozTocH3"></a>Point-and-Klik (KNOPPIX 3.7)</h3>
-      <ul>
-        <li>Point-and-Klik については、<a href="pointklik.html">SoftWares/PointKlik</a> を見てください。</li>
-      </ul>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-
-<h3 id="content_1_8"><a name="mozTocId182021" class="mozTocH3"></a>Up2Date Network (アップ2デート)</h3>
-      <ul>
-        <li>アップ2デート (Up2Date Network) の作業手順については、<a href="up2date_network.html">Up2DateNetwork</a> を見てください。</li></ul>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-
-<h3 id="content_1_9"><a name="mozTocId250617" class="mozTocH3"></a>YUM コマンドの便利な使い方 (--enablerepo= オプション)</h3>
-      <p>このコマンド・オプションは、設定ファイルで通常、無効(コメントアウト)にしてあるリポジトリをその時に限り利用可能とするオプ
-        ションです。<br>
-        CentOS の場合では、centosplus がデフォルトで無効であるため、次のように利用します。ただし、yum 2.2.2
-        では --enablerepo= オプションは使えません。<a id="notetext_1" href="#notefoot_1" class="note_super">*1</a> yum 2.4.2
-        以上で利用可能です。</p>
-      <pre> # yum --enablerepo=centosplus install kernel</pre>
-      <p>このオプションで、V4Lサポートの kernel.i686 0:2.6.9-22.0.1.106.unsupported
-        がインストールできます。</p>
-      <p>Fedora Extras
-        を利用したいときにも、通常、無効として設定(enabled=0)しておく方が実際には便利です。追加パッケージをインストールしたい
-        時だけ、 --enablerepo= オプションで Fedora Extras を有効にすることができます（下例参考）。</p>
-      <blockquote>
-        <p class="quotation">[fedora-extras]<br>
-          name=Fedora Extras - $releasever - $basearch<br>
-          baseurl=<a href="http://MIRROR-Server/fedora/linux/extras/3/$basearch/">http://MIRROR-Server/fedora/linux/extras/3/$basearch/</a><br>
-          enabled=0<br>
-          gpgcheck=1<br>
-          gpgkey=<a href="http://MIRROR-Server/fedora/linux/extras/RPM-GPG-KEY-Fedora-Extras">http://MIRROR-Server/fedora/linux/extras/RPM-GPG-KEY-Fedora-Extras</a></p>
-      </blockquote>
-<div class="jumpmenu"><a href="#navigator">↑</a></div>
-
-<h3 id="content_1_30"><a name="mozTocId23881" class="mozTocH3"></a>アップロード / ダウンロードソフト（転送ソフト）</h3>
+<h3 id="content_1_30"><a name="mozTocId23881" class="mozTocH3"></a>gFTP - アップローダ/ダウンローダ（転送ソフト）</h3>
 <h4 id="content_1_31"><a name="mozTocId623140" class="mozTocH4"></a>gFTP を再インストールするには？</h4>
       <p>何らかの事情で再インストールする場合には、パッケージ管理ツールで gftp
         を削除するだけでは不十分です。ユーザーディレクトリに存在する .gftp
