@@ -5,7 +5,7 @@
 </head>
 <body>    
  <div id="navigator">
-<div><div style="text-align: right; float:right;">Last updated: 2022-05-15 00:28 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022-05-15 09:42 JST</div>
 <a href="../../index.html">HOME</a> / <a href="index.html">Software</a></div>
 <hr width="100%">
 
@@ -58,13 +58,20 @@ Debian とその派生ディストリビューションで採用する、標準�
 詳しくは <a href="../distributions/debian/index.html">Debian Linux</a> のページを見てください。
 
 <h3 id="synaptic">Synaptic</h3>
-APT のグラフィカルなフロントエンドです。これを使うとマウスで直感的な操作が行えます。<br>
-これは Debian Linux に付属しているグラフィカルなシステム管理ツールです。バックエンドでは APT を機能するので 
-APT コマンドを実行するのと同じ働きを行います。
+<p>APT のグラフィカルなフロントエンドです。これを使うとマウスで直感的な操作が行えます。<br>
+これは Debian Linux に付属しているグラフィカルなシステム管理ツールです。バックエンドでは APT が実際の処理を行うことになるので、
+APT コマンドを実行したのと同じ効果があります。多くのオプションを備えています。
+</P>
+<p>もともと Red Hat のために開発されたパッケージマネージャではありませんでしたが、その後多数のディストリビューションへ移植されました。
+ただし Fedora では 2022現在、DNF に切り替えたので APT の利用は推奨されていません。
+</p>
+参考情報<br>
+最初期の Synaptic サイト: <a href="https://www.nongnu.org/synaptic/action.html">https://www.nongnu.org/synaptic/index.html</a>
 
 <h3 id="yum">YUM (Yellowdog Updater Modified)</h3>
 <h4 id="content_1_9"><a name="mozTocId250616"></a>YUM について</h4>
-Fedora とその派生ディストリビューションで採用する、標準的なシステム管理ツールです。<br>
+Fedora とその派生ディストリビューションで採用する、標準的なシステム管理ツールです。
+グラフィカルなフロントエンドとして Yum-Ex (Yum-Extender) が開発されています。これは DNF のフロントエンドも兼ねています。<br>
 詳しくは <a href="../distributions/fedora/index.html">Fedora Core</a> のページを見てください。
 
 <h4 id="content_1_9"><a name="mozTocId250617"></a>YUM コマンドの便利な使い方 (--enablerepo= オプション)</h4>
@@ -92,7 +99,7 @@ Fedora とその派生ディストリビューションで採用する、標準�
 <h3 id="dnf">DNF (Dandified yum)</h3>
 保守に手間がかかることや動作が遅いことなどから DNF へ置き換わりました。<br>
 Fedora Linux ではバージョン22以降、標準のパッケージ管理システムとして採用されています。<br>
-詳しくは <a href="../distributions/fedora/system.html#content_1_11">YUM</a> のページを見てください。
+詳しくは <a href="../distributions/fedora/fedora-new.html">Fedora Linux</a> のページを見てください。
 <div class="jumpmenu"><a href="#navigator">↑</a></div>
 
 <h3 id="content_1_8"><a name="mozTocId182021" class="mozTocH3"></a>Up2Date Network (アップ2デート)</h3>
@@ -239,7 +246,7 @@ Point-and-Klik については、<a href="pointklik.html">SoftWares/PointKlik</a
         <li>再帰ダウンロードについて<br>
           実行コマンドの例：
           <pre> $ wget -r -l 1 -np -nc [URL]</pre>
-          再帰ダウンロードの詳細と注意事項については、<a href="http://f40.aaa.livedoor.jp/%7Egreen/?Wget%2FRecursion" title="Wget/Recursion (1952d)">こちら</a>を参照してください。</li>
+          再帰ダウンロードの詳細と注意事項については、<a href="wget_recursion.html">こちら</a>を参照してください。</li>
       </ul>
 
 <h4 id="content_1_35"><a name="mozTocId242710" class="mozTocH4"></a>Gwget</h4>
@@ -260,14 +267,13 @@ Point-and-Klik については、<a href="pointklik.html">SoftWares/PointKlik</a
       <p>Debian 10 の例：パッケージ: grsync (1.2.6-2)をインストールします。<img src="Screenshot-Grsync-default.png" alt="Screenshot-Grsync-default.png" width="480" hspace="10" height="429" align="right"><br>
         # apt install grsync<br>
         パッケージリストを読み込んでいます... 完了<br>
-        依存関係ツリーを作成していま
-        す&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        依存関係ツリーを作成しています&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
         <br>
         状態情報を読み取っています... 完了<br>
         以下の追加パッケージがインストールされます:<br>
-        &nbsp; ssh-askpass<br>
+        &ensp; ssh-askpass<br>
         以下のパッケージが新たにインストールされます:<br>
-        &nbsp; grsync ssh-askpass<br>
+        &ensp; grsync ssh-askpass<br>
         アップグレード: 0 個、新規インストール: 2 個、削除: 0 個、保留: 0 個。<br>
         175 kB のアーカイブを取得する必要があります。<br>
         この操作後に追加で 720 kB のディスク容量が消費されます。<br>
