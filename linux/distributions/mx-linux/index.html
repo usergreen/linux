@@ -4,7 +4,7 @@
 <title>MX Linux FAQs and Tips - Linux on the Desktop</title>
 </head>
 <body>
-<div><div style="text-align: right; float:right;">Last updated: 2022-05-28 19:18 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022-05-28 23:11 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Linux distributions</a> / MX Linux</div>
 <hr width="100%">
 <h2>MX Linux</h2>
@@ -47,7 +47,7 @@ SourceForge サイト: <a href="https://sourceforge.net/projects/mx-linux/files/
 Yamagata: APT sources only -- https://ftp.yz.yamagata-u.ac.jp/pub/Linux/MX-Linux-Packages/
 
 <h3><a name="3"></a>公式のマニュアル類</h3>
-公式な各種文書が公開・配布されています。
+MX Linux 公式の各種文書が公開・配布されています。
 <ul>
   <li>MX FAQs <a href="https://mxlinux.org/wiki/help-files/mx-faqs/">https://mxlinux.org/wiki/help-files/mx-faqs/</a></li>
   <li>ユーザーマニュアル <a href="https://mxlinux.org/manuals/">https://mxlinux.org/manuals/</a></li>
@@ -55,16 +55,15 @@ Yamagata: APT sources only -- https://ftp.yz.yamagata-u.ac.jp/pub/Linux/MX-Linux
 </ul>
 
 <h3><a name="4"></a>MX の日本語入力環境について</h3>
-MX パッケージインストーラ (MXPI) のメニューから Japanese（日本語）を選択するだけで日本語入力がインストールされるよう工夫されています。なおその他は、基本的Debianがベースとなっているため、Debian の設定方法と共通です。詳しくは関連ページを見てください。
+MX パッケージインストーラ (MXPI) のメニューから Japanese（日本語）を選択するだけで日本語入力がインストールされるよう工夫されています。なお、その他は基本的に Debianがベースとなっているため、Debian の設定方法と共通です。詳しくは関連ページを見てください。
 
 <h3><a name="5"></a>日本語入力へ切り替えるには？</h4>
-英語入力から日本語入力への切り替えは、半角/全角キースペースキーです。一度日本語入力を有効にすると、その後の切り替えは半角/全角キー、
-または Ctrl + スペースが使えます。
+標準的な日本語キーボードにおいては、英語入力から日本語入力への切り替えは、半角/全角キースペースキーです。場合によっては、切り替えが半角/全角キー、または Ctrl + スペースで行えます。
 
-<h3><a name="6">Live/インストール DVD/USB のアカウントとパスワード？</h3>
-Demo user: demo<br>
-Password: demo<br>
-Root password: root
+<h3><a name="6">Live/インストール用 DVD/USB のアカウントとパスワードは？</h3>
+Demo ユーザー: demo<br>
+パスワード: demo<br>
+Root パスワード: root
 
 <h3><a name="7"></a>インストールに必要なハードウェア環境は？</h3>
 標準的なシステム要件は次のとおりです。詳しくは MX マニュアルを読んでください。（以下抜粋）<br>
@@ -91,33 +90,33 @@ BIOS capable of booting from USB)
 出典: <a href="https://raw.githubusercontent.com/MX-Linux/mx-docs/master/mxum.pdf">https://raw.githubusercontent.com/MX-Linux/mx-docs/master/mxum.pdf</a>
 
 <h3><a name="8"></a>デスクトップ環境の選択について</h3>
-公式には、次のデスクトップ環境を用意しています。
+公式では、次のデスクトップ環境をリリースしています。
 <ul>
   <li>Fluxbox</li>
   <li>KDE Plasma Workkspaces</li>
-  <li>Xfce Desktop</li>
+  <li>Xfce デスクトップ</li>
 </ul>
 
 <h3><a name="9"></a>バージョンアップする方法は？</h3>
-<p>Debian の安定版に追従して通常のバージョンアップを行っています。通常のマイナーアップデートに対応しています。サポート期間は Debian の期間と同じなので、リリース後は最大５年間サポートが継続します。
+<p>Debian の安定版に追従して普段のバージョンアップを行います。通常のマイナーアップデートに対応しています。サポート期間は Debian の期間と同じなので、リリース後、最大５年間はサポートが継続します。
 </p>
-ただし、次期メジャーバージョンへのアップグレードに対しては、不具合が生じても公式にはサポートしていません。つまり、5年毎に新規インストールすることになります。これは MX Linux 特有のシステム設定が影響を与えるためです。
+ただし、次期メジャーバージョンへのアップグレードに対しては、不具合が生じても公式にはサポートしません。つまり、パソコンの耐用年数を考慮すると十分とはいうものの、同じパソコンを使い続けた場合、5年毎に新規インストールすることになります。これは MX Linux 特有のシステム設定が影響を与えるためです。
 
 <h3><a name="10"></a>MX ツール (MX Tools) について</h3>
-<p>MX Linux の利用するとき、最も特徴的なものが MX ツール (MX Tools) と呼ばれている一連のアプリ群です。そのうちのいくつかを紹介します。</p>
+<p>MX Linux の利用するとき、最も特徴的なものが MX Linux のみで提供される MX ツール (MX Tools) と呼ばれている一連のアプリ群です。そのうちのいくつかを紹介します。</p>
 Format USB（USB フォーマッタ）-- これはUSBメモリの初期化ツールです。<a href="../../software/accessories.html">解説ページ。</a><br>
 MX スナップショット (MX Snapshot) -- iso イメージの作成、システムバックアップ作成。<a href="../../software/accessories.html">解説ページ。</a><br>
-MX Live USB Maker -- iso イメージから LveUSB を作成するツール（MX スナップショットで作ったiso イメージから作成できる便利なグラフィカルなツール）。
+MX Live USB Maker -- iso イメージから LveUSB を作成するツール（MX スナップショットで作った iso イメージから作成できる便利なグラフィカルなツール）。
 
 <h3><a name="11">MX Respin（非公式スナップショット）について</h3>
-MX コミュニティによって作成された非公式な各種スナップショットが、各種配布されています。MX Linux による公式なサポートはありません。<br>
+MX コミュニティによって作成された非公式なスナップショットが、各種配布されています。MX Linux による公式なサポートはありません。<br>
 <a href="https://sourceforge.net/projects/mx-linux/files/Community_Respins/">https://sourceforge.net/projects/mx-linux/files/Community_Respins/</a>
 <p>
-当方でも、MX Minimal をベースにした MX Respin MATE という、MATE デスクトップ環境のスナップショットを作成してみました。次のアドレスからダウンロード可能です。<br>
-<a href="https://linux.sakura.ne.jp/mx-respin-iso/">https://linux.sakura.ne.jp/mx-respin-iso/<a>
+こちらでも、MX Minimal をベースにした MX Respin MATE という、MATE デスクトップ環境のスナップショットを作成してみました。次のアドレスからダウンロード可能です。<br>
+<a href="https://linux.sakura.ne.jp/mx-respin-iso/">https://linux.sakura.ne.jp/mx-respin-iso/</a>
 
 <h3><a name="12"></a>ニュース記事 (外部リンク)</h3>
-レビュー記事 <br>
+レビュー記事 <a href="https://fosspost.org/mx-linux-21-review-best-distribution-2021/">https://fosspost.org/mx-linux-21-review-best-distribution-2021/</a> (FossPost.org)<br>
 ウィキペディア記事　<a href="https://ja.wikipedia.org/wiki/MX_Linux">https://ja.wikipedia.org/wiki/MX_Linux</a><br>
 DistroWatch <a href="https://distrowatch.com/table.php?distribution=mx">https://distrowatch.com/table.php?distribution=mx</a><br>
 5ch MX Linux スレッド <a href="https://mao.5ch.net/test/read.cgi/linux/1587725602/">https://mao.5ch.net/test/read.cgi/linux/1587725602/</a>
