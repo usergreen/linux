@@ -5,7 +5,7 @@
  </head>
  <body>
     <div id="navigator">
-<div><div style="text-align: right; float:right;">Last updated: 2022-05-05 11:45 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022-06-01 20:11 JST</div>
 <a href="../../index.html">HOME</a> / <a href="index.html">Software</a></div>
 <hr width="100%" size="+">
 
@@ -48,6 +48,7 @@
      <ol>
       <li><a href="#mozTocId483605">SMPlayer とは</a></li>
       <li><a href="#mozTocId172960"> インストール (Debian 10)</a></li>
+      <li><a href="#mozTocId172961"> SMPlayer が起動しません (Debian 10)</a></li>
      </ol></li>
     <li><a href="#mozTocId993158">Totem メディアプレーヤ</a>
      <ol>
@@ -626,6 +627,11 @@
         6,814 kB のアーカイブを取得する必要があります。<br>
         この操作後に追加で 22.7 MB のディスク容量が消費されます。<br>
         続行しますか? [Y/n]<br>
+
+<h4><a name="mozTocId172961" class="mozTocH4"></a> SMPlayer が起動しません (Debian 10)</h4>
+上記の項目で紹介した MPlayer がすでにインストールされた状態で、さらに SMPlayer を追加インストールすると不具合が発生するようです（2022-06-01 現在）。 SMPlayer がインストールされる際、MPlayer との衝突 (conflict) が起こるらしく、起動時のパスが正しく設定されなかったので、起動時にエラーメッセージが出て落ちてしまいました。MPlayer は重複して不要なので試しに削除を実行してみると、依存関係にある一部のパッケージが置き換わって正常にインストールが完了しました。実行したのは次のコマンドです。
+<p># apt remove mplayer</p>
+なお、MPlayer を削除したときの完全なメッセージログは<a href="remove-mplayer-log.txt">こちら</a>にあります。
 
 <h3 id="content_1_28"><a name="mozTocId993158" class="mozTocH3"></a>Totem メディアプレーヤ</h3>
       GStreamer ベースで GNOME デスクトップ向けのメディア・プレーヤです。<br>
