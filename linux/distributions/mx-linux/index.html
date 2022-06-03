@@ -4,7 +4,7 @@
 <title>MX Linux FAQs and Tips - Linux on the Desktop</title>
 </head>
 <body>
-<div><div style="text-align: right; float:right;">Last updated: 2022-05-29 23:46 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022-06-03 21:23 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Linux distributions</a> / MX Linux</div>
 <hr width="100%">
 <h2>MX Linux</h2>
@@ -21,8 +21,9 @@ MX Linux に関する FAQ/Tips のページです。
     <li><a href="#8">デスクトップ環境の選択について</a></li>
     <li><a href="#9">次期メジャーバージョンへのアップグレード方法は？</a></li>
     <li><a href="#10">MX ツール (MX Tools) について</a></li>
-    <li><a href="#11">MX Respin（非公式スナップショット）について</a></li>
-    <li><a href="#12">ニュース記事など (外部リンク)</a></li>
+    <li><a href="#11">Debian に MX ツールを入れることは可能ですか？</a></li>
+    <li><a href="#12">MX Respin（非公式スナップショット）について</a></li>
+    <li><a href="#13">ニュース記事など (外部リンク)</a></li>
   </ol>
 </blockquote>
 
@@ -108,14 +109,25 @@ Format USB（USB フォーマッタ）- これはUSBメモリの初期化ツー�
 MX スナップショット (MX Snapshot) - iso イメージの作成、システムバックアップ作成。<a href="../../software/accessories.html">解説ページ。</a><br>
 MX Live USB Maker - iso イメージから LveUSB を作成するツール（MX スナップショットで作った iso イメージから作成できる便利なグラフィカルツール）。
 
-<h3><a name="11">MX Respin（非公式スナップショット）について</h3>
+<h3><a name="11"></a>Debian にMX ツールを入れることは可能ですか？</h3>
+MX Linux は Debian の安定版とバイナリーパッケージで互換性があります。したがって Debian ユーザーが MX ツール (MX Tools) を利用したいと考えるかもしれません。実際に試した方が下記のフォーラムへ投稿されたので、一読の価値があります。
+<blockquote>
+Debian User Forums<br>
+Topic: Adding MX Linux tools to Debian<br>
+<a href="https://forums.debian.net/viewtopic.php?t=146083">https://forums.debian.net/viewtopic.php?t=146083</a>
+</blockquote>
+大まかにいえば、MX リポジトリを APT に追加すれば可能となります。しかしながら、システム設定を大幅にカスタマイズすることになるので、もし将来、次期安定版へのアップグレードを検討している場合は、移行時に問題が発生するかもしれません。
+<p>
+手間をかけて Debian に MX ツールを入れることは可能ですが、これは逆の立場から見ると、MX Linux をインストールした上で Debian の資産を利用するのと結局は同じことだと言えるでしょう。なぜなら、MX Linux と Debian はベースのリポジトリを共有しているためです。
+</p>
+<h3><a name="12">MX Respin（非公式スナップショット）について</h3>
 MX コミュニティによって作成された非公式なスナップショットが、各種配布されています。MX Linux による公式なサポートはありません。<br>
 <a href="https://sourceforge.net/projects/mx-linux/files/Community_Respins/">https://sourceforge.net/projects/mx-linux/files/Community_Respins/</a>
 <p>
 こちらでも、MX Minimal をベースにした MX Respin というスナップショットを作成してみました。日本語入力環境が最初からインストール済みの日本語版です。Live CD/USB かつインストール用として使えます。次のアドレスからダウンロード可能です。<br>
 <a href="https://linux.sakura.ne.jp/mx-respin-iso/">https://linux.sakura.ne.jp/mx-respin-iso/</a>
 
-<h3><a name="12"></a>ニュース記事 (外部リンク)</h3>
+<h3><a name="13"></a>ニュース記事 (外部リンク)</h3>
 レビュー記事 <a href="https://fosspost.org/mx-linux-21-review-best-distribution-2021/">https://fosspost.org/mx-linux-21-review-best-distribution-2021/</a> (FossPost.org)<br>
 ウィキペディア記事　<a href="https://ja.wikipedia.org/wiki/MX_Linux">https://ja.wikipedia.org/wiki/MX_Linux</a><br>
 DistroWatch <a href="https://distrowatch.com/table.php?distribution=mx">https://distrowatch.com/table.php?distribution=mx</a><br>
