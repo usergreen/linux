@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"><a href="../../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> /　<a href="../index.html">Debian</a> / bullseye</td>
-          <td valign="middle" align="right">Last updated&nbsp;2021/11/26 00:42 JST</td>
+          <td valign="middle" align="right">Last updated&nbsp;2022/06/17 17:01 JST</td>
         </tr>
       </tbody>
 </table>
@@ -26,10 +26,11 @@ Debian GNU/Linux Bullseye (最新の安定版) に関する FAQ/Tips です。<b
   <li><a href="#8">標準の日本語入力について</a></li>
   <li><a href="#9">root アカウントがありません</a></li>
   <li><a href="#10">デスクトップにゴミ箱がありません</a></li>
-  <li><a href="#11">Firefox に余分なロケールが大量にあって困ります</a></li>
-  <li><a href="#12">apt-key が廃止予定になりました</a></li>
-  <li><a href="#13">起動時のスプラッシュ画面を変更するには？</a></li>
-  <li><a href="#14">ニュース記事 (外部リンク)</a></li>
+  <li><a href="#11">Firefox に余分なロケールが大量にあって困ります (2021.11.25)</a></li>
+  <li><a href="#12">LibreOffice に余分なロケールが大量にあって困ります (2022.06.17)</a></li>
+  <li><a href="#13">apt-key が廃止予定になりました</a></li>
+  <li><a href="#14">起動時のスプラッシュ画面を変更するには？</a></li>
+  <li><a href="#15">ニュース記事 (外部リンク)</a></li>
 </ol>
 <a name="1"></a><h3>Debian 11 リリース情報について</h3>
 Debian 11 (bulleseye) の初版 (バージョン 11.0) は 2021年8月14日にリリースされました。<a href="press_release.html">プレスリリース (press release) の日本語訳ページ</a>を作成したのでご参照ください。<br>
@@ -182,8 +183,10 @@ Caramares インストーラは Debian Live の起動直後の画面の一番初
 <a name="8"></a><h3>標準の日本語入力について</h3>
 Debian Live 
 には標準で複数の日本語入力方式が用意されているので、その中から自由に選択することができます。Liveイメージには、かな漢字変換ソフトウェアとして
-Mozcが入っています。Anthy を使いたい場合は、これを追加でインストールする必要があります。<br>
-<br>
+Mozcが入っています。Anthy を使いたい場合は、Anthy を次のようにして追加インストールする必要があります。
+<blockquote>
+# apt install uim-anthy
+</blockquote>
 日本語入力は次の方式のどれかを選択します。<br>
 &nbsp;Fcitx<br>
 &nbsp;Ibus<br>
@@ -224,13 +227,14 @@ debian@user:~$ sudo apt install mate-tweak<br>
 この操作後に追加で 3,092 kB のディスク容量が消費されます。<br>
 続行しますか? [Y/n] <br>
 <br>
-インストール作業後には、MATE Tweak メニューより「ゴミ箱」や「コンピュータ」などを追加できるようになります。<br>
-<br>
-<h3><a name="11"></a>Firefox に余分なロケールが大量にあって困ります</h3>
+インストール作業後には、MATE Tweak メニューより「ゴミ箱」や「コンピュータ」などを追加できるようになります。
+
+<h3><a name="11"></a>Firefox に余分なロケールが大量にあって困ります (2021.11.25)</h3>
 Debian Live からインストールすると、標準で日本語以外に大量の外国語用ロケールがインストールされるので、更新時に余分な時間がかりディスクの空き
 容量を圧迫します。次の手順で一括削除できます。削除後は、firefox-esr-l10n-ja 
 を再インストールします。(libreoffice-help-* でも同じ問題が生じます。)<br>
-<br>
+これはユーザーが意図していない状況なので、バグに当たると思われます。
+<blockquote>
 debian@user:~$ sudo apt remove firefox-esr-l10n-*<br>
 &nbsp;( --- 途中省略 --- )<br>
 以下のパッケージが自動でインストールされましたが、もう必要とされていません:<br>
@@ -272,9 +276,64 @@ debian@user:~$ sudo apt install firefox-esr-l10n-ja<br>
 &nbsp; firefox-esr-l10n-ja<br>
 アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 0 個。<br>
 599 kB のアーカイブを取得する必要があります。<br>
-この操作後に追加で 735 kB のディスク容量が消費されます。<br>
-<br>
-<a name="12"></a><h3>apt-key が廃止予定になりました</h3>
+この操作後に追加で 735 kB のディスク容量が消費されます。
+</blockquote>
+
+<a name="12"></a><h3>LibreOffice に余分なロケールが大量にあって困ります (2022.06.17)</h3>
+上記の項目と同しく、余分なパッケージがインストールされます。<br>
+200MBをはるかに越えるサイズなので、ディスクを節約したり更新時にマシンに余分な負担をかけないようにするには削除が必要です。
+<blockquote><pre>
+root@user-abcd12efgh:/home/user# apt remove libreoffice-l10n-*
+パッケージリストを読み込んでいます... 完了
+依存関係ツリーを作成しています... 完了        
+状態情報を読み取っています... 完了 
+以下のパッケージが自動でインストールされましたが、もう必要とされていません:
+  culmus fonts-beng fonts-beng-extra fonts-deva fonts-deva-extra fonts-gargi
+  fonts-gujr fonts-gujr-extra fonts-guru fonts-guru-extra fonts-hosny-amiri
+  fonts-hosny-thabit fonts-kalapi fonts-lohit-taml-classical fonts-mlym
+  fonts-nakula fonts-sahadeva fonts-samyak-deva fonts-samyak-gujr
+  fonts-samyak-mlym fonts-samyak-taml fonts-sarai fonts-sil-scheherazade
+  fonts-smc fonts-smc-anjalioldlipi fonts-smc-chilanka fonts-smc-dyuthi
+  fonts-smc-gayathri fonts-smc-karumbi fonts-smc-keraleeyam fonts-smc-manjari
+  fonts-smc-meera fonts-smc-rachana fonts-smc-raghumalayalamsans
+  fonts-smc-suruma fonts-smc-uroob fonts-taml fonts-telu fonts-telu-extra
+  fonts-teluguvijayam fonts-yrsa-rasa libreoffice-help-common
+  node-normalize.css
+これを削除するには 'apt autoremove' を利用してください。
+以下のパッケージは「削除」されます:
+  libreoffice-help-ja libreoffice-l10n-ar libreoffice-l10n-ast
+  libreoffice-l10n-be libreoffice-l10n-bg libreoffice-l10n-bn
+  libreoffice-l10n-bs libreoffice-l10n-ca libreoffice-l10n-cs
+  libreoffice-l10n-cy libreoffice-l10n-da libreoffice-l10n-de
+  libreoffice-l10n-dz libreoffice-l10n-el libreoffice-l10n-en-gb
+  libreoffice-l10n-en-za libreoffice-l10n-eo libreoffice-l10n-es
+  libreoffice-l10n-et libreoffice-l10n-eu libreoffice-l10n-fa
+  libreoffice-l10n-fi libreoffice-l10n-fr libreoffice-l10n-ga
+  libreoffice-l10n-gl libreoffice-l10n-gu libreoffice-l10n-he
+  libreoffice-l10n-hi libreoffice-l10n-hr libreoffice-l10n-hu
+  libreoffice-l10n-id libreoffice-l10n-is libreoffice-l10n-it
+  libreoffice-l10n-ja libreoffice-l10n-ka libreoffice-l10n-km
+  libreoffice-l10n-ko libreoffice-l10n-lt libreoffice-l10n-lv
+  libreoffice-l10n-mk libreoffice-l10n-ml libreoffice-l10n-mr
+  libreoffice-l10n-nb libreoffice-l10n-ne libreoffice-l10n-nl
+  libreoffice-l10n-nn libreoffice-l10n-pa-in libreoffice-l10n-pl
+  libreoffice-l10n-pt libreoffice-l10n-pt-br libreoffice-l10n-ro
+  libreoffice-l10n-ru libreoffice-l10n-si libreoffice-l10n-sk
+  libreoffice-l10n-sl libreoffice-l10n-sr libreoffice-l10n-sv
+  libreoffice-l10n-ta libreoffice-l10n-te libreoffice-l10n-th
+  libreoffice-l10n-tr libreoffice-l10n-ug libreoffice-l10n-uk
+  libreoffice-l10n-vi libreoffice-l10n-xh libreoffice-l10n-zh-cn
+  libreoffice-l10n-zh-tw
+アップグレード: 0 個、新規インストール: 0 個、削除: 67 個、保留: 0 個。
+この操作後に 245 MB のディスク容量が解放されます。
+続行しますか? [Y/n] 
+</pre></blockquote>
+ただし上記の手順で一括削除した場合、日本語ロケールも削除されてしまうので、再インストールする必要があります。
+<blockquote>
+# apt install libreoffice-l10n-ja
+</blockquote>
+
+<a name="13"></a><h3>apt-key が廃止予定になりました</h3>
 Debian ではこれまでパッケージの管理で apt-key 
 を使っていましたが、非推奨（deprecated⁠）の扱いとなりました(*1)。リリースノートにも明記されています。したがって、将来的には廃止予定となり，2022年の半ばには削除さ
 れることになっています。今回リリースされた Debian 11 では apt-key 
@@ -283,7 +342,7 @@ Debian ではこれまでパッケージの管理で apt-key
 &nbsp;*1 https://salsa.debian.org/apt-team/apt/-/commit/ee284d5917d09649b68ff1632d44e892f290c52f<br>
 &nbsp;*2 https://gihyo.jp/admin/serial/01/ubuntu-recipe/0675<br>
 <br>
-<a name="13"></a><h3>起動時のスプラッシュ画面を変更するには？</h3>
+<a name="14"></a><h3>起動時のスプラッシュ画面を変更するには？</h3>
 <p>
 debian 11 はグラフィカルなスプラッシュ画面で起動します。したがって、debian 10 のときのようにスクリーンにテキストを出力しません。
 /etc/default/grub ファイルを編集します。このスプラッシュの動作に係わっているのは Plymouth というプログラムです。
@@ -317,7 +376,7 @@ CentOS 6 を起動時に下図進捗バーが表示されたら「→」キー�
 上記の行の行末にある「rhgb quiet」を削除して保存します。<br>
 https://www.linuxmaster.jp/linux_skill/2012/10/centos6-1.html<br>
 </p>
-<a name="14"></a><h3>ニュース記事 (外部リンク)</h3>
+<a name="15"></a><h3>ニュース記事 (外部リンク)</h3>
 7 New Features in the Newly Released Debian 11 ‘Bullseye’ Linux Distro<br>
 &nbsp;<a href="https://news.itsfoss.com/debian-11-feature/">https://news.itsfoss.com/debian-11-feature/</a><br>
 <br>
