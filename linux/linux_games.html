@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"> <a href="../index.html">HOME</a><br></td>
-          <td valign="middle" align="right">Last updated: 2022-06-26 13:50 JST<br></td>
+          <td valign="middle" align="right">Last updated: 2022-06-26 18:13 JST<br></td>
         </tr>
       </tbody>
 </table>
@@ -52,9 +52,11 @@
 <li><a href="#mozTocId306672">複数のパックセット (graphic set) をインストールしたとき</a></li>
 <li><a href="#mozTocId978703"> 起動時に PAKセットの選択画面を表示させない方法</a></li>
 <li><a href="#mozTocId978704"> カレンダーの表示形式を変更するには？</a></li>
+<li><a href="#mozTocIdicon"> Simutrans のアイコンはどこにありますか？</a></li>
 <li><a href="#mozTocId734275"> pak128.japan (version 120.0 5.8MB, 2015/01/04) の不具合と解決法 (2019.11.21)</a></li>
 <li><a href="#mozTocId105079">駅名や都市名、乗り物の名前を変更する方法</a></li>
 <li><a href="#mozTocId561905">Simutrans 公式サイトでも見つかりにくいような Tips</a></li>
+<li><a href="#mozTocId105080">Debian 10 に Simutrans 122.0 をインストールするトリッキーな方法</a></li>
 </ol>
 </li>
 <li><a href="#mozTocId779792">Vega Strike - 宇宙飛行シミュレーター</a></li>
@@ -546,6 +548,15 @@ Is this correct? (y/n)
 simutrans/config/simuconf.tab の 587 行目あたりにある設定項目を下記へ変更し、# 記号を外して有効にしてください。<br>
 show_month = 2
 </blockquote>
+
+<h4><a name="mozTocIdicon">Simutrans のアイコンはどこにありますか？</h4>
+ Simutrans 本家版を手動でインストールした時、デスクトップのメニューアイテムに追加するアイコンが見つからないかもしれません。アイコンは次の場所にあります。
+Simutrans というキーワードでシステム内のファイルを検索しても見つかります。
+<blockquote>
+アイコンの保存場所: /usr/share/pixmaps<br>
+ファイルの名前: simutrans_stormoog.png
+</blockquote>
+
 <h4><a name="mozTocId734275"></a> pak128.japan (version 120.0 5.8MB, 2015/01/04) の不具合と解決法 (2019.11.21)</h4>
         　　インストールしたのち、起動すると以下の画面が現れる可能性があります。<br>
         <blockquote><u>Error</u><br>
@@ -581,8 +592,19 @@ show_month = 2
         <a href="https://www.tips.simutrans.com/wiki/tiki-index.php?page=en_Rename&amp;structure=Tips">https://www.tips.simutrans.com/wiki/tiki-index.php?page=en_Rename&amp;structure=Tips</a><br>
         <br>
 <h4><a name="mozTocId561905"></a>Simutrans 公式サイトでも見つかりにくいような Tips</h4>
-        次のサイトに色々な Tips があります： Simutrans tutorials and tips - <a href="https://www.tips.simutrans.com">https://www.tips.simutrans.com</a><br>
-        <br>
+        次のサイトに色々な Tips があります： Simutrans tutorials and tips - <a href="https://www.tips.simutrans.com">https://www.tips.simutrans.com</a>
+
+<h4><a name="mozTocId105080"></a>Debian 10 に Simutrans 122.0 をインストールするトリッキーな方法</h4>
+Debian ではDebianプロジェクトが専用のパッケージを用意していますが、バージョンがリリース時点での最新版を採用しています。
+したがってリリース以降に登場したSimutransの更新版は扱いません。次期安定版で Simutrans の更新版が取り込まれることになります。
+しかし次の手順でインストールすればインストールの際に苦労することなく、simutrans 122.0 が楽しめます。<br>
+すでに説明した simutrans-uni リポジトリを有効にして次の .deb パッケージをインストールするだけで済みます。<br>
+<p>
+root@debian:/home/user# apt install ./simutrans-uni_122.0-2_amd64.deb ./simutrans-uni-data_122.0-1_all.deb<br>
+ややトリッキーな方法ですが、インストールとその後の起動時の完全なログは<a href="debian10-install-simutrans-122.txt">こちら</a>に残してあります。
+インストール後にsimutrans-uni リポジトリをコメントして無効にしておいてください。そうしないと通常のアップデート時に simutrans 123 へと勝手に更新されてしまいます。
+simutrans 123 は Debian 10 では起動できません。
+
 <h3><a name="mozTocId779792"></a>Vega Strike - 宇宙飛行シミュレーター</h3>
       <p>宇宙飛行シミュレーター。ハイスペックなマシンが必須。</p>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
