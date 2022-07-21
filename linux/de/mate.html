@@ -4,7 +4,7 @@
     <title>MATE デスクトップ環境 - Linux on the Desktop</title>
   </head>
   <body>
-<div><div style="text-align: right; float:right;">Last updated: 2022-07-20 19:15 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022-07-21 10:53 JST</div>
 <a href="../../index.html">HOME</a> / <a href="index.html">DesktopEnvironment</a> / MATE </div>
 <hr width="100%">
 <h2><a name="mozTocId883158" class="mozTocH2"></a>MATE Desktop Environment</h2>
@@ -74,12 +74,12 @@ GNOME バージョン２から派生しましたが、２０１７年に公表�
 パネルを右クリックして、メニューの中からゴミ箱を選択すると、パネル内へ追加することもできます。</p>
 
 【デスクトップにゴミ箱のアイコンを置く手順】<br>
-MATE デスクトップ用をカスタマイズするための追加的機能を提供する mate-tweak 
-がインストールされていないのが原因です。mate-tweak という名前のパッケージをインストールしてください。このパッケージは GNOME 
-デスクトップにおける gnome-tweaks と同等の機能を提供します。パッケージ名が mate-tweak と単数形なので注意してください。<br>
-<br>
-mate-tweak はコマンドライン、またはデスクトップのシステムメニューから起動します。ちなみに、Debian 10 LiveCD には 
-mate-tweak がデフォルトでは含まれていません。また、DebianLive 10 はデフォルトで root 
+２通りのやり方があります。<br>
+まず１つ目はコマンドラインから gsetting を使って設定する方法です。参照外部リンク: <a href="https://wiki.archlinux.jp/index.php/MATE">https://wiki.archlinux.jp/index.php/MATE</a>
+<blockquote>
+$ gsettings set org.mate.caja.desktop trash-icon-visible true<br>
+</blockquote>
+２つ目は MATE デスクトップ用にグラフィカルな追加機能を提供する mate-tweak を利用する方法です。mate-tweak という名前のパッケージをインストールしてください。このパッケージは GNOME デスクトップにおける gnome-tweaks と同等の機能を提供します。パッケージ名が mate-tweak と単数形なので注意してください。mate-tweak はコマンドライン、またはデスクトップのシステムメニューから起動します。なお、DebianLive 10 はデフォルトで root 
 ユーザを作成しないので、次のようにしてスーパーユーザでインストールします。<br>
 <br>
 <details>
