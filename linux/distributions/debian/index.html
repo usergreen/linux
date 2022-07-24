@@ -4,7 +4,7 @@
     <title>Debian GNU/Linux - Linux on the Desktop</title>
   </head>
   <body>
-<div><div style="text-align: right; float:right;">Last updated: 2022/07/21 13:30 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022/07/24 11:29 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Distributions</a> / Debian</div>
 <hr size="1" width="100%">
 
@@ -370,6 +370,18 @@ u ssh-server	SSH サーバ
 i laptop	ノート PC
 </pre></blockquote>
 上の例では、i はインストール済み、u は未インストールです。
+<p>
+tasksel はメタパッケージという実体のない仮想パッケージで、これに関連付けられた依存関係にあるパッケージを一括してインストールします。
+したがって、タスクでインストールされる個々のパッケージを知るには次の例のようなコマンドを使います。
+</p>
+ $ apt-cache show task-desktop
+<p>
+タスクでインストールしたパッケージを削除するには、次の例のコマンドを使うか手動で個別に削除してください。
+</p>
+ # apt remove task-desktop<br>
+ or<br>
+ # tasksel remove task-desktop<br>
+　tasksel -t remove task-desktop というコマンドを使うとシミュレーション（テスト）のみを実行します。
 
       <h3 id="content_1_13"><a name="mozTocId389230" class="mozTocH3"></a>デスクトップ環境を簡単にインストールするには？ (aptitude)</h3>
       <p>テキストベースのインターフェース aptitude でも、Tasksel
