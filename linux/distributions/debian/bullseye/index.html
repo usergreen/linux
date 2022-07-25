@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"><a href="../../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> /　<a href="../index.html">Debian</a> / bullseye</td>
-          <td valign="middle" align="right">Last updated&nbsp;2022/07/17 11:38 JST</td>
+          <td valign="middle" align="right">Last updated&nbsp;2022/07/25 19:45 JST</td>
         </tr>
       </tbody>
 </table>
@@ -228,8 +228,10 @@ After this operation, 4,699 kB disk space will be freed.
 Do you want to continue? [Y/n] y
 </pre>
 
-<a name="12"></a><h3>デスクトップにゴミ箱がありません</h3>
-Debian MATE の標準ではゴミ箱がありません。mate-tweak パケージを追加インストールする必要があります。<br>
+<a name="11"></a><h3>デスクトップにゴミ箱がありません</h3>
+Debian MATE の標準ではゴミ箱がありません。次のような方法で設定する必要があります。まず、端末から GSettings を使って設定する方法があります。
+<a href="../../../../linux/de/mate.html#mozTocId564382">関連項目のページ</a>を見てください。<br>
+もう一つの方法としては mate-tweak パケージを追加インストールします。ただし依存するパッケージも多数インストールされます。<br>
 <br>
 debian@user:~$ sudo apt install mate-tweak<br>
 パッケージリストを読み込んでいます... 完了<br>
@@ -254,7 +256,7 @@ debian@user:~$ sudo apt install mate-tweak<br>
 <br>
 インストール作業後には、MATE Tweak メニューより「ゴミ箱」や「コンピュータ」などを追加できるようになります。
 
-<h3><a name="11"></a>Firefox に余分なロケールが大量にあって困ります (2021.11.25)</h3>
+<a name="12"></a><h3>Firefox に余分なロケールが大量にあって困ります (2021.11.25)</h3>
 Debian Live からインストールすると、標準で日本語以外に大量の外国語用ロケールがインストールされるので、更新時に余分な時間がかりディスクの空き
 容量を圧迫します。次の手順で一括削除できます。削除後は、firefox-esr-l10n-ja 
 を再インストールします。(libreoffice-help-* でも同じ問題が生じます。)<br>
