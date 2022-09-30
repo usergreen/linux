@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"><a href="../../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> /　<a href="../index.html">Debian</a> / bullseye</td>
-          <td valign="middle" align="right">Last updated&nbsp;2022/07/31 09:46 JST</td>
+          <td valign="middle" align="right">Last updated&nbsp;2022/10/01 02:11 JST</td>
         </tr>
       </tbody>
 </table>
@@ -30,9 +30,10 @@ Debian GNU/Linux Bullseye (最新の安定版) に関する FAQ/Tips です。<b
   <li><a href="#11">デスクトップにゴミ箱がありません</a></li>
   <li><a href="#12">Firefox に余分なロケールが大量にあって困ります (2021.11.25)</a></li>
   <li><a href="#13">LibreOffice に余分なロケールが大量にあって困ります (2022.06.17)</a></li>
-  <li><a href="#14">apt-key が廃止予定になりました</a></li>
-  <li><a href="#15">起動時のスプラッシュ画面を変更するには？</a></li>
-  <li><a href="#16">ニュース記事 (外部リンク)</a></li>
+  <li><a href="#14">Evolution を削除すると勝手に Thunderbird がインストールされる (2022.09.30)</a></li>
+  <li><a href="#15">apt-key が廃止予定になりました</a></li>
+  <li><a href="#16">起動時のスプラッシュ画面を変更するには？</a></li>
+  <li><a href="#17">ニュース記事 (外部リンク)</a></li>
 </ol>
 <a name="1"></a><h3>Debian 11 リリース情報について</h3>
 Debian 11 (bulleseye) の初版 (バージョン 11.0) は 2021年8月14日にリリースされました。<a href="press_release.html">プレスリリース (press release) の日本語訳ページ</a>を作成したのでご参照ください。<br>
@@ -374,7 +375,14 @@ root@user-abcd12efgh:/home/user# apt remove libreoffice-l10n-*
 # apt install libreoffice-l10n-ja
 </blockquote>
 
-<a name="14"></a><h3>apt-key が廃止予定になりました</h3>
+<a name="14"></a><h3>Evolution を削除すると勝手に Thunderbird がインストールされる (2022.09.30)</h3>
+Evolution は電子メールや予定表の管理などを統合的に行えるアプリケーションです。
+Cinnamon デスクトップ環境でこのアプリがインストールされているとき、削除しようとすると勝手に Thunderbird をインストールする
+という事態になることを確認しました。Thunderbird のインストールには約200MB以上の空き容量が必要となるので
+気を付ける必要があります。
+この問題が生じるには Evolution パッケージとのあいだに依存関係があるからです。<a href="evolution-uninstall-log">アンインストール・ログ</a>参照。
+
+<a name="15"></a><h3>apt-key が廃止予定になりました</h3>
 Debian ではこれまでパッケージの管理で apt-key 
 を使っていましたが、非推奨（deprecated⁠）の扱いとなりました(*1)。リリースノートにも明記されています。したがって、将来的には廃止予定となり，2022年の半ばには削除さ
 れることになっています。今回リリースされた Debian 11 では apt-key 
@@ -383,7 +391,7 @@ Debian ではこれまでパッケージの管理で apt-key
 &nbsp;*1 https://salsa.debian.org/apt-team/apt/-/commit/ee284d5917d09649b68ff1632d44e892f290c52f<br>
 &nbsp;*2 https://gihyo.jp/admin/serial/01/ubuntu-recipe/0675<br>
 <br>
-<a name="15"></a><h3>起動時のスプラッシュ画面を変更するには？</h3>
+<a name="16"></a><h3>起動時のスプラッシュ画面を変更するには？</h3>
 <p>
 debian 11 はグラフィカルなスプラッシュ画面で起動します。したがって、debian 10 のときのようにスクリーンにテキストを出力しません。
 /etc/default/grub ファイルを編集します。このスプラッシュの動作に係わっているのは Plymouth というプログラムです。
@@ -417,7 +425,7 @@ CentOS 6 を起動時に下図進捗バーが表示されたら「→」キー�
 上記の行の行末にある「rhgb quiet」を削除して保存します。<br>
 https://www.linuxmaster.jp/linux_skill/2012/10/centos6-1.html<br>
 </p>
-<a name="16"></a><h3>ニュース記事 (外部リンク)</h3>
+<a name="17"></a><h3>ニュース記事 (外部リンク)</h3>
 7 New Features in the Newly Released Debian 11 ‘Bullseye’ Linux Distro<br>
 &nbsp;<a href="https://news.itsfoss.com/debian-11-feature/">https://news.itsfoss.com/debian-11-feature/</a><br>
 <br>
