@@ -1,0 +1,31 @@
+# apt remove evolution
+パッケージリストを読み込んでいます... 完了
+依存関係ツリーを作成しています... 完了        
+状態情報を読み取っています... 完了        
+以下のパッケージが自動でインストールされましたが、もう必要とされていません:
+  bogofilter bogofilter-bdb bogofilter-common evolution-common
+  evolution-data-server evolution-data-server-common grub-pc-bin libbotan-2-17
+  libc6-i386 libcamel-1.2-62 libchamplain-0.12-0 libchamplain-gtk-0.12-0
+  libdee-1.0-4 libebackend-1.2-10 libebook-1.2-20 libebook-contacts-1.2-3
+  libecal-2.0-1 libedata-book-1.2-26 libedata-cal-2.0-1 libedataserver-1.2-25
+  libedataserverui-1.2-2 libevolution libgnome-autoar-0-0
+  libgnome-autoar-gtk-0-0 libphonenumber8 libpst4 libtspi1
+  libunity-protocol-private0 libunity-scopes-json-def-desktop libunity9
+  libytnef0 mokutil shim-helpers-amd64-signed shim-signed-common shim-unsigned
+これを削除するには 'sudo apt autoremove' を利用してください。
+以下の追加パッケージがインストールされます:
+  thunderbird
+提案パッケージ:
+  fonts-lyx
+以下のパッケージは「削除」されます:
+  evolution evolution-plugin-bogofilter evolution-plugin-pstimport
+  evolution-plugins
+以下のパッケージが新たにインストールされます:
+  thunderbird
+アップグレード: 0 個、新規インストール: 1 個、削除: 4 個、保留: 0 個。
+53.9 MB のアーカイブを取得する必要があります。
+この操作後に追加で 221 MB のディスク容量が消費されます。
+続行しますか? [Y/n] n
+中断しました。
+root@user-fmva52dawj:/home/user# 
+
