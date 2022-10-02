@@ -4,7 +4,7 @@
 <title>MX Linux FAQs and Tips - Linux on the Desktop</title>
 </head>
 <body>
-<div><div style="text-align: right; float:right;">Last updated: 2022-07-20 22:29 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022-10-02 13:57 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Linux distributions</a> / MX Linux</div>
 <hr width="100%">
 <h2>MX Linux</h2>
@@ -13,18 +13,19 @@ MX Linux に関する FAQ/Tips のページです。
   <ol>
     <li><a href="#1">公式のサイトやフォーラム</a></li>
     <li><a href="#2">ダウンロード／リリース情報</a></li>
-    <li><a href="#3">公式のマニュアル類</a></li>
-    <li><a href="#4">MX Linux の日本語入力環境について</a></li>
-    <li><a href="#5">日本語入力へ切り替えるには？</a></li>
-    <li><a href="#6">Live/インストール DVD/USB のアカウントとパスワード？</a></li>
-    <li><a href="#7">sudo コマンドが使えないようにしたい</a></li>
-    <li><a href="#8">インストールに必要なハードウェア環境は？</a></li>
-    <li><a href="#9">デスクトップ環境の選択について</a></li>
-    <li><a href="#10">次期メジャーバージョンへのアップグレード方法は？</a></li>
-    <li><a href="#11">MX ツール (MX Tools) について</a></li>
-    <li><a href="#12">Debian に MX ツールを入れることは可能ですか？</a></li>
-    <li><a href="#13">MX Respin（非公式スナップショット）について</a></li>
-    <li><a href="#14">ニュース記事など (外部リンク)</a></li>
+    <li><a href="#3">MEPIS Community Repository</a></li>
+    <li><a href="#4">公式のマニュアル類</a></li>
+    <li><a href="#5">MX Linux の日本語入力環境について</a></li>
+    <li><a href="#6">日本語入力へ切り替えるには？</a></li>
+    <li><a href="#7">Live/インストール DVD/USB のアカウントとパスワード？</a></li>
+    <li><a href="#8">sudo コマンドが使えないようにしたい</a></li>
+    <li><a href="#9">インストールに必要なハードウェア環境は？</a></li>
+    <li><a href="#10">デスクトップ環境の選択について</a></li>
+    <li><a href="#11">次期メジャーバージョンへのアップグレード方法は？</a></li>
+    <li><a href="#12">MX ツール (MX Tools) について</a></li>
+    <li><a href="#13">Debian に MX ツールを入れることは可能ですか？</a></li>
+    <li><a href="#14">MX Respin（非公式スナップショット）について</a></li>
+    <li><a href="#15">ニュース記事など (外部リンク)</a></li>
   </ol>
 </blockquote>
 
@@ -54,7 +55,19 @@ SourceForge: <a href="https://sourceforge.net/projects/mx-linux/files/">https://
 <a href="http://ftp.tsukuba.wide.ad.jp/Linux/mxlinux-iso/MX/">http://ftp.tsukuba.wide.ad.jp/Linux/mxlinux-iso/MX/</a> APT source: http://ftp.tsukuba.wide.ad.jp/Linux/mxlinux/<br>
 Yamagata University: APT source only - https://ftp.yz.yamagata-u.ac.jp/pub/Linux/MX-Linux-Packages/
 
-<h3><a name="3"></a>公式のマニュアル類</h3>
+<h3><a name="3"></a>MEPIS Community Repository</h3>
+MX Linux では、MX and MEPIS Community Repository というプロジェクト独自のリポジトリを用意しています。<br>
+URL: <a href="https://mxrepo.com/">https://mxrepo.com/</a>
+<p>
+"Our Packaging Team now supports MX as the Community Packaging Team did for MEPIS for many years, with backports of newer packages and debian builds of wanted packages that are not yet in debian, as well as some custom MX utilities."
+</p><p>
+"The currently supported releases are MX-21 (bullseye based), MX-19 (buster based), & MX-17/18 (stretch based).
+If you are using MX Linux you will, of course, already have the appropriate repositories installed. But since MX-Linux is built on Debian stable some users of Debian & other Debian based distributions have been known to utilize our packages. We list the repository locations here for the convenience of those who wish to (at their own risk) do so."
+</p>
+関連外部リンク：<br>
+<a href="https://mxlinux.org/wiki/system/repos-mx-linux/">https://mxlinux.org/wiki/system/repos-mx-linux/</a>
+
+<h3><a name="4"></a>公式のマニュアル類</h3>
 MX Linux 公式の各種文書が公開・配布されています。
 <ul>
   <li>MX FAQs <a href="https://mxlinux.org/wiki/help-files/mx-faqs/">https://mxlinux.org/wiki/help-files/mx-faqs/</a></li>
@@ -62,21 +75,21 @@ MX Linux 公式の各種文書が公開・配布されています。
   <li>リリースノート関係 <a href="https://mxlinux.org/current-release-features/">https://mxlinux.org/current-release-features/</a></li>
 </ul>
 
-<h3><a name="4"></a>MX の日本語入力環境について</h3>
+<h3><a name="5"></a>MX の日本語入力環境について</h3>
 MX パッケージインストーラ (MXPI) のメニューから Japanese（日本語）を選択するだけで日本語入力がインストールされるよう工夫されています。なお、その他は基本的に Debianがベースとなっているため、Debian の設定方法と共通です。詳しくは関連ページを見てください。
 
-<h3><a name="5"></a>日本語入力へ切り替えるには？</h4>
+<h3><a name="6"></a>日本語入力へ切り替えるには？</h4>
 標準的な日本語キーボードでは、英語入力から日本語入力への切り替えは、半角/全角キーです。場合によっては、切り替えが Shift + スペース、または Ctrl + スペースで行えます。
 
-<h3><a name="6">Live/インストール用 DVD/USB のアカウントとパスワードは？</h3>
+<h3><a name="7">Live/インストール用 DVD/USB のアカウントとパスワードは？</h3>
 Demo ユーザー: demo<br>
 パスワード: demo<br>
 Root パスワード: root
 
-<h3><a name="7">sudo コマンドが使えないようにしたい</h3>
+<h3><a name="8">sudo コマンドが使えないようにしたい</h3>
 root アカウントを使って管理する、従来の伝統的な操作方法に戻したいときは、<a href=../debian/bullseye/index.html#10>Debian の関連項目</a>を見てください。
 
-<h3><a name="8"></a>インストールに必要なハードウェア環境は？</h3>
+<h3><a name="9"></a>インストールに必要なハードウェア環境は？</h3>
 標準的なシステム要件は次のとおりです。詳しくは MX マニュアルを読んでください。（以下抜粋）<br>
 
 <pre>
@@ -100,7 +113,7 @@ BIOS capable of booting from USB)
 </pre>
 出典: <a href="https://raw.githubusercontent.com/MX-Linux/mx-docs/master/mxum.pdf">https://raw.githubusercontent.com/MX-Linux/mx-docs/master/mxum.pdf</a>
 
-<h3><a name="9"></a>デスクトップ環境の選択について</h3>
+<h3><a name="10"></a>デスクトップ環境の選択について</h3>
 公式では、次のデスクトップ環境をリリースしています。
 <ul>
   <li>Fluxbox</li>
@@ -108,7 +121,7 @@ BIOS capable of booting from USB)
   <li>Xfce デスクトップ</li>
 </ul>
 
-<h3><a name="10"></a>バージョンアップする方法は？</h3>
+<h3><a name="11"></a>バージョンアップする方法は？</h3>
 <p>Debian の安定版に追従して普段のバージョンアップを行います。通常のマイナーアップデートに対応しています。サポート期間は Debian の期間と同じなので、リリース後、最大５年間はサポートが継続します。</p>
 <p>
 ただし、次期メジャーバージョンへのアップグレードに対しては、不具合が生じても公式にはサポートしません。つまり、パソコンの耐用年数を考慮すると十分とはいうものの、同じパソコンを使い続けた場合、5年毎に新規インストールすることになります。これは MX Linux 特有のシステム設定が影響を与えるためです。
@@ -118,13 +131,13 @@ Upgrading from MX-19 to MX-21 without reinstalling<br>
 <a href="https://mxlinux.org/wiki/upgrading-from-mx-19-to-mx-21-without-reinstalling/">https://mxlinux.org/wiki/upgrading-from-mx-19-to-mx-21-without-reinstalling/</a>
 </blockquote>
 
-<h3><a name="11"></a>MX ツール (MX Tools) について</h3>
+<h3><a name="12"></a>MX ツール (MX Tools) について</h3>
 <p>MX Linux を利用するとき、最も特徴的なものが MX Linux のみで提供される MX ツール (MX Tools) という名前が付けられた一連のシステムツールです。そのうちのいくつかを紹介します。</p>
 Format USB（USB フォーマッタ）- これはUSBメモリの初期化ツールです。<a href="../../software/accessories.html">解説ページ。</a><br>
 MX スナップショット (MX Snapshot) - iso イメージの作成、システムバックアップ作成。<a href="../../software/accessories.html">解説ページ。</a><br>
 MX Live USB Maker - iso イメージから LveUSB を作成するツール（MX スナップショットで作った iso イメージから作成できる便利なグラフィカルツール）。
 
-<h3><a name="12"></a>Debian に MX ツールを入れることは可能ですか？</h3>
+<h3><a name="13"></a>Debian に MX ツールを入れることは可能ですか？</h3>
 MX Linux は Debian の安定版とバイナリーパッケージで互換性があります。したがって Debian ユーザーは MX ツール (MX Tools) を利用したいと考えるかもしれません。実際に試した方が下記のフォーラムへ投稿されたので、一読の価値があると思います。
 <blockquote>
 Debian User Forums<br>
@@ -135,7 +148,7 @@ Topic: Adding MX Linux tools to Debian<br>
 <p>
 手間をかけて Debian に MX ツールを入れることは可能ですが、これは視点を変えて見ると、MX Linux をインストールした上で Debian の資産を利用するのと結局は同じことだと言えるでしょう。なぜなら、MX Linux と Debian は基本的なリポジトリを共有しているからです。
 </p>
-<h3><a name="13">MX Respin（非公式スナップショット）について</h3>
+<h3><a name="14">MX Respin（非公式スナップショット）について</h3>
 MX コミュニティによって作成された非公式なスナップショットが、各種配布されています。MX Linux による公式なサポートはありません。<br>
 <a href="https://sourceforge.net/projects/mx-linux/files/Community_Respins/">https://sourceforge.net/projects/mx-linux/files/Community_Respins/</a>
 <p>
@@ -145,7 +158,7 @@ MX コミュニティによって作成された非公式なスナップショ�
 <a href="https://sourceforge.net/projects/mx-respin-iso/">https://sourceforge.net/projects/mx-respin-iso/</a>
 </blockquote>
 
-<h3><a name="14"></a>ニュース記事など (外部リンク)</h3>
+<h3><a name="15"></a>ニュース記事など (外部リンク)</h3>
 レビュー記事 <a href="https://fosspost.org/mx-linux-21-review-best-distribution-2021/">https://fosspost.org/mx-linux-21-review-best-distribution-2021/</a> (FossPost.org)<br>
 ウィキペディア記事　<a href="https://ja.wikipedia.org/wiki/MX_Linux">https://ja.wikipedia.org/wiki/MX_Linux</a><br>
 DistroWatch <a href="https://distrowatch.com/table.php?distribution=mx">https://distrowatch.com/table.php?distribution=mx</a><br>
