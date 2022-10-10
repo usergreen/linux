@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"><a href="../../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> /　<a href="../index.html">Debian</a> / bullseye</td>
-          <td valign="middle" align="right">Last updated&nbsp;2022/10/10 15:43 JST</td>
+          <td valign="middle" align="right">Last updated&nbsp;2022/10/10 17:15 JST</td>
         </tr>
       </tbody>
 </table>
@@ -205,8 +205,10 @@ Debian GNU/Linux UEFI<br>
 上記の問題を回避する方法が判明したので紹介します。
 これは根本的は解決策ではありません。amd64-netinst.iso の代わりに i386-netinst.iso を利用してください。i386 版はレガシーな Bios モードで
 インストーラーが起動するので、インストールが開始できるようになるのを確認しています。10年程度昔の古いパソコンは基本的に Bios モードに対応して
-いるのですが、メーカーによってはソフトウェア的に独自の変更を加えて UEFI にも対応させているように思えます。Fujitsu FMV LIFEBOOK AH52/DA に
+いるのですが、メーカーによってはソフトウェア的に独自の変更を加えて UEFI にも対応させているように思えます。テストを行った Fujitsu FMV LIFEBOOK AH52/DA に
 おいて、実際に動作確認しています。
+<p>
+問題なのは、このテスト機が x64 (amd64) 版で d-i を使うとインストーラを実行できないのに calamares を使用すると実行可能だということ。そして Ferora や MX Linux の x64 版でも実行可能なことから、d-i に起因する不具合ではないかと疑っています。</p>
 
 <a name="8"></a><h3>標準の日本語入力とその変更方法について</h3>
 <p>Debian 11 iso-dvd には、Mozc + Anthy のみを標準で採用しています。<br>
