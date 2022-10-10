@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"><a href="../../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> /　<a href="../index.html">Debian</a> / bullseye</td>
-          <td valign="middle" align="right">Last updated&nbsp;2022/10/10 14:43 JST</td>
+          <td valign="middle" align="right">Last updated&nbsp;2022/10/10 15:43 JST</td>
         </tr>
       </tbody>
 </table>
@@ -23,7 +23,7 @@ Debian GNU/Linux Bullseye (最新の安定版) に関する FAQ/Tips です。<b
   <li><a href="#5">必要な最低限のハードウェアは？</a></li>
   <li><a href="#6">デスクトップに必要な空き容量は？</a></li>
   <li><a href="#7">インストールの手順</a></li>
-  <li><a href="#7-1">netinst が起動しません (レガシー PC)</a></li>
+  <li><a href="#7-1">amd64-netinst.iso が起動しません (レガシー PC) (2022-10-10 対処法追記)</a></li>
   <li><a href="#8">標準の日本語入力とその変更方法について</a></li>
   <li><a href="#9">root アカウントがありません</a></li>
   <li><a href="#10">sudo が使えないようにするには？</a></li>
@@ -156,7 +156,13 @@ Debian Bullseye インストールガイドが用意されています。
 
 <h3><a name="7"></a>インストールの手順</h3>
 <p>
-Debian Live 11 では、<a href="press_release.html">プレスリリース</a>で紹介されたように２通りのインストール方法が選択可能です。１つは従来のインストーラ (d-i) によってネットワークインストールする方法で、起動直後のオプションメニューから実行できます。もう１つは Calamares によるローカルインストール（スタンドアローン）を行う方法で、Debian Live 11 ではこちらが標準に設定されています。以下、こちらの標準的なインストールの流れをスクリーンショットと共に掲載します。<br>
+Debian Live 11 では、<a href="press_release.html">プレスリリース</a>で紹介されたように３通りのインストール方法が選択可能です。<br>
+１つ目は、従来のインストーラ (d-i) によってすべてインターネット経由でインストールする方法です。<br>
+２つ目は、amd64-DVD-1.iso を利用する方法です。この方法が１つ目と異なる点は、ネットワークインストールに加えて、ローカルインストール（スタンドアローン）にも対応できることです。そのため、ダウンロードするファイルサイズが 4GB 近くもあります。標準ではローカルインストールを行うように設定されています。<br>
+３つ目は Calamares によるローカルインストールを行う方法で、Debian Live 11 ではこちらが標準に設定されています。
+この DVD.iso イメージには d-i と Calamares という二つのインストーラーが同梱されているので、好きな方を起動直後のオプションメニューから選択して実行できます。
+以下、Calamares でのインストールの流れをスクリーンショットと共に掲載します。</p>
+<p>
 Calamares インストーラは Debian Live の起動直後の画面の一番初めに表示されるので、これを選択してください。Debian Live が完全に立ち上がった状態で、メニューまたはデスクトップにあるインストーラのアイコンをクリックすれば、インストールを開始できます。後者の場合は、インストールが完了する時点まで Debian Live 上で作業が継続でき、作成したファイルも保存可能というメリットがあります（下記のスクリーンショットもそのようにして記録しました）。
 </p>
 <br>
@@ -183,7 +189,7 @@ Calamares インストーラは Debian Live の起動直後の画面の一番初
 <br>
 <img src="screenshots/bullseye-install7.png" alt="bullseye-install7.png" width="600" height="328"><br>
 
-<a name="7-1"></a><h3>netinst.iso が起動しません (レガシー PC) (2022-07-31 追加)</h3>
+<a name="7-1"></a><h3>amd64-netinst.iso が起動しません (レガシー PC) (2022-07-31 追加) (2022-10-10 対処法追記)</h3>
 システム起動に UEFI を組み込んでいない旧世代の PC では、たとえインストーラの最初のメニューが起動してもその後の Graphical install/Install メニューより
 先に進まず、インストールが中断します。BIOS に対応させていないように思えますが、すべてのレガシー PC でこのエラーが発生するのかは不明です。
 手元の PC では debian 11.0 - 11.4 までの netinst.iso のどれを使用してもインストール作業を行えませんでした。
@@ -195,6 +201,12 @@ Calamares インストーラは Debian Live の起動直後の画面の一番初
 Debian GNU/Linux UEFI<br>
 &emsp; Installer menu
 </blockquote>
+※ 2022-10-10 対処法追記<br>
+上記の問題を回避する方法が判明したので紹介します。
+これは根本的は解決策ではありません。amd64-netinst.iso の代わりに i386-netinst.iso を利用してください。i386 版はレガシーな Bios モードで
+インストーラーが起動するので、インストールが開始できるようになるのを確認しています。10年程度昔の古いパソコンは基本的に Bios モードに対応して
+いるのですが、メーカーによってはソフトウェア的に独自の変更を加えて UEFI にも対応させているように思えます。Fujitsu FMV LIFEBOOK AH52/DA に
+おいて、実際に動作確認しています。
 
 <a name="8"></a><h3>標準の日本語入力とその変更方法について</h3>
 <p>Debian 11 iso-dvd には、Mozc + Anthy のみを標準で採用しています。<br>
@@ -206,7 +218,7 @@ root@debian:/home/user# apt install uim-anthy kasumi uim-gtk2.0 uim-gtk3 uim-qt5
 </blockquote>
 この作業が済んだらいったんログオフし、再度ログインすると変更が自動的に反映されます。
 </p>
-一方、Debian 11 Live dvd では複数の日本語入力方式が用意されているので、その中から自由に選択することができます。
+一方、Debian 11 Live amd64-DVD-1.iso では複数の日本語入力方式が用意されているので、その中から自由に選択することができます。
 Liveイメージには、かな漢字変換ソフトウェアとして Mozcが入っています。Anthy を使いたい場合は、Anthy を次のようにして追加インストールする必要があります。
 <blockquote>
 # apt install uim-anthy
