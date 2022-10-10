@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"><a href="../../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> /　<a href="../index.html">Debian</a> / bullseye</td>
-          <td valign="middle" align="right">Last updated&nbsp;2022/10/02 21:30 JST</td>
+          <td valign="middle" align="right">Last updated&nbsp;2022/10/10 14:28 JST</td>
         </tr>
       </tbody>
 </table>
@@ -24,7 +24,7 @@ Debian GNU/Linux Bullseye (最新の安定版) に関する FAQ/Tips です。<b
   <li><a href="#6">デスクトップに必要な空き容量は？</a></li>
   <li><a href="#7">インストールの手順</a></li>
   <li><a href="#7-1">netinst が起動しません (レガシー PC)</a></li>
-  <li><a href="#8">標準の日本語入力について</a></li>
+  <li><a href="#8">標準の日本語入力とその変更について</a></li>
   <li><a href="#9">root アカウントがありません</a></li>
   <li><a href="#10">sudo が使えないようにするには？</a></li>
   <li><a href="#11">デスクトップにゴミ箱がありません</a></li>
@@ -196,10 +196,18 @@ Debian GNU/Linux UEFI<br>
 &emsp; Installer menu
 </blockquote>
 
-<a name="8"></a><h3>標準の日本語入力について</h3>
-Debian Live 
-には標準で複数の日本語入力方式が用意されているので、その中から自由に選択することができます。Liveイメージには、かな漢字変換ソフトウェアとして
-Mozcが入っています。Anthy を使いたい場合は、Anthy を次のようにして追加インストールする必要があります。
+<a name="8"></a><h3>標準の日本語入力とその変更について</h3>
+<p>Debian 11 iso-dvd には、Mozc + Anthy のみを標準で採用しています。<br>
+uim と組み合わせて使いたいときは、次の手順で Mozc 関連をすべて削除し uim anthy 一式をインストールすれば簡単に変更できます。<br>
+<blockquote>
+root@debian:/home/user# apt purge mozc*
+root@debian:/home/user# apt autoremove
+root@debian:/home/user# apt install uim-anthy kasumi uim-gtk2.0 uim-gtk3 uim-qt5 uim-xim uim-fep
+</blockquote>
+この作業が済んだらいったんログオフし、再度ログインすると変更が自動的に反映されます。
+</p>
+一方、Debian 11 Live dvd では複数の日本語入力方式が用意されているので、その中から自由に選択することができます。
+Liveイメージには、かな漢字変換ソフトウェアとして Mozcが入っています。Anthy を使いたい場合は、Anthy を次のようにして追加インストールする必要があります。
 <blockquote>
 # apt install uim-anthy
 </blockquote>
