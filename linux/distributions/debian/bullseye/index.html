@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"><a href="../../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> /　<a href="../index.html">Debian</a> / bullseye</td>
-          <td valign="middle" align="right">Last updated&nbsp;2022/10/11 15:30 JST</td>
+          <td valign="middle" align="right">Last updated&nbsp;2022/10/11 16:53 JST</td>
         </tr>
       </tbody>
 </table>
@@ -180,10 +180,13 @@ d-i (debian-installer) はデビアンで最初に開発された歴史のある
 <img src="installer/partman_choose_partition_0.png" alt="partman_choose_partition_0.png" width="600" height="328"><br>
 &nbsp;<br>
 <img src="installer/mirror_http_mirror_0.png" alt="mirror_http_mirror_0.png" width="600" height="335"><br>
+この画面では国内ミラーの ftp.jp.debian.org を選択すれば快適に利用できるようになると思います。<a href="https://www.debian.or.jp/using/mirror.html#cdn">https://www.debian.or.jp/using/mirror.html#cdn</a> 参照。<br>
 &nbsp;<br>
 <img src="installer/apt-setup_use_mirror_0.png" alt="apt-setup_use_mirror_0.png" width="600" height="335"><br>
+DVD-1.iso からインストールする場合、「いいえ」で構いません。「はい」を選択すると更新版をインストールできます。<br>
 &nbsp;<br>
 <img src="installer/tasksel_first_1.png" alt="tasksel_first_1.png" width="600" height="328"><br>
+例のようにして希望のデスクトップ環境へ変更してください。既定は GNOME です。<br>
 &nbsp;<br>
 <img src="installer/grub-installer_choose_bootdev_0.png" alt="grub-installer_choose_bootdev_0.png" width="600" height="335"><br>
 &nbsp;<br>
@@ -255,7 +258,7 @@ Liveイメージには、かな漢字変換ソフトウェアとして Mozcが�
 入力方式の設定や変更は、デスクトップメニューまたはコマンドラインから im-config を用いて行います。<br>
 
 <a name="9"></a><h3>root アカウントがありません</h3>
-Live メディアの Caramares インストーラーでインストールした場合は、標準で sudo を使います。root 
+Debian Live の ISO から Caramares インストーラーでインストールした場合は、標準で sudo を使います。root 
 自体は存在しますがアカウントが未設定なので、次のコマンドでアカウントのパスワードを設定してください。設定後は root アカウントが利用可能になります。<br>
 <br>
 debian@user:~$ sudo passwd root<br>
@@ -264,7 +267,7 @@ debian@user:~$ sudo passwd root<br>
 passwd: パスワードは正しく更新されました<br>
 
 <a name="10"></a><h3>sudo が使えないようにするには？</h3>
-Debian 11 では sudo が標準でインストールされてしまうので、従来の Debian のようにユーザと root を使ったシステム管理に戻したい場合は、次の例のようにして設定を変更します。
+Debian Live 11 では sudo が標準でインストールされてしまうので、従来の Debian のようにユーザと root を使ったシステム管理に戻したい場合は、次の例のようにして設定を変更します。
 <pre>
 特定のユーザに sudo 権限を与えないには、
 $ su
