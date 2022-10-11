@@ -1,7 +1,7 @@
 A typical installation of Debian 11 using preseed installer (usually known as d-i) proceeds in the following order. (I drew important samples which might be helpful to users during its installation.)
 
-passwd_user-password_0.png
 passwd_root-password_0.png
+passwd_user-password_0.png
 partman-auto_select_disk_0.png
 partman-auto_init_automatically_partition_0.png
 partman_choose_partition_0.png
