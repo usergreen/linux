@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"><a href="../../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> /　<a href="../index.html">Debian</a> / bullseye</td>
-          <td valign="middle" align="right">Last updated&nbsp;2022/10/10 21:20 JST</td>
+          <td valign="middle" align="right">Last updated&nbsp;2022/10/11 15:30 JST</td>
         </tr>
       </tbody>
 </table>
@@ -22,8 +22,10 @@ Debian GNU/Linux Bullseye (最新の安定版) に関する FAQ/Tips です。<b
   <li><a href="#4">インストールガイド</a></li>
   <li><a href="#5">必要な最低限のハードウェアは？</a></li>
   <li><a href="#6">デスクトップに必要な空き容量は？</a></li>
-  <li><a href="#7">インストールの手順</a></li>
-  <li><a href="#7-1">amd64-netinst.iso が起動しません (レガシー PC) (2022-10-10 対処法追記)</a></li>
+  <li><a href="#7">インストールの手順について</a></li>
+  <li><a href="#7-1">d-i (preseed) を使ってインストールする場合</a></li>
+  <li><a href="#7-2">calamares を使ってインストールする場合</a></li>
+  <li><a href="#7-3">amd64-netinst.iso が起動しません (レガシー PC) (2022-10-10 対処法追記)</a></li>
   <li><a href="#8">標準の日本語入力とその変更方法について</a></li>
   <li><a href="#9">root アカウントがありません</a></li>
   <li><a href="#10">sudo が使えないようにするには？</a></li>
@@ -154,42 +156,62 @@ Debian Bullseye インストールガイドが用意されています。
 <br>
 英語以外の言語でインストールする場合、<span class="command"><strong>tasksel</strong></span> が <em class="firstterm">地域化タスク</em> を自動的にインストールします。ダウンロードとインストールで最大 350MB 必要です。(出典: <a href="https://www.debian.org/releases/bullseye/amd64/apds02.ja.html">https://www.debian.org/releases/bullseye/amd64/apds02.ja.html</a> )<br>
 
-<h3><a name="7"></a>インストールの手順</h3>
+<h3><a name="7"></a>インストールの手順について</h3>
 <p>
 Debian Live 11 では、<a href="press_release.html">プレスリリース</a>で紹介されたように３通りのインストール方法が選択可能です。<br>
 １つ目は、従来のインストーラ (d-i) によってすべてインターネット経由でインストールする方法です。<br>
 ２つ目は、amd64-DVD-1.iso を利用する方法です。この方法が１つ目と異なる点は、ネットワークインストールに加えて、ローカルインストール（スタンドアローン）にも対応できることです。そのため、ダウンロードするファイルサイズが 4GB 近くもあります。標準ではローカルインストールを行うように設定されています。<br>
 ３つ目は Calamares によるローカルインストールを行う方法で、Debian Live 11 ではこちらが標準に設定されています。
 この DVD.iso イメージには d-i と Calamares という二つのインストーラーが同梱されているので、好きな方を起動直後のオプションメニューから選択して実行できます。
-以下、Calamares でのインストールの流れをスクリーンショットと共に掲載します。</p>
 <p>
-Calamares インストーラは Debian Live の起動直後の画面の一番初めに表示されるので、これを選択してください。Debian Live が完全に立ち上がった状態で、メニューまたはデスクトップにあるインストーラのアイコンをクリックすれば、インストールを開始できます。後者の場合は、インストールが完了する時点まで Debian Live 上で作業が継続でき、作成したファイルも保存可能というメリットがあります（下記のスクリーンショットもそのようにして記録しました）。
+以下、d-i を使う場合と Calamares を使う場合とで、それぞれのインストールの流れをスクリーンショットと共に追ってみます。
 </p>
-<br>
+<h4><a name="7-1">d-i (preseed) を使ってインストールする場合</h4>
+d-i (debian-installer) はデビアンで最初に開発された歴史のあるインストーラです。正式名は preseed です。このインストーラは手順が多い半面、非常に自由度が高いので柔軟で詳細な設定を行うことができます。各操作画面には詳しい説明があるのであまり心配要りませんが、特に気を付けるべき場面を抜粋して掲載します。以下の手順とスクリーンショットは、debian-11.5.0-i386-DVD-1.iso を使ったときです。<br>
+&nbsp;<br>
+<img src="installer/passwd_user-password_0.png" alt="passwd_user-password_0.png" width="600" height="328"><br>
+&nbsp;<br>
+<img src="installer/passwd_root-password_0.png" alt="passwd_root-password_0.png" width="600" height="328"><br>
+&nbsp;<br>
+<img src="installer/partman-auto_select_disk_0.png" alt="partman-auto_select_disk_0.png" width="600" height="328"><br>
+&nbsp;<br>
+<img src="installer/partman-auto_init_automatically_partition_0.png" alt="partman-auto_init_automatically_partition_0.png" width="600" height="328"><br>
+&nbsp;<br>
+<img src="installer/partman_choose_partition_0.png" alt="partman_choose_partition_0.png" width="600" height="328"><br>
+&nbsp;<br>
+<img src="installer/mirror_http_mirror_0.png" alt="mirror_http_mirror_0.png" width="600" height="335"><br>
+&nbsp;<br>
+<img src="installer/apt-setup_use_mirror_0.png" alt="apt-setup_use_mirror_0.png" width="600" height="335"><br>
+&nbsp;<br>
+<img src="installer/tasksel_first_1.png" alt="tasksel_first_1.png" width="600" height="328"><br>
+&nbsp;<br>
+<img src="installer/grub-installer_choose_bootdev_0.png" alt="grub-installer_choose_bootdev_0.png" width="600" height="335"><br>
+&nbsp;<br>
+<img src="installer/grub-installer_only_debian_0.png" alt="grub-installer_only_debian_0.png" width="600" height="335"><br>
+&nbsp;<br>
+<img src="installer/finish-install_reboot_in_progress_0.png" alt="finish-install_reboot_in_progress_0.png" width="600" height="328"><br>
+&nbsp;<br>
+&nbsp;<br>
+<h4><a name="7-2">calamares を使ってインストールする場合</h4>
+Calamares インストーラは Debian Live の起動直後の画面の一番初めに表示されるので、これを選択してください。Debian Live が完全に立ち上がった状態で、メニューまたはデスクトップにあるインストーラのアイコンをクリックすれば、インストールを開始できます。後者の場合は、インストールが完了する時点まで Debian Live 上で作業が継続でき、作成したファイルも保存可能というメリットがあります（下記のスクリーンショットもそのようにして記録しました）。<br>
+&nbsp;<br>
 <img src="screenshots/bullseys-install0.png" alt="bullseys-install0.png" width="600" height="328"><br>
-<br>
-<br>
+&nbsp;<br>
 <img src="screenshots/bullseye-install1.png" alt="bullseye-install1.png" width="600" height="328"><br>
-<br>
-<br>
+&nbsp;<br>
 <img src="screenshots/bullseye-install2.png" alt="bullseye-install2.png" width="600" height="328"><br>
-<br>
-<br>
+&nbsp;<br>
 <img src="screenshots/bullseye-install3.png" alt="bullseye-install3.png" width="600" height="328"><br>
-<br>
-<br>
+&nbsp;<br>
 <img src="screenshots/bullseye-install4.png" alt="bullseye-install4.png" width="600" height="328"><br>
-<br>
-<br>
+&nbsp;<br>
 <img src="screenshots/bullseye-install5.png" alt="bullseye-install5.png" width="600" height="335"><br>
-<br>
-<br>
+&nbsp;<br>
 <img src="screenshots/bullseye-install6.png" alt="bullseye-install6.png" width="600" height="335"><br>
-<br>
-<br>
+&nbsp;<br>
 <img src="screenshots/bullseye-install7.png" alt="bullseye-install7.png" width="600" height="328"><br>
-
-<a name="7-1"></a><h3>amd64-netinst.iso が起動しません (レガシー PC) (2022-07-31 追加) (2022-10-10 対処法追記)</h3>
+&nbsp;<br>
+<a name="7-3"></a><h3>amd64-netinst.iso が起動しません (レガシー PC) (2022-07-31 追加) (2022-10-10 対処法追記)</h3>
 システム起動に UEFI を組み込んでいない旧世代の PC では、たとえインストーラの最初のメニューが起動してもその後の Graphical install/Install メニューより
 先に進まず、インストールが中断します。BIOS に対応させていないように思えますが、すべてのレガシー PC でこのエラーが発生するのかは不明です。
 手元の PC では debian 11.0 - 11.4 までの netinst.iso のどれを使用してもインストール作業を行えませんでした。
