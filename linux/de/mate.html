@@ -4,9 +4,10 @@
     <title>MATE デスクトップ環境 - Linux on the Desktop</title>
   </head>
   <body>
-<div><div style="text-align: right; float:right;">Last updated: 2022-07-21 11:14 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022-10-17 20:53 JST</div>
 <a href="../../index.html">HOME</a> / <a href="index.html">DesktopEnvironment</a> / MATE </div>
 <hr width="100%">
+
 <h2><a name="mozTocId883158" class="mozTocH2"></a>MATE Desktop Environment</h2>
 MATE デスクトップ環境に関する FAQ & Tips です。
 <ol>
@@ -22,9 +23,10 @@ MATE デスクトップ環境に関する FAQ & Tips です。
 <li><a href="#mozTocId830888">おさかな君ワンダがフォーチュンを表示してくれません</a></li>
 <li><a href="#mozTocId8856">Debian Stretch MATE に関する Tips</a></li>
 <li><a href="#mozTocId438134">使っている MATE のバージョンを確認する方法は？</a></li>
+<li><a href="#mozTocId438135">アクセラレータキーを使って便利に操作する</a></li>
 <li><a href="#mozTocId123770">外部リンク（関連情報）</a></li>
 </ol>
-<br>
+&ensp;
 <h3><a name="mozTocId341312" class="mozTocH3"></a> MATE とは何ですか？</h3>
 MATE とは、GNOME のバージョン２の外観（ルック）や操作性（フィール）を引き継いだデスクトップ環境です。
 <p>
@@ -45,34 +47,31 @@ GNOME バージョン２から派生しましたが、２０１７年に公表�
       * Gedit　→　 Pluma<br>
       * Eye of GNOME　→　 Eye of MATE<br>
       * Evince　→　 Atril<br>
-      * File Roller　→　Engrampa<br>
-      <br>
+      * File Roller　→　Engrampa
+
       <h3><a name="mozTocId198482" class="mozTocH3"></a> MATE 公式サイトへのリンク</h3>
       -MATE 公式ウェブサイト　<a href="https://mate-desktop.org/ja/" moz-do-not-send="true">https://mate-desktop.org/ja/</a><br>
-      -MATE 公式 Wiki　<a href="https://wiki.mate-desktop.org/" moz-do-not-send="true">https://wiki.mate-desktop.org/</a><br>
-      <br>
-      <h3><a name="mozTocId347970" class="mozTocH3"></a> MATE
-        デスクトップをインストルする方法は？</h3>
+      -MATE 公式 Wiki　<a href="https://wiki.mate-desktop.org/" moz-do-not-send="true">https://wiki.mate-desktop.org/</a>
+
+      <h3><a name="mozTocId347970" class="mozTocH3"></a> MATE デスクトップをインストルする方法は？</h3>
       次のウェブサイトで、各 Linux ディストリビューションごとのインストール手順が公開されているので、それに従ってください。<br>
-      　<a href="https://wiki.mate-desktop.org/#!pages/download.md">https://wiki.mate-desktop.org/download</a><br>
-      <br>
-      <h3><a name="mozTocId937822" class="mozTocH3"></a>メニューの追加や編集は出来ないの
-        ですか？</h3>
-      Mozo は MATE
-      用の使いやすいメニュー編集用ツール（メニューエディタ）で、新規のエントリやメニューの追加や編集を行えます。これは、GNOME2
-      に標準で含まれていたメニューエディタ Alacarte を MATE 用にリネームしたものです。Linux
-      ディストリビューションによっては、インストール時に含まれていないことがあります。例えば、Debian Stretch
+      　<a href="https://wiki.mate-desktop.org/#!pages/download.md">https://wiki.mate-desktop.org/download</a>
+
+      <h3><a name="mozTocId937822" class="mozTocH3"></a>メニューの追加や編集は出来ないのですか？</h3>
+      Mozo は MATE 用の使いやすいメニュー編集用ツール（メニューエディタ）で、新規のエントリやメニューの追加や編集を行えます。これは、GNOME2
+      に標準で含まれていたメニューエディタ Alacarte を MATE 用にリネームしたものです。Linux ディストリビューションによっては、
+      インストール時に含まれていないことがあります。例えば、Debian Stretch
       で標準的なインストールを行った場合、これを追加インストールすることが必要です。Debian では、次のコマンドでインストールします。<br>
       <br>
       # apt install mozo<br>
       <br>
       インストールしたら、再ログイン後にメニューエディタの利用が有効となります。メニューを右クリックして [編集] を選択するか、あるいは
-      [システム] &gt; [コントロールセンター] &gt; [メイン・メニュー] を選択します。<br>
-      <br>
+      [システム] &gt; [コントロールセンター] &gt; [メイン・メニュー] を選択します。
+
 <h3><a name="mozTocId564382" class="mozTocH3"></a>「ごみ箱」が見つかりません</h3>
 <p>通常のインストールでは、デスクトップに「ゴミ箱」は作られません。代わりに、Caja マネージャのフォルダリストにゴミ箱が表示されます。
-パネルを右クリックして、メニューの中からゴミ箱を選択すると、パネル内へ追加することもできます。</p>
-
+パネルを右クリックして、メニューの中からゴミ箱を選択すると、パネル内へ追加することもできます。
+</p>
 【デスクトップにゴミ箱のアイコンを置く手順】<br>
 ２通りのやり方があります。<br>
 まず１つ目はコマンドラインから GSettings を使って設定する方法です。参照外部リンク: <a href="https://wiki.archlinux.jp/index.php/MATE">https://wiki.archlinux.jp/index.php/MATE</a>
@@ -104,7 +103,7 @@ $ gsettings set org.mate.caja.desktop trash-icon-visible true<br>
 この操作後に追加で 4,891 kB のディスク容量が消費されます。<br>
 続行しますか? [Y/n]<br>
 </details>
-<br>
+
 <h3><a name="mozTocId479376" class="mozTocH3"></a>言語入力ツールバーが邪魔なのでパネルに収納したい</h3>
 日本語入力メソッド用のツールバー（IMEツールバーと呼べるもの）がデスクトップの画面上にあると、操作の邪魔になることがあります。作業ウィンドウ内
 にこのツールバーが表示されて困るときには、次のコマンドでパネル（システムトレイの通知エリア）の中へ表示させることが可能です（以下は 
@@ -119,19 +118,18 @@ hoge@debian:~$ uim-toolbar-gtk3-systray &amp;<br>
 <br>
 [参考サイト]<br>
 ・Uim を使って日本語を入力 - ArchWiki - <a href="https://wiki.archlinux.jp/index.php/Uim_を使って日本語を入力#uim-toolbar-gtk-systray">https://wiki.archlinux.jp/index.php/Uim_を使って日本語を入力#uim-toolbar-gtk-systray</a> <br>
-・＠IT：Anthyの状態を表示するには - <a href="https://www.atmarkit.co.jp/flinux/rensai/linuxtips/771anthystats.html">https://www.atmarkit.co.jp/flinux/rensai/linuxtips/771anthystats.html</a> <br>
-<br>
+・＠IT：Anthyの状態を表示するには - <a href="https://www.atmarkit.co.jp/flinux/rensai/linuxtips/771anthystats.html">https://www.atmarkit.co.jp/flinux/rensai/linuxtips/771anthystats.html</a>
+
 <h3><a name="mozTocId694469" class="mozTocH3"></a>Brisk Menu とは何ですか？</h3>
-MATE 
-デスクトップ向けに開発されたメニューの操作性を向上させるためのアプレットです。パネル用の追加オプションとして提供されています。Windows 
+MATE デスクトップ向けに開発されたメニューの操作性を向上させるためのアプレットです。パネル用の追加オプションとして提供されています。Windows 
 デスクトップでよく見かけるように、メニューアイコンとパネルをウィンドウのボトムだけに配置したいときは、Brisk Menu の利用が向いています。このアプレットは、<meta http-equiv="content-type" content="text/html; charset=UTF-8"><span class="escaped">mate-applet-brisk-menu としてバイナリパッケージが配布されています。</span><br>
-<br>
+&ensp;<br>
 Brisk Menu ですぐに分かるような特徴は次のようなものがあります。<br>
 <br>
 ・メニューは Super キー（Windouws キー）で起動します。<br>
 ・お気に入りメニューに登録できます。<br>
-・メニューの編集が可能です（右クリックで編集可能）。<br>
-<br>
+・メニューの編集が可能です（右クリックで編集可能）。
+
 <h3><a name="mozTocId823024" class="mozTocH3"></a>Brisk Menu を利用するには？</h3>
 通常の MATE デスクトップインストールでは Brisk Menu が標準ではないので、次のような作業が必要です。<br>
 <br>
@@ -140,12 +138,12 @@ Brisk Menu ですぐに分かるような特徴は次のようなものがあり
 3. メインメニュー上で右クリックして、メインメニューの「削除」を実行します。<br>
 4. パネル上で右クリックして表示されたメニューから、Brisk Menuを選択します。各アイコンの配置は右クリックして表示される「移動」で行えます。<br>
 <br>
-なお、Brisk Menu を辞めて標準に戻るには、パネルのコンテキストメニューより「Reset Panel」を実行します。<br>
-<br>
+なお、Brisk Menu を辞めて標準に戻るには、パネルのコンテキストメニューより「Reset Panel」を実行します。
+
 <h3><a name="mozTocId46856" class="mozTocH3"></a>マウスボタンで音声をすぐミュートできますか？ (1.8-)</h3>
 はい。パネルにある音量アプレット（スピーカのアイコン）上で中マウスボタンをクリックするとミュートに切り替わります。もう一度クリックするとミュートが解除され、元の音量に戻ります。<br>
-これは、MATE 1.8 で追加された新機能です。<br>
-<br>
+これは、MATE 1.8 で追加された新機能です。
+
 <h3><a name="mozTocId830888" class="mozTocH3"></a>おさかな君ワンダがフォーチュンを表示してくれません</h3>
 フォーチュンクッキーを表示するには、fortune プログラムのインストールが必要です（下記は Debian 10 の場合）。<br>
 <br>
@@ -166,13 +164,13 @@ Brisk Menu ですぐに分かるような特徴は次のようなものがあり
 <br>
 これによって、次のコマンドを使うとフォーチュンを表示してくれるようになります。表示されるフォーチュンは、フォーチュンファイル集からランダムで選ばれたエピグラムです。<br>
 <br>
-hoge@debian:~$ fortune <br>
-<br>
+hoge@debian:~$ fortune
+
       <h3><a name="mozTocId8856" class="mozTocH3"></a>Debian Stretch
         MATE に関する Tips</h3>
       Debian 9 (Stretch) に MATE デスクトップ環境をインストールした方は、<a href="../distributions/debian/stretch/index.html#mozTocId458983">Debian
-        Stretch MATE に関する Tips</a> の項目に Debian 特有の Tips があります。<br>
-<br>
+        Stretch MATE に関する Tips</a> の項目に Debian 特有の Tips があります。
+
 <h3><a name="mozTocId438134" class="mozTocH3"></a>使っている MATE のバージョンを確認する方法は？</h3>
 MATE コンポーネントの 1 つである mate-desktop には、mate-about プログラムが含まれています。mate-about
  プログラムは、MATE 
@@ -180,12 +178,15 @@ MATE コンポーネントの 1 つである mate-desktop には、mate-about �
 <br>
 &nbsp;$ mate-about<br>
 <br>
-&nbsp;出典: <a moz-do-not-send="true" href="https://packages.debian.org/ja/bullseye/mate-desktop">https://packages.debian.org/ja/bullseye/mate-desktop</a><br>
-<br>
+&nbsp;出典: <a moz-do-not-send="true" href="https://packages.debian.org/ja/bullseye/mate-desktop">https://packages.debian.org/ja/bullseye/mate-desktop</a>
+
+<h3><a name="mozTocId438135" class="mozTocH3"></a>アクセラレータキーを使って便利に操作する</h3>
+この解説は別のページにある項目と共通なので、「<a href="gnome.html#content_1_20">アクセラレータキーを使って便利に操作する</a>」を見てください。
+
 <h3><a name="mozTocId123770" class="mozTocH3"></a>外部リンク（関連情報）</h3>
 ・ArchWiki による MATE の解説、ヒントとテクニックのページ -- <a href="https://wiki.archlinux.jp/index.php/MATE">https://wiki.archlinux.jp/index.php/MATE</a><br>
 ・2ch Linux版 MATEデスクトップ環境 -- <a href="https://mao.5ch.net/test/read.cgi/linux/1331341182/">https://mao.5ch.net/test/read.cgi/linux/1331341182/</a> <meta http-equiv="content-type" content="text/html; charset=UTF-8"><br>
-      <br>
+&ensp;<br>
       <hr width="100%" size="2"><a href="../../index.html">HOME</a>
-
 </body></html>
+
