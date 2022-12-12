@@ -1,105 +1,102 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
   <head>
-    <meta content="text/html; charset=Shift_JIS"
-      http-equiv="Content-Type">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <title>general topics on WirelessLan - Linux on the Desktop</title>
   </head>
   <body>
     <div id="navigator">
-      <p><a href="../../index.html" title="FrontPage (2d)">HOME</a> / <a
-          href="index.html">Hardware</a> / <a href="wavelan.html">Wavelan
+<div><div style="text-align: right; float:right;">Last updated: 2022/12/12 09:50 JST</div>
+<a href="../../index.html">Hardware</a> / <a href="wavelan.html">Wavelan</div>
+<hr size="1" width="100%">
 
-        </a><br>
-      </p>
-      <hr size="2" width="100%">
-      <h2 id="content_1_0"><a class="mozTocH2" name="mozTocId873654"></a>��
-        �� LAN�i���C�����XLAN�j�Ɋւ����ʓI�� Tips</h2>
-      ���̃y�[�W�ł́ALinux ���Ŗ���LAN��ݒ肷��ꍇ�̈�ʓI�� Tips �������܂��B -- Last updated:
+      <h2 id="content_1_0"><a class="mozTocH2" name="mozTocId873654"></a>無
+        線 LAN（ワイヤレスLAN）に関する一般的な Tips</h2>
+      このページでは、Linux 環境で無線LANを設定する場合の一般的な Tips を扱います。 -- Last updated:
       Nov.20, 2020<br>
       <ul id="mozToc">
         <!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
-        <li><a href="#mozTocId873654">���� LAN�i���C�����XLAN�j�Ɋւ����ʓI�� Tips</a>
+        <li><a href="#mozTocId873654">無線 LAN（ワイヤレスLAN）に関する一般的な Tips</a>
           <ul>
             <li>
               <ul>
-                <li><a href="#mozTocId789772">�C�[�T�l�b�g�R���o�[�^�i����LAN���p�@�j���g��</a></li>
-                <li><a href="#mozTocId243885">Linux �Ή����͂ǂ��œ���ł��܂����B</a></li>
-                <li><a href="#mozTocId728567">�g���Ă��閳��LAN�J�[�h�̏��𒲂ׂ�� �́H</a></li>
-                <li><a href="#mozTocId958824">����LAN�Őڑ��ݒ肷�邽�߂̊�{�I�ȃc�[���́H </a></li>
-                <li><a href="#mozTocId304651">Wireless Tools �̐ݒ���@�ɂ��� </a></li>
+                <li><a href="#mozTocId789772">イーサネットコンバータ（無線LAN中継機）を使う</a></li>
+                <li><a href="#mozTocId243885">Linux 対応情報はどこで入手できますか。</a></li>
+                <li><a href="#mozTocId728567">使っている無線LANカードの情報を調べるに は？</a></li>
+                <li><a href="#mozTocId958824">無線LANで接続設定するための基本的なツールは？ </a></li>
+                <li><a href="#mozTocId304651">Wireless Tools の設定方法について </a></li>
                 <li><a href="#mozTocId699455">Wireless Tools
-                    �ȊO�̐ݒ�c�[���ɂ��� </a></li>
+                    以外の設定ツールについて </a></li>
               </ul>
             </li>
           </ul>
         </li>
       </ul>
       <br>
-      <h3><a name="mozTocId789772" class="mozTocH3"></a>�C�[�T�l�b�g�R���o�[�^�i����
-        LAN���p�@�j���g��</h3>
-      ���̃^�C�v�̋@��̓��[�^�[����̖�����ϊ����āA�p�\�R���̗L���p�[�q�ł��� LAN�R�l�N�^�[�iRJ-45
-      �ƌĂ΂��K�i�̃|�[�g�j�ւ̐ڑ����\�ɂ��܂��B����LAN�R���o�[�^�A���C�����XLAN�R���o�[�^�AWi-Fi�R���o�[�^�Ȃǂ̖��̂ł��̔�����Ă�
-      �܂��B�����̃��[�J�[���琻�i����������Ă��āABUFFALO�А� WEX-G300 <a
+      <h3><a name="mozTocId789772" class="mozTocH3"></a>イーサネットコンバータ（無線
+        LAN中継機）を使う</h3>
+      このタイプの機器はルーターからの無線を変換して、パソコンの有線用端子である LANコネクター（RJ-45
+      と呼ばれる規格のポート）への接続を可能にします。無線LANコンバータ、ワイヤレスLANコンバータ、Wi-Fiコンバータなどの名称でも販売されてい
+      ます。複数のメーカーから製品が発売されていて、BUFFALO社製 WEX-G300 <a
         href="https://www.buffalo.jp/product/detail/wex-g300.html">https://www.buffalo.jp/product/detail/wex-g300.html</a>
-      �͂��̈��ł��i2020�N11��20�����݁j�B<br>
+      はその一例です（2020年11月20日現在）。<br>
       <br>
-      ����LAN��������Ȃ��f�X�N�g�b�v�^�p�\�R���ŗ��p����ƕ֗��ł����A�m�[�g�^�p�\�R���ł����p�ł���̂Ŕėp��������܂��B
-      Windows �Ƃ� Linux �Ƃ��Ƃ����� OS �̈Ⴂ�ɂ��e�����󂯂܂���B�Ƃ��ɁA�m�[�g�^�̓�������LAN �� Linux
-      ��Ή��̏ꍇ�ł����Ă��A���S���Ė���LAN ���\�z���邱�Ƃ��\�ɂȂ�܂��B���������i�ɂ���Ă͏����ݒ��
-      Windows�p�\�R������s���d�l�ɂȂ��Ă���ꍇ������̂Ŏ戵�������őO�����Ċm�F���邱�Ƒ�؂ł��B<br>
+      無線LANを内蔵しないデスクトップ型パソコンで利用すると便利ですが、ノート型パソコンでも利用できるので汎用性があります。
+      Windows とか Linux とかといった OS の違いによる影響を受けません。とくに、ノート型の内蔵無線LAN が Linux
+      非対応の場合であっても、安心して無線LAN を構築することが可能になります。ただし製品によっては初期設定を
+      Windowsパソコンから行う仕様になっている場合があるので取扱説明書で前もって確認すること大切です。<br>
       <br>
-      ���Ȃ݂ɁA�ȑO�o�b�t�@���[�А��� WLI2-TX1-G54
-      ����肵�����Ƃ�����܂��B����͂��łɔp�Ԃ̐��i�ł��B�����������Ė{�̂𕪉������Ƃ���A�����ɂ͖���LAN�J�[�h�iWLI-PCM-L11G�j���}
-      ������Ă���̂�����܂����B�܂�ȒP�ɂ����΁A�����I�ɂ͖���LAN�J�[�h�Ǝ����d�g�݂ŁA�C���^�[�t�F�[�X���قȂ邾���ƍl�����番��
-      ��₷���Ǝv���܂��B<br>
+      ちなみに、以前バッファロー社製の WLI2-TX1-G54
+      を入手したことがあります。これはすでに廃番の製品です。興味があって本体を分解したところ、内部には無線LANカード（WLI-PCM-L11G）が挿
+      入されているのが判りました。つまり簡単にいえば、内部的には無線LANカードと似た仕組みで、インターフェースが異なるだけと考えたら分か
+      りやすいと思います。<br>
       <br>
       <h3 id="content_1_2"><a class="mozTocH3" name="mozTocId243885"></a>Linux
 
-        �Ή����͂ǂ��œ���ł��܂����B</h3>
+        対応情報はどこで入手できますか。</h3>
       <ul class="list1" style="padding-left: 16px; margin-left: 16px;">
-        <li>�l�X�ȍŐV���́A���̃T�C�g�i�p��T�C�g�j�ɏW�񂳂ꂨ��A���ʂ��L�x�ł��B<br>
+        <li>様々な最新情報は、次のサイト（英語サイト）に集約されおり、情報量が豊富です。<br>
           the official Linux Wireless wiki<br>
           <a href="http://linuxwireless.org/">http://linuxwireless.org/</a></li>
-        <li>���{����ɂ��Ă͕������̃y�[�W���𗧂��܂��B<br>
+        <li>日本語情報については武藤氏のページが役立ちます。<br>
           <a
-href="http://kmuto.jp/open.cgi?%E7%84%A1%E7%B7%9ALAN%E5%8B%95%E4%BD%9C%E7%8A%B6%E6%B3%81&amp;l=jp">[��
-            ��LAN�����]-&gt;-[����LAN�A�_�v�^�Ή���]</a></li>
+href="http://kmuto.jp/open.cgi?%E7%84%A1%E7%B7%9ALAN%E5%8B%95%E4%BD%9C%E7%8A%B6%E6%B3%81&amp;l=jp">[無
+            線LAN動作状況]-&gt;-[無線LANアダプタ対応状況]</a></li>
         <li><a href="http://wiki.debian.org/WiFi">Debian Wireless
-            Fidelity</a> �i�L�v�ȏ�񂪑����A�����N����[���j</li>
+            Fidelity</a> （有益な情報が多く、リンク先も充実）</li>
         <li><a href="http://www12.atwiki.jp/linux2ch/?NetWorksFAQs"
             title="2chLinux:NetWorksFAQs">2chLinux:NetWorksFAQs</a> -
-          2ch Linux �̓��{�� FAQ �W�̃y�[�W</li>
+          2ch Linux の日本語 FAQ 集のページ</li>
       </ul>
-      <div class="jumpmenu"><a href="#navigator">��</a></div>
-      <h3><a class="mozTocH3" name="mozTocId728567"></a>�g���Ă��閳��LAN�J�[�h�̏��
-        �𒲂ׂ�� �́H</h3>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
+      <h3><a class="mozTocH3" name="mozTocId728567"></a>使っている無線LANカードの情報
+        を調べるに は？</h3>
       $ lspci<br>
-      ��r�I�V�����}�V���ł� -nn �I�v�V������t�������̃R�}���h�ŊȌ��ȕ\�����\�ł��B<br>
+      比較的新しいマシンでは -nn オプションを付けた次のコマンドで簡潔な表示が可能です。<br>
       $ lspci -nn | grep Network<br>
-      �\���������@***:Broadcom Corporation BCM4318<br>
-      ���̏ꍇ�ɂ́Abcm43xx �Ƃ����`�b�v�ɑΉ�����t�@�[���E�F�A����肷��Ηǂ��Ƃ������ƂɂȂ�܂��B<br>
+      表示される一例　***:Broadcom Corporation BCM4318<br>
+      この場合には、bcm43xx というチップに対応するファームウェアを入手すれば良いということになります。<br>
       <br>
-      �ڑ��@�킪 USB �Őڑ�����Ă���ꍇ�ɂ́A���̃R�}���h�������Ɨǂ��ł��傤�B<br>
+      接続機器が USB で接続されている場合には、次のコマンドを試すと良いでしょう。<br>
       $ lsusb<br>
       <br>
-      �܂��A�O���t�B�J���ȃc�[���Ƃ��ẮASystem-Profiler �� Hardware Lister
-      ����r�I�����₷���Ǝv���܂��B<br>
+      また、グラフィカルなツールとしては、System-Profiler や Hardware Lister
+      が比較的扱いやすいと思います。<br>
       <br>
-      <a href="#navigator">��</a><br>
+      <a href="#navigator">↑</a><br>
       <span class="noexists"></span>
       <h3 id="content_1_4"><a class="mozTocH3" name="mozTocId958824"></a><span
-          class="noexists">����LAN�Őڑ��ݒ肷�邽�߂̊�{�I�ȃc�[���́H<br>
+          class="noexists">無線LANで接続設定するための基本的なツールは？<br>
         </span></h3>
       Linux
-      �f�B�X�g���r���[�V�����͑����̎�ނ�����A���ꂼ��̃f�B�X�g���r���[�V�������R�}���h���C������A���邢�̓O���t�B�J���ɑ���\�Ȑݒ�
-      �c�[����p�� ���Ă��܂��B�ݒ�c�[���̒��ɂ́A���̃f�B�X�g���r���[�V�����p�ɓƎ��ɊJ�����ꂽ���̂���������܂��B<br>
+      ディストリビューションは多くの種類があり、それぞれのディストリビューションがコマンドラインから、あるいはグラフィカルに操作可能な設定
+      ツールを用意 しています。設定ツールの中には、そのディストリビューション用に独自に開発されたものも多くあります。<br>
       <br>
-      �uWireless Tools�v�́ALinux �ō̗p����Ă���W���I�Ȑݒ�c�[���ł��̂ŁA����𐄏����܂��BGNOME �� KDE
-      �f�X�N�g�b�v���ł́ANetworkManager
-      ���t�����Ă��܂��B�x���_�[�Ǝ��̃O���t�B�J���Ȑݒ�c�[���̒��ɂ́A���ɂ���Ă͐���ɓ��삵�Ȃ����ꂪ����̂Œ��ӂ��v��܂��B<br>
+      「Wireless Tools」は、Linux で採用されている標準的な設定ツールですので、これを推奨します。GNOME や KDE
+      デスクトップ環境では、NetworkManager
+      が付属しています。ベンダー独自のグラフィカルな設定ツールの中には、環境によっては正常に動作しない恐れがあるので注意が要ります。<br>
       <br>
-      �E�Q�l "Wireless Tools for Linux" - <a
+      ・参考 "Wireless Tools for Linux" - <a
         href="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html">http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html</a>
       ---""The Wireless Tools (WT) is a set of tools allowing to
       manipulate the Wireless Extensions. They use a textual interface
@@ -108,67 +105,67 @@ href="http://kmuto.jp/open.cgi?%E7%84%A1%E7%B7%9ALAN%E5%8B%95%E4%BD%9C%E7%8A%B6%
       Extensions, however Wireless Tools is the reference
       implementation.""<br>
       <br>
-      <div class="jumpmenu"><a href="#navigator">��</a></div>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_5"><a class="mozTocH3" name="mozTocId304651"></a>Wireless
 
-        Tools �̐ݒ���@�ɂ���<br>
+        Tools の設定方法について<br>
       </h3>
-      �ڑ�����C���^�[�t�F�[�X�����m�F������ł��ꂼ��ɉ����āA/etc/network/interfaces
-      �Ƃ����t�@�C���Ɉȉ��̂悤�ȏ����ŋL�q���܂��B�C���^�[�t�F�[�X���́A�g����J�[�l���h���C�o�[�ɂ���� eth1 �� wlan0 ��
-      ath0 �� wifi0 ���ƃC���^�[�t�F�[�X�������X�قȂ�܂��B<br>
+      接続するインターフェース名を確認した上でそれぞれに応じて、/etc/network/interfaces
+      というファイルに以下のような書式で記述します。インターフェース名は、使われるカーネルドライバーによって eth1 や wlan0 や
+      ath0 や wifi0 等とインターフェース名が少々異なります。<br>
       <br>
-      ���L�q�Ⴛ��1<br>
+      ■記述例その1<br>
       # my network interface<br>
       allow-hotplug eth0<br>
       iface eth0 inet dhcp<br>
       <br>
-      ���L�q�Ⴛ��1-2�i�C���^�[�t�F�[�X���� wlan0 �̏ꍇ�j<br>
+      ■記述例その1-2（インターフェース名が wlan0 の場合）<br>
       # my network interface<br>
       allow-hotplug wlan0<br>
       iface wlan0 inet dhcp<br>
       <br>
-      ���L�q�Ⴛ��2<br>
+      ■記述例その2<br>
       auto eth1<br>
       iface eth1 inet dhcp<br>
       <br>
-      ���L�q�Ⴛ��3<br>
+      ■記述例その3<br>
       auto wlan0<br>
       iface wlan0 inet dhcp<br>
       <br>
-      ���L�q�Ⴛ��4<br>
+      ■記述例その4<br>
       auto wlan0<br>
       iface wlan0 inet dhcp<br>
       wireless-essid [ESSID]<br>
       wireless-mode [MODE]<br>
       <br>
-      ���L�q�Ⴛ��5<br>
+      ■記述例その5<br>
       auto wlan0<br>
       iface wlan0 inet dhcp<br>
       wpa-ssid mynetworkname<br>
       wpa-psk mysecretpassphrase<br>
       <br>
-      �ڂ����́A"How to use a WiFi interface" ���Q�Ƃ��Ă��������B<br>
+      詳しくは、"How to use a WiFi interface" を参照してください。<br>
       <a href="http://wiki.debian.org/WiFi/HowToUse#Command_Line">http://wiki.debian.org/WiFi/HowToUse#Command_Line</a><br>
       &gt; <a href="http://wiki.debian.org/WiFi/HowToUse">http://wiki.debian.org/WiFi/HowToUse<br>
-      </a>���邢�́ADebian ���t�@�����X�u�l�b�g���[�N�̐ݒ�v�ɂ��ڂ������������܂��B<br>
+      </a>あるいは、Debian リファレンス「ネットワークの設定」にも詳しい解説があります。<br>
       <a
         href="http://www.debian.org/doc/manuals/debian-reference/ch05.ja.html">http://www.debian.org/doc/manuals/debian-reference/ch05.ja.html</a><br>
       <br>
-      <div class="jumpmenu"><a href="#navigator">��</a></div>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <h3 id="content_1_6"><a class="mozTocH3" name="mozTocId699455"></a>Wireless
 
-        Tools �ȊO�̐ݒ�c�[���ɂ���<br>
+        Tools 以外の設定ツールについて<br>
       </h3>
-      Wireless Tools �ȊO�ŁA�O���t�B�J���ɑ���\�Ȑݒ�c�[�����������Љ�Ă����܂��B<br>
+      Wireless Tools 以外で、グラフィカルに操作可能な設定ツールをいくつか紹介しておきます。<br>
       <br>
-      �ENetworkManager - <a
+      ・NetworkManager - <a
 href="https://access.redhat.com/knowledge/docs/ja-JP/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-NetworkManager.html">https://access.redhat.com/knowledge/docs/ja-JP/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-NetworkManager.html<br>
-      </a>�EKWiFiManager - <a
+      </a>・KWiFiManager - <a
         href="http://kwifimanager.sourceforge.net/">http://kwifimanager.sourceforge.net/</a><br>
       <br>
-      <div class="jumpmenu"><a href="#navigator">��</a></div>
+      <div class="jumpmenu"><a href="#navigator">↑</a></div>
       <br>
-      <hr size="2" width="100%"><a href="../../index.html">HOME</a>
+      <hr size="1" width="100%"><a href="../../index.html">HOME</a>
       <p><br>
       </p>
     </div>
