@@ -4,7 +4,7 @@
 <title>MX Linux FAQs and Tips - Linux on the Desktop</title>
 </head>
 <body>
-<div><div style="text-align: right; float:right;">Last updated: 2022-10-02 14:03 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2022-12-30 16:48 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Linux distributions</a> / MX Linux</div>
 <hr width="100%">
 <h2>MX Linux</h2>
@@ -24,8 +24,15 @@ MX Linux に関する FAQ/Tips のページです。
     <li><a href="#11">次期メジャーバージョンへのアップグレード方法は？</a></li>
     <li><a href="#12">MX ツール (MX Tools) について</a></li>
     <li><a href="#13">Debian に MX ツールを入れることは可能ですか？</a></li>
-    <li><a href="#14">MX Respin（非公式スナップショット）について</a></li>
-    <li><a href="#15">ニュース記事など (外部リンク)</a></li>
+    <li><a href="#14">Live USB として便利に使うための色々な Tips & FAQ</a>
+      <ul>
+       <li><a href="#14-1">Live USB に作成したデータを保存したい</a></li>
+       <li><a href="#14-2">Live USB にデータが保存できません</a></li>
+       <li><a href="#14-3">オプションのパーシステンスとは何ですか？</a></li>
+       </ul>
+    </li>
+    <li><a href="#15">MX Respin（非公式スナップショット）について</a></li>
+    <li><a href="#16">ニュース記事など (外部リンク)</a></li>
   </ol>
 </blockquote>
 
@@ -148,7 +155,24 @@ Topic: Adding MX Linux tools to Debian<br>
 <p>
 手間をかけて Debian に MX ツールを入れることは可能ですが、これは視点を変えて見ると、MX Linux をインストールした上で Debian の資産を利用するのと結局は同じことだと言えるでしょう。なぜなら、MX Linux と Debian は基本的なリポジトリを共有しているからです。
 </p>
-<h3><a name="14">MX Respin（非公式スナップショット）について</h3>
+
+<h3><a name="14"></a>Live USB として便利に使うための色々な Tips & FAQ</h3>
+<ul>
+<h4><a name="14-1">Live USB に作成したデータを保存したい</h4>
+<p>Live CD は従来から各種のディストリビューションから提供されていますが、パソコンへインストールする前段階のテスト用途という意味合いが強かったように思われます。このデモ用の環境で作成した文書や画像、ビデオファイルは RAM 上のデータとして一時的に保存されているだけなので、パソコンをシャットダウンすると全て消えてしまいます。そのため、そのためどうしても残したい場合は外部メディアへ退避する必要があるという面倒な作業が必要でした。その準備ができない環境ではデータの保存は困難になります。
+</p><p>
+ところが、MX Linux では従来のような書き込み不可能な Live CD/USB とは異なり、書き込みも可能なフル機能を持つ Live USB を提供しています。この書き込み可能な Live USB 作成するには、MX Live USB Maker を使ってください。MX Live USB Maker は MX Linux 専用の Live USB 作成ツールです。
+</p><p>
+したがって、それ以外のディストリビューションの ISO イメージファイルを用いてフル機能の Live USB を作成しようとしてもサポートしていません。読み取りのみ可能な Live USB であれば作成することができます。
+</p>
+<h4><a name="14-2">Live USB にデータが保存できません</h4>
+上の項目で説明してある手順で正しい Live USB を作成してください。<br>
+それでもデータの保存ができない場合は、保存先の場所（ディレクトリ）を間違っている可能性がありす。正しく作成された MX Live USB では、ユーザーのホームディレクトリである /home/demo の中に Live-usb-storage という特別なディレクトリが存在します。ここへ保存してください。 /home/demo 直下にデータを一時保存しても、シャットダウン後は自動的に消去されます。
+
+<h4><a name="14-3">オプションのパーシステンスとは何ですか？</a></h4>
+パーシステンス（persistence）という用語はつふう「永続性」と訳されますが、ここで指しているパーシステンスは、具体的には永久的なデータ保持（保存）という意味です。通常のライブ USB は電源を切ればデスクトップ上のシステム設定やデータが全て消えてしまいますが、このオプションを使えばすべて USB メモリの中に保存可能です。次回起動したときにも、直前の状態を再現することができます。
+
+<h3><a name="15">MX Respin（非公式スナップショット）について</h3>
 MX コミュニティによって作成された非公式なスナップショットが、各種配布されています。MX Linux による公式なサポートはありません。<br>
 <a href="https://sourceforge.net/projects/mx-linux/files/Community_Respins/">https://sourceforge.net/projects/mx-linux/files/Community_Respins/</a>
 <p>
@@ -158,7 +182,7 @@ MX コミュニティによって作成された非公式なスナップショ�
 <a href="https://sourceforge.net/projects/mx-respin-iso/">https://sourceforge.net/projects/mx-respin-iso/</a>
 </blockquote>
 
-<h3><a name="15"></a>ニュース記事など (外部リンク)</h3>
+<h3><a name="16"></a>ニュース記事など (外部リンク)</h3>
 レビュー記事 <a href="https://fosspost.org/mx-linux-21-review-best-distribution-2021/">https://fosspost.org/mx-linux-21-review-best-distribution-2021/</a> (FossPost.org)<br>
 ウィキペディア記事　<a href="https://ja.wikipedia.org/wiki/MX_Linux">https://ja.wikipedia.org/wiki/MX_Linux</a><br>
 DistroWatch <a href="https://distrowatch.com/table.php?distribution=mx">https://distrowatch.com/table.php?distribution=mx</a><br>
