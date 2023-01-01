@@ -4,7 +4,7 @@
 <title>MX Linux FAQs and Tips - Linux on the Desktop</title>
 </head>
 <body>
-<div><div style="text-align: right; float:right;">Last updated: 2022-12-31 19:11 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2023-01-01 23:07 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Linux distributions</a> / MX Linux</div>
 <hr width="100%">
 <h2>MX Linux</h2>
@@ -30,6 +30,7 @@ MX Linux に関する FAQ/Tips のページです。
        <li><a href="#14-2">Live USB にデータが保存できません</a></li>
        <li><a href="#14-3">詳細オプション (Advanced Options) のパーシステンスとは何ですか？</a></li>
        <li><a href="#14-4">MX Live でパーシステンスを利用するときの代表的なタイプ</a></li>
+       <li><a href="#14-5">Dynamic パーシステンス、Static パーシステンスとは何ですか？</a></li>
        </ul>
     </li>
     <li><a href="#15">MX Respin（非公式スナップショット）について</a></li>
@@ -199,6 +200,12 @@ root 以下のシステムファイルの変更を一切許可しないので、
 　-- <a href="https://download.tuxfamily.org/antix/docs-antiX-17/FAQ/persistence.html">https://download.tuxfamily.org/antix/docs-antiX-17/FAQ/persistence.html</a><br>
 　-- <a href="https://github.com/BitJam/antiX-Gfxboot/blob/master/Help/MX/en.html">https://github.com/BitJam/antiX-Gfxboot/blob/master/Help/MX/en.html</a><br>
 　サイト内資料ページ: <a href="en.html#persist+frugal">en.html#persist+frugal</a>
+</p>
+<h4><a name="14-5">Dynamic パーシステンス、Static パーシステンスとは何ですか？</h4>
+<p>Dynamic パーシステンスは「動的永続性」、Static パーシステンスは「静的永続性」という訳語を当てるのかもしれませんが、これでは理解しにくいと思います。<br>
+Live USB においては、RAM に一時的保存した情報をシャットダウン／再起動時に USB メモリに書き込んで保存することが動的永続性だといえます。動的永続性では、保存を行なわない限り、一時的保存したデータは消去されます。一方、静的永続性においては書き込んだデータはその都度、永続性デバイスに保存するのでデータの損失をより回避できます。その結果、ユーザーにとって利便性が向上します。
+</p><p>
+システムデータは動的永続性または静的永続性を選択出来ますが、ユーザーが自分のホームディレクトリ /home/demo/ に保存したデータは常に静的永続性です。そして、MX Linux 環境で作成した Live USB では書き込み可能な機能を持つ Live USB が作成可能なので、パーシステンス設定の有無に関わらず、 /home/demo/Live-usb-storage あるデータはシャットダウン後も保存できます。
 </p>
 <h3><a name="15">MX Respin（非公式スナップショット）について</h3>
 MX コミュニティによって作成された非公式なスナップショットが、各種配布されています。MX Linux による公式なサポートはありません。<br>
