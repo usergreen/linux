@@ -1,0 +1,98 @@
+Run custom code before reading boot codes: /live/custom/MX/0.sh
+Translate to ja
+Set font to Uni2-VGA16
+setfont /live/locale/fonts/Uni2-VGA16.psf -C /dev/console
+New screen width 80
+=== initrd bootstrap ==================================================
+initrd init started at 0.17 seconds
+Coldplug loop pid: 128
+Welcome to MX 21 (Wildflower) 64-bit!
+  BusyBox v1.31.1 (2021-02-03 15:54:12 MST) multi-call binary.
+  ntfs-3g 2017.3.23AR.3 integrated FUSE 28
+           initrd version: 8.30.14-x10
+             initrd built: Sun, 27 Nov 2022 22:25:17 +0000
+             Total Memory:  7870 M
+              Used Memory:    68 M
+             Linux kernel: 5.10.0-20-amd64
+             Screen width: 80
+              Kernel arch: x86_64
+                 Hardware: FUJITSU FMVA52DAWJ
+Current boot codes:
+     BOOT_IMAGE=/antiX/vmlinuz quiet persist_all lang=ja_JP kbd=jp tz=Asia/Tokyo
+Found overlay
+Loading hardware specific modules ...
+Scan usb,cd devices.  Look for boot file(s) antiX/linuxfs
+Filtered devices  /dev/sr0
+Retry for 15 seconds .
+Found new device(s) /dev/sdb2 /dev/sdb1 /dev/sdb /dev/sr0
+mount -t vfat -o umask=000,dmask=002,fmask=113,shortname=winnt,uid=1000,gid=1000 /dev/sdb2 /live/boot-dev
+mount -t ext4 -o ro,noatime /dev/sdb1 /live/boot-dev
+Mounted boot device. Mounted device /dev/sdb1 at /live/boot-dev
+boot device filesystem: ext4
+boot device model: USB Flash Disk
+Spent 2.05 seconds looking for boot file(s) antiX/linuxfs
+loop times: 0.23
+boot device uuid: dc77759f-0550-4bc1-b6ce-123456789abc
+BOOT_MP:    /live/boot-dev
+SQFILE_DEV: /dev/sdb1
+SQFILE_MP   /live/boot-dev
+Initializing random number generator ...
+Saving random seed
+Mount file /live/boot-dev/antiX/linuxfs at /live/linux
+mount -t squashfs -o loop,ro /live/boot-dev/antiX/linuxfs /live/linux
+sqfs_vid: ==== deabf62a261c5e3562f284b782bdd6d3
+LD_PATH: /live/linux/lib:/live/linux/lib/x86_64-linux-gnu:/live/linux/usr/lib
+----------------------------------------------------------------------
+Begin Mount persistence device (if needed)
+Look for persist device with name /dev/sdb1
+Look for file(s) homefs.new homefs rootfs on device(s) /dev/sdb1
+Device /dev/sdb1 is already mounted at /live/boot-dev
+Spent 0.01 seconds looking for persist file(s) antiX/homefs.new antiX/homefs antiX/rootfs
+       persist_mp: /live/boot-dev
+   persist_device: /dev/sdb1
+     persist_uuid: dc77759f-0550-4bc1-b6ce-123456789abc
+Loaded 43 module(s)
+squashfs loop ext4 crc16 mbcache jbd2 nls_ascii vfat fat nls_cp437 hid_generic usbhid hid uas usb_storage sr_mod cdrom sd_mod t10_pi crc_t10dif crct10dif_generic ehci_pci ahci libahci libata scsi_mod sdhci_pci cqhci sdhci xhci_pci xhci_hcd crc32_pclmul crct10dif_pclmul crct10dif_common crc32c_intel mmc_block mmc_core crc32c_generic overlay battery ehci_hcd usbcore usb_common
+precheck filesystem on /dev/sdb1
+Create aufs ram tmpfs at /live/aufs-ram       (6241 MB)
+/bin/mount -t tmpfs -o size=6241m,noatime tmpfs /live/aufs-ram
+precheck filesystem on /live/boot-dev/antiX/rootfs
+----------------------------------------------------------------------
+Begin mount persistence file rootfs at /live/persist-root
+Matching VID found in /live/persist-root/upper/etc/live/version/rootfs.ver
+Put persistent root in RAM (from /live/persist-root)
+              Persistence uses:    15 M
+Copy 15 MiB to RAM ...
+command cp -a /live/persist-root/lost+found /live/persist-root/upper /live/persist-root/work /live/aufs-ram took 0.24 seconds
+                     AUFS uses:    15 M
+              Persistence uses:    15 M
+Copy persistent root to RAM succeeded
+umount /live/persist-root
+Enabled dynamic root persistence
+Mount overlayfs at /live/aufs
+mount -t overlay overlay -o lowerdir=/live/linux,upperdir=/live/aufs-ram/upper,workdir=/live/aufs-ram/work /live/aufs
+Load microcode
+precheck filesystem on /live/boot-dev/antiX/homefs
+----------------------------------------------------------------------
+Begin mount persistence file homefs at /tmp/home
+files in /live/aufs/home: 0
+Enabled home persistence
+Found one video display device
+kill coldplug loop pid: 128
+Create   /media tmpfs at /live/aufs/media     (10 MB)
+/bin/mount -t tmpfs -o size=10m,noatime tmpfs /live/aufs/media
+Create     /run tmpfs at /live/aufs/run       (1111 MB)
+/bin/mount -t tmpfs -o size=1111m,mode=755,nodev,noatime tmpfs /live/aufs/run
+Create    /live tmpfs at /live/aufs/live      (100 MB)
+/bin/mount -t tmpfs -o size=100m,mode=755,noatime tmpfs /live/aufs/live
+Run custom code before: /live/custom/MX/0.sh
+mount --move /live/aufs-ram /live/aufs/live/aufs-ram
+mount --move /live/boot-dev /live/aufs/live/boot-dev
+mount --move /live/linux /live/aufs/live/linux
+Run custom code after: /live/custom/MX/0.sh
+Coldplug loop pid: 1073
+Run custom code before running live init.d scripts: /live/custom/MX/8.sh
+kill coldplug loop pid: 1073
+
+The initrd init program took 9.60 seconds
+======================================================================

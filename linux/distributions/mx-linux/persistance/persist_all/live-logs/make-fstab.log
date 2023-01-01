@@ -1,0 +1,61 @@
+Create new /etc/fstab
+Put 1 hard drive entry into /etc/fstab
+Exit: Swap only
+Exit: add /dev/sda: no filesystem uuid
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Exit: add /dev/sdb: no filesystem uuid
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Remove all dynamic entries from /etc/fstab
+Create new /etc/fstab
+Put 1 hard drive entry into /etc/fstab
+Exit: Swap only
+Exit: add /dev/sda: no filesystem uuid
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Exit: add /dev/sdb: no filesystem uuid
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Remove all dynamic entries from /etc/fstab
+Create new /etc/fstab
+Put 1 hard drive entry into /etc/fstab
+Exit: Swap only
+Exit: add /dev/sda: no filesystem uuid
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Exit: add /dev/sdb: no filesystem uuid
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Remove all dynamic entries from /etc/fstab
+Create new /etc/fstab
+Put 1 hard drive entry into /etc/fstab
+Exit: Swap only
+Exit: add /dev/sda: no filesystem uuid
+Exit: add /dev/sda2: no filesystem uuid
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Exit: add /dev/sdb: no filesystem uuid
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Remove all dynamic entries from /etc/fstab
+Create new /etc/fstab
+Put 1 hard drive entry into /etc/fstab
+Exit: Swap only
+Exit: add /dev/sda: no filesystem uuid
+Exit: add /dev/sda2: no filesystem uuid
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Exit: add /dev/sdb: no filesystem uuid
+Exit: no fstab.hotplug file
+Exit: no fstab.hotplug file
+Remove all dynamic entries from /etc/fstab
+Create new /etc/fstab
+Put 1 hard drive entry into /etc/fstab
+Exit: Swap only

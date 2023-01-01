@@ -1,0 +1,22 @@
+--------------------------------------------------------------------
+persist-save started: 2022-12-27 00:07:26
+Storing volume settings
+Creating mountpoint directory: /live/persist-root
+mounted /live/boot-dev/antiX/rootfs at /live/persist-root.
+ reported rootfs space:  868 MiB
+    total rootfs space:  781 MiB
+     used rootfs space:   15 MiB
+    excluded file size:    1 MiB
+ required rootfs space:   14 MiB
+ approx. transfer size:        ?
+
+persist device: /dev/sdb1
+  mounted at: /live/boot-dev
+
+  persist device total: 3.55 GiB
+   persist device free:  589 MiB
+rsync -a --delete-excluded --exclude-from=/etc/live/config/rsync.exclude /live/aufs-ram/ /live/persist-root/
+>> rsync
+<< took 2 secs
+Cleaning up ...
+  umounting /live/persist-root
