@@ -4,7 +4,7 @@
 <title>MX Linux FAQs and Tips - Linux on the Desktop</title>
 </head>
 <body>
-<div><div style="text-align: right; float:right;">Last updated: 2023-01-16 13:57 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2023-02-28 20:52 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Linux distributions</a> / MX Linux</div>
 <hr width="100%">
 <h2>MX Linux</h2>
@@ -33,8 +33,9 @@ MX Linux に関する FAQ/Tips のページです。
        <li><a href="#14-5">Dynamic パーシステンス、Static パーシステンスとは何ですか？</a></li>
        </ul>
     </li>
-    <li><a href="#15">MX Respin（非公式スナップショット）について</a></li>
-    <li><a href="#16">ニュース記事など (外部リンク)</a></li>
+    <li><a href="#15">MX パッケージインストーラの挙動を変えるには？</a></li>
+    <li><a href="#16">MX Respin（非公式スナップショット）について</a></li>
+    <li><a href="#17">ニュース記事など (外部リンク)</a></li>
   </ol>
 </blockquote>
 
@@ -207,7 +208,14 @@ Live USB においては、RAM に一時的保存した情報をシャットダ�
 </p><p>
 システムデータは動的永続性または静的永続性を選択出来ますが、ユーザーが自分のホームディレクトリ /home/demo/ に保存したデータは常に静的永続性です。そして、MX Linux 環境で作成した Live USB では書き込み可能な機能を持つ Live USB が作成可能なので、パーシステンス設定の有無に関わらず、 /home/demo/Live-usb-storage あるデータはシャットダウン後も保存できます。
 </p>
-<h3><a name="15">MX Respin（非公式スナップショット）について</h3>
+
+<h3><a name="15">MX パッケージインストーラの挙動を変えるには？</h3>
+<p>MX パッケージインストーラ（MXPI）を使うと、画面上のメニューリストからソフトウェア名を選択するだけで自動的にインストールが行えます。
+具体的にどのようなバイナリパッケージが組み合わされてインストールされるのかは、インストール時の詳細表示で確認することができます。</p>
+<p>
+ところで、このMXPIの挙動を管理する設定ファイルが /usr/share/mx-packageinstaller-pkglist/ 以下に存在します。アプリケーション毎に設定ファイルが用意されており、テキストエディタで編集可能です。したがって、予め任意のパッケージを追加したり削除しておくことができます。</p>
+
+<h3><a name="16">MX Respin（非公式スナップショット）について</h3>
 MX コミュニティによって作成された非公式なスナップショットが、各種配布されています。MX Linux による公式なサポートはありません。<br>
 <a href="https://sourceforge.net/projects/mx-linux/files/Community_Respins/">https://sourceforge.net/projects/mx-linux/files/Community_Respins/</a>
 <p>
@@ -217,7 +225,7 @@ MX コミュニティによって作成された非公式なスナップショ�
 <a href="https://sourceforge.net/projects/mx-respin-iso/">https://sourceforge.net/projects/mx-respin-iso/</a>
 </blockquote>
 
-<h3><a name="16"></a>ニュース記事など (外部リンク)</h3>
+<h3><a name="17"></a>ニュース記事など (外部リンク)</h3>
 How to Install MX Linux Step-by-Step Guide <a href="https://www.debugpoint.com/install-mx-linux/">https://www.debugpoint.com/install-mx-linux/</a><br>
 レビュー記事 <a href="https://fosspost.org/mx-linux-21-review-best-distribution-2021/">https://fosspost.org/mx-linux-21-review-best-distribution-2021/</a> (FossPost.org)<br>
 ウィキペディア記事　<a href="https://ja.wikipedia.org/wiki/MX_Linux">https://ja.wikipedia.org/wiki/MX_Linux</a><br>
