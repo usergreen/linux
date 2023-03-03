@@ -4,7 +4,7 @@
 <title>MX Linux FAQs and Tips - Linux on the Desktop</title>
 </head>
 <body>
-<div><div style="text-align: right; float:right;">Last updated: 2023-02-28 20:52 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2023-03-03 23:06 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Linux distributions</a> / MX Linux</div>
 <hr width="100%">
 <h2>MX Linux</h2>
@@ -28,9 +28,10 @@ MX Linux に関する FAQ/Tips のページです。
       <ul>
        <li><a href="#14-1">Live USB で作成したデータを保存したい</a></li>
        <li><a href="#14-2">Live USB にデータが保存できません</a></li>
-       <li><a href="#14-3">詳細オプション (Advanced Options) のパーシステンスとは何ですか？</a></li>
-       <li><a href="#14-4">MX Live でパーシステンスを利用するときの代表的なタイプ</a></li>
-       <li><a href="#14-5">Dynamic パーシステンス、Static パーシステンスとは何ですか？</a></li>
+       <li><a href="#14-3">システム管理するアカントを demo から root へ変更したい</a></li>
+       <li><a href="#14-4">詳細オプション (Advanced Options) のパーシステンスとは何ですか？</a></li>
+       <li><a href="#14-5">MX Live でパーシステンスを利用するときの代表的なタイプ</a></li>
+       <li><a href="#14-6">Dynamic パーシステンス、Static パーシステンスとは何ですか？</a></li>
        </ul>
     </li>
     <li><a href="#15">MX パッケージインストーラの挙動を変えるには？</a></li>
@@ -172,7 +173,12 @@ Topic: Adding MX Linux tools to Debian<br>
 上の項目で説明したとおり MX Live USB Maker を用いて Live USB を作成するのが確実です。<br>
 それでもデータの保存ができない場合は、データの保存場所（ディレクトリ）を間違っている可能性がありす。正しく作成された MX Live USB では、ユーザーのホームディレクトリである /home/demo の中に Live-usb-storage という特別なディレクトリが自動的に作成されます。この場所へデータを保存してください。それ以外の場所、たとえば /home/demo 直下にデータを一時保存しても、シャットダウン後には消えてしまいます。
 
-<h4><a name="14-3">詳細オプション (Advanced Options) のパーシステンスとは何ですか？</a></h4>
+<h4><a name="14-3">システム管理するアカントを demo から root へ変更したい</a></h4>
+<p>初めてライブ USB を起動すると、システム設定を含めたすべての操作権限が demo ユーザーに与えられます。</p>
+<p>
+しかし、MX Tweak を使って操作の振る舞いを制限することで、他のユーザーが勝手に設定変更しないようにできます。特に、パーシステンスを有効にしてパスワードを設定した場合、この機能を利用すると便利です。</p>
+
+<h4><a name="14-4">詳細オプション (Advanced Options) のパーシステンスとは何ですか？</a></h4>
 <p>パーシステンス（persistence）という用語はつふう「永続性」と訳されますが、ここで指しているパーシステンスは、具体的にはデータ保持（保存）が可能だと意味です。一般的なライブ USB では、電源を切ればデスクトップ上のシステム設定やデータが全て消えてしまいますが、このオプションを使うとすべて USB メモリの中に保存できます。次回起動したときにも、直前の稼働状態を再現できるという便利な機能です。前回インストールしたソフトウェアやアップデートも USB メモリの中にそのまま保存します。
 </p><p>
 パーシステンスには5種類の選択肢が用意されています。次項でそれどれの違いを説明しているので、自分の利用目的に適した種類を選択してください。たとえば persist_all ではシステム変更とユーザデータの一切が USB メモリに保存できます。
@@ -184,7 +190,8 @@ persist_all の既定値は以下のとおりです（カスタムオプショ�
 <p>
 このタイプのパーシステンスオプションを設定した場合、直後の再起動時に設定画面が自動的に立ち上がります。その際、ユーザーは対話形式で設定作業を行ないます。これは、質問項目から選択するだけの簡単な作業です。既定値のとおりパーシステンスの設定を行ないたいときは、16 GB 以上の USB メモリを用意してください。
 </p>
-<h4><a name="14-4">MX Live でパーシステンスを利用するときの代表的なタイプ</a></h4>
+
+<h4><a name="14-5">MX Live でパーシステンスを利用するときの代表的なタイプ</a></h4>
 <p>MX Live が用意している代表的なタイプ（種類）には、以下のタイプがあります。<br>
 &emsp;<br>
 1. Home パーシステンス<br>
@@ -202,7 +209,8 @@ root 以下のシステムファイルの変更を一切許可しないので、
 　-- <a href="https://github.com/BitJam/antiX-Gfxboot/blob/master/Help/MX/en.html">https://github.com/BitJam/antiX-Gfxboot/blob/master/Help/MX/en.html</a><br>
 　サイト内資料ページ: <a href="en.html#persist+frugal">en.html#persist+frugal</a>
 </p>
-<h4><a name="14-5">Dynamic パーシステンス、Static パーシステンスとは何ですか？</h4>
+
+<h4><a name="14-6">Dynamic パーシステンス、Static パーシステンスとは何ですか？</h4>
 <p>Dynamic パーシステンスは「動的永続性」、Static パーシステンスは「静的永続性」という訳語を当てるのかもしれませんが、これでは理解しにくいと思います。<br>
 Live USB においては、RAM に一時的保存した情報をシャットダウン／再起動時に USB メモリに書き込んで保存することが動的永続性だといえます。動的永続性では、保存を行なわない限り、一時的保存したデータは消去されます。一方、静的永続性においては書き込んだデータはその都度、永続性デバイスに保存するのでデータの損失をより回避できます。その結果、ユーザーにとって利便性が向上します。
 </p><p>
