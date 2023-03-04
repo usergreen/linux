@@ -4,7 +4,7 @@
 <title>MX Linux FAQs and Tips - Linux on the Desktop</title>
 </head>
 <body>
-<div><div style="text-align: right; float:right;">Last updated: 2023-03-03 23:06 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2023-03-04 19:52 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Linux distributions</a> / MX Linux</div>
 <hr width="100%">
 <h2>MX Linux</h2>
@@ -32,11 +32,13 @@ MX Linux に関する FAQ/Tips のページです。
        <li><a href="#14-4">詳細オプション (Advanced Options) のパーシステンスとは何ですか？</a></li>
        <li><a href="#14-5">MX Live でパーシステンスを利用するときの代表的なタイプ</a></li>
        <li><a href="#14-6">Dynamic パーシステンス、Static パーシステンスとは何ですか？</a></li>
+       <li><a href="#14-7">保存したはずのシステム設定が次回起動時に反映されません</a></li>
        </ul>
     </li>
     <li><a href="#15">MX パッケージインストーラの挙動を変えるには？</a></li>
-    <li><a href="#16">MX Respin（非公式スナップショット）について</a></li>
-    <li><a href="#17">ニュース記事など (外部リンク)</a></li>
+    <li><a href="#16">systemd を有効にできますか？</a></li>
+    <li><a href="#17">MX Respin（非公式スナップショット）について</a></li>
+    <li><a href="#18">ニュース記事など (外部リンク)</a></li>
   </ol>
 </blockquote>
 
@@ -214,16 +216,34 @@ root 以下のシステムファイルの変更を一切許可しないので、
 <p>Dynamic パーシステンスは「動的永続性」、Static パーシステンスは「静的永続性」という訳語を当てるのかもしれませんが、これでは理解しにくいと思います。<br>
 Live USB においては、RAM に一時的保存した情報をシャットダウン／再起動時に USB メモリに書き込んで保存することが動的永続性だといえます。動的永続性では、保存を行なわない限り、一時的保存したデータは消去されます。一方、静的永続性においては書き込んだデータはその都度、永続性デバイスに保存するのでデータの損失をより回避できます。その結果、ユーザーにとって利便性が向上します。
 </p><p>
-システムデータは動的永続性または静的永続性を選択出来ますが、ユーザーが自分のホームディレクトリ /home/demo/ に保存したデータは常に静的永続性です。そして、MX Linux 環境で作成した Live USB では書き込み可能な機能を持つ Live USB が作成可能なので、パーシステンス設定の有無に関わらず、 /home/demo/Live-usb-storage あるデータはシャットダウン後も保存できます。
+システムデータは動的永続性または静的永続性を選択出来ますが、ユーザーが自分のホームディレクトリ /home/demo/ に保存したデータは常に静的永続性です。そして、MX Linux 環境で作成した Live USB では書き込み可能な機能を持つ Live USB が作成可能なので、パーシステンス設定の有無に関わらず、 /home/demo/Live-usb-storage にあるデータはシャットダウン後も保存できます。
 </p>
 
+<h4><a name="14-7">保存したはずのシステム設定が次回起動時に反映されません</h4>
+パーシステンスの設定を有効にした以降は、すべてのシステム変更操作が USB デバイスに保存されます。したがって、シャットダウンしてもシステム設定は記録されています。
+<p>
+しかし、次回起動時以降もパーシステンスを維持するには、保存オプション (Save Option) を使用してください。保存オプションを有効にしないと、パーシステンスは一度限りとなって、次回起動時には自動的に解除される仕組みになっているようです。パーシステンスが働かないと、別の領域に保存されたシステム設定が読み込まれなくなるので、デスクトップが立ち上がっても全く反映されないことになります。この振る舞いの違いには十分注意が要ります。</p>
+<p>
+したがって、保存オプション (Save Option) を有効にしなかった場合には、いったんシャットダウンし起動時の詳細オプションで「保存オプション」を有効にしてから再起動してください。今度はシステムの設定変更が起動後に反映されるはずです。</p>
+<p>
+なお、/home/demo/Live-usb-storage にあるユーザのデータはすでに説明したように保持されるので、この保存オプションの有無とは関係ありません。</p>
+
 <h3><a name="15">MX パッケージインストーラの挙動を変えるには？</h3>
-<p>MX パッケージインストーラ（MXPI）を使うと、画面上のメニューリストからソフトウェア名を選択するだけで自動的にインストールが行えます。
-具体的にどのようなバイナリパッケージが組み合わされてインストールされるのかは、インストール時の詳細表示で確認することができます。</p>
+MX パッケージインストーラ（MXPI）を使うと、画面上のメニューリストからソフトウェア名を選択するだけで自動的にインストールが行えます。
+具体的にどのようなバイナリパッケージが組み合わされてインストールされるのかは、インストール時の詳細表示で確認することができます。
 <p>
 ところで、このMXPIの挙動を管理する設定ファイルが /usr/share/mx-packageinstaller-pkglist/ 以下に存在します。アプリケーション毎に設定ファイルが用意されており、テキストエディタで編集可能です。したがって、予め任意のパッケージを追加したり削除しておくことができます。</p>
 
-<h3><a name="16">MX Respin（非公式スナップショット）について</h3>
+<h3><a name="16">systemd を有効にできますか？</h3>
+起動プロセスの一番最初に GRUB 画面が表示されたら、詳細オプション… をクリックし、systemd を使用する を選択します。MX Boot Options を使うと、これを既定に変更できます。
+<p>
+ただしこれはインストールしたシステムに限ります。ライブ USB の場合、このオプションが使えません。</p>
+<p>
+Enabling systemd<br>
+When the GRUB screen is displayed at the very beginning of the boot process, click on Advanced options… and select to use systemd. Use MX Boot Options to make this the default.<br>
+<a href="https://mxlinux.org/wiki/system/systemd/">https://mxlinux.org/wiki/system/systemd/</a>
+
+<h3><a name="17">MX Respin（非公式スナップショット）について</h3>
 MX コミュニティによって作成された非公式なスナップショットが、各種配布されています。MX Linux による公式なサポートはありません。<br>
 <a href="https://sourceforge.net/projects/mx-linux/files/Community_Respins/">https://sourceforge.net/projects/mx-linux/files/Community_Respins/</a>
 <p>
@@ -233,7 +253,7 @@ MX コミュニティによって作成された非公式なスナップショ�
 <a href="https://sourceforge.net/projects/mx-respin-iso/">https://sourceforge.net/projects/mx-respin-iso/</a>
 </blockquote>
 
-<h3><a name="17"></a>ニュース記事など (外部リンク)</h3>
+<h3><a name="18"></a>ニュース記事など (外部リンク)</h3>
 How to Install MX Linux Step-by-Step Guide <a href="https://www.debugpoint.com/install-mx-linux/">https://www.debugpoint.com/install-mx-linux/</a><br>
 レビュー記事 <a href="https://fosspost.org/mx-linux-21-review-best-distribution-2021/">https://fosspost.org/mx-linux-21-review-best-distribution-2021/</a> (FossPost.org)<br>
 ウィキペディア記事　<a href="https://ja.wikipedia.org/wiki/MX_Linux">https://ja.wikipedia.org/wiki/MX_Linux</a><br>
