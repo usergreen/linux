@@ -4,7 +4,7 @@
 <title>Applications/accessories, etc. - Linux on the Desktop</title>
 </head>
 <body>    
-<div><div style="text-align: right; float:right;">Last updated: 2022-05-17 11:37 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2023-06-04 20:09 JST</div>
 <a href="../../index.html">HOME</a> / <a href="index.html">Software</a></div>
 <hr width="100%" size="+">
 
@@ -12,6 +12,7 @@
   <ol>
    <li><a href="#format-usb">Format USB (USB フォーマッタ)</a></li>
    <li><a href="#gtkhash">GtkHash - ハッシュ値の計算</a></li>
+   <li><a href="#lshw-gtk">Hardware Lister - システム情報の表示</a></li>
    <li><a href="#mozTocId780265">LHA - 圧縮ファイル解凍ツール</a></li>
    <li><a href="#mx-snapshot">MX スナップショット - Live USB/DVD の作成</a></li>
    <li><a href="#mozTocId666176">Point-and-Klik (KNOPPIX 3.7)</a></li>
@@ -83,6 +84,37 @@ $ gtkhash</p>
 なお MATE デスクトップ環境には、GtkHash と同様な機能を備えた caja-gtkhash という拡張機能 (extension) が組み込まれています。<br>
 caja-gtkhash の操作画面は、ファイルのアイコンを右クリック > [プロパティ] > [ダイジェスト] より開くことができます（下図参照）。
 <img src="../../images/misc/Screenshot-caja-gtkhash.png" alt="Screenshot-caja-gtkhash.png" width="480" style="margin: 10">
+
+<h3 id="lshw-gtk">Hardware Lister - システム情報の表示</h3>
+参照サイト：<br>
+https://www.lostsaloon.com/technology/how-to-find-ram-info-in-linux-including-size-speed-and-type/
+<img src="../../images/misc/hardware-lister.png" alt="hardware-lister.png" width="480" style="margin: 10">
+<pre>
+root@debian:/home/user# apt install lshw-gtk
+パッケージリストを読み込んでいます... 完了
+依存関係ツリーを作成しています                
+状態情報を読み取っています... 完了
+以下のパッケージが新たにインストールされます:
+  lshw-gtk
+アップグレード: 0 個、新規インストール: 1 個、削除: 0 個、保留: 0 個。
+330 kB のアーカイブを取得する必要があります。
+この操作後に追加で 1,639 kB のディスク容量が消費されます。
+取得:1 http://deb.debian.org/debian buster/main amd64 lshw-gtk amd64 02.18.85-0.1 [330 kB]
+330 kB を 2秒 で取得しました (177 kB/s)                                   
+以前に未選択のパッケージ lshw-gtk を選択しています。
+(データベースを読み込んでいます ... 現在 217908 個のファイルとディレクトリがインストールされています。)
+.../lshw-gtk_02.18.85-0.1_amd64.deb を展開する準備をしています ...
+lshw-gtk (02.18.85-0.1) を展開しています...
+lshw-gtk (02.18.85-0.1) を設定しています ...
+desktop-file-utils (0.23-4) のトリガを処理しています ...
+mime-support (3.62) のトリガを処理しています ...
+man-db (2.8.5-2) のトリガを処理しています ...
+menu (2.1.47+b1) のトリガを処理しています ...
+bamfdaemon (0.5.4-1) のトリガを処理しています ...
+Rebuilding /usr/share/applications/bamf-2.index...
+root@debian:/home/user#
+</pre>
+Windows では同等のユーティリティとして CPU-Z が有名です。
 
 <h3 id="mozTocId780265">LHA 圧縮ファイル解凍ツール</h3>
 このソフトウェアは、Windows でよく使われる .lzh形式のファイルを展開することができます。以下、Debian 3.1 Sarge へインストールする場合の参考です。
