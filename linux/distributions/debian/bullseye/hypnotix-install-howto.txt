@@ -1,0 +1,33 @@
+root@debian:/home/user# apt install ./hypnotix_2.6-1~mx21+1_all.deb
+パッケージリストを読み込んでいます... 完了
+依存関係ツリーを作成しています... 完了        
+状態情報を読み取っています... 完了        
+注意、'./hypnotix_2.6-1~mx21+1_all.deb' の代わりに 'hypnotix' を選択します
+以下の追加パッケージがインストールされます:
+  ffmpeg fonts-lato gir1.2-xapp-1.0 gist hddtemp inxi libavdevice58
+  libgnomekbd-common libgnomekbd8 libjs-jquery liblua5.2-0 libmpv1 libruby2.7
+  libva-wayland2 libxapp1 libyaml-0-2 lm-sensors mpv python3-bs4
+  python3-gi-cairo python3-html5lib python3-imdbpy python3-lxml
+  python3-pyxattr python3-soupsieve python3-unidecode python3-webencodings
+  rake rtmpdump ruby ruby-json ruby-minitest ruby-net-telnet ruby-power-assert
+  ruby-rubygems ruby-test-unit ruby-xmlrpc ruby2.7 rubygems-integration tree
+  xapps-common youtube-dl
+提案パッケージ:
+  ffmpeg-doc libcpanel-json-xs-perl | libjson-xs-perl libxml-dumper-perl
+  fancontrol read-edid i2c-tools python3-genshi python3-sqlalchemy
+  python3-sqlobject python3-psycopg2 python3-lxml-dbg python-lxml-doc
+  python3-pyxattr-dbg python-pyxattr-doc ri ruby-dev bundler libfribidi-bin
+  | bidiv phantomjs
+以下のパッケージが新たにインストールされます:
+  ffmpeg fonts-lato gir1.2-xapp-1.0 gist hddtemp hypnotix inxi libavdevice58
+  libgnomekbd-common libgnomekbd8 libjs-jquery liblua5.2-0 libmpv1 libruby2.7
+  libva-wayland2 libxapp1 libyaml-0-2 lm-sensors mpv python3-bs4
+  python3-gi-cairo python3-html5lib python3-imdbpy python3-lxml
+  python3-pyxattr python3-soupsieve python3-unidecode python3-webencodings
+  rake rtmpdump ruby ruby-json ruby-minitest ruby-net-telnet ruby-power-assert
+  ruby-rubygems ruby-test-unit ruby-xmlrpc ruby2.7 rubygems-integration tree
+  xapps-common youtube-dl
+アップグレード: 0 個、新規インストール: 43 個、削除: 0 個、保留: 0 個。
+16.4 MB 中 16.2 MB のアーカイブを取得する必要があります。
+この操作後に追加で 60.4 MB のディスク容量が消費されます。
+続行しますか? [Y/n] 
