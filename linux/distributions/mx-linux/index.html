@@ -4,7 +4,7 @@
 <title>MX Linux FAQs and Tips - Linux on the Desktop</title>
 </head>
 <body>
-<div><div style="text-align: right; float:right;">Last updated: 2023-06-07 14:30 JST</div>
+<div><div style="text-align: right; float:right;">Last updated: 2023-09-03 13:54 JST</div>
 <a href="../../../index.html">HOME</a> / <a href="../index.html">Linux distributions</a> / MX Linux</div>
 <hr width="100%">
 <h2>MX Linux</h2>
@@ -253,7 +253,8 @@ MX パッケージインストーラ（MXPI）を使うと、画面上のメニ�
 ただしこれはインストールしたシステムに限ります。ライブ USB の場合、このオプションが使えません。</p>
 <p>
 Enabling systemd<br>
-When the GRUB screen is displayed at the very beginning of the boot process, click on Advanced options… and select to use systemd. Use MX Boot Options to make this the default.<br>
+When the GRUB screen is displayed at the very beginning of the boot process, click on Advanced options… and select to use systemd. Use MX Boot Options to make this the default. （対訳：OS 起動処理の最初期で GRUB 画面が表示されたら、Advanced options...をクリックし、systemd を使用するように選択します。MX Boot Options を使うと、これをデフォルトにすることができます。<br>
+systemd-sysv をインストールすれば、sysVinit オプションを完全に削除できます。systemd-sysv をインストールすることで、/sbin/init が systemd へのシンボリックリンクに置き換わります。元の動作に戻すには、このパッケージを削除してください。systemd のみのセットアップの唯一の欠点は、MX ライブシステムが100%動作しないことです（スナップショットと LiveUSB のパーシステンスが動作しません）。<br>
 <a href="https://mxlinux.org/wiki/system/systemd/">https://mxlinux.org/wiki/system/systemd/</a>
 
 <h3><a name="17">MX Respin（非公式スナップショット）について</h3>
