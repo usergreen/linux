@@ -8,7 +8,7 @@
       <tbody>
         <tr>
           <td valign="top"><a href="../../../../index.html">HOME</a> / <a href="../../index.html">distributions</a> /　<a href="../index.html">Debian</a> / bookworm</td>
-          <td valign="middle" align="right">Last updated&nbsp;2023/06/17 10:47 JST</td>
+          <td valign="middle" align="right">Last updated&nbsp;2023/09/06 11:30 JST</td>
         </tr>
       </tbody>
 </table>
@@ -23,8 +23,9 @@ Debian GNU/Linux Bookworm (最新の安定版) に関する FAQ/Tips です。<b
   <li><a href="#5">必要な最低限のハードウェアは？</a></li>
   <li><a href="#6">デスクトップに必要な空き容量は？</a></li>
   <li><a href="#7">インストールの手順について</a></li>
-  <li><a href="#7-1">d-i (preseed) を使ってインストールする場合</a></li>
-  <li><a href="#7-2">calamares を使ってインストールする場合</a></li>
+  <li><a href="#7-0">d-i (preseed) を使ってインストールする場合</a></li>
+  <li><a href="#7-1">calamares を使ってインストールする場合</a></li>
+  <li><a href="#7-2">標準の日本語フォントが汚い (netinst)</a></li>
 <!--
   <li><a href="#7-3">amd64-netinst.iso が起動しません (レガシー PC) (2022-10-10 対処法追記)</a></li>
   <li><a href="#8">標準の日本語入力とその変更方法について</a></li>
@@ -174,7 +175,7 @@ Debian 12 では、<!-- <a href="press_release.html">プレスリリース</a>�
 <p>
 以下、d-i を使う場合と Calamares を使う場合とで、それぞれのインストールの流れをスクリーンショットと共に追ってみます。
 </p>
-<h4><a name="7-1">d-i (preseed) を使ってインストールする場合</h4>
+<h4><a name="7-0">d-i (preseed) を使ってインストールする場合</h4>
 d-i (debian-installer) はデビアンで最初に開発された歴史あるインストーラです。正式名は preseed です。このインストーラは手順が多い半面、非常に自由度が高いので柔軟で詳細な設定を行うことができます。各操作画面には詳しい説明があるのであまり心配要りませんが、特に気を付けるべき場面を抜粋して掲載します。以下の手順とスクリーンショットは、debian-11.5.0-i386-DVD-1.iso を使ったときのものです。Debian 12 も手順はほぼ同じです。<br>
 &nbsp;<br>
 <img src="../bullseye/installer/passwd_root-password_0.png" alt="passwd_root-password_0.png" width="600" height="328"><br>
@@ -203,7 +204,7 @@ DVD-1.iso からインストールする場合、「いいえ」で構いませ�
 <img src="../bullseye/installer/finish-install_reboot_in_progress_0.png" alt="finish-install_reboot_in_progress_0.png" width="600" height="328"><br>
 &nbsp;<br>
 &nbsp;<br>
-<h4><a name="7-2">calamares を使ってインストールする場合</h4>
+<h4><a name="7-1">calamares を使ってインストールする場合</h4>
 Calamares インストーラは Debian Live の起動直後の画面の一番初めに表示されるので、これを選択してください。Debian Live が完全に立ち上がった状態で、メニューまたはデスクトップにあるインストーラのアイコンをクリックすれば、インストールを開始できます。後者の場合は、インストールが完了する時点まで Debian Live 上で作業が継続でき、作成したファイルも保存可能というメリットがあります（下記のスクリーンショットもそのようにして記録しました）。<br>
 &nbsp;<br>
 <img src="../bullseye/screenshots/bullseys-install0.png" alt="bullseys-install0.png" width="600" height="328"><br>
@@ -222,6 +223,13 @@ Calamares インストーラは Debian Live の起動直後の画面の一番初
 &nbsp;<br>
 <img src="../bullseye/screenshots/bullseye-install7.png" alt="bullseye-install7.png" width="600" height="328"><br>
 &nbsp;<br>
+
+<a name="7-2"></a><h3>標準の日本語フォントが汚い (netinst)</a></h3>
+ネットワークインストールで日本語を表示したとき、日本語フォントが見づらい場合があったので調べてみました。自動的にインストールされたフォントの組み合わせが適切ではありませんでした。以下のようにしてフォントを入れ替えると見やすくなりました。
+<p>
+# apt remove fonts-noto-fonts-droid-fallback<br>
+# apt install fonts-vlgothic fonts-ipafont-mincho
+</p>
 <!--
 <a name="7-3"></a><h3>amd64-netinst.iso が起動しません (レガシー PC) (2022-07-31 追加) (2022-10-10 対処法追記)</h3>
 システム起動に UEFI を組み込んでいない旧世代の PC では、たとえインストーラの最初のメニューが起動してもその後の Graphical install/Install メニューより
